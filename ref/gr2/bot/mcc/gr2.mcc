@@ -1,0 +1,39 @@
+module.exports = {
+
+    "@default": {
+
+        "name": "granny2",
+
+        "target-ld": "executable",
+        "include-dirs": [
+            "./dev/include"
+        ],
+        "srcs": [
+            "src/main.cc"
+        ],
+        "dists": {
+            "node/granny2.exe": "${getCOutputFiles('executable')}"
+        },
+
+        "!brushes": {
+            "windows:${getPlatform() == 'windows'}": {
+                "libraries": [
+                    "Kernel32",
+                ],
+                "macros-cc": {
+                    "WIN32_LEAN_AND_MEAN": "1"
+                },
+                "switches-cc": [
+                    "-m32",
+                    "/EHsc"
+                ],
+                "switches-ld": [
+                    "-m32",
+                    "/LTCG"
+                ]
+            }
+        }
+
+    }
+
+};
