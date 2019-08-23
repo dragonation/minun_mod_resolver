@@ -1,0 +1,15 @@
+{
+	"kitties": {
+		"hmm5": {}
+	},
+	"playgrounds": {
+		"http": {}
+	},
+	"resources": {
+		"ui": {
+			"playground": "http",
+			"innerPath": "ui",
+			"outerPath": "/"
+		}
+	}
+}

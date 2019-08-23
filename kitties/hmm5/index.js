@@ -90,6 +90,7 @@ hmm5.finished((error) => {
 	} else {
 		dirname = "";
 	}
+	dirname = dirname.toLowerCase();
 
 	return hmm5.then(function (pak) {
 
