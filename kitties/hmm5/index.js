@@ -76,6 +76,10 @@ hmm5.finished((error) => {
 
 		}
 
+		if (maughts.length > 100) {
+			maughts = maughts.slice(0, 100);
+		}
+
 		this.next(maughts);
 
 	});
@@ -130,6 +134,16 @@ hmm5.finished((error) => {
 		this.next(Object.keys(maughts).sort().map((key) => {
 			return maughts[key];
 		}));
+
+	});
+
+});
+
+@heard.rpc("hmm5.listBindings").then(function (request) {
+
+	return hmm5.then(function (pak) {
+
+		this.next(pak.listBindings(request.path));
 
 	});
 
@@ -268,13 +282,27 @@ hmm5.finished((error) => {
 
 });
 
+@heard.rpc("hmm5.loadXML").then(function (request) {
+
+	return hmm5.then(function (pak) {
+
+		let result = pak.loadXML(request.path);
+
+		this.next(result);
+
+	});
+
+});
+
 @heard.rpc("hmm5.restoreInstance").then(function (request) {
 
 	return hmm5.then(function (pak) {
 
 		let result = pak.resolveLink(null, request.link);
 
-		let instance = pak.restoreInstance(result[0], undefined, caches);
+		let typeID = pak.types.bindings[request.link];
+
+		let instance = pak.restoreInstance(result[0], typeID, caches);
 
 		this.next(instance);
 
@@ -375,54 +403,3 @@ hmm5.finished((error) => {
 	});
 
 });
-
-// .then(function (pak) {
-
-// 	// pak.loadGeometry("bin/Geometries/BB67CC4A-CF31-4EF4-AE49-3DA514D3E6E8");
-// 	// pak.loadGeometry("bin/Geometries/35C5E41A-1248-401B-89DD-CA85831CCC16");
-// 	// pak.loadGeometry("bin/Geometries/2CAA29B4-927F-4FF9-ACD0-C5F52CC5B37F");
-// 	// pak.loadGeometry("bin/Geometries/6E45CA03-EF7C-44AA-8B4E-ABA5BCA7DD20");
-// 	// pak.loadGeometry("bin/Geometries/B6D59A50-9094-4092-A13B-01EE2056B90A");
-// 	// pak.loadGeometry("bin/Geometries/F2399B3D-7EBA-466D-8305-258F48B1D2B2");
-
-// 	// pak.loadSkeleton("bin/Skeletons/26605E25-A1A0-45B1-93A4-A95BDBC2F53D");
-// 	// pak.loadSkeleton("bin/Skeletons/3B95CA57-FED6-4F6A-8463-EBF71F1E21DF");
-// 	// pak.loadSkeleton("bin/Skeletons/E47B8949-413F-4C71-B397-A19D91D44510");
-
-// 	// pak.loadAnimation("bin/animations/0E2C5EB9-80F1-4772-9247-AC709B66A762");
-// 	// pak.loadAnimation("bin/animations/149501C1-F819-49E5-9604-CE9DA2DD864D");
-
-// 	// pak.loadEffect("bin/effects/DEC32C4A-E4C0-4843-A69C-19C12F93265E");
-// 	// pak.loadEffect("bin/effects/6CED8108-2CFD-4B16-837B-02916919A403");
-
-// 	this.next();
-
-// 	// let object = pak.loadToken("CREATURE_ARCHANGEL");
-
-// 	// pak.extractResources(object, @path("tmp2")).pipe(this);
-	
-// 	// @dump.all(dependencies);
-
-// 	// let caches = new Map();
-
-// 	// // let element = pak.restoreInstance(object, undefined, caches);
-// 	// // @dump.all(element.MonsterShared.@target().Model.@target().Materials[0].@target().Texture.@target());
-// 	// // // //MonsterShared
-
-// 	// // let elementVisual = element.Visual.@target();
-// 	// // @dump.all(elementVisual);
-
-// 	// // @dump.all(elementVisual.Win3DView.@target());
-// 	// // @dump.all(elementVisual.AnimCharacter.@target().Model.@target().Geometry.@target());
-
-// 	// this.next();
-
-// }).finished((error) => {
-
-// 	if (error) {
-// 		@error(error); return;
-// 	}
-
-// 	@celebr("HMM5 PAK files loaded");
-
-// });

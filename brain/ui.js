@@ -2,6 +2,26 @@
 
 	this.break();
 
+	if (request.get.download === "yes") {
+		response.headers["Content-Type"] = "application/x-download";
+	} else {
+		let extname = @.fs.extname(request.path.toLowerCase());
+		switch (extname) {
+			case ".xdb": {
+				response.headers["Content-Type"] = "application/xml";
+				break;
+			};
+			case ".dds": {
+				response.headers["Content-Type"] = "image/vnd.ms-dds";
+				break;
+			};
+			default: {
+				response.headers["Content-Type"] = @.fs.mime(extname);
+				break;
+			};
+		}
+	}
+
 	return @mew.rpc("hmm5.loadContent", {
 		"path": request.path.slice(5)
 	}).then(function (binary) {
@@ -112,8 +132,8 @@
 
 	return @mew.rpc("hmm5.listTokens", {
 		"keywords": keywords 
-	}).then(function (models) {
-		response.writer.end(models.join("\n"), this.test);
+	}).then(function (tokens) {
+		response.writer.end(tokens.join("\n"), this.test);
 	});
 
 });
@@ -141,6 +161,22 @@
 
 });
 
+@servlet.get("/list/bindings//*", function (request, response) {
+
+	this.break();
+
+	response.headers["Content-Type"] = "text/plain";
+
+	let path = request.path.slice("/list/bindings".length);
+
+	return @mew.rpc("hmm5.listBindings", {
+		"path": path 
+	}).then(function (links) {
+		response.writer.end(links.join("\n"), this.test);
+	});
+
+});
+
 // @servlet.get("/zip//*", function (request, response) {
 
 // });
@@ -155,8 +191,13 @@
 
 	response.headers["Content-Type"] = "image/png";
 
+	let path = request.path.slice(5);
+	if (path.slice(-4) === ".png") {
+		path = path.slice(0, -4);
+	}
+
 	return @mew.rpc("hmm5.loadImage", {
-		"path": request.path.slice(5)
+		"path": path
 	}).then(function (dds) {
 		response.writer.end(dds.encodeAsPNG(), this.test);
 	});
@@ -177,11 +218,27 @@
 
 });
 
-@servlet.get("/xdb//*", function (request, response) {
+@servlet.get("/xml//*", function (request, response) {
 
 	this.break();
 
-	let path = request.path.slice(4);
+	let path = request.path.slice(5);
+
+	response.headers["Content-Type"] = "application/json";
+
+	return @mew.rpc("hmm5.loadXML", {
+		"path": path 
+	}).then(function (xml) {
+		response.writer.end(@.serialize(xml), this.test);
+	});
+
+});
+
+@servlet.get("/link//*", function (request, response) {
+
+	this.break();
+
+	let path = request.path.slice(5);
 
 	let hash = request.get.hash;
 

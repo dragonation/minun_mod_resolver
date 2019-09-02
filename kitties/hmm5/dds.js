@@ -67,8 +67,8 @@ blockParsers.BC2 = function (block, buffer, x, y, width, height, dds) {
 	let alphas = [];
 	for (let looper = 0; looper < 16; ++looper) {
 		let byte = block[looper >> 1];
-		let alpha = (byte >> ((looper % 2) << 2)) & 0b111;
-		alphas.push(Math.round(0xff * (alpha / 0b111)));
+		let alpha = (byte >> ((looper % 2) << 2)) & 0xf;
+		alphas.push(Math.round(0xff * (alpha / 0xf)));
 	}
 
 	const parse565 = function (data, data2) {

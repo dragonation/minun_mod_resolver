@@ -457,7 +457,7 @@ const readTransform = function (sections, index, offset, caches) {
         reader.readFloat32(), reader.readFloat32(), reader.readFloat32()
     ];
 
-    result.Quantinum = [
+    result.Quaternion = [
         reader.readFloat32(), reader.readFloat32(), 
         reader.readFloat32(), reader.readFloat32()
     ];

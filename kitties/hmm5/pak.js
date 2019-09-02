@@ -10,21 +10,6 @@ const { DDS } = require("./dds.js");
 const { GR2 } = require("./gr2.js");
 
 
-const GUID = function GUID(id) {
-
-    if (GUID.instances[id]) {
-        return GUID.instances[id];
-    }
-
-    GUID.instances[id] = this;
-
-    this["@id"] = id;
-
-};
-
-GUID.instances = Object.create(null);
-
-
 const Node = function Node(pak, path, name) {
 
     @.prop(this, "@@pak", pak);
@@ -60,6 +45,86 @@ Node.prototype = Object.create(null);
 
 });
 
+
+const Instance = function Instance() {
+
+};
+
+@.serialize.hndl("hmm5.obj", Instance, function (content, serializer) {
+
+    serializer("@@path", content["@@path"]);
+    serializer("@@name", content["@@name"]);
+
+    const keys = Object.keys(content).sort();
+    for (let key of keys) {
+        if (key[0] !== "@") {
+            serializer(key, content[key]);
+        }
+    }
+
+}, function (deserializer, preset, unit, root, caches) {
+    throw new Error("No need to deserialize in server");
+});
+
+const GUID = function GUID(id) {
+
+    if (GUID.instances[id]) {
+        return GUID.instances[id];
+    }
+
+    GUID.instances[id] = this;
+
+    this["@id"] = id;
+
+};
+
+GUID.instances = Object.create(null);
+
+@.inherits(GUID, Instance);
+
+@.serialize.hndl("hmm5.guid", GUID, (content, serializer) => {
+    serializer("id", content["@id"]);
+}, (deserializer, preset) => {
+    throw new Error("No need to deserialize in server");
+});
+
+const Reference = function Reference() {
+
+};
+
+@.inherits(Reference, Instance);
+
+@.serialize.hndl("hmm5.ref", Reference, (content, serializer) => {
+    serializer("href", content["@href"]);
+}, (deserializer, preset) => {
+    throw new Error("No need to deserialize in server");
+});
+
+const File = function File(href) {
+    this["@href"] = href;
+};
+
+@.inherits(File, Instance);
+
+@.serialize.hndl("hmm5.file", File, (content, serializer) => {
+    serializer("href", content["@href"]);
+}, (deserializer, preset) => {
+    throw new Error("No need to deserialize in server");
+});
+
+const Enum = function Enum(token, value) {
+    this["@token"] = token;
+    this["@value"] = value;
+};
+
+@.inherits(Enum, Instance);
+
+@.serialize.hndl("hmm5.enum", Enum, (content, serializer) => {
+    serializer("token", content["@token"]);
+    serializer("value", content["@value"]);
+}, (deserializer, preset) => {
+    throw new Error("No need to deserialize in server");
+});
 
 const PAK = function PAK(path, records) {
 
@@ -98,6 +163,7 @@ const PAK = function PAK(path, records) {
     this.types.references = Object.create(null);
 
     this.types.bindings = Object.create(null);
+    this.types.files = Object.create(null);
 
     this.loadTypeDefinitions();
     this.loadTypeBindings();
@@ -193,6 +259,7 @@ PAK.prototype.resolveLink = function (base, href, ignoreNotFound) {
     }
 
     let path = undefined;
+    let id = undefined;
 
     let mark = false;
     if (/^#n:inline\(([\/0-9a-z_\-\+]+)\)$/i.test(href)) {
@@ -201,11 +268,14 @@ PAK.prototype.resolveLink = function (base, href, ignoreNotFound) {
     } else if (/^([\/0-9a-zé_\.\-\+\(\) `]+)#xpointer\(([\/0-9a-z_\-\+]+)\)$/i.test(href)) {
         path = href.split("#xpointer").slice(1).join("#xpointer").slice(1, -1);
         base = null;
+    } else if (/^([\/0-9a-zé_\.\-\+\(\) `]+)#xpointer\(id\(([a-z0-9\-_]+)\)([\/0-9a-z_\-\+]+)\)$/i.test(href)) {
+        //xpointer(id(idc6fee551-a01f-4477-bcb0-0e2efea6feee)/AdvMapStatic) 
+        let rest = href.split("#xpointer").slice(1).join("#xpointer").slice(1, -1);
+        id = rest.split("id(").slice(1).join("id(").split(")")[0];
+        path = rest.split(")").slice(1).join(")");
+        base = null;
     } else {
-        if (href[0] !== "#") {
-            // TODO
-            @error(new Error(`Invalid xlink ${href}`));
-        }
+        @error(new Error(`Invalid xlink ${href}`));
         return undefined;
     }
 
@@ -221,6 +291,28 @@ PAK.prototype.resolveLink = function (base, href, ignoreNotFound) {
         }
         xml = this.loadXML(file);
         this.xmls[file] = xml;
+    }
+
+    if (id) {
+        let result = [];
+        let find = function (nodes) {
+            for (let node of nodes) {
+                if (node && (typeof node !== "string")) {
+                    if (node["@id"] === id) {
+                        node["@@path"] = xml["@@path"];
+                        result.push(node);
+                    } else {
+                        for (let key in node) {
+                            if ((key[0] !== "@") && (node[key] instanceof Array)) {
+                                find(node[key]);
+                            }
+                        }
+                    }
+                }
+            }
+        };
+        find([xml]);
+        xml = result[0];
     }
 
     let result = queryXPath(xml, base, path, ignoreNotFound);
@@ -396,7 +488,7 @@ PAK.prototype.loadGeometry = function (path) {
                 "indices": configIndices.data, // config index to config id
             },
             "bones": bones.data,
-            "unknown": unknown,
+            "unknown": [unknown[0], unknown[1], unknown[2], unknown[3]],
             "flags": flags
         };
 
@@ -485,13 +577,13 @@ PAK.prototype.loadSkeleton = function (path) {
     }
 
     let result = {
-        "name": source.Name,
+        "root": source.Name,
         "bones": source.Bones.map((bone) => {
             return {
                 "name": bone.Name,
                 "parent": bone.ParentIndex,
                 "translations": bone.Transform.Translations,
-                "quantinum": bone.Transform.Quantinum,
+                "quaternion": bone.Transform.Quaternion,
                 "scales": [
                     bone.Transform.Scales[0][0],
                     bone.Transform.Scales[1][1],
@@ -698,7 +790,8 @@ PAK.prototype.loadTypeBindings = function () {
                     break;
                 };
                 case 1: {
-                    children.push(parseName(data)); 
+                    let name = parseName(data);
+                    children.push(name); 
                     break;
                 };
                 default: { @dump(data); break; };
@@ -769,6 +862,14 @@ PAK.prototype.loadTypeBindings = function () {
     for (let binding in types) {
         for (let link of types[binding].links) {
             this.types.bindings[link] = binding;
+            let file = link.split("#")[0];
+            if (file[0] === "/") {
+                file = file.slice(1);
+            }
+            if (!this.types.files[file]) {
+                this.types.files[file] = Object.create(null);
+            }
+            this.types.files[file][link] = binding;
         }
     }
 
@@ -1005,6 +1106,7 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
         let link = `/${object["@@path"]}#xpointer(/${object["@@name"]})`;
         typeID = this.types.bindings[link];
         if (!typeID) {
+            @dump(object);
             throw new Error("No type ID found");
         }
     }
@@ -1048,7 +1150,7 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
                         if (file[0] === "/") {
                             file = file.slice(1);
                         }
-                        return file;
+                        return new File(file);
                     }
                     return object;
                 };
@@ -1134,6 +1236,8 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
                 if (supertype && (supertype !== this.types.all["00000000"])) {
                     prepareType(supertype);
                     @.inherits(type["class"], supertype["class"]);
+                } else {
+                    @.inherits(type["class"], Instance);
                 }
 
             }
@@ -1144,7 +1248,8 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
 
             let instance = new constructor(object, caches);
 
-            instance["@@path"] = object["@@path"];
+            @.prop(instance, "@@name", type["class"].name);
+            @.prop(instance, "@@path", object["@@path"]);
 
             return instance;
         };
@@ -1181,6 +1286,8 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
 
                 type["class"] = createConstructor();
 
+                @.inherits(type["class"], Enum);
+
                 Object.defineProperty(type["class"], "name", {
                     "enumerable": true,
                     "value": getTypeName(type)
@@ -1205,7 +1312,22 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
 
                     return function (record) {
 
-                        this.@href = record["@href"];
+                        let href = record["@href"];
+                        if (href[0] === "#") {
+                            if (!/^#n:inline\(/.test(href)) {
+                                @warn(`Unknown inline link[${href}]`);
+                            } else {
+                                href = href.slice("#n:inline(".length, -1);
+                                if (record["@id"]) {
+                                    href = `id(${record["@id"]})/${href}`;
+                                }
+                                href = `/${record["@@path"]}#xpointer(${href})`;
+                            }
+                        } else if (href[0] !== "/") {
+                            href = `/${@.fs.resolvePath(record["@@path"], "..", href.split("#")[0])}#${href.split('#').slice(1).join("#")}`;
+                        }
+
+                        this.@href = href;
 
                         @.prop(this, "@target", function (newCaches) {
 
@@ -1232,6 +1354,7 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
                 };
 
                 type["class"] = createConstructor();
+                @.inherits(type["class"], Reference);
 
                 Object.defineProperty(type["class"], "name", {
                     "enumerable": true,
@@ -1255,6 +1378,21 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
         };
 
     }
+
+};
+
+PAK.prototype.listBindings = function (path) {
+
+    if (path[0] === "/") {
+        path = path.slice(1);
+    }
+
+    let bindings = this.types.files[path];
+    if (bindings) {
+        return Object.keys(bindings).map((link) => `${link}:${bindings[link]}`);
+    }
+
+    return [];
 
 };
 
@@ -1362,7 +1500,6 @@ const parseValue = function (record, records, caches) {
                 for (let key in values) {
                     if (key[0] !== "@") {
                         if (values[key].length !== 1) {
-                            // @dump(values, key);
                             @warn(`Invalid value key ${key}`);
                         } else {
                             result[key] = values[key][0];
@@ -1376,7 +1513,6 @@ const parseValue = function (record, records, caches) {
                 return classInitializers[result["@classID"]](result, records, caches);
             } else {
                 @warn(`Unknown value type ${type}`);
-                // @dump(record);
             }
             break;
         }
@@ -1712,6 +1848,7 @@ const loadPAKs = function (... paks) {
 				if (isProgramDir) {
 					if ((rootBasedPath === "maps") ||
 						(rootBasedPath === "duelpresets") ||
+                        (rootBasedPath === "dataa1") ||
 						(rootBasedPath === "support")) {
 						return false;	
 					}
