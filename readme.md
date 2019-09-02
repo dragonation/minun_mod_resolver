@@ -8,7 +8,7 @@ You can see the screenshot of it
 
 # Screenshots
 
-![screenshot](doc/res/screenshots/screenshot.png)
+![screenshot](doc/res/screenshots/1.png)
 
 # Dependencies
 
