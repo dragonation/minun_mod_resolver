@@ -6,4 +6,11 @@ You can search resources in multiple PAK files, and view the models, textures, g
 
 You can see the screenshot of it
 
+# Screenshots
+
 ![screenshot](doc/res/screenshots/screenshot.png)
+
+# Dependencies
+
+* mew_js
+* hako
