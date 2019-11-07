@@ -269,7 +269,7 @@ PAK.prototype.resolveLink = function (base, href, ignoreNotFound) {
         path = href.split("#xpointer").slice(1).join("#xpointer").slice(1, -1);
         base = null;
     } else if (/^([\/0-9a-zé_\.\-\+\(\) `]+)#xpointer\(id\(([a-z0-9\-_]+)\)([\/0-9a-z_\-\+]+)\)$/i.test(href)) {
-        //xpointer(id(idc6fee551-a01f-4477-bcb0-0e2efea6feee)/AdvMapStatic) 
+        //xpointer(id(idc6fee551-a01f-4477-bcb0-0e2efea6feee)/AdvMapStatic)
         let rest = href.split("#xpointer").slice(1).join("#xpointer").slice(1, -1);
         id = rest.split("id(").slice(1).join("id(").split(")")[0];
         path = rest.split(")").slice(1).join(")");
@@ -349,7 +349,7 @@ PAK.prototype.parseNode = function (path, node) {
     for (let key in node.attributes) {
         result[`@${key}`] = node.attributes[key].trim();
     }
-    
+
     for (let child of node.children) {
         if (typeof child === "string") {
             @warn("Complex children found");
@@ -359,7 +359,7 @@ PAK.prototype.parseNode = function (path, node) {
                 result[name] = [];
             }
             let parsed = this.parseNode(path, child);
-            if ((!@.is.nil(parsed)) && 
+            if ((!@.is.nil(parsed)) &&
                 ((typeof parsed === "string") ||
                  (Object.keys(parsed).length > 1))) {
                 // @@name is a visible key
@@ -383,7 +383,8 @@ PAK.prototype.loadGeometry = function (path) {
         bin.digRecord(record);
 
         if (record.data.length !== 2) {
-            throw new Error("Array data layout not correct");
+            // it means there is no data in the array
+            return null;
         }
 
         let count = record.data[0].data.readInt32LE(0);
@@ -461,10 +462,10 @@ PAK.prototype.loadGeometry = function (path) {
 
             return result;
 
-        }, 24); 
+        }, 24);
 
-        let configVertices = parseGroupArray(record.data[3], "readUInt16", 2); 
-        let configIndices = parseGroupArray(record.data[4], "readUInt16", 2); 
+        let configVertices = parseGroupArray(record.data[3], "readUInt16", 2);
+        let configIndices = parseGroupArray(record.data[4], "readUInt16", 2);
 
         let triangles = parseGroupArray(record.data[5], "readUInt16", 2); // indices
 
@@ -487,7 +488,7 @@ PAK.prototype.loadGeometry = function (path) {
                 "vertices": configVertices.data, // config index to vertex id
                 "indices": configIndices.data, // config index to config id
             },
-            "bones": bones.data,
+            "bones": bones ? bones.data : null,
             "unknown": [unknown[0], unknown[1], unknown[2], unknown[3]],
             "flags": flags
         };
@@ -773,7 +774,7 @@ PAK.prototype.loadTypeBindings = function () {
         }
 
         return record.data[0].data.toString("utf8");
-        
+
     };
 
     const parseNode = function (record) {
@@ -786,12 +787,12 @@ PAK.prototype.loadTypeBindings = function () {
         for (let data of record.data) {
             switch (data.flag) {
                 case 2: {
-                    count = data.data.readInt32LE(); 
+                    count = data.data.readInt32LE();
                     break;
                 };
                 case 1: {
                     let name = parseName(data);
-                    children.push(name); 
+                    children.push(name);
                     break;
                 };
                 default: { @dump(data); break; };
@@ -818,11 +819,11 @@ PAK.prototype.loadTypeBindings = function () {
             switch (data.flag) {
                 case 4: { unknown = data.data.readInt32LE(); break; }; // 389?
                 case 3: { count = data.data.readInt32LE(); break; };
-                case 2: { 
+                case 2: {
                     groups.push({
                         "links": parseNode(data)
-                    }); 
-                    break; 
+                    });
+                    break;
                 };
                 case 1: { flags.push(data.data); break; };
                 default: { @dump(data); break; }
@@ -1137,7 +1138,7 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
                 case "Float": {
                     return parseFloat(object);
                 };
-                case "String": 
+                case "String":
                 case "WideString": {
                     if (typeof object !== "string") {
                         let file = object["@href"];
@@ -1188,7 +1189,7 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
                         caches.set(object, this);
 
                         let supertype = type.base;
-                        if (supertype && (supertype !== pak.types.all["00000000"])) {                   
+                        if (supertype && (supertype !== pak.types.all["00000000"])) {
                             supertype["class"].call(this, object, caches);
                         }
 
@@ -1465,22 +1466,22 @@ const parseValue = function (record, records, caches) {
     let type = record.@("Type")[0];
     switch (type) {
         case "00000000": { return null; };
-        case "01000000": { 
+        case "01000000": {
             let data = record.@("Data")[0];
             return parseInt(data);
         };
-        case "02000000": { 
+        case "02000000": {
             let data = record.@("Data")[0];
             return parseFloat(data);
         };
-        case "03000000": { 
+        case "03000000": {
             let data = record.@("Data")[0];
             if (!data) {
                 data = "";
             }
             return data;
         };
-        case "04000000": { 
+        case "04000000": {
             let data = record.@("Data")[0].toLowerCase();
             switch (data) {
                 case "false": { return false; };
@@ -1563,7 +1564,7 @@ const parseType = function (id, records, caches) {
     let type = record.@("Type")[0];
     switch (type) {
 
-        case "TYPE_TYPE_STRUCT": 
+        case "TYPE_TYPE_STRUCT":
         case "TYPE_TYPE_CLASS": {
 
             let target = {
@@ -1576,10 +1577,10 @@ const parseType = function (id, records, caches) {
             caches.all[typeID] = target;
             switch (target.type) {
                 case "struct": { caches.structs[typeID] = target; break; };
-                case "class": { 
+                case "class": {
                     target.binding = record.@("TypeID")[0];
-                    caches.classes[typeID] = target; 
-                    break; 
+                    caches.classes[typeID] = target;
+                    break;
                 };
                 default: { @warn(`Unknown type ${target.type}`); break; };
             }
@@ -1591,7 +1592,7 @@ const parseType = function (id, records, caches) {
             let namespaceID = record.@("EnclosingNamespace")[0];
             parseType(namespaceID, records, caches);
             target.namespace = caches.all[namespaceID];
-            
+
             target.fields = Object.create(null);
             for (let field of (record.@("Fields/Item", true))) {
                 let parsed = parseField(field, records, caches);
@@ -1850,17 +1851,17 @@ const loadPAKs = function (... paks) {
 						(rootBasedPath === "duelpresets") ||
                         (rootBasedPath === "dataa1") ||
 						(rootBasedPath === "support")) {
-						return false;	
+						return false;
 					}
 				}
 
-				if (record.type === "dir") { 
-					return true; 
+				if (record.type === "dir") {
+					return true;
 				}
 
 				let filename = @.fs.filename(record.path);
-				if (filename[0] === ".") { 
-					return false; 
+				if (filename[0] === ".") {
+					return false;
 				}
 
 				let file = @.fs.openFile(record.path);
@@ -1871,7 +1872,7 @@ const loadPAKs = function (... paks) {
 				}
 
 				file.close();
-				if ((buffer[0] === 0x50) && 
+				if ((buffer[0] === 0x50) &&
 					(buffer[1] === 0x4b) &&
 					(buffer[2] === 0x03) &&
 					(buffer[3] === 0x04)) {
@@ -1909,7 +1910,7 @@ const loadPAKs = function (... paks) {
                 if (file.type === "file") {
                     let path = file.path;
                     let time = file.modifyTime;
-                    if ((!records[path]) || 
+                    if ((!records[path]) ||
                         (records[path].time.getTime() <= time.getTime())) {
                         if (records[path] && (!roots[path.split("/")[0]])) {
                             roots[path.split("/")[0]] = true;

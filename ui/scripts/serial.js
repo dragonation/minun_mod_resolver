@@ -22,7 +22,7 @@ $(function () {
 
     const serializeContent = function (content, root, caches) {
 
-        if ((content === undefined) || (content === null) || 
+        if ((content === undefined) || (content === null) ||
             (typeof content === "boolean") || (typeof content === "number")) {
             return content;
         }
@@ -228,6 +228,14 @@ $(function () {
         return new RegExp(source, flags)
     }, function (content) {
         return content.toString();
+    });
+
+    registerSerializer("buffer", ArrayBuffer, function (content, serializer) {
+        throw new Error("No support for serialization of ArrayBuffer");
+    }, function (deserializer, preset) {
+        let base64 = deserializer("base64");
+        console.log(base64);
+        return base64;
     });
 
     $.hmm5.parse = deserialize;

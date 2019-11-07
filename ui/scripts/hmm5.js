@@ -17,7 +17,7 @@ $(function () {
 
 	$.hmm5 = {
 		"ui": {},
-		"types": {} 
+		"types": {}
 	};
 
 	$.hmm5.types.Reference = function Reference(href) {
@@ -59,7 +59,7 @@ $(function () {
         renderer.gammaOutput = true;
 
         const scene = new THREE.Scene();
-        
+
         let ambientLight = new THREE.AmbientLight(0xffffff, 1.0);
         ambientLight.position.set(0, 0, 0);
 
@@ -67,11 +67,11 @@ $(function () {
         directionalLight.position.set(-0.7, 1, 1);
 
         lights = [ambientLight, directionalLight];
-         
+
         lights.forEach((light) => {
             scene.add(light);
         });
-        
+
         // if (stats) {
         //     stats = new THREE.Stats();
         //     // container.append($(stats.dom));
@@ -79,14 +79,14 @@ $(function () {
         //         stats.update();
         //     });
         // }
-         
+
         if (grids) {
             const gridHelper = new THREE.GridHelper(100, 10, 0x888888, 0x888888);
             gridHelper.position.set(0, - 0.04, 0);
             scene.add(gridHelper);
             grids = gridHelper;
         }
-       
+
         const orbitControls = new THREE.OrbitControls(camera, renderer.domElement);
         orbitControls.target.set(0, 30, 0);
         orbitControls.enablePan = false;
@@ -96,7 +96,7 @@ $(function () {
         // orbitControls.minPolarAngle = Math.PI / 3;
         // orbitControls.maxPolarAngle = Math.PI / 2;
         orbitControls.update();
-     
+
 		let version = 1;
 
 		let animating = 0;
@@ -185,7 +185,7 @@ $(function () {
 			let fromBottom = clientRect.bottom;
 
 			for (let query of windows) {
-				if ((query[0] !== dom) && 
+				if ((query[0] !== dom) &&
 					((type !== "equals") || (dom.hmm5ID < query[0].hmm5ID))) {
 
 					const radius = 40 * scale;
@@ -245,7 +245,7 @@ $(function () {
 					}
 
 					let toDirection = undefined;
-					
+
 					if ((fromDirection === "top") || (fromDirection === "bottom")) {
 						let midPoint = (fromLeft + fromRight) / 2;
 						if (midPoint + radius < toLeft) {
@@ -455,25 +455,25 @@ $(function () {
 						if (looper === 0) {
 							switch (fromDirection) {
 								case "top": {
-									line.push(`M ${point[0] - headRadius} ${point[1]}`); 
+									line.push(`M ${point[0] - headRadius} ${point[1]}`);
 									line.push(`A ${headRadius} ${headRadius} 0 0 1 ${point[0]} ${point[1] - headRadius}`);
 									line.push(`A ${headRadius} ${headRadius} 0 0 1 ${point[0] + headRadius} ${point[1]}`);
 									line.push(`M ${point[0]} ${point[1] - headRadius}`); break;
 								};
 								case "bottom": {
-									line.push(`M ${point[0] - headRadius} ${point[1]}`); 
+									line.push(`M ${point[0] - headRadius} ${point[1]}`);
 									line.push(`A ${headRadius} ${headRadius} 0 0 0 ${point[0]} ${point[1] + headRadius}`);
 									line.push(`A ${headRadius} ${headRadius} 0 0 0 ${point[0] + headRadius} ${point[1]}`);
 									line.push(`M ${point[0]} ${point[1] + headRadius}`); break;
 								};
 								case "left": {
-									line.push(`M ${point[0]} ${point[1] - headRadius}`); 
+									line.push(`M ${point[0]} ${point[1] - headRadius}`);
 									line.push(`A ${headRadius} ${headRadius} 0 0 0 ${point[0] - headRadius} ${point[1]}`);
 									line.push(`A ${headRadius} ${headRadius} 0 0 0 ${point[0]} ${point[1] + headRadius}`);
 									line.push(`M ${point[0] - headRadius} ${point[1]}`); break;
 								};
 								case "right": {
-									line.push(`M ${point[0]} ${point[1] - headRadius}`); 
+									line.push(`M ${point[0]} ${point[1] - headRadius}`);
 									line.push(`A ${headRadius} ${headRadius} 0 0 1 ${point[0] + headRadius} ${point[1]}`);
 									line.push(`A ${headRadius} ${headRadius} 0 0 1 ${point[0]} ${point[1] + headRadius}`);
 									line.push(`M ${point[0] + headRadius} ${point[1]}`); break;
@@ -507,7 +507,7 @@ $(function () {
 					switch (toDirection) {
 						case "top": {
 							if (type === "equals") {
-								line.push(`M ${toX - headRadius} ${toY}`); 
+								line.push(`M ${toX - headRadius} ${toY}`);
 								line.push(`A ${headRadius} ${headRadius} 0 0 1 ${toX} ${toY - headRadius}`);
 								line.push(`A ${headRadius} ${headRadius} 0 0 1 ${toX + headRadius} ${toY}`);
 							} else {
@@ -519,7 +519,7 @@ $(function () {
 						};
 						case "bottom": {
 							if (type === "equals") {
-								line.push(`M ${toX - headRadius} ${toY}`); 
+								line.push(`M ${toX - headRadius} ${toY}`);
 								line.push(`A ${headRadius} ${headRadius} 0 0 0 ${toX} ${toY + headRadius}`);
 								line.push(`A ${headRadius} ${headRadius} 0 0 0 ${toX + headRadius} ${toY}`);
 							} else {
@@ -531,7 +531,7 @@ $(function () {
 						};
 						case "left": {
 							if (type === "equals") {
-								line.push(`M ${toX} ${toY - headRadius}`); 
+								line.push(`M ${toX} ${toY - headRadius}`);
 								line.push(`A ${headRadius} ${headRadius} 0 0 0 ${toX - headRadius} ${toY}`);
 								line.push(`A ${headRadius} ${headRadius} 0 0 0 ${toX} ${toY + headRadius}`);
 							} else {
@@ -543,7 +543,7 @@ $(function () {
 						};
 						case "right": {
 							if (type === "equals") {
-								line.push(`M ${toX} ${toY - headRadius}`); 
+								line.push(`M ${toX} ${toY - headRadius}`);
 								line.push(`A ${headRadius} ${headRadius} 0 0 1 ${toX + headRadius} ${toY}`);
 								line.push(`A ${headRadius} ${headRadius} 0 0 1 ${toX} ${toY + headRadius}`);
 							} else {
@@ -588,7 +588,7 @@ $(function () {
 					}
 					if (files[targetFile]) {
 						updateArrows(link, dom, files[targetFile], "file");
-					} 
+					}
 					if (files[link.target] && (link.target !== targetFile)) {
 						updateArrows(link, dom, files[link.target], "link");
 					}
@@ -788,7 +788,7 @@ $(function () {
 				"left": (parseInt(topmost.css("left")) + 30 * scale) + "px",
 				"top": (parseInt(topmost.css("top")) + 30 * scale) + "px",
 			});
-			
+
 		}
 
 		$("body").append(window);
@@ -808,10 +808,10 @@ $(function () {
 				}
 				file = file.split("#")[0];
 				if ((file.indexOf("/") === -1) && (file.indexOf(".") === -1)) {
-					$.ajax(`/uid/${file}`, { 
+					$.ajax(`/uid/${file}`, {
 						"success": (path) => {
 							open(`/pak/${path}?download=yes`, "_blank");
-						} 
+						}
 					});
 				} else {
 					if (file[0] === "/") {
@@ -867,10 +867,10 @@ $(function () {
 					});
 				};
 				if ((file.indexOf("/") === -1) && (file.indexOf(".") === -1)) {
-					$.ajax(`/uid/${file}`, { 
+					$.ajax(`/uid/${file}`, {
 						"success": (path) => {
 							resolve(path);
-						} 
+						}
 					});
 				} else {
 					resolve(file);
@@ -1043,13 +1043,13 @@ $(function () {
 							for (let item of value[0][key]) {
 								let subrecord = createRecord(key, [item], false, value[0]);
 								container.append(subrecord);
-							}	
+							}
 						} else {
 							let subrecord = createRecord(key, value[0][key], false, value[0]);
 							container.append(subrecord);
 						}
 					}
-				}	
+				}
 			}
 
 			if (bindings[href]) {
@@ -1305,7 +1305,7 @@ $(function () {
 						let subrecord = createRecord(key, value[key], false, value);
 						container.append(subrecord);
 					}
-				}	
+				}
 			}
 
 			return record;
@@ -1323,7 +1323,7 @@ $(function () {
 				}
 			}
 
-			updateLinks();	
+			updateLinks();
 
 		});
 
@@ -1422,12 +1422,19 @@ $(function () {
 			let radius = Math.max((maxes[0] - mins[0]), (maxes[1] - mins[1]), (maxes[2] - mins[2]));
 			let scale = 60 / radius;
 
-			object.scale.set(scale, scale, scale);
-			object.rotateX(-Math.PI / 2);
+			object.position.set((mins[0] + maxes[0]) * (-0.5),
+			                    (mins[1] + maxes[1]) * (-0.5),
+			                    -mins[2]);
 
-			view.controls.target0.set(0, mins[1] + (maxes[1] - mins[1]) * 0.8, 0);
+			let container = new THREE.Object3D();
+			container.scale.set(scale, scale, scale);
+			container.rotateX(-Math.PI / 2);
 
-			view.scene.add(object);
+			container.add(object);
+
+			view.controls.target0.set(0, (maxes[2] - mins[2]) * 0.5 * scale, 0);
+
+			view.scene.add(container);
 
 			window[0].hmm5Links = links.map((target) => {
 				return {
@@ -1465,7 +1472,7 @@ $(function () {
 		window.find("#window-client-area").append($(view.renderer.domElement));
 
 		let material = (meshIndex, polygonIndex) => {
-			return new THREE.MeshPhongMaterial({ 
+			return new THREE.MeshPhongMaterial({
 				"color": 0x0f4c84,
 			});
 		};
@@ -1475,12 +1482,19 @@ $(function () {
 			let radius = Math.max((maxes[0] - mins[0]), (maxes[1] - mins[1]), (maxes[2] - mins[2]));
 			let scale = 60 / radius;
 
-			object.scale.set(scale, scale, scale);
-			object.rotateX(-Math.PI / 2);
+			object.position.set((mins[0] + maxes[0]) * (-0.5),
+			                    (mins[1] + maxes[1]) * (-0.5),
+			                    -mins[2]);
 
-			view.controls.target0.set(0, mins[1] + (maxes[1] - mins[1]) * 0.8, 0);
+			let container = new THREE.Object3D();
+			container.scale.set(scale, scale, scale);
+			container.rotateX(-Math.PI / 2);
 
-			view.scene.add(object);
+			container.add(object);
+
+			view.controls.target0.set(0, (maxes[2] - mins[2]) * 0.5 * scale, 0);
+
+			view.scene.add(container);
 
 		});
 
@@ -1512,13 +1526,6 @@ $(function () {
 
 			let object = new THREE.Object3D();
 			object.add(skeleton.bones[0]);
-			view.scene.add(object);
-
-			var helper = new THREE.SkeletonHelper(object);
-
-			helper.material.linewidth = 30;
-
-			view.scene.add(helper);
 
 			let maxes = [-Infinity, -Infinity, -Infinity];
 			let mins = [Infinity, Infinity, Infinity];
@@ -1537,10 +1544,23 @@ $(function () {
 			let radius = Math.max((maxes[0] - mins[0]), (maxes[1] - mins[1]), (maxes[2] - mins[2]));
 			let scale = 60 / radius;
 
-			object.scale.set(scale, scale, scale);
-			object.rotateX(-Math.PI / 2);
+			object.position.set((mins[0] + maxes[0]) * (-0.5),
+			                    (mins[1] + maxes[1]) * (-0.5),
+			                    -mins[2]);
 
-			view.controls.target0.set(0, mins[1] + (maxes[1] - mins[1]) * 0.8, 0);
+			let container = new THREE.Object3D();
+			container.scale.set(scale, scale, scale);
+			container.rotateX(-Math.PI / 2);
+
+			container.add(object);
+
+			view.scene.add(container);
+
+			var helper = new THREE.SkeletonHelper(container);
+			helper.material.linewidth = 30;
+			view.scene.add(helper);
+
+			view.controls.target0.set(0, (maxes[2] - mins[2]) * 0.5 * scale, 0);
 
 		});
 
@@ -1597,7 +1617,7 @@ $(function () {
 				return parsed;
 			}
 
-		} 
+		}
 
 		if (id.split("#").length > 1) {
 			return $.hmm5.openLink(id);
@@ -1720,13 +1740,13 @@ $(function () {
 			        bone.scale.set(record.scales[0], record.scales[1], record.scales[2]);
 			        bone.position.set(record.translations[0], record.translations[1], record.translations[2]);
 			        bone.quaternion.set(record.quaternion[0], record.quaternion[1], record.quaternion[2], record.quaternion[3]);
-			        
+
 			        if (record.parent !== -1) {
 				        boneList[record.parent].add(bone);
 				    }
 
 			        bone.updateMatrixWorld(true);
-			        
+
 			        boneList[index] = bone;
 					bones[record.name] = bone;
 
@@ -1771,13 +1791,17 @@ $(function () {
 			};
 
 			links[records.model.Geometry.href] = true;
-			links[records.model.Skeleton.href] = true;
+			if (records.model.Skeleton) {
+				links[records.model.Skeleton.href] = true;
+			}
 
 			records.geometry = await new Promise((next) => $.hmm5.loadLink(records.model.Geometry.href, next));
 			links[records.geometry.uid.id] = true;
 
-			records.skeleton = await new Promise((next) => $.hmm5.loadLink(records.model.Skeleton.href, next));
-			links[records.skeleton.uid.id] = true;
+			if (records.model.Skeleton) {
+				records.skeleton = await new Promise((next) => $.hmm5.loadLink(records.model.Skeleton.href, next));
+				links[records.skeleton.uid.id] = true;
+			}
 
 			for (let material of records.model.Materials) {
 				links[material.href] = true;
@@ -1789,20 +1813,23 @@ $(function () {
 				}
 			}
 
-			let skeleton = await new Promise((next) => {
-				$.ajax(`/uid/${records.skeleton.uid.id}`, { 
-					"success": (path) => {
-						$.hmm5.loadSkeleton(path, next);
-					} 
+			let skeleton = null;
+			if (records.skeleton) {
+				skeleton = await new Promise((next) => {
+					$.ajax(`/uid/${records.skeleton.uid.id}`, {
+						"success": (path) => {
+							$.hmm5.loadSkeleton(path, next);
+						}
+					});
 				});
-			});
+			}
 
 			let material = (meshIndex, polygonIndex) => {
 
 				let offset = 0;
 				for (let looper = 0; looper < meshIndex; ++looper) {
 					offset += records.geometry.MaterialQuantities[looper];
-				} 
+				}
 
 				let configs = {
 					"material": records.materials[offset + polygonIndex]
@@ -1814,30 +1841,30 @@ $(function () {
 				let texture = new THREE.TextureLoader().load("/png/" + configs.texture.DestName.href + ".png");
 				texture.flipY = configs.texture.FlipY;
 				switch (configs.texture.AddrType.token) {
-					case "CLAMP": { 
-						texture.wrapS = THREE.ClampToEdgeWrapping; 
-						texture.wrapT = THREE.ClampToEdgeWrapping; 
-						break; 
+					case "CLAMP": {
+						texture.wrapS = THREE.ClampToEdgeWrapping;
+						texture.wrapT = THREE.ClampToEdgeWrapping;
+						break;
 					};
-					case "WRAP": { 
-						texture.wrapS = THREE.RepeatWrapping; 
-						texture.wrapT = THREE.RepeatWrapping; 
-						break; 
+					case "WRAP": {
+						texture.wrapS = THREE.RepeatWrapping;
+						texture.wrapT = THREE.RepeatWrapping;
+						break;
 					};
 					case "WRAP_X": {
-						texture.wrapS = THREE.RepeatWrapping; 
-						texture.wrapT = THREE.ClampToEdgeWrapping; 
-						break; 
+						texture.wrapS = THREE.RepeatWrapping;
+						texture.wrapT = THREE.ClampToEdgeWrapping;
+						break;
 					};
-					case "WRAP_Y": { 
-						texture.wrapS = THREE.ClampToEdgeWrapping; 
-						texture.wrapT = THREE.RepeatWrapping; 
-						break; 
+					case "WRAP_Y": {
+						texture.wrapS = THREE.ClampToEdgeWrapping;
+						texture.wrapT = THREE.RepeatWrapping;
+						break;
 					};
 					default: { break; };
 				}
 
-				let material = new THREE.MeshPhongMaterial({ 
+				let material = new THREE.MeshPhongMaterial({
 					"map": texture
 				});
 				if (configs.material.is2Sided) {
@@ -1856,23 +1883,23 @@ $(function () {
 				// configs.material.BackFaceCastShadow
 				switch (configs.material.AlphaMode.token) {
 					case "AM_OPAQUE": { break; };
-					case "AM_OVERLAY": { 
+					case "AM_OVERLAY": {
 						material.transparent = true;
 						material.depthWrite = false;
-						break; 
+						break;
 					};
-					case "AM_OVERLAY_ZWRITE": { 
+					case "AM_OVERLAY_ZWRITE": {
 						material.transparent = true;
-						break; 
+						break;
 					};
-					case "AM_TRANSPARENT": { 
+					case "AM_TRANSPARENT": {
 						material.transparent = true;
 						material.depthWrite = false;
-						break; 
+						break;
 					};
-					case "AM_ALPHA_TEST": { 
+					case "AM_ALPHA_TEST": {
 						material.alphaTest = 0.5;
-						break; 
+						break;
 					};
 					case "AM_DECAL":
 					default: { break; };
@@ -1881,12 +1908,12 @@ $(function () {
 				return material;
 			};
 
-			$.ajax(`/uid/${records.geometry.uid.id}`, { 
+			$.ajax(`/uid/${records.geometry.uid.id}`, {
 				"success": (path) => {
 					$.hmm5.loadGeometry(path, material, skeleton, (model, mins, maxes) => {
 						callback(model, mins, maxes, Object.keys(links));
 					});
-				} 
+				}
 			});
 
 		})();
