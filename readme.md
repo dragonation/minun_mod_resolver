@@ -22,25 +22,25 @@ You can see the screenshot of it
 3. Update the PATH environment to include the Mewchan runtime `bin` folder
 4. Create a new file `conf/hako.json`, specify the hmm5 install location:
     ```
-{
-    "brainOptions": {
-        "shrinkingUICodes": false,
-        "uiFolders": { "ui-hmm5": "/~hmm5" }
-    },
-    "playgrounds": {
-        "http": { "port": 12345 }
-    },
-    "kitties": {
-        "hmm5": { "paths": [ "C:\\Programs\\Steam\\steamapps\\common\\Heroes of Might and Magic 5" ] }
-    },
-    "resources": {
-        "ui-hmm5": {
-            "playground": "http",
-            "innerPath": "ui-hmm5",
-            "outerPath": "/~hmm5"
+    {
+        "brainOptions": {
+            "shrinkingUICodes": false,
+            "uiFolders": { "ui-hmm5": "/~hmm5" }
+        },
+        "playgrounds": {
+            "http": { "port": 12345 }
+        },
+        "kitties": {
+            "hmm5": { "paths": [ "C:\\Programs\\Steam\\steamapps\\common\\Heroes of Might and Magic 5" ] }
+        },
+        "resources": {
+            "ui-hmm5": {
+                "playground": "http",
+                "innerPath": "ui-hmm5",
+                "outerPath": "/~hmm5"
+            }
         }
     }
-}
     ```
 5. Run the `hako` command under the project folder
 6. Open Chrome/Chromium and browse the url `http://localhost:12345`
