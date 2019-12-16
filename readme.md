@@ -18,16 +18,27 @@ You can see the screenshot of it
 # Running
 
 1. Install MSYS2 or similar POSIX simulation environment on Windows
-2. Download the Windows runtime from [Mewchan Website](http://www.mewchan.com/dists.mhtml)
+2. Download the Windows mew_js runtime from [Mewchan Website](http://www.mewchan.com/dists.mhtml)
 3. Update the PATH environment to include the Mewchan runtime `bin` folder
 4. Create a new file `conf/hako.json`, specify the hmm5 install location:
     ```
 {
+    "brainOptions": {
+        "shrinkingUICodes": false,
+        "uiFolders": { "ui-hmm5": "/~hmm5" }
+    },
     "playgrounds": {
         "http": { "port": 12345 }
     },
     "kitties": {
-        "hmm5": { "paths": [ "absolute/path/to/hmm5" ] }
+        "hmm5": { "paths": [ "C:\\Programs\\Steam\\steamapps\\common\\Heroes of Might and Magic 5" ] }
+    },
+    "resources": {
+        "ui-hmm5": {
+            "playground": "http",
+            "innerPath": "ui-hmm5",
+            "outerPath": "/~hmm5"
+        }
     }
 }
     ```
