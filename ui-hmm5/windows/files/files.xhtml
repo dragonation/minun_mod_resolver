@@ -1,0 +1,26 @@
+<div id="clients">
+    <div id="path">HMM5 package location: ${path}</div>
+    <ui-scroll-view id="dirs" scroll-x="yes">
+        <div id="dirs-container">
+            <tmpl:map list="dirs" item-name="dir" id-getter="{dir.path}">
+                <ui-collection-view class="files"
+                    style:--cell-width="200px" style:--cell-height="24px"
+                    style:width="200px" style:height="100%"
+                    prop:sections="${[dir]}" prop:cells-getter="{section.files}">
+                    <tmpl:slot name="cell">
+                        <div class="file" title="${cell.filename}"
+                            class:selected="contain(section.selecteds, cell.filename)"
+                            @click="selectFile(section.path, cell.filename)"
+                            @dblclick="openFile(section.path, cell.filename)">
+                            <img src="/res/file-type/${cell.type}.svg" id="file-icon"/>
+                            <div id="file-filename">${cell.filename}</div>
+                            <tmpl:if test="cell.type == 'dir'">
+                                <img src="/res/list/entrance.svg" id="dir-arrow"/>
+                            </tmpl:if>
+                        </div>
+                    </tmpl:slot>
+                </ui-collection-view>
+            </tmpl:map>
+        </div>
+    </ui-scroll-view>
+</div>

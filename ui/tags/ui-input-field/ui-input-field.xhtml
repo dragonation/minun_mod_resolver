@@ -1,0 +1,9 @@
+<tmpl:if test="attributes.icon">
+    <img src="${attributes.icon}" id="icon" @click="focusInput()"/>
+</tmpl:if>
+<input type="text"
+       placeholder="${attributes.placeholder}"
+       @focus="showFocus()"
+       @blur="hideFocus()"
+       @keydown="triggerChanges()"
+       @paste="triggerChanges()"/>

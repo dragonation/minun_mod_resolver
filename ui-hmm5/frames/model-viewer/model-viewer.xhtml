@@ -1,0 +1,34 @@
+<m3d-scene grids="yes" controls="orbit" autolights="yes">
+    <m3d-object id="model"
+                model-scale="${scale}"
+                model-translation="${translation}"
+                model-rotation="${rotation}">
+        <tmpl:map list="keys(target.textures)" item-name="id" id-getter="{id}">
+            <m3d-texture id="${id}" name="${target.textures[id].name}"
+                         src="${target.textures[id].src ? '/~hmm5/png/' + target.textures[id].src + '.png' : ''}"
+                         flip-y="${target.textures[id].flipY ? 'yes' : 'no'}"
+                         wrap-s="${target.textures[id].wrapS}"
+                         wrap-t="${target.textures[id].wrapT}"/>
+        </tmpl:map>
+        <tmpl:map list="keys(target.materials)" item-name="id" id-getter="{id}">
+            <m3d-material id="${id}" name="${target.materials[id].name}"
+                          preset="phong"
+                          textures="${target.materials[id].texture}"
+                          side="${target.materials[id].side}"
+                          alpha-test="${target.materials[id].alphaTest}"
+                          depth-test="${target.materials[id].depthTest ? 'yes' : 'no'}"
+                          depth-write="${target.materials[id].depthWrite ? 'yes' : 'no'}"/>
+        </tmpl:map>
+        <tmpl:map list="target.geometry.meshes" item-name="mesh" index-name="meshIndex" id-getter="{meshIndex}">
+            <tmpl:map list="mesh.polygons" item-name="polygon" index-name="polygonIndex" id-getter="{polygonIndex}">
+                <m3d-mesh materials="${polygon.material}"
+                          id="mesh-${meshIndex + 1}-${polygonIndex + 1}"
+                          name="${mesh.name}-${polygonIndex + 1}"
+                          prop:indices="${polygon.indices}"
+                          prop:vertices="${polygon.vertices}"
+                          prop:normals="${polygon.normals}"
+                          prop:uvs="${polygon.uvs}"/>
+            </tmpl:map>
+        </tmpl:map>
+    </m3d-object>
+</m3d-scene>

@@ -1,0 +1,6 @@
+<ui-scroll-view scroll-x="yes" scroll-y="yes" scroll-indicator="no" @scroll="updateLayouts()">
+    <div id="diagram-grids"/>
+    <svg:svg xmlns:svg="http://www.w3.org/2000/svg" id="diagram-arrows"></svg:svg>
+    <div id="diagram-paper"><slot/></div>
+</ui-scroll-view>
+<canvas id="diagram-bird-view" width="${devicePixels(200)}" height="${devicePixels(200)}" @mousedown="${startDraggingViewport(event)}"></canvas>

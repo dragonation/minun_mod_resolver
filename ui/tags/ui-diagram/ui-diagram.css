@@ -1,0 +1,45 @@
+:host {
+    position: relative;
+}
+
+.arrow {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.3);
+    stroke-width: 1.5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#diagram-arrows {
+    position: absolute;
+}
+
+#diagram-grids {
+    position: absolute;
+    background-image: url('./diagram-grid.svg');
+    background-size: 40px 40px;
+    background-repeat: repeat;
+}
+
+#diagram-paper {
+    position: absolute;
+    left: var(--offset-x, 0px);
+    top: var(--offset-y, 0px);
+}
+
+#diagram-bird-view {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 200px;
+    height: 200px;
+    display: block;
+    z-index: 999;
+    border: solid 1dpx $alpha($white(0.2), 0.7);
+    border-radius: 6px;
+    background-color: $alpha($white(1), 0.7);
+    overflow: hidden;
+    backdrop-filter: blur(calc(3px * var(--ui-scale)));
+    box-sizing: content-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 2px 2px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+}

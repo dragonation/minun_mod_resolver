@@ -1,0 +1,5 @@
+<ul id="records">
+    <tmpl:map list="${getPropertyKeys(tag.target)}" item-name="key" id-getter="{key}">
+        <li class="record"><ui-property key="${key}" expanded="yes" prop:value="${tag.target[key]}" prop:resolver="${tag.resolver}" @foldingchange="trigFoldingChanges()"/></li>
+    </tmpl:map>
+</ul>

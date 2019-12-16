@@ -1,306 +1,165 @@
-@servlet.get("/pak//*", function (request, response) {
+const zlib = require("zlib");
 
-	this.break();
+const uiFolders = @options("uiFolders");
 
-	if (request.get.download === "yes") {
-		response.headers["Content-Type"] = "application/x-download";
-	} else {
-		let extname = @.fs.extname(request.path.toLowerCase());
-		switch (extname) {
-			case ".xdb": {
-				response.headers["Content-Type"] = "application/xml";
-				break;
-			};
-			case ".dds": {
-				response.headers["Content-Type"] = "image/vnd.ms-dds";
-				break;
-			};
-			default: {
-				response.headers["Content-Type"] = @.fs.mime(extname);
-				break;
-			};
-		}
-	}
+const shrinkingCodes = @options("shrinkingUICodes");
 
-	return @mew.rpc("hmm5.loadContent", {
-		"path": request.path.slice(5)
-	}).then(function (binary) {
-		response.writer.end(binary, this.test);
-	});
+const bundledExtnames = Object.create(null);
+bundledExtnames[".js"] = true;
+bundledExtnames[".xhtml"] = true;
+bundledExtnames[".css"] = true;
+bundledExtnames[".json"] = true;
 
-});
+let packageJSON = {};
+let bundleJSONs = Object.create(null);
 
-@servlet.get("/uid/*", function (request, response) {
+let caches = Object.create(null);
 
-	this.break();
+const shrinkCode = function (path, extname, code) {
 
-	response.headers["Content-Type"] = "text/plain";
+    if (!shrinkingCodes) {
+        return code;
+    }
 
-	return @mew.rpc("hmm5.resolveUID", {
-		"uid": request.path.slice(5)
-	}).then(function (path) {
-		response.writer.end(path, this.test);
-	});
+    if (caches[path] && (caches[path].code === code)) {
+        return caches[path].shrinked;
+    }
 
-});
+    switch (extname) {
+        case ".js": {
+            caches[path] = {
+                "shrinked": @.js.minify(code),
+                "code": code
+            };
+            break;
+        };
+        case ".json": {
+            caches[path] = {
+                "shrinked": JSON.stringify(JSON.parse(code)),
+                "code": code
+            };
+            break;
+        };
+        case ".css":
+        case ".xhtml": {
+            caches[path] = {
+                "shrinked": code.split(/(\r|\n|\r\n)/).map(line => line.trim()).join("\n"),
+                "code": code
+            };
+            break;
+        };
+    }
 
-@servlet.get("/search//*", function (request, response) {
+    if (caches[path] && (caches[path].code === code)) {
+        return caches[path].shrinked;
+    }
 
-	this.break();
+    return code;
 
-	let keywords = [];
+};
 
-	response.headers["Content-Type"] = "text/plain";
+const generateBundle = function (uiFolder) {
 
-	request.path.slice(8).split(/[\s,;\+]/).forEach((word) => {
-		word = word.trim().toLowerCase();
-		if (word && keywords.indexOf(word) === -1) {
-			keywords.push(word);
-		}
-	});
+    let bundle = @.fs.relativePath(@mewchan().workingPath, @path(@mewchan().workingPath, uiFolder));
 
-	return @mew.rpc("hmm5.searchFiles", {
-		"keywords": keywords
-	}).then(function (files) {
-		response.writer.end(files.map((file) => file.path).join("\n"), this.test);
-	});
+    let files = @.fs.scanFiles.sync(@path(@mewchan().workingPath, bundle), -1, (record) => {
+        return true;
+    });
 
-});
+    let jsonPath = `/ui/${uiFolder}.json`;
 
-@servlet.get("/list/files//*", function (request, response) {
+    let caches = {};
 
-	this.break();
+    for (let record of files.filter((record) => record.type === "file")) {
+        let extname = @.fs.extname(record.path);
+        if (bundledExtnames[extname]) {
+            let path = @.fs.relativePath(@path(@mewchan().workingPath, uiFolder), record.path);
+            let content = @.fs.readFile.sync(record.path).toString("utf8");
+            try {
+                content = shrinkCode(path, extname, content)
+            } catch (error) {
+                @error(`Failed to shrink code file[${path}]`);
+                @error(error);
+            }
+            caches[@.fs.resolvePath(uiFolders[uiFolder], path)] = content;
+            packageJSON[@.fs.resolvePath(uiFolders[uiFolder], path)] = jsonPath;
+        }
+    }
 
-	let dirname = request.path.slice("/list/files/".length);
-	while (dirname[dirname.length - 1] == "/") {
-		dirname = dirname.slice(0, -1);
-	}
+    for (let file of Object.keys(packageJSON).slice(0)) {
+        if ((caches[file] === undefined) && (jsonPath === packageJSON[file])) {
+            delete packageJSON[file];
+        }
+    }
 
-	response.headers["Content-Type"] = "text/plain";
+    bundleJSONs[bundle] = zlib.gzipSync(JSON.stringify(caches));
 
-	return @mew.rpc("hmm5.listFiles", {
-		"dirname": dirname 
-	}).then(function (files) {
-		response.writer.end(files.map((file) => {
-			if (file.type === "dir") {
-				return file.name + "/";
-			} else {
-				return file.name;
-			}
-		}).join("\n"), this.test);
-	});
+    @info(`Generating UI bundle[${jsonPath}]`);
 
-});
+};
 
-@servlet.get("/list/models//*", function (request, response) {
+let schedules = Object.create(null);
 
-	this.break();
+const scheduleGenerateBundle = function (uiFolder) {
 
-	let keywords = [];
+    if (schedules[uiFolder]) {
+        return;
+    }
 
-	response.headers["Content-Type"] = "text/plain";
+    @info(`Schedule updating UI bundle[/ui/${uiFolder}.json]`);
 
-	request.path.slice("/list/models/".length).split(/[\s,;\+]/).forEach((word) => {
-		word = word.trim().toLowerCase();
-		if (word && keywords.indexOf(word) === -1) {
-			keywords.push(word);
-		}
-	});
+    schedules[uiFolder] = true;
+    @.delay(100, () => {
+        delete schedules[uiFolder];
+        generateBundle(uiFolder);
+    });
 
-	return @mew.rpc("hmm5.listModels", {
-		"keywords": keywords 
-	}).then(function (models) {
-		response.writer.end(models.join("\n"), this.test);
-	});
+};
 
-});
+@servlet.get("/ui/~package.json", function (request, response) {
 
-@servlet.get("/list/tokens//*", function (request, response) {
+    this.break();
 
-	this.break();
+    response.headers["Content-Type"] = "application/json";
+    response.headers["Content-Encoding"] = "gzip";
 
-	let keywords = [];
-
-	response.headers["Content-Type"] = "text/plain";
-
-	request.path.slice("/list/tokens/".length).split(/[\s,;\+]/).forEach((word) => {
-		word = word.trim().toLowerCase();
-		if (word && keywords.indexOf(word) === -1) {
-			keywords.push(word);
-		}
-	});
-
-	return @mew.rpc("hmm5.listTokens", {
-		"keywords": keywords 
-	}).then(function (tokens) {
-		response.writer.end(tokens.join("\n"), this.test);
-	});
+    return @.async(function () {
+        response.writer.end(zlib.gzipSync(JSON.stringify(packageJSON)), this.test);
+    });
 
 });
 
-@servlet.get("/list/deps//*", function (request, response) {
+@servlet.get("/ui//*.json", function (request, response) {
 
-	this.break();
+    if (request.path === "/ui/~package.json") {
+        return;
+    }
 
-	response.headers["Content-Type"] = "text/plain";
+    let bundle = request.path.slice(4, -5);
+    if (!bundleJSONs[bundle]) {
+        return;
+    }
 
-	let path = request.path.slice("/list/deps".length);
+    this.break();
 
-	let hash = request.get.hash;
+    response.headers["Content-Type"] = "application/json";
+    response.headers["Content-Encoding"] = "gzip";
 
-	let link = path;
-	if (hash) {
-		link += "#" + hash;
-	}
-
-	return @mew.rpc("hmm5.analyzeDependencies", {
-		"link": link
-	}).then(function (files) {
-		response.writer.end(files.join("\n"), this.test);
-	});
-
-});
-
-@servlet.get("/list/bindings//*", function (request, response) {
-
-	this.break();
-
-	response.headers["Content-Type"] = "text/plain";
-
-	let path = request.path.slice("/list/bindings".length);
-
-	return @mew.rpc("hmm5.listBindings", {
-		"path": path 
-	}).then(function (links) {
-		response.writer.end(links.join("\n"), this.test);
-	});
+    return @.async(function () {
+        response.writer.end(bundleJSONs[bundle], this.test);
+    });
 
 });
 
-// @servlet.get("/zip//*", function (request, response) {
+let watchers = Object.create(null);
 
-// });
-
-// @servlet.get("/m3d//*", function (request, response) {
-
-// });
-
-@servlet.get("/png//*", function (request, response) {
-
-	this.break();
-
-	response.headers["Content-Type"] = "image/png";
-
-	let path = request.path.slice(5);
-	if (path.slice(-4) === ".png") {
-		path = path.slice(0, -4);
-	}
-
-	return @mew.rpc("hmm5.loadImage", {
-		"path": path
-	}).then(function (dds) {
-		response.writer.end(dds.encodeAsPNG(), this.test);
-	});
-
-});
-
-@servlet.get("/wav//*", function (request, response) {
-
-	this.break();
-
-	response.headers["Content-Type"] = "audio/x-wav";
-
-	return @mew.rpc("hmm5.loadContent", {
-		"path": request.path.slice(5)
-	}).then(function (binary) {
-		response.writer.end(binary, this.test);
-	});
-
-});
-
-@servlet.get("/xml//*", function (request, response) {
-
-	this.break();
-
-	let path = request.path.slice(5);
-
-	response.headers["Content-Type"] = "application/json";
-
-	return @mew.rpc("hmm5.loadXML", {
-		"path": path 
-	}).then(function (xml) {
-		response.writer.end(@.serialize(xml), this.test);
-	});
-
-});
-
-@servlet.get("/link//*", function (request, response) {
-
-	this.break();
-
-	let path = request.path.slice(5);
-
-	let hash = request.get.hash;
-
-	let link = path;
-	if (hash) {
-		link += "#" + hash;
-	}
-
-	response.headers["Content-Type"] = "application/json";
-
-	return @mew.rpc("hmm5.restoreInstance", {
-		"link": link
-	}).then(function (instance) {
-		response.writer.end(@.serialize(instance), this.test);
-	});
-
-});
-
-@servlet.get("/geom//*", function (request, response) {
-
-	this.break();
-
-	response.headers["Content-Type"] = "application/json";
-
-	let uid = request.path.slice(6).split("/").slice(-1)[0];
-
-	return @mew.rpc("hmm5.loadGeometry", {
-		"uid": uid 
-	}).then(function (instance) {
-		response.writer.end(@.serialize(instance), this.test);
-	});
-
-});
-
-@servlet.get("/skel//*", function (request, response) {
-
-	this.break();
-
-	response.headers["Content-Type"] = "application/json";
-
-	let uid = request.path.slice(6).split("/").slice(-1)[0];
-
-	return @mew.rpc("hmm5.loadSkeleton", {
-		"uid": uid 
-	}).then(function (instance) {
-		response.writer.end(@.serialize(instance), this.test);
-	});
-
-});
-
-@servlet.get("/anim//*", function (request, response) {
-
-	this.break();
-
-	response.headers["Content-Type"] = "application/json";
-
-	let uid = request.path.slice(6).split("/").slice(-1)[0];
-
-	return @mew.rpc("hmm5.loadAnimation", {
-		"uid": uid 
-	}).then(function (instance) {
-		response.writer.end(@.serialize(instance), this.test);
-	});
-
-});
+if (@.fs.exists.dir(@mewchan().entryPath)) {
+    Object.keys(uiFolders).forEach((uiFolder) => {
+        watchers[uiFolder] = @.fs.watchFile(@path(@mewchan().entryPath, uiFolder), (action, type, file) => {
+            if (action !== "found") {
+                @info(`${type[0].toUpperCase()}${type.slice(1)}[${@.fs.relativePath(@mewchan().entryPath, file)}] ${action}`);
+            }
+            scheduleGenerateBundle(uiFolder);
+        });
+    });
+}

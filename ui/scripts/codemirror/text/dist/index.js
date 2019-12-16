@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var char_1 = require("./char.js");
+exports.isExtendingChar = char_1.isExtendingChar;
+exports.isWordChar = char_1.isWordChar;
+exports.charType = char_1.charType;
+exports.CharType = char_1.CharType;
+exports.codePointAt = char_1.codePointAt;
+exports.fromCodePoint = char_1.fromCodePoint;
+exports.minPairCodePoint = char_1.minPairCodePoint;
+var column_1 = require("./column.js");
+exports.countColumn = column_1.countColumn;
+exports.findColumn = column_1.findColumn;
+var text_1 = require("./text.js");
+exports.Line = text_1.Line;
+exports.Text = text_1.Text;

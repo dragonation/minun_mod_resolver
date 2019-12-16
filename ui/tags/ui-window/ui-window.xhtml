@@ -1,0 +1,7 @@
+<div id="ui-window-container" @mousedown="bringToFirst()">
+    <div id="ui-window-title-bar" @mousedown="startDraggingTitleBar(event)">${attributes.caption}</div>
+    <div id="ui-window-action-button" class:visible="${attributes.actions != 'no'}"></div>
+    <div id="ui-window-close-button" @click="closeWindow()"></div>
+    <div id="ui-window-clients"></div>
+    <div id="ui-window-resizer" class:resizable="${attributes.resizable == 'yes'}" @mousedown="startResizing(event)"></div>
+</div>

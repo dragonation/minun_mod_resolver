@@ -1,0 +1,23 @@
+const BLK = 1;      // block
+const QOT = 2;      // quotation, string
+const NUM = 3;      // number
+const SYM = 4;      // symbol
+const OPR = 5;      // operator
+const FNC = 6;      // function call
+const OPC = 7;      // operator call
+const REG = 8;      // regex
+const EOT = 9;      // end of template
+const ERR = 10;     // error
+const OPS = 11;     // operator sugar
+
+module.exports.BLK = BLK;
+module.exports.QOT = QOT;
+module.exports.NUM = NUM;
+module.exports.SYM = SYM;
+module.exports.OPR = OPR;
+module.exports.FNC = FNC;
+module.exports.OPC = OPC;
+module.exports.REG = REG;
+module.exports.EOT = EOT;
+module.exports.ERR = ERR;
+module.exports.OPS = OPS;

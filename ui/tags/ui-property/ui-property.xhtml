@@ -1,0 +1,15 @@
+<div id="record" class:expanded="${attributes.expanded == 'yes'}">
+
+    <div id="line" @click="smartOpen()" class="${getClassName()}">
+        <div id="key">
+            <tmpl:if test="isExpandable()">
+                <img id="folder" src="/res/actions/${attributes.expanded == 'yes' ? 'minus' : 'plus'}.svg" @click="toggleFolder()"/>
+            </tmpl:if>
+            <div id="key-name" title="${attributes.key}">${attributes.key}</div>
+        </div>
+        <div id="value" title="${getTextValue()}">${getTextValue()}</div>
+    </div>
+    <tmpl:if test="isExpandable()">
+        <ui-property-list id="sublist" prop:target="${tag.value}" prop:resolver="${tag.resolver}" @foldingchange="trigFoldingChanges()"/>
+    </tmpl:if>
+</div>

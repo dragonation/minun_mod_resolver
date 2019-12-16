@@ -1,6 +1,8 @@
 {
-	"kitties": {
-		"hmm5": {}
+	"brainOptions": {
+		"uiFolders": {
+			"ui": "/"
+		}
 	},
 	"playgrounds": {
 		"http": {}

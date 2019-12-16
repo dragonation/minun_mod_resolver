@@ -1,0 +1,11 @@
+<div id="container"
+     class:scroll-x="${attributes['scroll-x'] == 'yes'}"
+     class:scroll-y="${attributes['scroll-y'] == 'yes'}"
+     class:always-scroll-indicator="${attributes['scroll-indicator'] == 'yes'}"
+     class:no-scroll-indicator="${attributes['scroll-indicator'] == 'no'}">
+    <div id="indicator-y" class="indicator" @mousedown="startDraggingIndicator(event, 'y')"/>
+    <div id="indicator-x" class="indicator" @mousedown="startDraggingIndicator(event, 'x')"/>
+    <div id="contents" @scroll="updateIndicator(event);triggerScrollEvent()" @touchstart="recordTouching()" @touchend="unrecordTouching(event)" @touchcancel="unrecordTouching(event)">
+        <slot/>
+    </div>
+</div>

@@ -667,7 +667,7 @@ PAK.prototype.loadAnimation = function (path) {
                         "degree": transform.ScaleShearCurve.Degree,
                         "knots": transform.ScaleShearCurve.Knots.map((value) => value.Real32),
                     }
-               }
+                }
                 result.transforms[transform.Name] = track;
             }
 

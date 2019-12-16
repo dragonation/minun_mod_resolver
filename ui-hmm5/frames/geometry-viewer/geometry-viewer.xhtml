@@ -1,0 +1,17 @@
+<m3d-scene grids="yes" controls="orbit" autolights="yes">
+    <m3d-object id="model"
+                model-scale="${scale}"
+                model-translation="${translation}"
+                model-rotation="${rotation}">
+        <m3d-material id="default" preset="phong" color="#0f4c84"/>
+        <tmpl:map list="target.meshes" item-name="polygons" id-getter="{index}">
+            <tmpl:map list="polygons" item-name="polygon" id-getter="{index}">
+                <m3d-mesh materials="default"
+                          prop:indices="${polygon.indices}"
+                          prop:vertices="${polygon.vertices}"
+                          prop:normals="${polygon.normals}"
+                          prop:uvs="${polygon.uvs}"/>
+            </tmpl:map>
+        </tmpl:map>
+    </m3d-object>
+</m3d-scene>

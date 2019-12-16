@@ -1,0 +1,22 @@
+<div id="caption">Search results (${results.length}${results.length >= 100 ? '+' : ''})</div>
+<div id="types">
+    <div class="type selected">Files</div>
+    <div class="type">Arenas</div>
+    <div class="type">Models</div>
+    <div class="type">Tokens</div>
+</div>
+<ui-collection-view id="results"
+                    style:--cell-width="300px" style:--cell-height="50px"
+                    prop:sections="${[results]}" prop:cells-getter="{section}">
+    <tmpl:slot name="cell">
+        <div class="result result-type-${cell.type}" @click="smartOpen(cell)">
+            <div class="title">
+                <div class="type">${cell.type}</div>
+                <div class="name">
+                    <div class="basename">${cell.basename}</div><div class="extname">${cell.extname}</div>
+                </div>
+            </div>
+            <div class="description">${cell.description}</div>
+        </div>
+    </tmpl:slot>
+</ui-collection-view>

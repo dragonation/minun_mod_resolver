@@ -1,0 +1,13 @@
+<m3d-scene grids="yes" controls="orbit" autolights="yes">
+    <m3d-object id="model"
+                model-scale="${scale}"
+                model-translation="${translation}"
+                model-rotation="${rotation}">
+        <m3d-skeleton helper="yes" root="${target.root}">
+            <tmpl:map list="target.bones">
+                <m3d-bone index="${item.index}" name="${item.name}" parent="${item.parent}"
+                          translation="${item.translation}" scale="${item.scale}" rotation="${item.rotation}"/>
+            </tmpl:map>
+        </m3d-skeleton>
+    </m3d-object>
+</m3d-scene>

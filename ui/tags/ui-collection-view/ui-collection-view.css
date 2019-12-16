@@ -1,0 +1,60 @@
+$default-section-header-size: 30px;
+$default-cell-width: 120px;
+$default-cell-height: 120px;
+
+$section-header-size: var(--section-header-size, $default-section-header-size);
+$cell-width: var(--cell-width, $default-cell-width);
+$cell-height: var(--cell-height, $default-cell-height);
+
+:host {
+    display: block;
+    overflow: hidden;
+}
+
+#fixed {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+::slotted(ui-collection-view-section-header) {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: calc($section-header-size + 2dpx);
+    background-color: rgba(255, 255, 255, 0.9);
+    line-height: $section-header-size;
+    font-size: 14px;
+    color: $alpha($white(0), 0.1);
+    padding: 0 10px;
+    border-top: solid 1dpx #eee;
+    border-bottom: solid 1dpx #eee;
+    margin-top: -1dpx;
+    margin-bottom: -1dpx;
+}
+
+::slotted(ui-collection-view-cell) {
+    position: absolute;
+    left: 0px;
+    width: var(--cell-width);
+    height: var(--cell-height);
+    top: 0px;
+}
+
+::slotted(ui-collection-view-section-header.not-used),
+::slotted(ui-collection-view-cell.not-used) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#placeholder {
+    width: 100%;
+    height: 100%;
+}

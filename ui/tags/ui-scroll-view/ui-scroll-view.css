@@ -1,0 +1,135 @@
+$bar-size: 8px;
+$hover-bar-size: 12px;
+
+$indicator-border-radius: 4px;
+
+:host {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+shadow-root {
+    display: contents;
+}
+
+#container {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .indicator {
+
+        position: absolute;
+        min-width: $bar-size;
+        min-height: $bar-size;
+        max-width: 100%;
+        max-height: 100%;
+        border: solid 1dpx $alpha($white(0.7), 1);
+        background-color: $alpha($white(0.5), 0.7);
+        z-index: 9999999;
+        opacity: 0;
+
+        &:hover {
+            background-color: $alpha($white(0.5), 0.9);
+        }
+
+    }
+
+    :host(.scrollable-x) &.always-scroll-indicator #indicator-x.indicator,
+    :host(.scrollable-y) &.always-scroll-indicator #indicator-y.indicator {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    :host(.scrollable-x) &.no-scroll-indicator #indicator-x:hover,
+    :host(.user-scrolling-x.scrollable-x) &.no-scroll-indicator #indicator-x,
+    :host(.user-dragging-x.scrollable-x) &.no-scroll-indicator #indicator-x,
+    :host(.scrollable-y) &.no-scroll-indicator #indicator-y:hover,
+    :host(.user-scrolling-y.scrollable-y) &.no-scroll-indicator #indicator-y,
+    :host(.user-dragging-y.scrollable-y) &.no-scroll-indicator #indicator-y {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #indicator-x {
+
+        $transition(opacity, height, background-color, 0.3s);
+
+        bottom: 0;
+        left: 0;
+        border-bottom: none;
+        border-top-left-radius: $indicator-border-radius;
+        border-top-right-radius: $indicator-border-radius;
+        height: $bar-size;
+
+        pointer-events: none;
+
+        &:hover,
+        :host(.user-dragging-x) & {
+            height: $hover-bar-size;
+        }
+
+        :host(.scrollable-x) &:hover,
+        :host(.user-scrolling-x.scrollable-x) &,
+        :host(.user-dragging-x.scrollable-x) & {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+    }
+
+    #indicator-y {
+
+        $transition(opacity, width, background-color, 0.3s);
+
+        right: 0;
+        top: 0;
+        border-right: none;
+        border-top-left-radius: $indicator-border-radius;
+        border-bottom-left-radius: $indicator-border-radius;
+        width: $bar-size;
+
+        pointer-events: none;
+
+        &:hover,
+        :host(.user-dragging-y) & {
+            width: $hover-bar-size;
+        }
+
+        :host(.scrollable-y) &:hover,
+        :host(.user-scrolling-y.scrollable-y) &,
+        :host(.user-dragging-y.scrollable-y) & {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+    }
+
+    #contents {
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        will-change: contents;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+    }
+
+    &.scroll-x #contents {
+        overflow-x: overlay;
+    }
+
+    &.scroll-y #contents {
+        overflow-y: overlay;
+    }
+
+}
