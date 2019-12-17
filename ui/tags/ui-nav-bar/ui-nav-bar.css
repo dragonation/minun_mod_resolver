@@ -12,6 +12,13 @@
     line-height: 48px;
     border-bottom: solid 1dpx $bright(#3cc2b6, -0.2);
 
+    transition: background-color 0.3s, border-color 0.3s;
+
+    :host-context(.browsing) & {
+        background-color: $bright(#3cc2b6, -0.7);
+        border-bottom: solid 1dpx $bright(#3cc2b6, -0.9);
+    }
+
     #icon {
 
         background-image: url('/res/lab/white-logo.svg');

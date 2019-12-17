@@ -23,7 +23,7 @@ $icon-size: var(--icon-size, 32px);
     width: calc($icon-size * 0.8);
     height: calc($icon-size * 0.8);
 
-    background-color: $white(1);
+    background-color: var(--background-color, $white(1));
 
     background-size: cover;
     background-repeat: no-repeat;

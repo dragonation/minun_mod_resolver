@@ -83,6 +83,15 @@ const createOverlay = function (path, options) {
 
 };
 
+const activateApp = function () {
+
+    let view = this.filler.query("ui-window, ui-dialog, ui-workbench, ui-overlay")[0];
+    if (view) {
+        this.dom.activateView(view);
+    }
+
+};
+
 const completeApp = function (App) {
 
     if (!App.prototype.createWindow) {
@@ -91,6 +100,10 @@ const completeApp = function (App) {
 
     if (!App.prototype.createOverlay) {
         App.prototype.createOverlay = createOverlay;
+    }
+
+    if (!App.prototype.activateApp) {
+        App.prototype.activateApp = activateApp;
     }
 
 };

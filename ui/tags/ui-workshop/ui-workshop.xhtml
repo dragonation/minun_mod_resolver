@@ -1,4 +1,7 @@
-<ui-nav-bar id="nav-bar" caption="Laboratory"/>
+<ui-nav-bar id="nav-bar" caption="Laboratory">
+    <ui-tray-icon icon="/res/nav-bar/windows.svg" @trayiconaction="browseViews()"/>
+    <ui-tray-icon icon="/res/nav-bar/debug.svg" @trayiconaction="showDebugInfo()"/>
+</ui-nav-bar>
 <ui-dock id="dock"/>
 <div id="apps">
     <slot/>

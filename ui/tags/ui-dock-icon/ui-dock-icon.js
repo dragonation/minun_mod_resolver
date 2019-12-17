@@ -36,17 +36,7 @@ const prepareDockIcon = function (dom) {
             } else if (views.length > 0) {
                 app.dom.browseViews(views);
             } else if (views.length === 0) {
-                // let autolaunches = allChildren.$filter((child) => child.attribute("autolaunch") === "yes");
-                // if (autolaunches.length > 0) {
-                //     autolaunches.call("show");
-                //     autolaunches[0].focus();
-                // } else {
-                //     $.command.dispatch(this, "dock-icon:launched", [{
-                //         "id": this.id,
-                //         "origin": this.uiIcon.positionToPage({ "x": 0, "y": 0 }),
-                //         "size": this.uiIcon.size()
-                //     }]);
-                // }
+                app.activateApp();
             }
 
         });
@@ -65,7 +55,7 @@ const disposeDockIcon = function (dom) {
 };
 
 module.exports = {
-    "attributes": [ "id", "icon", "label", "symbol", "class", "badge", "style", "title", "windows" ],
+    "attributes": [ "id", "icon", "label", "class", "badge", "style", "title" ],
     "listeners": {
         "onconnected": function () {
             prepareDockIcon(this);

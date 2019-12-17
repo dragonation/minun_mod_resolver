@@ -10,6 +10,8 @@ const App = function App(dom, filler) {
 
     this.dom = dom;
 
+    ;
+
     // TODO: check app active
     $("body").on("keypress", function (event) {
         if (event.target !== this) { return; }
@@ -826,7 +828,7 @@ App.prototype.openModel = function (id, from) {
 
 };
 
-App.prototype.title = "Mod Tool - Heroes of Might and Magic 5";
+App.prototype.title = "Heroes of Might and Magic 5";
 
 App.functors = {
     "showFileBrowser": function () {

@@ -151,15 +151,27 @@ module.exports = {
         },
         "launchApp": function (app) {
             if ($(this).find("ui-app").filter((_, element) => $(element).attr("name") === app).length) {
+                $.app(app).activateApp();
                 return;
             }
             $(this).append($("<ui-app>").attr({
                 "name": app
             }));
+            $.app(app).activateApp();
         },
         "installDockIcon": function (icon) {
             this.filler.query("#dock").append(icon);
+        },
+        "installTrayIcon": function (icon) {
+            this.filler.query("#nav-bar").append(icon);
         }
     },
-    "functors": {}
+    "functors": {
+        "browseViews": function () {
+            this.browseViews();
+        },
+        "showDebugInfo": function () {
+            console.log("debug");
+        }
+    }
 };

@@ -6,7 +6,7 @@
 
 	return @.async(function () {
 
-		response.writer.end(["hmm5"].join("\n"), this.test);
+		response.writer.end(["hmm5", "pkmsm"].join("\n"), this.test);
 
 	});
 
