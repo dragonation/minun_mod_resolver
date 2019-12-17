@@ -1,0 +1,103 @@
+$icon-size: var(--icon-size, 32px);
+
+:host {
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+    width: $icon-size;
+    height: $icon-size;
+    position: relative;
+    vertical-align: middle;
+    line-height: 0;
+}
+
+:host(.with-label) {
+    height: calc($icon-size + 20px);
+}
+
+#icon {
+
+    position: relative;
+    margin-left: calc($icon-size * 0.1);
+    margin-top: calc($icon-size * 0.1);
+    width: calc($icon-size * 0.8);
+    height: calc($icon-size * 0.8);
+
+    background-color: $white(1);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    overflow: hidden;
+
+    border: solid 1dpx var(--border-color, $white(0.5));
+    border-radius: 3px;
+
+    color: $alpha(#ffad1f, 0.2);
+    line-height: calc($icon-size * 0.8);
+    font-size: calc($icon-size * 0.7);
+    text-indent: calc($icon-size * -0.15);
+    white-space: nowrap;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    :host(.plain) & {
+        background-color: transparent;
+        border-radius: 0;
+        color: transparent;
+        border: none;
+    }
+
+    &:first-letter {
+        font-size: 125%;
+        margin-right: calc($icon-size * -0.3);
+    }
+
+    :host(.avatar) & {
+        border-radius: $icon-size;
+    }
+
+}
+
+#badge {
+    $height: calc($icon-size * 0.25 + 6px);
+    $badge-color: var(--badge-color, #e88668);
+    position: absolute;
+    right: calc($icon-size * 0.05);
+    top: calc($icon-size * 0.05);
+    background-color: $badge-color;
+    border: solid 1dpx $alpha($white(1), 0.6);
+    color: $white(1);
+    font-size: calc($icon-size * 0.2);
+    line-height: calc($icon-size * 0.25 + 6px - 2dpx);
+    text-align: center;
+    height: $height;
+    min-width: $height;
+    max-width: calc($icon-size * 0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: $icon-size;
+    padding: 0 calc($icon-size * 0.1);
+    box-shadow: 0 2px 3px $alpha($white(0), 0.2);
+}
+
+#label {
+
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: none;
+
+    :host(.with-label) & {
+        display: block;
+    }
+
+}
+

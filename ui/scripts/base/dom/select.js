@@ -37,3 +37,27 @@ $.fn.subnodes = function () {
     return $(result);
 
 };
+
+$.fn.keepClass = function (classes) {
+
+    let adds = "";
+    let removes = "";
+    for (let key in classes) {
+        if (classes[key]) {
+            adds += " " + key;
+        } else {
+            removes += " " + key;
+        }
+    }
+
+    if (adds.trim()) {
+        this.addClass(adds.trim());
+    }
+
+    if (removes.trim()) {
+        this.removeClass(removes.trim());
+    }
+
+    return this;
+
+};

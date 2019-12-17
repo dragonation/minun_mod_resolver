@@ -1,4 +1,4 @@
-<div id="ui-overlay-container" @mousedown="bringToFirst()">
+<div id="ui-overlay-container" @mousedown="activateOverlay()">
     <div id="ui-overlay-close-button" @click="closeOverlay()"></div>
     <div id="ui-overlay-clients"></div>
     <div id="ui-overlay-resizer" class:resizable="${attributes.resizable == 'yes'}" @mousedown="startResizing(event)"></div>

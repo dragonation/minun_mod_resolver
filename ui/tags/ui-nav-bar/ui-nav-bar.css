@@ -1,0 +1,43 @@
+:host {
+    display: block;
+}
+
+#bar {
+
+    background-color: #3cc2b6;
+    color: $white(1);
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    line-height: 48px;
+    border-bottom: solid 1dpx $bright(#3cc2b6, -0.2);
+
+    #icon {
+
+        background-image: url('/res/lab/white-logo.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        width: 150px;
+        height: 40px;
+
+        margin: 4px 10px;
+
+    }
+
+    #caption {
+
+        font-style: oblique;
+        color: $alpha($white(1), 0.7);
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        &:first-letter {
+            font-size: 120%;
+        }
+
+    }
+
+}

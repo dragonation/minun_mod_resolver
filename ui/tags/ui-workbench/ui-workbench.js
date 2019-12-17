@@ -1,5 +1,5 @@
 module.exports = {
-    "attributes": ["path", "resizable"],
+    "attributes": [ "path" ],
     "listeners": {
         "onupdated": function (name, value) {
 
@@ -9,7 +9,7 @@ module.exports = {
 
             let path = value;
 
-            let { Overlay } = require(`${path}.js`);
+            let { Workbench } = require(`${path}.js`);
 
             let [css, cssParameters, cssMixins, cssVariants] = $.tmpl.css($.res.load(`${path}.css`), {}, {
                 "path": `${path}.css`
@@ -38,10 +38,10 @@ module.exports = {
             let parameters = { "tag": this, "name": name };
 
             let functors = {};
-            if (Overlay.functors) {
-                for (let key in Overlay.functors) {
+            if (Workbench.functors) {
+                for (let key in Workbench.functors) {
                     functors[key] = (function (template, call, parameters, options) {
-                        return Overlay.functors[key].apply(this.overlay, Array.prototype.slice.call(arguments, 4));
+                        return Workbench.functors[key].apply(this.window, Array.prototype.slice.call(arguments, 4));
                     }).bind(this);
                 }
             }
@@ -50,9 +50,9 @@ module.exports = {
                 "functors": functors
             });
 
-            filler.render(this.filler.query("#ui-overlay-clients"));
+            filler.render(this.filler.query("#ui-window-clients"));
 
-            this.overlay = new Overlay(this, filler);
+            this.workbench = new Workbench(this, filler);
 
         }
     },
@@ -62,19 +62,19 @@ module.exports = {
             $.app(this).dom.bringViewToFirst(this);
 
         },
-        "activateOverlay": function () {
+        "activateWorkbench": function () {
 
             $.app(this).dom.activateView(this);
 
         },
-        "showOverlay": function (noActivate) {
+        "showWorkbench": function (noActivate) {
 
             $.app(this).dom.filler.query("shadow-root").append($(this));
 
             if (noActivate) {
                 this.bringToFirst();
             } else {
-                this.activateOverlay();
+                this.activateWorkbench();
             }
 
             requestAnimationFrame(() => {
@@ -83,72 +83,54 @@ module.exports = {
             });
 
         },
-        "hideOverlay": function () {
+        "hideWorkbench": function () {
 
             $(this).addClass("hidden");
             $.app(this).dom.updateWindows();
 
         },
-        "closeOverlay": function () {
+        "closeWorkbench": function () {
 
             $(this).addClass("hidden");
             $.app(this).dom.updateWindows();
 
             if ($(this).attr("just-hide-when-close") !== "yes") {
                 $.delay(500, () => {
-                    $(this).detach();
+                    that.detach();
                 });
             }
 
         }
     },
     "functors": {
-        "activateOverlay": function () {
-
-            this.activateOverlay();
-
+        "activateWorkbench": function () {
+            this.activateWorkbench();
         },
-        "startResizing": function (event) {
-
-            if (!(event.buttons & 1)) {
-                return;
-            }
-
-            let offsets = {
-                "x": parseFloat($(this).css("width")) - $.dom.getDevicePixels(event.pageX),
-                "y": parseFloat($(this).css("height")) - $.dom.getDevicePixels(event.pageY)
-            };
-
-            const onmousemove = (event) => {
-
-                if (!(event.buttons & 1)) {
-                    document.body.removeEventListener("mousemove", onmousemove);
-                    document.body.removeEventListener("mouseup", onmouseup);
-                    return;
-                }
-
-                $(this).css({
-                    "width": Math.round(offsets.x + $.dom.getDevicePixels(event.pageX)),
-                    "height": Math.round(offsets.y + $.dom.getDevicePixels(event.pageY))
-                });
-
-            };
-
-            const onmouseup = (event) => {
-                if (!(event.buttons & 1)) {
-                    document.body.removeEventListener("mousemove", onmousemove);
-                    document.body.removeEventListener("mouseup", onmouseup);
-                }
-            };
-
-            document.body.addEventListener("mousemove", onmousemove);
-            document.body.addEventListener("mouseup", onmouseup);
-
-        },
-        "closeOverlay": function () {
-
-            this.closeOverlay();
-
+        "closeWorkbench": function () {
+            this.closeWorkbench();
         }
     }
+};
+
+$.ui.workbench = function (path, options) {
+
+    if (!options) { options = {}; }
+
+    let getNumber = (key, defaultValue) => {
+        let value = parseInt(options[key]);
+        if (isFinite(value)) {
+            value = Math.max(0, value);
+        } else {
+            value = defaultValue;
+        }
+        return value;
+    };
+
+    let dom = $("<ui-workbench>").attr({
+        "path": path,
+        "just-hide-when-close": options.justHideWhenClose ? "yes" : "no"
+    }).addClass("hidden");
+
+    return dom[0].workbench;
+
 };

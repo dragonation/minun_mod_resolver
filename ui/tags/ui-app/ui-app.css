@@ -1,3 +1,16 @@
 :host {
     display: content;
 }
+
+shadow-root {
+    display: contents;
+}
+
+::slotted(ui-workbench.not-browsing),
+::slotted(ui-dialog.not-browsing),
+::slotted(ui-window.not-browsing),
+::slotted(ui-overlay.not-browsing) {
+    opacity: 0;
+    transform: scale(0.1);
+    pointer-events: none;
+}

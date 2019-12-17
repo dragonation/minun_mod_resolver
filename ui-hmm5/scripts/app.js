@@ -457,6 +457,7 @@ App.prototype.loadModel = function (id, callback) {
     });
 
 };
+
 App.prototype.getNextFrameTopLeft = function (from, size) {
 
     let coast = $.dom.getDevicePixels(30);
@@ -831,21 +832,16 @@ App.functors = {
     "showFileBrowser": function () {
 
         if (!this.fileBrowser) {
-            this.fileBrowser = $("<ui-window>").css({
-                "left": "50px",
-                "top": "100px",
-                "width": "600px",
-                "height": "400px"
-            }).attr({
-                "path": "~hmm5/windows/files/files",
-                "resizable": "yes",
+            this.fileBrowser = this.createWindow("~hmm5/windows/files/files", {
                 "caption": "HMM5 File Browser",
-                "just-hide-when-close": "yes"
-            }).addClass("hidden");
-            $("body").append(this.fileBrowser);
+                "left": 50, "top": 100,
+                "width": 600, "height": 400,
+                "resizable": true,
+                "justHideWhenClose": true
+            });
         }
 
-        this.fileBrowser[0].showWindow();
+        this.fileBrowser.dom.showWindow();
 
     },
     "updateSearchResult": function () {
@@ -853,11 +849,11 @@ App.functors = {
         let width = $.dom.getDevicePixels(300);
         let height = $.dom.getDevicePixels(400);
 
-        let left = parseInt($("body").css("width")) - width - $.dom.getDevicePixels(6);
+        let left = parseInt($("body").css("width")) - $.dom.getDevicePixels(60) - width - $.dom.getDevicePixels(6);
         let top = $.dom.getDevicePixels(40 + 6);
 
         if (!this.searchOverlay) {
-            this.searchOverlay = $.ui.overlay("~hmm5/overlays/search/search", {
+            this.searchOverlay = this.createOverlay("~hmm5/overlays/search/search", {
                 "left": left, "top": top,
                 "width": width, "height": height,
                 "justHideWhenClose": true

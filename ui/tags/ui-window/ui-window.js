@@ -1,9 +1,13 @@
 module.exports = {
-    "attributes": ["caption", "resizable", "actions"],
+    "attributes": ["path", "caption", "resizable", "actions"],
     "listeners": {
-        "onconnected": function () {
+        "onupdated": function (name, value) {
 
-            let path = $(this).attr("path");
+            if (name !== "path") {
+                return;
+            }
+
+            let path = value;
 
             let { Window } = require(`${path}.js`);
 
@@ -54,24 +58,43 @@ module.exports = {
     },
     "methods": {
         "bringToFirst": function () {
-            let parent = $(this).parent()[0];
-            if (parent && parent.bringToFirst) {
-                parent.bringToFirst(this);
-            }
-        },
-        "showWindow": function () {
 
-            $(this).removeClass("hidden");
+            $.app(this).dom.bringViewToFirst(this);
+
+        },
+        "activateWindow": function () {
+
+            $.app(this).dom.activateView(this);
+
+        },
+        "showWindow": function (noActivate) {
+
+            $.app(this).dom.filler.query("shadow-root").append($(this));
+
+            if (noActivate) {
+                this.bringToFirst();
+            } else {
+                this.activateWindow();
+            }
+
+            requestAnimationFrame(() => {
+                $(this).removeClass("hidden");
+                $.app(this).dom.updateWindows();
+            });
 
         },
         "hideWindow": function () {
 
             $(this).addClass("hidden");
 
+            $.app(this).dom.updateWindows();
+
         },
         "closeWindow": function () {
 
             $(this).addClass("hidden");
+
+            $.app(this).dom.updateWindows();
 
             if ($(this).attr("just-hide-when-close") !== "yes") {
                 $.delay(500, () => {
@@ -82,8 +105,8 @@ module.exports = {
         }
     },
     "functors": {
-        "bringToFirst": function () {
-            this.bringToFirst();
+        "activateWindow": function () {
+            this.activateWindow();
         },
         "startDraggingTitleBar": function (event) {
 
@@ -166,3 +189,4 @@ module.exports = {
         }
     }
 };
+

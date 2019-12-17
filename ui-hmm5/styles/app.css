@@ -6,9 +6,9 @@
     top: 0;
     border-bottom: solid 1dpx rgba(0, 0, 0, 0.3);
     box-sizing: padding-box;
-    backdrop-filter: blur(calc(3px * var(--ui-scale)));
+    backdrop-filter: blur(3px);
     background-color: $alpha($white(1), 0.8);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 2;
     display: flex;
     flex-direction: row;

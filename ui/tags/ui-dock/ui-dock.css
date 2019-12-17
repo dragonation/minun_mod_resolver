@@ -1,0 +1,18 @@
+:host {
+    display: block;
+}
+
+#container {
+    background-color: $bright($white(0.98), -0.08);
+    border-right: solid 1dpx $bright($white(0.98), -0.2);
+    width: 60px;
+    min-height: 60px;
+    height: 100%;
+    -webkit-margin-collapse: separate;
+}
+
+::slotted(.dock-icon) {
+    margin: 3px;
+    --icon-size: 54px;
+    --border-color: $bright(#888, 0.6);
+}

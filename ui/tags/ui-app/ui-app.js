@@ -1,5 +1,100 @@
 let apps = Object.create(null);
 
+const createWindow = function (path, options) {
+
+    if (!options) { options = {}; }
+
+    let getNumber = (key, defaultValue) => {
+        let value = parseInt(options[key]);
+        if (isFinite(value)) {
+            value = Math.max(0, value);
+        } else {
+            value = defaultValue;
+        }
+        return value;
+    };
+
+    let width = getNumber("width", 600);
+    let height = getNumber("height", 400);
+    let left = getNumber("left");
+    if (typeof left !== "number") {
+        left = Math.round((parseInt($("body").css("width")) - width) / 2);
+    }
+    let top = getNumber("top");
+    if (typeof top !== "number") {
+        top = Math.round((parseInt($("body").css("height")) - height) / 2.5);
+    }
+
+    let dom = $("<ui-window>").css({
+        "left": `${left}px`,
+        "top": `${top}px`,
+        "width": `${width}px`,
+        "height": `${height}px`
+    }).attr({
+        "app": this.name,
+        "path": path,
+        "caption": options.caption ? options.caption : "untitled",
+        "resizable": options.resizable ? "yes" : "no",
+        "just-hide-when-close": options.justHideWhenClose ? "yes" : "no"
+    }).addClass("hidden");
+
+    return dom[0].window;
+
+};
+
+const createOverlay = function (path, options) {
+
+    if (!options) { options = {}; }
+
+    let getNumber = (key, defaultValue) => {
+        let value = parseInt(options[key]);
+        if (isFinite(value)) {
+            value = Math.max(0, value);
+        } else {
+            value = defaultValue;
+        }
+        return value;
+    };
+
+    let width = getNumber("width", 600);
+    let height = getNumber("height", 400);
+    let left = getNumber("left");
+    if (typeof left !== "number") {
+        left = Math.round((parseInt($("body").css("width")) - width) / 2);
+    }
+    let top = getNumber("top");
+    if (typeof top !== "number") {
+        top = Math.round((parseInt($("body").css("height")) - height) / 2.5);
+    }
+
+    let dom = $("<ui-overlay>").css({
+        "left": `${left}px`,
+        "top": `${top}px`,
+        "width": `${width}px`,
+        "height": `${height}px`
+    }).attr({
+        "app": this.name,
+        "path": path,
+        "resizable": options.resizable ? "yes" : "no",
+        "just-hide-when-close": options.justHideWhenClose ? "yes" : "no"
+    }).addClass("hidden");
+
+    return dom[0].overlay;
+
+};
+
+const completeApp = function (App) {
+
+    if (!App.prototype.createWindow) {
+        App.prototype.createWindow = createWindow;
+    }
+
+    if (!App.prototype.createOverlay) {
+        App.prototype.createOverlay = createOverlay;
+    }
+
+};
+
 module.exports = {
     "attributes": [],
     "listeners": {
@@ -12,6 +107,8 @@ module.exports = {
             }
 
             let { App } = require(`/~${name}/scripts/app.js`);
+
+            completeApp(App);
 
             let [css, cssParameters, cssMixins, cssVariants] = $.tmpl.css($.res.load(`/~${name}/styles/app.css`), {}, {
                 "path": `/~${name}/styles/app.css`
@@ -55,17 +152,81 @@ module.exports = {
             filler.render(this.filler.query("shadow-root"));
 
             this.app = new App(this, filler);
+            if (!this.app.dom) { this.app.dom = this; }
+            if (!this.app.filler) { this.app.filler = filler; }
+            if (!this.app.name) { this.app.name = name; }
 
             apps[name] = this.app;
 
+            this.updateWindows();
+
         }
     },
-    "methods": {},
+    "methods": {
+        "browseViews": function (views) {
+
+            let parent = $(this).parent()[0];
+            if (parent && parent.browseViews) {
+                parent.browseViews(views);
+            }
+
+        },
+        "activateView": function (view) {
+
+            let parent = $(this).parent()[0];
+            if (parent && parent.activateView) {
+                parent.activateView(view);
+            }
+
+            this.updateWindows();
+
+        },
+        "bringViewToFirst": function (view) {
+
+            let parent = $(this).parent()[0];
+            if (parent && parent.bringViewToFirst) {
+                parent.bringViewToFirst(view);
+            }
+
+            this.updateWindows();
+
+        },
+        "updateWindows": function () {
+
+            for (let dockIcon of this.filler.query("ui-dock-icon")) {
+                dockIcon.updateWindows();
+            }
+
+        }
+    },
     "functors": {}
 };
 
 $.app = function (name) {
 
-    return apps[name];
+    if (typeof name === "string") {
+        return apps[name];
+    }
+
+    let app = $(name).attr("app");
+    if (app) {
+        return apps[app];
+    }
+
+    let parent = name;
+    while (parent.parentNode) {
+        parent = parent.parentNode;
+    }
+
+    if (!parent) {
+        return undefined;
+    }
+
+    let host = parent.host;
+    if (!host) {
+        return undefined;
+    }
+
+    return host.app;
 
 };

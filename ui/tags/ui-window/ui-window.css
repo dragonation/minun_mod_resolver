@@ -22,14 +22,210 @@
     transform: scale(0.5);
 }
 
+:host(.browsing) {
+    box-shadow: none;
+    background-color: #fff;
+}
+
+:host(.not-browsing) {
+    opacity: 0;
+    pointer-events: none;
+}
+
 #ui-window-container {
+
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    box-sizing: content-box;
+
+    :host(.browsing) & {
+
+        transition-property: border-color, box-shadow;
+        transition-duration: 0.3s, 0.3s;
+
+        cursor: pointer;
+
+        border: solid 0px transparent;
+        margin: 0px;
+
+        &:hover {
+            border-color: #0d8ef1;
+        }
+
+        & * {
+            pointer-events: none;
+        }
+
+    }
+
+    :host(.browsing.x4) &:hover {
+        border-width: 4px;
+        margin: -4px;
+        border-radius: 6px;
+    }
+
+    :host(.browsing.x5) &:hover {
+        border-width: 5px;
+        margin: -5px;
+        border-radius: 7.5px;
+    }
+
+    :host(.browsing.x6) &:hover {
+        border-width: 6px;
+        margin: -6px;
+        border-radius: 9px;
+    }
+
+    :host(.browsing.x7) &:hover {
+        border-width: 7px;
+        margin: -7px;
+        border-radius: 10.5px;
+    }
+
+    :host(.browsing.x8) &:hover {
+        border-width: 8px;
+        margin: -8px;
+        border-radius: 12px;
+    }
+
+    :host(.browsing.x9) &:hover {
+        border-width: 9px;
+        margin: -9px;
+        border-radius: 13.5px;
+    }
+
+    :host(.browsing.x10) &:hover {
+        border-width: 10px;
+        margin: -10px;
+        border-radius: 15px;
+    }
+
+    :host(.browsing.x11) &:hover {
+        border-width: 11px;
+        margin: -11px;
+        border-radius: 16.5px;
+    }
+
+    :host(.browsing.x12) &:hover {
+        border-width: 12px;
+        margin: -12px;
+        border-radius: 18px;
+    }
+
+    :host(.browsing.x13) &:hover {
+        border-width: 13px;
+        margin: -13px;
+        border-radius: 19.5px;
+    }
+
+    :host(.browsing.x14) &:hover {
+        border-width: 14px;
+        margin: -14px;
+        border-radius: 21px;
+    }
+
+    :host(.browsing.x15) &:hover {
+        border-width: 15px;
+        margin: -15px;
+        border-radius: 22.5px;
+    }
+
+    :host(.browsing.x16) &:hover {
+        border-width: 16px;
+        margin: -16px;
+        border-radius: 24px;
+    }
+
+    :host(.browsing.x17) &:hover {
+        border-width: 17px;
+        margin: -17px;
+        border-radius: 25.5px;
+    }
+
+    :host(.browsing.x18) &:hover {
+        border-width: 18px;
+        margin: -18px;
+        border-radius: 27px;
+    }
+
+    :host(.browsing.x19) &:hover {
+        border-width: 19px;
+        margin: -19px;
+        border-radius: 28.5px;
+    }
+
+    :host(.browsing.x20) &:hover {
+        border-width: 20px;
+        margin: -20px;
+        border-radius: 30px;
+    }
+
+    :host(.browsing.x21) &:hover {
+        border-width: 21px;
+        margin: -21px;
+        border-radius: 31.5px;
+    }
+
+    :host(.browsing.x22) &:hover {
+        border-width: 22px;
+        margin: -22px;
+        border-radius: 34.5px;
+    }
+
+    :host(.browsing.x23) &:hover {
+        border-width: 23px;
+        margin: -23px;
+        border-radius: 33px;
+    }
+
+    :host(.browsing.x24) &:hover {
+        border-width: 24px;
+        margin: -24px;
+        border-radius: 36px;
+    }
+
+    :host(.browsing.x25) &:hover {
+        border-width: 25px;
+        margin: -25px;
+        border-radius: 37.5px;
+    }
+
+    :host(.browsing.x26) &:hover {
+        border-width: 26px;
+        margin: -26px;
+        border-radius: 39px;
+    }
+
+    :host(.browsing.x27) &:hover {
+        border-width: 27px;
+        margin: -27px;
+        border-radius: 40.5px;
+    }
+
+    :host(.browsing.x28) &:hover {
+        border-width: 28px;
+        margin: -28px;
+        border-radius: 42px;
+    }
+
+    :host(.browsing.x29) &:hover {
+        border-width: 29px;
+        margin: -29px;
+        border-radius: 43.5px;
+    }
+
+    :host(.browsing.x30) &:hover {
+        border-width: 30px;
+        margin: -30px;
+        border-radius: 45px;
+    }
+
 }
 
 #ui-window-title-bar {
+
     width: 100%;
     height: calc(32px + 1dpx);
     line-height: 32px;
@@ -45,7 +241,13 @@
     padding-right: 40px;
     flex-shrink: 0;
     flex-grow: 0;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.02);
+    transition: background-color 0.3s;
+
+    :host(.active) & {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
 }
 
 #ui-window-action-button {

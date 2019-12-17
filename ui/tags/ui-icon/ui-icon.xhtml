@@ -1,0 +1,7 @@
+<div id="container">
+    <div id="icon" title="${attributes.title ?: attributes.label}" style:background-image="${attributes.icon ? 'url(\'' + attributes.icon + '\');' : ''}">${(!attributes.icon) ? attributes.label : ''}</div>
+    <tmpl:if test="attributes.badge">
+        <div id="badge">${attributes.badge}</div>
+    </tmpl:if>
+    <div id="label">${attributes.label}</div>
+</div>
