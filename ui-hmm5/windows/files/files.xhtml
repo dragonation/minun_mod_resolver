@@ -11,7 +11,7 @@
                         <div class="file" title="${cell.filename}"
                             class:selected="contain(section.selecteds, cell.filename)"
                             @click="selectFile(section.path, cell.filename)"
-                            @dblclick="openFile(section.path, cell.filename)">
+                            @dblclick="openFile(section.path, cell.filename, event)">
                             <img src="/res/file-type/${cell.type}.svg" id="file-icon"/>
                             <div id="file-filename">${cell.filename}</div>
                             <tmpl:if test="cell.type == 'dir'">

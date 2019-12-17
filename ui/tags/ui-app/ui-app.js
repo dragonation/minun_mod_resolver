@@ -194,6 +194,44 @@ module.exports = {
             this.updateWindows();
 
         },
+        "activateTopView": function () {
+
+            let allViews = this.filler.query("ui-overlay, ui-window, ui-dialog, ui-workbench");
+
+            let views = [];
+            for (let looper = 0; looper < allViews.length; ++looper) {
+                let view = allViews[looper];
+                if (!$(view).hasClass("hidden")) {
+                    views.push({
+                        "view": view,
+                        "name": view.localName.toLowerCase(),
+                        "index": looper,
+                        "z-index": $(view).css("z-index")
+                    });
+                }
+            }
+
+            views.sort((a, b) => {
+                let diff = a["z-index"] - b["z-index"];
+                if (diff === 0) {
+                    diff = a.index - b.index;
+                }
+                return diff;
+            });
+
+            views = [].concat(views.filter((view) => (view.name === "ui-workbench")))
+                      .concat(views.filter((view) => (view.name === "ui-window")))
+                      .concat(views.filter((view) => (view.name === "ui-dialog")))
+                      .concat(views.filter((view) => (view.name === "ui-overlay")));
+
+            let view = views[views.length - 1];
+            if (view) {
+                this.activateView(view.view);
+            } else {
+                this.updateWindows();
+            }
+
+        },
         "bringViewToFirst": function (view) {
 
             let parent = $(this).parent()[0];

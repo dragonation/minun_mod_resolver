@@ -86,13 +86,15 @@ module.exports = {
         "hideWorkbench": function () {
 
             $(this).addClass("hidden");
-            $.app(this).dom.updateWindows();
+
+            $.app(this).dom.activateTopView();
 
         },
         "closeWorkbench": function () {
 
             $(this).addClass("hidden");
-            $.app(this).dom.updateWindows();
+
+            $.app(this).dom.activateTopView();
 
             if ($(this).attr("just-hide-when-close") !== "yes") {
                 $.delay(500, () => {

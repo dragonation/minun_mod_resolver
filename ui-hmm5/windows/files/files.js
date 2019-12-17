@@ -98,16 +98,34 @@ Window.functors = {
         this.selecteds = [file + filename];
 
         let item = this.files[path].filter((file) => file.filename === filename)[0];
+        // TODO: fix the bug from collection view for dblclick target changes
         if (item && (item.type === "dir")) {
-            this.navigateFiles(file + filename);
+            $.delay(300, () => {
+                this.navigateFiles(file + filename);
+            });
         } else {
-            this.updateView();
+            $.delay(300, () => {
+                this.updateView();
+            });
         }
 
     },
-    "openFile": function (path, filename) {
+    "openFile": function (path, filename, event) {
 
-        $.app("hmm5").smartOpen(path + "/" + filename);
+        let item = this.files[path].filter((file) => file.filename === filename)[0];
+        if ((!item) || (item.type === "dir")) {
+            return;
+        }
+
+        let file = path;
+        if (file[file.length - 1] !== "/") {
+            file += "/";
+        }
+        file += filename;
+
+        $.app("hmm5").smartOpen(file);
+
+        this.dom.closeWindow();
 
     }
 };

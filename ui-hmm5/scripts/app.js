@@ -10,21 +10,28 @@ const App = function App(dom, filler) {
 
     this.dom = dom;
 
-    ;
-
-    // TODO: check app active
-    $("body").on("keypress", function (event) {
-        if (event.target !== this) { return; }
-        if (event.keyCode !== 115) { return; }
-        filler.query("#search-field").select();
-        event.preventDefault();
-    });
-
     this.filler = filler;
 
     // TODO: make system autoupdate title
     document.title = this.title;
 
+};
+
+App.prototype.onKeyPressed = function (event) {
+    switch (event.keyCode) {
+        case 102: { // f
+            this.showFileBrowser();
+            break;
+        };
+        case 115: { // s
+            this.filler.query("#search-field").select();
+            break;
+        };
+        default: {
+            console.log(event.keyCode);
+            break;
+        };
+    }
 };
 
 App.prototype.smartOpen = function (id, from) {
@@ -828,22 +835,54 @@ App.prototype.openModel = function (id, from) {
 
 };
 
+App.prototype.showFileBrowser = function () {
+
+    if (!this.fileBrowser) {
+        this.fileBrowser = this.createWindow("~hmm5/windows/files/files", {
+            "caption": "HMM5 File Browser",
+            "left": 50, "top": 100,
+            "width": 600, "height": 400,
+            "resizable": true,
+            "justHideWhenClose": true
+        });
+    }
+
+    this.fileBrowser.dom.showWindow();
+};
+
 App.prototype.title = "Heroes of Might and Magic 5";
 
 App.functors = {
-    "showFileBrowser": function () {
+    "advanceSearch": function (event) {
 
-        if (!this.fileBrowser) {
-            this.fileBrowser = this.createWindow("~hmm5/windows/files/files", {
-                "caption": "HMM5 File Browser",
-                "left": 50, "top": 100,
-                "width": 600, "height": 400,
-                "resizable": true,
-                "justHideWhenClose": true
-            });
+        switch (event.keyCode) {
+            case 13: { // return
+                if (this.searchOverlay) {
+                    if (this.searchOverlay.filler.parameters.results) {
+                        let item = this.searchOverlay.filler.parameters.results[0];
+                        this.smartOpen(item.id);
+                        event.target.blur();
+                        this.searchOverlay.dom.hideOverlay();
+                    }
+                }
+                break;
+            };
+            case 27: { // escape
+                event.target.blur();
+                if (this.searchOverlay) {
+                    this.searchOverlay.dom.hideOverlay();
+                }
+                break;
+            };
+            default: {
+                break;
+            };
         }
 
-        this.fileBrowser.dom.showWindow();
+    },
+    "showFileBrowser": function () {
+
+        this.showFileBrowser();
 
     },
     "updateSearchResult": function () {
