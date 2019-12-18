@@ -1,4 +1,4 @@
-<div id="ui-window-container" @mousedown="activateWindow()">
+<div id="ui-window-container" @mousedown="hideOtherOverlays();activateWindow()">
     <div id="ui-window-title-bar" @mousedown="startDraggingTitleBar(event)">${attributes.caption}</div>
     <div id="ui-window-action-button" class:visible="${attributes.actions != 'no'}"></div>
     <div id="ui-window-close-button" @click="closeWindow()"></div>

@@ -248,6 +248,14 @@ module.exports = {
                 dockIcon.updateWindows();
             }
 
+        },
+        "hideOtherOverlays": function (overlay) {
+
+            let parent = $(this).parent()[0];
+            if (parent && parent.hideOtherOverlays) {
+                parent.hideOtherOverlays(overlay);
+            }
+
         }
     },
     "functors": {}

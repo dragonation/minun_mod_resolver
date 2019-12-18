@@ -53,6 +53,37 @@ module.exports = {
             this.bringViewToFirst(view, true);
 
         },
+        "hideOtherOverlays": function (overlay) {
+
+            let overlays = Object.create(null);
+
+            for (let view of this.views) {
+                if ((view.localName.toLowerCase() === "ui-overlay") &&
+                    (!$(view).hasClass("hidden"))) {
+                    overlays[$(overlay).attr("overlay-id")] = view;
+                }
+            }
+
+            let parentOverlays = Object.create(null);
+            while (overlay) {
+                let overlayID = $(overlay).attr("overlay-id");
+                if (overlayID) {
+                    delete overlays[overlayID];
+                }
+                let superOverlayID = $(overlay).attr("superoverlay-id");
+                if (superOverlayID) {
+                    overlay = overlays[superOverlayID];
+                    delete overlays[superOverlayID];
+                } else {
+                    overlay = undefined;
+                }
+            }
+
+            for (let id in overlays) {
+                overlays[id].closeOverlay();
+            }
+
+        },
         "bringViewToFirst": function (view, activate) {
 
             let views = [];

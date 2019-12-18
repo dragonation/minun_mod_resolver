@@ -108,6 +108,9 @@ module.exports = {
         "activateWindow": function () {
             this.activateWindow();
         },
+        "hideOtherOverlays": function () {
+            $.app(this).dom.hideOtherOverlays();
+        },
         "startDraggingTitleBar": function (event) {
 
             if (!(event.buttons & 1)) {

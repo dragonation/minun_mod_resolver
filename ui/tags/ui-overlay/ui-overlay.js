@@ -1,6 +1,9 @@
 module.exports = {
     "attributes": ["path", "resizable"],
     "listeners": {
+        "onconnected": function () {
+            $(this).attr("overlay-id", $.uuid());
+        },
         "onupdated": function (name, value) {
 
             if (name !== "path") {
@@ -108,6 +111,11 @@ module.exports = {
         "activateOverlay": function () {
 
             this.activateOverlay();
+
+        },
+        "hideOtherOverlays": function () {
+
+            $.app(this).dom.hideOtherOverlays(this);
 
         },
         "startResizing": function (event) {

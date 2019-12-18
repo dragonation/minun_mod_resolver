@@ -108,6 +108,9 @@ module.exports = {
         "activateWorkbench": function () {
             this.activateWorkbench();
         },
+        "hideOtherOverlays": function () {
+            $.app(this).dom.hideOtherOverlays();
+        },
         "closeWorkbench": function () {
             this.closeWorkbench();
         }

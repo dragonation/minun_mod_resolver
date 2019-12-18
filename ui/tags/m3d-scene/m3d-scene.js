@@ -257,6 +257,7 @@ const syncSceneSize = function (dom) {
     if (height <= 0) { height = 1; }
 
     dom.m3dCamera.aspect = width / height;
+    dom.m3dCamera.updateProjectionMatrix();
 
     dom.m3dRenderer.setSize(width, height);
 
