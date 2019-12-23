@@ -21,9 +21,22 @@ const prepareMesh = function (dom) {
             geometry.setAttribute("uv", new THREE.Float32BufferAttribute(dom.m3dUVs, 2));
         }
 
-        dom.m3dMesh = new THREE.Mesh(geometry);
+        if (dom.m3dBoneIndices) {
+            geometry.setAttribute("skinIndex", new THREE.Uint16BufferAttribute(dom.m3dBoneIndices, 4));
+        }
+
+        if (dom.m3dBoneWeights) {
+            geometry.setAttribute("skinWeight", new THREE.Float32BufferAttribute(dom.m3dBoneWeights, 4));
+        }
+
+        if ($(dom).attr("skeleton").trim()) {
+            dom.m3dMesh = new THREE.SkinnedMesh(geometry);
+        } else {
+            dom.m3dMesh = new THREE.Mesh(geometry);
+        }
 
         syncMaterials(dom, $(dom).attr("materials"));
+        syncSkeleton(dom, $(dom).attr("skeleton"));
 
     }
 
@@ -107,11 +120,71 @@ const syncMaterials = function (dom, value) {
 
 };
 
+const syncSkeleton = function (dom, value) {
+
+    let scene = dom;
+    while (scene && ((!scene.localName) || (scene.localName.toLowerCase() !== "m3d-scene"))) {
+        scene = scene.parentNode;
+    }
+
+    if (!scene) {
+        return;
+    }
+
+    if (!dom.m3dSkeleton) {
+        dom.m3dSkeleton = {
+            "updater": () => {
+                if ($(dom).attr("skeleton").trim() !== value) {
+                    dom.m3dSkeleton.scene.m3dUninstallSkeletonListener(value, dom.m3dSkeleton.updater);
+                    delete dom.m3dSkeleton.scene;
+                    return;
+                }
+                if (!dom.m3dMesh) {
+                    return;
+                }
+                let m3dSkeleton = undefined;
+                let lastScene = false;
+                let parent = dom;
+                while (parent && (!lastScene) && (!m3dSkeleton)) {
+                    lastScene = (parent.localName && (parent.localName.toLowerCase() === "m3d-scene")) ? true : false;
+                    m3dSkeleton = $(parent).find("#" + value)[0];
+                    parent = parent.parentNode;
+                }
+                if (m3dSkeleton) {
+                    if (!dom.m3dMesh.isSkinnedMesh) {
+                        disposeMesh(dom);
+                        prepareMesh(dom);
+                    }
+                    dom.m3dMesh.bind(m3dSkeleton.m3dGetSkeleton());
+                    console.log(dom.m3dMesh);
+                    // TODO: remove last skeleton for dispose
+                }
+            }
+        };
+    }
+
+    if (dom.m3dSkeleton.scene) {
+        if (dom.m3dSkeleton.scene !== scene) {
+            dom.m3dSkeleton.scene.m3dUninstallSkeletonListener(value, dom.m3dSkeleton.updater);
+            dom.m3dSkeleton.scene = scene;
+            dom.m3dSkeleton.scene.m3dInstallSkeletonListener(value, dom.m3dSkeleton.updater);
+            dom.m3dSkeleton.updater();
+        }
+    } else {
+        dom.m3dSkeleton.scene = scene;
+        dom.m3dSkeleton.scene.m3dInstallSkeletonListener(value, dom.m3dSkeleton.updater);
+        dom.m3dSkeleton.updater();
+    }
+
+};
+
 module.exports = {
     "attributes": [
+        "skeleton",
         "materials",
         "indices",
-        "vertices", "normals", "uvs"
+        "vertices", "normals", "uvs",
+        "bone-indices", "bone-weights"
     ],
     "listeners": {
         "onupdated": function (name, value) {
@@ -169,6 +242,30 @@ module.exports = {
                 }
             }
         },
+        "bone-indices": {
+            "get": function () {
+                return this.m3dBoneIndices;
+            },
+            "set": function (value) {
+                this.m3dBoneIndices = value;
+                if (this.m3dMesh) {
+                    console.log("ssi");
+                    this.m3dMesh.geometry.setAttribute("skinIndex", new THREE.Uint16BufferAttribute(this.m3dBoneIndices, 4));
+                }
+            }
+        },
+        "bone-weights": {
+            "get": function () {
+                return this.m3dBoneWeights;
+            },
+            "set": function (value) {
+                this.m3dBoneWeights = value;
+                if (this.m3dMesh) {
+                    console.log("ssw");
+                    this.m3dMesh.geometry.setAttribute("skinWeight", new THREE.Float32BufferAttribute(this.m3dBoneWeights, 4));
+                }
+            }
+        }
     },
     "methods": {
         "m3dGetObject": function () {

@@ -51,7 +51,6 @@ const prepareScene = function (dom) {
 
     if (dom.m3dMaterialListeners) {
         for (let name in dom.m3dMaterialListeners) {
-            console.log(4444);
             for (let listener of dom.m3dMaterialListeners[name]) {
                 try {
                     listener();
@@ -98,6 +97,12 @@ const startSceneRendering = function (dom) {
     let animate = function () {
         if (dom.m3dRendering === record) {
             requestAnimationFrame(animate);
+            let delta = dom.m3dClock.getDelta();
+            if (dom.m3dMixers) {
+                for (let mixer of dom.m3dMixers) {
+                    mixer.update(delta);
+                }
+            }
             if (dom.m3dStats) {
                 dom.m3dStats.update();
             }
@@ -342,6 +347,42 @@ module.exports = {
         },
         "m3dSyncChildren": function () {
             syncChildren(this);
+        },
+        "m3dTrigSkeletonUpdate": function (name) {
+            if (!this.m3dSkeletonListeners) {
+                return;
+            }
+            if (!this.m3dSkeletonListeners[name]) {
+                return;
+            }
+            for (let listener of this.m3dSkeletonListeners[name]) {
+                try {
+                    listener();
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+        },
+        "m3dInstallSkeletonListener": function (name, listener) {
+            if (!this.m3dSkeletonListeners) {
+                this.m3dSkeletonListeners = Object.create(null);
+            }
+            if (!this.m3dSkeletonListeners[name]) {
+                this.m3dSkeletonListeners[name] = [];
+            }
+            this.m3dSkeletonListeners[name].push(listener);
+        },
+        "m3dUninstallSkeletonListener": function (name, listener) {
+            if (!this.m3dSkeletonListeners) {
+                return;
+            }
+            if (!this.m3dSkeletonListeners[name]) {
+                return;
+            }
+            let index = this.m3dSkeletonListeners[name].indexOf(listener);
+            if (index !== -1) {
+                this.m3dSkeletonListeners[name].splice(index, 1);
+            }
         },
         "m3dTrigMaterialUpdate": function (name) {
             if (!this.m3dMaterialListeners) {

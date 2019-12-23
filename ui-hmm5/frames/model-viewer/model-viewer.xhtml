@@ -3,6 +3,14 @@
                 model-scale="${scale}"
                 model-translation="${translation}"
                 model-rotation="${rotation}">
+        <tmpl:if test="target.skeleton">
+            <m3d-skeleton root="${target.skeleton.root}" id="model-skeleton">
+                <tmpl:map list="target.skeleton.bones">
+                    <m3d-bone index="${item.index}" name="${item.name}" parent="${item.parent}"
+                              translation="${item.translation}" scale="${item.scale}" rotation="${item.rotation}"/>
+                </tmpl:map>
+            </m3d-skeleton>
+        </tmpl:if>
         <tmpl:map list="keys(target.textures)" item-name="id" id-getter="{id}">
             <m3d-texture id="${id}" name="${target.textures[id].name}"
                          src="${target.textures[id].src ? '/~hmm5/png/' + target.textures[id].src + '.png' : ''}"
@@ -23,11 +31,14 @@
             <tmpl:map list="mesh.polygons" item-name="polygon" index-name="polygonIndex" id-getter="{polygonIndex}">
                 <m3d-mesh materials="${polygon.material}"
                           id="mesh-${meshIndex + 1}-${polygonIndex + 1}"
+                          skeleton="${target.skeleton ? 'model-skeleton' : ''}"
                           name="${mesh.name}-${polygonIndex + 1}"
                           prop:indices="${polygon.indices}"
                           prop:vertices="${polygon.vertices}"
                           prop:normals="${polygon.normals}"
-                          prop:uvs="${polygon.uvs}"/>
+                          prop:uvs="${polygon.uvs}"
+                          prop:bone-weights="${polygon.bones.weights}"
+                          prop:bone-indices="${polygon.bones.indices}"/>
             </tmpl:map>
         </tmpl:map>
     </m3d-object>

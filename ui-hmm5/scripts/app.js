@@ -28,7 +28,7 @@ App.prototype.onKeyPressed = function (event) {
             break;
         };
         default: {
-            console.log(event.keyCode);
+            // console.log(event.keyCode);
             break;
         };
     }
@@ -73,7 +73,12 @@ App.prototype.smartOpen = function (id, from) {
                                 this.openModel(link.split(":").slice(0, -1).join(":"));
                                 return;
                             };
+                            case "2805ff22": {
+                                this.openCharacterView(link.split(":").slice(0, -1).join(":"));
+                                return;
+                            };
                             default: {
+                                console.log(binding);
                                 this.openPropertyList(link.split(":").slice(0, -1).join(":"), from);
                                 return;
                             }
@@ -123,9 +128,13 @@ App.prototype.loadGeometryGUID = function (id, callback) {
                     let normals = new Float32Array(vertexCount * 3);
                     let uvs = new Float32Array(vertexCount * 2);
 
+                    let boneWeights = new Float32Array(vertexCount * 4);
+                    let boneIndices = new Uint16Array(vertexCount * 4);
+
                     for (let looper = 0; looper < vertexCount; ++looper) {
                         let index = polygon.configs.vertices[looper];
                         let vertex = polygon.vertices[index];
+                        let bone = polygon.bones[index];
                         let data = polygon.configs.data[looper];
                         if (maxes[0] < vertex[0]) { maxes[0] = vertex[0]; }
                         if (maxes[1] < vertex[1]) { maxes[1] = vertex[1]; }
@@ -141,6 +150,14 @@ App.prototype.loadGeometryGUID = function (id, callback) {
                         normals[looper * 3 + 2] = data.normal[2];
                         uvs[looper * 2] = data.uv[0];
                         uvs[looper * 2 + 1] = data.uv[1];
+                        boneWeights[looper * 4] = bone.weights[0];
+                        boneWeights[looper * 4 + 1] = bone.weights[1];
+                        boneWeights[looper * 4 + 2] = bone.weights[2];
+                        boneWeights[looper * 4 + 3] = bone.weights[3];
+                        boneIndices[looper * 4] = bone.indices[0];
+                        boneIndices[looper * 4 + 1] = bone.indices[1];
+                        boneIndices[looper * 4 + 2] = bone.indices[2];
+                        boneIndices[looper * 4 + 3] = bone.indices[3];
                     }
 
                     let indices = []; //new Int16Array(faceCount * 3);
@@ -155,7 +172,11 @@ App.prototype.loadGeometryGUID = function (id, callback) {
                         "indices": indices,
                         "vertices": vertices,
                         "normals": normals,
-                        "uvs": uvs
+                        "uvs": uvs,
+                        "bones": {
+                            "weights": boneWeights,
+                            "indices": boneIndices
+                        }
                     });
 
                 }
@@ -251,6 +272,20 @@ App.prototype.loadSkeletonGUID = function (id, callback) {
 
 };
 
+App.prototype.loadAnimationGUID = function (id, callback) {
+
+    $.ajax(`/~hmm5/anim/${id}`, {
+        "success": (data) => {
+            let parsed = $.serial.deserialize(data);
+            callback(undefined, parsed);
+        },
+        "error": function (error) {
+            callback(error);
+        }
+    });
+
+};
+
 App.prototype.loadXDB = function (id, callback) {
 
     $.ajax("/~hmm5/xml/" + id, {
@@ -296,6 +331,70 @@ App.prototype.loadPropertyList = function (id, callback) {
         "error": function (error) {
             callback(error);
         }
+    });
+
+};
+
+App.prototype.loadCharacterView = function (id, callback) {
+
+    let loadLink = (link) => {
+        return new Promise((resolve, reject) => {
+            this.loadPropertyList(link, (error, result) => {
+                if (error) {
+                    reject(error); return;
+                }
+                resolve(result);
+            });
+        });
+    };
+
+    (async () => {
+
+        let characterView = await loadLink(id);
+
+        let model = await new Promise((resolve, reject) => {
+            this.loadModel(characterView.Model.href, (error, result) => {
+                if (error) {
+                    reject(error); return;
+                }
+                resolve(result);
+            });
+        });
+
+        let animSet = await loadLink(characterView.AnimSet.href);
+        let anim = await loadLink(animSet.animations.filter((animation) => {
+            return (animation.Kind === characterView.sequence[0].Kind);
+        })[0].Anim.href);
+        let animationGUID = await new Promise((resolve, reject) => {
+            this.loadAnimationGUID(anim.uid.id, (error, result) => {
+                if (error) {
+                    reject(error); return;
+                }
+                resolve(result);
+            });
+        });
+        animationGUID.name = characterView.sequence[0].Kind;
+        let clips = {
+            [characterView.sequence[0].Kind]: Object.assign({
+                "movementSpeed": anim.MovementSpeed,
+                "speedFactor": anim.SpeedFactor,
+                "speedLineFallTime": anim.SpeedLineFallTime
+            }, animationGUID)
+        };
+
+        callback(undefined, {
+            "model": model,
+            "play": {
+                "clip": characterView.sequence[0].Kind,
+                "counter": characterView.sequence[0].Counter,
+                "cutBegin": characterView.sequence[0].CutBegin,
+                "cutEnd": characterView.sequence[0].CutEnd
+            },
+            "clips": clips,
+        });
+
+    })().catch((error) => {
+        console.error(error);
     });
 
 };
@@ -526,13 +625,16 @@ App.prototype.openGUID = function (guid, from) {
 
     $.ajax(`/~hmm5/uid/${guid}`, {
         "success": (path) => {
-            switch (path.split("/")[1]) {
-                case "Geometries": {
+            switch (path.split("/")[1].toLowerCase()) {
+                case "geometries": {
                     this.openGeometryGUID(path, from); break;
                 };
-                case "Skeletons": {
+                case "skeletons": {
                     this.openSkeletonGUID(path, from); break;
                 };
+                // case "animations": {
+                //     this.openAnimationGUID(path, from); break;
+                // };
                 default: {
                     console.error(path); break;
                 };
@@ -541,6 +643,14 @@ App.prototype.openGUID = function (guid, from) {
     });
 
 };
+
+// App.prototype.openAnimationGUID = function (id, from) {
+
+//     this.loadAnimationGUID(id, (error, result) => {
+//         console.log(error, result);
+//     });
+
+// };
 
 App.prototype.openGeometryGUID = function (id, from) {
 
@@ -770,6 +880,67 @@ App.prototype.openDDS = function (id, from) {
 
     frame[0].frame.filler.fill({
         "target": id
+    });
+
+    this.filler.query("#diagram").append(frame);
+
+    frame[0].bringToFirst();
+
+};
+
+App.prototype.openCharacterView = function (id, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(240),
+        "height": $.dom.getDevicePixels(240)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("#")[0].split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": filename,
+        "resizable": "yes",
+        "wire-id": id
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~hmm5/frames/character-viewer/character-viewer");
+
+    this.loadCharacterView(id, (error, result) => {
+
+        if (error) {
+            console.error(error); return;
+        }
+
+        console.log(result);
+
+        let mins = result.model.geometry.mins;
+        let maxes = result.model.geometry.maxes;
+
+        // we need adjust the model to make it render in the window correctly
+        let size = Math.max((maxes[0] - mins[0]), (maxes[1] - mins[1]), (maxes[2] - mins[2]));
+
+        // move to center
+        let translation = [(mins[0] + maxes[0]) * (-0.5), (mins[1] + maxes[1]) * (-0.5), -mins[2]];
+        // scale to fit
+        let scale = 60 / size;
+
+        // make z axis up
+        let rotation = ["X", -Math.PI / 2];
+
+        frame[0].frame.filler.fill({
+            "translation": translation,
+            "scale": scale,
+            "rotation": rotation,
+            "model": result.model,
+            "play": result.play,
+            "clips": result.clips
+        });
+
     });
 
     this.filler.query("#diagram").append(frame);

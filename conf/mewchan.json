@@ -1,8 +1,6 @@
 {
 	"brainOptions": {
-		"uiFolders": {
-			"ui": "/"
-		}
+		"uiFolders": { "ui": "/" }
 	},
 	"playgrounds": {
 		"http": {}

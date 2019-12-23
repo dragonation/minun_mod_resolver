@@ -7,9 +7,12 @@ const prepareSkeleton = function (dom) {
         dom.m3dSkeleton = new THREE.Skeleton([]);
 
         syncRoot(dom, $(dom).attr("root"));
+        syncID(dom, $(dom).attr("id"));
         // syncHelper(dom, $(dom).attr("helper"));
 
         syncChildren(dom);
+
+        trigSkeletonUpdate(dom);
 
     }
 
@@ -49,11 +52,20 @@ const syncHelper = function (dom, value) {
 
     root = dom.m3dSkeleton.bones.filter((bone) => bone.name === $(dom).attr("root"))[0];
     if (root && root.parent) {
-        if (!dom.m3dSkeletonHelper) {
-            dom.m3dSkeletonHelper = new THREE.SkeletonHelper(root);
+        if (value === "yes") {
+            if (!dom.m3dSkeletonHelper) {
+                dom.m3dSkeletonHelper = new THREE.SkeletonHelper(root);
+            }
+            dom.m3dSkeletonHelper.bones = dom.m3dSkeleton.bones.slice(0);
+            root.parent.add(dom.m3dSkeletonHelper);
+        } else {
+            if (dom.m3dSkeletonHelper) {
+                if (dom.m3dSkeletonHelper.parent) {
+                    dom.m3dSkeletonHelper.parent.remove(dom.m3dSkeletonHelper);
+                }
+                delete dom.m3dSkeletonHelper;
+            }
         }
-        dom.m3dSkeletonHelper.bones = dom.m3dSkeleton.bones.slice(0);
-        root.parent.add(dom.m3dSkeletonHelper);
     } else {
         if (dom.m3dSkeletonHelper) {
             if (dom.m3dSkeletonHelper.parent) {
@@ -61,6 +73,17 @@ const syncHelper = function (dom, value) {
             }
             delete dom.m3dSkeletonHelper;
         }
+    }
+
+};
+
+const syncID = function (dom, value) {
+
+    if (!dom.m3dSkeleton) { return; }
+
+    if (dom.m3dSkeleton.name !== value) {
+        dom.m3dSkeleton.name = value;
+        trigSkeletonUpdate(dom);
     }
 
 };
@@ -144,6 +167,10 @@ const syncChildren = function (dom) {
         }
         dom.m3dSkeleton.bones[looper] = bone;
     }
+    dom.m3dSkeleton.bones.length = newBones.length;
+    if (dom.m3dSkeleton.boneMatrices.length !== dom.m3dSkeleton.bones.length * 16) {
+        dom.m3dSkeleton.boneMatrices = new Float32Array(dom.m3dSkeleton.bones.length * 16);
+    }
     dom.m3dSkeleton.boneInverses = undefined;
     dom.m3dSkeleton.calculateInverses();
 
@@ -164,17 +191,34 @@ const syncChildren = function (dom) {
 
 };
 
+const trigSkeletonUpdate = function (dom) {
+
+    let parent = dom.parentNode;
+    while (parent && ((!parent.localName) || (parent.localName.toLowerCase() !== "m3d-scene"))) {
+        parent = parent.parentNode;
+    }
+
+    let id = $(dom).attr("id");
+
+    if (parent && id) {
+        parent.m3dTrigSkeletonUpdate(id);
+    }
+
+};
+
 module.exports = {
-    "attributes": [ "helper", "root" ],
+    "attributes": [ "id", "helper", "root" ],
     "listeners": {
         "onconnected": function () {
             this.mutationObserver = new MutationObserver(() => {
                 syncChildren(this);
             });
             this.mutationObserver.observe(this, { "childList": true });
+            trigSkeletonUpdate(this);
         },
         "onupdated": function (name, value) {
             switch (name) {
+                case "id": { syncID(this, value); break; };
                 case "helper": { syncHelper(this, value); break; };
                 case "root": { syncRoot(this, value); break; };
                 default: { break; };
@@ -196,10 +240,11 @@ module.exports = {
             if (this.m3dSyncingBones) {
                 return;
             }
-            this.m3dSyncingBones = true;
+            this.m3dsyncingbones = true;
             $.delay(() => {
                 this.m3dSyncingBones = false;
                 syncChildren(this);
+                trigSkeletonUpdate(this);
             });
         }
     }

@@ -124,6 +124,20 @@
 
 });
 
+@servlet.get("/~hmm5/wav//*", function (request, response) {
+
+    this.break();
+
+    response.headers["Content-Type"] = "audio/x-wav";
+
+    return @mew.rpc("hmm5.loadContent", {
+        "path": request.path.slice(11)
+    }).then(function (binary) {
+        response.writer.end(binary, this.test);
+    });
+
+});
+
 @servlet.get("/~hmm5/xml//*", function (request, response) {
 
     this.break();
@@ -165,6 +179,22 @@
     let uid = request.path.slice("/~hmm5/skel/".length).split("/").slice(-1)[0];
 
     return @mew.rpc("hmm5.loadSkeleton", {
+        "uid": uid
+    }).then(function (instance) {
+        response.writer.end(@.serialize(instance), this.test);
+    });
+
+});
+
+@servlet.get("/~hmm5/anim//*", function (request, response) {
+
+    this.break();
+
+    response.headers["Content-Type"] = "application/json";
+
+    let uid = request.path.slice("/~hmm5/anim/".length).split("/").slice(-1)[0];
+
+    return @mew.rpc("hmm5.loadAnimation", {
         "uid": uid
     }).then(function (instance) {
         response.writer.end(@.serialize(instance), this.test);

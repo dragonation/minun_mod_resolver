@@ -456,8 +456,8 @@ PAK.prototype.loadGeometry = function (path) {
 
             let result = {
                 "weights": [this.readFloat32(), this.readFloat32(), this.readFloat32(), this.readFloat32()],
+                "weightsUint8": [this.readUInt8(), this.readUInt8(), this.readUInt8(), this.readUInt8()],
                 "indices": [this.readUInt8(), this.readUInt8(), this.readUInt8(), this.readUInt8()],
-                "flags": [this.readUInt8(), this.readUInt8(), this.readUInt8(), this.readUInt8()],
             };
 
             return result;
@@ -486,7 +486,7 @@ PAK.prototype.loadGeometry = function (path) {
             "configs": {
                 "data": configs.data,
                 "vertices": configVertices.data, // config index to vertex id
-                "indices": configIndices.data, // config index to config id
+                "ids": configIndices.data, // config index to config id, useless
             },
             "bones": bones ? bones.data : null,
             "unknown": [unknown[0], unknown[1], unknown[2], unknown[3]],
@@ -637,9 +637,9 @@ PAK.prototype.loadAnimation = function (path) {
                 let track = {
                     "dimension": vector.Dimension,
                     "values": {
-                        "controls": vector.ValueCurve.Controls.map((value) => value.Real32),
+                        "data": vector.ValueCurve.Controls.map((value) => value.Real32),
                         "degree": vector.ValueCurve.degree,
-                        "knots": vector.ValueCurve.Knots.map((value) => value.Real32),
+                        "times": vector.ValueCurve.Knots.map((value) => value.Real32),
                     }
                 };
                 result.vectors[vector.Name] = track;
@@ -649,23 +649,23 @@ PAK.prototype.loadAnimation = function (path) {
                 let track = {};
                 if (transform.PositionCurve.Controls) {
                     track.translations = {
-                        "controls": transform.PositionCurve.Controls.map((value) => value.Real32),
+                        "data": transform.PositionCurve.Controls.map((value) => value.Real32),
                         "degree": transform.PositionCurve.Degree,
-                        "knots": transform.PositionCurve.Knots.map((value) => value.Real32),
+                        "times": transform.PositionCurve.Knots.map((value) => value.Real32),
                     };
                 }
                 if (transform.OrientationCurve.Controls) {
                     track.orientations = {
-                        "controls": transform.OrientationCurve.Controls.map((value) => value.Real32),
+                        "data": transform.OrientationCurve.Controls.map((value) => value.Real32),
                         "degree": transform.OrientationCurve.Degree,
-                        "knots": transform.OrientationCurve.Knots.map((value) => value.Real32),
+                        "times": transform.OrientationCurve.Knots.map((value) => value.Real32),
                     }
                 }
                 if (transform.ScaleShearCurve.Controls) {
                     track.scales = {
-                        "controls": transform.ScaleShearCurve.Controls.map((value) => value.Real32),
+                        "data": transform.ScaleShearCurve.Controls.map((value) => value.Real32),
                         "degree": transform.ScaleShearCurve.Degree,
-                        "knots": transform.ScaleShearCurve.Knots.map((value) => value.Real32),
+                        "times": transform.ScaleShearCurve.Knots.map((value) => value.Real32),
                     }
                 }
                 result.transforms[transform.Name] = track;

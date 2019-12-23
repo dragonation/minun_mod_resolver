@@ -1,0 +1,70 @@
+<m3d-scene grids="yes" controls="orbit" autolights="yes">
+    <m3d-object id="model"
+                model-scale="${scale}"
+                model-translation="${translation}"
+                model-rotation="${rotation}"
+                animation="${keys(clips)[0]}">
+        <tmpl:map list="keys(clips)" item-name="name">
+            <m3d-clip id="${name}" duration="${clips[name].duration}">
+                <tmpl:map list="clips[name].tracks" item-name="track">
+                    <tmpl:map list="keys(track.transforms)" item-name="bone">
+                        <tmpl:if test="track.transforms[bone].translations">
+                            <m3d-track type="vector" target="${bone}.position"
+                                       prop:times="${track.transforms[bone].translations.times}"
+                                       prop:values="${track.transforms[bone].translations.data}"/>
+                        </tmpl:if>
+                        <tmpl:if test="track.transforms[bone].orientations">
+                            <m3d-track type="quaternion" target="${bone}.quaternion"
+                                       prop:times="${track.transforms[bone].orientations.times}"
+                                       prop:values="${track.transforms[bone].orientations.data}"/>
+                        </tmpl:if>
+                        <tmpl:if test="track.transforms[bone].scales">
+                            <m3d-track type="vector" target="${bone}.scale"
+                                       prop:times="${track.transforms[bone].scales.times}"
+                                       prop:values="${track.transforms[bone].scales.data}"/>
+                        </tmpl:if>
+                        <!-- TODO: vectors -->
+                    </tmpl:map>
+                </tmpl:map>
+            </m3d-clip>
+        </tmpl:map>
+        <tmpl:if test="model.skeleton">
+            <m3d-skeleton helper="yes" root="${model.skeleton.root}" id="model-skeleton">
+                <tmpl:map list="model.skeleton.bones">
+                    <m3d-bone index="${item.index}" name="${item.name}" parent="${item.parent}"
+                              translation="${item.translation}" scale="${item.scale}" rotation="${item.rotation}"/>
+                </tmpl:map>
+            </m3d-skeleton>
+        </tmpl:if>
+        <tmpl:map list="keys(model.textures)" item-name="id" id-getter="{id}">
+            <m3d-texture id="${id}" name="${model.textures[id].name}"
+                         src="${model.textures[id].src ? '/~hmm5/png/' + model.textures[id].src + '.png' : ''}"
+                         flip-y="${model.textures[id].flipY ? 'yes' : 'no'}"
+                         wrap-s="${model.textures[id].wrapS}"
+                         wrap-t="${model.textures[id].wrapT}"/>
+        </tmpl:map>
+        <tmpl:map list="keys(model.materials)" item-name="id" id-getter="{id}">
+            <m3d-material id="${id}" name="${model.materials[id].name}"
+                          preset="phong"
+                          textures="${model.materials[id].texture}"
+                          side="${model.materials[id].side}"
+                          alpha-test="${model.materials[id].alphaTest}"
+                          depth-test="${model.materials[id].depthTest ? 'yes' : 'no'}"
+                          depth-write="${model.materials[id].depthWrite ? 'yes' : 'no'}"/>
+        </tmpl:map>
+        <tmpl:map list="model.geometry.meshes" item-name="mesh" index-name="meshIndex" id-getter="{meshIndex}">
+            <tmpl:map list="mesh.polygons" item-name="polygon" index-name="polygonIndex" id-getter="{polygonIndex}">
+                <m3d-mesh materials="${polygon.material}"
+                          id="mesh-${meshIndex + 1}-${polygonIndex + 1}"
+                          skeleton="${model.skeleton ? 'model-skeleton' : ''}"
+                          name="${mesh.name}-${polygonIndex + 1}"
+                          prop:indices="${polygon.indices}"
+                          prop:vertices="${polygon.vertices}"
+                          prop:normals="${polygon.normals}"
+                          prop:uvs="${polygon.uvs}"
+                          prop:bone-weights="${polygon.bones.weights}"
+                          prop:bone-indices="${polygon.bones.indices}"/>
+            </tmpl:map>
+        </tmpl:map>
+    </m3d-object>
+</m3d-scene>

@@ -275,6 +275,41 @@ const syncVisible = function (dom, value) {
 
 };
 
+const syncAnimation = function (dom, value) {
+
+    if (!dom.m3dObject) { return; }
+
+    setTimeout(() => {
+
+        let value = $(dom).attr("animation");
+
+        if (!dom.m3dAnimationMixer) {
+            dom.m3dAnimationMixer = new THREE.AnimationMixer(dom.m3dObject);
+            let scene = dom;
+            while (scene && ((!scene.localName) || (scene.localName.toLowerCase() !== "m3d-scene"))) {
+                scene = scene.parentNode;
+            }
+
+            if (scene) {
+                if (!scene.m3dMixers) {
+                    scene.m3dMixers = new Set();
+                }
+                scene.m3dMixers.add(dom.m3dAnimationMixer);
+            }
+        }
+
+        let clip = $(dom).find("#" + value)[0];
+        if (clip) {
+            clip = clip.m3dGetClip();
+        }
+        if (clip) {
+            dom.m3dAnimationMixer.clipAction(clip).play();
+        }
+
+    }, 0);
+
+};
+
 const syncChildren = function (dom) {
 
     if (!dom.m3dObject) { return; }
@@ -308,7 +343,8 @@ module.exports = {
         "name",
         "rotation", "translation", "scale",
         "model-rotation", "model-translation", "model-scale",
-        "visible"
+        "visible",
+        "animation"
     ],
     "listeners": {
         "onconnected": function () {
@@ -327,6 +363,7 @@ module.exports = {
                 case "model-translation": { syncModelTranslation(this, value); break; };
                 case "model-scale": { syncModelScale(this, value); break; };
                 case "visible": { syncVisible(this, value); break; };
+                case "animation": { syncAnimation(this, value); break; };
             }
         },
         "ondisconnected": function () {
