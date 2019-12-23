@@ -24,6 +24,7 @@ const prepareMaterial = function (dom) {
         syncColor(dom, $(dom).attr("color"));
         syncTextures(dom, $(dom).attr("textures"));
         syncSide(dom, $(dom).attr("side"));
+        syncSkinning(dom, $(dom).attr("skinning"));
         syncAlphaTest(dom, $(dom).attr("alpha-test"));
         syncDepthTest(dom, $(dom).attr("depth-test"));
         syncDepthWrite(dom, $(dom).attr("depth-write"));
@@ -80,6 +81,18 @@ const syncAlphaTest = function (dom, value) {
     }
 
     dom.m3dMaterial.alphaTest = parseFloat(value);
+
+};
+
+const syncSkinning = function (dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
+    if (!value) {
+        return;
+    }
+
+    dom.m3dMaterial.skinning = (value === "yes");
 
 };
 
@@ -225,7 +238,14 @@ const trigMaterialUpdate = function (dom) {
 };
 
 module.exports = {
-    "attributes": [ "preset", "id", "color", "textures", "side", "alpha-test", "depth-test", "depth-write" ],
+    "attributes": [
+        "preset",
+        "id", "color",
+        "textures",
+        "side", "alpha-test",
+        "depth-test", "depth-write",
+        "skinning"
+    ],
     "listeners": {
         "onconnected": function () {
             trigMaterialUpdate(this);
@@ -237,6 +257,7 @@ module.exports = {
                 case "color": { syncColor(this, value); break; };
                 case "textures": { syncTextures(this, value); break; };
                 case "side": { syncSide(this, value); break; };
+                case "skinning": { syncSkinning(this, value); break; };
                 case "alpha-test": { syncAlphaTest(this, value); break; };
                 case "depth-test": { syncDepthTest(this, value); break; };
                 case "depth-write": { syncDepthWrite(this, value); break; };

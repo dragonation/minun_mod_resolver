@@ -156,7 +156,6 @@ const syncSkeleton = function (dom, value) {
                         prepareMesh(dom);
                     }
                     dom.m3dMesh.bind(m3dSkeleton.m3dGetSkeleton());
-                    console.log(dom.m3dMesh);
                     // TODO: remove last skeleton for dispose
                 }
             }
@@ -249,7 +248,6 @@ module.exports = {
             "set": function (value) {
                 this.m3dBoneIndices = value;
                 if (this.m3dMesh) {
-                    console.log("ssi");
                     this.m3dMesh.geometry.setAttribute("skinIndex", new THREE.Uint16BufferAttribute(this.m3dBoneIndices, 4));
                 }
             }
@@ -261,7 +259,6 @@ module.exports = {
             "set": function (value) {
                 this.m3dBoneWeights = value;
                 if (this.m3dMesh) {
-                    console.log("ssw");
                     this.m3dMesh.geometry.setAttribute("skinWeight", new THREE.Float32BufferAttribute(this.m3dBoneWeights, 4));
                 }
             }

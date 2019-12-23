@@ -15562,7 +15562,8 @@
 
 		var vertexTextures = maxVertexTextures > 0;
 		var floatFragmentTextures = isWebGL2 || !! extensions.get( 'OES_texture_float' );
-		var floatVertexTextures = vertexTextures && floatFragmentTextures;
+		// minun TODO: vertexTextures and floatFragmentTextures is buggy for skeleton in chrome
+		var floatVertexTextures = false; //vertexTextures && floatFragmentTextures;
 
 		var maxSamples = isWebGL2 ? gl.getParameter( 36183 ) : 0;
 
@@ -18497,7 +18498,6 @@
 			}
 
 			if ( program === undefined ) {
-
 				program = new WebGLProgram( renderer, extensions, cacheKey, material, shader, parameters );
 				programs.push( program );
 

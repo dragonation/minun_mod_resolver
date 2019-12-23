@@ -45,7 +45,7 @@
         </tmpl:map>
         <tmpl:map list="keys(model.materials)" item-name="id" id-getter="{id}">
             <m3d-material id="${id}" name="${model.materials[id].name}"
-                          preset="phong"
+                          preset="phong" skinning="${model.skeleton ? 'yes' : 'no'}"
                           textures="${model.materials[id].texture}"
                           side="${model.materials[id].side}"
                           alpha-test="${model.materials[id].alphaTest}"
