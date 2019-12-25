@@ -361,35 +361,43 @@ App.prototype.loadCharacterView = function (id, callback) {
             });
         });
 
-        let animSet = await loadLink(characterView.AnimSet.href);
-        let anim = await loadLink(animSet.animations.filter((animation) => {
-            return (animation.Kind === characterView.sequence[0].Kind);
-        })[0].Anim.href);
-        let animationGUID = await new Promise((resolve, reject) => {
-            this.loadAnimationGUID(anim.uid.id, (error, result) => {
-                if (error) {
-                    reject(error); return;
-                }
-                resolve(result);
-            });
-        });
-        animationGUID.name = characterView.sequence[0].Kind;
-        let clips = {
-            [characterView.sequence[0].Kind]: Object.assign({
-                "movementSpeed": anim.MovementSpeed,
-                "speedFactor": anim.SpeedFactor,
-                "speedLineFallTime": anim.SpeedLineFallTime
-            }, animationGUID)
-        };
+        let clips = {};
+        let play = undefined;
+        if (characterView.sequence) {
+            let animSet = await loadLink(characterView.AnimSet.href);
+            let animation = animSet.animations.filter((animation) => {
+                return (animation.Kind === characterView.sequence[0].Kind);
+            })[0];
+            if (animation) {
+                let anim = await loadLink(animation.Anim.href);
+                let animationGUID = await new Promise((resolve, reject) => {
+                    this.loadAnimationGUID(anim.uid.id, (error, result) => {
+                        if (error) {
+                            reject(error); return;
+                        }
+                        resolve(result);
+                    });
+                });
+                animationGUID.name = characterView.sequence[0].Kind;
+                clips = {
+                    [characterView.sequence[0].Kind]: Object.assign({
+                        "movementSpeed": anim.MovementSpeed,
+                        "speedFactor": anim.SpeedFactor,
+                        "speedLineFallTime": anim.SpeedLineFallTime
+                    }, animationGUID)
+                };
+                play = {
+                    "clip": characterView.sequence[0].Kind,
+                    "counter": characterView.sequence[0].Counter,
+                    "cutBegin": characterView.sequence[0].CutBegin,
+                    "cutEnd": characterView.sequence[0].CutEnd
+                };
+            }
+        }
 
         callback(undefined, {
             "model": model,
-            "play": {
-                "clip": characterView.sequence[0].Kind,
-                "counter": characterView.sequence[0].Counter,
-                "cutBegin": characterView.sequence[0].CutBegin,
-                "cutEnd": characterView.sequence[0].CutEnd
-            },
+            "play": play,
             "clips": clips,
         });
 
@@ -940,6 +948,12 @@ App.prototype.openCharacterView = function (id, from) {
             "play": result.play,
             "clips": result.clips
         });
+
+        if (result.play) {
+            setTimeout(() => {
+                frame[0].frame.filler.query("#model")[0].playM3DClip(result.play.clip);
+            }, 100);
+        }
 
     });
 

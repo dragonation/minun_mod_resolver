@@ -662,8 +662,15 @@ PAK.prototype.loadAnimation = function (path) {
                     }
                 }
                 if (transform.ScaleShearCurve.Controls) {
+                    let data = [];
+                    let dataMatrices = transform.ScaleShearCurve.Controls.map((value) => value.Real32);
+                    for (let looper = 0; looper < dataMatrices.length; looper += 9) {
+                        data.push(dataMatrices[looper],
+                                  dataMatrices[looper + 4],
+                                  dataMatrices[looper + 8]);
+                    }
                     track.scales = {
-                        "data": transform.ScaleShearCurve.Controls.map((value) => value.Real32),
+                        "data": data,
                         "degree": transform.ScaleShearCurve.Degree,
                         "times": transform.ScaleShearCurve.Knots.map((value) => value.Real32),
                     }

@@ -2,8 +2,7 @@
     <m3d-object id="model"
                 model-scale="${scale}"
                 model-translation="${translation}"
-                model-rotation="${rotation}"
-                animation="${keys(clips)[0]}">
+                model-rotation="${rotation}">
         <tmpl:map list="keys(clips)" item-name="name">
             <m3d-clip id="${name}" duration="${clips[name].duration}">
                 <tmpl:map list="clips[name].tracks" item-name="track">

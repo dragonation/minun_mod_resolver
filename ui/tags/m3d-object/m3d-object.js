@@ -275,38 +275,32 @@ const syncVisible = function (dom, value) {
 
 };
 
-const syncAnimation = function (dom, value) {
+const playAnimation = function (dom, clip) {
 
     if (!dom.m3dObject) { return; }
 
-    setTimeout(() => {
-
-        let value = $(dom).attr("animation");
-
-        if (!dom.m3dAnimationMixer) {
-            dom.m3dAnimationMixer = new THREE.AnimationMixer(dom.m3dObject);
-            let scene = dom;
-            while (scene && ((!scene.localName) || (scene.localName.toLowerCase() !== "m3d-scene"))) {
-                scene = scene.parentNode;
+    if (!dom.m3dAnimationMixer) {
+        dom.m3dAnimationMixer = new THREE.AnimationMixer(dom.m3dObject);
+        let scene = dom;
+        while (scene && ((!scene.localName) || (scene.localName.toLowerCase() !== "m3d-scene"))) {
+            scene = scene.parentNode;
+        }
+        if (scene) {
+            if (!scene.m3dMixers) {
+                scene.m3dMixers = new Set();
             }
-
-            if (scene) {
-                if (!scene.m3dMixers) {
-                    scene.m3dMixers = new Set();
-                }
-                scene.m3dMixers.add(dom.m3dAnimationMixer);
-            }
+            scene.m3dMixers.add(dom.m3dAnimationMixer);
         }
+    }
 
-        let clip = $(dom).find("#" + value)[0];
-        if (clip) {
-            clip = clip.m3dGetClip();
-        }
-        if (clip) {
-            dom.m3dAnimationMixer.clipAction(clip).play();
-        }
-
-    }, 0);
+    let clipDOM = $(dom).find("#" + clip)[0];
+    let m3dClip = undefined;
+    if (clipDOM) {
+        m3dClip = clipDOM.m3dGetClip();
+    }
+    if (m3dClip) {
+        dom.m3dAnimationMixer.clipAction(m3dClip).play();
+    }
 
 };
 
@@ -343,8 +337,7 @@ module.exports = {
         "name",
         "rotation", "translation", "scale",
         "model-rotation", "model-translation", "model-scale",
-        "visible",
-        "animation"
+        "visible"
     ],
     "listeners": {
         "onconnected": function () {
@@ -363,7 +356,6 @@ module.exports = {
                 case "model-translation": { syncModelTranslation(this, value); break; };
                 case "model-scale": { syncModelScale(this, value); break; };
                 case "visible": { syncVisible(this, value); break; };
-                case "animation": { syncAnimation(this, value); break; };
             }
         },
         "ondisconnected": function () {
@@ -377,6 +369,9 @@ module.exports = {
         },
         "m3dSyncChildren": function () {
             syncChildren(this);
+        },
+        "playM3DClip": function (clip) {
+            playAnimation(this, clip);
         }
     }
 };
