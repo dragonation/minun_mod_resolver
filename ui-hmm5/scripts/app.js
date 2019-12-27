@@ -679,7 +679,6 @@ App.prototype.openInlineObject = function (id, from) {
             console.error(error);
             return;
         }
-        console.log(result);
 
         frame[0].frame.filler.fill({
             "target": result

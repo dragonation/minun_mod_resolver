@@ -36,7 +36,12 @@ $.serial.register("hmm5.enum", Enum, (content, serializer) => {
 }, (deserializer, preset) => {
     let token = deserializer("token");
     let value = deserializer("value");
-    return new Enum(token, value);
+    let href = deserializer("href");
+    let object = new Enum(token, value);
+    if (href) {
+        object.href = href;
+    }
+    return object;
 });
 
 $.serial.register("hmm5.ref", Reference, (content, serializer) => {

@@ -42,6 +42,10 @@
             font-weight: bold;
         }
 
+        &.token.link #value {
+            color: #ffad1f;
+        }
+
         &.object #value {
             color: #6a90d8;
         }

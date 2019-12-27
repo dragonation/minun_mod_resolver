@@ -93,9 +93,15 @@ registerResolver(GUID, function (value, target) {
 registerResolver(Enum, function (value, target) {
     switch (target) {
         case "text": { return value.token; };
-        case "class": { return "token"; };
+        case "class": { return value.href ? "token link" : "token"; };
         case "complex": { return value.value; };
-        case "link": { return ""; };
+        case "link": { return value.href; };
+        case "open": {
+            if (value.href) {
+                $.app("hmm5").smartOpen(value.href);
+            }
+            return;
+        };
         default: { return value; };
     }
 });
