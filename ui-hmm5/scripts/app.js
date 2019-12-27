@@ -169,13 +169,16 @@ App.prototype.loadGeometryGUID = function (id, callback) {
                     let normals = new Float32Array(vertexCount * 3);
                     let uvs = new Float32Array(vertexCount * 2);
 
-                    let boneWeights = new Float32Array(vertexCount * 4);
-                    let boneIndices = new Uint16Array(vertexCount * 4);
+                    let boneWeights = undefined;
+                    let boneIndices = undefined;
+                    if (polygon.bones) {
+                        boneWeights = new Float32Array(vertexCount * 4);
+                        boneIndices = new Uint16Array(vertexCount * 4);
+                    }
 
                     for (let looper = 0; looper < vertexCount; ++looper) {
                         let index = polygon.configs.vertices[looper];
                         let vertex = polygon.vertices[index];
-                        let bone = polygon.bones[index];
                         let data = polygon.configs.data[looper];
                         if (maxes[0] < vertex[0]) { maxes[0] = vertex[0]; }
                         if (maxes[1] < vertex[1]) { maxes[1] = vertex[1]; }
@@ -191,14 +194,17 @@ App.prototype.loadGeometryGUID = function (id, callback) {
                         normals[looper * 3 + 2] = data.normal[2];
                         uvs[looper * 2] = data.uv[0];
                         uvs[looper * 2 + 1] = data.uv[1];
-                        boneWeights[looper * 4] = bone.weights[0];
-                        boneWeights[looper * 4 + 1] = bone.weights[1];
-                        boneWeights[looper * 4 + 2] = bone.weights[2];
-                        boneWeights[looper * 4 + 3] = bone.weights[3];
-                        boneIndices[looper * 4] = bone.indices[0];
-                        boneIndices[looper * 4 + 1] = bone.indices[1];
-                        boneIndices[looper * 4 + 2] = bone.indices[2];
-                        boneIndices[looper * 4 + 3] = bone.indices[3];
+                        if (polygon.bones) {
+                            let bone = polygon.bones[index];
+                            boneWeights[looper * 4] = bone.weights[0];
+                            boneWeights[looper * 4 + 1] = bone.weights[1];
+                            boneWeights[looper * 4 + 2] = bone.weights[2];
+                            boneWeights[looper * 4 + 3] = bone.weights[3];
+                            boneIndices[looper * 4] = bone.indices[0];
+                            boneIndices[looper * 4 + 1] = bone.indices[1];
+                            boneIndices[looper * 4 + 2] = bone.indices[2];
+                            boneIndices[looper * 4 + 3] = bone.indices[3];
+                        }
                     }
 
                     let indices = []; //new Int16Array(faceCount * 3);
@@ -209,16 +215,21 @@ App.prototype.loadGeometryGUID = function (id, callback) {
                         indices[looper * 3 + 2] = triangle[2];
                     }
 
-                    polygons.push({
+                    let record = {
                         "indices": indices,
                         "vertices": vertices,
                         "normals": normals,
                         "uvs": uvs,
-                        "bones": {
+                    };
+
+                    if (polygon.bones) {
+                        record.bones = {
                             "weights": boneWeights,
                             "indices": boneIndices
-                        }
-                    });
+                        };
+                    }
+
+                    polygons.push(record);
 
                 }
 

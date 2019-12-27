@@ -135,6 +135,9 @@ const Enum = function Enum(token, value) {
 @.serialize.hndl("hmm5.enum", Enum, (content, serializer) => {
     serializer("token", content["@token"]);
     serializer("value", content["@value"]);
+    if (content["@href"]) {
+        serializer("href", content["@href"]);
+    }
 }, (deserializer, preset) => {
     throw new Error("No need to deserialize in server");
 });
@@ -1222,6 +1225,8 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
         return name;
     };
 
+    let pak = this;
+
     let type = this.types.all[typeID];
     switch (type.type) {
 
@@ -1381,6 +1386,9 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
                     return function (object) {
                         this.@value = type.values[object];
                         this.@token = object;
+                        if (pak.types.tokens[object]) {
+                            this.@href = pak.types.tokens[object];
+                        }
                     };
 
                 };
