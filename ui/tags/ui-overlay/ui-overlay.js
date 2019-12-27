@@ -39,6 +39,9 @@ module.exports = {
             }
 
             let parameters = { "tag": this, "name": name };
+            if (Overlay.parameters) {
+                Object.assign(parameters, Overlay.parameters);
+            }
 
             let functors = {};
             if (Overlay.functors) {

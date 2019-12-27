@@ -1,4 +1,4 @@
-const { Reference, GUID, File, Enum } = require("../../scripts/serial.js");
+const { Reference, GUID, File, Enum, Inline } = require("../../scripts/serial.js");
 
 let at = "@";
 
@@ -205,6 +205,18 @@ registerResolver(Object, function (value, target) {
                 return `<${value.constructor.name}>`;
             }
             return `<${typeof value}>`;
+        };
+        case "class": { return "object"; };
+        case "complex": { return value; };
+        case "link": { return ""; };
+        default: { return value; };
+    }
+});
+
+registerResolver(Inline, function (value, target) {
+    switch (target) {
+        case "text": {
+            return `<inline>`;
         };
         case "class": { return "object"; };
         case "complex": { return value; };

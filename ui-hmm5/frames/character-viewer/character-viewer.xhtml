@@ -28,7 +28,7 @@
             </m3d-clip>
         </tmpl:map>
         <tmpl:if test="model.skeleton">
-            <m3d-skeleton helper="yes" root="${model.skeleton.root}" id="model-skeleton">
+            <m3d-skeleton root="${model.skeleton.root}" id="model-skeleton">
                 <tmpl:map list="model.skeleton.bones">
                     <m3d-bone index="${item.index}" name="${item.name}" parent="${item.parent}"
                               translation="${item.translation}" scale="${item.scale}" rotation="${item.rotation}"/>

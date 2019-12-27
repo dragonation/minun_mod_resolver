@@ -108,7 +108,7 @@ hmm5.finished((error) => {
 
 			let passed = false;
 			if (hasPrefix) {
-				
+
 				let rest = lowerCased.slice(dirname.length).split("/");
 				if (rest.length === 1) {
 					let record = pak.records[path];
@@ -125,7 +125,7 @@ hmm5.finished((error) => {
 							"type": "dir"
 						};
 					}
-				}				
+				}
 
 			}
 
@@ -164,7 +164,7 @@ hmm5.finished((error) => {
 	return hmm5.then(function (pak) {
 
 		if (!keywords) {
-			this.next(Object.keys(pak.types.tokens));
+			this.next(Object.keys(pak.types.tokens).map((key) => `${key}:${pak.types.tokens[key]}`));
 			return;
 		}
 
@@ -182,7 +182,7 @@ hmm5.finished((error) => {
 			}
 
 			if (!failed) {
-				result.push(token);
+				result.push(`${token}:${pak.types.tokens[token]}`);
 			}
 
 		}
@@ -241,7 +241,7 @@ hmm5.finished((error) => {
 });
 
 // @heard.rpc("hmm5.listArenas").then(function (request) {
-	
+
 // });
 
 // @heard.rpc("hmm5.listUIs").then(function (request) {
@@ -305,6 +305,21 @@ hmm5.finished((error) => {
 		let instance = pak.restoreInstance(result[0], typeID, caches);
 
 		this.next(instance);
+
+	});
+
+});
+
+@heard.rpc("hmm5.getInlineObject").then(function (request) {
+
+	return hmm5.then(function (pak) {
+
+		let object = pak.getInlineObject(request.id);
+		if (object === undefined) {
+			throw new Error(`Inline object[${request.id}] not found`);
+		}
+
+		this.next(object);
 
 	});
 

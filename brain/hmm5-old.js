@@ -30,52 +30,6 @@
 
 });
 
-@servlet.get("/list/models//*", function (request, response) {
-
-    this.break();
-
-    let keywords = [];
-
-    response.headers["Content-Type"] = "text/plain";
-
-    request.path.slice("/list/models/".length).split(/[\s,;\+]/).forEach((word) => {
-        word = word.trim().toLowerCase();
-        if (word && keywords.indexOf(word) === -1) {
-            keywords.push(word);
-        }
-    });
-
-    return @mew.rpc("hmm5.listModels", {
-        "keywords": keywords
-    }).then(function (models) {
-        response.writer.end(models.join("\n"), this.test);
-    });
-
-});
-
-@servlet.get("/list/tokens//*", function (request, response) {
-
-    this.break();
-
-    let keywords = [];
-
-    response.headers["Content-Type"] = "text/plain";
-
-    request.path.slice("/list/tokens/".length).split(/[\s,;\+]/).forEach((word) => {
-        word = word.trim().toLowerCase();
-        if (word && keywords.indexOf(word) === -1) {
-            keywords.push(word);
-        }
-    });
-
-    return @mew.rpc("hmm5.listTokens", {
-        "keywords": keywords
-    }).then(function (tokens) {
-        response.writer.end(tokens.join("\n"), this.test);
-    });
-
-});
-
 @servlet.get("/list/deps//*", function (request, response) {
 
     this.break();

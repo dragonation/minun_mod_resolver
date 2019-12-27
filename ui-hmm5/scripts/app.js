@@ -36,6 +36,11 @@ App.prototype.onKeyPressed = function (event) {
 
 App.prototype.smartOpen = function (id, from) {
 
+    if (id[0] === "@") {
+        this.openInlineObject(id, from);
+        return;
+    }
+
     if (!/[\.\/#]/.test(id)) {
         this.openGUID(id, from);
         return;
@@ -98,6 +103,24 @@ App.prototype.smartOpen = function (id, from) {
     }
 
     this.openXDB(id, from);
+
+};
+
+App.prototype.loadInlineObject = function (id, callback) {
+
+    if (id[0] === "@") {
+        id = id.slice(1);
+    }
+
+    $.ajax(`/~hmm5/inline/${id}`, {
+        "success": (data) => {
+            let parsed = $.serial.deserialize(data);
+            callback(undefined, parsed);
+        },
+        "error": function (error) {
+            callback(error);
+        }
+    });
 
 };
 
@@ -626,6 +649,49 @@ App.prototype.getNextFrameTopLeft = function (from, size) {
     };
 
     return suggested;
+
+};
+
+App.prototype.openInlineObject = function (id, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(240),
+        "height": $.dom.getDevicePixels(300)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": id.slice(1),
+        "resizable": "yes",
+        "wire-id": id
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~hmm5/frames/property-list/property-list");
+
+    this.loadInlineObject(id, (error, result) => {
+
+        if (error) {
+            console.error(error);
+            return;
+        }
+        console.log(result);
+
+        frame[0].frame.filler.fill({
+            "target": result
+        });
+
+        this.filler.query("#diagram")[0].updateLayouts();
+
+    });
+
+    this.filler.query("#diagram").append(frame);
+
+    frame[0].bringToFirst();
 
 };
 

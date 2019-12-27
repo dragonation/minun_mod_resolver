@@ -36,6 +36,9 @@ module.exports = {
             }
 
             let parameters = { "tag": this, "name": name };
+            if (Frame.parameters) {
+                Object.assign(parameters, Frame.parameters);
+            }
 
             let functors = {};
             if (Frame.functors) {

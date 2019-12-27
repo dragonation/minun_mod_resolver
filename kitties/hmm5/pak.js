@@ -9,6 +9,19 @@ const xml = require("./xml.js");
 const { DDS } = require("./dds.js");
 const { GR2 } = require("./gr2.js");
 
+const Record = function Record() {};
+Record.prototype = Object.create(null);
+
+@.serialize.hndl("hmm5.inline", Record, function (content, serializer) {
+    const keys = Object.keys(content).sort();
+    for (let key of keys) {
+        if (key[0] !== "@") {
+            serializer(key, content[key]);
+        }
+    }
+}, function (deserializer, preset, unit, root, caches) {
+    throw new Error("No need to deserialize in server");
+});
 
 const Node = function Node(pak, path, name) {
 
@@ -164,6 +177,8 @@ const PAK = function PAK(path, records) {
 
     this.types.bindings = Object.create(null);
     this.types.files = Object.create(null);
+
+    this.types.inlines = Object.create(null);
 
     this.loadTypeDefinitions();
     this.loadTypeBindings();
@@ -321,6 +336,12 @@ PAK.prototype.resolveLink = function (base, href, ignoreNotFound) {
     }
 
     return result;
+
+};
+
+PAK.prototype.getInlineObject = function (id) {
+
+    return this.types.inlines[id];
 
 };
 
@@ -931,8 +952,78 @@ PAK.prototype.loadTypeDefinitions = function () {
 
         let pointer = table.@("dbid/XPointer")[0];
 
+        let items = Object.create(null);
+        for (let item of (this.resolveLink(null, pointer)[0].@("objects/Item"))) {
+            let record = item.@("Obj")[0];
+            if (record) {
+                if (record.@href) {
+                    let href = record.@href;
+                    if (href[0] === "#") {
+                        if (!/^#n:inline\(/.test(href)) {
+                            @warn(`Unknown inline link[${href}]`);
+                        } else {
+                            href = href.slice("#n:inline(".length, -1);
+                            if (record["@id"]) {
+                                href = `id(${record["@id"]})/${href}`;
+                            }
+                            href = `/${record["@@path"]}#xpointer(${href})`;
+                        }
+                    } else if (href[0] !== "/") {
+                        href = `/${@.fs.resolvePath(record["@@path"], "..", href.split("#")[0])}#${href.split('#').slice(1).join("#")}`;
+                    }
+                    items[item.ID[0]] = href;
+                } else {
+                    const simplify = (record) => {
+                        if (typeof record === "string") {
+                            return record;
+                        }
+                        if (record["@href"]) {
+                            if (Object.keys(record).filter((key) => key !== "@@name").length > 2) {
+                                @dump(record);
+                                throw new Error("Not reference object");
+                            }
+                            let reference = new Reference();
+                            let href = record["@href"];
+                            if (href[0] !== "/") {
+                                href = @.fs.resolvePath(record["@@path"], "..") + "/" + href;
+                            }
+                            reference["@href"] = href;
+                            return reference;
+                        }
+                        if (record["Item"]) {
+                            if (Object.keys(record).filter((key) => key !== "@@name").length > 1) {
+                                @dump(record);
+                                throw new Error("Not array object");
+                            }
+                            return record["Item"].map(simplify);
+                        }
+                        let result = new Record();
+                        for (let key in record) {
+                            if ((key !== "@@name") && record[key]) {
+                                if (record[key].length > 1) {
+                                    @dump(record);
+                                    throw new Error(`Invalid simplified record key[${key}]`);
+                                } else if (record[key].length === 1) {
+                                    result[key] = simplify(record[key][0]);
+                                }
+                            }
+                        }
+                        return result;
+                    };
+                    this.types.inlines[item.ID[0]] = simplify(record);
+                    items[item.ID[0]] = "@" + item.ID[0];
+                }
+            } else {
+                this.types.inlines[item.ID[0]] = null;
+                items[item.ID[0]] = "@" + item.ID[0];
+            }
+        }
+
         for (let id of (table.@("EnumEntries/Item"))) {
-            this.types.tokens[id] = pointer;
+            if (items[id] === undefined) {
+                throw new Error(`Token[${id}] not found`);
+            }
+            this.types.tokens[id] = items[id];
         }
 
     }
@@ -1211,7 +1302,9 @@ PAK.prototype.restoreInstance = function (object, typeID, caches) {
                                 }
                                 restored = pak.restoreInstance(value[0], field.type.id, caches);
                             } else {
-                                if (field.default || field.initial) {
+                                if (field.default) {
+                                    restored = field.default;
+                                } else if (field.initial) {
                                     @error(field, value);
                                     process.exit();
                                 }

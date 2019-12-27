@@ -64,6 +64,52 @@
 
 });
 
+@servlet.get("/~hmm5/list/tokens//*", function (request, response) {
+
+    this.break();
+
+    let keywords = [];
+
+    response.headers["Content-Type"] = "text/plain";
+
+    request.path.slice("/~hmm5/list/tokens/".length).split(/[\s,;\+]/).forEach((word) => {
+        word = word.trim().toLowerCase();
+        if (word && keywords.indexOf(word) === -1) {
+            keywords.push(word);
+        }
+    });
+
+    return @mew.rpc("hmm5.listTokens", {
+        "keywords": keywords
+    }).then(function (tokens) {
+        response.writer.end(tokens.join("\n"), this.test);
+    });
+
+});
+
+@servlet.get("/~hmm5/list/models//*", function (request, response) {
+
+    this.break();
+
+    let keywords = [];
+
+    response.headers["Content-Type"] = "text/plain";
+
+    request.path.slice("/~hmm5/list/models/".length).split(/[\s,;\+]/).forEach((word) => {
+        word = word.trim().toLowerCase();
+        if (word && keywords.indexOf(word) === -1) {
+            keywords.push(word);
+        }
+    });
+
+    return @mew.rpc("hmm5.listModels", {
+        "keywords": keywords
+    }).then(function (models) {
+        response.writer.end(models.join("\n"), this.test);
+    });
+
+});
+
 // redirections
 
 @servlet.get("/~hmm5/uid/*", function (request, response) {
@@ -97,6 +143,22 @@
 
     return @mew.rpc("hmm5.restoreInstance", {
         "link": link
+    }).then(function (instance) {
+        response.writer.end(@.serialize(instance), this.test);
+    });
+
+});
+
+@servlet.get("/~hmm5/inline//*", function (request, response) {
+
+    this.break();
+
+    let id = request.path.slice("/~hmm5/inline/".length);
+
+    response.headers["Content-Type"] = "application/json";
+
+    return @mew.rpc("hmm5.getInlineObject", {
+        "id": id
     }).then(function (instance) {
         response.writer.end(@.serialize(instance), this.test);
     });

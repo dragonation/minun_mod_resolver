@@ -36,7 +36,9 @@ module.exports = {
             }
 
             let parameters = { "tag": this, "name": name };
-
+            if (Workbench.parameters) {
+                Object.assign(parameters, Workbench.parameters);
+            }
             let functors = {};
             if (Workbench.functors) {
                 for (let key in Workbench.functors) {

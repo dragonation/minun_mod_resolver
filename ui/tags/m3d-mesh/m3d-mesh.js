@@ -122,6 +122,10 @@ const syncMaterials = function (dom, value) {
 
 const syncSkeleton = function (dom, value) {
 
+    if (!value) {
+        return;
+    }
+
     let scene = dom;
     while (scene && ((!scene.localName) || (scene.localName.toLowerCase() !== "m3d-scene"))) {
         scene = scene.parentNode;
