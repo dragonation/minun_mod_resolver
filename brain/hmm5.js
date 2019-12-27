@@ -167,6 +167,38 @@
 
 // resources
 
+@servlet.get("/~hmm5/pak//*", function (request, response) {
+
+    this.break();
+
+    if (request.get.download === "yes") {
+        response.headers["Content-Type"] = "application/x-download";
+    } else {
+        let extname = @.fs.extname(request.path.toLowerCase());
+        switch (extname) {
+            case ".xdb": {
+                response.headers["Content-Type"] = "application/xml";
+                break;
+            };
+            case ".dds": {
+                response.headers["Content-Type"] = "image/vnd.ms-dds";
+                break;
+            };
+            default: {
+                response.headers["Content-Type"] = @.fs.mime(extname);
+                break;
+            };
+        }
+    }
+
+    return @mew.rpc("hmm5.loadContent", {
+        "path": request.path.slice("/~hmm5/pak/".length)
+    }).then(function (binary) {
+        response.writer.end(binary, this.test);
+    });
+
+});
+
 @servlet.get("/~hmm5/png//*", function (request, response) {
 
     this.break();

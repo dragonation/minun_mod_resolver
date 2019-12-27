@@ -71,7 +71,7 @@ $.res.load = function (path, callback) {
                     caches[path] = request.responseText;
                     return request.responseText;
                 }
-                default: { throw new Error("Resource file not found " + filename); }
+                default: { throw new Error("Resource file not found " + path); }
             }
         }
 

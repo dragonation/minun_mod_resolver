@@ -7,6 +7,7 @@
         <ui-input-field id="search-field" placeholder="Search" icon="/res/actions/search.svg" autoselect="yes"
                         style:width="200px" style:margin="calc(8px - 1dpx) 6px"
                         style:border-radius="24px" style:padding="0 12px 0 0px"
+                        @keydown="preventSystemShortcut(event)"
                         @keyup="advanceSearch(event)"
                         @change="updateSearchResult()"
                         @focus="updateSearchResult()"/>

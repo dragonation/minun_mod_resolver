@@ -48,6 +48,11 @@ App.prototype.smartOpen = function (id, from) {
 
     let extname = id.split("#")[0].split("/").slice(-1)[0].split(".").slice(-1)[0];
 
+    if (extname === "txt") {
+        this.openText(id, from);
+        return;
+    }
+
     if (extname === "dds") {
         this.openDDS(id, from);
         return;
@@ -116,6 +121,19 @@ App.prototype.loadInlineObject = function (id, callback) {
         "success": (data) => {
             let parsed = $.serial.deserialize(data);
             callback(undefined, parsed);
+        },
+        "error": function (error) {
+            callback(error);
+        }
+    });
+
+};
+
+App.prototype.loadText = function (id, callback) {
+
+    $.ajax(`/~hmm5/pak/${id}`, {
+        "success": (data) => {
+            callback(undefined, data);
         },
         "error": function (error) {
             callback(error);
@@ -694,6 +712,48 @@ App.prototype.openInlineObject = function (id, from) {
 
 };
 
+App.prototype.openText = function (id, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(240),
+        "height": $.dom.getDevicePixels(100)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": id.slice(1),
+        "resizable": "yes",
+        "wire-id": id
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~hmm5/frames/code-editor/code-editor");
+
+    this.loadText(id, (error, result) => {
+
+        if (error) {
+            console.error(error);
+            return;
+        }
+
+        frame[0].frame.filler.fill({
+            "target": result.trim()
+        });
+
+        this.filler.query("#diagram")[0].updateLayouts();
+
+    });
+
+    this.filler.query("#diagram").append(frame);
+
+    frame[0].bringToFirst();
+
+};
+
 App.prototype.openGUID = function (guid, from) {
 
     $.ajax(`/~hmm5/uid/${guid}`, {
@@ -1103,7 +1163,28 @@ App.prototype.showFileBrowser = function () {
 App.prototype.title = "Heroes of Might and Magic 5";
 
 App.functors = {
+    "preventSystemShortcut": function (event) {
+        if (event.altKey) {
+            event.preventDefault();
+        }
+    },
     "advanceSearch": function (event) {
+
+        if (event.altKey) {
+            let scope = undefined;
+            switch (event.keyCode) {
+                case 70: { scope = "file"; break; }; // f
+                case 65: { scope = "arena"; break; }; // a
+                case 77: { scope = "model"; break; }; // m
+                case 84: { scope = "token"; break; }; // t
+                default: { break; };
+            }
+            if (scope && this.searchOverlay) {
+                this.searchOverlay.filler.fill({ "scope": scope });
+                this.searchOverlay.updateSearches();
+            }
+            return;
+        }
 
         switch (event.keyCode) {
             case 13: { // return

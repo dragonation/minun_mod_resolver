@@ -153,7 +153,6 @@ var EditorView = /** @class */ (function () {
     };
     EditorView.prototype.configure = function (fromState) {
         this.configuration = extension_1.extendView.resolve([defaultAttrs].concat(this.extensions).concat(fromState));
-        console.log(this.configuration);
         if (this.configuration.foreign.length)
             throw new Error("Non-view extensions found in view");
     };
