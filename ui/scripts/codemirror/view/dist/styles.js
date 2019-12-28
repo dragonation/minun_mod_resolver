@@ -9,8 +9,9 @@ exports.styles = new style_mod_1.StyleModule({
             // FIXME it would be great if we could directly use the browser's
             // default focus outline, but it appears we can't, so this tries to
             // approximate that
-            outline_fallback: "1px dotted #212121",
-            outline: "5px auto -webkit-focus-ring-color"
+            // minun todo: make another outline supports
+            // outline_fallback: "1px dotted #212121",
+            // outline: "5px auto -webkit-focus-ring-color"
         },
         display: "flex !important",
         flexDirection: "column"

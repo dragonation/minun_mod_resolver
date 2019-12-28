@@ -30,7 +30,7 @@ module.exports = {
 
             let editorView = new EditorView({
                 "state": EditorState.create({
-                    "doc": "hello, world",
+                    "doc": this.code,
                     "extensions": [ history(), multipleSelections() ]
                 }),
                 "root": this.shadowRoot,
@@ -52,21 +52,33 @@ module.exports = {
                 ]
             });
 
-            console.log(editorView);
+            this.editorView = editorView;
 
-            this.filler.query("#container").append($(editorView.dom).css({
-                "width": "100%",
-                "height": "100%"
-            }));
+            this.filler.query("#container").append($(editorView.dom));
 
         }
     },
     "properties": {
         "code": {
             "get": function () {
-
+                if (!this.editorView) {
+                    return this.cmCode ? this.cmCode : "";
+                }
+                return this.editorView.state.toString();
             },
-            "set": function () {
+            "set": function (value) {
+
+                this.cmCode = value + "";
+
+                if (!this.editorView) {
+                    return;
+                }
+
+                let state = this.editorView.state;
+
+                let transaction = state.t().replace(0, state.doc.toString().length, value);
+
+                this.editorView.update([transaction]);
 
             }
         }
