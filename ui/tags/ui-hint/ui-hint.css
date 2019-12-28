@@ -1,0 +1,29 @@
+:host {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#container {
+
+    border: solid 1dpx rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
+    padding: 4px 6px;
+    font-size: 11px;
+    opacity: 0;
+    backdrop-filter: blur(2px);
+    transition: opacity 0.5s;
+    max-width: 300px;
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    :host(.visible) & {
+        opacity: 1;
+    }
+
+}
