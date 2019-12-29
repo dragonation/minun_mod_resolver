@@ -1,6 +1,7 @@
 <div id="caption">Search results (${results.length}${results.length >= 100 ? '+' : ''})</div>
 <div id="types">
     <div class="type" class:selected="scope == 'file'" @click="searchInFiles()"><u>F</u>iles</div>
+    <div class="type" class:selected="scope == 'screen'" @click="searchInScreens()"><u>S</u>creens</div>
     <div class="type" class:selected="scope == 'arena'" @click="searchInArenas()"><u>A</u>renas</div>
     <div class="type" class:selected="scope == 'model'" @click="searchInModels()"><u>M</u>odels</div>
     <div class="type" class:selected="scope == 'token'" @click="searchInTokens()"><u>T</u>okens</div>

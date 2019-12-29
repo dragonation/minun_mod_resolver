@@ -131,6 +131,10 @@ App.prototype.loadInlineObject = function (id, callback) {
 
 App.prototype.loadText = function (id, callback) {
 
+    if (id[0] === "/") {
+        id = id.slice(1);
+    }
+
     $.ajax(`/~hmm5/pak/${id}`, {
         "success": (data) => {
             callback(undefined, data);
@@ -732,7 +736,7 @@ App.prototype.openText = function (id, from) {
     let position = this.getNextFrameTopLeft(from, size);
 
     let frame = $("<ui-diagram-frame>").attr({
-        "caption": id.slice(1),
+        "caption": id.split("/").slice(-1)[0],
         "resizable": "yes",
         "wire-id": id
     }).css({
@@ -1188,6 +1192,7 @@ App.functors = {
                 case 65: { scope = "arena"; break; }; // a
                 case 77: { scope = "model"; break; }; // m
                 case 84: { scope = "token"; break; }; // t
+                case 83: { scope = "screen"; break; }; // s
                 default: { break; };
             }
             if (scope && this.searchOverlay) {
@@ -1229,7 +1234,7 @@ App.functors = {
     },
     "updateSearchResult": function () {
 
-        let width = $.dom.getDevicePixels(300);
+        let width = $.dom.getDevicePixels(340);
         let height = $.dom.getDevicePixels(400);
 
         let left = parseInt($("body").css("width")) - $.dom.getDevicePixels(60) - width - $.dom.getDevicePixels(6);

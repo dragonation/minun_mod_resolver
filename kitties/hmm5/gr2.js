@@ -28,8 +28,8 @@ const getFieldType = function (typeID) {
         case 21: { return "float16"; };
         case 22: { return "empty"; };
         case 0xffffffff: { return "invalid"; };
-        default: { 
-            throw new Error(`Invalid field type ID[${typeID}]`); 
+        default: {
+            throw new Error(`Invalid field type ID[${typeID}]`);
         }
     };
 
@@ -49,10 +49,10 @@ const getElementSize = function (definition) {
         case "int_16":
         case "uint_16":
         case "binormal_int_16":
-        case "normal_int_16": 
+        case "normal_int_16":
         case "float16": { return 2; };
-        
-        case "reference": 
+
+        case "reference":
         case "string":
         case "int_32":
         case "uint_32":
@@ -66,9 +66,9 @@ const getElementSize = function (definition) {
 
         case "transform": { return 17 * 4; };
 
-        case "none": 
+        case "none":
         case "empty":
-        case "invalid": 
+        case "invalid":
         default: { throw new Error("Invalid type"); };
 
     };
@@ -102,7 +102,9 @@ const decompress = function (compression, compressedData, stop0, stop1, decompre
 
         let spawned = @.task.execute.sync(granny2Path, switches, true);
 
-        return @.fs.readFile.sync(outputFile);
+        let buffer = @.fs.readFile.sync(outputFile);
+
+        return buffer;
 
     } finally {
         @.fs.deleteFile(inputFile).finished(() => {});
@@ -128,7 +130,7 @@ const resolveRelocation = function (sections, index, offset) {
     }
 
     return {
-        "section": index, 
+        "section": index,
         "offset": offset
     };
 
@@ -228,7 +230,7 @@ const readReference = function (sections, index, offset, parser, caches) {
 
     let cacheID = `${resolved.section}-${resolved.offset}`;
     if (caches[cacheID]) {
-        return caches[cacheID][0];    
+        return caches[cacheID][0];
     }
 
     let section = sections[resolved.section];
@@ -245,14 +247,14 @@ const readDefinition = function (sections, index, offset, caches) {
 
     let cacheID = `${index}-${offset}`;
     if (caches[cacheID]) {
-        return caches[cacheID][0];    
+        return caches[cacheID][0];
     }
 
     let section = sections[index];
 
     let reader = new Reader(section.data).snapshot(offset);
 
-    const definition = { 
+    const definition = {
         "fields": []
     };
 
@@ -277,11 +279,11 @@ const readDefinition = function (sections, index, offset, caches) {
                     fieldDefinition = readDefinitionReference(sections, index, reader.offset, caches);
                     break;
                 };
-                case "none": 
+                case "none":
                 case "string":
-                case "transform": 
+                case "transform":
                 case "variant_reference":
-                case "reference_to_variant_array": 
+                case "reference_to_variant_array":
                 case "float_32":
                 case "int_8":
                 case "uint_8":
@@ -299,8 +301,8 @@ const readDefinition = function (sections, index, offset, caches) {
                     // just ignore the definition
                     break;
                 };
-                default: { 
-                    throw new Error(`Invalid field type ID[${typeID}]`); 
+                default: {
+                    throw new Error(`Invalid field type ID[${typeID}]`);
                 }
             };
             reader.readUInt32(); // increase the offset
@@ -413,7 +415,7 @@ const readArrayReference = function (sections, index, offset, caches, definition
         return result;
 
     }, caches);
-    
+
 };
 
 const readArrayOfReferences = function (sections, index, offset, caches, definition) {
@@ -430,13 +432,13 @@ const readArrayOfReferences = function (sections, index, offset, caches, definit
 
         for (let looper = 0; looper < size; ++looper) {
             result.push(readStructureReference(sections, index, elementOffset, caches, definition.definition, false));
-            elementOffset += 4;//getElementSize(definition); 
+            elementOffset += 4;//getElementSize(definition);
         }
 
         return result;
 
     }, caches);
-    
+
 };
 
 const readTransform = function (sections, index, offset, caches) {
@@ -458,7 +460,7 @@ const readTransform = function (sections, index, offset, caches) {
     ];
 
     result.Quaternion = [
-        reader.readFloat32(), reader.readFloat32(), 
+        reader.readFloat32(), reader.readFloat32(),
         reader.readFloat32(), reader.readFloat32()
     ];
 
@@ -511,14 +513,14 @@ const readDatum = function (sections, index, offset, caches, definition) {
             return readArrayOfReferences(sections, index, offset, caches, definition);
         };
 
-        case "reference_to_array": 
+        case "reference_to_array":
         case "reference_to_variant_array": {
 
             let newOffset = offset;
 
             let elementDefinition = definition;
             if (definition.type === "reference_to_variant_array") {
-                elementDefinition = readDefinitionReference(sections, index, newOffset, caches); 
+                elementDefinition = readDefinitionReference(sections, index, newOffset, caches);
                 newOffset += 4;
             }
 
@@ -542,22 +544,22 @@ const readDatum = function (sections, index, offset, caches, definition) {
             return new Reader(sections[index].data).snapshot(offset).readFloat32();
         };
 
-        case "int_8": 
+        case "int_8":
         case "binormal_int_8": {
             return new Reader(sections[index].data).snapshot(offset).readInt8();
         };
 
-        case "uint_8": 
+        case "uint_8":
         case "normal_int_8": {
             return new Reader(sections[index].data).snapshot(offset).readUInt8();
         };
 
-        case "int_16": 
+        case "int_16":
         case "binormal_int_16": {
             return new Reader(sections[index].data).snapshot(offset).readInt16();
         };
 
-        case "uint_16": 
+        case "uint_16":
         case "normal_int_16": {
             return new Reader(sections[index].data).snapshot(offset).readUInt16();
         };
@@ -594,14 +596,14 @@ const GR2 = function GR2(content) {
 
         let input = undefined;
         if (header.compressedSize > 0) {
-            input = content.slice(header.offsetInFile, 
+            input = content.slice(header.offsetInFile,
                                   header.offsetInFile + header.compressedSize);
         }
 
         let output = undefined;
         if (input) {
             output = decompress(header.compression, input,
-                header.first16Bit, header.first8Bit, 
+                header.first16Bit, header.first8Bit,
                 header.uncompressedSize);
         }
 
@@ -628,11 +630,11 @@ const GR2 = function GR2(content) {
     let rootDefinition = readDefinition(this.sections, this.header.rootType.section, this.header.rootType.offset, this.caches);
 
     this.root = readStructure(
-        this.sections, 
-        this.header.rootData.section, 
-        this.header.rootData.offset, 
+        this.sections,
+        this.header.rootData.section,
+        this.header.rootData.offset,
         this.caches,
-        rootDefinition, 
+        rootDefinition,
         true
     );
 

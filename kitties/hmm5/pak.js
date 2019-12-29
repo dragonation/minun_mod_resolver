@@ -185,7 +185,261 @@ const PAK = function PAK(path, records) {
 
     this.loadTypeDefinitions();
     this.loadTypeBindings();
+
     this.analyzeRoots();
+
+};
+
+PAK.prototype.loadTypeBindings = function () {
+
+    @debug("Loading type bindings");
+
+    let bindings = Object.create(null);
+
+    for (let id in this.types.classes) {
+        bindings[this.types.classes[id].binding] = id;
+    }
+
+    @debug("Loading Bin index.bin");
+    let content = this.loadContent("index.bin");
+
+    const parseName = function (record) {
+
+        bin.digRecord(record);
+
+        if (record.data.length !== 1) {
+            throw new Error("No name provided");
+        }
+
+        return record.data[0].data.toString("utf8");
+
+    };
+
+    const parseNode = function (record) {
+
+        bin.digRecord(record);
+
+        let children = [];
+
+        let count = null;
+        for (let data of record.data) {
+            switch (data.flag) {
+                case 2: {
+                    count = data.data.readInt32LE();
+                    break;
+                };
+                case 1: {
+                    let name = parseName(data);
+                    children.push(name);
+                    break;
+                };
+                default: { @dump(data); break; };
+            }
+        }
+
+        if (count !== children.length) {
+            @warn("Node children not match");
+        }
+
+        return children;
+
+    };
+
+    const parseGroups = function (record) {
+
+        bin.digRecord(record);
+
+        let count = null;
+        let unknown = null;
+        let groups = [];
+        let flags = [];
+        for (let data of record.data) {
+            switch (data.flag) {
+                case 4: { unknown = data.data.readInt32LE(); break; }; // 389?
+                case 3: { count = data.data.readInt32LE(); break; };
+                case 2: {
+                    groups.push({
+                        "links": parseNode(data)
+                    });
+                    break;
+                };
+                case 1: { flags.push(data.data); break; };
+                default: { @dump(data); break; }
+            }
+        }
+
+        for (let looper = 0; looper < count; ++looper) {
+            groups[looper].type = flags[looper].readInt32LE();
+        }
+
+        return groups;
+
+    };
+
+    const parseTypes = function (record) {
+
+        bin.digRecord(record);
+
+        let types = Object.create(null);
+
+        const groups = parseGroups(record.data[0]);
+        for (let group of groups) {
+            types[bindings[group.type]] = group;
+        }
+
+        return types;
+
+    };
+
+    let data = bin.readRecords(content);
+    bin.digRecord(data[1]);
+    bin.digRecord(data[3]);
+    bin.digRecord(data[3].data[0]);
+
+    let types = parseTypes(data[3].data[0].data[1]);
+
+    for (let binding in types) {
+        for (let link of types[binding].links) {
+            this.types.bindings[link] = binding;
+            let file = link.split("#")[0];
+            if (file[0] === "/") {
+                file = file.slice(1);
+            }
+            if (!this.types.files[file]) {
+                this.types.files[file] = Object.create(null);
+            }
+            this.types.files[file][link] = binding;
+        }
+    }
+
+    @celebr("Type bindings loaded");
+
+};
+
+PAK.prototype.loadTypeDefinitions = function () {
+
+    @debug("Loading type definitions");
+
+    let content = this.loadContent("types.xml", "utf8");
+
+    let xml = this.loadXML("types.xml");
+
+    let classIDs = Object.create(null);
+
+    let types = Object.create(null);
+    for (let item of (xml.@("Base/SharedClasses/Item"))) {
+
+        let typeID = item.@("__ServerPtr")[0];
+        if (types[typeID]) {
+            @warn(`Conflicted type ${typeID}`);
+        }
+
+        let type = item.@("Type")[0];
+
+        let classID = item.@("__ClassTypeID")[0];
+        if (!classIDs[type]) {
+            classIDs[type] = classID;
+        } else if (classIDs[type] !== classID) {
+            @warn(`Conflicted class ID ${classID}`);
+        }
+
+        this.types.ids[classID] = typeID;
+
+        types[typeID] = item;
+
+    }
+
+    for (let type in types) {
+        parseType(type, types, this.types);
+    }
+
+    for (let typeID of (xml.@("Base/Types/Item"))) {
+        let type = this.types.all[typeID];
+        this.types.tags[type.name] = typeID;
+    }
+
+    // TODO: make thre reading after the type binding will let it support structs
+    for (let table of (xml.@("Base/Tables/Item"))) {
+
+        let pointer = table.@("dbid/XPointer")[0];
+
+        let items = Object.create(null);
+        for (let item of (this.resolveLink(null, pointer)[0].@("objects/Item"))) {
+            let record = item.@("Obj")[0];
+            if (record) {
+                if (record.@href) {
+                    let href = record.@href;
+                    if (href[0] === "#") {
+                        if (!/^#n:inline\(/.test(href)) {
+                            @warn(`Unknown inline link[${href}]`);
+                        } else {
+                            href = href.slice("#n:inline(".length, -1);
+                            if (record["@id"]) {
+                                href = `id(${record["@id"]})/${href}`;
+                            }
+                            href = `/${record["@@path"]}#xpointer(${href})`;
+                        }
+                    } else if (href[0] !== "/") {
+                        href = `/${@.fs.resolvePath(record["@@path"], "..", href.split("#")[0])}#${href.split('#').slice(1).join("#")}`;
+                    }
+                    items[item.ID[0]] = href;
+                } else {
+                    const simplify = (record) => {
+                        if (typeof record === "string") {
+                            return record;
+                        }
+                        if (record["@href"]) {
+                            if (Object.keys(record).filter((key) => key !== "@@name").length > 2) {
+                                @dump(record);
+                                throw new Error("Not reference object");
+                            }
+                            let reference = new Reference();
+                            let href = record["@href"];
+                            if (href[0] !== "/") {
+                                href = @.fs.resolvePath(record["@@path"], "..") + "/" + href;
+                            }
+                            reference["@href"] = href;
+                            return reference;
+                        }
+                        if (record["Item"]) {
+                            if (Object.keys(record).filter((key) => key !== "@@name").length > 1) {
+                                @dump(record);
+                                throw new Error("Not array object");
+                            }
+                            return record["Item"].map(simplify);
+                        }
+                        let result = new Record();
+                        for (let key in record) {
+                            if ((key !== "@@name") && record[key]) {
+                                if (record[key].length > 1) {
+                                    @dump(record);
+                                    throw new Error(`Invalid simplified record key[${key}]`);
+                                } else if (record[key].length === 1) {
+                                    result[key] = simplify(record[key][0]);
+                                }
+                            }
+                        }
+                        return result;
+                    };
+                    this.types.inlines[item.ID[0]] = simplify(record);
+                    items[item.ID[0]] = "@" + item.ID[0];
+                }
+            } else {
+                this.types.inlines[item.ID[0]] = null;
+                items[item.ID[0]] = "@" + item.ID[0];
+            }
+        }
+
+        for (let id of (table.@("EnumEntries/Item"))) {
+            if (items[id] === undefined) {
+                throw new Error(`Token[${id}] not found`);
+            }
+            this.types.tokens[id] = items[id];
+        }
+
+    }
+
+    @celebr("Type definitions loaded");
 
 };
 
@@ -229,23 +483,6 @@ PAK.prototype.analyzeRoots = function () {
     };
 
     @celebr("Root files and objects confirmed");
-
-};
-
-PAK.prototype.loadContent = function (path, encoding) {
-
-    const record = this.records[path];
-
-    let content = record.zip.readFileSync(path);
-
-    if (encoding === "utf8") {
-        if ((content[0] === 0xff) && (content[1] === 0xfe)) {
-            content = content.slice(2);
-        }
-        content = content.toString("utf8");
-    }
-
-    return content;
 
 };
 
@@ -393,6 +630,38 @@ PAK.prototype.parseNode = function (path, node) {
     }
 
     return result;
+
+};
+
+PAK.prototype.parseXML = function (path, content) {
+
+    let nodes = xml.parseXML(content);
+
+    let root = {
+        "attributes": {},
+        "children": xml.trimNodes(nodes),
+        "closed": false,
+        "name": "#document"
+    };
+
+    return this.parseNode(path, root);
+
+};
+
+PAK.prototype.loadContent = function (path, encoding) {
+
+    const record = this.records[path];
+
+    let content = record.zip.readFileSync(path);
+
+    if (encoding === "utf8") {
+        if ((content[0] === 0xff) && (content[1] === 0xfe)) {
+            content = content.slice(2);
+        }
+        content = content.toString("utf8");
+    }
+
+    return content;
 
 };
 
@@ -768,270 +1037,21 @@ PAK.prototype.loadXML = function (path, noCache) {
 
 };
 
-PAK.prototype.parseXML = function (path, content) {
+PAK.prototype.loadToken = function (token) {
 
-    let nodes = xml.parseXML(content);
-
-    let root = {
-        "attributes": {},
-        "children": xml.trimNodes(nodes),
-        "closed": false,
-        "name": "#document"
-    };
-
-    return this.parseNode(path, root);
-
-};
-
-PAK.prototype.loadTypeBindings = function () {
-
-    @debug("Loading type bindings");
-
-    let bindings = Object.create(null);
-
-    for (let id in this.types.classes) {
-        bindings[this.types.classes[id].binding] = id;
+    let xlink = this.types.tokens[token];
+    if (!xlink) {
+        throw new Error("Token not found");
     }
 
-    @debug("Loading Bin index.bin");
-    let content = this.loadContent("index.bin");
-
-    const parseName = function (record) {
-
-        bin.digRecord(record);
-
-        if (record.data.length !== 1) {
-            throw new Error("No name provided");
-        }
-
-        return record.data[0].data.toString("utf8");
-
-    };
-
-    const parseNode = function (record) {
-
-        bin.digRecord(record);
-
-        let children = [];
-
-        let count = null;
-        for (let data of record.data) {
-            switch (data.flag) {
-                case 2: {
-                    count = data.data.readInt32LE();
-                    break;
-                };
-                case 1: {
-                    let name = parseName(data);
-                    children.push(name);
-                    break;
-                };
-                default: { @dump(data); break; };
-            }
-        }
-
-        if (count !== children.length) {
-            @warn("Node children not match");
-        }
-
-        return children;
-
-    };
-
-    const parseGroups = function (record) {
-
-        bin.digRecord(record);
-
-        let count = null;
-        let unknown = null;
-        let groups = [];
-        let flags = [];
-        for (let data of record.data) {
-            switch (data.flag) {
-                case 4: { unknown = data.data.readInt32LE(); break; }; // 389?
-                case 3: { count = data.data.readInt32LE(); break; };
-                case 2: {
-                    groups.push({
-                        "links": parseNode(data)
-                    });
-                    break;
-                };
-                case 1: { flags.push(data.data); break; };
-                default: { @dump(data); break; }
-            }
-        }
-
-        for (let looper = 0; looper < count; ++looper) {
-            groups[looper].type = flags[looper].readInt32LE();
-        }
-
-        return groups;
-
-    };
-
-    const parseTypes = function (record) {
-
-        bin.digRecord(record);
-
-        let types = Object.create(null);
-
-        const groups = parseGroups(record.data[0]);
-        for (let group of groups) {
-            types[bindings[group.type]] = group;
-        }
-
-        return types;
-
-    };
-
-    let data = bin.readRecords(content);
-    bin.digRecord(data[1]);
-    bin.digRecord(data[3]);
-    bin.digRecord(data[3].data[0]);
-
-    let types = parseTypes(data[3].data[0].data[1]);
-
-    for (let binding in types) {
-        for (let link of types[binding].links) {
-            this.types.bindings[link] = binding;
-            let file = link.split("#")[0];
-            if (file[0] === "/") {
-                file = file.slice(1);
-            }
-            if (!this.types.files[file]) {
-                this.types.files[file] = Object.create(null);
-            }
-            this.types.files[file][link] = binding;
+    let items = this.resolveLink(null, xlink)[0].@("objects/Item");
+    for (let item of items) {
+        if (item.@("ID")[0] === token) {
+            return item.@("Obj")[0]["@@"]();
         }
     }
 
-    @celebr("Type bindings loaded");
-
-};
-
-PAK.prototype.loadTypeDefinitions = function () {
-
-    @debug("Loading type definitions");
-
-    let content = this.loadContent("types.xml", "utf8");
-
-    let xml = this.loadXML("types.xml");
-
-    let classIDs = Object.create(null);
-
-    let types = Object.create(null);
-    for (let item of (xml.@("Base/SharedClasses/Item"))) {
-
-        let typeID = item.@("__ServerPtr")[0];
-        if (types[typeID]) {
-            @warn(`Conflicted type ${typeID}`);
-        }
-
-        let type = item.@("Type")[0];
-
-        let classID = item.@("__ClassTypeID")[0];
-        if (!classIDs[type]) {
-            classIDs[type] = classID;
-        } else if (classIDs[type] !== classID) {
-            @warn(`Conflicted class ID ${classID}`);
-        }
-
-        this.types.ids[classID] = typeID;
-
-        types[typeID] = item;
-
-    }
-
-    for (let type in types) {
-        parseType(type, types, this.types);
-    }
-
-    for (let typeID of (xml.@("Base/Types/Item"))) {
-        let type = this.types.all[typeID];
-        this.types.tags[type.name] = typeID;
-    }
-
-    for (let table of (xml.@("Base/Tables/Item"))) {
-
-        let pointer = table.@("dbid/XPointer")[0];
-
-        let items = Object.create(null);
-        for (let item of (this.resolveLink(null, pointer)[0].@("objects/Item"))) {
-            let record = item.@("Obj")[0];
-            if (record) {
-                if (record.@href) {
-                    let href = record.@href;
-                    if (href[0] === "#") {
-                        if (!/^#n:inline\(/.test(href)) {
-                            @warn(`Unknown inline link[${href}]`);
-                        } else {
-                            href = href.slice("#n:inline(".length, -1);
-                            if (record["@id"]) {
-                                href = `id(${record["@id"]})/${href}`;
-                            }
-                            href = `/${record["@@path"]}#xpointer(${href})`;
-                        }
-                    } else if (href[0] !== "/") {
-                        href = `/${@.fs.resolvePath(record["@@path"], "..", href.split("#")[0])}#${href.split('#').slice(1).join("#")}`;
-                    }
-                    items[item.ID[0]] = href;
-                } else {
-                    const simplify = (record) => {
-                        if (typeof record === "string") {
-                            return record;
-                        }
-                        if (record["@href"]) {
-                            if (Object.keys(record).filter((key) => key !== "@@name").length > 2) {
-                                @dump(record);
-                                throw new Error("Not reference object");
-                            }
-                            let reference = new Reference();
-                            let href = record["@href"];
-                            if (href[0] !== "/") {
-                                href = @.fs.resolvePath(record["@@path"], "..") + "/" + href;
-                            }
-                            reference["@href"] = href;
-                            return reference;
-                        }
-                        if (record["Item"]) {
-                            if (Object.keys(record).filter((key) => key !== "@@name").length > 1) {
-                                @dump(record);
-                                throw new Error("Not array object");
-                            }
-                            return record["Item"].map(simplify);
-                        }
-                        let result = new Record();
-                        for (let key in record) {
-                            if ((key !== "@@name") && record[key]) {
-                                if (record[key].length > 1) {
-                                    @dump(record);
-                                    throw new Error(`Invalid simplified record key[${key}]`);
-                                } else if (record[key].length === 1) {
-                                    result[key] = simplify(record[key][0]);
-                                }
-                            }
-                        }
-                        return result;
-                    };
-                    this.types.inlines[item.ID[0]] = simplify(record);
-                    items[item.ID[0]] = "@" + item.ID[0];
-                }
-            } else {
-                this.types.inlines[item.ID[0]] = null;
-                items[item.ID[0]] = "@" + item.ID[0];
-            }
-        }
-
-        for (let id of (table.@("EnumEntries/Item"))) {
-            if (items[id] === undefined) {
-                throw new Error(`Token[${id}] not found`);
-            }
-            this.types.tokens[id] = items[id];
-        }
-
-    }
-
-    @celebr("Type definitions loaded");
+    throw new Error("Token not found");
 
 };
 
@@ -1050,24 +1070,6 @@ PAK.prototype.extractResources = function (target, path) {
         record.zip.extractFile(file, output).pipe(this);
 
     });
-
-};
-
-PAK.prototype.loadToken = function (token) {
-
-    let xlink = this.types.tokens[token];
-    if (!xlink) {
-        throw new Error("Token not found");
-    }
-
-    let items = this.resolveLink(null, xlink)[0].@("objects/Item");
-    for (let item of items) {
-        if (item.@("ID")[0] === token) {
-            return item.@("Obj")[0]["@@"]();
-        }
-    }
-
-    throw new Error("Token not found");
 
 };
 

@@ -110,6 +110,52 @@
 
 });
 
+@servlet.get("/~hmm5/list/arenas//*", function (request, response) {
+
+    this.break();
+
+    let keywords = [];
+
+    response.headers["Content-Type"] = "text/plain";
+
+    request.path.slice("/~hmm5/list/arenas/".length).split(/[\s,;\+]/).forEach((word) => {
+        word = word.trim().toLowerCase();
+        if (word && keywords.indexOf(word) === -1) {
+            keywords.push(word);
+        }
+    });
+
+    return @mew.rpc("hmm5.listArenas", {
+        "keywords": keywords
+    }).then(function (arenas) {
+        response.writer.end(arenas.join("\n"), this.test);
+    });
+
+});
+
+@servlet.get("/~hmm5/list/screens//*", function (request, response) {
+
+    this.break();
+
+    let keywords = [];
+
+    response.headers["Content-Type"] = "text/plain";
+
+    request.path.slice("/~hmm5/list/screens/".length).split(/[\s,;\+]/).forEach((word) => {
+        word = word.trim().toLowerCase();
+        if (word && keywords.indexOf(word) === -1) {
+            keywords.push(word);
+        }
+    });
+
+    return @mew.rpc("hmm5.listScreens", {
+        "keywords": keywords
+    }).then(function (screens) {
+        response.writer.end(screens.join("\n"), this.test);
+    });
+
+});
+
 // redirections
 
 @servlet.get("/~hmm5/uid/*", function (request, response) {

@@ -240,13 +240,99 @@ hmm5.finished((error) => {
 
 });
 
-// @heard.rpc("hmm5.listArenas").then(function (request) {
+@heard.rpc("hmm5.listArenas").then(function (request) {
 
-// });
+	let keywords = request.keywords;
+	if (keywords && (!(keywords instanceof Array))) {
+		keywords = [keywords];
+	}
+	if (keywords) {
+		keywords = keywords.map((keyword) => {
+			return keyword.toLowerCase();
+		});
+	}
 
-// @heard.rpc("hmm5.listUIs").then(function (request) {
+	return hmm5.then(function (pak) {
 
-// });
+		let arenas = [];
+
+		let typeID = pak.types.tags["ArenaDesc"];
+
+		for (let link in pak.types.bindings) {
+			let binding = pak.types.bindings[link];
+			if (binding === typeID) {
+
+				let lowerCased = link.toLowerCase();
+
+				let failed = false;
+				if (keywords) {
+					for (let keyword of keywords) {
+						if (lowerCased.indexOf(keyword) === -1) {
+							failed = true;
+							break;
+						}
+					}
+				}
+
+				if (!failed) {
+					arenas.push(link);
+				}
+
+			}
+		}
+
+		this.next(arenas);
+
+	});
+
+});
+
+@heard.rpc("hmm5.listScreens").then(function (request) {
+
+	let keywords = request.keywords;
+	if (keywords && (!(keywords instanceof Array))) {
+		keywords = [keywords];
+	}
+	if (keywords) {
+		keywords = keywords.map((keyword) => {
+			return keyword.toLowerCase();
+		});
+	}
+
+	return hmm5.then(function (pak) {
+
+		let screens = [];
+
+		let typeID = pak.types.tags["WindowScreen"];
+
+		for (let link in pak.types.bindings) {
+			let binding = pak.types.bindings[link];
+			if (binding === typeID) {
+
+				let lowerCased = link.toLowerCase();
+
+				let failed = false;
+				if (keywords) {
+					for (let keyword of keywords) {
+						if (lowerCased.indexOf(keyword) === -1) {
+							failed = true;
+							break;
+						}
+					}
+				}
+
+				if (!failed) {
+					screens.push(link);
+				}
+
+			}
+		}
+
+		this.next(screens);
+
+	});
+
+});
 
 @heard.rpc("hmm5.analyzeDependencies").then(function (request) {
 

@@ -41,6 +41,70 @@ Overlay.prototype.searchFilesWithKeyword = function (keyword) {
 
 };
 
+Overlay.prototype.searchScreensWithKeyword = function (keyword) {
+
+    $.ajax("/~hmm5/list/screens/" + keyword, {
+        "success": (data, status, request) => {
+
+            let items = data.trim().split("\n").filter((line) => line).map((line) => {
+                let filename = line.split("#")[0].split("/").slice(-1)[0];
+                let dir = line.split("#")[0].slice(0, - filename.length - 1);
+                let extname = "";
+                if ((filename[0] !== ".") && (filename.indexOf(".") !== -1)) {
+                    extname = "." + filename.split(".").slice(-1)[0];
+                }
+                let basename = filename.slice(0, -extname.length);
+                let type = "screen";
+                return {
+                    "id": line,
+                    "type": type,
+                    "basename": basename,
+                    "extname": extname,
+                    "description": dir
+                };
+            });
+
+            this.filler.fill({
+                "results": items
+            });
+
+        }
+    });
+
+};
+
+Overlay.prototype.searchArenasWithKeyword = function (keyword) {
+
+    $.ajax("/~hmm5/list/arenas/" + keyword, {
+        "success": (data, status, request) => {
+
+            let items = data.trim().split("\n").filter((line) => line).map((line) => {
+                let filename = line.split("#")[0].split("/").slice(-1)[0];
+                let dir = line.split("#")[0].slice(0, - filename.length - 1);
+                let extname = "";
+                if ((filename[0] !== ".") && (filename.indexOf(".") !== -1)) {
+                    extname = "." + filename.split(".").slice(-1)[0];
+                }
+                let basename = filename.slice(0, -extname.length);
+                let type = "arena";
+                return {
+                    "id": line,
+                    "type": type,
+                    "basename": basename,
+                    "extname": extname,
+                    "description": dir
+                };
+            });
+
+            this.filler.fill({
+                "results": items
+            });
+
+        }
+    });
+
+};
+
 Overlay.prototype.searchModelsWithKeyword = function (keyword) {
 
     $.ajax("/~hmm5/list/models/" + keyword, {
@@ -132,8 +196,14 @@ Overlay.prototype.searchWithKeyword = function (keyword) {
         case "file": {
             this.searchFilesWithKeyword(keyword); break;
         };
+        case "arena": {
+            this.searchArenasWithKeyword(keyword); break;
+        };
         case "model": {
             this.searchModelsWithKeyword(keyword); break;
+        };
+        case "screen": {
+            this.searchScreensWithKeyword(keyword); break;
         };
         case "token": {
             this.searchTokensWithKeyword(keyword); break;
@@ -168,6 +238,12 @@ Overlay.functors = {
     "searchInArenas": function () {
         this.filler.fill({
             "scope": "arena"
+        });
+        this.updateSearches();
+    },
+    "searchInScreens": function () {
+        this.filler.fill({
+            "scope": "screen"
         });
         this.updateSearches();
     },
