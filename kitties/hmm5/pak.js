@@ -201,6 +201,7 @@ PAK.prototype.loadTypeBindings = function () {
     }
 
     @debug("Loading BIN index.bin");
+
     let content = this.loadContent("index.bin");
 
     const parseName = function (record) {
