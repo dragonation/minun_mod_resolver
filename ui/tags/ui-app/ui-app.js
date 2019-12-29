@@ -289,3 +289,11 @@ $.app = function (name) {
     return host.app;
 
 };
+
+$.app.updateWindows = function () {
+
+    for (let name in apps) {
+        apps[name].dom.updateWindows();
+    }
+
+};

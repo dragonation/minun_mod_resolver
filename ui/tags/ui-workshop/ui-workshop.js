@@ -50,6 +50,8 @@ module.exports = {
 
             $(this).removeClass("browsing");
 
+            $.app.updateWindows();
+
             this.bringViewToFirst(view, true);
 
         },
