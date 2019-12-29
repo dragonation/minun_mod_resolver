@@ -200,7 +200,7 @@ PAK.prototype.loadTypeBindings = function () {
         bindings[this.types.classes[id].binding] = id;
     }
 
-    @debug("Loading Bin index.bin");
+    @debug("Loading BIN index.bin");
     let content = this.loadContent("index.bin");
 
     const parseName = function (record) {

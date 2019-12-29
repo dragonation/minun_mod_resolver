@@ -29,7 +29,7 @@ const prepareMesh = function (dom) {
             geometry.setAttribute("skinWeight", new THREE.Float32BufferAttribute(dom.m3dBoneWeights, 4));
         }
 
-        if ($(dom).attr("skeleton").trim()) {
+        if ($(dom).attr("skeleton") && $(dom).attr("skeleton").trim()) {
             dom.m3dMesh = new THREE.SkinnedMesh(geometry);
         } else {
             dom.m3dMesh = new THREE.Mesh(geometry);
