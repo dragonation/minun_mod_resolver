@@ -335,6 +335,16 @@ module.exports = {
                 that.detach();
             });
 
+        },
+        "listActions": function () {
+
+            let actions = this.filler.query("#ui-diagram-frame-clients").children("ui-diagram-action");
+            if (this.frame.listActions) {
+                actions = this.frame.listActions(actions);
+            }
+
+            ;
+
         }
     }
 };

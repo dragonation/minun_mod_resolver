@@ -448,4 +448,4 @@ const Action = function Action(reader) {
 
 Motion.Action = Action;
 
-module.exports = Motion;
+module.exports.Motion = Motion;

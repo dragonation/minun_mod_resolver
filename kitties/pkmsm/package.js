@@ -1,4 +1,4 @@
-const Motion = require("./motion.js");
+const { Motion } = require("./motion.js");
 
 const Package = function Package(reader) {
 
@@ -148,4 +148,4 @@ const Package = function Package(reader) {
 
 };
 
-module.exports = Package;
+module.exports.Package = Package;

@@ -1,6 +1,6 @@
-const Section = require("./section.js");
+const { Section } = require("./section.js");
 
-const PICA = require("./pica.js");
+const { PICA } = require("./pica.js");
 
 const Shader = function Shader(reader) {
 
@@ -1956,4 +1956,4 @@ Register.glslMap = {
 
 Shader.Register = Register;
 
-module.exports = Shader;
+module.exports.Shader = Shader;

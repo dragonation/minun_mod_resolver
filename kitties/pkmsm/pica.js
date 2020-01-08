@@ -2992,4 +2992,4 @@ PICA.TextureType = TextureType;
 
 PICA.LUTType = LUTType;
 
-module.exports = PICA;
+module.exports.PICA = PICA;

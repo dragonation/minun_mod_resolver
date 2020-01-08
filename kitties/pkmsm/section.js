@@ -11,4 +11,4 @@ const Section = function Section(reader, expected) {
 
 };
 
-module.exports = Section;
+module.exports.Section = Section;

@@ -1,6 +1,8 @@
-const Loader = require("./loader.js");
+const entryPath = @mewchan().entryPath;
 
-const PC = require("./pc.js");
+const { Loader } = require("./loader.js");
+
+const { PC } = require("./pc.js");
 
 const Index = function Index(path) {
 
@@ -436,4 +438,6 @@ Index.features = {
     "801": { "1": ["original"] }
 };
 
-module.exports = Index;
+Index.list = require(@path(entryPath, "data/pkm/list.json"));
+
+module.exports.Index = Index;

@@ -1,10 +1,10 @@
-const PICA = require("./pica.js");
+const { PICA } = require("./pica.js");
 
-const Section = require("./section.js");
+const { Section } = require("./section.js");
 
-const Texture = require("./texture.js");
-const Shader = require("./shader.js");
-const Motion = require("./motion.js");
+const { Texture } = require("./texture.js");
+const { Shader } = require("./shader.js");
+const { Motion } = require("./motion.js");
 
 const Model = function Model(reader) {
 
@@ -718,4 +718,4 @@ Model.TextureMappingType = TextureMappingType;
 Model.TextureMagnificationFilter = TextureMagnificationFilter;
 Model.TextureMinificationFilter = TextureMinificationFilter;
 
-module.exports = Model;
+module.exports.Model = Model;

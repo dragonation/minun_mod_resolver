@@ -28,4 +28,4 @@ const Meta = function Meta(reader) {
 
 };
 
-module.exports = Meta;
+module.exports.Meta = Meta;

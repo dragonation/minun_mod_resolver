@@ -8,4 +8,4 @@ const Resource = function Resource(reader) {
 
 };
 
-module.exports = Resource;
+module.exports.Resource = Resource;

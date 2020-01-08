@@ -1,4 +1,4 @@
-const Section = require("./section.js");
+const { Section } = require("./section.js");
 
 const TILE_ORDER = [
      0,  1,  8,  9,  2,  3, 10, 11,
@@ -812,4 +812,4 @@ Texture.prototype.getPixels = function () {
 
 };
 
-module.exports = Texture;
+module.exports.Texture = Texture;

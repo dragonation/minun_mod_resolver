@@ -3,14 +3,14 @@ const GFMaterialPackageMagic = 0x15041213;
 const GFMotionPackageMagic = 0x00060000;
 const GFResourcePackageMagic = 0x00010000;
 
-const Model = require("./model.js");
-const Shader = require("./shader.js");
-const Texture = require("./texture.js");
-const Motion = require("./motion.js");
-const Meta = require("./meta.js");
-const Info = require("./info.js");
-const Resource = require("./resource.js");
-const Package = require("./package.js");
+const { Model } = require("./model.js");
+const { Shader } = require("./shader.js");
+const { Texture } = require("./texture.js");
+const { Motion } = require("./motion.js");
+const { Meta } = require("./meta.js");
+const { Info } = require("./info.js");
+const { Resource } = require("./resource.js");
+const { Package } = require("./package.js");
 
 const constructors = {
     "model": Model,
@@ -168,4 +168,4 @@ PC.prototype.guessFileType = function (reader) {
     return "resource";
 };
 
-module.exports = PC;
+module.exports.PC = PC;

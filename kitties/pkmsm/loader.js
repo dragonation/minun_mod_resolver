@@ -1,4 +1,4 @@
-const PC = require("./pc.js");
+const { PC } = require("./pc.js");
 
 const Loader = function Loader() {
 
@@ -256,4 +256,4 @@ Object.defineProperty(Reader.prototype, "available", {
 
 Loader.Reader = Reader;
 
-module.exports = Loader;
+module.exports.Loader = Loader;

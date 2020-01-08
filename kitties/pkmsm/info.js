@@ -48,4 +48,4 @@ const Info = function Info(reader) {
 
 };
 
-module.exports = Info;
+module.exports.Info = Info;

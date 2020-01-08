@@ -1,11 +1,11 @@
-const PICA = require("./pica.js");
+const { PICA } = require("./pica.js");
 
 
-const Texture = require("./texture.js");
-const Shader = require("./shader.js");
-const Motion = require("./motion.js");
+const { Texture } = require("./texture.js");
+const { Shader } = require("./shader.js");
+const { Motion } = require("./motion.js");
 
-const Model = require("./model.js");
+const { Model } = require("./model.js");
 
 
 const outlineDepthWritePresets = {

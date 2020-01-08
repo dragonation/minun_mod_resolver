@@ -1,3 +1,5 @@
+let apps = @options("apps");
+
 @servlet.get("/app-list", function (request, response) {
 
 	this.break();
@@ -6,7 +8,7 @@
 
 	return @.async(function () {
 
-		response.writer.end(["hmm5", "pkmsm"].join("\n"), this.test);
+		response.writer.end(apps.join("\n"), this.test);
 
 	});
 
