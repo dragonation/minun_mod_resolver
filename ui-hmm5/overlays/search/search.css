@@ -71,7 +71,7 @@
         border-bottom: solid 1dpx rgba(0, 0, 0, 0.05);
 
         &:hover {
-            background-color: $alpha($white(0), 0.02);
+            background-color: $alpha($white(0), 0.04);
         }
 
         .title {

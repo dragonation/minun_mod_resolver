@@ -1,16 +1,29 @@
 <div id="caption">Search results (${results.length}${results.length >= 100 ? '+' : ''})</div>
+<div id="types">
+    <div class="type" class:selected="scope == 'pokemon'" @click="searchForPokemons()"><u>P</u>okemons</div>
+    <div class="type" class:selected="scope == 'model'" @click="searchForModels()"><u>M</u>odels</div>
+</div>
 <ui-collection-view id="results"
                     style:--cell-width="340px" style:--cell-height="50px"
                     prop:sections="${[results]}" prop:cells-getter="{section}">
     <tmpl:slot name="cell">
-        <div class="result result-type-${cell.type}" @click="smartOpen(cell)">
+        <div class="result result-type-${cell.type} result-color-${cell.pokemon.color}" @click="smartOpen(cell)">
+            <pkmsm-snapshot model="${cell.snapshot}" class="snapshot"/>
             <div class="title">
-                <div class="type">${cell.type}</div>
-                <div class="name">
-                    <div class="basename">${cell.basename}</div><div class="extname">${cell.extname}</div>
-                </div>
+                <div class="name">${cell.pokemon.name}</div>
             </div>
-            <div class="description">${cell.description}</div>
+            <div class="description">
+                <div class="type">${cell.type}</div>
+                <div class="pokemon-types">
+                    <tmpl:map list="cell.pokemon.types">
+                        <pkm-type class="pokemon-type" code="${item}"/>
+                    </tmpl:map>
+                </div>
+                <tmpl:map list="cell.features">
+                    <div class="feature">${item}</div>
+                </tmpl:map>
+            </div>
+            <div class="pokemon-id">${cell.pokemon.id}</div>
         </div>
     </tmpl:slot>
 </ui-collection-view>

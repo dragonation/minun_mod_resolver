@@ -5,30 +5,34 @@ const Overlay = function Overlay(dom, filler) {
 
 };
 
-Overlay.parameters = {};
+Overlay.parameters = {
+    "scope": "pokemon"
+};
 
-Overlay.prototype.searchWithKeyword = function (keyword) {
+Overlay.prototype.searchPokemonsWithKeyword = function (keyword) {
 
-    $.ajax("/~pkmsm/search/" + keyword, {
+    $.ajax("/~pkmsm/search/pokemon/" + keyword, {
         "success": (data, status, request) => {
 
-            let items = data.trim().split("\n").filter((line) => line).map((line) => {
-                let filename = line.split("/").slice(-1)[0];
-                let dir = "/" + line.slice(0, - filename.length - 1);
-                let extname = "";
-                if ((filename[0] !== ".") && (filename.indexOf(".") !== -1)) {
-                    extname = "." + filename.split(".").slice(-1)[0];
-                }
-                let basename = filename.slice(0, -extname.length);
-                let type = "file";
-                return {
-                    "id": line,
-                    "type": type,
-                    "basename": basename,
-                    "extname": extname,
-                    "description": dir
-                };
-            });
+            let parsed = $.serial.deserialize(data);
+            let items = parsed.map((pokemon) => ({
+
+                "id": pokemon.id,
+
+                "snapshot": `pokemon-${("00" + pokemon.id).slice(-3)}-0`,
+
+                "pokemon": {
+                    "id": pokemon.id,
+                    "name": pokemon.name,
+                    "color": pokemon.color,
+                    "types": pokemon.types,
+                },
+
+                "type": "pokemon",
+
+                "features": []
+
+            }));
 
             this.filler.fill({
                 "results": items
@@ -39,6 +43,73 @@ Overlay.prototype.searchWithKeyword = function (keyword) {
 
 };
 
+Overlay.prototype.searchModelsWithKeyword = function (keyword) {
+
+    $.ajax("/~pkmsm/search/model/" + keyword, {
+        "success": (data, status, request) => {
+
+            let parsed = $.serial.deserialize(data);
+            console.log(parsed);
+
+            let items = parsed.map((model) => ({
+
+                "id": model.id,
+
+                "snapshot": model.id,
+
+                "pokemon": {
+                    "id": model.pokemon.id,
+                    "name": model.pokemon.name,
+                    "color": model.pokemon.color,
+                    "types": model.pokemon.types,
+                },
+
+                "type": "model",
+
+                "features": model.features
+
+            }));
+
+            this.filler.fill({
+                "results": items
+            });
+
+        }
+    });
+
+};
+
+Overlay.prototype.searchWithKeyword = function (keyword) {
+
+    if (!keyword) {
+        this.filler.fill({
+            "results": []
+        });
+        return;
+    }
+
+    this.searchKeyword = keyword;
+
+    switch (this.filler.parameters.scope) {
+        case "pokemon": {
+            this.searchPokemonsWithKeyword(keyword); break;
+        };
+        case "model": {
+            this.searchModelsWithKeyword(keyword); break;
+        };
+        default: {
+            this.searchPokemonsWithKeyword(keyword); break;
+        };
+    }
+
+};
+
+Overlay.prototype.updateSearches = function () {
+
+    this.searchWithKeyword(this.searchKeyword);
+
+};
+
 Overlay.functors = {
     "smartOpen": function (item) {
 
@@ -46,6 +117,18 @@ Overlay.functors = {
 
         this.dom.hideOverlay();
 
+    },
+    "searchForPokemons": function () {
+        this.filler.fill({
+            "scope": "pokemon"
+        });
+        this.updateSearches();
+    },
+    "searchForModels": function () {
+        this.filler.fill({
+            "scope": "model"
+        });
+        this.updateSearches();
     }
 };
 

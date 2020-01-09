@@ -1,4 +1,5 @@
 $.dom.registerTagTemplate("pkmsm", "~pkmsm/tags/${tag}/${tag}");
+$.dom.registerTagTemplate("pkm", "~pkmsm/tags/${tag}/${tag}");
 
 const App = function App(dom, filler) {
 

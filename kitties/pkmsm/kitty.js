@@ -35,11 +35,9 @@ const index = new Index(options.path);
             }
         }
         if (score) {
-            pokemons[pokemon.id] = {
-                "id": pokemon.id,
+            pokemons[pokemon.id] = @.merge.simple({
                 "score": score,
-                "pokemon": pokemon
-            };
+            }, pokemon);
         }
     }
 
@@ -93,8 +91,6 @@ const index = new Index(options.path);
                     }
                 }
             }
-
-            @dump(models.length);
 
             this.next(models.sort((a, b) => b.score - a.score));
 

@@ -1,0 +1,94 @@
+span {
+    background-color: #bbb;
+    border: solid 1dpx rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-size: 10px;
+    padding: 0 4px;
+    line-height: 16px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    display: inline-block;
+    color: #fff;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 64px;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+}
+
+span.none {
+    display: none;
+}
+
+span.grass {
+    background-color: #76cd54;
+}
+
+span.poison {
+    background-color: #b65e8f;
+}
+
+span.fire {
+    background-color: #ff4422;
+}
+
+span.flying {
+    background-color: #72afd2;
+}
+
+span.water {
+    background-color: #3399ff;
+}
+
+span.bug {
+    background-color: #aabc23;
+}
+
+span.normal {
+    background-color: #bbaaaa;
+}
+
+span.electric {
+    background-color: #ffcc33;
+}
+
+span.ground {
+    background-color: #dd8855;
+}
+
+span.ice {
+    background-color: #77deff;
+}
+
+span.fighting {
+    background-color: #bb5544;
+}
+
+span.psychic {
+    background-color: #ff5599;
+}
+
+span.rock {
+    background-color: #bcaa66;
+}
+
+span.ghost {
+    background-color: #6666bb;
+}
+
+span.dragon {
+    background-color: #7765ee;
+}
+
+span.dark {
+    background-color: #775544;
+}
+
+span.steel {
+    background-color: #aaaabc;
+}
+
+span.fairy {
+    background-color: #ffaaff;
+}

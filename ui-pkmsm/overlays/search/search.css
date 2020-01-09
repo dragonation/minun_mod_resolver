@@ -15,6 +15,51 @@
     flex-shrink: 0;
 }
 
+#types {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-shrink: 0;
+    padding-bottom: 8px;
+    border-bottom: solid 1dpx $alpha($white(0), 0.1);
+
+    .type {
+
+        flex-shrink: 0;
+        flex-grow: 0;
+        padding: 0 10px;
+        line-height: calc(20px - 2dpx);
+        height: 20px;
+        color: #888;
+        border: solid 1dpx $alpha($white(0), 0.5);
+        border-left: none;
+        cursor: pointer;
+
+        &:first-child {
+            border-left: solid 1dpx $alpha($white(0), 0.5);
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            padding-left: 14px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-right: 14px;
+        }
+
+        &.selected {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border-color: transparent;
+        }
+
+    }
+
+}
+
 #results {
 
     flex-grow: 1;
@@ -23,10 +68,23 @@
 
     .result {
 
+        position: relative;
         border-bottom: solid 1dpx rgba(0, 0, 0, 0.05);
+        overflow: hidden;
 
         &:hover {
-            background-color: $alpha($white(0), 0.02);
+            background-color: $alpha($white(0), 0.04);
+        }
+
+        .snapshot {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            border: solid 1dpx rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            overflow: hidden;
         }
 
         .title {
@@ -38,6 +96,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            margin-left: 50px;
         }
 
         .type {
@@ -53,7 +112,6 @@
             font-weight: bold;
             margin-right: 10px;
             vertical-align: top;
-            margin-top: 7px;
         }
 
         .name {
@@ -64,23 +122,14 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-
-            .basename {
-                color: #1a7cd4;
-                font-weight: bold;
-                display: inline;
-            }
-
-            .extname {
-                color: $alpha($white(0), 0.5);
-                display: inline;
-            }
+            color: #1a7cd4;
+            font-weight: bold;
 
         }
 
         .description {
             margin-top: -4px;
-            padding: 0 14px;
+            padding: 0 10px;
             height: 20px;
             line-height: 20px;
             font-size: 12px;
@@ -89,6 +138,29 @@
             overflow: hidden;
             text-overflow: ellipsis;
             margin-bottom: 4px;
+            margin-left: 50px;
+            display: flex;
+        }
+
+        .feature {
+            margin-right: 5px;
+        }
+
+        .pokemon-types {
+            position: absolute;
+            right: 10px;
+            top: 8px;
+        }
+
+        .pokemon-id {
+            position: absolute;
+            color: $alpha($white(0), 0.05);
+            font-size: 80px;
+            right: 10px;
+            top: -15px;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 80px;
         }
 
     }
