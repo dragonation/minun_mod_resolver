@@ -126,7 +126,6 @@ const index = new Index(options.path);
 
     }).then(function (json) {
 
-        // @dump(json);
         let id = `pokemon-${request.pokemon}-${request.model}/${options.shiny ? "shiny" : "normal"}`;
 
         let animations = {};
@@ -152,14 +151,34 @@ const index = new Index(options.path);
             @.fs.writeFile.sync(path, json.shaders.vertices[shader]);
         }
 
+        let makeU8TextureBuffer = (array) => {
+            let buffer = Buffer.alloc(array.length);
+            for (let looper = 0; looper < array.length; ++looper) {
+                buffer.writeUInt8(array[looper], looper);
+            }
+            return buffer;
+        };
+
         let textures = {};
         for (let texture in json.textures) {
             textures[texture] = `@textures/${texture}.png`;
             let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "textures", texture + ".png");
             @.fs.makeDirs(@.fs.dirname(path));
             let data = json.textures[texture].data;
-            @.fs.writeFile.sync(path, @.img(data.width, data.height, data.pixels).encodeAsPNG());
+            @.fs.writeFile.sync(path, @.img(data.width, data.height, makeU8TextureBuffer(data.pixels)).encodeAsPNG());
         }
+
+        let makeU8LUTBuffer = (array) => {
+            let size = array.length / 3;
+            let buffer = Buffer.alloc(size * 4);
+            for (let looper = 0; looper < size; ++looper) {
+                buffer.writeUInt8(array[looper * 3], looper * 4);
+                buffer.writeUInt8(array[looper * 3 + 1], looper * 4 + 1);
+                buffer.writeUInt8(array[looper * 3 + 2], looper * 4 + 2);
+                buffer.writeUInt8(255, looper * 4 + 3);
+            }
+            return buffer;
+        };
 
         let luts = {};
         for (let lut in json.luts) {
@@ -167,7 +186,7 @@ const index = new Index(options.path);
             let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "luts", json.luts[lut].name + ".png");
             @.fs.makeDirs(@.fs.dirname(path));
             let data = json.luts[lut].data;
-            @.fs.writeFile.sync(path, @.img(data.width, data.height, data.pixels).encodeAsPNG());
+            @.fs.writeFile.sync(path, @.img(data.width, data.height, makeU8LUTBuffer(data.pixels)).encodeAsPNG());
         }
 
         let materials = {};
@@ -178,7 +197,7 @@ const index = new Index(options.path);
             @.fs.writeFile.sync(path, JSON.stringify(json.materials[material], null, 4));
         }
 
-        let makeF32Buffer = (array, path) => {
+        let saveF32Buffer = (array, path) => {
             @.fs.makeDirs(@.fs.dirname(path));
             let buffer = Buffer.alloc(array.length * 4);
             for (let looper = 0; looper < array.length; ++looper) {
@@ -186,16 +205,15 @@ const index = new Index(options.path);
             }
             @.fs.writeFile.sync(path, buffer);
         };
-        let makeUI16Buffer = (array, path) => {
+        let saveUI16Buffer = (array, path) => {
             @.fs.makeDirs(@.fs.dirname(path));
-            console.log(array)
             let buffer = Buffer.alloc(array.length * 2);
             for (let looper = 0; looper < array.length; ++looper) {
                 buffer.writeUInt16LE(array[looper], looper * 2);
             }
             @.fs.writeFile.sync(path, buffer);
         };
-        let makeU8Buffer = (array, path) => {
+        let saveU8Buffer = (array, path) => {
             @.fs.makeDirs(@.fs.dirname(path));
             let buffer = Buffer.alloc(array.length);
             for (let looper = 0; looper < array.length; ++looper) {
@@ -206,6 +224,7 @@ const index = new Index(options.path);
 
         let meshes = [];
         for (let looper = 0; looper < json.meshes.length; ++looper) {
+            let mesh = json.meshes[looper];
             let record = {
                 "name": mesh.name,
                 "bones": mesh.bones,
@@ -213,57 +232,57 @@ const index = new Index(options.path);
                 "attributes": {
                     "bones": {},
                     "indices": {},
+                    "uvs": []
                 }
             };
             meshes.push(record);
-            let mesh = json.meshes[looper];
             let attributes = mesh.attributes;
             if (attributes.bones.indices) {
                 record.attributes.bones.indices = `@meshes/${looper}-${mesh.name}/bone.indices.f32.bin`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "bone.indices.f32.bin");
-                makeF32Buffer(attributes.bones.indices, path);
+                saveF32Buffer(attributes.bones.indices, path);
             }
             if (attributes.bones.weights) {
                 record.attributes.bones.weights = `@meshes/${looper}-${mesh.name}/bone.weights.f32.bin`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "bone.weights.f32.bin");
-                makeF32Buffer(attributes.bones.weights, path);
+                saveF32Buffer(attributes.bones.weights, path);
             }
             if (attributes.positions) {
                 record.attributes.positions = `@meshes/${looper}-${mesh.name}/positions.f32.bin`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "positions.f32.bin");
-                makeF32Buffer(attributes.positions, path);
+                saveF32Buffer(attributes.positions, path);
             }
             if (attributes.normals) {
                 record.attributes.normals = `@meshes/${looper}-${mesh.name}/normals.f32.bin`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "normals.f32.bin");
-                makeF32Buffer(attributes.normals, path);
+                saveF32Buffer(attributes.normals, path);
             }
             if (attributes.tangents) {
                 record.attributes.tangents = `@meshes/${looper}-${mesh.name}/tangents.f32.bin`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "tangents.f32.bin");
-                makeF32Buffer(attributes.tangents, path);
+                saveF32Buffer(attributes.tangents, path);
             }
             for (let looper2 = 0; looper2 < attributes.uvs.length; ++looper2) {
                 if (attributes.uvs[looper2]) {
                     record.attributes.uvs[looper2] = `@meshes/${looper}-${mesh.name}/uvs[${looper2}].f32.bin`;
                     let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, `uvs[${looper2}].f32.bin`);
-                    makeF32Buffer(attributes.uvs[looper2], path);
+                    saveF32Buffer(attributes.uvs[looper2], path);
                 }   
             }
             if (attributes.indices.vertices) {
                 record.attributes.indices.vertices = `@meshes/${looper}-${mesh.name}/indices.vertices.ui16.bin`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "indices.vertices.ui16.bin");
-                makeUI16Buffer(attributes.indices.vertices, path);
+                saveUI16Buffer(attributes.indices.vertices, path);
             }
             if (attributes.indices.geometry) {
                 record.attributes.indices.vertices = `@meshes/${looper}-${mesh.name}/indices.geometry.f32.bin`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "indices.geometry.f32.bin");
-                makeF32Buffer(attributes.indices.geometry, path);
+                saveF32Buffer(attributes.indices.geometry, path);
             }
             if (attributes.colors) {
                 record.attributes.colors = `@meshes/${looper}-${mesh.name}/colors.u8.bin`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "colors.u8.bin");
-                makeU8Buffer(attributes.colors, path);
+                saveU8Buffer(attributes.colors, path);
             }
         }
 

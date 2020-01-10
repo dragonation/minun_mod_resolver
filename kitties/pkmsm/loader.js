@@ -99,7 +99,7 @@ Reader.prototype.getUint8 = function () {
 
 Reader.prototype.readData = function (length) {
 
-    let data = this.buffer.slice(this.index, length);
+    let data = this.buffer.slice(this.index, this.index + length);
 
     if (this.index + length - 1 >= this.end) {
         throw new Error("Reader has reach the end of buffer");
