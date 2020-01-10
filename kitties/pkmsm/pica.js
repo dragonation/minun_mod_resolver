@@ -2383,14 +2383,14 @@ const Float32Vector = function Float32Vector() {
 
 Float32Vector.asFloat32 = function (value) {
 
-    let value = Buffer.alloc(4);
+    let dataView = Buffer.alloc(4);
     if (value >= 0) {
-        dataView.writeUInt32LE(0, value);
+        dataView.writeUInt32LE(value, 0);
     } else {
-        dataView.writeInt32(0, value);
+        dataView.writeInt32LE(value, 0);
     }
 
-    return dataView.readFloatLE(0, true);
+    return dataView.readFloatLE(0);
 
 };
 
