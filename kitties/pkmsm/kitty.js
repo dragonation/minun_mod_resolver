@@ -1,24 +1,45 @@
 @import("js.zip");
 
+const makeF16 = function (value) {
+    if (value === 0) { return 0; }
+    let raw = value;
+    let log = Math.floor(Math.log10(Math.abs(value)));
+    let base = parseFloat((Math.pow(10, -log) * value).toPrecision(6));
+    value = parseFloat(`${base}e${log}`);
+    if (Math.abs(value) < 0.000001) {
+        value = 0;
+    }
+    return value;
+};
+
+const makeUniform = function (value) {
+    if (typeof value === "boolean") {
+        return value ? "0" : "1"
+    }
+    if (value instanceof Array) {
+        return value.map(makeUniform).join(",");
+    }
+    return makeF16(value) + "";
+};
+
 const mxmlOptions = {
     "parser": "text/mxml",
     "functors": {
         "f16": function (templates, call, parameters, options, value) {
-            if (value === 0) { return 0; }
-            let raw = value;
-            let log = Math.floor(Math.log10(Math.abs(value)));
-            let base = parseFloat((Math.pow(10, -log) * value).toPrecision(6));
-            value = parseFloat(`${base}e${log}`);
-            if (Math.abs(value) < 0.000001) {
-                value = 0;
-            }
-            return value;
+            return makeF16(value);
+        },
+        "uniform": function (templates, call, parameters, options, value) {
+            return makeUniform(value);
         }
     }
 };
 
+
 const modelSkeletonTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
                                                        "data/pkm/templates/model/skeleton.mxml"), 
+                                                 "utf8");
+const modelMaterialTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
+                                                       "data/pkm/templates/model/material.mxml"), 
                                                  "utf8");
 
 const { Index } = require("./index.js");
@@ -237,6 +258,8 @@ const index = new Index(options.path);
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "materials", material + ".json");
                 @.fs.makeDirs(@.fs.dirname(path));
                 @.fs.writeFile.sync(path, JSON.stringify(json.materials[material], null, 4));
+                @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
+                                @.format(modelMaterialTemplate, { "material": json.materials[material] }, mxmlOptions));
             }
 
             let saveF32Buffer = (array, path) => {
@@ -330,7 +353,7 @@ const index = new Index(options.path);
 
             let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "skeleton.json");
             @.fs.makeDirs(@.fs.dirname(path));
-            @.fs.writeFile.sync(path, JSON.stringify(json.bones));
+            @.fs.writeFile.sync(path, JSON.stringify(json.bones, null, 4));
             @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
                                 @.format(modelSkeletonTemplate, { "bones": json.bones }, mxmlOptions));
 

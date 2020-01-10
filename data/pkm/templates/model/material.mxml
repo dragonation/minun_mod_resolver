@@ -1,0 +1,25 @@
+<tmpl:map list="material.textures"><m3d-texture id="${material.name}-${index}" name="${item.name}" 
+             src="@textures/${item.name}" flip-y="${item.flipY ? 'yes' : 'no'}"
+             wrap-s="${item.wrapS ? 'yes' : 'no'}" wrap-t="${item.wrapT ? 'yes' : 'no'}"
+             min-filter="${item.minFilter}" mag-filter="${item.magFilter}"
+             offset="${item.offset}" repeat="${item.repeat}" rotation="${item.rotation}"/>
+</tmpl:map><m3d-material id="${material.name}" name="${material.name}" priorities="${material.layer},${material.priority}"
+              preset="shader" skinning="yes" side="${material.faceCulling}"
+              vertex-shader="${material.shaders.vertex}" fragment-shader="${material.shaders.fragment}"
+              textures="${join(concat(map(material.textures, {'uv' + ($2 ? ($2 + 1) : '') + ':' + material.name + '-' + $2}), map(keys(material.luts), {$1 + ':lut-' + material.luts[$1]})), ';')}"
+              alpha-test="${material.alphaTest ? 'yes' : 'no'}"
+              depth-test="${material.depthTest.enabled ? 'yes' : 'no'}" depth-write="${material.depthTest.writable ? 'yes' : 'no'}" depth-test-function="${material.depthTest.tester}"
+              stencil-test="${material.stencilTest.enabled ? 'yes' : 'no'}" stencil-test-function="${material.stencilTest.tester}"
+              stencil-buffer="${material.stencilTest.buffer}" stencil-reference="${material.stencilTest.reference}" stencil-mask="${material.stencilTest.mask}"
+              stencil-failed="${material.stencilTest.failed}" stencil-z-failed="${material.stencilTest.zFailed}" stencil-z-passed="${material.stencilTest.zPassed}"
+              blending-destination="${material.blending.destination.color},${material.blending.destination.alpha}" blending-equation="${material.blending.equation.color},${material.blending.equation.alpha}" blending-source="${material.blending.source.color},${material.blending.source.alpha}"><tmpl:map list="keys(material.uniforms)">
+    <!-- need before render working -->
+    <m3d-uniform name="${item}">${uniform(material.uniforms[item])}</m3d-uniform></tmpl:map>
+    <m3d-uniform name="emission">${uniform(material.colors.emission)}</m3d-uniform>
+    <m3d-uniform name="ambient">${uniform(material.colors.ambient)}</m3d-uniform>
+    <m3d-uniform name="diffuse">${uniform(material.colors.diffuse)}</m3d-uniform>
+    <m3d-uniform name="speculars">${uniform(material.colors.speculars)}</m3d-uniform>
+    <m3d-uniform name="constants">${uniform(map(material.constants.indices, {material.constants.slots[$1]}))}</m3d-uniform>
+    <m3d-uniform name="useDirectNormal">${uniform(material.useDirectNormal)}</m3d-uniform>
+    <!-- outlines.depth, outlines.alpha not covered -->
+</m3d-material>
