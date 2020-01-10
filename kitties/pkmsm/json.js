@@ -915,16 +915,22 @@ Model.prototype.toJSON = function (pcs, options) {
                 return @.is(file, Shader) && (file.name === material.fragmentShader);
             })[0];
 
-            let vertexShaderCode = json.shaders.vertices[vertexShader.name];
-            if (!vertexShaderCode) {
-                vertexShaderCode = vertexShader.describe(true, material, luts);
-                json.shaders.vertices[vertexShader.name] = vertexShaderCode;
+            let vertexShaderCode = null;
+            if (vertexShader) {
+                vertexShaderCode = json.shaders.vertices[vertexShader.name];
+                if (!vertexShaderCode) {
+                    vertexShaderCode = vertexShader.describe(true, material, luts);
+                    json.shaders.vertices[vertexShader.name] = vertexShaderCode;
+                }
             }
 
-            let fragmentShaderCode = json.shaders.fragments[fragmentShader.name + fragmentShaderSuffix];
-            if (!fragmentShaderCode) {
-                fragmentShaderCode = fragmentShader.describe(true, material, luts);
-                json.shaders.fragments[fragmentShader.name + fragmentShaderSuffix] = fragmentShaderCode;
+            let fragmentShaderCode = null;
+            if (fragmentShader) {
+                fragmentShaderCode = json.shaders.fragments[fragmentShader.name + fragmentShaderSuffix];
+                if (!fragmentShaderCode) {
+                    fragmentShaderCode = fragmentShader.describe(true, material, luts);
+                    json.shaders.fragments[fragmentShader.name + fragmentShaderSuffix] = fragmentShaderCode;
+                }
             }
 
             let vectors = [];
@@ -937,7 +943,8 @@ Model.prototype.toJSON = function (pcs, options) {
                     material.pica.shader.vertex.floats[vectors.length]) {
                     float = material.pica.shader.vertex.floats[vectors.length];
                 }
-                if (vertexShader.pica.shader &&
+                if (vertexShader && 
+                    vertexShader.pica.shader &&
                     vertexShader.pica.shader.vertex.floats &&
                     vertexShader.pica.shader.vertex.floats[vectors.length]) {
                     float = vertexShader.pica.shader.vertex.floats[vectors.length];
@@ -1109,7 +1116,6 @@ Model.prototype.toJSON = function (pcs, options) {
                     "alpha": getOutlineDepthValue(model, mesh, material, outlineDepthAlphaPresets, 1)
                 }
 
-
             };
 
             json.materials[material.name] = record;
@@ -1134,10 +1140,15 @@ Model.prototype.toJSON = function (pcs, options) {
                     }
                 };
 
+                let hasGeometryShader = false;
+                let vertexShaderFile = pcs.model.files[2].files.filter((shader) => {
+                    return @.is(shader, Shader) && (shader.name === material.vertexShader);
+                })[0];
+                if (vertexShaderFile) {
+                    hasGeometryShader = !@.is.nil(vertexShaderFile.pica.shader.geometry.entryPoint);
+                }
                 const features = {
-                    "hasGeometryShader": !@.is.nil(pcs.model.files[2].files.filter((shader) => {
-                        return @.is(shader, Shader) && (shader.name === material.vertexShader);
-                    })[0].pica.shader.geometry.entryPoint),
+                    "hasGeometryShader": hasGeometryShader,
                     "hasBoneW": (mesh.boneIndicesPerVertex >= 4)
                 };
 
@@ -1396,120 +1407,122 @@ Model.prototype.toJSON = function (pcs, options) {
             mesh.order = index + 1;
         });
 
-        Object.keys(pcs.motions).forEach((key) => {
+        if (options.motions) {
+            Object.keys(pcs.motions).forEach((key) => {
 
-            const files = pcs.motions[key].files;
-            const prefix = key[0].toUpperCase() + key.slice(1);
+                const files = pcs.motions[key].files;
+                const prefix = key[0].toUpperCase() + key.slice(1);
 
-            files.forEach((motion, index) => {
+                files.forEach((motion, index) => {
 
-                if (!@.is(motion, Motion)) {
-                    return;
-                }
+                    if (!@.is(motion, Motion)) {
+                        return;
+                    }
 
-                const name = prefix + "Action" + (index + 1);
+                    const name = prefix + "Action" + (index + 1);
 
-                const animation = {
-                    "name": name,
-                    "frames": motion.frames,
-                    "fps": Motion.FPS,
-                    "loop": motion.loop,
-                    "region": motion.animationRegion,
-                    "interpolated": false,
-                    "tracks": {}
-                };
+                    const animation = {
+                        "name": name,
+                        "frames": motion.frames,
+                        "fps": Motion.FPS,
+                        "loop": motion.loop,
+                        "region": motion.animationRegion,
+                        "interpolated": false,
+                        "tracks": {}
+                    };
 
-                json.animations[name] = animation;
+                    json.animations[name] = animation;
 
-                if (motion.skeletal) {
-                    animation.tracks.skeletal = motion.skeletal.transforms.map((transform) => {
-                        let result = {
-                            "bone": transform.bone
-                        };
-                        ["scale", "rotation", "translation"].forEach((axis) => {
-                            let axisKey = axis + "s";
-                            ["x", "y", "z"].forEach((key) => {
-                                let record = axis + key.toUpperCase();
-                                if (transform[record].length > 0) {
-                                    if (!result[axisKey]) {
-                                        result[axisKey] = {};
+                    if (motion.skeletal) {
+                        animation.tracks.skeletal = motion.skeletal.transforms.map((transform) => {
+                            let result = {
+                                "bone": transform.bone
+                            };
+                            ["scale", "rotation", "translation"].forEach((axis) => {
+                                let axisKey = axis + "s";
+                                ["x", "y", "z"].forEach((key) => {
+                                    let record = axis + key.toUpperCase();
+                                    if (transform[record].length > 0) {
+                                        if (!result[axisKey]) {
+                                            result[axisKey] = {};
+                                        }
+                                        result[axisKey][key] = {
+                                            "frames": transform[record].slice(0),
+                                            "constant": transform[record].isConstant
+                                        };
                                     }
-                                    result[axisKey][key] = {
-                                        "frames": transform[record].slice(0),
-                                        "constant": transform[record].isConstant
+                                });
+                                if ((axis === "rotation") && result[axisKey]) {
+                                    result[axisKey].halfAxisAngle = transform.axisAngle;
+                                }
+                            });
+                            return result;
+                        });
+                    }
+
+                    if (motion.material) {
+                        animation.tracks.material = motion.material.transforms.map((transform) => {
+                            let result = {
+                                "material": transform.material,
+                                "texture": transform.textureIndex
+                            };
+                            ["scale", "rotation", "translation"].forEach((axis) => {
+                                let axisKey = axis + "s";
+                                ((axis === "rotation") ? ["z"] : ["x", "y"]).forEach((key) => {
+                                    let record = axis + (key !== "z" ? key.toUpperCase() : "");
+                                    if (transform[record].length > 0) {
+                                        if (!result[axisKey]) {
+                                            result[axisKey] = {};
+                                        }
+                                        result[axisKey][key] = {
+                                            "frames": transform[record].slice(0),
+                                            "constant": transform[record].isConstant
+                                        };
+                                    }
+                                });
+                            });
+                            return result;
+                        });
+                    }
+
+                    if (motion.visibility) {
+                        animation.tracks.alphas = motion.visibility.transforms.map((transform) => {
+                            let result = {
+                                "mesh": transform.mesh
+                            };
+                            if (transform.visibility.length > 0) {
+                                result.frames = transform.visibility.slice(0);
+                                result.constant = transform.visibility.isConstant;
+                            }
+                            return result;
+                        });
+                    }
+
+                    if (motion.constant) {
+                        animation.tracks.constants = motion.constant.values.map((transform) => {
+                            let result = {
+                                "material": transform.material,
+                                "constant": transform.constantIndex
+                            };
+                            ["r", "g", "b", "a"].forEach((key, index) => {
+                                if (transform[key].length > 0) {
+                                    if (!result.vectors) {
+                                        result.vectors = {};
+                                    }
+                                    result.vectors[index] = {
+                                        "frames": transform[key].slice(0),
+                                        "constant": transform[key].isConstant
                                     };
                                 }
                             });
-                            if ((axis === "rotation") && result[axisKey]) {
-                                result[axisKey].halfAxisAngle = transform.axisAngle;
-                            }
+                            return result;
                         });
-                        return result;
-                    });
-                }
+                    }
 
-                if (motion.material) {
-                    animation.tracks.material = motion.material.transforms.map((transform) => {
-                        let result = {
-                            "material": transform.material,
-                            "texture": transform.textureIndex
-                        };
-                        ["scale", "rotation", "translation"].forEach((axis) => {
-                            let axisKey = axis + "s";
-                            ((axis === "rotation") ? ["z"] : ["x", "y"]).forEach((key) => {
-                                let record = axis + (key !== "z" ? key.toUpperCase() : "");
-                                if (transform[record].length > 0) {
-                                    if (!result[axisKey]) {
-                                        result[axisKey] = {};
-                                    }
-                                    result[axisKey][key] = {
-                                        "frames": transform[record].slice(0),
-                                        "constant": transform[record].isConstant
-                                    };
-                                }
-                            });
-                        });
-                        return result;
-                    });
-                }
-
-                if (motion.visibility) {
-                    animation.tracks.alphas = motion.visibility.transforms.map((transform) => {
-                        let result = {
-                            "mesh": transform.mesh
-                        };
-                        if (transform.visibility.length > 0) {
-                            result.frames = transform.visibility.slice(0);
-                            result.constant = transform.visibility.isConstant;
-                        }
-                        return result;
-                    });
-                }
-
-                if (motion.constant) {
-                    animation.tracks.constants = motion.constant.values.map((transform) => {
-                        let result = {
-                            "material": transform.material,
-                            "constant": transform.constantIndex
-                        };
-                        ["r", "g", "b", "a"].forEach((key, index) => {
-                            if (transform[key].length > 0) {
-                                if (!result.vectors) {
-                                    result.vectors = {};
-                                }
-                                result.vectors[index] = {
-                                    "frames": transform[key].slice(0),
-                                    "constant": transform[key].isConstant
-                                };
-                            }
-                        });
-                        return result;
-                    });
-                }
+                });
 
             });
-
-        });
+        }
 
         this.next(json);
 

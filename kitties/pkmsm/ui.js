@@ -57,7 +57,6 @@
     let model = parseInt(path[0].split("-")[2]);
 
     let shiny = path.slice(1).filter(x => x === "shiny").length > 1;
-    let shadow = path.slice(1).filter(x => x === "shadow").length > 1;
 
     response.headers["Content-Type"] = "text/plain";
 
@@ -65,7 +64,7 @@
         "pokemon": pokemon,
         "model": model,
         "shiny": shiny,
-        "shadow": shadow
+        "shadow": true
     }).then(function (model) {
         response.writer.end("hhhh", this.test);
     });

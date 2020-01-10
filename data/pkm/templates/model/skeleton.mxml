@@ -1,4 +1,4 @@
 <m3d-skeleton root="${bones[0].name}" id="model-skeleton"><tmpl:map list="bones">
-    <m3d-bone name="${item.name}" parent="${item.parent}" scale="${join(map(item.scale, {f16?}), ', ')}"
-              translation="${join(map(item.translation, {f16?}), ', ')}" rotation="zyx ${join(map(item.rotation, {f16?}), ', ')}"/></tmpl:map>
+    <m3d-bone name="${item.name}" parent="${item.parent}" scale="${map(item.scale, {f16?})}"
+              translation="${map(item.translation, {f16?})}" rotation="zyx ${map(item.rotation, {f16?})}"/></tmpl:map>
 </m3d-skeleton>
