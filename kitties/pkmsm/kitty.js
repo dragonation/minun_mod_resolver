@@ -1,5 +1,26 @@
 @import("js.zip");
 
+const mxmlOptions = {
+    "parser": "text/mxml",
+    "functors": {
+        "f16": function (templates, call, parameters, options, value) {
+            if (value === 0) { return 0; }
+            let raw = value;
+            let log = Math.floor(Math.log10(Math.abs(value)));
+            let base = parseFloat((Math.pow(10, -log) * value).toPrecision(6));
+            value = parseFloat(`${base}e${log}`);
+            if (Math.abs(value) < 0.000001) {
+                value = 0;
+            }
+            return value;
+        }
+    }
+};
+
+const modelSkeletonTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
+                                                       "data/pkm/templates/model/skeleton.mxml"), 
+                                                 "utf8");
+
 const { Index } = require("./index.js");
 
 const options = @.merge.advanced({
@@ -134,6 +155,7 @@ const index = new Index(options.path);
             let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "animations", action + ".json");
             @.fs.makeDirs(@.fs.dirname(path));
             @.fs.writeFile.sync(path, @.serialize(json.animations[action]));
+
         }
 
         let shaders = {};
@@ -142,6 +164,7 @@ const index = new Index(options.path);
             let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "shaders", shader + ".frag");
             @.fs.makeDirs(@.fs.dirname(path));
             @.fs.writeFile.sync(path, json.shaders.fragments[shader]);
+
         }
 
         for (let shader in json.shaders.vertices) {
@@ -289,6 +312,8 @@ const index = new Index(options.path);
         let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "skeleton.json");
         @.fs.makeDirs(@.fs.dirname(path));
         @.fs.writeFile.sync(path, JSON.stringify(json.bones, null, 4));
+        @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
+                            @.format(modelSkeletonTemplate, { "bones": json.bones }, mxmlOptions));
 
         let model = {
             "skeleton": "@skeleton.json",
