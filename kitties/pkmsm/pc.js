@@ -144,6 +144,7 @@ PC.prototype.guessFileType = function (reader) {
             case "PC": { return "pc"; }
             case "PS": { return "pc"; }
             default: {
+                // @dump(magicString);
                 // if (/[A-Z]{2}/.test(magicString)) {
                 //     return magicString.toLowerCase();
                 // }

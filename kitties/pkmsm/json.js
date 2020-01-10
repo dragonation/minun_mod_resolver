@@ -631,7 +631,7 @@ const getTestFunction = function (code) {
     }
 };
 
-Model.prototype.extractShaderPrograms = function (pc) {
+Model.prototype.extractShaderPrograms = function (pc, options) {
 
     const model = this;
 
@@ -664,10 +664,10 @@ Model.prototype.extractShaderPrograms = function (pc) {
 
             var fragmentShaderSuffix = "[" + Object.keys(luts).sort().join(",") + "]";
 
-            let vertexShader = pc.files[2].files.filter((file) => {
+            let vertexShader = pc.files[options.isShadow ? 3 : 2].files.filter((file) => {
                 return @.is(file, Shader) && (file.name === material.vertexShader);
             })[0];
-            let fragmentShader = pc.files[2].files.filter((file) => {
+            let fragmentShader = pc.files[options.isShadow ? 3 : 2].files.filter((file) => {
                 return @.is(file, Shader) && (file.name === material.fragmentShader);
             })[0];
 
@@ -908,10 +908,10 @@ Model.prototype.toJSON = function (pcs, options) {
 
             var fragmentShaderSuffix = "[" + Object.keys(luts).sort().join(",") + "]";
 
-            let vertexShader = pcs.model.files[2].files.filter((file) => {
+            let vertexShader = pcs.model.files[options.isShadow ? 3 : 2].files.filter((file) => {
                 return @.is(file, Shader) && (file.name === material.vertexShader);
             })[0];
-            let fragmentShader = pcs.model.files[2].files.filter((file) => {
+            let fragmentShader = pcs.model.files[options.isShadow ? 3 : 2].files.filter((file) => {
                 return @.is(file, Shader) && (file.name === material.fragmentShader);
             })[0];
 
@@ -1141,7 +1141,7 @@ Model.prototype.toJSON = function (pcs, options) {
                 };
 
                 let hasGeometryShader = false;
-                let vertexShaderFile = pcs.model.files[2].files.filter((shader) => {
+                let vertexShaderFile = pcs.model.files[options.isShadow ? 3 : 2].files.filter((shader) => {
                     return @.is(shader, Shader) && (shader.name === material.vertexShader);
                 })[0];
                 if (vertexShaderFile) {
@@ -1407,7 +1407,7 @@ Model.prototype.toJSON = function (pcs, options) {
             mesh.order = index + 1;
         });
 
-        if (options.motions) {
+        if (!options.isShadow) {
             Object.keys(pcs.motions).forEach((key) => {
 
                 const files = pcs.motions[key].files;

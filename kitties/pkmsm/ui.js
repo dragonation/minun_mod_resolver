@@ -56,7 +56,7 @@
     let pokemon = parseInt(path[0].split("-")[1]);
     let model = parseInt(path[0].split("-")[2]);
 
-    let shiny = path.slice(1).filter(x => x === "shiny").length > 1;
+    let shiny = path.slice(1).filter(x => x === "shiny").length > 0;
 
     response.headers["Content-Type"] = "text/plain";
 

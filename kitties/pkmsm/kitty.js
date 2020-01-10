@@ -147,8 +147,13 @@ const index = new Index(options.path);
 
         model.toJSON(pcs, options).then(function (json) {
 
+            if (!options.shadow) {
+                this.next(json);
+                return;
+            }
+
             shadow.toJSON(pcs, Object.assign(options, {
-                "motions": null
+                "isShadow": true
             })).then(function (shadowJSON) {
 
                 json.shadow = shadowJSON;
@@ -325,7 +330,7 @@ const index = new Index(options.path);
 
             let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "skeleton.json");
             @.fs.makeDirs(@.fs.dirname(path));
-            @.fs.writeFile.sync(path, JSON.stringify(json.bones, null, 4));
+            @.fs.writeFile.sync(path, JSON.stringify(json.bones));
             @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
                                 @.format(modelSkeletonTemplate, { "bones": json.bones }, mxmlOptions));
 
@@ -339,23 +344,27 @@ const index = new Index(options.path);
                 "luts": luts,
                 "name": json.name
             };
+            if (extra) {
+                Object.assign(model, extra);
+            }
 
             path = @path(@mewchan().libraryPath, "pkmsm/models", id, "model.json");
             @.fs.makeDirs(@.fs.dirname(path));
             @.fs.writeFile.sync(path, JSON.stringify(model, null, 4));
 
             return model;
-            
+
         };
 
         let extra = {};
-        if (json.shadow) {
+        if (options.shadow && json.shadow) {
             saveModel(`${id}/shadow`, json.shadow);
             extra.shadow = "@shadow/model.json";
         }
         let model = saveModel(id, json, extra);
 
-        this.next(Object.assign({}, model));
+        // this.next(Object.assign({}, model));
+        this.next({});
 
     });
 

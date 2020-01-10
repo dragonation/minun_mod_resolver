@@ -317,7 +317,7 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                                     return ["fragDepth = length(" + new Shader.Register("", "o" + output, "", "", shader).glsl + ".xyz);",
                                             "fragNormal = normal;",
                                             "gl_Position = " + new Shader.Register("", "o" + output, "", "", shader).glsl
-                                            ].join("    \n");
+                                            ].join("\n    ");
                                 } else {
                                     throw new Error("No gl_Position output found");
                                 }
