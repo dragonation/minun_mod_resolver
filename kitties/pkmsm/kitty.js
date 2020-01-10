@@ -41,6 +41,9 @@ const modelSkeletonTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath,
 const modelMaterialTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
                                                        "data/pkm/templates/model/material.mxml"), 
                                                  "utf8");
+const modelMeshTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
+                                                   "data/pkm/templates/model/mesh.mxml"), 
+                                             "utf8");
 
 const { Index } = require("./index.js");
 
@@ -300,7 +303,7 @@ const index = new Index(options.path);
                         "uvs": []
                     }
                 };
-                meshes.push(record);
+                meshes.push(`@meshes/${looper}-${mesh.name}.json`);
                 let attributes = mesh.attributes;
                 if (attributes.bones.indices) {
                     record.attributes.bones.indices = `@meshes/${looper}-${mesh.name}/bone.indices.f32.bin`;
@@ -349,6 +352,14 @@ const index = new Index(options.path);
                     let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "colors.u8.bin");
                     saveU8Buffer(attributes.colors, path);
                 }
+                let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}.json`);
+                @.fs.makeDirs(@.fs.dirname(path));
+                @.fs.writeFile.sync(path, JSON.stringify(record, null, 4));
+                @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
+                                    @.format(modelMeshTemplate, { 
+                                        "index": looper,
+                                        "mesh": mesh
+                                    }, mxmlOptions));
             }
 
             let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "skeleton.json");
