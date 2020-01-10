@@ -1,0 +1,13 @@
+<m3d-object id="model" name="${model.name}">
+
+    <!-- skeleton -->
+$${include('skeleton.xml')}
+    <!-- luts -->
+<tmpl:map list="keys(model.luts)" item-name="id">    <m3d-texture id="lut-${id}" name="${model.luts[id].name}"
+                 src="@luts/${model.luts[id].name}.png"/>
+</tmpl:map>
+    <!-- materials -->
+<tmpl:map list="keys(model.materials)" item-name="name">$${include('materials/' + name + '.xml')}
+</tmpl:map>    <!-- meshes -->
+<tmpl:map list="model.meshes">$${include('meshes/' + index + '-' + item.name + '.xml')}
+</tmpl:map></m3d-object>

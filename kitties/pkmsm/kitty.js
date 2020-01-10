@@ -1,5 +1,7 @@
 @import("js.zip");
 
+const { Index } = require("./index.js");
+
 const makeF16 = function (value) {
     if (value === 0) { return 0; }
     let raw = value;
@@ -30,6 +32,11 @@ const mxmlOptions = {
         },
         "uniform": function (templates, call, parameters, options, value) {
             return makeUniform(value);
+        },
+        "include": function (templates, call, parameters, options, path) {
+            return @.fs.readFile.sync(@path(parameters.base, path), "utf8").split("\n").map((line) => {
+                return "    " + line;
+            }).join("\n");
         }
     }
 };
@@ -45,7 +52,10 @@ const modelMeshTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath,
                                                    "data/pkm/templates/model/mesh.mxml"), 
                                              "utf8");
 
-const { Index } = require("./index.js");
+const modelTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
+                                               "data/pkm/templates/model/model.mxml"), 
+                                         "utf8");
+
 
 const options = @.merge.advanced({
     "path": {
@@ -295,7 +305,6 @@ const index = new Index(options.path);
                 let mesh = json.meshes[looper];
                 let record = {
                     "name": mesh.name,
-                    "bones": mesh.bones,
                     "material": mesh.material,
                     "attributes": {
                         "bones": {},
@@ -308,7 +317,7 @@ const index = new Index(options.path);
                 if (attributes.bones.indices) {
                     record.attributes.bones.indices = `@meshes/${looper}-${mesh.name}/bone.indices.f32.bin`;
                     let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "bone.indices.f32.bin");
-                    saveF32Buffer(attributes.bones.indices, path);
+                    saveF32Buffer(attributes.bones.indices.map((x) => mesh.bones[x]), path);
                 }
                 if (attributes.bones.weights) {
                     record.attributes.bones.weights = `@meshes/${looper}-${mesh.name}/bone.weights.f32.bin`;
@@ -385,6 +394,11 @@ const index = new Index(options.path);
             path = @path(@mewchan().libraryPath, "pkmsm/models", id, "model.json");
             @.fs.makeDirs(@.fs.dirname(path));
             @.fs.writeFile.sync(path, JSON.stringify(model, null, 4));
+            @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
+                                @.format(modelTemplate, { 
+                                    "base": (@path(@mewchan().libraryPath, "pkmsm/models", id)),
+                                    "model": json 
+                                }, mxmlOptions)); 
 
             return model;
 
