@@ -1,0 +1,105 @@
+:host {
+
+    font-family: 'Mew Sans SC', sans-serif;
+    font-size: 12px;
+    line-height: 30px;
+
+    position: absolute;
+    background-color: $alpha($white(1), 0.8);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px $alpha($white(0), 0.2);
+    border: solid 1dpx $alpha($white(0), 0.3);
+    box-sizing: content-box;
+    opacity: 1;
+    transform: none;
+    backdrop-filter: blur(6px);
+
+    transition: opacity 0.3s;
+
+}
+
+:host(.direction-up) & {
+    background-image: linear-gradient(to top, #fff 0%, $alpha($white(1), 0) 30px);
+}
+
+:host(.direction-down) & {
+    background-image: linear-gradient(to bottom, #fff 0%, $alpha($white(1), 0) 30px);
+}
+
+:host(.direction-left) & {
+    background-image: linear-gradient(to left, #fff 0%, $alpha($white(1), 0) 30px);
+}
+
+:host(.direction-right) & {
+    background-image: linear-gradient(to right, #fff 0%, $alpha($white(1), 0) 30px);
+}
+
+:host(.hidden) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#arrow {
+
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    clip-path: polygon(0 14px, 14px 0, 100% 100%);
+    border: solid 1dpx $alpha($white(0), 0.3);
+
+    :host(.direction-up) & {
+        transform: rotate(45deg);
+        left: calc(var(--arrow-x) - 7px);
+        bottom: -7px;
+    }
+
+    :host(.direction-down) & {
+        transform: rotate(-135deg);
+        left: calc(var(--arrow-x) - 7px);
+        top: -7px;
+    }
+
+    :host(.direction-left) & {
+        transform: rotate(-45deg);
+        right: -7px;
+        top: calc(var(--arrow-y) - 7px);
+    }
+
+    :host(.direction-right) & {
+        transform: rotate(135deg);
+        left: -7px;
+        top: calc(var(--arrow-y) - 7px);
+    }
+
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+}
+
+.item {
+
+    padding: 0 10px;
+    height: 30px;
+    margin: 0 4px;
+    border-radius: 3px;
+    text-shadow: 0 0 2px #fff;
+
+    color: #666;
+    white-space: nowrap;
+
+    &.empty {
+        color: #ddd;
+        &:hover {
+            background-color: inherit;
+            color: #ddd;
+        }
+    }
+
+    &:hover {
+        color: #333;
+        background-color: $alpha($white(0), 0.07);
+    }
+}

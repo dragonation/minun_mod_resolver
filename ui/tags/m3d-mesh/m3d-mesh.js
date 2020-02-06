@@ -11,14 +11,42 @@ const prepareMesh = function (dom) {
         }
 
         if (dom.m3dVertices) {
-            geometry.setAttribute("position", new THREE.Float32BufferAttribute(dom.m3dVertices, 3));
+            let vertexUnitSize = parseInt($(dom).attr("vertex-unit-size"));
+            if ((!vertexUnitSize) || (!isFinite(vertexUnitSize))) { vertexUnitSize = 3; }
+            geometry.setAttribute("position", new THREE.Float32BufferAttribute(dom.m3dVertices, vertexUnitSize));
         }
+
         if (dom.m3dNormals) {
-            geometry.setAttribute("normal", new THREE.Float32BufferAttribute(dom.m3dNormals, 3));
+            let normalUnitSize = parseInt($(dom).attr("normal-unit-size"));
+            if ((!normalUnitSize) || (!isFinite(normalUnitSize))) { normalUnitSize = 3; }
+            geometry.setAttribute("normal", new THREE.Float32BufferAttribute(dom.m3dNormals, normalUnitSize));
+        }
+        if (dom.m3dTangents) {
+            let tangentUnitSize = parseInt($(dom).attr("tangent-unit-size"));
+            if ((!tangentUnitSize) || (!isFinite(tangentUnitSize))) { tangentUnitSize = 3; }
+            geometry.setAttribute("tangent", new THREE.Float32BufferAttribute(dom.m3dTangents, tangentUnitSize));
+        }
+
+        if (dom.m3dColors) {
+            let colorUnitSize = parseInt($(dom).attr("color-unit-size"));
+            if ((!colorUnitSize) || (!isFinite(colorUnitSize))) { colorUnitSize = 3; }
+            geometry.setAttribute("color", new THREE.Float32BufferAttribute(dom.m3dColors, colorUnitSize));
         }
 
         if (dom.m3dUVs) {
-            geometry.setAttribute("uv", new THREE.Float32BufferAttribute(dom.m3dUVs, 2));
+            let uvUnitSize = parseInt($(dom).attr("uv-unit-size"));
+            if ((!uvUnitSize) || (!isFinite(uvUnitSize))) { uvUnitSize = 2; }
+            geometry.setAttribute("uv", new THREE.Float32BufferAttribute(dom.m3dUVs, uvUnitSize));
+        }
+        if (dom.m3dUVs2) {
+            let uvUnitSize = parseInt($(dom).attr("uv-2-unit-size"));
+            if ((!uvUnitSize) || (!isFinite(uvUnitSize))) { uvUnitSize = 2; }
+            geometry.setAttribute("uv2", new THREE.Float32BufferAttribute(dom.m3dUVs2, uvUnitSize));
+        }
+        if (dom.m3dUVs3) {
+            let uvUnitSize = parseInt($(dom).attr("uv-3-unit-size"));
+            if ((!uvUnitSize) || (!isFinite(uvUnitSize))) { uvUnitSize = 2; }
+            geometry.setAttribute("uv3", new THREE.Float32BufferAttribute(dom.m3dUVs3, uvUnitSize));
         }
 
         if (dom.m3dBoneIndices) {
@@ -159,7 +187,9 @@ const syncSkeleton = function (dom, value) {
                         disposeMesh(dom);
                         prepareMesh(dom);
                     }
-                    dom.m3dMesh.bind(m3dSkeleton.m3dGetSkeleton());
+                    if (dom.m3dMesh.bind) {
+                        dom.m3dMesh.bind(m3dSkeleton.m3dGetSkeleton());
+                    }
                     // TODO: remove last skeleton for dispose
                 }
             }
@@ -181,18 +211,108 @@ const syncSkeleton = function (dom, value) {
 
 };
 
+const getBinLoader = function (dom) {
+
+    while (dom && (typeof dom.m3dGetBin !== "function")) {
+        dom = dom.parentNode;
+    }
+
+    return dom;
+
+};
+
 module.exports = {
     "attributes": [
         "skeleton",
         "materials",
         "indices",
-        "vertices", "normals", "uvs",
+        "vertices", "vertex-unit-size",
+        "normals", "normal-unit-size",
+        "tangents", "tangent-unit-size",
+        "colors", "color-unit-size",
+        "uvs", "uv-unit-size",
+        "uvs-2", "uv-2-unit-size",
+        "uvs-3", "uv-3-unit-size",
         "bone-indices", "bone-weights"
     ],
     "listeners": {
+        "onconnected": function () {
+            this.m3dSyncBin();
+        },
         "onupdated": function (name, value) {
             switch (name) {
                 case "materials": { syncMaterials(this, value); break; };
+                case "indices": 
+                case "vertices": 
+                case "normals": case "tangents":
+                case "colors": 
+                case "uvs": case "uvs-2": case "uvs-3":
+                case "bone-indices": 
+                case "bone-weights": {
+                    if (value[0] !== "@") {
+                        return;
+                    }
+                    let loader = getBinLoader(this);
+                    if (loader) {
+                        loader.m3dGetBin(value.slice(1), (error, result) => {
+                            if (error) {
+                                console.error(error); return;
+                            }
+                            this[name] = result;
+                        });
+                    } else {
+                        this[name] = undefined;
+                    }
+                    break;
+                }
+                case "vertex-unit-size": {
+                    if (this.m3dVertices && this.m3dMesh) {
+                        let vertexUnitSize = parseInt(value);
+                        if ((!vertexUnitSize) || (!isFinite(vertexUnitSize))) { vertexUnitSize = 3; }
+                        this.m3dMesh.geometry.setAttribute("position", new THREE.Float32BufferAttribute(this.m3dVertices, vertexUnitSize));
+                    }       
+                    break;
+                }
+                case "normal-unit-size": {
+                    if (this.m3dNormals && this.m3dMesh) {
+                        let normalUnitSize = parseInt(value);
+                        if ((!normalUnitSize) || (!isFinite(normalUnitSize))) { normalUnitSize = 3; }
+                        this.m3dMesh.geometry.setAttribute("normal", new THREE.Float32BufferAttribute(this.m3dNormals, normalUnitSize));
+                    }
+                    break;
+                }
+                case "tangent-unit-size": {
+                    if (this.m3dTangents && this.m3dMesh) {
+                        let tangentUnitSize = parseInt(value);
+                        if ((!tangentUnitSize) || (!isFinite(tangentUnitSize))) { tangentUnitSize = 3; }
+                        this.m3dMesh.geometry.setAttribute("tangent", new THREE.Float32BufferAttribute(this.m3dTangents, tangentUnitSize));
+                    }
+                    break;
+                }
+                case "uv-unit-size": {
+                    if (this.m3dUVs && this.m3dMesh) {
+                        let uvUnitSize = parseInt(value);
+                        if ((!uvUnitSize) || (!isFinite(uvUnitSize))) { uvUnitSize = 3; }
+                        this.m3dMesh.geometry.setAttribute("uv", new THREE.Float32BufferAttribute(this.m3dUVs, uvUnitSize));
+                    }
+                    break;
+                }
+                case "uv-2-unit-size": {
+                    if (this.m3dUVs2 && this.m3dMesh) {
+                        let uvUnitSize = parseInt(value);
+                        if ((!uvUnitSize) || (!isFinite(uvUnitSize))) { uvUnitSize = 3; }
+                        this.m3dMesh.geometry.setAttribute("uv2", new THREE.Float32BufferAttribute(this.m3dUVs2, uvUnitSize));
+                    }
+                    break;
+                }
+                case "uv-3-unit-size": {
+                    if (this.m3dUVs3 && this.m3dMesh) {
+                        let uvUnitSize = parseInt(value);
+                        if ((!uvUnitSize) || (!isFinite(uvUnitSize))) { uvUnitSize = 3; }
+                        this.m3dMesh.geometry.setAttribute("uv3", new THREE.Float32BufferAttribute(this.m3dUVs3, uvUnitSize));
+                    }
+                    break;
+                }
                 default: { break; };
             }
         },
@@ -206,9 +326,14 @@ module.exports = {
                 return this.m3dIndices;
             },
             "set": function (value) {
+                if ((value instanceof Uint32Array) ||
+                    (value instanceof Uint16Array) ||
+                    (value instanceof Uint8Array)) {
+                    value = Array.prototype.slice.call(value, 0);
+                }
                 this.m3dIndices = value;
                 if (this.m3dMesh) {
-                    this.m3dMesh.geometry.setIndex(dom.m3dIndices);
+                    this.m3dMesh.geometry.setIndex(this.m3dIndices);
                 }
             }
         },
@@ -219,7 +344,9 @@ module.exports = {
             "set": function (value) {
                 this.m3dVertices = value;
                 if (this.m3dMesh) {
-                    this.m3dMesh.geometry.setAttribute("position", new THREE.Float32BufferAttribute(this.m3dVertices, 3));
+                    let vertexUnitSize = parseInt($(this).attr("vertex-unit-size"));
+                    if ((!vertexUnitSize) || (!isFinite(vertexUnitSize))) { vertexUnitSize = 3; }
+                    this.m3dMesh.geometry.setAttribute("position", new THREE.Float32BufferAttribute(this.m3dVertices, vertexUnitSize));
                 }
             }
         },
@@ -230,7 +357,35 @@ module.exports = {
             "set": function (value) {
                 this.m3dNormals = value;
                 if (this.m3dMesh) {
-                    this.m3dMesh.geometry.setAttribute("normal", new THREE.Float32BufferAttribute(this.m3dNormals, 3));
+                    let normalUnitSize = parseInt($(this).attr("normal-unit-size"));
+                    if ((!normalUnitSize) || (!isFinite(normalUnitSize))) { normalUnitSize = 3; }
+                    this.m3dMesh.geometry.setAttribute("normal", new THREE.Float32BufferAttribute(this.m3dNormals, normalUnitSize));
+                }
+            }
+        },
+        "tangents": {
+            "get": function () {
+                return this.m3dTangents;
+            },
+            "set": function (value) {
+                this.m3dTangents = value;
+                if (this.m3dMesh) {
+                    let tangentUnitSize = parseInt($(this).attr("tangent-unit-size"));
+                    if ((!tangentUnitSize) || (!isFinite(tangentUnitSize))) { tangentUnitSize = 3; }
+                    this.m3dMesh.geometry.setAttribute("tangent", new THREE.Float32BufferAttribute(this.m3dTangents, tangentUnitSize));
+                }
+            }
+        },
+        "colors": {
+            "get": function () {
+                return this.m3dColors;
+            },
+            "set": function (value) {
+                this.m3dColors = value;
+                if (this.m3dMesh) {
+                    let colorUnitSize = parseInt($(this).attr("color-unit-size"));
+                    if ((!colorUnitSize) || (!isFinite(colorUnitSize))) { colorUnitSize = 3; }
+                    this.m3dMesh.geometry.setAttribute("color", new THREE.Float32BufferAttribute(this.m3dColors, colorUnitSize));
                 }
             }
         },
@@ -241,7 +396,35 @@ module.exports = {
             "set": function (value) {
                 this.m3dUVs = value;
                 if (this.m3dMesh) {
-                    this.m3dMesh.geometry.setAttribute("uv", new THREE.Float32BufferAttribute(this.m3dUVs, 2));
+                    let uvUnitSize = parseInt($(this).attr("uv-unit-size"));
+                    if ((!uvUnitSize) || (!isFinite(uvUnitSize))) { uvUnitSize = 2; }
+                    this.m3dMesh.geometry.setAttribute("uv", new THREE.Float32BufferAttribute(this.m3dUVs, uvUnitSize));
+                }
+            }
+        },
+        "uvs-2": {
+            "get": function () {
+                return this.m3dUVs2;
+            },
+            "set": function (value) {
+                this.m3dUVs2 = value;
+                if (this.m3dMesh) {
+                    let uvUnitSize = parseInt($(this).attr("uv-2-unit-size"));
+                    if ((!uvUnitSize) || (!isFinite(uvUnitSize))) { uvUnitSize = 2; }
+                    this.m3dMesh.geometry.setAttribute("uv2", new THREE.Float32BufferAttribute(this.m3dUVs2, uvUnitSize));
+                }
+            }
+        },
+        "uvs-3": {
+            "get": function () {
+                return this.m3dUVs3;
+            },
+            "set": function (value) {
+                this.m3dUVs3 = value;
+                if (this.m3dMesh) {
+                    let uvUnitSize = parseInt($(this).attr("uv-3-unit-size"));
+                    if ((!uvUnitSize) || (!isFinite(uvUnitSize))) { uvUnitSize = 2; }
+                    this.m3dMesh.geometry.setAttribute("uv3", new THREE.Float32BufferAttribute(this.m3dUVs3, uvUnitSize));
                 }
             }
         },
@@ -271,6 +454,30 @@ module.exports = {
     "methods": {
         "m3dGetObject": function () {
             return prepareMesh(this);
+        },
+        "m3dSyncBin": function () {
+
+            let loader = getBinLoader(this);
+            if (!loader) {
+                return;
+            }
+
+            for (let key of ["indices", "vertices", 
+                             "normals", "tangents", 
+                             "colors", 
+                             "uvs", "uvs-2", "uvs-3",
+                             "bone-indices", "bone-weights"]) {
+                let value = $(this).attr(key);
+                if ((!this[key]) && value && (value[0] === "@")) {
+                    loader.m3dGetBin(value.slice(1), (error, result) => {
+                        if (error) {
+                            console.error(error); return;
+                        }
+                        this[key] = result;
+                    });
+                }
+            }
+
         }
     }
 };

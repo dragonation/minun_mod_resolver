@@ -239,10 +239,11 @@
             });
         });
 
-        $(element).on(attribute.name, function (event) {
+        $(element).on(attribute.name, function (event, parameter) {
 
             var eventParameters = Object.assign({}, updatedParameters, {
                 "event": event,
+                "parameter": parameter,
                 "element": element
             });
 
@@ -262,6 +263,16 @@
             $.format.tmpl(attribute.template.parts[0].call, eventParameters, options);
 
         });
+
+    };
+
+    if (!$.tmpl.attribute["*"][$.tmpl.triggerNamespaceURI]) {
+        $.tmpl.attribute["*"][$.tmpl.triggerNamespaceURI] = {};
+    }
+
+    $.tmpl.attribute["*"][$.tmpl.triggerNamespaceURI]["*"] = function (element, attribute, parameters, options, animations, updaters, actions, caches) {
+
+        // Do nothing
 
     };
 
@@ -327,24 +338,38 @@
 
             if (attribute.template) {
                 let lastValue = null;
-                var dependencies = null;
+                let lastTriggerValue = null;
+                let dependencies = null;
+                let triggerDependencies = null;
                 let updater = function (parameters, animations, actions) {
                     dependencies = $.tmpl.deps(attribute, options, dependencies);
+                    let triggerChanged = false;
+                    if (attribute.trigger) {
+                        triggerDependencies = $.tmpl.deps(attribute.trigger, options, triggerDependencies);
+                        triggerChanged = $.format.tmpl.deps.changed(triggerDependencies, parameters, options);
+                    }
                     let changed = $.format.tmpl.deps.changed(dependencies, parameters, options);
-                    if (!changed) {
+                    if ((!changed) && (!triggerChanged)) {
                         return;
                     }
+                    
                     let value = $.format.parsers[options.textParser].parseTemplate(attribute.template, parameters, options);
                     if (parser) {
-                        value = parser(value, options);
+                        value = parser(value, options, element);
                     }
-                    if (lastValue !== value) {
+                    let triggerValue = null;
+                    if (attribute.trigger) {
+                        triggerValue = $.format.tmpl(attribute.trigger.template.parts[0].call, parameters, options);
+                    }
+                    if ((lastValue !== value) || (lastTriggerValue !== triggerValue)) {
                         lastValue = value;
+                        lastTriggerValue = triggerValue;
                         actions.push(function () {
-                            if ((element.getAttribute(attributeName) !== value) &&
-                                (element[property] !== value)) {
-                                element.setAttribute(attributeName, value);
+                            if (element[property] !== value) {
                                 element[property] = value;
+                            }
+                            if (element.getAttribute(attributeName) !== value) {
+                                element.setAttribute(attributeName, value);
                             }
                         });
                     }
@@ -354,7 +379,7 @@
             } else {
                 let value = attribute.content;
                 if (parser) {
-                    value = parser(value, options);
+                    value = parser(value, options, element);
                 }
                 element.setAttribute(attributeName, value);
                 element[property] = value;
@@ -384,16 +409,28 @@
     generateHTMLPropertyConvertor("value");
     generateHTMLPropertyConvertor("class", "className");
 
-    generateHTMLPropertyConvertor("checked", "checked", (value, options) => {
-        return (value === true) || (value === "true") || (value === "yes") || (value === "checked");
+    generateHTMLPropertyConvertor("checked", "checked", (value, options, element) => {
+        if (element.localName.toLowerCase().split("-").length === 1) {
+            return (value === true) || (value === "true") || (value === "yes") || (value === "checked");
+        } else {
+            return value;
+        }
     });
 
-    generateHTMLPropertyConvertor("selected", "selected", (value, options) => {
-        return (value === true) || (value === "true") || (value === "yes") || (value === "selected");
+    generateHTMLPropertyConvertor("selected", "selected", (value, options, element) => {
+        if (element.localName.toLowerCase().split("-").length === 1) {
+            return (value === true) || (value === "true") || (value === "yes") || (value === "selected");
+        } else {
+            return value;
+        }
     });
 
-    generateHTMLPropertyConvertor("readonly", "readOnly", (value, options) => {
-        return (value === true) || (value === "true") || (value === "yes") || (value === "readonly");
+    generateHTMLPropertyConvertor("readonly", "readOnly", (value, options, element) => {
+        if (element.localName.toLowerCase().split("-").length === 1) {
+            return (value === true) || (value === "true") || (value === "yes") || (value === "readonly");
+        } else {
+            return value;
+        }
     });
 
     generateHTMLPropertyConvertor("src", "src", autoresolvePathPropertyConvertor);

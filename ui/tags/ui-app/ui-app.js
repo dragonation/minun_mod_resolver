@@ -1,4 +1,12 @@
+const uiActionList = require("../ui-action-list/ui-action-list.js");
+
 let apps = Object.create(null);
+
+const showActionList = function (actions, from, direction) {
+
+    return uiActionList.globals.showActionList(actions, from, direction);
+
+};
 
 const createWindow = function (path, options) {
 
@@ -104,6 +112,10 @@ const completeApp = function (App) {
 
     if (!App.prototype.activateApp) {
         App.prototype.activateApp = activateApp;
+    }
+
+    if (!App.prototype.showActionList) {
+        App.prototype.showActionList = showActionList;
     }
 
 };

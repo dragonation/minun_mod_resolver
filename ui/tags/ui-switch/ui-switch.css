@@ -1,0 +1,52 @@
+:host {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+
+    margin: 5px;
+
+    height: 14px;
+    width: 32px;
+    border-radius: 8px;
+    background-color: $alpha(#0d8ef1, 0.4);
+    border: solid 1dpx $alpha($white(0), 0.03);
+    display: inline-block;
+
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &.off {
+        background-color: $alpha($white(0), 0.1);
+        border-color: $alpha($white(0), 0.1);
+        #handle {
+            left: calc(25px - 1dpx);
+            background-color: #fff;
+            border-color: $alpha($white(0), 0.3);
+            color: #bbb;
+        }
+    }
+
+    #handle {
+        left: 5px;
+        position: absolute;
+        margin-top: calc(-3px - 1dpx);
+        margin-left: -3px;
+        width: 20px;
+        height: 20px;
+        background-color: #0d8ef1;
+        border-radius: 30px;
+        border: solid 1dpx transparent;
+        box-shadow: 0 1px 2px $alpha($white(0), 0.2);
+        color: #fff;
+        font-size: 6px;
+        line-height: calc(20px - 2dpx);
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: background-color 0.3s, left 0.3s, color 0.3s, border-color 0.3s;
+    }
+
+}

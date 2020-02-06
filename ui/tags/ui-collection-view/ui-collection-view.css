@@ -2,9 +2,12 @@ $default-section-header-size: 30px;
 $default-cell-width: 120px;
 $default-cell-height: 120px;
 
+$default-extra-padding-bottom: 0px;
+
 $section-header-size: var(--section-header-size, $default-section-header-size);
 $cell-width: var(--cell-width, $default-cell-width);
 $cell-height: var(--cell-height, $default-cell-height);
+$extra-padding-bottom: var(--extra-padding-bottom, $default-extra-padding-bottom);
 
 :host {
     display: block;
@@ -29,7 +32,8 @@ $cell-height: var(--cell-height, $default-cell-height);
     width: 100%;
     top: 0;
     height: calc($section-header-size + 2dpx);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: $alpha($white(1), 0.7);
+    backdrop-filter: blur(6px);
     line-height: $section-header-size;
     font-size: 14px;
     color: $alpha($white(0), 0.1);

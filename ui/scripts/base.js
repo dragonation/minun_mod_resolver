@@ -1,21 +1,36 @@
+if (document.location.search) {
+    for (let pair of document.location.search.slice(1).split("&")) {
+        if (pair.split("=")[0] === "title") {
+            document.title = decodeURIComponent(pair.split("=").slice(1).join("="));
+        }
+    }
+}
+
 $(() => {
 
     $.res.package("/ui/~package.json", true, () => {
 
-        require("./base/meta.js");
-        require("./base/logger.js");
+        require("/scripts/base/meta.js");
+        require("/scripts/base/logger.js");
 
-        require("./base/worker.js");
-        require("./base/dom.js");
+        require("/scripts/base/worker.js");
+        require("/scripts/base/dom.js");
 
-        let uuid = require("./base/uuid.js");
+        let base64 = require("/scripts/base/base64.js");
+
+        $.base64 = {
+            "decode": function (data) { return base64.toByteArray(data).buffer; },
+            "encode": function (data) { return base64.fromByteArray(new Uint8Array(data)); }
+        };
+
+        let uuid = require("/scripts/base/uuid.js");
         $.uuid = uuid.createUUID;
 
-        let timer = require("./base/timer.js");
+        let timer = require("/scripts/base/timer.js");
         $.delay = timer.delay;
         $.timer = timer.timer;
 
-        let tmpl = require("./base/tmpl.js");
+        let tmpl = require("/scripts/base/tmpl.js");
 
         $.format = tmpl.parseTemplate.bind(global);
 
@@ -47,19 +62,19 @@ $(() => {
 
         $.format.tmpl.utils.tokens = tmpl.templateTokens;
 
-        require("./base/tag.js");
+        require("/scripts/base/tag.js");
         for (let tag of $.metas("tag.reg", "tag")) {
             $.dom.autoregisterTag(tag);
         }
 
-        require("./base/serial.js");
+        require("/scripts/base/serial.js");
 
         let starter = $.meta("starter", "file");
         if (!starter) {
             console.warn("Starter file not found");
         }
 
-        require(`../${starter}`);
+        require(`/${starter}`);
 
     });
 

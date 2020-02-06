@@ -21,9 +21,20 @@ $("body").on("keypress", function (event) {
 
 });
 
+$(window).on("blur", function () {
+    let workshop = $("ui-workshop")[0];
+    if (workshop) {
+        workshop.hideGlasses();
+    }
+});
+
 module.exports = {
-    "attributes": [],
-    "listeners": {},
+    "attributes": [ "mode" ],
+    "listeners": {
+        "oncreated": function () {
+            this.glassViews = [];
+        }
+    },
     "properties": {
         "views": {
             "get": function () {
@@ -38,6 +49,68 @@ module.exports = {
         }
     },
     "methods": {
+        "addGlass": function (glassView, hiddenCallback) {
+
+            this.glassViews.push({
+                "glassView": glassView,
+                "hiddenCallback": hiddenCallback
+            });
+
+            for (let looper = 0; looper < this.glassViews.length; ++looper) {
+                $(this.glassViews[looper].glassView).css("z-index", 1000 + looper);
+            }
+
+            this.filler.fill({
+                "hasGlass": this.glassViews.length !== 0
+            });
+
+            $("body").append($(glassView));
+
+        },
+        "removeGlass": function (glassView) {
+
+            let hiddenCallback = undefined;
+            let index = -1;
+            for (let looper = 0; looper < this.glassViews.length; ++looper) {
+                if ((index === -1) && 
+                    (this.glassViews[looper].glassView === glassView)) {
+                    index = looper;
+                    hiddenCallback = this.glassViews[looper].hiddenCallback;
+                }
+            }
+
+            if (index === -1) {
+                return;
+            }
+
+            this.glassViews.splice(index, 1);
+            this.filler.fill({
+                "hasGlass": this.glassViews.length !== 0
+            });
+
+            if (hiddenCallback) {
+                hiddenCallback();
+            } else {
+                $(glassView).detach();
+            }
+            
+        },
+        "hideGlasses": function () {
+
+            for (let item of this.glassViews) {
+                if (item.hiddenCallback) {
+                    item.hiddenCallback();
+                } else {
+                    $(item.glassView).detach();
+                }
+            }
+            this.glassViews.length = 0;
+
+            this.filler.fill({
+                "hasGlass": false
+            });
+
+        },
         "activateView": function (view) {
 
             if ($(view).hasClass("active") && (!$(this).hasClass("browsing"))) {
@@ -49,6 +122,8 @@ module.exports = {
             allViews.removeClass("not-browsing browsing x4 x5 x6 x7 x8 x9 x10 x11 x12 x13 x14 x15 x16 x17 x18 x19 x20 x21 x22 x23 x24 x25 x26 x27 x28 x29 x30 active").css("transform", "");
 
             $(this).removeClass("browsing");
+
+            document.title = $.app(view).title;
 
             $.app.updateWindows();
 
@@ -232,10 +307,19 @@ module.exports = {
     },
     "functors": {
         "browseViews": function () {
+
             this.browseViews();
+
         },
         "showDebugInfo": function () {
+
             console.log("debug");
+
+        },
+        "hideGlasses": function () {
+
+            this.hideGlasses();
+
         }
     }
 };

@@ -154,6 +154,7 @@ $.dom.parseXHTML = function (content, options) {
         "prop": $.tmpl.propertyNamespaceURI,
         "style": $.tmpl.styleNamespaceURI,
         "class": $.tmpl.classNamespaceURI,
+        "trigger": $.tmpl.triggerNamespaceURI,
     };
     if (options.prefinedNamespaces) {
         Object.assign(prefinedNamespaces, options.prefinedNamespaces);

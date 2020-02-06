@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path d="M59,29 L58,61 C58,63.209139 56.209139,65 54,65 L27,65 C24.790861,65 23,63.209139 23,61 L22,29 L59,29 Z M48,15 C49.6568542,15 51,16.3431458 51,18 L51,19 L65,19 L65,26 L16,26 L16,19 L30,19 L30,18 C30,16.3431458 31.3431458,15 33,15 L48,15 Z" id="delete" fill="#888"></path>
+</svg>

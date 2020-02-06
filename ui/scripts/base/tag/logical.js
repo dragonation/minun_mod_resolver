@@ -379,11 +379,34 @@
             name = node.attributes[""]["name"].content;
         }
 
+        let classes = node.attributes[$.tmpl.classNamespaceURI];
+
         slot[0].template = {
             "name": name,
             "nodes": node.children,
             "factory": $.tmpl.factory(node.children, options),
-            "options": options
+            "options": options,
+            "keepClasses": function (element, parameters) {
+                if (classes) {
+                    for (let key in classes) {
+                        let attribute = classes[key];
+                        if (!attribute.template) {
+                            let content = "${" + attribute.content + "}";
+                            attribute.content = content;
+                            attribute.template = $.format.parsers[options.textParser].compileTemplate(content, parameters, options);
+                        }
+                        if (attribute.template.parts.length !== 1) {
+                            throw new Error("Invalid attribute template: " + attribute.content);
+                        }
+                        let value = $.format.tmpl(attribute.template.parts[0].call, parameters, options);
+                        if (value) {
+                            element.classList.add(attribute.name);
+                        } else {
+                            element.classList.remove(attribute.name);
+                        }
+                    }
+                }
+            }
         };
 
         return slot;

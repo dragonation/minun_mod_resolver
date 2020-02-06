@@ -337,7 +337,8 @@ module.exports = {
         "name",
         "rotation", "translation", "scale",
         "model-rotation", "model-translation", "model-scale",
-        "visible"
+        "visible",
+        "bin"
     ],
     "listeners": {
         "onconnected": function () {

@@ -1,0 +1,10 @@
+<input type="text"
+       placeholder="${attributes.placeholder}"
+       @focus="showFocus()"
+       @blur="hideFocus()"
+       @beforeinput="onBeforeInput(event)"
+       @input="onInput(event)"
+       @keydown="triggerChanges()"
+       @paste="onPasted();triggerChanges()"/>
+<ui-button id="decrease-button" @action="decreaseInput()"><img src="../../res/actions/minus.svg"/></ui-button>
+<ui-button id="increase-button" @action="increaseInput()"><img src="../../res/actions/plus.svg"/></ui-button>

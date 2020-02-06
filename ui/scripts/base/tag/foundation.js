@@ -326,10 +326,34 @@
             });
         }
 
+        let caches = Object.create(null);
+
         var recordParent = (node) => {
-            if (node.name && (node.name.indexOf("-") !== -1)) {
-                $.dom.autoregisterTag(node.name);
+
+            if (node.type === "element") {
+                if (node.name && (node.name.indexOf("-") !== -1)) {
+                    $.dom.autoregisterTag(node.name);
+                }
+                if (node.attributes[$.tmpl.triggerNamespaceURI]) {
+                    for (let key in node.attributes[$.tmpl.triggerNamespaceURI]) {
+                        if (node.attributes[""][key]) {
+                            node.attributes[""][key].trigger = node.attributes[$.tmpl.triggerNamespaceURI][key];
+                            if (!node.attributes[""][key].trigger.template) {
+                                let content = "${" + node.attributes[""][key].trigger.content + "}";
+                                node.attributes[""][key].trigger.content = content;
+                                if (!caches[content]) {
+                                    caches[content] = $.format.parsers[options.textParser].compileTemplate(content, options);
+                                }
+                                node.attributes[""][key].trigger.template = caches[content];
+                            }
+                            if (node.attributes[""][key].trigger.template.parts.length !== 1) {
+                                throw new Error("Invalid strict attribute template: " + attribute.trigger.content);
+                            }
+                        }
+                    }
+                }
             }
+
             if (node.children) {
                 let looper = 0;
                 while (looper < node.children.length) {
@@ -338,6 +362,7 @@
                     ++looper;
                 }
             }
+
         };
 
         this.template.forEach(recordParent);
@@ -376,6 +401,7 @@
     $.tmpl.propertyNamespaceURI = "http://mewchan.com/proj/query/ui/template-property";
     $.tmpl.styleNamespaceURI = "http://mewchan.com/proj/query/ui/template-style";
     $.tmpl.classNamespaceURI = "http://mewchan.com/proj/query/ui/template-class";
+    $.tmpl.triggerNamespaceURI = "http://mewchan.com/proj/query/ui/template-trigger";
 
     $.tmpl.xhtmlNamespaceURI = "http://www.w3.org/1999/xhtml";
 
@@ -572,16 +598,28 @@
 
         if (attribute.template) {
             let lastValue = null;
+            let lastTriggerValue = null;
             var dependencies = null;
+            let triggerDependencies = null;
             let updater = function (parameters, animations, actions) {
                 dependencies = $.tmpl.deps(attribute, options, dependencies);
-                if (!$.format.tmpl.deps.changed(dependencies, parameters, options)) {
+                let triggerChanged = false;
+                if (attribute.trigger) {
+                    triggerDependencies = $.tmpl.deps(attribute.trigger, options, triggerDependencies);
+                    triggerChanged = $.format.tmpl.deps.changed(triggerDependencies, parameters, options);
+                }
+                let changed = $.format.tmpl.deps.changed(dependencies, parameters, options);
+                if ((!changed) && (!triggerChanged)) {
                     return;
                 }
                 let value = $.format.parsers[options.textParser].parseTemplate(attribute.template, parameters, options);
-                if (lastValue !== value) {
-                    var lastValue2 = lastValue;
+                let triggerValue = null;
+                if (attribute.trigger) {
+                    triggerValue = $.format.tmpl(attribute.trigger.template.parts[0].call, parameters, options);
+                }
+                if ((lastValue !== value) || (lastTriggerValue !== triggerValue)) {
                     lastValue = value;
+                    lastTriggerValue = triggerValue;
                     actions.push(function () {
                         if (attribute.namespace) {
                             let lastNodeValue = element.getAttributeNS(attribute.namespace, name);
@@ -635,6 +673,10 @@
             } else {
                 element = document.createElementNS(node.namespace, node.name);
             }
+        }
+        
+        if (element.updateTagInternalTemplates) {
+            elementUpdaters.push(element.updateTagInternalTemplates.bind(element));
         }
 
         let query = $(element);

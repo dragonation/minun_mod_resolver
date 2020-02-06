@@ -37,7 +37,7 @@
 
         font-style: oblique;
         color: $alpha($white(1), 0.7);
-        font-family: sans-serif;
+        font-family: 'Mew Sans SC', sans-serif;
         text-transform: uppercase;
         font-weight: bold;
 

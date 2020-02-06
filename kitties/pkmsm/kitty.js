@@ -1,9 +1,14 @@
 @import("js.zip");
 
 const { Index } = require("./index.js");
+const { Model } = require("./model.js");
 
+let f16s = Object.create(null);
 const makeF16 = function (value) {
     if (value === 0) { return 0; }
+    if (f16s[value]) {
+        return f16s[value][0];
+    }
     let raw = value;
     let log = Math.floor(Math.log10(Math.abs(value)));
     let base = parseFloat((Math.pow(10, -log) * value).toPrecision(6));
@@ -11,12 +16,13 @@ const makeF16 = function (value) {
     if (Math.abs(value) < 0.000001) {
         value = 0;
     }
+    f16s[raw] = [value];
     return value;
 };
 
 const makeUniform = function (value) {
     if (typeof value === "boolean") {
-        return value ? "0" : "1"
+        return value;
     }
     if (value instanceof Array) {
         return value.map(makeUniform).join(",");
@@ -42,6 +48,9 @@ const mxmlOptions = {
 };
 
 
+const modelAnimationTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
+                                                        "data/pkm/templates/model/animation.mxml"), 
+                                                  "utf8");
 const modelSkeletonTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
                                                        "data/pkm/templates/model/skeleton.mxml"), 
                                                  "utf8");
@@ -71,6 +80,43 @@ if (!options.path) {
 
 const index = new Index(options.path);
 
+
+let saveF32Buffer = (array, path) => {
+    let array2 = [];
+    for (let element of array) {
+        if (element instanceof Array) {
+            for (let value of element) {
+                array2.push(value);
+            }
+        } else {
+            array2.push(element);
+        }
+    }
+    @.fs.makeDirs(@.fs.dirname(path));
+    let buffer = Buffer.alloc(array2.length * 4);
+    for (let looper = 0; looper < array2.length; ++looper) {
+        buffer.writeFloatLE(array2[looper], looper * 4);
+    }
+    @.fs.writeFile.sync(path, buffer);
+};
+let saveU16Buffer = (array, path) => {
+    @.fs.makeDirs(@.fs.dirname(path));
+    let buffer = Buffer.alloc(array.length * 2);
+    for (let looper = 0; looper < array.length; ++looper) {
+        buffer.writeUInt16LE(array[looper], looper * 2);
+    }
+    @.fs.writeFile.sync(path, buffer);
+};
+let saveU8Buffer = (array, path) => {
+    @.fs.makeDirs(@.fs.dirname(path));
+    let buffer = Buffer.alloc(array.length);
+    for (let looper = 0; looper < array.length; ++looper) {
+        buffer.writeUInt8(array[looper], looper);
+    }
+    @.fs.writeFile.sync(path, buffer);
+};
+
+
 @heard.rpc("pkmsm.searchPokemons").then(function (request) {
 
     const pokemonBaseScore = 100;
@@ -85,7 +131,7 @@ const index = new Index(options.path);
             if ((pokemon.id + "").indexOf(keyword) !== -1) {
                 score += pokemonBaseScore;
             } 
-            if (pokemon.name.indexOf(keyword) !== -1) {
+            if (pokemon.name.toLowerCase().indexOf(keyword) !== -1) {
                 score += pokemonBaseScore;
             }
         }
@@ -205,15 +251,45 @@ const index = new Index(options.path);
         const saveModel = (id, json, extra) => {
 
             let animations = {};
-            for (let action in json.animations) {
-                animations[action] = `@animations/${action}.json`;
-                let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "animations", action + ".json");
+            for (let animation in json.animations) {
+
+                @debug(`Writing model[${id}] animation[${animation}]`);
+
+                // let record = json.animations[animation];
+
+                // let interpolated = Model.interpolateJSONAnimation(json.animations[animation]);
+                animations[animation] = `@animations/${animation}.json`;
+
+                // let animationPath = @path(@mewchan().libraryPath, "pkmsm/models", id, "animations", animation);
+
+                // saveF32Buffer(interpolated.times, @path(animationPath, "times.f32.bin"));
+                // for (let material in interpolated.tracks.materials) {
+                //     for (let path in interpolated.tracks.materials[material]) {
+                //         saveF32Buffer(interpolated.tracks.materials[material][path].frames, 
+                //                       @path(animationPath, "materials", material, path + ".f32.bin"));
+                //     }
+                // }
+                // for (let bone in interpolated.tracks.bones) {
+                //     for (let path in interpolated.tracks.bones[bone]) {
+                //         saveF32Buffer(interpolated.tracks.bones[bone][path].frames, 
+                //                       @path(animationPath, "bones", bone, path + ".f32.bin"));
+                //     }
+                // }
+
+                let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "animations", animation + ".json");
+                // let path = animationPath + ".json";
                 @.fs.makeDirs(@.fs.dirname(path));
-                @.fs.writeFile.sync(path, @.serialize(json.animations[action]));
+                @.fs.writeFile.sync(path, JSON.stringify(json.animations[animation]));
+                // @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
+                //                     @.format(modelAnimationTemplate, { 
+                //                         "animation": interpolated
+                //                     }, mxmlOptions));
+
             }
 
             let shaders = {};
             for (let shader in json.shaders.fragments) {
+                @debug(`Writing model[${id}] shader[${shader}]`);
                 shaders[shader] = `@shaders/${shader}.frag`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "shaders", shader + ".frag");
                 @.fs.makeDirs(@.fs.dirname(path));
@@ -221,6 +297,7 @@ const index = new Index(options.path);
             }
 
             for (let shader in json.shaders.vertices) {
+                @debug(`Writing model[${id}] shader[${shader}]`);
                 shaders[shader] = `@shaders/${shader}.vert`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "shaders", shader + ".vert");
                 @.fs.makeDirs(@.fs.dirname(path));
@@ -237,6 +314,7 @@ const index = new Index(options.path);
 
             let textures = {};
             for (let texture in json.textures) {
+                @debug(`Writing model[${id}] texture[${texture}]`);
                 textures[texture] = `@textures/${texture}.png`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "textures", texture + ".png");
                 @.fs.makeDirs(@.fs.dirname(path));
@@ -258,6 +336,7 @@ const index = new Index(options.path);
 
             let luts = {};
             for (let lut in json.luts) {
+                @debug(`Writing model[${id}] lut[${lut}]`);
                 luts[lut] = `@luts/${json.luts[lut].name}.png`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "luts", json.luts[lut].name + ".png");
                 @.fs.makeDirs(@.fs.dirname(path));
@@ -267,42 +346,22 @@ const index = new Index(options.path);
 
             let materials = {};
             for (let material in json.materials) {
+                @debug(`Writing model[${id}] material[${material}]`);
                 materials[material] = `@materials/${material}.json`;
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "materials", material + ".json");
                 @.fs.makeDirs(@.fs.dirname(path));
                 @.fs.writeFile.sync(path, JSON.stringify(json.materials[material], null, 4));
                 @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
-                                @.format(modelMaterialTemplate, { "material": json.materials[material] }, mxmlOptions));
+                                    @.format(modelMaterialTemplate, { "material": json.materials[material] }, mxmlOptions));
             }
 
-            let saveF32Buffer = (array, path) => {
-                @.fs.makeDirs(@.fs.dirname(path));
-                let buffer = Buffer.alloc(array.length * 4);
-                for (let looper = 0; looper < array.length; ++looper) {
-                    buffer.writeFloatLE(array[looper], looper * 4);
-                }
-                @.fs.writeFile.sync(path, buffer);
-            };
-            let saveUI16Buffer = (array, path) => {
-                @.fs.makeDirs(@.fs.dirname(path));
-                let buffer = Buffer.alloc(array.length * 2);
-                for (let looper = 0; looper < array.length; ++looper) {
-                    buffer.writeUInt16LE(array[looper], looper * 2);
-                }
-                @.fs.writeFile.sync(path, buffer);
-            };
-            let saveU8Buffer = (array, path) => {
-                @.fs.makeDirs(@.fs.dirname(path));
-                let buffer = Buffer.alloc(array.length);
-                for (let looper = 0; looper < array.length; ++looper) {
-                    buffer.writeUInt8(array[looper], looper);
-                }
-                @.fs.writeFile.sync(path, buffer);
-            };
+            let mins = [Infinity, Infinity, Infinity];
+            let maxes = [-Infinity, -Infinity, -Infinity];
 
             let meshes = [];
             for (let looper = 0; looper < json.meshes.length; ++looper) {
                 let mesh = json.meshes[looper];
+                @debug(`Writing model[${id}] mesh[${looper}-${mesh.name}]`);
                 let record = {
                     "name": mesh.name,
                     "material": mesh.material,
@@ -327,6 +386,14 @@ const index = new Index(options.path);
                 if (attributes.positions) {
                     record.attributes.positions = `@meshes/${looper}-${mesh.name}/positions.f32.bin`;
                     let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "positions.f32.bin");
+                    for (let looper = 0; looper < attributes.positions.length; looper += 3) {
+                        if (mins[looper] > attributes.positions[looper]) { mins[looper] = attributes.positions[looper]; }
+                        if (mins[looper + 1] > attributes.positions[looper + 1]) { mins[looper + 1] = attributes.positions[looper + 1]; }
+                        if (mins[looper + 2] > attributes.positions[looper + 2]) { mins[looper + 2] = attributes.positions[looper + 2]; }
+                        if (maxes[looper] < attributes.positions[looper]) { maxes[looper] = attributes.positions[looper]; }
+                        if (maxes[looper + 1] < attributes.positions[looper + 1]) { maxes[looper + 1] = attributes.positions[looper + 1]; }
+                        if (maxes[looper + 2] < attributes.positions[looper + 2]) { maxes[looper + 2] = attributes.positions[looper + 2]; }
+                    }
                     saveF32Buffer(attributes.positions, path);
                 }
                 if (attributes.normals) {
@@ -347,9 +414,9 @@ const index = new Index(options.path);
                     }   
                 }
                 if (attributes.indices.vertices) {
-                    record.attributes.indices.vertices = `@meshes/${looper}-${mesh.name}/indices.vertices.ui16.bin`;
-                    let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "indices.vertices.ui16.bin");
-                    saveUI16Buffer(attributes.indices.vertices, path);
+                    record.attributes.indices.vertices = `@meshes/${looper}-${mesh.name}/indices.vertices.u16.bin`;
+                    let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "indices.vertices.u16.bin");
+                    saveU16Buffer(attributes.indices.vertices, path);
                 }
                 if (attributes.indices.geometry) {
                     record.attributes.indices.vertices = `@meshes/${looper}-${mesh.name}/indices.geometry.f32.bin`;
@@ -363,7 +430,7 @@ const index = new Index(options.path);
                 }
                 let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}.json`);
                 @.fs.makeDirs(@.fs.dirname(path));
-                @.fs.writeFile.sync(path, JSON.stringify(record, null, 4));
+                @.fs.writeFile.sync(path, JSON.stringify(record));
                 @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
                                     @.format(modelMeshTemplate, { 
                                         "index": looper,
@@ -371,14 +438,20 @@ const index = new Index(options.path);
                                     }, mxmlOptions));
             }
 
+            @debug(`Writing model[${id}] skeleton`);
             let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "skeleton.json");
             @.fs.makeDirs(@.fs.dirname(path));
-            @.fs.writeFile.sync(path, JSON.stringify(json.bones, null, 4));
+            @.fs.writeFile.sync(path, JSON.stringify(json.bones));
             @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
                                 @.format(modelSkeletonTemplate, { "bones": json.bones }, mxmlOptions));
 
+            @debug(`Writing model[${id}]`);
             let model = {
+                "id": id,
                 "skeleton": "@skeleton.json",
+                "bounds": {
+                    "model": { "mins": mins, "maxes": maxes }
+                },
                 "materials": materials,
                 "meshes": meshes,
                 "animations": animations,
@@ -393,9 +466,10 @@ const index = new Index(options.path);
 
             path = @path(@mewchan().libraryPath, "pkmsm/models", id, "model.json");
             @.fs.makeDirs(@.fs.dirname(path));
-            @.fs.writeFile.sync(path, JSON.stringify(model, null, 4));
+            @.fs.writeFile.sync(path, JSON.stringify(model));
             @.fs.writeFile.sync(@.fs.changeExtname(path, ".xml"), 
                                 @.format(modelTemplate, { 
+                                    "id": id,
                                     "base": (@path(@mewchan().libraryPath, "pkmsm/models", id)),
                                     "model": json 
                                 }, mxmlOptions)); 
@@ -411,8 +485,7 @@ const index = new Index(options.path);
         }
         let model = saveModel(id, json, extra);
 
-        // this.next(Object.assign({}, model));
-        this.next({});
+        this.next(model);
 
     });
 

@@ -1,3 +1,5 @@
+$.dom.autoregisterTag("ui-diagram-frame");
+
 const testHit = function (x, y, frame, radius) {
 
     if (!radius) { radius = 0; }

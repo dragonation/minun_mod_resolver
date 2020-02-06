@@ -468,8 +468,8 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                     return code + `// gpu_${register}`;
                 }).join("\n"),
                 "",
-                "varying float fragDepth;",
                 "varying vec4 fragNormal;",
+                "varying float fragDepth;",
                 "",
                 Object.keys(registers).filter((key) => key[0] === "v").sort(@.cmp.natural).map((register) => {
                     let code = `attribute vec4 ${new Shader.Register("", register, "", "", this).glsl};`;
@@ -612,6 +612,8 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                 "Generated Date: " + @.format.date(new Date()),
                 "Comment: This file is just auto-generated from the raw decoded Nintendo 3DS vertex shader instructions for human readable",
                 "",
+                // "precision mediump float;",
+                // "",
                 codes,
                 ""
             ].join("\n");
@@ -630,10 +632,24 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
             "",
             "precision mediump float;",
             "",
-            "uniform vec3 emission;",
-            "uniform vec3 ambient;",
-            "uniform vec3 diffuse;",
-            "uniform vec3 speculars[2];",
+            "varying vec4 fragPosition;",
+            "varying vec4 fragQuaternionNormal;",
+            "varying vec4 fragView;",
+            "varying vec4 fragColor;",
+            "varying vec4 fragUV;",
+            "varying vec4 fragUV2;",
+            "varying vec4 fragUV3;",
+            "",
+            "varying vec4 fragNormal;",
+            "varying float fragDepth;",
+            "",
+            "uniform mat4 modelViewMatrix;",
+            "uniform mat4 projectionMatrix;",
+            "",
+            "uniform vec4 emission;",
+            "uniform vec4 ambient;",
+            "uniform vec4 diffuse;",
+            "uniform vec4 speculars[2];",
             "",
             "uniform vec4 constants[6];",
             "",
@@ -668,15 +684,6 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
             "uniform float cameraNear;",
             "uniform float cameraScale;",
             "",
-            "varying vec4 fragQuaternionNormal;",
-            "varying vec4 fragColor;",
-            "varying vec4 fragUV;",
-            "varying vec4 fragUV2;",
-            "varying vec4 fragUV3;",
-            "varying vec4 fragView;",
-            "",
-            "varying float fragDepth;",
-            "varying vec4 fragNormal;",
             "uniform bool useDirectNormal;",
             "",
             "vec3 rotateQuaternion(vec4 q, vec3 v) {",
@@ -1337,7 +1344,7 @@ Shader.prototype.decodeFragmentColors = function (material, features, colors) {
     let reflectG = this.getLightingLUTInput(lightingLUTs.inputSelection.reflectG, lightingLUTs.inputScale.reflectG, "lutReflectG");
     let reflectB = this.getLightingLUTInput(lightingLUTs.inputSelection.reflectB, lightingLUTs.inputScale.reflectB, "lutReflectB");
 
-    let color = "emission + ambient * environmentAmbient.rgb * environmentAmbient.a";
+    let color = "emission.rgb + ambient.rgb * environmentAmbient.rgb * environmentAmbient.a";
 
     let codes = [
         `vec4 lutColor = vec4((${color}).rgb, 1.0);`,
@@ -1376,8 +1383,8 @@ Shader.prototype.decodeFragmentColors = function (material, features, colors) {
         codes.push("vec3 surfaceTangent = vec3(1.0, 0.0, 0.0);");
     }
 
-    let specularColor0 = "speculars[0]";
-    let specularColor1 = "speculars[1]";
+    let specularColor0 = "speculars[0].rgb";
+    let specularColor1 = "speculars[1].rgb";
 
     codes.push("vec4 normalizedNormal = normalize(fragQuaternionNormal);");
     codes.push("vec3 normal = rotateQuaternion(normalizedNormal, surfaceNormal);");
@@ -1405,7 +1412,7 @@ Shader.prototype.decodeFragmentColors = function (material, features, colors) {
         specularColor0 += " * d0";
     }
     if (features.reflectR || features.reflectG || features.reflectB) {
-        codes.push("        vec3 r = speculars[1];");
+        codes.push("        vec3 r = speculars[1].rgb;");
         if (features.reflectR) {
             codes.push(`        r.r = ${reflectR};`);
         } else {
@@ -1428,7 +1435,7 @@ Shader.prototype.decodeFragmentColors = function (material, features, colors) {
         specularColor1 += " * d1";
     }
 
-    codes.push("        vec3 diffuseColor = ambient * lightAmbients[i].rgb * lightAmbients[i].a + diffuse * lightDiffuses[i].rgb * lightDiffuses[i].a * clamp(ln, 0.0, 1.0);");
+    codes.push("        vec3 diffuseColor = ambient.rgb * lightAmbients[i].rgb * lightAmbients[i].a + diffuse.rgb * lightDiffuses[i].rgb * lightDiffuses[i].a * clamp(ln, 0.0, 1.0);");
     codes.push(`        vec3 specularColor = ${specularColor0} * lightSpeculars[i * 2].rgb * lightSpeculars[i * 2].a + ${specularColor1} * lightSpeculars[i * 2 + 1].rgb * lightSpeculars[i * 2 + 1].a;`);
 
     codes.push("        lutColor.rgb += diffuseColor.rgb;");

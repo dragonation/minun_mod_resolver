@@ -1,8 +1,11 @@
-<ui-nav-bar id="nav-bar" caption="Laboratory">
-    <ui-tray-icon icon="/res/nav-bar/windows.svg" title="Show all windows" @trayiconaction="browseViews()"/>
-    <!-- <ui-tray-icon icon="/res/nav-bar/debug.svg" title="Debug" @trayiconaction="showDebugInfo()"/> -->
-</ui-nav-bar>
-<ui-dock id="dock"/>
-<div id="apps">
-    <slot/>
+<div class="mode-${attributes.mode}">
+    <ui-nav-bar id="nav-bar" caption="Laboratory">
+        <ui-tray-icon icon="/res/nav-bar/windows.svg" title="Show all windows" @trayiconaction="browseViews()"/>
+        <!-- <ui-tray-icon icon="/res/nav-bar/debug.svg" title="Debug" @trayiconaction="showDebugInfo()"/> -->
+    </ui-nav-bar>
+    <ui-dock id="dock"/>
+    <div id="apps">
+        <slot/>
+    </div>
 </div>
+<div id="glass" class:hidden="${!hasGlass}" @mousedown="hideGlasses()"></div>

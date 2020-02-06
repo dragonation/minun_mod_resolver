@@ -17,7 +17,8 @@ Overlay.prototype.searchPokemonsWithKeyword = function (keyword) {
             let parsed = $.serial.deserialize(data);
             let items = parsed.map((pokemon) => ({
 
-                "id": pokemon.id,
+                // "id": pokemon.id,
+                "id": `pokemon-${("00" + pokemon.id).slice(-3)}-0`,
 
                 "snapshot": `pokemon-${("00" + pokemon.id).slice(-3)}-0`,
 
@@ -49,7 +50,6 @@ Overlay.prototype.searchModelsWithKeyword = function (keyword) {
         "success": (data, status, request) => {
 
             let parsed = $.serial.deserialize(data);
-            console.log(parsed);
 
             let items = parsed.map((model) => ({
 

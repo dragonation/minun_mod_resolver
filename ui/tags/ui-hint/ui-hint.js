@@ -4,6 +4,20 @@ let titleNamespaceURI = "http://mewchan.com/proj/query/ui/title";
 
 let topHint = undefined;
 
+const cancelScheduledHint = function (event) {
+
+    if (topHint && topHint.hasClass("visible")) {
+        topHint.removeClass("visible");
+    }
+
+    lastTitle = undefined;
+
+};
+
+document.addEventListener("mousedown", cancelScheduledHint);
+document.addEventListener("mouseup", cancelScheduledHint);
+document.addEventListener("mousewheel", cancelScheduledHint);
+
 document.addEventListener("mousemove", function (event) {
 
     if (topHint && topHint.hasClass("visible")) {

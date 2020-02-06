@@ -1,0 +1,3 @@
+<div id="field" class:placeholder="${!attributes.value}">${attributes.value ? resolveText(attributes.value) : attributes.placeholder}</div>
+<ui-button id="picker-button"><img src="../../res/actions/picker.svg"/></ui-button>
+<input style:position="absolute" style:opacity="0" style:width="0" style:height="0" value="" @keydown="processKeyboardEvent(event)" @beforeinput="ignoreInput(event)" @paste="ignoreInput(event)"/>

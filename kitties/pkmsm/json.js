@@ -583,15 +583,15 @@ const getBlendFunction = (code) => {
     switch (code) {
         case PICA.BlendFunctionOperation.ZERO: { return "zero"; }
         case PICA.BlendFunctionOperation.ONE: { return "one"; }
-        case PICA.BlendFunctionOperation.SOURCE_COLOR: { return "sourceColor"; }
-        case PICA.BlendFunctionOperation.ONE_MINUS_SOURCE_COLOR: { return "oneMinusSourceColor"; }
-        case PICA.BlendFunctionOperation.DESTINATION_COLOR: { return "destinationColor"; }
-        case PICA.BlendFunctionOperation.ONE_MINUS_DESTINATION_COLOR: { return "oneMinusDestinationColor"; }
-        case PICA.BlendFunctionOperation.SOURCE_ALPHA: { return "sourceAlpha"; }
-        case PICA.BlendFunctionOperation.ONE_MINUS_SOURCE_ALPHA: { return "oneMinusSourceAlpha"; }
-        case PICA.BlendFunctionOperation.DESTINATION_ALPHA: { return "destinationAlpha"; }
-        case PICA.BlendFunctionOperation.ONE_MINUS_DESTINATION_ALPHA: { return "oneMinusDestinationAlpha"; }
-        case PICA.BlendFunctionOperation.SOURCE_ALPHA_SATURATE: { return "sourceAlphaSaturate"; }
+        case PICA.BlendFunctionOperation.SOURCE_COLOR: { return "source-color"; }
+        case PICA.BlendFunctionOperation.ONE_MINUS_SOURCE_COLOR: { return "one-minus-source-color"; }
+        case PICA.BlendFunctionOperation.DESTINATION_COLOR: { return "destination-color"; }
+        case PICA.BlendFunctionOperation.ONE_MINUS_DESTINATION_COLOR: { return "one-minus-destination-color"; }
+        case PICA.BlendFunctionOperation.SOURCE_ALPHA: { return "source-alpha"; }
+        case PICA.BlendFunctionOperation.ONE_MINUS_SOURCE_ALPHA: { return "one-minus-source-alpha"; }
+        case PICA.BlendFunctionOperation.DESTINATION_ALPHA: { return "destination-alpha"; }
+        case PICA.BlendFunctionOperation.ONE_MINUS_DESTINATION_ALPHA: { return "one-minus-destination-alpha"; }
+        case PICA.BlendFunctionOperation.SOURCE_ALPHA_SATURATE: { return "source-alpha-saturate"; }
     }
 };
 
@@ -599,7 +599,7 @@ const getBlendEquation = function (code) {
     switch (code) {
         case PICA.BlendEquation.ADD: { return "add"; }
         case PICA.BlendEquation.SUBTRACT: { return "subtract"; }
-        case PICA.BlendEquation.REVERSE_SUBTRACT: { return "reverseSubtract"; }
+        case PICA.BlendEquation.REVERSE_SUBTRACT: { return "reverse-subtract"; }
         case PICA.BlendEquation.MIN: { return "min"; }
         case PICA.BlendEquation.MAX: { return "max"; }
     }
@@ -613,8 +613,8 @@ const getStencilOperation = function (code) {
         case PICA.StencilOperationAction.INCREMENT: { return "increment"; }
         case PICA.StencilOperationAction.DECREMENT: { return "decrement"; }
         case PICA.StencilOperationAction.INVERT: { return "invert"; }
-        case PICA.StencilOperationAction.INCREMENT_WRAP: { return "incrementWrap"; }
-        case PICA.StencilOperationAction.DECREMENT_WRAP: { return "decrementWrap"; }
+        case PICA.StencilOperationAction.INCREMENT_WRAP: { return "increment-wrap"; }
+        case PICA.StencilOperationAction.DECREMENT_WRAP: { return "decrement-wrap"; }
     }
 };
 
@@ -622,12 +622,12 @@ const getTestFunction = function (code) {
     switch (code) {
         case PICA.TestFunction.NEVER: { return "never"; }
         case PICA.TestFunction.ALWAYS: { return "always"; }
-        case PICA.TestFunction.EQUAL_TO: { return "equalTo"; }
-        case PICA.TestFunction.NOT_EQUAL_TO: { return "notEqualTo"; }
-        case PICA.TestFunction.LESS_THAN: { return "lessThan"; }
-        case PICA.TestFunction.LESS_THAN_OR_EQUAL_TO: { return "lessThanOrEqualTo"; }
-        case PICA.TestFunction.GREATER_THAN: { return "greaterThan"; }
-        case PICA.TestFunction.GREATER_THAN_OR_EQUAL_TO: { return "greaterThanOrEqualTo"; }
+        case PICA.TestFunction.EQUAL_TO: { return "equal-to"; }
+        case PICA.TestFunction.NOT_EQUAL_TO: { return "not-equal-to"; }
+        case PICA.TestFunction.LESS_THAN: { return "less-than"; }
+        case PICA.TestFunction.LESS_THAN_OR_EQUAL_TO: { return "less-than-or-equal-to"; }
+        case PICA.TestFunction.GREATER_THAN: { return "greater-than"; }
+        case PICA.TestFunction.GREATER_THAN_OR_EQUAL_TO: { return "greater-than-or-equal-to"; }
     }
 };
 
@@ -854,17 +854,17 @@ Model.prototype.toJSON = function (pcs, options) {
                 };
 
                 switch (coordinate.wrap[0].code) {
-                    case PICA.TextureWrap.CLAMP_TO_EDGE: { record.wrapS = "clampToEdge"; break; }
-                    case PICA.TextureWrap.CLAMP_TO_BORDER: { record.wrapS = "clampToEdge"; break; }
+                    case PICA.TextureWrap.CLAMP_TO_EDGE: { record.wrapS = "clamp"; break; }
+                    case PICA.TextureWrap.CLAMP_TO_BORDER: { record.wrapS = "clamp"; break; }
                     case PICA.TextureWrap.REPEAT: { record.wrapS = "repeat"; break; }
-                    case PICA.TextureWrap.MIRROR: { record.wrapS = "mirroredRepeat"; break; }
+                    case PICA.TextureWrap.MIRROR: { record.wrapS = "mirror"; break; }
                 }
 
                 switch (coordinate.wrap[1].code) {
-                    case PICA.TextureWrap.CLAMP_TO_EDGE: { record.wrapT = "clampToEdge"; break; }
-                    case PICA.TextureWrap.CLAMP_TO_BORDER: { record.wrapT = "clampToEdge"; break; }
+                    case PICA.TextureWrap.CLAMP_TO_EDGE: { record.wrapT = "clamp"; break; }
+                    case PICA.TextureWrap.CLAMP_TO_BORDER: { record.wrapT = "clamp"; break; }
                     case PICA.TextureWrap.REPEAT: { record.wrapT = "repeat"; break; }
-                    case PICA.TextureWrap.MIRROR: { record.wrapT = "mirroredRepeat"; break; }
+                    case PICA.TextureWrap.MIRROR: { record.wrapT = "mirror"; break; }
                 }
 
                 record.offset = [-coordinate.translation[0] * coordinate.scale[0],
@@ -1054,14 +1054,13 @@ Model.prototype.toJSON = function (pcs, options) {
 
                 "stencilTest": {
                     "enabled": material.pica.rendering.stencilTest.enabled,
-                    "buffer": material.pica.rendering.stencilTest.bufferMask,
+                    "tester": getTestFunction(material.pica.rendering.stencilTest.testFunction.code),
                     "reference": material.pica.rendering.stencilTest.reference,
                     "mask": material.pica.rendering.stencilTest.mask,
-                    "tester": getTestFunction(material.pica.rendering.stencilTest.testFunction.code),
+                    "writeMask": material.pica.rendering.stencilTest.bufferMask,
                     "failed": getStencilOperation(material.pica.rendering.stencilOperation.failOperation.code),
                     "zFailed": getStencilOperation(material.pica.rendering.stencilOperation.zFailOperation.code),
                     "zPassed": getStencilOperation(material.pica.rendering.stencilOperation.zPassOperation.code)
-
                 },
 
                 "depthTest": {

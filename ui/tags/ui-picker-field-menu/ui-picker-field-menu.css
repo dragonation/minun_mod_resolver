@@ -1,0 +1,64 @@
+:host {
+
+    position: absolute;
+    background-color: $alpha($white(1), 0.8);
+    border-radius: 3px;
+    box-shadow: 0 1px 3px $alpha($white(0), 0.2);
+    border: solid 1dpx $alpha($white(0), 0.3);
+    box-sizing: content-box;
+    overflow: hidden;
+    opacity: 1;
+    transform: none;
+    backdrop-filter: blur(6px);
+
+    transition: opacity 0.3s;
+
+}
+
+:host(.hidden) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+}
+
+.item {
+
+    padding-left: var(--item-padding-left);
+    padding-top: var(--item-padding-top);
+    padding-right: var(--item-padding-right);
+    padding-bottom: var(--item-padding-bottom);
+    height: var(--item-height);
+
+    color: #666;
+    text-shadow: 0 0 2px #fff;
+
+    &.empty {
+        color: #ddd;
+        &:hover {
+            background-color: inherit;
+            color: #ddd;
+        }
+    }
+
+    &.selected {
+
+        background-color: #0d8ef1;
+        color: #fff;
+        text-shadow: none;
+
+        &:hover {
+            background-color: $bright(#0d8ef1, -0.1);
+            color: #fff;
+        }
+
+    }
+    
+    &:hover {
+        color: #333;
+        background-color: $alpha($white(0), 0.07);
+    }
+}

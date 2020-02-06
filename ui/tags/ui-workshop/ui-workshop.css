@@ -21,6 +21,15 @@
     top: 0;
     width: 100%;
     height: 48px;
+    transition: transform 0.3s linear;
+
+    .mode-distraction-free & {
+        transform: translateY(-44px);
+    }
+
+    .mode-content-only & {
+        transform: translateY(-48px);
+    }
 
     .tray-icon {
 
@@ -44,9 +53,19 @@
 
     position: absolute;
     left: 0;
-    top: 48px;
+    top: 0;
     width: 60px;
     height: 100%;
+    padding-top: 48px;
+    transition: transform 0.3s linear;
+
+    .mode-distraction-free & {
+        transform: translateX(-60px);
+    }
+
+    .mode-content-only & {
+        transform: translateY(-60px);
+    }
 
     .dock-icon {
 
@@ -91,7 +110,17 @@
 
     background-color: transparent;
 
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, left 0.3s linear, top 0.3s linear;
+
+    .mode-distraction-free & {
+        left: 0;
+        top: 4px;
+    }
+
+    .mode-content-only & {
+        left: 0;
+        top: 0;
+    }
 
 }
 
@@ -99,4 +128,19 @@
 ::slotted(ui-dialog),
 ::slotted(ui-window) {
     $transition(opacity, transform, 0.3s);
+}
+
+#glass {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+
+    &.hidden {
+        display: none;
+    }
+
 }

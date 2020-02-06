@@ -1,0 +1,90 @@
+:host {
+    width: 300px;
+    height: 24px;
+    font-size: inherit;
+    line-height: calc(24px - 2dpx);
+    border: solid 1dpx $alpha($white(0), 0.3);
+    background-color: $alpha($white(1), 0.5);
+    border-radius: 3px;
+    padding: 0 4px;
+    display: inline-block;
+    vertical-align: center;
+    font-family: 'Mew Sans SC', sans-serif;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+:host(.focused),
+:host(.picking) {
+    border-color: #0d8ef1;
+    box-shadow: 0 0 2px $alpha(#0d8ef1, 0.5);
+}
+
+shadow-root {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    height: 100%;
+}
+
+#field {
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+
+    width: 100%;
+
+    margin-right: -22px;
+
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 1) 22px);
+
+    shadow-root:hover & {
+        -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 22px, rgba(0, 0, 0, 1) 44px);
+    }
+
+    :host(.focused) & {
+        -webkit-mask-image: none;
+        padding-right: 6px;
+    }
+
+    :host(.focused) shadow-root:hover & {
+        margin-right: 0;
+        padding-right: 2px;
+    }
+
+    &.placeholder {
+        opacity: 0.3;
+    }
+
+}
+
+#picker-button {
+
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: -4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    position: relative;
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    shadow-root:hover & {
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    :host(.picking) & {
+        opacity: 1;
+    }
+
+}

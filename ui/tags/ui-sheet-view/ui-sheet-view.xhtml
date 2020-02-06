@@ -1,0 +1,28 @@
+<ui-scroll-view id="sheet-head" scroll-x="yes" scroll-indicator="no" @scroll="syncScrollXToBody(); updateView()">
+    <div id="sheet-head-placeholder"/>
+    <div id="sheet-head-not-fixed">
+        <slot name="column-head"/>
+    </div>
+    <div id="sheet-head-fixed-left">
+        <slot name="column-head-fixed-left"/>
+    </div>
+    <div id="sheet-head-fixed-right">
+        <slot name="column-head-fixed-right"/>
+    </div>
+    <div id="sheet-head-fixed-left-shadow"></div>
+    <div id="sheet-head-fixed-right-shadow"></div>
+</ui-scroll-view>
+<ui-scroll-view id="sheet-body" scroll-x="yes" scroll-y="yes" @scroll="syncScrollXToHead(); updateView()">
+    <div id="placeholder"/>
+    <div id="sheet-body-not-fixed">
+        <slot name="cell"/>
+    </div>
+    <div id="sheet-body-fixed-left">
+        <slot name="cell-fixed-left"/>
+    </div>
+    <div id="sheet-body-fixed-right">
+        <slot name="cell-fixed-right"/>
+    </div>
+    <div id="sheet-body-fixed-left-shadow"></div>
+    <div id="sheet-body-fixed-right-shadow"></div>
+</ui-scroll-view>

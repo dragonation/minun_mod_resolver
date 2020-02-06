@@ -1,0 +1,14 @@
+:host {
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#splitter {
+    width: 2px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    cursor: col-resize;
+}

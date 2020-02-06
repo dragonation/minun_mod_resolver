@@ -64,6 +64,7 @@ const syncWrapS = function (dom, value) {
     switch (value) {
         case "clamp": { dom.m3dTexture.wrapS = THREE.ClampToEdgeWrapping; break; };
         case "repeat": { dom.m3dTexture.wrapS = THREE.RepeatWrapping; break; };
+        case "mirror": { dom.m3dTexture.wrapS = THREE.MirroredRepeatWrapping; break; };
         default: { console.error(`Unknown wrap-s settings: ${value}`); break; }
     }
 
@@ -78,12 +79,33 @@ const syncWrapT = function (dom, value) {
     switch (value) {
         case "clamp": { dom.m3dTexture.wrapT = THREE.ClampToEdgeWrapping; break; };
         case "repeat": { dom.m3dTexture.wrapT = THREE.RepeatWrapping; break; };
+        case "mirrored": { dom.m3dTexture.wrapT = THREE.MirroredRepeatWrapping; break; };
         default: { console.error(`Unknown wrap-t settings: ${value}`); break; }
     }
 
 };
 
 const syncSRC = function (dom, value) {
+
+    if (value && value[0] === "@") {
+        let base = dom;
+        while (base && base.localName && 
+               ((base.localName.toLowerCase() !== "m3d-object") || 
+                (!$(base).attr("base")))) {
+            base = base.parentNode;
+        }
+        if (base) {
+            let url = $(base).attr("base");
+            if (url[url.length - 1] !== "/") {
+                url += "/";
+            }
+            value = url + value.slice(1);
+        }
+    }
+
+    if (value[0] === "@") {
+        return;
+    }
 
     if (!dom.m3dTexture) {
         if (value) {

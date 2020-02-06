@@ -24,6 +24,7 @@
     flex-shrink: 0;
     padding-bottom: 8px;
     border-bottom: solid 1dpx $alpha($white(0), 0.1);
+    font-size: 12px;
 
     .type {
 
@@ -144,12 +145,16 @@
 
         .feature {
             margin-right: 5px;
+            line-height: 16px;
         }
 
         .pokemon-types {
             position: absolute;
             right: 10px;
             top: 8px;
+            .pokemon-type {
+                margin-left: 4px;
+            }
         }
 
         .pokemon-id {

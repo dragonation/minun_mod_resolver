@@ -1,0 +1,10 @@
+<ui-scroll-view id="container" scroll-y="yes" scroll-indicator="no" @scroll="updateScrollPaddings(event)">
+    <div style:width="100%" style:height="calc(var(--menu-edge-padding) + ${attributes['scroll-padding-top']}dpx)"></div>
+    <tmpl:map list="tag.items ?: []" id-getter="{item.value}">
+        <div class="item" value="${item.value}" class:selected="${item.value == attributes.value}" @click="activateItem(item)">${item.text}</div>
+    </tmpl:map>
+    <tmpl:if test="(!tag.items) || (tag.items.length == 0)">
+        <div class="item empty">Empty</div>
+    </tmpl:if>
+    <div style:width="100%" style:height="calc(var(--menu-edge-padding) + ${attributes['scroll-padding-bottom']}dpx)"></div>
+</ui-scroll-view>

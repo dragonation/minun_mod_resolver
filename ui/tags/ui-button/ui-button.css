@@ -1,0 +1,40 @@
+:host {
+    display: inline-block;
+}
+
+:host(.pressing) {
+    transition: filter 0.3s;
+    filter: brightness(0.7);
+}
+
+:host(.picking) {
+    filter: brightness(0.8);
+}
+
+:host(.light) {
+    border: solid 1dpx currentColor;
+    color: #0d8ef1;
+    border-radius: 3px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+:host(.dark) {
+    border-radius: 3px;
+    color: #fff;
+    background-color: #0d8ef1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+:host(.disabled) {
+    opacity: 0.5;
+}
+
+:host(.disabled.light) {
+    color: #888;
+}
+
+:host(.disabled.dark) {
+    background-color: #888;
+}

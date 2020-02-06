@@ -11,6 +11,7 @@ module.exports = {
                     this.filler.query("input").val(value);
                 }
                 this.lastValue = value;
+                $(this).keepClass({ "filled": value ? true : false });
             }
         }
     },
@@ -20,19 +21,26 @@ module.exports = {
                 return this.filler.query("input").val();
             },
             "set": function (value) {
+                value = value + "";
                 this.filler.query("input").val(value);
+                $(this).keepClass({ "filled": value ? true : false });
+                this.lastValue = value;
             }
         }
     },
     "functors": {
         "showFocus": function () {
-            $(this).addClass("focused").trigger("focus", {});
+            $(this).addClass("focused").trigger("focus", {
+                "value": this.value
+            });
             if ($(this).attr("autoselect") === "yes") {
                 this.select();
             }
         },
         "hideFocus": function () {
-            $(this).removeClass("focused").trigger("blur", {});
+            $(this).removeClass("focused").trigger("blur", {
+                "value": this.value
+            });
         },
         "focusInput": function () {
             this.focus();
@@ -42,6 +50,7 @@ module.exports = {
                 let value = $(this).val();
                 if (this.lastValue != value) {
                     this.lastValue = value;
+                    $(this).keepClass({ "filled": value ? true : false });
                     $(this).trigger("change", { "value": value });
                 } else if (couldDelay) {
                     $.delay(() => {
@@ -50,6 +59,15 @@ module.exports = {
                 }
             };
             check(true);
+        },
+        "clearInput": function () {
+            if (this.value !== "") {
+                this.value = "";
+                this.lastValue = "";
+                $(this).keepClass({ "filled": false });
+                $(this).trigger("change", { "value": "" });
+            }
+            this.focus();
         }
     },
     "methods": {

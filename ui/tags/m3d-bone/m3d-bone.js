@@ -1,5 +1,9 @@
 const THREE = require("../../scripts/three.js");
 
+const sharedVector3 = new THREE.Vector3();
+const sharedEuler = new THREE.Euler();
+const sharedQuaternion = new THREE.Quaternion();
+
 const parseVector3 = function (value, defaultValue, expanding) {
 
     if ((!value) || (!value.trim())) {

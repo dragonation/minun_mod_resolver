@@ -74,7 +74,7 @@ $.dom.registerTag = function (names, attributes, listeners, methods, properties,
             };
 
             if (factory) {
-                let shadow = $(this.attachShadow({ "mode": "open" }));
+                let shadow = $(this.attachShadow({ "mode": "open", "delegatesFocus": options.focusable }));
                 let filler = factory.produce(this.parameters);
                 this.filler = filler;
                 filler.render(shadow);
@@ -217,6 +217,7 @@ $.dom.autoregisterTag = function (name) {
             "cssParameters": cssParameters,
             "cssMixins": cssMixins,
             "cssVariants": cssVariants,
+            "focusable": codes.focusable ? true : false
         });
 
 };

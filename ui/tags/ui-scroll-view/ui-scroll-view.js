@@ -40,6 +40,165 @@ module.exports = {
         }
     },
     "methods": {
+        "scrollBy": function (x, y, smooth) {
+
+            this.filler.query("#contents")[0].scrollTo({
+                "left": this.scrollLeft + x,
+                "top": this.scrollTop + y,
+                "behavior": smooth ? "smooth" : "auto"
+            });
+
+        },
+        "scrollTo": function (left, top, smooth) {
+
+            this.filler.query("#contents")[0].scrollTo({
+                "left": left,
+                "top": top,
+                "behavior": smooth ? "smooth" : "auto"
+            });
+
+        },
+        "scrollForRect": function (targetRect, edgeOffset) {
+
+            if (!edgeOffset) {
+                edgeOffset = 0;
+            } else {
+                edgeOffset = $.dom.getDevicePixels(edgeOffset);
+            }
+
+            let scrollTop = this.scrollTop;
+            let scrollLeft = this.scrollLeft;
+
+            let rect = this.getClientRects()[0];
+
+            let domRect = {
+                "left": targetRect.left - scrollLeft + rect.left,
+                "top": targetRect.top - scrollTop + rect.top,
+                "width": targetRect.width,
+                "height": targetRect.height
+            };
+            domRect.right = domRect.left + domRect.width;
+            domRect.bottom = domRect.top + domRect.height;
+
+            let originalScrollTop = this.scrollTop;
+            let newScrollTop = originalScrollTop;
+            if (domRect.height <= rect.height) {
+                if (domRect.top < rect.top) {
+                    newScrollTop -= rect.top - domRect.top;
+                    if (domRect.height + edgeOffset * 2 < rect.height) {
+                        newScrollTop -= edgeOffset;
+                    } else {
+                        newScrollTop -= (rect.height - domRect.height) / 2;
+                    }
+                } else if (domRect.bottom > rect.bottom) {
+                    newScrollTop += domRect.bottom - rect.bottom;
+                    if (domRect.height + edgeOffset * 2 < rect.height) {
+                        newScrollTop += edgeOffset;
+                    } else {
+                        newScrollTop += (rect.height - domRect.height) / 2;
+                    }
+                }
+            } else {
+                newScrollTop += domRect.top - rect.top;
+            }
+
+            let originalScrollLeft = this.scrollLeft;
+            let newScrollLeft = originalScrollLeft;
+            if (domRect.width <= rect.width) {
+                if (domRect.left < rect.left ) {
+                    newScrollLeft -= rect.left - domRect.left;
+                    if (domRect.width + edgeOffset * 2 < rect.width) {
+                        newScrollLeft -= edgeOffset;
+                    } else {
+                        newScrollLeft -= (rect.width - domRect.width) / 2;
+                    }
+                } else if (domRect.right > rect.right) {
+                    newScrollLeft += domRect.right - rect.right;
+                    if (domRect.width + edgeOffset * 2 < rect.width) {
+                        newScrollLeft += edgeOffset;
+                    } else {
+                        newScrollLeft += (rect.width - domRect.width) / 2;
+                    }
+                }
+            } else {
+                newScrollLeft += domRect.left - rect.left;
+            }
+
+            if ((newScrollTop !== originalScrollTop) ||
+                (newScrollLeft !== originalScrollLeft)) {
+                this.filler.query("#contents")[0].scrollTo({
+                    "left": newScrollLeft,
+                    "top": newScrollTop,
+                    "behavior": "smooth"
+                });
+            }
+
+        },
+        "scrollIntoView": function (dom, edgeOffset) {
+
+            if (!edgeOffset) {
+                edgeOffset = 0;
+            } else {
+                edgeOffset = $.dom.getDevicePixels(edgeOffset);
+            }
+
+            let domRect = dom.getClientRects()[0];
+            let rect = this.getClientRects()[0];
+
+            let originalScrollTop = this.scrollTop;
+            let newScrollTop = originalScrollTop;
+            if (domRect.height <= rect.height) {
+                if (domRect.top < rect.top) {
+                    newScrollTop -= rect.top - domRect.top;
+                    if (domRect.height + edgeOffset * 2 < rect.height) {
+                        newScrollTop -= edgeOffset;
+                    } else {
+                        newScrollTop -= (rect.height - domRect.height) / 2;
+                    }
+                } else if (domRect.bottom > rect.bottom) {
+                    newScrollTop += domRect.bottom - rect.bottom;
+                    if (domRect.height + edgeOffset * 2 < rect.height) {
+                        newScrollTop += edgeOffset;
+                    } else {
+                        newScrollTop += (rect.height - domRect.height) / 2;
+                    }
+                }
+            } else {
+                newScrollTop += domRect.top - rect.top;
+            }
+
+            let originalScrollLeft = this.scrollLeft;
+            let newScrollLeft = originalScrollLeft;
+            if (domRect.width <= rect.width) {
+                if (domRect.left < rect.left ) {
+                    newScrollLeft -= rect.left - domRect.left;
+                    if (domRect.width + edgeOffset * 2 < rect.width) {
+                        newScrollLeft -= edgeOffset;
+                    } else {
+                        newScrollLeft -= (rect.width - domRect.width) / 2;
+                    }
+                } else if (domRect.right > rect.right) {
+                    newScrollLeft += domRect.right - rect.right;
+                    if (domRect.width + edgeOffset * 2 < rect.width) {
+                        newScrollLeft += edgeOffset;
+                    } else {
+                        newScrollLeft += (rect.width - domRect.width) / 2;
+                    }
+                }
+            } else {
+                newScrollLeft += domRect.left - rect.left;
+            }
+
+            if ((newScrollTop !== originalScrollTop) ||
+                (newScrollLeft !== originalScrollLeft)) {
+                this.filler.query("#contents")[0].scrollTo({
+                    "left": newScrollLeft,
+                    "top": newScrollTop,
+                    "behavior": "smooth"
+                });
+            }
+
+        },
         "prepareDOMs": function () {
 
             if (this.query) { return; }

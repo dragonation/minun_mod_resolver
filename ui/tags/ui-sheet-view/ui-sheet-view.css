@@ -1,0 +1,155 @@
+$default-column-width: 100px;
+$default-row-height: 28px;
+$default-head-height: 28px;
+$default-extra-padding-bottom: 56px;
+
+$column-width: var(--column-width, $default-column-width);
+$row-height: var(--row-height, $default-row-height);
+$head-height: var(--head-height, $default-head-height);
+$extra-padding-bottom: var(--extra-padding-bottom, $default-extra-padding-bottom);
+
+:host {
+    display: flex;
+    flex-direction: column;
+    border: solid 1dpx rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: relative;
+}
+
+shadow-root {
+    display: contents;
+}
+
+#sheet-head {
+
+    font-weight: bold;
+    color: $alpha($white(0), 0.4);
+    text-align: center;
+    height: $head-height;
+    position: relative;
+
+    #sheet-head-not-fixed,
+    #sheet-head-fixed-left,
+    #sheet-head-fixed-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    #sheet-head-not-fixed {
+        width: 100%;
+    }
+
+}
+
+::slotted(ui-sheet-view-column) {
+    background-color: #f3f3f3;
+    position: absolute;
+    top: 0;
+    height: $head-height;
+    line-height: $head-height;
+    border: solid 1dpx #ccc;
+    border-top: none;
+    margin-right: -1dpx;
+    margin-bottom: -1dpx;
+}
+
+::slotted(ui-sheet-view-column.first) {
+    border-left: none;
+    padding-left: 1dpx;
+}
+
+::slotted(ui-sheet-view-column.last) {
+    border-right: none;
+    margin-right: 0;
+}
+
+::slotted(ui-sheet-view-cell) {
+    position: absolute;
+    border: solid 1dpx #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: calc($row-height - 1dpx);
+    height: $row-height;
+    background-color: #fff;
+    margin-right: -1dpx;
+    margin-bottom: -1dpx;
+}
+
+::slotted(ui-sheet-view-cell.first) {
+    border-left: none;
+    padding-left: 1dpx;
+}
+
+::slotted(ui-sheet-view-cell.last) {
+    border-right: none;
+    margin-right: 0;
+}
+
+::slotted(ui-sheet-view-cell.not-used) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#sheet-body {
+
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 100px;
+
+    #sheet-body-fixed-left,
+    #sheet-body-fixed-right {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    #sheet-body-not-fixed {
+        width: 100%;
+    }
+
+}
+
+#placeholder,
+#sheet-head-placeholder {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#sheet-head-fixed-right-shadow,
+#sheet-body-fixed-right-shadow {
+
+    width: 4px;
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    position: absolute;
+    pointer-events: none;
+    display: none;
+
+    :host(.has-fixed-right) & {
+        display: block;
+    }
+    
+}
+
+#sheet-head-fixed-left-shadow,
+#sheet-body-fixed-left-shadow {
+
+    width: 4px;
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+    position: absolute;
+    pointer-events: none;
+    display: none;
+
+    :host(.has-fixed-left) & {
+        display: block;
+    }
+
+}

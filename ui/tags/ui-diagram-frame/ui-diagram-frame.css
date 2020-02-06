@@ -11,7 +11,7 @@
     z-index: 1;
     backdrop-filter: blur(calc(3px * var(--ui-scale)));
     background-color: $alpha($white(1), 0.8);
-    font-family: sans-serif;
+    font-family: 'Mew Sans SC', sans-serif;
     font-size: 12px;
     $transition(opacity, transform, 0.3s);
 }
@@ -23,6 +23,7 @@
 }
 
 #ui-diagram-frame-container {
+    
     width: 100%;
     height: 100%;
     display: flex;
@@ -35,6 +36,7 @@
         transform: none;
         pointer-events: auto;
     }
+
 }
 
 #ui-diagram-frame-title-bar {
@@ -52,6 +54,7 @@
     padding-right: 40px;
     flex-shrink: 0;
     flex-grow: 0;
+    font-size: 11px;
 }
 
 #ui-diagram-frame-action-button {
