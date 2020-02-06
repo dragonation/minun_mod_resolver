@@ -1,0 +1,11 @@
+<m3d-clip id="${animation.name}" duration="${f16(animation.duration)}"><tmpl:map list="keys(animation.tracks.materials ?: {})" item-name="material"><tmpl:map list="keys(animation.tracks.materials[material])" item-name="path">
+    <m3d-track type="value" constant="${animation.tracks.materials[material][path].constant ? 'yes' : 'no'}" target="${material}.${path}"
+               times="@animations/times.f32.bin"
+               values="@animations/${animation.name}/materials/${material}/${path}.f32.bin"/></tmpl:map></tmpl:map><tmpl:map list="keys(animation.tracks.meshes ?: {})" item-name="mesh"><tmpl:map list="keys(animation.tracks.meshes[mesh])" item-name="path">
+    <m3d-track type="value" constant="${animation.tracks.meshes[mesh][path].constant ? 'yes' : 'no'}" target="${mesh}.${path}"
+               times="@animations/times.f32.bin"
+               values="@animations/${animation.name}/meshes/${mesh}/${path}.i8.bin"/></tmpl:map></tmpl:map><tmpl:map list="keys(animation.tracks.bones ?: {})" item-name="bone"><tmpl:map list="keys(animation.tracks.bones[bone])" item-name="path">
+    <m3d-track type="vector" constant="${animation.tracks.bones[bone][path].constant ? 'yes' : 'no'}" target="${bone}.${path}"
+               times="@animations/times.f32.bin"
+               values="@animations/${animation.name}/bones/${bone}/${path}.f32.bin"/></tmpl:map></tmpl:map>
+</m3d-clip>

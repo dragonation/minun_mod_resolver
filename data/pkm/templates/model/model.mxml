@@ -1,4 +1,4 @@
-<m3d-object id="model" name="${model.name}">
+<m3d-object id="model" name="${model.name}" base="/~pkmsm/model/res/${id}">
 
     <!-- skeleton -->
 $${include('skeleton.xml')}

@@ -81,7 +81,7 @@ const decompress = function (compression, compressedData, stop0, stop1, decompre
         return compressedData.slice(0);
     }
 
-    const granny2Path = @path(entryPath, "data/gr2/granny2.exe");
+    let granny2Path = @path(entryPath, "data/gr2/granny2.exe");
 
     let inputFile = @.fs.tempFile();
     @.fs.writeFile.sync(inputFile, compressedData);
@@ -98,6 +98,11 @@ const decompress = function (compression, compressedData, stop0, stop1, decompre
         outputFile
     ];
 
+    if (@.process.os !== "windows") {
+        switches.unshift(granny2Path);
+        granny2Path = "wine";
+    }
+
     try {
 
         let spawned = @.task.execute.sync(granny2Path, switches, true);
@@ -106,11 +111,12 @@ const decompress = function (compression, compressedData, stop0, stop1, decompre
 
         return buffer;
 
+    } catch (error) {
+        @error(error);
     } finally {
         @.fs.deleteFile(inputFile).finished(() => {});
         @.fs.deleteFile(outputFile).finished(() => {});
     }
-
 
 };
 

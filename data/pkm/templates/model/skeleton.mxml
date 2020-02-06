@@ -1,5 +1,5 @@
 <m3d-skeleton root="${bones[0].name}" id="model-skeleton"><tmpl:map list="bones">
-    <m3d-bone name="${item.name}" parent="${item.parent}" 
+    <m3d-bone name="${item.name}" parent="${item.parent}" index="${index}"
               scale="${map(item.scale, {f16?})}" independent-scale="yes"
               translation="${map(item.translation, {f16?})}" rotation="zyx ${map(item.rotation, {f16?})}"/></tmpl:map>
 </m3d-skeleton>
