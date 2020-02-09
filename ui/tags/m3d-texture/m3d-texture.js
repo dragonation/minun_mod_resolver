@@ -12,6 +12,9 @@ const prepareTexture = function (dom) {
             syncFlipY(dom, $(dom).attr("flip-y"));
             syncWrapS(dom, $(dom).attr("wrap-s"));
             syncWrapT(dom, $(dom).attr("wrap-t"));
+            syncOffset(dom, $(dom).attr("offset"));
+            syncRepeat(dom, $(dom).attr("repeat"));
+            syncRotation(dom, $(dom).attr("rotation"));
             trigTextureUpdate(dom);
         }
     } else {
@@ -79,9 +82,45 @@ const syncWrapT = function (dom, value) {
     switch (value) {
         case "clamp": { dom.m3dTexture.wrapT = THREE.ClampToEdgeWrapping; break; };
         case "repeat": { dom.m3dTexture.wrapT = THREE.RepeatWrapping; break; };
-        case "mirrored": { dom.m3dTexture.wrapT = THREE.MirroredRepeatWrapping; break; };
+        case "mirror": { dom.m3dTexture.wrapT = THREE.MirroredRepeatWrapping; break; };
         default: { console.error(`Unknown wrap-t settings: ${value}`); break; }
     }
+
+};
+
+const syncRotation = function (dom, value) {
+
+    if (!dom.m3dTexture) { return; }
+
+    if (!value) { return; }
+
+    value = parseFloat(value);
+
+    dom.m3dTexture.rotation = value;
+
+};
+
+const syncOffset = function (dom, value) {
+
+    if (!dom.m3dTexture) { return; }
+
+    if (!value) { return; }
+
+    value = value.trim().split(/[,\s]+/).map((value) => parseFloat(value));
+
+    dom.m3dTexture.offset.set(value[0], value[1]);
+
+};
+
+const syncRepeat = function (dom, value) {
+
+    if (!dom.m3dTexture) { return; }
+
+    if (!value) { return; }
+
+    value = value.trim().split(/[,\s]+/).map((value) => parseFloat(value));
+
+    dom.m3dTexture.repeat.set(value[0], value[1]);
 
 };
 
@@ -138,7 +177,7 @@ const trigTextureUpdate = function (dom) {
 };
 
 module.exports = {
-    "attributes": [ "id", "src", "flip-y", "wrap-s", "wrap-t" ],
+    "attributes": [ "id", "src", "flip-y", "wrap-s", "wrap-t", "offset", "repeat", "rotation" ],
     "listeners": {
         "onconnected": function () {
             trigTextureUpdate(this);
@@ -150,6 +189,9 @@ module.exports = {
                 case "flip-y": { syncFlipY(this, value); break; };
                 case "wrap-s": { syncWrapS(this, value); break; };
                 case "wrap-t": { syncWrapT(this, value); break; };
+                case "offset": { syncOffset(this, value); break; };
+                case "repeat": { syncRepeat(this, value); break; };
+                case "rotation": { syncRotation(this, value); break; };
                 default: { break; };
             }
         },

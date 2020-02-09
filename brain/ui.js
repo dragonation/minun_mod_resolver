@@ -13,6 +13,8 @@ bundledExtnames[".js"] = true;
 bundledExtnames[".xhtml"] = true;
 bundledExtnames[".css"] = true;
 bundledExtnames[".json"] = true;
+bundledExtnames[".frag"] = true;
+bundledExtnames[".vert"] = true;
 
 let packageJSON = {};
 let bundleJSONs = Object.create(null);

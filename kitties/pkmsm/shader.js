@@ -1933,8 +1933,8 @@ Register.glslMap = {
     "gpu_v4": "uv",
     "gpu_v5": "uv2",
     "gpu_v6": "uv3",
-    "gpu_v7": "boneIndex", // not skin index
-    "gpu_v8": "boneWeight", // not skin weight
+    "gpu_v7": "skinIndex", 
+    "gpu_v8": "skinWeight", 
 
     "gpu_o0": "fragPosition",
     "gpu_o1": "fragQuaternionNormal",

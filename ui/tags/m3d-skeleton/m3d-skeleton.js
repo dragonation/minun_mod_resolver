@@ -171,12 +171,9 @@ const syncChildren = function (dom) {
     if (dom.m3dSkeleton.boneMatrices.length !== dom.m3dSkeleton.bones.length * 16) {
         dom.m3dSkeleton.boneMatrices = new Float32Array(dom.m3dSkeleton.bones.length * 16);
     }
-    dom.m3dSkeleton.boneInverses = undefined;
-    dom.m3dSkeleton.calculateInverses();
 
-    // update bone matrix
-    dom.m3dSkeleton.update();
     dom.m3dSkeleton.calculateInverses();
+    dom.m3dSkeleton.update();
 
     // remove rest old bones
     for (let bone of bones) {
@@ -187,6 +184,7 @@ const syncChildren = function (dom) {
 
     if (dom.parentNode && (typeof dom.parentNode.m3dSyncChildren === "function")) {
         dom.parentNode.m3dSyncChildren();
+        // dom.m3dSkeleton.calculateInverses();
     }
 
 };

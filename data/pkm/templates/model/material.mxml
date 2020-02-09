@@ -1,5 +1,5 @@
 <tmpl:map list="material.textures"><m3d-texture id="${material.name}-${index}" name="${item.name}" 
-             src="@textures/${item.name}.png" flip-y="${item.flipY ? 'yes' : 'no'}"
+             src="@textures/${item.name}.png" flip-y="yes"
              wrap-s="${item.wrapS}" wrap-t="${item.wrapT}"
              min-filter="${item.minFilter}" mag-filter="${item.magFilter}"
              offset="${item.offset}" repeat="${item.repeat}" rotation="${item.rotation}"/>
@@ -7,7 +7,7 @@
               preset="shader" skinning="yes" 
               side="${material.faceCulling;{'frontFace'?'back-face', 'backFace'?'front-face', 'never'?'both-side'}}"
               vertex-shader="@shaders/${material.shaders.vertex}.vert" fragment-shader="@shaders/${material.shaders.fragment}.frag"
-              textures="${join(concat(map(material.textures, {'uv' + ($2 ? ($2 + 1) : '') + ':' + material.name + '-' + $2}), map(keys(material.luts), {$1 + ':lut-' + material.luts[$1]})), ';')}"
+              textures="${join(concat(map(material.textures, {'@map' + ($2 ? ($2 + 1) : '') + ':' + material.name + '-' + $2}), map(keys(material.luts), {'@lut' + upperCase($1[0]) + slice($1, 1) + ':lut-' + material.luts[$1]})), ';')}"
               alpha-test="${material.alphaTest ? 0 : 1}"
               depth-test="${material.depthTest.enabled ? 'yes' : 'no'}" depth-write="${material.depthTest.writable ? 'yes' : 'no'}" depth-test-function="${material.depthTest.tester}"
               stencil-test="${material.stencilTest.enabled ? 'yes' : 'no'}" stencil-test-function="${material.stencilTest.tester}" stencil-test-reference="${material.stencilTest.reference}" stencil-test-mask="${material.stencilTest.mask}"
@@ -16,49 +16,48 @@
               blending-destination="${material.blending.destination.color},${material.blending.destination.alpha}" blending-equation="${material.blending.equation.color},${material.blending.equation.alpha}" blending-source="${material.blending.source.color},${material.blending.source.alpha}">
 
     <!-- mesh uniforms -->
-    <m3d-uniform name="hasTangent">false</m3d-uniform>
-    <m3d-uniform name="hasBone">false</m3d-uniform>
-    <m3d-uniform name="hasBoneW">false</m3d-uniform>
+    <m3d-uniform name="hasTangent" type="bool">false</m3d-uniform>
+    <m3d-uniform name="hasBone" type="bool">false</m3d-uniform>
+    <m3d-uniform name="hasBoneW" type="bool">false</m3d-uniform>
 
     <!-- material uniforms -->
-    <tmpl:map list="keys(material.uniforms)">
-    <m3d-uniform name="${item}">${uniform(material.uniforms[item])}</m3d-uniform></tmpl:map>
-
+    <tmpl:map list="keys(material.uniforms)"><m3d-uniform name="${item}" type="${item == 'vectors' ? 'vec4[]' : 'bool'}">${uniform(material.uniforms[item])}</m3d-uniform>
+    </tmpl:map>
     <!-- color uniforms -->
-    <m3d-uniform name="emission">${uniform(material.colors.emission)}</m3d-uniform>
-    <m3d-uniform name="ambient">${uniform(material.colors.ambient)}</m3d-uniform>
-    <m3d-uniform name="diffuse">${uniform(material.colors.diffuse)}</m3d-uniform>
-    <m3d-uniform name="speculars">${uniform(material.colors.speculars)}</m3d-uniform>
+    <m3d-uniform name="emission" type="vec4">${uniform(material.colors.emission)}</m3d-uniform>
+    <m3d-uniform name="ambient" type="vec4">${uniform(material.colors.ambient)}</m3d-uniform>
+    <m3d-uniform name="diffuse" type="vec4">${uniform(material.colors.diffuse)}</m3d-uniform>
+    <m3d-uniform name="speculars" type="vec4[]">${uniform(material.colors.speculars)}</m3d-uniform>
 
     <!-- constant uniforms -->
-    <m3d-uniform name="constants">${uniform(map(material.constants.indices, {material.constants.slots[$1]}))}</m3d-uniform>
+    <m3d-uniform name="constants" type="vec4[]">${uniform(map(material.constants.indices, {material.constants.slots[$1]}))}</m3d-uniform>
 
-    <m3d-uniform name="environmentAmbient">0,0,0,0</m3d-uniform>
-    <m3d-uniform name="worldScales">1,1,1</m3d-uniform>
+    <m3d-uniform name="environmentAmbient" type="vec4">0,0,0,0</m3d-uniform>
 
     <!-- camera uniforms -->
-    <m3d-uniform name="cameraNear">10</m3d-uniform>
-    <m3d-uniform name="cameraScale">0.01</m3d-uniform>
+    <m3d-uniform name="cameraNear" type="float">10</m3d-uniform>
+    <m3d-uniform name="cameraScale" type="float">0.01</m3d-uniform>
 
     <!-- light uniforms -->
-    <m3d-uniform name="lightsCount">0</m3d-uniform>
-    <m3d-uniform name="lightDirectionals">false, false, false</m3d-uniform>
-    <m3d-uniform name="lightPositions">0,0,0,0,0,0,0,0,0</m3d-uniform>
-    <m3d-uniform name="lightDirections">0,0,0,0,0,0,0,0,0</m3d-uniform>
-    <m3d-uniform name="lightAmbients">0,0,0,0,0,0,0,0,0,0,0,0</m3d-uniform>
-    <m3d-uniform name="lightDiffuses">0,0,0,0,0,0,0,0,0,0,0,0</m3d-uniform>
-    <m3d-uniform name="lightSpeculars">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</m3d-uniform>
+    <m3d-uniform name="lightsCount" type="int">0</m3d-uniform>
+    <m3d-uniform name="lightDirectionals" type="bool[]">false, false, false</m3d-uniform>
+    <m3d-uniform name="lightPositions" type="vec3[]">0,0,0,0,0,0,0,0,0</m3d-uniform>
+    <m3d-uniform name="lightDirections" type="vec3[]">0,0,0,0,0,0,0,0,0</m3d-uniform>
+    <m3d-uniform name="lightAmbients" type="vec4[]">0,0,0,0,0,0,0,0,0,0,0,0</m3d-uniform>
+    <m3d-uniform name="lightDiffuses" type="vec4[]">0,0,0,0,0,0,0,0,0,0,0,0</m3d-uniform>
+    <m3d-uniform name="lightSpeculars" type="vec4[]">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</m3d-uniform>
 
     <!-- rendering stage uniforms -->
-    <m3d-uniform name="renderingDepth">false</m3d-uniform>
-    <m3d-uniform name="depthAlpha">1</m3d-uniform>
-    <m3d-uniform name="depthDiscard">false</m3d-uniform>
+    <m3d-uniform name="renderingDepth" type="bool">false</m3d-uniform>
+    <m3d-uniform name="depthAlpha" type="float">1</m3d-uniform>
+    <m3d-uniform name="depthDiscard" type="bool">false</m3d-uniform>
 
     <!-- uv vectors -->
-    <m3d-uniform name="uvVectors">${uniform(slice(material.uniforms.vectors, 0, 10))}</m3d-uniform>
+    <m3d-uniform name="uvVectors" type="vec4[]">${uniform(slice(material.uniforms.vectors, 0, 10))}</m3d-uniform>
 
     <!-- patches for normal map -->
-    <m3d-uniform name="useDirectNormal">${uniform(material.useDirectNormal)}</m3d-uniform>
+    <m3d-uniform name="useDirectNormal" type="bool">${uniform(material.useDirectNormal)}</m3d-uniform>
+
     <!-- outlines.depth, outlines.alpha not covered -->
 
 </m3d-material>

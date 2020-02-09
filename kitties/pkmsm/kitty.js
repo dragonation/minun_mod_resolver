@@ -365,6 +365,7 @@ let saveU8Buffer = (array, path) => {
                 let record = {
                     "name": mesh.name,
                     "material": mesh.material,
+                    "uniforms": mesh.uniforms,
                     "attributes": {
                         "bones": {},
                         "indices": {},
@@ -376,7 +377,7 @@ let saveU8Buffer = (array, path) => {
                 if (attributes.bones.indices) {
                     record.attributes.bones.indices = `@meshes/${looper}-${mesh.name}/bone.indices.f32.bin`;
                     let path = @path(@mewchan().libraryPath, "pkmsm/models", id, "meshes", `${looper}-${mesh.name}`, "bone.indices.f32.bin");
-                    saveF32Buffer(attributes.bones.indices.map((x) => mesh.bones[x]), path);
+                    saveF32Buffer(attributes.bones.indices, path);
                 }
                 if (attributes.bones.weights) {
                     record.attributes.bones.weights = `@meshes/${looper}-${mesh.name}/bone.weights.f32.bin`;

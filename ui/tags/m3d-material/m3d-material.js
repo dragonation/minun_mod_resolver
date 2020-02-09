@@ -4,6 +4,9 @@ const mapKeys = Object.create(null);
 
 mapKeys["color"] = "map";
 
+const defaultVertexShader = $.res.load("/tags/m3d-material/default-shader.vert");
+const defaultFragmentShader = $.res.load("/tags/m3d-material/default-shader.frag");
+
 const prepareMaterial = function (dom) {
 
     let newMaterial = false;
@@ -17,15 +20,21 @@ const prepareMaterial = function (dom) {
             break;
         };
         case "shader": {
-            if ((!dom.m3dMaterial) || (!dom.m3dMaterial.isRawShaderMaterial)) {
+            if ((!dom.m3dMaterial) || (!dom.m3dMaterial.isShaderMaterial)) {
                 if (dom.m3dMaterial) { dom.m3dMaterial.dispose(); }
+
                 let parameter = {};
                 if (dom.m3dVertexShader && dom.m3dFragmentShader) {
                     parameter.vertexShader = dom.m3dVertexShader.code;
                     parameter.fragmentShader = dom.m3dFragmentShader.code;
                 } else {
-                    parameter.vertexShader = "void main() {\n\tgl_Position = vec4( 0.0, 0.0, 0.0, 1.0 );\n}";
+                    parameter.vertexShader = defaultVertexShader;
+                    parameter.fragmentShader = defaultFragmentShader;
                 }
+                
+                // parameter.vertexShader = defaultVertexShader;
+                // parameter.fragmentShader = defaultFragmentShader;
+
                 dom.m3dMaterial = new THREE.RawShaderMaterial(parameter);
                 newMaterial = true;
             }
@@ -35,6 +44,8 @@ const prepareMaterial = function (dom) {
     }
 
     if (newMaterial && dom.m3dMaterial) {
+        dom.m3dMaterial.m3dFromTagObject = dom;
+        delete dom.m3dTextures;
         syncID(dom, $(dom).attr("id"));
         syncColor(dom, $(dom).attr("color"));
         syncTextures(dom, $(dom).attr("textures"));
@@ -439,7 +450,7 @@ const syncVertexShader = function (dom, value) {
 
     if (!dom.m3dMaterial) { return; }
 
-    if (!dom.m3dMaterial.isRawShaderMaterial) { return; }
+    if (!dom.m3dMaterial.isShaderMaterial) { return; }
 
     if (dom.m3dVertexShader && (dom.m3dVertexShader.value === value)) { return; }
 
@@ -469,11 +480,15 @@ const syncVertexShader = function (dom, value) {
 
         if ($(dom).attr("vertex-shader") !== origin) { return; }
 
+        // dom.m3dVertexShader = { 
+        //     "value": origin, 
+        //     "code": "attribute vec4 position; void main() { gl_Position = vec4(position.xyz, 1);} " 
+        // };
         dom.m3dVertexShader = { "value": origin, "code": shader };
 
         if (!dom.m3dMaterial) { return; }
 
-        if (!dom.m3dMaterial.isRawShaderMaterial) { return; }
+        if (!dom.m3dMaterial.isShaderMaterial) { return; }
 
         disposeMaterial(dom);
         prepareMaterial(dom);
@@ -547,7 +562,7 @@ const syncFragmentShader = function (dom, value) {
 
     if (!dom.m3dMaterial) { return; }
 
-    if (!dom.m3dMaterial.isRawShaderMaterial) { return; }
+    if (!dom.m3dMaterial.isShaderMaterial) { return; }
 
     if (dom.m3dFragmentShader && (dom.m3dFragmentShader.value === value)) { return; }
 
@@ -577,11 +592,12 @@ const syncFragmentShader = function (dom, value) {
 
         if ($(dom).attr("fragment-shader") !== origin) { return; }
 
+        // dom.m3dFragmentShader = { "value": origin, "code": "void main() { gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0); } " };
         dom.m3dFragmentShader = { "value": origin, "code": shader };
 
         if (!dom.m3dMaterial) { return; }
 
-        if (!dom.m3dMaterial.isRawShaderMaterial) { return; }
+        if (!dom.m3dMaterial.isShaderMaterial) { return; }
 
         disposeMaterial(dom);
         prepareMaterial(dom);
@@ -721,7 +737,9 @@ const syncTextures = function (dom, value) {
                         } else {
                             let name = usage;
                             if (name[0] === "@") { name = name.slice(1); }
-                            dom.m3dMaterial.uniforms[name] = new THREE.Uniform(m3dTexture.m3dGetTexture());
+                            if (dom.m3dMaterial.uniforms) {
+                                dom.m3dMaterial.uniforms[name] = new THREE.Uniform(m3dTexture.m3dGetTexture());
+                            }
                         }
                         // TODO: remove last texture for dispose
                     }
@@ -751,6 +769,8 @@ const syncUniforms = function (dom) {
     if (!dom.m3dMaterial) { return; }
 
     if (dom.syncingUniform) { return; }
+
+    if (!dom.m3dMaterial.uniforms) { return; }
 
     let notPrepared = false;
     let uniforms = $(dom).children("m3d-uniform");

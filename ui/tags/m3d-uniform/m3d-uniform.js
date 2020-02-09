@@ -1,7 +1,7 @@
 const THREE = require("../../scripts/three.js");
 
 module.exports = {
-    "attributes": [ "name" ],
+    "attributes": [ "name", "type" ],
     "listeners": {
         "onconnected": function () {
 
@@ -11,46 +11,17 @@ module.exports = {
                     return;
                 }
 
-                let value = this.textContent.trim().split(/[\s,]+/);
-                if (value.length === 0) {
-                    value = 0;
-                } else if (value.length === 1) {
-                    if (value === "true") {
-                        value = 1;
-                    } else if (value === "false") {
-                        value = 0;
-                    } else {
-                        value = parseFloat(value);    
-                    }
-                } else {
-                    let array = new Float32Array(value.length);
-                    for (let looper = 0; looper < value.length; ++looper) {
-                        if (value[looper] === "true") {
-                            array[looper] = 1;
-                        } else if (value[looper] === "false") {
-                            array[looper] = 0;
-                        } else {
-                            array[looper] = parseFloat(value[looper]);    
-                        }
-                    }
-                    value = array;
-                }
-
-                if ((typeof value === "number") && (typeof this.m3dUniform.value === "number")) {
-                    this.m3dUniform.value = value;
-                } else if ((value instanceof Float32Array) && 
-                           (this.m3dUniform.value instanceof Float32Array) && 
-                           (this.m3dUniform.value.length === value.length)) {
-                    for (let looper = 0; looper < value.length; ++looper) {
-                        this.m3dUniform.value[looper] = value[looper];
-                    }
-                } else {
-                    let name = $(this).attr("name");
-                    this.m3dUniform = new THREE.Uniform(value);
-                }
+                this.m3dRefreshUniform();
 
             });
             this.observer.observe(this, { "characterData": true });
+
+        },
+        "onupdated": function () {
+
+            if (!this.m3dUniform) { return; }
+
+            this.m3dRefreshUniform();
 
         },
         "ondisconnected": function () {
@@ -61,34 +32,131 @@ module.exports = {
         }
     },
     "methods": {
+        "m3dRefreshUniform": function () {
+
+            let value = this.textContent.trim().split(/[\s,]+/);
+            if (value.length === 0) {
+                value = 0;
+            } else if (value.length === 1) {
+                if (value[0] === "true") {
+                    value = 1;
+                } else if (value[0] === "false") {
+                    value = 0;
+                } else {
+                    value = parseFloat(value[0]);    
+                }
+            } else {
+                let array = [];
+                for (let looper = 0; looper < value.length; ++looper) {
+                    if (value[looper] === "true") {
+                        array[looper] = 1;
+                    } else if (value[looper] === "false") {
+                        array[looper] = 0;
+                    } else {
+                        array[looper] = parseFloat(value[looper]);    
+                    }
+                }
+                value = array;
+            }
+
+            let type = this.getAttribute("type");
+            switch (type) {
+                case "bool": { 
+                    if (this.m3dUniform) { 
+                        this.m3dUniform.value = value ? true : false;
+                    } else {
+                        this.m3dUniform = new THREE.Uniform(value ? true : false);
+                    }
+                    break; 
+                }
+                case "bool[]": { 
+                    if (this.m3dUniform) { 
+                        this.m3dUniform.value = value.map((value) => value ? true : false);
+                    } else {
+                        this.m3dUniform = new THREE.Uniform(value.map((value) => value ? true : false));
+                    }
+                    break; 
+                }
+                case "int": 
+                case "float": { 
+                    if (this.m3dUniform) { 
+                        this.m3dUniform.value = value;
+                    } else {
+                        this.m3dUniform = new THREE.Uniform(value);
+                    }
+                    break; 
+                }
+                case "int[]":
+                case "float[]": { 
+                    if (this.m3dUniform) { 
+                        this.m3dUniform.value = value;
+                    } else {
+                        this.m3dUniform = new THREE.Uniform(value);
+                    }
+                    break; 
+                }
+                case "vec3": { 
+                    if (this.m3dUniform) { 
+                        this.m3dUniform.value = new THREE.Vector3(value[0], value[1], value[2]);
+                    } else {
+                        this.m3dUniform = new THREE.Uniform(new THREE.Vector3(value[0], value[1], value[2]));
+                    }
+                    break; 
+                }
+                case "vec3[]": { 
+                    let array = [];
+                    for (let looper = 0; looper < value.length; looper += 3) {
+                        array.push(new THREE.Vector3(value[looper], value[looper + 1], value[looper + 2]));
+                    }
+                    if (this.m3dUniform) { 
+                        this.m3dUniform.value = array;
+                    } else {
+                        this.m3dUniform = new THREE.Uniform(array);
+                    }
+                    break; 
+                }
+                case "vec4": { 
+                    if (this.m3dUniform) { 
+                        this.m3dUniform.value = new THREE.Vector4(value[0], value[1], value[2], value[3]);
+                    } else {
+                        this.m3dUniform = new THREE.Uniform(new THREE.Vector4(value[0], value[1], value[2], value[3]));
+                    }
+                    break; 
+                }
+                case "vec4[]": { 
+                    let array = [];
+                    for (let looper = 0; looper < value.length; looper += 4) {
+                        array.push(new THREE.Vector4(value[looper], value[looper + 1], 
+                                                     value[looper + 2], value[looper + 3]));
+                    }
+                    if (this.m3dUniform) { 
+                        this.m3dUniform.value = array;
+                    } else {
+                        this.m3dUniform = new THREE.Uniform(array);
+                    }
+                    break; 
+                }
+                default: { 
+                    if ((typeof value === "number") && (typeof this.m3dUniform.value === "number")) {
+                        this.m3dUniform.value = value;
+                    } else if (Array.isArray(value) && 
+                               Array.isArray(this.m3dUniform.value) && 
+                               (this.m3dUniform.value.length === value.length)) {
+                        for (let looper = 0; looper < value.length; ++looper) {
+                            this.m3dUniform.value[looper] = value[looper];
+                        }
+                    } else {
+                        this.m3dUniform = new THREE.Uniform(value);
+                    }
+                    break; 
+                }
+            }
+
+        },
         "m3dGetUniform": function () {
 
             if (!this.m3dUniform) {
-                let value = this.textContent.trim().split(/[\s,]+/);
-                if (value.length === 0) {
-                    value = 0;
-                } else if (value.length === 1) {
-                    if (value[0] === "true") {
-                        value = 1;
-                    } else if (value[0] === "false") {
-                        value = 0;
-                    } else {
-                        value = parseFloat(value[0]);    
-                    }
-                } else {
-                    let array = new Float32Array(value.length);
-                    for (let looper = 0; looper < value.length; ++looper) {
-                        if (value[looper] === "true") {
-                            array[looper] = 1;
-                        } else if (value[looper] === "false") {
-                            array[looper] = 0;
-                        } else {
-                            array[looper] = parseFloat(value[looper]);
-                        }
-                    }
-                    value = array;
-                }
-                this.m3dUniform = new THREE.Uniform(value);
+                this.m3dRefreshUniform();
             }
 
             return this.m3dUniform;

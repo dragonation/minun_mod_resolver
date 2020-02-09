@@ -5,15 +5,16 @@ const prepareMesh = function (dom) {
     if (!dom.m3dMesh) {
 
         let geometry = new THREE.BufferGeometry();
-
-        if (dom.m3dIndices) {
-            geometry.setIndex(dom.m3dIndices);
-        }
+        geometry.m3dFromTagObject = dom;
 
         if (dom.m3dVertices) {
             let vertexUnitSize = parseInt($(dom).attr("vertex-unit-size"));
             if ((!vertexUnitSize) || (!isFinite(vertexUnitSize))) { vertexUnitSize = 3; }
             geometry.setAttribute("position", new THREE.Float32BufferAttribute(dom.m3dVertices, vertexUnitSize));
+        }
+
+        if (dom.m3dIndices) {
+            geometry.setIndex(dom.m3dIndices);
         }
 
         if (dom.m3dNormals) {
@@ -63,6 +64,15 @@ const prepareMesh = function (dom) {
             dom.m3dMesh = new THREE.Mesh(geometry);
         }
 
+        dom.m3dMesh.m3dFromTagObject = dom;
+
+        dom.m3dMesh.onBeforeRender = function () {
+            if (dom.m3dBeforeRender) {
+                return dom.m3dBeforeRender.apply(dom, arguments);
+            }
+        };
+
+        syncName(dom, $(dom).attr("name"));
         syncMaterials(dom, $(dom).attr("materials"));
         syncSkeleton(dom, $(dom).attr("skeleton"));
 
@@ -101,7 +111,7 @@ const syncMaterials = function (dom, value) {
         dom.m3dMaterials = Object.create(null);
     }
 
-    let materials = value.trim().split(",").map((id) => id.trim()).filter((id) => id);
+    let materials = value.trim().split(";").map((id) => id.trim()).filter((id) => id);
     materials.forEach((material) => {
 
         if (!dom.m3dMaterials[material]) {
@@ -126,6 +136,7 @@ const syncMaterials = function (dom, value) {
                     if (m3dMaterial) {
                         dom.m3dMesh.material = m3dMaterial.m3dGetMaterial();
                         // TODO: remove last material for dispose
+                        // TODO: make material array
                     }
                 }
             };
@@ -211,6 +222,14 @@ const syncSkeleton = function (dom, value) {
 
 };
 
+const syncName = function (dom, value) {
+
+    if (!dom.m3dMesh) { return; }
+
+    dom.m3dMesh.name = value;
+
+};
+
 const getBinLoader = function (dom) {
 
     while (dom && (typeof dom.m3dGetBin !== "function")) {
@@ -265,6 +284,7 @@ module.exports = {
                     }
                     break;
                 }
+                case "name": { syncName(this, value); break; };
                 case "vertex-unit-size": {
                     if (this.m3dVertices && this.m3dMesh) {
                         let vertexUnitSize = parseInt(value);

@@ -24775,28 +24775,33 @@
 						}
 
 						var geometry = objects.update( object );
-						var material = object.material;
+						// minun: ignore no position geometry
+						if ((!geometry.attributes) || geometry.attributes["position"]) {
 
-						if ( Array.isArray( material ) ) {
+							var material = object.material;
 
-							var groups = geometry.groups;
+							if ( Array.isArray( material ) ) {
 
-							for ( var i = 0, l = groups.length; i < l; i ++ ) {
+								var groups = geometry.groups;
 
-								var group = groups[ i ];
-								var groupMaterial = material[ group.materialIndex ];
+								for ( var i = 0, l = groups.length; i < l; i ++ ) {
 
-								if ( groupMaterial && groupMaterial.visible ) {
+									var group = groups[ i ];
+									var groupMaterial = material[ group.materialIndex ];
 
-									currentRenderList.push( object, geometry, groupMaterial, groupOrder, _vector3.z, group );
+									if ( groupMaterial && groupMaterial.visible ) {
+
+										currentRenderList.push( object, geometry, groupMaterial, groupOrder, _vector3.z, group );
+
+									}
 
 								}
 
+							} else if ( material.visible ) {
+
+								currentRenderList.push( object, geometry, material, groupOrder, _vector3.z, null );
+
 							}
-
-						} else if ( material.visible ) {
-
-							currentRenderList.push( object, geometry, material, groupOrder, _vector3.z, null );
 
 						}
 
@@ -27077,6 +27082,9 @@
 
 			this.boneInverses = [];
 
+			// minun: we need to ensure root bone is identity
+			var offsetMatrix = this.bones[ 0 ] ? this.bones[ 0 ].matrixWorld : _identityMatrix;
+
 			for ( var i = 0, il = this.bones.length; i < il; i ++ ) {
 
 				var inverse = new Matrix4();
@@ -27084,6 +27092,9 @@
 				if ( this.bones[ i ] ) {
 
 					inverse.getInverse( this.bones[ i ].matrixWorld );
+					_offsetMatrix.multiplyMatrices(inverse, offsetMatrix);
+
+					inverse.copy(_offsetMatrix);
 
 				}
 
@@ -50046,5 +50057,7 @@
 	exports.sRGBEncoding = sRGBEncoding;
 
 	Object.defineProperty(exports, '__esModule', { value: true });
+
+	window.THREE = exports;
 
 }));

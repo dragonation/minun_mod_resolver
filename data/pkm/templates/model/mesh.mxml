@@ -7,8 +7,12 @@
           normal-unit-size="4" normals="@meshes/${index}-${mesh.name}/normals.f32.bin"
           tangent-unit-size="4" tangents="@meshes/${index}-${mesh.name}/tangents.f32.bin"
           color-unit-size="4" colors="@meshes/${index}-${mesh.name}/colors.u8.bin"
-          uv-unit-size="2" uvs="@meshes/${index}-${mesh.name}/uvs[0].f32.bin"
-          uv-2-unit-size="2" uvs-2="@meshes/${index}-${mesh.name}/uvs[1].f32.bin"
-          uv-3-unit-size="2" uvs-3="@meshes/${index}-${mesh.name}/uvs[2].f32.bin"
+          uv-unit-size="4" uvs="@meshes/${index}-${mesh.name}/uvs[0].f32.bin"
+          uv-2-unit-size="4" uvs-2="@meshes/${index}-${mesh.name}/uvs[1].f32.bin"
+          uv-3-unit-size="4" uvs-3="@meshes/${index}-${mesh.name}/uvs[2].f32.bin"
+          bones="${join(mesh.bones, ',')}"
           bone-indices="@meshes/${index}-${mesh.name}/bone.indices.f32.bin"
-          bone-weights="@meshes/${index}-${mesh.name}/bone.weights.f32.bin"/>
+          bone-weights="@meshes/${index}-${mesh.name}/bone.weights.f32.bin"
+          has-tangent="${mesh.uniforms.hasTangent ? 'yes' : 'no'}"
+          has-bone="${mesh.uniforms.hasBone ? 'yes' : 'no'}"
+          has-bone-w="${mesh.uniforms.hasBoneW ? 'yes' : 'no'}"/>

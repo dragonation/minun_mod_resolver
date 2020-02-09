@@ -319,7 +319,7 @@ const syncChildren = function (dom) {
         if (typeof child.m3dGetObject === "function") {
             let m3dObject = child.m3dGetObject();
             if (m3dObject) {
-                m3dObject.m3dFromTagObject = true;
+                m3dObject.m3dFromTagObject = child;
                 dom.m3dObject.add(m3dObject);
                 children.delete(m3dObject);
             }
