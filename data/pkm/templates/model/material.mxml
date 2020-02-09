@@ -6,6 +6,7 @@
 </tmpl:map><m3d-material id="${material.name}" name="${material.name}" priorities="${material.layer},${material.priority}"
               preset="shader" skinning="yes" 
               side="${material.faceCulling;{'frontFace'?'back-face', 'backFace'?'front-face', 'never'?'both-side'}}"
+              transparent="yes" alpha-premultiplied="yes"
               vertex-shader="@shaders/${material.shaders.vertex}.vert" fragment-shader="@shaders/${material.shaders.fragment}.frag"
               textures="${join(concat(map(material.textures, {'@map' + ($2 ? ($2 + 1) : '') + ':' + material.name + '-' + $2}), map(keys(material.luts), {'@lut' + upperCase($1[0]) + slice($1, 1) + ':lut-' + material.luts[$1]})), ';')}"
               alpha-test="${material.alphaTest ? 0 : 1}"

@@ -51,6 +51,8 @@ const prepareMaterial = function (dom) {
         syncTextures(dom, $(dom).attr("textures"));
         syncSide(dom, $(dom).attr("side"));
         syncSkinning(dom, $(dom).attr("skinning"));
+        syncTransparent(dom, $(dom).attr("transparent"));
+        syncAlphaPremultiplied(dom, $(dom).attr("alpha-premultiplied"));
         syncAlphaTest(dom, $(dom).attr("alpha-test"));
         syncDepthTest(dom, $(dom).attr("depth-test"));
         syncDepthWrite(dom, $(dom).attr("depth-write"));
@@ -431,6 +433,30 @@ const syncStencilZPassed = function (dom, value) {
 
 };
 
+const syncTransparent = function (dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
+    if (!value) {
+        return;
+    }
+   
+    dom.m3dMaterial.transparent = value === "yes";
+
+};
+
+const syncAlphaPremultiplied = function (dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
+    if (!value) {
+        return;
+    }
+    
+    dom.m3dMaterial.premultipliedAlpha = value === "yes";
+
+};
+
 const syncID = function (dom, value) {
 
     if (!dom.m3dMaterial) { return; }
@@ -480,10 +506,6 @@ const syncVertexShader = function (dom, value) {
 
         if ($(dom).attr("vertex-shader") !== origin) { return; }
 
-        // dom.m3dVertexShader = { 
-        //     "value": origin, 
-        //     "code": "attribute vec4 position; void main() { gl_Position = vec4(position.xyz, 1);} " 
-        // };
         dom.m3dVertexShader = { "value": origin, "code": shader };
 
         if (!dom.m3dMaterial) { return; }
@@ -592,7 +614,6 @@ const syncFragmentShader = function (dom, value) {
 
         if ($(dom).attr("fragment-shader") !== origin) { return; }
 
-        // dom.m3dFragmentShader = { "value": origin, "code": "void main() { gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0); } " };
         dom.m3dFragmentShader = { "value": origin, "code": shader };
 
         if (!dom.m3dMaterial) { return; }
@@ -829,6 +850,7 @@ module.exports = {
         "id", "color",
         "textures",
         "side", "alpha-test",
+        "transparent", "alpha-premultiplied",
         "depth-test", "depth-write", "depth-test-function",
         "skinning",
         "vertex-shader", "fragment-shader",
@@ -853,6 +875,8 @@ module.exports = {
                 case "color": { syncColor(this, value); break; };
                 case "textures": { syncTextures(this, value); break; };
                 case "side": { syncSide(this, value); break; };
+                case "transparent": { syncTransparent(this, value); break; };
+                case "alpha-premultiplied": { syncAlphaPremultiplied(this, value); break; };
                 case "skinning": { syncSkinning(this, value); break; };
                 case "alpha-test": { syncAlphaTest(this, value); break; };
                 case "depth-test": { syncDepthTest(this, value); break; };

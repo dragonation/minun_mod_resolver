@@ -215,7 +215,7 @@ App.prototype.openModel = function (id, from) {
 
         };
 
-        let skeleton = dom.find("m3d-skeleton").attr("helper", "yes");
+        let skeleton = dom.find("m3d-skeleton");
 
         // filling uniforms for reverse engineering shaders
 
