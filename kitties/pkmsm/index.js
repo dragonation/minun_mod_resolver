@@ -128,15 +128,25 @@ Index.prototype.loadPokemon = function (id, offset, options, progress) {
             "files": []
         };
 
+        // 0 model
+        // 1 normal textures
+        // 2 shiny textures
+        // 3 shadow textures
+        // 4 fighting animations
+        // 5 pet animations
+        // 6 map animations
+        // 7 acting animations
+        // 8 other info
+
         let files = [
             ["model", 4, 0],
             ["extra", 8, 8]
         ];
 
+        files.push(["textures.normal", 4, 1]);
+        
         if (options.shiny) {
             files.push(["textures.shiny", 4, 2]);
-        } else {
-            files.push(["textures.normal", 4, 1]);
         }
 
         if (options.shadow) {

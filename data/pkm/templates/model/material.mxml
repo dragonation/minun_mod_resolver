@@ -1,5 +1,5 @@
 <tmpl:map list="material.textures"><m3d-texture id="${material.name}-${index}" name="${item.name}" 
-             src="@textures/${item.name}.png" flip-y="yes"
+             src="@${'$'}{prefix ?: ''}textures/${item.name}.png" flip-y="yes"
              wrap-s="${item.wrapS}" wrap-t="${item.wrapT}"
              min-filter="${item.minFilter}" mag-filter="${item.magFilter}"
              offset="${item.offset}" repeat="${item.repeat}" rotation="${item.rotation}"/>

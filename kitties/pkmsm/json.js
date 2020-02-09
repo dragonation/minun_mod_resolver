@@ -768,14 +768,17 @@ Model.prototype.toJSON = function (pcs, options) {
                 "vertices": {},
                 "fragments": {}
             },
-            "textures": {},
+            "textures": {
+                "shiny": {},
+                "normal": {}
+            },
             "luts": {},
             "materials": {},
             "meshes": [],
             "animations": {}
         };
 
-        const prepareTexture = (texture) => {
+        const prepareTexture = (texture, prefix) => {
 
             if (json.textures[texture.name]) {
                 return;
@@ -794,7 +797,7 @@ Model.prototype.toJSON = function (pcs, options) {
                 looper += 4;
             }
 
-            json.textures[texture.name] = {
+            json.textures[prefix][texture.name] = {
                 "format": "rgba",
                 "name": texture.name,
                 "data": {
@@ -841,12 +844,15 @@ Model.prototype.toJSON = function (pcs, options) {
 
             const textures = material.textureCoordinates.map((coordinate, index) => {
 
-                const texture = (options.shiny ? pcs.textures.shiny : pcs.textures.normal).files.filter((file) => @.is(file, Texture) && file.name === coordinate.name)[0];
+                const shinyTexture = pcs.textures.shiny.files.filter((file) => @.is(file, Texture) && file.name === coordinate.name)[0];
+                const normalTexture = pcs.textures.normal.files.filter((file) => @.is(file, Texture) && file.name === coordinate.name)[0];
+                // const texture = normalTexture; 
 
-                prepareTexture(texture);
+                prepareTexture(normalTexture, "normal");
+                prepareTexture(shinyTexture, "shiny");
 
                 let record = {
-                    "name": texture.name,
+                    "name": normalTexture.name,
                     "magFilter": (coordinate.magFilter.code === Model.TextureMagnificationFilter.NEAREST ?
                         "nearest" : "linear"),
                     "minFilter": (coordinate.minFilter.code === Model.TextureMinificationFilter.NEAREST ?

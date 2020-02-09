@@ -31,7 +31,8 @@
 
     &:hover #ui-diagram-frame-resizer,
     &:hover #ui-diagram-frame-close-button,
-    &:hover #ui-diagram-frame-action-button {
+    &:hover #ui-diagram-frame-action-button,
+    #ui-diagram-frame-action-button.picking {
         opacity: 1;
         transform: none;
         pointer-events: auto;

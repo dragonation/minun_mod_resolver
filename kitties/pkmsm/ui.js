@@ -58,13 +58,9 @@ const zlib = require("zlib");
     let pokemon = parseInt(path[0].split("-")[1]);
     let model = parseInt(path[0].split("-")[2]);
 
-    let shiny = path.slice(1).filter(x => x === "shiny").length > 0;
-
     return @mew.rpc("pkmsm.loadModel", {
         "pokemon": pokemon,
         "model": model,
-        "shiny": shiny,
-        "shadow": true
     }).then(function (model) {
         response.headers["Content-Type"] = "application/json";
         response.writer.end(JSON.stringify(model), this.test);
@@ -99,40 +95,72 @@ const zlib = require("zlib");
 
 });
 
-@servlet.get("/~pkmsm/model/bin//*", function (request, response) {
+@servlet.get("/~pkmsm/model/data/mesh//*", function (request, response) {
 
     this.break();
 
-    let path = @path(@mewchan().libraryPath, "pkmsm/models", request.path.slice("/~pkmsm/model/bin/".length));
+    let path = @path(@mewchan().libraryPath, "pkmsm/models", request.path.slice("/~pkmsm/model/data/mesh/".length));
 
     let data = {};
 
     return @.async(function () {
 
-        @.fs.scanFiles(path, -1, (record) => {
-            return (record.type === "dir") || (@.fs.extname(record.path) === ".bin");
-        }).then(function (records) {
-            this.next(records.filter((record) => record.type === "file").map((record) => {
-                return @.fs.relativePath(path, record.path);
-            }));
-        }).pipe(this);
-
-    }).all(function (file) {
-
-        @.fs.readFile(@path(path, file)).then(function (binary) {
-
-            data[file] = binary.toString("base64");
-
-            this.next();
-
-        }).pipe(this);
-
-    }).then(function () {
+        @.fs.readFile(@path(path, "mesh.data.json")).pipe(this);
+        
+    }).then(function (data) {
 
         response.headers["Content-Type"] = "application/json";
         response.headers["Content-Encoding"] = "gzip";
 
-        response.writer.end(zlib.gzipSync(JSON.stringify(data)), this.test);
+        response.writer.end(zlib.gzipSync(data), this.test);
+
+    });
+
+});
+
+@servlet.get("/~pkmsm/model/data/animation//*", function (request, response) {
+
+    this.break();
+
+    let path = @path(@mewchan().libraryPath, "pkmsm/models", request.path.slice("/~pkmsm/model/data/animation/".length));
+
+    let data = {};
+
+    return @.async(function () {
+
+        @.fs.readFile(@path(path, "animation.data.json")).pipe(this);
+        
+    }).then(function (data) {
+
+        response.headers["Content-Type"] = "application/json";
+        response.headers["Content-Encoding"] = "gzip";
+
+        response.writer.end(zlib.gzipSync(data), this.test);
+
+    });
+
+});
+
+@servlet.get("/~pkmsm/model/save//*", function (request, response) {
+
+    this.break();
+
+    let id = request.path.slice("/~pkmsm/model/save/".length);
+
+    let pokemon = parseInt(id.split("-")[1]);
+    let model = parseInt(id.split("-")[2]);
+
+    return @mew.rpc("pkmsm.exportModel", {
+        "pokemon": pokemon,
+        "model": model
+    }, {
+        "timeout": 30000
+    }).then(function (file) {
+
+        response.headers["Content-Type"] = "application/octet-stream";
+        response.headers["Content-Disposition"] = `attachment; filename="${id}.m3d"`;
+
+        response.writer.end(@.fs.readFile.sync(file), this.test);
 
     });
 

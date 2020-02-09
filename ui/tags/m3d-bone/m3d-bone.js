@@ -97,12 +97,57 @@ const prepareBone = function (dom) {
 
         dom.m3dBone = new THREE.Bone();
 
+        let originUpdateMatrix = dom.m3dBone.updateMatrix;
+
+        let scaleMatrix = new THREE.Matrix4();
+        let rotationMatrix = new THREE.Matrix4();
+        let translationMatrix = new THREE.Matrix4();
+
+        let restoreMatrix = new THREE.Matrix4();
+
+        // rewrite bone matrix calculation
+        dom.m3dBone.updateMatrix = function () {
+
+            if (!dom.m3dIndependentScale) {
+                return originUpdateMatrix.call(this);
+            }
+
+            scaleMatrix.makeScale(this.scale.x, this.scale.y, this.scale.z);
+
+            rotationMatrix.makeRotationFromQuaternion(this.quaternion);
+
+            if (this.parent instanceof THREE.Bone) {
+                translationMatrix.makeTranslation(
+                    this.position.x * this.parent.scale.x,
+                    this.position.y * this.parent.scale.y,
+                    this.position.z * this.parent.scale.z);
+                restoreMatrix.makeScale(
+                    1 / this.parent.scale.x,
+                    1 / this.parent.scale.y,
+                    1 / this.parent.scale.z);
+            } else {
+                translationMatrix.makeTranslation(this.position.x, this.position.y, this.position.z);
+                restoreMatrix.identity();
+            }
+
+            this.matrix.identity();
+            this.matrix.premultiply(scaleMatrix);
+            this.matrix.premultiply(rotationMatrix);
+            this.matrix.premultiply(translationMatrix);
+            this.matrix.premultiply(restoreMatrix);
+
+            this.matrixWorldNeedsUpdate = true;
+
+        };
+
         syncName(dom, $(dom).attr("name"));
         syncIndex(dom, $(dom).attr("index"));
 
         syncRotation(dom, $(dom).attr("rotation"));
         syncTranslation(dom, $(dom).attr("translation"));
         syncScale(dom, $(dom).attr("scale"));
+
+        syncIndependentScale(dom, $(dom).attr("independent-scale"));
 
     }
 
@@ -207,9 +252,16 @@ const syncScale = function (dom, value) {
 
 };
 
+const syncIndependentScale = function (dom, value) {
+
+    dom.m3dIndependentScale = value === "yes";
+
+};
+
 module.exports = {
     "attributes": [
         "name", "index", "parent",
+        "independent-scale",
         "rotation", "translation", "scale"
     ],
     "listeners": {
@@ -221,6 +273,7 @@ module.exports = {
                 case "rotation": { syncRotation(this, value); break; };
                 case "translation": { syncTranslation(this, value); break; };
                 case "scale": { syncScale(this, value); break; };
+                case "independent-scale": { syncIndependentScale(this, value); break; }
                 default: { break; };
             }
         },

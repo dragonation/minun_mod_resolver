@@ -31,9 +31,6 @@ const prepareMaterial = function (dom) {
                     parameter.vertexShader = defaultVertexShader;
                     parameter.fragmentShader = defaultFragmentShader;
                 }
-                
-                // parameter.vertexShader = defaultVertexShader;
-                // parameter.fragmentShader = defaultFragmentShader;
 
                 dom.m3dMaterial = new THREE.RawShaderMaterial(parameter);
                 newMaterial = true;
@@ -487,6 +484,9 @@ const syncVertexShader = function (dom, value) {
         while (base && base.localName && 
                ((base.localName.toLowerCase() !== "m3d-object") || 
                 (!$(base).attr("base")))) {
+            if (base.localName.toLowerCase() === "m3d-object") {
+                console.log($(base).attr("base"));
+            }
             base = base.parentNode;
         }
         if (base) {
@@ -497,6 +497,7 @@ const syncVertexShader = function (dom, value) {
             value = url + value.slice(1);
         }
     }
+    if (value && value[0] === "@") { return; }
 
     let resetShader = (error, shader) => {
 
@@ -604,6 +605,10 @@ const syncFragmentShader = function (dom, value) {
             }
             value = url + value.slice(1);
         }
+    }
+
+    if (value && value[0] === "@") {
+        return;
     }
 
     let resetShader = (error, shader) => {

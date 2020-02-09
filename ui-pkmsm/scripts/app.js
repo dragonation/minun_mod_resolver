@@ -108,7 +108,9 @@ App.prototype.openModel = function (id, from) {
         "height": size.height + "px",
     });
 
-    frame[0].loadUI("/~pkmsm/frames/model-viewer/model-viewer");
+    frame[0].loadUI("/~pkmsm/frames/model-viewer/model-viewer", {
+        "id": id
+    });
 
     this.loadModel(id, (error, result) => {
 
@@ -135,7 +137,7 @@ App.prototype.openModel = function (id, from) {
 
         let decoded = undefined;
         let binaryCallbacks = Object.create(null);
-        $.ajax("/~pkmsm/model/bin/" + result.id, {
+        $.ajax("/~pkmsm/model/data/mesh/" + result.id, {
             "success": (result) => {
                 let decoded = Object.create(null);
                 for (let key in result) {
@@ -353,21 +355,22 @@ App.prototype.openModel = function (id, from) {
 
                 // bounding box or light color
                 // if (jsonMaterial.shaders.vertex !== "Default") {
-                //     vectors[84].set(
-                //         (boundingBox.max[0] - boundingBox.min[0]) * worldScales[0] + threeMesh.parent.position.x,
-                //         (boundingBox.max[2] - boundingBox.min[2]) * worldScales[2] + threeMesh.parent.position.z,
-                //         boundingBox.min[1] * worldScales[1] + threeMesh.parent.position.y,
-                //         boundingBox.max[1] * worldScales[1] + threeMesh.parent.position.y);
+                    vectors[84].set(
+                        (maxes[0] - mins[0]) * scale, // + threeMesh.parent.position.x,
+                        (maxes[2] - mins[2]) * scale, // + threeMesh.parent.position.z,
+                        mins[1] * scale, // + threeMesh.parent.position.y,
+                        maxes[1] * scale // + threeMesh.parent.position.y
+                    );
                 // } else {
-                    if (directionalLight) {
-                        vectors[84].set(
-                            directionalLight.color.r,
-                            directionalLight.color.g,
-                            directionalLight.color.b,
-                            directionalLight.intensity);
-                    } else {
-                        vectors[84].set(1, 1, 1, 0);
-                    }
+                    // if (directionalLight) {
+                    //     vectors[84].set(
+                    //         directionalLight.color.r,
+                    //         directionalLight.color.g,
+                    //         directionalLight.color.b,
+                    //         directionalLight.intensity);
+                    // } else {
+                    //     vectors[84].set(1, 1, 1, 0);
+                    // }
                 // }
 
                 // projection matrices
@@ -498,7 +501,7 @@ App.prototype.loadModel = function (id, callback) {
 
     $.ajax(`/~pkmsm/model/${id}`, {
         "success": (result) => {
-            $.ajax(`/~pkmsm/model/res/${result.id}/model.xml`, {
+            $.ajax(`/~pkmsm/model/res/${result.id}/normal-model.xml`, {
                 "dataType": "text",
                 "success": (html) => {
                     callback(null, Object.assign(result, {

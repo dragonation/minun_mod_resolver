@@ -7,7 +7,7 @@ module.exports = {
                 parent.bringToFirst(this);
             }
         },
-        "loadUI": function (path) {
+        "loadUI": function (path, extra) {
 
             let { Frame } = require(`${path}.js`);
 
@@ -38,6 +38,9 @@ module.exports = {
             let parameters = { "tag": this, "name": name };
             if (Frame.parameters) {
                 Object.assign(parameters, Frame.parameters);
+            }
+            if (extra) {
+                Object.assign(parameters, extra);
             }
 
             let functors = {};
@@ -338,12 +341,27 @@ module.exports = {
         },
         "listActions": function () {
 
-            let actions = this.filler.query("#ui-diagram-frame-clients").children("ui-diagram-action");
+            let actions = [];
+
+            this.filler.query("#ui-diagram-frame-clients").children("ui-diagram-action").each((index, action) => {
+                let text = $(action).text();
+                if (text) {
+                    actions.push({
+                        "text": text,
+                        "action": () => {
+                            $(action).trigger("action");
+                        }
+                    });
+                }
+            });
+
             if (this.frame.listActions) {
                 actions = this.frame.listActions(actions);
             }
 
-            ;
+            let app = $.app(this);
+
+            app.showActionList(actions, this.filler.query("#ui-diagram-frame-action-button")[0]);
 
         }
     }
