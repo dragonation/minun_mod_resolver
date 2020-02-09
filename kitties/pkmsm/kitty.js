@@ -552,26 +552,31 @@ let saveU8Buffer = (array, path, dict) => {
 
         builder.addEntry(@path(basePath, "shadow/model.xml"));
 
-        let meshData = JSON.parse(@.fs.readFile.sync(@path(basePath, "mesh.data.json"), "utf8"));
-        for (let key in meshData) {
-            builder.addEntry(key, { "data": Buffer.from(meshData[key], "base64") });
-        }
+        builder.addEntry(@path(basePath, "mesh.data.json"));
+        builder.addEntry(@path(basePath, "animation.data.json"));
+        builder.addEntry(@path(basePath, "shadow/mesh.data.json"));
 
-        let animationData = JSON.parse(@.fs.readFile.sync(@path(basePath, "animation.data.json"), "utf8"));
-        for (let key in animationData) {
-            builder.addEntry(key, { "data": Buffer.from(animationData[key], "base64") });
-        }
+        // let meshData = JSON.parse(@.fs.readFile.sync(@path(basePath, "mesh.data.json"), "utf8"));
+        // for (let key in meshData) {
+        //     builder.addEntry(key, { "data": Buffer.from(meshData[key], "base64") });
+        // }
 
-        let shadowMeshData = JSON.parse(@.fs.readFile.sync(@path(basePath, "shadow/mesh.data.json"), "utf8"));
-        for (let key in shadowMeshData) {
-            builder.addEntry(`shadow/${key}`, { "data": Buffer.from(shadowMeshData[key], "base64") });
-        }
+        // let animationData = JSON.parse(@.fs.readFile.sync(@path(basePath, "animation.data.json"), "utf8"));
+        // for (let key in animationData) {
+        //     builder.addEntry(key, { "data": Buffer.from(animationData[key], "base64") });
+        // }
+
+        // let shadowMeshData = JSON.parse(@.fs.readFile.sync(@path(basePath, "shadow/mesh.data.json"), "utf8"));
+        // for (let key in shadowMeshData) {
+        //     builder.addEntry(`shadow/${key}`, { "data": Buffer.from(shadowMeshData[key], "base64") });
+        // }
 
         builder.addEntry("package.json", {
             "data": JSON.stringify({
                 "date": (@.format.date(new Date(), "YYYY-MM-DD hh:mm:ss.SSS")),
                 "models": [ "normal-model.xml", "shiny-model.xml", "shadow/model.xml" ],
-                "default": [ "normal-model.xml", "shadow/model.xml" ]
+                "default": [ "normal-model.xml", "shadow/model.xml" ],
+                "data": [ "mesh.data.json", "animation.data.json", "shadow/mesh.data.json" ]
             }, null, 4)
         });
 
