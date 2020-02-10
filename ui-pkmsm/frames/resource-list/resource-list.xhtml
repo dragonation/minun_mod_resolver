@@ -1,0 +1,13 @@
+<ui-collection-view id="list"
+                    style:--cell-width="100%" style:--cell-height="24px"
+                    style:--extra-padding-bottom="160px"
+                    style:--section-header-size="24px"
+                    prop:sections="${groups}" prop:cells-getter="{section.files}"
+                    @scroll="updateConnections()">
+    <tmpl:slot name="cell">
+        <ui-button class="cell" class:selected="${selected && selected.id == cell.id}" title="${cell.id}" @click="selectResource(cell)" @dblclick="openResource(cell)">
+            <span class="type ${slice(cell.extname, 1)}">${slice(cell.extname, 1)}</span><span class="basename">${cell.basename}</span><span class="extname">${cell.extname}</span>
+        </ui-button>
+    </tmpl:slot>
+    <tmpl:slot name="section-header"><span class="group-name" class:empty="${!section.name}">${section.name ?: 'empty'}</span><span class="cell-count">${section.files.length}</span></tmpl:slot>
+</ui-collection-view>

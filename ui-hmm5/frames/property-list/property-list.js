@@ -63,7 +63,7 @@ Frame.prototype.getTargetIDs = function () {
 Frame.functors = {
     "updateConnections": function () {
         let parent = $(this.dom).parent()[0];
-        if (parent && parent.updateConnections) {
+        if (parent && parent.updateLayouts) {
             parent.updateLayouts([this.dom]);
         }
     }

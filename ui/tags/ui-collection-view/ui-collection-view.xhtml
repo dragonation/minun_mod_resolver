@@ -1,6 +1,6 @@
 <div id="fixed">
     <slot name="fixed"/>
-    <ui-scroll-view id="container" scroll-y="yes" @scroll="updateView()">
+    <ui-scroll-view id="container" scroll-y="yes" @scroll="updateView();triggerScrollEvent(parameter)">
         <div id="placeholder"/>
         <slot/>
     </ui-scroll-view>

@@ -98,7 +98,7 @@ App.prototype.openModel = function (id, from) {
 
     let filename = id.split("#")[0].split("/").slice(-1)[0];
     let frame = $("<ui-diagram-frame>").attr({
-        "caption": filename,
+        "caption": `Model “${filename}”`,
         "resizable": "yes",
         "wire-id": id
     }).css({
@@ -491,9 +491,124 @@ App.prototype.openModel = function (id, from) {
 
 };
 
+App.prototype.openResourceList = function (id, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(200),
+        "height": $.dom.getDevicePixels(340)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("#")[0].split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": `Resources of “${filename}”`,
+        "resizable": "yes",
+        "wire-id": id + "/resource-list"
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~pkmsm/frames/resource-list/resource-list", {
+        "id": id
+    });
+
+    $.ajax(`/~pkmsm/model/files/${id}`, {
+        "success": function (result) {
+
+            let files = result.split("\n").map((file) => file.trim()).filter((file) => file);
+
+            let groups = Object.create(null);
+
+            for (let file of files) {
+                let group = file.split("/").slice(0, -1).join("/");
+                let filename = file.split("/").slice(-1)[0];
+                let basename = filename.split(".").slice(0, -1).join(".");
+                let extname = filename.split(".").slice(-1)[0];
+                if (extname) {
+                    extname = "." + extname;
+                }
+                if (!groups[group]) {
+                    groups[group] = [];
+                } 
+                groups[group].push({
+                    "group": group,
+                    "id": file,
+                    "filename": filename,
+                    "basename": basename,
+                    "extname": extname
+                });
+            }
+
+            frame[0].frame.filler.fill({
+                "groups": Object.keys(groups).map((name) => ({
+                    "name": name,
+                    "files": groups[name].sort((a, b) => a.id.localeCompare(b.id))
+                }))
+            });
+
+        },
+        "error": function () {
+            console.error("Failed list reource files");
+        }
+    });
+
+    this.filler.query("#diagram").append(frame);
+
+    frame[0].bringToFirst();
+
+};
+
+App.prototype.openImage = function (id, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(240),
+        "height": $.dom.getDevicePixels(240)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": filename,
+        "resizable": "yes",
+        "wire-id": id
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~pkmsm/frames/image-viewer/image-viewer");
+
+    frame[0].frame.filler.fill({
+        "target": id
+    });
+
+    this.filler.query("#diagram").append(frame);
+
+    frame[0].bringToFirst();
+
+};
+
 App.prototype.smartOpen = function (id, from) {
 
-    this.openModel(id);
+    let extname = id.split(".").slice(-1)[0];
+    switch (extname) {
+        case "png": { this.openImage(id, from); break; }
+        case "vert": { break; }
+        case "frag": { break; }
+        default: { 
+            if (/^pokemon-([0-9]+)-([0-9]+)$/.test(id)) {
+                this.openModel(id, from);
+            } else {
+                console.log(`Unknown target[${id}]`);
+            }
+            break; 
+        }
+    }
 
 };
 

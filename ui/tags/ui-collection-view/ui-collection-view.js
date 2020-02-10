@@ -114,6 +114,8 @@ module.exports = {
             sizes.cellWidth = parseFloat(sizes["--cell-width"]);
             if (!isFinite(sizes.cellWidth)) {
                 sizes.cellWidth = parseFloat(this.filler.parameters.css["default-cell-width"]);
+            } else if (sizes["--cell-width"][sizes["--cell-width"].length - 1] === "%") {
+                sizes.cellWidth = this.clientWidth * sizes.cellWidth / 100;
             }
             sizes.cellHeight = parseFloat(sizes["--cell-height"]);
             if (!isFinite(sizes.cellHeight)) {
@@ -282,6 +284,8 @@ module.exports = {
             sizes.cellWidth = parseFloat(sizes["--cell-width"]);
             if (!isFinite(sizes.cellWidth)) {
                 sizes.cellWidth = parseFloat(this.filler.parameters.css["default-cell-width"]);
+            } else if (sizes["--cell-width"][sizes["--cell-width"].length - 1] === "%") {
+                sizes.cellWidth = this.clientWidth * sizes.cellWidth / 100;
             }
             sizes.cellHeight = parseFloat(sizes["--cell-height"]);
             if (!isFinite(sizes.cellHeight)) {
@@ -546,6 +550,9 @@ module.exports = {
                 "scrollTop": scrollView.scrollTop,
             };
             this.updateView();
+        },
+        "triggerScrollEvent": function (event) {
+            $(this).trigger("scroll", event);
         }
     }
 };

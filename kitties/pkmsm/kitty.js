@@ -220,7 +220,7 @@ let saveU8Buffer = (array, path, dict) => {
 
 @heard.rpc("pkmsm.loadModel").then(function (request) {
 
-    let id = `pokemon-${request.pokemon}-${request.model}`;
+    let id = `pokemon-${("00" + request.pokemon).slice(-3)}-${request.model}`;
 
     let basePath = @path(@mewchan().libraryPath, "pkmsm/models", id);
 
@@ -239,7 +239,7 @@ let saveU8Buffer = (array, path, dict) => {
     return index.then(function (index) {
 
         index.loadPokemon(request.pokemon, request.model, options, (pc, loaded, total) => {
-            @debug(`Loading pokemon-${request.pokemon}-${request.model} package[${pc.usage}]`);
+            @debug(`Loading pokemon-${("00" + request.pokemon).slice(-3)}-${request.model} package[${pc.usage}]`);
         }).pipe(this);
 
     }).then(function (pcs) {
@@ -506,7 +506,7 @@ let saveU8Buffer = (array, path, dict) => {
 
 @heard.rpc("pkmsm.exportModel").then(function (request) {
 
-    let id = `pokemon-${request.pokemon}-${request.model}`;
+    let id = `pokemon-${("00" + request.pokemon).slice(-3)}-${request.model}`;
 
     let basePath = @path(@mewchan().libraryPath, "pkmsm/models", id);
 
@@ -574,6 +574,7 @@ let saveU8Buffer = (array, path, dict) => {
         builder.addEntry("package.json", {
             "data": JSON.stringify({
                 "date": (@.format.date(new Date(), "YYYY-MM-DD hh:mm:ss.SSS")),
+                "animations": [ "animation.xml" ],
                 "models": [ "normal-model.xml", "shiny-model.xml", "shadow/model.xml" ],
                 "default": [ "normal-model.xml", "shadow/model.xml" ],
                 "data": [ "mesh.data.json", "animation.data.json", "shadow/mesh.data.json" ]

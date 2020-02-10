@@ -284,21 +284,30 @@ $.app = function (name) {
         return apps[app];
     }
 
-    let parent = name;
-    while (parent.parentNode) {
-        parent = parent.parentNode;
-    }
+    let dom = name;
 
-    if (!parent) {
-        return undefined;
-    }
+    while (true) {
 
-    let host = parent.host;
-    if (!host) {
-        return undefined;
-    }
+        let parent = dom;
+        while (parent.parentNode) {
+            parent = parent.parentNode;
+        }
 
-    return host.app;
+        if (!parent) {
+            return undefined;
+        }
+
+        let host = parent.host;
+        if (!host) {
+            return undefined;
+        }
+
+        if (host.app) {
+            return host.app;
+        }
+
+        dom = host;
+    }
 
 };
 
