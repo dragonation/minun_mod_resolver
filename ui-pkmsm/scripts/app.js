@@ -593,13 +593,53 @@ App.prototype.openImage = function (id, from) {
 
 };
 
+App.prototype.openShader = function (id, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(240),
+        "height": $.dom.getDevicePixels(240)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": filename,
+        "resizable": "yes",
+        "wire-id": id
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~pkmsm/frames/shader-editor/shader-editor");
+
+    $.ajax(`/~pkmsm/model/res/${id}`, {
+        "dataType": "text",
+        "success": (result) => {
+            frame[0].frame.filler.fill({
+                "code": result
+            });
+        },
+        "error": () => {
+            console.error("Failed to load shader codes");
+        }
+    })
+
+    this.filler.query("#diagram").append(frame);
+
+    frame[0].bringToFirst();
+
+};
+
 App.prototype.smartOpen = function (id, from) {
 
     let extname = id.split(".").slice(-1)[0];
     switch (extname) {
         case "png": { this.openImage(id, from); break; }
-        case "vert": { break; }
-        case "frag": { break; }
+        case "vert": { this.openShader(id, from); break; }
+        case "frag": { this.openShader(id, from); break; }
         default: { 
             if (/^pokemon-([0-9]+)-([0-9]+)$/.test(id)) {
                 this.openModel(id, from);
