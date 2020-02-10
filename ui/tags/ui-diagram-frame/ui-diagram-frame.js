@@ -234,6 +234,8 @@ module.exports = {
                 "y": parseFloat($(this).css("top")) - $.dom.getDevicePixels(event.pageY)
             };
 
+            $(this).addClass("acting");
+
             const onmousemove = (event) => {
 
                 if (!(event.buttons & 1)) {
@@ -243,6 +245,7 @@ module.exports = {
                     if (parent && parent.updateLayouts) {
                         parent.updateLayouts();
                     }
+                    $(this).removeClass("acting");
                     return;
                 }
 
@@ -266,6 +269,7 @@ module.exports = {
                     if (parent && parent.updateLayouts) {
                         parent.updateLayouts();
                     }
+                    $(this).removeClass("acting");
                 }
             };
 
@@ -279,6 +283,7 @@ module.exports = {
                 return;
             }
 
+            $(this).addClass("acting");
             let offsets = {
                 "x": parseFloat($(this).css("width")) - $.dom.getDevicePixels(event.pageX),
                 "y": parseFloat($(this).css("height")) - $.dom.getDevicePixels(event.pageY)
@@ -293,6 +298,7 @@ module.exports = {
                     if (parent && parent.updateLayouts) {
                         parent.updateLayouts();
                     }
+                    $(this).removeClass("acting");
                     return;
                 }
 
@@ -316,6 +322,7 @@ module.exports = {
                     if (parent && parent.updateLayouts) {
                         parent.updateLayouts();
                     }
+                    $(this).removeClass("acting");
                 }
             };
 
@@ -341,6 +348,8 @@ module.exports = {
         },
         "listActions": function () {
 
+            $(this).addClass("acting");
+
             let actions = [];
 
             this.filler.query("#ui-diagram-frame-clients").children("ui-diagram-action").each((index, action) => {
@@ -361,7 +370,9 @@ module.exports = {
 
             let app = $.app(this);
 
-            app.showActionList(actions, this.filler.query("#ui-diagram-frame-action-button")[0]);
+            app.showActionList(actions, this.filler.query("#ui-diagram-frame-action-button")[0], undefined, () => {
+                $(this).removeClass("acting");
+            });
 
         }
     }

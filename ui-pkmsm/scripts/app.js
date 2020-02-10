@@ -491,6 +491,63 @@ App.prototype.openModel = function (id, from) {
 
 };
 
+App.prototype.openAnimationList = function (id, from) {
+
+    if (!from.animations) {
+        console.error("Animations not available"); return;
+    }
+
+    let animations = Object.create(null);
+    for (let animation of from.animations) {
+        if (animation.localName && 
+            (animation.localName.toLowerCase() === "m3d-clip")) {
+            let id = $(animation).attr("id");
+            let group = id.split("Action")[0];
+            let duration = parseFloat($(animation).attr("duration"));
+            if (!animations[group]) {
+                animations[group] = [];
+            }
+            animations[group].push({
+                "id": id,
+                "group": group,
+                "duration": duration,
+                "tracks": $(animation).children("m3d-track").length
+            });
+        }
+    }
+
+    let size = {
+        "width": $.dom.getDevicePixels(200),
+        "height": $.dom.getDevicePixels(340)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("#")[0].split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": `Animations of “${filename}”`,
+        "resizable": "yes",
+        "wire-id": id + "/animation-list"
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~pkmsm/frames/animation-list/animation-list", {
+        "id": id,
+        "groups": Object.keys(animations).map((group) => ({
+            "name": group,
+            "animations": animations[group]
+        }))
+    });
+
+    this.filler.query("#diagram").append(frame);
+
+    frame[0].bringToFirst();
+
+};
+
 App.prototype.openResourceList = function (id, from) {
 
     let size = {
@@ -593,6 +650,38 @@ App.prototype.openImage = function (id, from) {
 
 };
 
+App.prototype.openLUT = function (id, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(240),
+        "height": $.dom.getDevicePixels(80)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": filename,
+        "resizable": "yes",
+        "wire-id": id
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~pkmsm/frames/lut-viewer/lut-viewer");
+
+    frame[0].frame.filler.fill({
+        "target": id
+    });
+
+    this.filler.query("#diagram").append(frame);
+
+    frame[0].bringToFirst();
+
+};
+
 App.prototype.openShader = function (id, from) {
 
     let size = {
@@ -630,14 +719,20 @@ App.prototype.openShader = function (id, from) {
     this.filler.query("#diagram").append(frame);
 
     frame[0].bringToFirst();
-
 };
 
 App.prototype.smartOpen = function (id, from) {
 
     let extname = id.split(".").slice(-1)[0];
     switch (extname) {
-        case "png": { this.openImage(id, from); break; }
+        case "png": { 
+            if (id.split("/")[1] === "luts") {
+                this.openLUT(id, from); 
+            } else {
+                this.openImage(id, from); 
+            }
+            break; 
+        }
         case "vert": { this.openShader(id, from); break; }
         case "frag": { this.openShader(id, from); break; }
         default: { 

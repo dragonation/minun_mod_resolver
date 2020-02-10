@@ -5,7 +5,7 @@ const extraIndent = 10;
 const minDistanceToScreenEdge = 10;
 const maxWidth = 200;
 
-const showActionList = function (actions, from, direction) {
+const showActionList = function (actions, from, direction, callback) {
 
     let minLeft = $.dom.getDevicePixels(minDistanceToScreenEdge);
     let minTop = $.dom.getDevicePixels(minDistanceToScreenEdge);
@@ -137,6 +137,13 @@ const showActionList = function (actions, from, direction) {
     $("ui-workshop")[0].addGlass(list[0], () => {
         list.addClass("hidden");
         $(from).removeClass("picking");
+        if (callback) {
+            try {
+                callback();
+            } catch (error) {
+                console.error(error);
+            }
+        }
         $.delay(300, () => {
             list.detach();
         });

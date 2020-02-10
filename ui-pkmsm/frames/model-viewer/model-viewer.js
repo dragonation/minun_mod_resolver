@@ -12,7 +12,8 @@ Frame.prototype.getTargetIDs = function () {
 
     let scene = this.filler.query("m3d-scene");
     let ids = {
-        [`${id}/resource-list`]: [scene]
+        [`${id}/resource-list`]: [scene],
+        [`${id}/animation-list`]: [scene],
     };
 
     return ids;
@@ -27,6 +28,25 @@ Frame.functors = {
 
     "listResources": function () {
         $.app(this.dom).openResourceList(this.filler.parameters.id, this);
+    },
+
+    "listAnimations": function () {
+
+        if (!this.animations) {
+            $.ajax(`/~pkmsm/model/res/${this.filler.parameters.id}/animation.xml`, {
+                "dataType": "text",
+                "success": (result) => {
+                    this.animations = $(result);
+                    $.app(this.dom).openAnimationList(this.filler.parameters.id, this);
+                },
+                "error": () => {
+                    console.error("Failed to list animations");
+                }
+            });
+        } else {
+            $.app(this.dom).openAnimationList(this.filler.parameters.id, this);
+        }
+
     }
 
 };

@@ -32,7 +32,9 @@
     &:hover #ui-diagram-frame-resizer,
     &:hover #ui-diagram-frame-close-button,
     &:hover #ui-diagram-frame-action-button,
-    #ui-diagram-frame-action-button.picking {
+    :host(.acting) & #ui-diagram-frame-resizer,
+    :host(.acting) & #ui-diagram-frame-close-button,
+    :host(.acting) & #ui-diagram-frame-action-button {
         opacity: 1;
         transform: none;
         pointer-events: auto;

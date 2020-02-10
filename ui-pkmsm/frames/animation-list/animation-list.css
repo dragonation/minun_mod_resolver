@@ -63,18 +63,18 @@ ui-collection-view {
                     background-color: $bright(#0d8ef1, -0.1);
                 }
 
-                .type {
-                    &.png, &.frag, &.vert {
-                        background-color: $alpha($white(1), 0.8);
-                        color: #0d8ef1;
-                    }
-                }
-
             }
 
-            .type {
+            .duration {
+                margin-left: 5px;
+                font-style: italic;
+                font-size: 8px;
+                line-height: 24px;
+                opacity: 0.4;
+            }
 
-                text-transform: uppercase;
+            .tracks-count {
+
                 background-color: $alpha($white(0), 0.3);
                 color: $white(1);
                 line-height: 8px;
@@ -84,16 +84,8 @@ ui-collection-view {
                 font-weight: bold;
                 margin-right: 6px;
 
-                &.png {
-                    background-color: #fa8d59;
-                }
-
-                &.frag {
-                    background-color: #e53195;
-                }
-
-                &.vert {
-                    background-color: #b5df61;
+                &::after {
+                    content: ' tracks';
                 }
 
             }

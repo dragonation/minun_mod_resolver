@@ -2,9 +2,9 @@ const uiActionList = require("../ui-action-list/ui-action-list.js");
 
 let apps = Object.create(null);
 
-const showActionList = function (actions, from, direction) {
+const showActionList = function (actions, from, direction, callback) {
 
-    return uiActionList.globals.showActionList(actions, from, direction);
+    return uiActionList.globals.showActionList(actions, from, direction, callback);
 
 };
 
