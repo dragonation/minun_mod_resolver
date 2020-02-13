@@ -139,7 +139,8 @@ App.prototype.openModel = function (id, from) {
         let binaryCallbacks = Object.create(null);
         $.ajax("/~pkmsm/model/data/mesh/" + result.id, {
             "success": (result) => {
-                let decoded = Object.create(null);
+                decoded = Object.create(null);
+                dom[0].binDecoded = decoded;
                 for (let key in result) {
                     let value = $.base64.decode(result[key]);
                     if (key.split(".").slice(-1)[0] === "bin") {
@@ -201,6 +202,8 @@ App.prototype.openModel = function (id, from) {
                     if (decoded[id]) {
                         callback(undefined, decoded[id]);
                     } else {
+                        console.log(id);
+                        console.log(Object.keys(decoded));
                         callback(new Error(`Resource[${id}] not found`));
                     }
                 } catch (error) {
@@ -536,6 +539,7 @@ App.prototype.openAnimationList = function (id, from) {
 
     frame[0].loadUI("/~pkmsm/frames/animation-list/animation-list", {
         "id": id,
+        "from": from,
         "groups": Object.keys(animations).map((group) => ({
             "name": group,
             "animations": animations[group]

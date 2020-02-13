@@ -32,6 +32,8 @@ const prepareScene = function (dom) {
 
     const scene = new THREE.Scene();
 
+    THREE.patchSceneAnimation(scene);
+
     dom.m3dClock = clock;
     dom.m3dRenderer = renderer;
     dom.m3dScene = scene;
@@ -102,6 +104,9 @@ const startSceneRendering = function (dom) {
                 for (let mixer of dom.m3dMixers) {
                     mixer.update(delta);
                 }
+            }
+            if (dom.m3dScene && dom.m3dScene.patchedAnimationTicker) {
+                dom.m3dScene.patchedAnimationTicker(delta);
             }
             if (dom.m3dStats) {
                 dom.m3dStats.update();

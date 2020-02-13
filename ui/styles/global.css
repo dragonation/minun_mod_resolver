@@ -3,3 +3,7 @@
     -webkit-user-drag: none;
     -webkit-tap-highlight-color: transparent;
 }
+
+body {
+    font-feature-settings: 'calt', 'ccmp', 'kern', 'liga', 'locl', 'palt', 'pwid';
+}

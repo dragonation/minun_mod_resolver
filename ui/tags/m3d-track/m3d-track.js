@@ -3,6 +3,7 @@ const THREE = require("../../scripts/three.js");
 const prepareTrack = function (dom) {
 
     if (!dom.m3dTrack) {
+
         switch ($(dom).attr("type")) {
             case "boolean": {
                 dom.m3dTrack = new THREE.BooleanKeyframeTrack($(dom).attr("target"), [0], [true]);
@@ -20,21 +21,77 @@ const prepareTrack = function (dom) {
                 dom.m3dTrack = new THREE.QuaternionKeyframeTrack($(dom).attr("target"), [0], [0, 0, 0, 1]);
                 break;
             };
-            case "String": {
+            case "text": {
                 dom.m3dTrack = new THREE.StringKeyframeTrack($(dom).attr("target"), [0], [""]);
                 break;
             };
-            case "vector": {
+            case "vector-3": {
                 dom.m3dTrack = new THREE.VectorKeyframeTrack($(dom).attr("target"), [0], [0, 0, 0]);
                 break;
             };
+            case "vector-4": {
+                dom.m3dTrack = new THREE.VectorKeyframeTrack($(dom).attr("target"), [0], [0, 0, 0, 0]);
+                break;
+            };
+            default: {
+                console.log($(dom).attr("type"));
+            }
         }
+
+        dom.m3dTrack.getPatchedTrack = function () {
+            let values = [];
+            let unitSize = dom.m3dTrack.values.length / dom.m3dTrack.times.length;
+            for (let looper = 0; looper < dom.m3dTrack.values.length; looper += unitSize) {
+                if (unitSize === 1) {
+                    values.push(dom.m3dTrack.values[looper]);
+                } else {
+                    values.push(Array.prototype.slice.call(dom.m3dTrack.values, looper, looper + unitSize));
+                }
+            }
+            return {
+                "type": $(dom).attr("target-type"),
+                "target": $(dom).attr("target"),
+                "constant": $(dom).attr("constant") === "yes",
+                "frames": values
+            };
+        };
+
+        let loader = getBinLoader(dom);
+
         if (dom.m3dTimes) {
             dom.m3dTrack.times = dom.m3dTimes;
+        } else {
+            let timesAttribute = $(dom).attr("times");
+            if (timesAttribute && (timesAttribute[0] === "@") && (timesAttribute !== dom.m3dTimesSource)) {
+                if (loader) {
+                    loader.m3dGetBin(timesAttribute.slice(1), (error, result) => {
+                        dom.m3dTimesSource = timesAttribute;
+                        if (error) {
+                            console.error(error); return;
+                        }
+                        dom.times = result;
+                    });
+                }
+            }
         }
+
         if (dom.m3dValues) {
             dom.m3dTrack.values = dom.m3dValues;
+        } else {
+            let valuesAttribute = $(dom).attr("values");
+            if (valuesAttribute && (valuesAttribute[0] === "@") && (valuesAttribute !== dom.m3dValuesSource)) {
+                if (loader) {
+                    loader.m3dGetBin(valuesAttribute.slice(1), (error, result) => {
+                        dom.m3dValuesSource = valuesAttribute;
+                        if (error) {
+                            console.error(error); return;
+                        }
+                        dom.values = result;
+                    });
+                }
+            }
         }
+        
     }
 
     return dom.m3dTrack;
@@ -104,8 +161,20 @@ const syncTarget = function (dom, value) {
 
 };
 
+const getBinLoader = function (dom) {
+
+    let origin = dom;
+
+    while (dom && (typeof dom.m3dGetBin !== "function")) {
+        dom = dom.parentNode;
+    }
+
+    return dom;
+
+};
+
 module.exports = {
-    "attributes": [ "target", "times", "values", "type" ],
+    "attributes": [ "target", "target-type", "times", "values", "type" ],
     "listeners": {
         "onconnected": function () {
         },
@@ -113,6 +182,43 @@ module.exports = {
             switch (name) {
                 case "target": { syncTarget(this, value); break; };
                 case "type": { syncType(this, value); break; };
+                case "times": { 
+                    if (value[0] !== "@") { return; }
+                    delete this.m3dTimes;
+                    delete this.m3dTimesSource;
+                    let loader = getBinLoader(this);
+                    if (loader) {
+                        loader.m3dGetBin(value.slice(1), (error, result) => {
+                            this.m3dTimesSource = value;
+                            if (error) {
+                                console.error(error); return;
+                            }
+                            this[name] = result;
+                        });
+                    } else {
+                        this[name] = undefined;
+                    }
+                    break; 
+                }
+                case "values": { 
+                    if (value[0] !== "@") { return; }
+                    delete this.m3dValues;
+                    delete this.m3dValuesSource;
+                    let loader = getBinLoader(this);
+                    if (loader) {
+                        loader.m3dGetBin(value.slice(1), (error, result) => {
+                            this.m3dValuesSource = value;
+                            if (error) {
+                                console.error(error); return;
+                            }
+                            console.log(result);
+                            this[name] = result;
+                        });
+                    } else {
+                        this[name] = undefined;
+                    }
+                    break; 
+                }
                 default: { break; };
             }
         },

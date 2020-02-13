@@ -4,7 +4,7 @@
                     style:--section-header-size="24px"
                     prop:sections="${groups}" prop:cells-getter="{section.animations}">
     <tmpl:slot name="cell">
-        <ui-button class="cell" class:selected="${selected && selected.id == cell.id}" title="${cell.tracks} tracks" @click="selectAnimation(cell)" @dblclick="playAnimation(cell)">
+        <ui-button class="cell" class:selected="${selected == cell.id}" title="${cell.tracks} tracks" @click="selectAnimation(cell)">
             <span class="animation-id">${cell.id}</span><span class="duration">${fixed(cell.duration, 3)}s</span>
         </ui-button>
     </tmpl:slot>

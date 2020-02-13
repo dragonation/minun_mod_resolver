@@ -132,6 +132,21 @@ const prepareObject = function (dom) {
 
         };
 
+        dom.m3dObject.getPatchedAnimation = function (name) {
+
+            let clipDOM = $(dom).find("#" + name)[0];
+            if (!clipDOM) {
+                throw new Error(`Animation[${name}] not found`);
+            }
+
+            let m3dClip = clipDOM.m3dGetClip();
+
+            return m3dClip.getPatchedAnimation();
+
+        };
+
+        THREE.patchObjectAnimation(dom.m3dObject);
+
         syncName(dom, $(dom).attr("name"));
 
         syncRotation(dom, $(dom).attr("rotation"));
@@ -279,6 +294,30 @@ const playAnimation = function (dom, clip) {
 
     if (!dom.m3dObject) { return; }
 
+    let m3dObject = dom.m3dObject;
+    let updater = dom.m3dObject.playPatchedAnimation(clip, {
+        "onAnimationStarted": () => {},
+        "onAnimationEnded": () => {
+            scene.m3dScene.removePatchedAnimationObject(m3dObject);
+        }
+    });
+
+    let scene = dom;
+    while (scene && (scene.localName.toLowerCase() !== "m3d-scene")) {
+        scene = scene.parentNode;
+    }
+
+    if (scene && scene.m3dScene) {
+        scene.m3dScene.addPatchedAnimationObject(m3dObject);
+    }
+
+    return;
+
+    let clipDOM = $(dom).find("#" + clip)[0];
+    if (!clipDOM) {
+        throw new Error(`Animation[${clip}] not found`);
+    }
+
     if (!dom.m3dAnimationMixer) {
         dom.m3dAnimationMixer = new THREE.AnimationMixer(dom.m3dObject);
         let scene = dom;
@@ -293,14 +332,9 @@ const playAnimation = function (dom, clip) {
         }
     }
 
-    let clipDOM = $(dom).find("#" + clip)[0];
-    let m3dClip = undefined;
-    if (clipDOM) {
-        m3dClip = clipDOM.m3dGetClip();
-    }
-    if (m3dClip) {
-        dom.m3dAnimationMixer.clipAction(m3dClip).play();
-    }
+    let m3dClip = clipDOM.m3dGetClip();
+
+    dom.m3dAnimationMixer.clipAction(m3dClip).play();
 
 };
 

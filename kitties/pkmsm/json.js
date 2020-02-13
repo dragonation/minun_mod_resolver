@@ -434,6 +434,7 @@ const interpolateBoneTransform = function (animation, transform, property) {
         }
 
         animation.tracks.bones[transform.bone].quaternion = {
+            "type": "quaternion",
             "constant": track.x.constant && track.y.constant && track.z.constant,
             "frames": frames.map((frame) => {
                 if (track.halfAxisAngle) {
@@ -463,6 +464,7 @@ const interpolateBoneTransform = function (animation, transform, property) {
         ["x", "y", "z"].forEach((axis) => {
             if (frames[0].hasOwnProperty(axis)) {
                 animation.tracks.bones[transform.bone][`${single}.${axis}`] = {
+                    "type": "number",
                     "constant": track[axis].constant,
                     "frames": frames.map((frame) => frame[axis])
                 };
@@ -496,8 +498,9 @@ const interpolateTextureTransform = function (animation, transform, property) {
             animation.tracks.materials[transform.material] = {};
         }
 
-        animation.tracks.materials[transform.material][`textures.${transform.texture}.rotation`] = {
+        animation.tracks.materials[transform.material][`uniforms.uv${transform.texture ? transform.texture + 1 : ''}.rotation`] = {
             "constant": track.z.constant,
+            "type": "number",
             "frames": frames.map((frame) => frame.z)
         };
 
@@ -520,6 +523,7 @@ const interpolateTextureTransform = function (animation, transform, property) {
                     scale = -1;
                 }
                 animation.tracks.materials[transform.material][`textures.${transform.texture}.${single}.${axis}`] = {
+                    "type": "number",
                     "constant": track[axis].constant,
                     "frames": frames.map((frame) => scale * frame[axis])
                 };
@@ -539,6 +543,7 @@ const interpolateMeshVisibility = function (animation, transform) {
     }
 
     animation.tracks.meshes[transform.mesh].visible = {
+        "type": "boolean",
         "constant": transform.constant,
         "frames": frames
     };
@@ -557,6 +562,7 @@ const interpolateConstantChanges = function (animation, transform) {
     ["x", "y", "z", "w"].forEach((axis, index) => {
         if (frames[0].hasOwnProperty(index)) {
             animation.tracks.materials[transform.material][`constants.${transform.constant}.${axis}`] = {
+                "type": "number",
                 "constant": transform.vectors[index].constant,
                 "frames": frames.map((frame) => frame[index])
             };

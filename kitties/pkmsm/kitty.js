@@ -299,6 +299,11 @@ let saveU8Buffer = (array, path, dict) => {
                                       dict);
                     }
                 }
+                for (let mesh in interpolated.tracks.meshes) {
+                    saveU8Buffer(interpolated.tracks.meshes[mesh].visible.frames.map((x) => x ? 1 : 0), 
+                                 @.fs.resolvePath("animations", animation, "meshes", mesh, "visible.u8.bin"), 
+                                 dict);
+                }
 
                 let xml = @.format(modelAnimationTemplate, { 
                     "animation": interpolated 

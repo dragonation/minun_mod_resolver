@@ -4,17 +4,38 @@ const Frame = function Frame(dom, filler) {
 
     this.filler = filler;
 
+    this.animationListener = (animation) => {
+        this.filler.fill({
+            "selected": animation
+        });
+    };
+
+    this.filler.parameters.from.addAnimationListener(this.animationListener);
+
+    this.filler.fill({
+        "selected": this.filler.parameters.from.getPlayingAnimation()
+    });
+
+};
+
+Frame.prototype.onClose = function () {
+
+    this.filler.parameters.from.removeAnimationListener(this.animationListener);
+
 };
 
 Frame.functors = {
+
     "selectAnimation": function (cell) {
+
         this.filler.fill({
-            "selected": cell
+            "selected": cell.id
         });
-    },
-    "playAnimation": function (cell) {
-        // $.app(this.dom).smartOpen(this.filler.parameters.id + "/" + cell.id, this);
+
+        this.filler.parameters.from.playAnimation(cell.id);
+
     }
+
 };
 
 module.exports.Frame = Frame;

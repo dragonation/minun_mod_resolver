@@ -1,6 +1,6 @@
 :host {
 
-    font-family: 'Mew Sans SC', sans-serif;
+    font-family: 'Mew Sans', sans-serif;
     font-size: 12px;
     line-height: 30px;
 
@@ -9,7 +9,7 @@
     border-radius: 6px;
     box-shadow: 0 1px 3px $alpha($white(0), 0.2);
     border: solid 1dpx $alpha($white(0), 0.3);
-    box-sizing: content-box;
+    box-sizing: content-box !important;
     opacity: 1;
     transform: none;
     backdrop-filter: blur(6px);
@@ -83,6 +83,7 @@
 
     padding: 0 10px;
     height: 30px;
+    width: calc(100% - 8px);
     margin: 0 4px;
     border-radius: 3px;
     text-shadow: 0 0 2px #fff;
@@ -90,7 +91,15 @@
     color: #666;
     white-space: nowrap;
 
+    transition: color 0.3s, background-color 0.3s; 
+
+    &.pressing,
+    &.pressing:hover {
+        background-color: $alpha($white(0), 0.14);
+    }
+
     &.empty {
+        pointer-events: none;
         color: #ddd;
         &:hover {
             background-color: inherit;

@@ -6,7 +6,7 @@
     top: 0;
     z-index: 1;
     background-color: #fff;
-    font-family: 'Mew Sans SC', sans-serif;
+    font-family: 'Mew Sans', sans-serif;
     font-size: 13px;
     $transition(opacity, transform, 0.3s);
 }

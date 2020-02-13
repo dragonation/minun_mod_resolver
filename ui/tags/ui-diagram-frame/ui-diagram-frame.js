@@ -341,6 +341,14 @@ module.exports = {
                 parent.updateLayouts();
             }
 
+            if (this.frame.onClose) {
+                try {
+                    this.frame.onClose();
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+
             $.delay(500, () => {
                 that.detach();
             });
