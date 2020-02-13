@@ -1,7 +1,7 @@
 <m3d-mesh id="mesh-${index}-${mesh.name}"
           name="${mesh.name}"
           skeleton="model-skeleton"
-          materials="${mesh.material}"
+          materials="${mesh.name}-${index}-${mesh.material}"
           indices="@meshes/${index}-${mesh.name}/indices.vertices.u16.bin"
           vertex-unit-size="4" vertices="@meshes/${index}-${mesh.name}/positions.f32.bin"
           normal-unit-size="4" normals="@meshes/${index}-${mesh.name}/normals.f32.bin"

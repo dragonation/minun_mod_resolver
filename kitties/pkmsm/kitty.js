@@ -383,15 +383,25 @@ let saveU8Buffer = (array, path, dict) => {
                 @.fs.writeFile.sync(path, @.img(data.width, data.height, makeU8LUTBuffer(data.pixels)).encodeAsPNG());
             }
 
-            for (let material in json.materials) {
-                mxmls[`materials/${material}.xml`] = @.format(modelMaterialTemplate, { "material": json.materials[material] }, mxmlOptions);
-            }
+            // for (let material in json.materials) {
+            //     mxmls[`materials/${material}.xml`] = @.format(modelMaterialTemplate, { "material": json.materials[material] }, mxmlOptions);
+            // }
+
+            let materials = [];
 
             let mins = [Infinity, Infinity, Infinity];
             let maxes = [-Infinity, -Infinity, -Infinity];
 
             for (let looper = 0; looper < json.meshes.length; ++looper) {
+
                 let mesh = json.meshes[looper];
+
+                mxmls[`materials/${mesh.name}-${looper}-${mesh.material}.xml`] = @.format(modelMaterialTemplate, { 
+                    "id": `${mesh.name}-${looper}-${mesh.material}`,
+                    "material": json.materials[mesh.material] 
+                }, mxmlOptions);
+                materials.push(`${mesh.name}-${looper}-${mesh.material}`);
+
                 let attributes = mesh.attributes;
                 if (attributes.bones.indices) {
                     let path = @.fs.resolvePath("meshes", `${looper}-${mesh.name}`, "bone.indices.f32.bin");
@@ -470,7 +480,8 @@ let saveU8Buffer = (array, path, dict) => {
             let modelMXML = @.format(modelTemplate, { 
                 "id": id,
                 "base": basePath,
-                "model": json 
+                "model": json,
+                "materials": materials
             }, Object.assign({}, mxmlOptions, {
                 "functors": Object.assign({
                     "include": function (templates, call, parameters, options, path) {
