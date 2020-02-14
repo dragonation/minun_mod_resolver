@@ -74,10 +74,6 @@ const patchObjectAnimation = function (threeObject) {
             ++looper;
         }
 
-        if (targets.length === 0) {
-            return;
-        }
-
         if (!animationMixers.origins[selector]) {
             animationMixers.origins[selector] = new Map();
         }

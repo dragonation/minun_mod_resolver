@@ -498,7 +498,7 @@ const interpolateTextureTransform = function (animation, transform, property) {
             animation.tracks.materials[transform.material] = {};
         }
 
-        animation.tracks.materials[transform.material][`uniforms.uv${transform.texture ? transform.texture + 1 : ''}.rotation`] = {
+        animation.tracks.materials[transform.material][`uniforms.map${transform.texture ? transform.texture + 1 : ''}.value.rotation`] = {
             "constant": track.z.constant,
             "type": "number",
             "frames": frames.map((frame) => frame.z)
@@ -522,7 +522,7 @@ const interpolateTextureTransform = function (animation, transform, property) {
                 if (property === "translations") {
                     scale = -1;
                 }
-                animation.tracks.materials[transform.material][`textures.${transform.texture}.${single}.${axis}`] = {
+                animation.tracks.materials[transform.material][`uniforms.map${transform.texture ? transform.texture + 1 : ''}.value.${single}.${axis}`] = {
                     "type": "number",
                     "constant": track[axis].constant,
                     "frames": frames.map((frame) => scale * frame[axis])
@@ -704,7 +704,6 @@ Model.prototype.extractShaderPrograms = function (pc, options) {
                 const material = model.materials.filter((material) => {
                     return material.name === submesh.material;
                 })[0];
-
 
                 const features = {
                     "hasGeometryShader": !@.is.nil(pc.files[2].files.filter((shader) => {

@@ -410,6 +410,12 @@ App.prototype.openModel = function (id, from) {
 
             }
 
+            if (material.uniforms.uvVectors && material.uniforms.vectors) {
+                for (let looper = 0; looper < 40; ++looper) {
+                    material.uniforms.uvVectors.value[looper] = material.uniforms.vectors.value[looper];
+                }
+            }
+
             if (material.uniforms.vectors && material.uniforms.uvVectors) {
                 for (let looper = 0; looper < 10; ++looper) {
                     material.uniforms.uvVectors.value[looper].copy(material.uniforms.vectors.value[looper]);

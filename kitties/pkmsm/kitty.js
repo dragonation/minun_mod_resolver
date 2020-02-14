@@ -383,10 +383,6 @@ let saveU8Buffer = (array, path, dict) => {
                 @.fs.writeFile.sync(path, @.img(data.width, data.height, makeU8LUTBuffer(data.pixels)).encodeAsPNG());
             }
 
-            // for (let material in json.materials) {
-            //     mxmls[`materials/${material}.xml`] = @.format(modelMaterialTemplate, { "material": json.materials[material] }, mxmlOptions);
-            // }
-
             let materials = [];
 
             let mins = [Infinity, Infinity, Infinity];

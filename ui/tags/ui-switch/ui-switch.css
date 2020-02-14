@@ -22,15 +22,16 @@
         background-color: $alpha($white(0), 0.1);
         border-color: $alpha($white(0), 0.1);
         #handle {
-            left: calc(25px - 1dpx);
+            left: 5px;
             background-color: #fff;
             border-color: $alpha($white(0), 0.3);
+            box-shadow: 0 1px 2px $alpha($white(0), 0.2);
             color: #bbb;
         }
     }
 
     #handle {
-        left: 5px;
+        left: calc(25px - 1dpx);
         position: absolute;
         margin-top: calc(-3px - 1dpx);
         margin-left: -3px;
@@ -39,7 +40,7 @@
         background-color: #0d8ef1;
         border-radius: 30px;
         border: solid 1dpx transparent;
-        box-shadow: 0 1px 2px $alpha($white(0), 0.2);
+        box-shadow: 0 1px 2px $alpha($white(0), 0.4);
         color: #fff;
         font-size: 6px;
         line-height: calc(20px - 2dpx);

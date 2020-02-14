@@ -44,6 +44,7 @@ const prepareMaterial = function (dom) {
         dom.m3dMaterial.m3dFromTagObject = dom;
         delete dom.m3dTextures;
         syncID(dom, $(dom).attr("id"));
+        syncName(dom, $(dom).attr("name"));
         syncColor(dom, $(dom).attr("color"));
         syncTextures(dom, $(dom).attr("textures"));
         syncSide(dom, $(dom).attr("side"));
@@ -458,6 +459,17 @@ const syncID = function (dom, value) {
 
     if (!dom.m3dMaterial) { return; }
 
+    // if (dom.m3dMaterial.name !== value) {
+    //     dom.m3dMaterial.name = value;
+    //     trigMaterialUpdate(dom);
+    // }
+
+};
+
+const syncName = function (dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
     if (dom.m3dMaterial.name !== value) {
         dom.m3dMaterial.name = value;
         trigMaterialUpdate(dom);
@@ -852,7 +864,7 @@ const trigMaterialUpdate = function (dom) {
 module.exports = {
     "attributes": [
         "preset",
-        "id", "color",
+        "id", "name", "color",
         "textures",
         "side", "alpha-test",
         "transparent", "alpha-premultiplied",
@@ -877,6 +889,7 @@ module.exports = {
             switch (name) {
                 case "preset": { prepareMaterial(this); break; };
                 case "id": { syncID(this, value); break; };
+                case "name": { syncName(this, value); break; };
                 case "color": { syncColor(this, value); break; };
                 case "textures": { syncTextures(this, value); break; };
                 case "side": { syncSide(this, value); break; };
