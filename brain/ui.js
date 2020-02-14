@@ -383,6 +383,22 @@ pages.forEach((page) => {
 
     compileHTML(@path(@mewchan().workingPath, innerPath));
 
+    if (page === "index.html") {
+        @servlet.get("/", function (request, response) {
+
+            this.break();
+
+            response.headers["Content-Type"] = "text/html";
+            response.headers["Content-Encoding"] = "gzip";
+
+            return @.async(function () {
+                let content = @.fs.readFile.sync(@path(@mewchan().libraryPath, "ui", innerPath, "page.html"));
+                response.writer.end(zlib.gzipSync(content), this.test);
+            });
+
+        });
+    }
+
     @servlet.get("/" + page, function (request, response) {
 
         this.break();
