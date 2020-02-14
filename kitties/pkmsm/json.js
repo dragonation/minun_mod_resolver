@@ -598,7 +598,7 @@ const interpolateConstantChanges = function (animation, transform) {
 
     ["x", "y", "z", "w"].forEach((axis, index) => {
         if (frames[0].hasOwnProperty(index)) {
-            animation.tracks.materials[transform.material][`constants.${transform.constant}.${axis}`] = {
+            animation.tracks.materials[transform.material][`uniforms.constantSlots.value.${transform.constant}.${axis}`] = {
                 "type": "number",
                 "constant": transform.vectors[index].constant,
                 "frames": frames.map((frame) => frame[index])

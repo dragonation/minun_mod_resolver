@@ -31,6 +31,8 @@
     <m3d-uniform name="speculars" type="vec4[]">${uniform(material.colors.speculars)}</m3d-uniform>
 
     <!-- constant uniforms -->
+    <m3d-uniform name="constantSlots" type="vec4[]">${uniform(material.constants.slots)}</m3d-uniform>
+    <m3d-uniform name="constantIndices" type="int[]">${uniform(material.constants.indices)}</m3d-uniform>
     <m3d-uniform name="constants" type="vec4[]">${uniform(map(material.constants.indices, {material.constants.slots[$1]}))}</m3d-uniform>
 
     <m3d-uniform name="environmentAmbient" type="vec4">0,0,0,0</m3d-uniform>

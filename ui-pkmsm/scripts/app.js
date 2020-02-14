@@ -202,8 +202,6 @@ App.prototype.openModel = function (id, from) {
                     if (decoded[id]) {
                         callback(undefined, decoded[id]);
                     } else {
-                        console.log(id);
-                        console.log(Object.keys(decoded));
                         callback(new Error(`Resource[${id}] not found`));
                     }
                 } catch (error) {
@@ -416,9 +414,16 @@ App.prototype.openModel = function (id, from) {
                 }
             }
 
-            if (material.uniforms.vectors && material.uniforms.uvVectors) {
-                for (let looper = 0; looper < 10; ++looper) {
-                    material.uniforms.uvVectors.value[looper].copy(material.uniforms.vectors.value[looper]);
+            if (material.uniforms.constantIndices && 
+                material.uniforms.constantSlots &&
+                material.uniforms.constants) {
+                for (let looper = 0; looper < 6; ++looper) {
+                    let index = material.uniforms.constantIndices.value[looper];
+                    material.uniforms.constants.value[looper].set(
+                        material.uniforms.constantSlots.value[index].x,
+                        material.uniforms.constantSlots.value[index].y,
+                        material.uniforms.constantSlots.value[index].z,
+                        material.uniforms.constantSlots.value[index].w);
                 }
             }
 

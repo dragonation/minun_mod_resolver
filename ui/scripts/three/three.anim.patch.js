@@ -17,7 +17,7 @@ const patchObjectAnimation = function (threeObject) {
         let selector = `${subject}#${name}`;
         path.split(".").forEach((key) => {
             if (/^[0-9]+$/.test(key)) {
-                selector += `[${key}]`;
+                selector += `:nth-child(${key})`;
             } else {
                 selector += ` > .${key}`;
             }
@@ -72,6 +72,10 @@ const patchObjectAnimation = function (threeObject) {
         while (looper < keys.length - 1) {
             targets = targets.map((target) => target[keys[looper]]).filter((target) => target);
             ++looper;
+        }
+
+        if (targets.length === 0) {
+            console.warn(`Animation target[${selector}] not found`);
         }
 
         if (!animationMixers.origins[selector]) {
