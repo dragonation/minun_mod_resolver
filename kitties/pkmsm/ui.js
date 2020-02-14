@@ -150,7 +150,7 @@ const zlib = require("zlib");
     let pokemon = parseInt(id.split("-")[1]);
     let model = parseInt(id.split("-")[2]);
 
-    let basePath = @path(@mewchan().libraryPath, "pkmsm/models", `pokemon-${pokemon}-${model}`);
+    let basePath = @path(@mewchan().libraryPath, "pkmsm/models", `pokemon-${("00" + pokemon).slice(-3)}-${model}`);
 
     return @mew.rpc("pkmsm.loadModel", {
         "pokemon": pokemon,
