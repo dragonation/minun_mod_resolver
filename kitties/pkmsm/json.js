@@ -366,7 +366,10 @@ const interpolateFrames = function (animation, track, keys, noTweenBetweenTwo24F
                     value = record.frames[keyFrame].value;
                 } else {
                     if (noTweenBetweenTwo24FPSFrames) {
-                        if (record.frames[keyFrame] && record.frames[keyFrame + 1] && (record.frames[keyFrame + 1].frame - record.frames[keyFrame].frame === 1)) {
+                        // there may exists 2 frames lag for textures animations
+                        if (record.frames[keyFrame] && 
+                            record.frames[keyFrame + 1] && 
+                            (record.frames[keyFrame + 1].frame - record.frames[keyFrame].frame <= 2)) {
                             value = record.frames[keyFrame].value;
                         } else if ((!record.frames[keyFrame]) && record.frames[keyFrame + 1]) {
                             value = record.frames[keyFrame + 1].value;

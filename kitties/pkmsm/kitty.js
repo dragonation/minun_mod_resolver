@@ -279,7 +279,6 @@ let saveU8Buffer = (array, path, dict) => {
             for (let animation in json.animations) {
 
                 let record = json.animations[animation];
-
                 let interpolated = Model.interpolateJSONAnimation(json.animations[animation]);
 
                 let animationPath = @path(basePath, "animations", animation);
