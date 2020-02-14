@@ -488,7 +488,7 @@ let saveU8Buffer = (array, path, dict) => {
             }));
 
             if (id.split("/").slice(-1)[0] === "shadow") {
-                @.fs.writeFile.sync(@path(basePath, "model.xml"), @.format(modelMXML, {}));
+                @.fs.writeFile.sync(@path(basePath, "model.xml"), modelMXML);
             } else {
                 @.fs.writeFile.sync(@path(basePath, "normal-model.xml"), 
                                     @.format(modelMXML, { "prefix": "normal-" }));
