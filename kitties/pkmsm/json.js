@@ -369,7 +369,7 @@ const interpolateFrames = function (animation, track, keys, noTweenBetweenTwo24F
                         // there may exists 2 frames lag for textures animations
                         if (record.frames[keyFrame] && 
                             record.frames[keyFrame + 1] && 
-                            (record.frames[keyFrame + 1].frame - record.frames[keyFrame].frame <= 2)) {
+                            (record.frames[keyFrame + 1].frame - record.frames[keyFrame].frame === 1)) {
                             value = record.frames[keyFrame].value;
                         } else if ((!record.frames[keyFrame]) && record.frames[keyFrame + 1]) {
                             value = record.frames[keyFrame + 1].value;
@@ -491,6 +491,27 @@ const interpolateTextureTransform = function (animation, transform, property) {
     } else {
         if ((!track.x) && (!track.y)) { return; }
         keys = ["x", "y"];
+    }
+
+    track = Object.assign({}, track);
+    for (let key of keys) {
+        if (!track[key].constant) {
+            track[key] = Object.assign({}, track[key]);
+            let newFrames = [];
+            for (let looper = 0; looper < track[key].frames.length; ++looper) {
+                if ((looper > 0) && 
+                    (track[key].frames[looper].frame - track[key].frames[looper - 1].frame === 2) &&
+                    (track[key].frames[looper].slope === track[key].frames[looper - 1].slope)) {
+                    newFrames.push({
+                        "frame": track[key].frames[looper].frame - 1,
+                        "slope": track[key].frames[looper].slope,
+                        "value": (track[key].frames[looper].value + track[key].frames[looper - 1].value) / 2
+                    });
+                }
+                newFrames.push(track[key].frames[looper]);
+            }
+            track[key].frames = newFrames;
+        }
     }
 
     let frames = interpolateFrames(animation, track, keys, true);
