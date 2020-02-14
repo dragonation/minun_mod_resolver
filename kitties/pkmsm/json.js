@@ -493,22 +493,35 @@ const interpolateTextureTransform = function (animation, transform, property) {
         keys = ["x", "y"];
     }
 
+    // preinterpolate frames for textures as 24fps, 
+    // because emotion textures no tween for resampling
     track = Object.assign({}, track);
     for (let key of keys) {
         if (!track[key].constant) {
             track[key] = Object.assign({}, track[key]);
             let newFrames = [];
-            for (let looper = 0; looper < track[key].frames.length; ++looper) {
-                if ((looper > 0) && 
-                    (track[key].frames[looper].frame - track[key].frames[looper - 1].frame === 2) &&
-                    (track[key].frames[looper].slope === track[key].frames[looper - 1].slope)) {
+            let keyFrame = 0;
+            for (let looper = 0; looper < animation.frames; ++looper) {
+                while ((keyFrame + 1 < track[key].frames.length) && 
+                       (looper > track[key].frames[keyFrame + 1].frame)) {
+                    ++keyFrame;
+                }
+                if (keyFrame < track[key].frames.length) {
+                    let value = Motion.interpolate(track[key].frames[keyFrame], 
+                                                   track[key].frames[keyFrame + 1], 
+                                                   looper);
                     newFrames.push({
-                        "frame": track[key].frames[looper].frame - 1,
-                        "slope": track[key].frames[looper].slope,
-                        "value": (track[key].frames[looper].value + track[key].frames[looper - 1].value) / 2
+                        "frame": looper,
+                        "value": value,
+                        "slope": 0
+                    });
+                } else {
+                    newFrames.push({
+                        "frame": looper,
+                        "value": track[key].frames[track[key].frames.length - 1].value,
+                        "slope": 0
                     });
                 }
-                newFrames.push(track[key].frames[looper]);
             }
             track[key].frames = newFrames;
         }
