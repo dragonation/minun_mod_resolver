@@ -339,7 +339,8 @@ Vector3.prototype.normalize = function () {
 };
 
 
-const interpolationTimes = 2.5; // upgrade to 60 fps
+const interpolationTimes = 1; // 24fps; 
+// const interpolationTimes = 2.5; // upgrade to 60 fps
 
 const interpolateFrames = function (animation, track, keys, noTweenBetweenTwo24FPSFrames) {
 
@@ -417,7 +418,7 @@ const interpolateFrames = function (animation, track, keys, noTweenBetweenTwo24F
 
 };
 
-const interpolateBoneTransform = function (animation, transform, property) {
+const interpolateBoneTransform = function (animation, transform, property, rootBoneName) {
 
     let track = transform[property];
 
@@ -427,16 +428,20 @@ const interpolateBoneTransform = function (animation, transform, property) {
 
     let frames = interpolateFrames(animation, track, ["x", "y", "z"]);
 
+    let bone = transform.bone;
+    if ((bone === "_") && rootBoneName) {
+        bone = rootBoneName;
+    }
     if (property === "rotations") {
 
         let quaternion = new Quaternion();
         let axis = new Vector3();
 
-        if (!animation.tracks.bones[transform.bone]) {
-            animation.tracks.bones[transform.bone] = {};
+        if (!animation.tracks.bones[bone]) {
+            animation.tracks.bones[bone] = {};
         }
 
-        animation.tracks.bones[transform.bone].quaternion = {
+        animation.tracks.bones[bone].quaternion = {
             "type": "quaternion",
             "constant": track.x.constant && track.y.constant && track.z.constant,
             "frames": frames.map((frame) => {
@@ -454,8 +459,8 @@ const interpolateBoneTransform = function (animation, transform, property) {
 
     } else {
 
-        if (!animation.tracks.bones[transform.bone]) {
-            animation.tracks.bones[transform.bone] = {};
+        if (!animation.tracks.bones[bone]) {
+            animation.tracks.bones[bone] = {};
         }
 
         let single = null;
@@ -466,7 +471,7 @@ const interpolateBoneTransform = function (animation, transform, property) {
 
         ["x", "y", "z"].forEach((axis) => {
             if (frames[0].hasOwnProperty(axis)) {
-                animation.tracks.bones[transform.bone][`${single}.${axis}`] = {
+                animation.tracks.bones[bone][`${single}.${axis}`] = {
                     "type": "number",
                     "constant": track[axis].constant,
                     "frames": frames.map((frame) => frame[axis])
@@ -786,7 +791,7 @@ Model.prototype.toJSON = function (pcs, options) {
     return @.async(function () {
 
         const json = {
-            "name": model.bones[0].name,
+            "name": `model-${model.bones[0].name}`,
             "boundingBox": {
                 "static": {
                     "min": model.boundingBox.min.slice(0, 3),
@@ -1577,7 +1582,7 @@ Model.prototype.toJSON = function (pcs, options) {
 
 };
 
-Model.interpolateJSONAnimation = function (json) {
+Model.interpolateJSONAnimation = function (json, rootBoneName) {
 
     if (json.interpolated) {
         return json;
@@ -1612,7 +1617,7 @@ Model.interpolateJSONAnimation = function (json) {
         let looper = 0;
         while (looper < json.tracks.skeletal.length) {
             ["scales", "rotations", "translations"].forEach((property) => {
-                interpolateBoneTransform(animation, json.tracks.skeletal[looper], property);
+                interpolateBoneTransform(animation, json.tracks.skeletal[looper], property, rootBoneName);
             });
             ++looper;
         }

@@ -279,7 +279,7 @@ let saveU8Buffer = (array, path, dict) => {
             for (let animation in json.animations) {
 
                 let record = json.animations[animation];
-                let interpolated = Model.interpolateJSONAnimation(json.animations[animation]);
+                let interpolated = Model.interpolateJSONAnimation(json.animations[animation], json.bones[0].name);
 
                 let animationPath = @path(basePath, "animations", animation);
 
@@ -566,21 +566,6 @@ let saveU8Buffer = (array, path, dict) => {
         builder.addEntry(@path(basePath, "mesh.data.json"));
         builder.addEntry(@path(basePath, "animation.data.json"));
         builder.addEntry(@path(basePath, "shadow/mesh.data.json"));
-
-        // let meshData = JSON.parse(@.fs.readFile.sync(@path(basePath, "mesh.data.json"), "utf8"));
-        // for (let key in meshData) {
-        //     builder.addEntry(key, { "data": Buffer.from(meshData[key], "base64") });
-        // }
-
-        // let animationData = JSON.parse(@.fs.readFile.sync(@path(basePath, "animation.data.json"), "utf8"));
-        // for (let key in animationData) {
-        //     builder.addEntry(key, { "data": Buffer.from(animationData[key], "base64") });
-        // }
-
-        // let shadowMeshData = JSON.parse(@.fs.readFile.sync(@path(basePath, "shadow/mesh.data.json"), "utf8"));
-        // for (let key in shadowMeshData) {
-        //     builder.addEntry(`shadow/${key}`, { "data": Buffer.from(shadowMeshData[key], "base64") });
-        // }
 
         builder.addEntry("package.json", {
             "data": JSON.stringify({
