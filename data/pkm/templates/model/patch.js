@@ -30,6 +30,11 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
             worldScales[0] *= parent.scale.x;
             worldScales[1] *= parent.scale.y;
             worldScales[2] *= parent.scale.z;
+            if (parent.modelScale) {
+                worldScales[0] *= parent.modelScale.x;
+                worldScales[1] *= parent.modelScale.y;
+                worldScales[2] *= parent.modelScale.z;   
+            }
             parent = parent.parent;
         }
         uniforms.worldScales.value.set(worldScales[0], worldScales[1], worldScales[2], 1);

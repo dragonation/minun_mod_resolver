@@ -55,6 +55,7 @@ const prepareMaterial = function (dom) {
         syncDepthTest(dom, $(dom).attr("depth-test"));
         syncDepthWrite(dom, $(dom).attr("depth-write"));
         syncDepthTestFunction(dom, $(dom).attr("depth-test-function"));
+        syncBlending(dom, $(dom).attr("blending"));
         syncBlendingSource(dom, $(dom).attr("blending-source"));
         syncBlendingDestination(dom, $(dom).attr("blending-destination"));
         syncBlendingEquation(dom, $(dom).attr("blending-equation"));
@@ -179,6 +180,25 @@ const syncDepthTestFunction = function (dom, value) {
         case "less-than-or-equal-to": { dom.m3dMaterial.depthFunc = THREE.LessEqualDepth; break; }
         case "greater-than": { dom.m3dMaterial.depthFunc = THREE.GreaterDepth; break; }
         case "greater-than-or-equal-to": { dom.m3dMaterial.depthFunc = THREE.GreaterEqualDepth; break; }
+    }
+
+};
+
+const syncBlending = function (dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
+    if (!value) {
+        return;
+    }
+
+    switch (value) {
+        case "no": { dom.m3dMaterial.blending = THREE.NoBlending; break; }
+        case "normal": { dom.m3dMaterial.blending = THREE.NormalBlending; break; }
+        case "additive": { dom.m3dMaterial.blending = THREE.AdditiveBlending; break; }
+        case "subtractive": { dom.m3dMaterial.blending = THREE.SubtractiveBlending; break; }
+        case "multiply": { dom.m3dMaterial.blending = THREE.MultiplyBlending; break; }
+        case "custom": { dom.m3dMaterial.blending = THREE.CustomBlending; break; }
     }
 
 };
@@ -901,7 +921,7 @@ module.exports = {
         "stencil-test", "stencil-test-function", "stencil-test-reference", "stencil-test-mask",
         "stencil-failed", "stencil-z-failed", "stencil-z-passed",
         "stencil-write-mask", 
-        "blending-destination", "blending-equation", "blending-source",
+        "blending", "blending-destination", "blending-equation", "blending-source",
         "extra"
     ],
     "listeners": {
@@ -938,6 +958,7 @@ module.exports = {
                 case "stencil-failed": { syncStencilFailed(this, value); break; }
                 case "stencil-z-failed": { syncStencilZFailed(this, value); break; }
                 case "stencil-z-passed": { syncStencilZPassed(this, value); break; }
+                case "blending": { syncBlending(this, value); break; }
                 case "blending-source": { syncBlendingSource(this, value); break; }
                 case "blending-destination": { syncBlendingDestination(this, value); break; }
                 case "blending-equation": { syncBlendingEquation(this, value); break; }
