@@ -14,7 +14,10 @@
               stencil-test="${material.stencilTest.enabled ? 'yes' : 'no'}" stencil-test-function="${material.stencilTest.tester}" stencil-test-reference="${material.stencilTest.reference}" stencil-test-mask="${material.stencilTest.mask}"
               stencil-write-mask="${material.stencilTest.writeMask}" 
               stencil-failed="${material.stencilTest.failed}" stencil-z-failed="${material.stencilTest.zFailed}" stencil-z-passed="${material.stencilTest.zPassed}"
-              blending-destination="${material.blending.destination.color},${material.blending.destination.alpha}" blending-equation="${material.blending.equation.color},${material.blending.equation.alpha}" blending-source="${material.blending.source.color},${material.blending.source.alpha}">
+              blending-destination="${material.blending.destination.color},${material.blending.destination.alpha}" blending-equation="${material.blending.equation.color},${material.blending.equation.alpha}" blending-source="${material.blending.source.color},${material.blending.source.alpha}"
+              extra="${json({
+                  'constantsIndices': material.constants.indices
+              })}">
 
     <!-- mesh uniforms -->
     <m3d-uniform name="hasTangent" type="bool">false</m3d-uniform>

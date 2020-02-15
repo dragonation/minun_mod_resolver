@@ -15,4 +15,11 @@
           bone-weights="@meshes/${index}-${mesh.name}/bone.weights.f32.bin"
           has-tangent="${mesh.uniforms.hasTangent ? 'yes' : 'no'}"
           has-bone="${mesh.uniforms.hasBone ? 'yes' : 'no'}"
-          has-bone-w="${mesh.uniforms.hasBoneW ? 'yes' : 'no'}"/>
+          has-bone-w="${mesh.uniforms.hasBoneW ? 'yes' : 'no'}"
+          patch="@patch.js"
+          extra="${json({
+              'bones': mesh.bones, 
+              'hasTangent': mesh.uniforms.hasTangent,
+              'hasBone': mesh.uniforms.hasBone,
+              'hasBoneW': mesh.uniforms.hasBoneW
+          })}"/>

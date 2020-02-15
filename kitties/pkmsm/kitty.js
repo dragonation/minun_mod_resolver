@@ -143,7 +143,9 @@ let saveU8Buffer = (array, path, dict) => {
         for (let keyword of keywords) {
             if ((pokemon.id + "").indexOf(keyword) !== -1) {
                 score += pokemonBaseScore;
-            } 
+            } else if (("00" + pokemon.id).slice(-3).indexOf(keyword) !== -1) {
+                score += pokemonBaseScore;
+            }
             if (pokemon.name.toLowerCase().indexOf(keyword) !== -1) {
                 score += pokemonBaseScore;
             }
@@ -487,6 +489,9 @@ let saveU8Buffer = (array, path, dict) => {
                 }, mxmlOptions.functors)
             }));
 
+            @.fs.copyFile.sync(@path(@mewchan().workingPath, "data/pkm/templates/model/patch.js"),
+                               @path(basePath, "patch.js"));
+
             if (id.split("/").slice(-1)[0] === "shadow") {
                 @.fs.writeFile.sync(@path(basePath, "model.xml"), modelMXML);
             } else {
@@ -547,6 +552,7 @@ let saveU8Buffer = (array, path, dict) => {
         if (@.fs.exists(@path(basePath, "shaders"))) {
             builder.addEntry(@path(basePath, "shaders"));
         }
+        builder.addEntry(@path(basePath, "patch.js"));
         builder.addEntry(@path(basePath, "normal-model.xml"));
         builder.addEntry(@path(basePath, "shiny-model.xml"));
         builder.addEntry(@path(basePath, "animation.xml"));
@@ -560,7 +566,7 @@ let saveU8Buffer = (array, path, dict) => {
         if (@.fs.exists(@path(basePath, "shadow/shaders"))) {
             builder.addEntry(@path(basePath, "shadow/shaders"));
         }
-
+        builder.addEntry(@path(basePath, "shadow/patch.js"));
         builder.addEntry(@path(basePath, "shadow/model.xml"));
 
         builder.addEntry(@path(basePath, "mesh.data.json"));

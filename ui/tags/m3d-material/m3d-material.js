@@ -69,6 +69,7 @@ const prepareMaterial = function (dom) {
         syncVertexShader(dom, $(dom).attr("vertex-shader"));
         syncFragmentShader(dom, $(dom).attr("fragment-shader"));
         syncUniforms(dom);
+        dom.m3dMaterial.m3dExtra = dom.m3dExtra;
         trigMaterialUpdate(dom);
     }
 
@@ -861,6 +862,32 @@ const trigMaterialUpdate = function (dom) {
 
 };
 
+const syncExtra = function (dom, value) {
+
+    if (/^{ \/\* Property\-([0-9]+) \*\/$/.test(dom)) {
+        return;
+    }
+
+    if (value) {
+        try {
+            dom.m3dExtra = JSON.parse(value);
+            if (dom.m3dMaterial) {
+                dom.m3dMaterial.m3dExtra = dom.m3dExtra;
+            }
+        } catch (error) {
+            console.error(error);
+            if (dom.m3dMesh) {
+                delete dom.m3dMesh.m3dExtra;
+            }
+        }
+    } else {
+        if (dom.m3dMesh) {
+            delete dom.m3dMesh.m3dExtra;
+        }
+    }
+
+};
+
 module.exports = {
     "attributes": [
         "preset",
@@ -875,6 +902,7 @@ module.exports = {
         "stencil-failed", "stencil-z-failed", "stencil-z-passed",
         "stencil-write-mask", 
         "blending-destination", "blending-equation", "blending-source",
+        "extra"
     ],
     "listeners": {
         "onconnected": function () {
@@ -913,11 +941,22 @@ module.exports = {
                 case "blending-source": { syncBlendingSource(this, value); break; }
                 case "blending-destination": { syncBlendingDestination(this, value); break; }
                 case "blending-equation": { syncBlendingEquation(this, value); break; }
+                case "extra": { syncExtra(this, value); break; }
                 default: { break; };
             }
         },
         "ondisconnected": function () {
             disposeMaterial(this);
+        }
+    },
+    "properties": {
+        "extra": {
+            "get": function () {
+                return this.m3dExtra;
+            },
+            "set": function (value) {
+                this.m3dExtra = value;
+            }
         }
     },
     "methods": {

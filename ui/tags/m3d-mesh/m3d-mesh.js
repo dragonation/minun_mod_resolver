@@ -65,12 +65,48 @@ const prepareMesh = function (dom) {
         }
 
         dom.m3dMesh.m3dFromTagObject = dom;
+        dom.m3dMesh.m3dExtra = dom.m3dExtra;
 
-        dom.m3dMesh.onBeforeRender = function () {
+        dom.m3dMesh.onBeforeRender = function (renderer, scene, camera, geometry, material, group) {
+
+            if (dom.m3dPatch) {
+
+                let mesh = dom.m3dMesh;
+
+                let lights = [];
+                let getLights = (parent) => {
+                    for (let child of parent.children) {
+                        if (child.isLight) {
+                            lights.push(child);
+                        }
+                    }
+                    if (parent.parent) {
+                        getLights(parent.parent);
+                    }
+                };
+                getLights(mesh);
+
+                let extra = {};
+                if (mesh.m3dExtra) {
+                    Object.assign(extra, mesh.m3dExtra);
+                }
+                if (material.m3dExtra) {
+                    Object.assign(extra, material.m3dExtra);
+                }
+
+                dom.m3dPatch.call(dom, 
+                                  renderer, scene, camera, lights,
+                                  mesh, geometry, material, 
+                                  material.uniforms, extra);
+
+            }
+
             if (dom.m3dBeforeRender) {
                 return dom.m3dBeforeRender.apply(dom, arguments);
             }
         };
+
+        dom.m3dSyncPatch();
 
         syncName(dom, $(dom).attr("name"));
         syncMaterials(dom, $(dom).attr("materials"));
@@ -230,9 +266,45 @@ const syncName = function (dom, value) {
 
 };
 
+const syncExtra = function (dom, value) {
+
+    if (/^{ \/\* Property\-([0-9]+) \*\/$/.test(dom)) {
+        return;
+    }
+
+    if (value) {
+        try {
+            dom.m3dExtra = JSON.parse(value);
+            if (dom.m3dMesh) {
+                dom.m3dMesh.m3dExtra = dom.m3dExtra;
+            }
+        } catch (error) {
+            console.error(error);
+            if (dom.m3dMesh) {
+                delete dom.m3dMesh.m3dExtra;
+            }
+        }
+    } else {
+        if (dom.m3dMesh) {
+            delete dom.m3dMesh.m3dExtra;
+        }
+    }
+
+};
+
 const getBinLoader = function (dom) {
 
     while (dom && (typeof dom.m3dGetBin !== "function")) {
+        dom = dom.parentNode;
+    }
+
+    return dom;
+
+};
+
+const getPatchLoader = function (dom) {
+
+    while (dom && (typeof dom.m3dLoadPatch !== "function")) {
         dom = dom.parentNode;
     }
 
@@ -252,11 +324,14 @@ module.exports = {
         "uvs", "uv-unit-size",
         "uvs-2", "uv-2-unit-size",
         "uvs-3", "uv-3-unit-size",
-        "bone-indices", "bone-weights"
+        "bone-indices", "bone-weights",
+        "patch",
+        "extra"
     ],
     "listeners": {
         "onconnected": function () {
             this.m3dSyncBin();
+            this.m3dSyncPatch();
         },
         "onupdated": function (name, value) {
             switch (name) {
@@ -333,6 +408,14 @@ module.exports = {
                     }
                     break;
                 }
+                case "patch": {
+                    this.m3dSyncPatch();
+                    break;
+                }
+                case "extra": {
+                    syncExtra(this, value);
+                    break;
+                }
                 default: { break; };
             }
         },
@@ -341,6 +424,14 @@ module.exports = {
         }
     },
     "properties": {
+        "extra": {
+            "get": function () {
+                return this.m3dExtra;
+            },
+            "set": function (value) {
+                this.m3dExtra = value;
+            }
+        },
         "indices": {
             "get": function () {
                 return this.m3dIndices;
@@ -474,6 +565,36 @@ module.exports = {
     "methods": {
         "m3dGetObject": function () {
             return prepareMesh(this);
+        },
+        "m3dSyncPatch": function () {
+
+            let patch = $(this).attr("patch");
+            if (!patch) { return; }
+            if (patch[0] !== "@") { return; }
+
+            let loader = getPatchLoader(this);
+            if (!loader) { return; }
+
+            loader.m3dLoadPatch(patch.slice(1), (error, module) => {
+
+                if (error) { 
+                    this.m3dPatch = undefined;
+                    if (this.m3dMesh) {
+                        this.m3dMesh.m3dPatch = undefined;
+                    }
+                    console.error(error); return; 
+                }
+
+                let newPatch = $(this).attr("patch");
+                if (newPatch !== patch) { return; }
+
+                this.m3dPatch = module;
+                if (this.m3dMesh) {
+                    this.m3dMesh.m3dPatch = module;
+                }
+
+            });
+
         },
         "m3dSyncBin": function () {
 
