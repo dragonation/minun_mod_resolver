@@ -67,6 +67,7 @@ module.exports = {
                     } else {
                         this.m3dUniform = new THREE.Uniform(value ? true : false);
                     }
+                    this.m3dUniform.origin = value ? true : false;
                     break; 
                 }
                 case "bool[]": { 
@@ -75,6 +76,7 @@ module.exports = {
                     } else {
                         this.m3dUniform = new THREE.Uniform(value.map((value) => value ? true : false));
                     }
+                    this.m3dUniform.origin = value.map((value) => value ? true : false);
                     break; 
                 }
                 case "int": 
@@ -84,6 +86,7 @@ module.exports = {
                     } else {
                         this.m3dUniform = new THREE.Uniform(value);
                     }
+                    this.m3dUniform.origin = value;
                     break; 
                 }
                 case "int[]":
@@ -93,6 +96,7 @@ module.exports = {
                     } else {
                         this.m3dUniform = new THREE.Uniform(value);
                     }
+                    this.m3dUniform.origin = value.slice(0);
                     break; 
                 }
                 case "vec3": { 
@@ -101,18 +105,22 @@ module.exports = {
                     } else {
                         this.m3dUniform = new THREE.Uniform(new THREE.Vector3(value[0], value[1], value[2]));
                     }
+                    this.m3dUniform.origin = new THREE.Vector3(value[0], value[1], value[2]);
                     break; 
                 }
                 case "vec3[]": { 
                     let array = [];
+                    let array2 = [];
                     for (let looper = 0; looper < value.length; looper += 3) {
                         array.push(new THREE.Vector3(value[looper], value[looper + 1], value[looper + 2]));
+                        array2.push(new THREE.Vector3(value[looper], value[looper + 1], value[looper + 2]));
                     }
                     if (this.m3dUniform) { 
                         this.m3dUniform.value = array;
                     } else {
                         this.m3dUniform = new THREE.Uniform(array);
                     }
+                    this.m3dUniform.origin = array2;
                     break; 
                 }
                 case "vec4": { 
@@ -121,32 +129,40 @@ module.exports = {
                     } else {
                         this.m3dUniform = new THREE.Uniform(new THREE.Vector4(value[0], value[1], value[2], value[3]));
                     }
+                    this.m3dUniform.origin = new THREE.Vector4(value[0], value[1], value[2], value[3]);
                     break; 
                 }
                 case "vec4[]": { 
                     let array = [];
+                    let array2 = [];
                     for (let looper = 0; looper < value.length; looper += 4) {
                         array.push(new THREE.Vector4(value[looper], value[looper + 1], 
                                                      value[looper + 2], value[looper + 3]));
+                        array2.push(new THREE.Vector4(value[looper], value[looper + 1], 
+                                                      value[looper + 2], value[looper + 3]));
                     }
                     if (this.m3dUniform) { 
                         this.m3dUniform.value = array;
                     } else {
                         this.m3dUniform = new THREE.Uniform(array);
                     }
+                    this.m3dUniform.origin = array2;
                     break; 
                 }
                 default: { 
                     if ((typeof value === "number") && (typeof this.m3dUniform.value === "number")) {
                         this.m3dUniform.value = value;
+                        this.m3dUniform.origin = value;
                     } else if (Array.isArray(value) && 
                                Array.isArray(this.m3dUniform.value) && 
                                (this.m3dUniform.value.length === value.length)) {
                         for (let looper = 0; looper < value.length; ++looper) {
                             this.m3dUniform.value[looper] = value[looper];
+                            this.m3dUniform.origin[looper] = value[looper];
                         }
                     } else {
                         this.m3dUniform = new THREE.Uniform(value);
+                        this.m3dUniform.origin = value;
                     }
                     break; 
                 }

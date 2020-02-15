@@ -2,6 +2,8 @@ const { Section } = require("./section.js");
 
 const { PICA } = require("./pica.js");
 
+let glslRegisterDescribingGeometry = false;
+
 const Shader = function Shader(reader) {
 
     this.magic = reader.readUint32();
@@ -53,8 +55,6 @@ Shader.prototype.analyze = function () {
 
     let shader = this.pica.shader ? this.pica.shader.vertex : null;
     if ((!shader) || @.is.nil(shader.entryPoint)) {
-        shader = this.pica.shader ? this.pica.shader.geometry : null;
-    } else if ((!shader) || @.is.nil(shader.entryPoint)) {
         shader = null;
     }
 
@@ -145,7 +145,7 @@ Shader.prototype.analyze = function () {
                     break;
                 }
                 case "loop": {
-                    // TODO: finsih loop analysis
+                    // TODO: finish loop analysis
                     break;
                 }
                 case "end": {
@@ -159,11 +159,34 @@ Shader.prototype.analyze = function () {
             throw new Error("End not found for shader codes");
         }
 
-        labels[shader.entryPoint] = {
-            "name": "main",
-            "type": "prog",
-            "end": end
-        };
+        if (this.pica.shader.geometry.entryPoint) {
+            labels[this.pica.shader.geometry.entryPoint] = {
+                "name": "main",
+                "type": "prog",
+                "prefix": ["/* call vertex program code */",
+                           "vertex_prog();"
+                          ].join("\n"),
+                "end": end + 1
+            };
+            labels[shader.entryPoint] = {
+                "name": "vertex_prog",
+                "type": "call",
+                "end": this.pica.shader.geometry.entryPoint - 1
+            };
+        } else {
+            labels[shader.entryPoint] = {
+                "name": "main",
+                "type": "prog",
+                "end": end + 1
+            };
+        }
+ 
+        let emitPrimitives = [];
+        let emitVertices = [];
+        let emitVertexIDs = [0, 0, 0, 0];
+        let emitVertexID = 0;
+        let emitPrimitive = false;
+        let emitWinding = false;
 
         let rootBlock = {
             "type": "code",
@@ -171,12 +194,14 @@ Shader.prototype.analyze = function () {
             "end": instructions.length,
             "instructions": []
         };
+
         let currentBlock = rootBlock;
         let lastCallBlock = null;
         instructions.forEach((instruction, index) => {
             if (labels[index]) {
                 let newBlock = {
                     "label": labels[index].name,
+                    "prefix": labels[index].prefix,
                     "superblock": currentBlock,
                     "begin": index,
                     "end": labels[index].end,
@@ -191,6 +216,28 @@ Shader.prototype.analyze = function () {
                 }
                 currentBlock.instructions.push(newBlock);
                 currentBlock = newBlock;
+            }
+            if (instruction.name === "emit") {
+                emitVertexIDs[emitVertexID] = emitVertices.length;
+                instruction.emitIndex = emitVertices.length;
+                emitVertices.push({
+                    "id": emitVertices.length,
+                    "index": index
+                });
+                if (emitPrimitive) {
+                    let vertices = emitVertices.slice(-3).map((vertex) => vertex.id);
+                    if (emitWinding) {
+                        vertices = vertices.reverse();
+                    }
+                    emitPrimitives.push(vertices);
+                }
+                emitPrimitive = false;
+                emitWinding = false;
+            } else if (instruction.name === "setemit") {
+                emitVertexID = instruction.parameters[0];
+                instruction.emitIndex = emitVertices.length;
+                emitPrimitive = instruction.parameters.indexOf("primitive") !== -1;
+                emitWinding = instruction.parameters.indexOf("winding") !== -1;
             }
             if (instruction.name !== "mova") {
                 if (instruction.registers) {
@@ -227,12 +274,19 @@ Shader.prototype.analyze = function () {
             }
         });
 
-        return {
-            "type": shader == this.pica.shader.vertex ? "vertex" : "geometry",
+        let result = {
+            "type": this.pica.shader.geometry.entryPoint ? "geometry" : "vertex",
             "instructions": instructions,
             "labels": labels,
-            "codes": rootBlock.instructions,
+            "codes": rootBlock.instructions
         };
+
+        if (result.type === "geometry") {
+            result.emitVertices = emitVertices;
+            result.emitPrimitives = emitPrimitives;
+        }
+
+        return result;
 
     } else {
         return {
@@ -249,15 +303,13 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
     let shader = this;
     let report = this.analyze();
 
-    if (report.type === "geometry") {
-        throw new Error("Geometry shader currently not supported");
-    } else if (report.type === "vertex") {
+    if ((report.type === "geometry") || (report.type === "vertex")) {
         if (glsl) {
 
             let registers = {};
             let callRegisters = {};
 
-            let describe = (instruction, indent, nexts) => {
+            let describe = (instruction, indent, nexts, supertype, geometryIndex) => {
                 if (instruction.hasOwnProperty("line")) {
 
                     if (instruction.registers) {
@@ -281,9 +333,11 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                         "name": instruction.name,
                         "line": instruction.line,
                         "parameters": instruction.parameters,
-                        "report": report
+                        "report": report,
+                        "emitIndex": instruction.emitIndex,
+                        "geometryIndex": geometryIndex
                     }, instruction.registers), {
-                        "functors": @.merge.simple(Shader.functors, {
+                        "functors": (@.merge.simple(Shader.functors, {
                             "glmova": function (/*template, call, parameters, options*/) {
 
                                 let dst = instruction.registers.dst["@1"];
@@ -305,7 +359,11 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                                 }).join("\n");
 
                             },
-                            "glend": function (/*template, call, parameters, options*/) {
+                            "glend": function (template, call, parameters, options, indent) {
+                                if (supertype !== "prog") {
+                                    return;
+                                }
+                                if (!indent) { indent = ""; }
                                 // Assume that one register only output one kind of vertex data
                                 let output = -1;
                                 shader.pica.shader.outputMap.forEach((map, index) => {
@@ -317,7 +375,7 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                                     return ["fragDepth = length(" + new Shader.Register("", "o" + output, "", "", shader).glsl + ".xyz);",
                                             "fragNormal = normal;",
                                             "gl_Position = " + new Shader.Register("", "o" + output, "", "", shader).glsl
-                                            ].join("\n    ");
+                                            ].join("\n    " + indent);
                                 } else {
                                     throw new Error("No gl_Position output found");
                                 }
@@ -355,7 +413,7 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                             "glblock": function (template, call, parameters, options, offset) {
                                 return describe(nexts[offset], indent + "    ", nexts.slice(offset + 1));
                             }
-                        })
+                        }))
                     });
 
                     let margin = 80;
@@ -370,19 +428,11 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                     }).join("\n");
 
                 } else {
-
                     switch (instruction.type) {
                         case "call":
                         case "prog": {
 
                             callRegisters = {};
-
-                            let block = instruction.instructions.filter((instruction) => {
-                                return instruction.hasOwnProperty("line");
-                            }).map((newInstruction) => {
-                                return describe(newInstruction, indent + "    ",
-                                                instruction.instructions.slice(instruction.instructions.indexOf(newInstruction) + 1));
-                            }).join("\n");
 
                             let registers = Object.keys(callRegisters).sort(@.comparator.natural).filter((register) => {
                                 if ((register[0] === "r") || (register[0] === "a") || (register === "cmp")) {
@@ -433,9 +483,116 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                                 });
                             }
 
+                            let block = undefined;
+                            if ((report.type === "geometry") && (instruction.type === "prog")) {
+                                glslRegisterDescribingGeometry = true;
+                                let maxEmit = -Infinity;
+                                let blocks = [];
+                                for (let looper = 0; looper < report.emitVertices.length; ++looper) {
+                                    let emitted = false;
+                                    let exporteds = Object.create(null);
+                                    let instructions = instruction.instructions.filter((instruction) => {
+                                        return instruction.hasOwnProperty("line");
+                                    });
+                                    instructions = instructions.filter((newInstruction) => {
+                                        if (emitted) { return false; }
+                                        if (newInstruction.name === "emit") {
+                                            if (newInstruction.emitIndex !== looper) { 
+                                                return false;
+                                            } else {
+                                                emitted = true; 
+                                            }
+                                        }
+                                        if ((newInstruction.name === "setemit") &&
+                                            (newInstruction.emitIndex !== looper)) { 
+                                            return false;
+                                        }
+                                        return true;
+                                    });
+                                    for (let looper = 0; looper < instructions.length; ++looper) {
+                                        let instruction = instructions[looper];
+                                        if ((instruction.name === "mov") && (instruction.parameters[0].name[0] === "o")) {
+                                            if (!exporteds[instruction.parameters[0].name]) {
+                                                exporteds[instruction.parameters[0].name] = [];
+                                            }
+                                            exporteds[instruction.parameters[0].name].push(looper);
+                                        }
+                                    }
+                                    instructions = instructions.filter((instruction, index) => {
+                                        if ((instruction.name === "mov") && (instruction.parameters[0].name[0] === "o")) {
+                                            let indices = exporteds[instruction.parameters[0]];
+                                            if (index !== indices[indices.length - 1]) {
+                                                return false;
+                                            }
+                                        }
+                                        return true;
+                                    });
+                                    maxEmit = Math.max(maxEmit, instructions[instructions.length - 1].line);
+                                    let block = instructions.map((newInstruction) => {
+                                        return describe(newInstruction, indent + "    ",
+                                                        instruction.instructions.slice(instruction.instructions.indexOf(newInstruction) + 1),
+                                                        instruction.type,
+                                                        looper);
+                                    }).filter((line) => line.trim());
+                                    blocks.push(block);
+                                }
+                                let hasDifference = false;
+                                let prefix = 0;
+                                while (!hasDifference) {
+                                    let line = blocks[0][prefix];
+                                    let looper = 1; 
+                                    while ((!hasDifference) && (looper < blocks.length)) {
+                                        hasDifference = line !== blocks[looper][prefix];
+                                        ++looper;
+                                    }
+                                    if (!hasDifference) {
+                                        ++prefix;
+                                    }
+                                }
+                                block = "";
+                                if (prefix) {
+                                    block += blocks[0].slice(0, prefix).join("\n") + "\n";
+                                }
+                                block += blocks.map((block, index) => {
+                                    let lines = "    ";
+                                    if (index > 0) {
+                                        lines += "} else ";
+                                    }
+                                    lines += `if (geometryIndex.x == ${index.toFixed(1)}) {\n`;
+                                    lines += block.slice(prefix).map(line => {
+                                        return "    " + line.replace("    //", "//");
+                                    }).join("\n");
+                                    return lines;
+                                }).join("\n") + "\n    }";
+                                let rest = instruction.instructions.filter((instruction) => {
+                                    return instruction.hasOwnProperty("line") && (instruction.line > maxEmit);
+                                }).map((newInstruction) => {
+                                    return describe(newInstruction, indent + "    ",
+                                                    instruction.instructions.slice(instruction.instructions.indexOf(newInstruction) + 1),
+                                                    instruction.type);
+                                }).join("\n");
+                                if (rest) {
+                                    block += "\n" + rest;
+                                }
+                                glslRegisterDescribingGeometry = false;
+                            } else {
+                                block = instruction.instructions.filter((instruction) => {
+                                    return instruction.hasOwnProperty("line");
+                                }).map((newInstruction) => {
+                                    return describe(newInstruction, indent + "    ",
+                                                    instruction.instructions.slice(instruction.instructions.indexOf(newInstruction) + 1),
+                                                    instruction.type);
+                                }).join("\n");
+                            }
+
                             return (
                                 indent + "void " + instruction.label + "(" + argumentDefinitions.join(", ") + ") {\n" +
                                     registers +
+                                    (instruction.prefix ? 
+                                     (indent + instruction.prefix.split("\n").map((line) => {
+                                         return "    " + line;
+                                      }).join("\n") + "\n") : 
+                                     "") +
                                     indent + block + "\n" +
                                 indent + "}\n"
                             );
@@ -444,7 +601,9 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                             return instruction.instructions.filter((instruction) => {
                                 return instruction.hasOwnProperty("line");
                             }).map((newInstruction) => {
-                                return describe(newInstruction, indent, instruction.instructions.slice(instruction.instructions.indexOf(newInstruction) + 1));
+                                return describe(newInstruction, indent, 
+                                                instruction.instructions.slice(instruction.instructions.indexOf(newInstruction) + 1),
+                                                supertype);
                             }).join("\n");
                         }
                     }
@@ -452,7 +611,7 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
             };
 
             let codes = report.codes.map((instruction, index) => {
-                return describe(instruction, "", report.codes.slice(index + 1));
+                return describe(instruction, "", report.codes.slice(index + 1), "code");
             }).join("\n");
 
             return [
@@ -475,7 +634,7 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                     let code = `attribute vec4 ${new Shader.Register("", register, "", "", this).glsl};`;
                     code = (code + "                                                                                ").slice(0, 80);
                     return code + `// gpu_${register}`;
-                }).join("\n"),
+                }).join("\n") + (report.type === "geometry" ? "\nattribute vec4 geometryIndex;" : ""),
                 "",
                 Object.keys(registers).filter((key) => key[0] === "b").sort(@.cmp.natural).map((register) => {
                     let code = `uniform bool ${new Shader.Register("", register, "", "", this).glsl};`;
@@ -604,6 +763,7 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                 return  "0x" + line + "  " + label + description + end.join("");
 
             }).join("\n");
+
 
             return [
                 "File: " + this.fileName,
@@ -1619,7 +1779,7 @@ Shader.codes.NOP = { "from": 0x21, "to": 0x21, "format": "0",
                      "glsl": "" };
 Shader.codes.END = { "from": 0x22, "to": 0x22, "format": "0",
                      "comment": "exit;",
-                     "glsl": "${glend()};\n${indent}return;" };
+                     "glsl": "${glend() ? glend() + ';\n' + indent : ''}return;" };
 Shader.codes.BREAKC = { "from": 0x23, "to": 0x23, "format": "2",
                         "comment": "if (${join(slice(parameters, 0, -2), ' ')}) { break; }",
                         "glsl": "if (${join(glsl(slice(parameters, 0, -2)), ' ')}) { break; }" };
@@ -1760,6 +1920,9 @@ Register.prototype.toString = function (prefix, map) {
     }
 
     let name = prefix + this.name + offset;
+    if (glslRegisterDescribingGeometry && /^gpu_v[0-9]$/.test(name)) {
+        name = "gpu_o" + name[name.length - 1];
+    }
     if (map && map[name]) {
         name = map[name];
     }
@@ -1837,8 +2000,6 @@ Object.defineProperty(Register.prototype, "glsl", {
 
         let shader = this.shader.pica.shader ? this.shader.pica.shader.vertex : null;
         if ((!shader) || @.is.nil(shader.entryPoint)) {
-            shader = this.shader.pica.shader ? this.shader.pica.shader.geometry : null;
-        } else if ((!shader) || @.is.nil(shader.entryPoint)) {
             shader = null;
         }
 
@@ -1893,6 +2054,23 @@ Object.defineProperty(Register.prototype, "glsl", {
                 }
                 if (this.shader.pica.shader.vertex.floats[this.name.slice(1)]) {
                     let vector = this.shader.pica.shader.vertex.floats[this.name.slice(1)];
+                    let values = this.components.split("").map((component) => {
+                        if (this.sign) {
+                            return "(" + this.sign + Shader.float(vector[component]) + ")";
+                        } else {
+                            return Shader.float(vector[component]);
+                        }
+                    });
+                    if (values.length > 1) {
+                        return "vec" + values.length + "(" + values.join(", ") + ")";
+                    } else {
+                        return values[0];
+                    }
+                }
+                if (this.shader.pica.shader.geometry &&
+                    this.shader.pica.shader.geometry.floats &&
+                    this.shader.pica.shader.geometry.floats[this.name.slice(1)]) {
+                    let vector = this.shader.pica.shader.geometry.floats[this.name.slice(1)];
                     let values = this.components.split("").map((component) => {
                         if (this.sign) {
                             return "(" + this.sign + Shader.float(vector[component]) + ")";

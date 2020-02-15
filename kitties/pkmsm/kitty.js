@@ -332,12 +332,7 @@ let saveU8Buffer = (array, path, dict) => {
             for (let shader in json.shaders.vertices) {
                 let path = @path(basePath, "shaders", shader + ".vert");
                 @.fs.makeDirs(@.fs.dirname(path));
-                if (shader === "PokeFire") {
-                    @.fs.copyFile.sync(@path(@mewchan().workingPath, "data/pkm/templates/model/PokeFire.vert"), 
-                                       path);
-                } else {
-                    @.fs.writeFile.sync(path, json.shaders.vertices[shader]);
-                }
+                @.fs.writeFile.sync(path, json.shaders.vertices[shader]);
             }
 
             let makeU8TextureBuffer = (array) => {
@@ -400,7 +395,8 @@ let saveU8Buffer = (array, path, dict) => {
 
                 mxmls[`materials/${mesh.name}-${looper}-${mesh.material}.xml`] = @.format(modelMaterialTemplate, { 
                     "id": `${mesh.name}-${looper}-${mesh.material}`,
-                    "material": json.materials[mesh.material] 
+                    "material": json.materials[mesh.material], 
+                    "isGeometryShader": json.shaders.geometries[json.materials[mesh.material].shaders.vertex] ? true : false
                 }, mxmlOptions);
                 materials.push(`${mesh.name}-${looper}-${mesh.material}`);
 

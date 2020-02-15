@@ -687,6 +687,7 @@ Model.prototype.extractShaderPrograms = function (pc, options) {
 
         const json = {
             "shaders": {
+                "geometries": {},
                 "vertices": {},
                 "fragments": {}
             },
@@ -721,6 +722,13 @@ Model.prototype.extractShaderPrograms = function (pc, options) {
 
             let vertexShaderCode = json.shaders.vertices[vertexShader.name];
             if (!vertexShaderCode) {
+                let report = vertexShader.analyze();
+                if (report.type === "geometry") {
+                    json.shaders.geometries[vertexShader.name] = {
+                        "vertices": report.emitVertices.length,
+                        "primitives": report.emitPrimitives
+                    };
+                }
                 vertexShaderCode = vertexShader.describe(true, material, luts);
                 json.shaders.vertices[vertexShader.name] = vertexShaderCode;
             }
@@ -812,6 +820,7 @@ Model.prototype.toJSON = function (pcs, options) {
                 };
             }),
             "shaders": {
+                "geometries": {},
                 "vertices": {},
                 "fragments": {}
             },
@@ -972,6 +981,13 @@ Model.prototype.toJSON = function (pcs, options) {
             if (vertexShader) {
                 vertexShaderCode = json.shaders.vertices[vertexShader.name];
                 if (!vertexShaderCode) {
+                    let report = vertexShader.analyze();
+                    if (report.type === "geometry") {
+                        json.shaders.geometries[vertexShader.name] = {
+                            "vertices": report.emitVertices.length,
+                            "primitives": report.emitPrimitives
+                        };
+                    }
                     vertexShaderCode = vertexShader.describe(true, material, luts);
                     json.shaders.vertices[vertexShader.name] = vertexShaderCode;
                 }
@@ -1182,6 +1198,8 @@ Model.prototype.toJSON = function (pcs, options) {
                     return material.name === submesh.material;
                 })[0];
 
+                prepareMaterial(material, mesh);
+
                 const record = {
                     "name": mesh.name,
                     "material": submesh.material,
@@ -1192,13 +1210,18 @@ Model.prototype.toJSON = function (pcs, options) {
                     }
                 };
 
-                let hasGeometryShader = false;
-                let vertexShaderFile = pcs.model.files[options.isShadow ? 3 : 2].files.filter((shader) => {
-                    return @.is(shader, Shader) && (shader.name === material.vertexShader);
-                })[0];
-                if (vertexShaderFile) {
-                    hasGeometryShader = !@.is.nil(vertexShaderFile.pica.shader.geometry.entryPoint);
+                let hasGeometryShader = json.shaders.geometries[material.vertexShader];
+                let geometryVertices = 1;
+                let geometryPrimitives = [];
+                if (hasGeometryShader) {
+                    geometryVertices = json.shaders.geometries[material.vertexShader].vertices;
+                    for (let primitive of json.shaders.geometries[material.vertexShader].primitives) {
+                        geometryPrimitives.push(primitive[0]);
+                        geometryPrimitives.push(primitive[1]);
+                        geometryPrimitives.push(primitive[2]);
+                    }
                 }
+
                 const features = {
                     "hasGeometryShader": hasGeometryShader,
                     "hasBoneW": (mesh.boneIndicesPerVertex >= 4)
@@ -1221,7 +1244,7 @@ Model.prototype.toJSON = function (pcs, options) {
                 let data = submesh.vertices.data;
 
                 if (features.hasPosition) {
-                    let positions = new Float32Array(submesh.vertices.count * 4 * (features.hasGeometryShader ? 4 : 1));
+                    let positions = new Float32Array(submesh.vertices.count * 4 * geometryVertices);
                     let index = 0;
                     while (index < data.length) {
                         let value = (features.hasPosition === true) ? data[index].position : features.hasPosition;
@@ -1233,15 +1256,15 @@ Model.prototype.toJSON = function (pcs, options) {
                         ++index;
                     }
                     if (features.hasGeometryShader) {
-                        positions.copyWithin(submesh.vertices.count * 4, 0, submesh.vertices.count * 4);
-                        positions.copyWithin(submesh.vertices.count * 4 * 2, 0, submesh.vertices.count * 4);
-                        positions.copyWithin(submesh.vertices.count * 4 * 3, 0, submesh.vertices.count * 4);
+                        for (let looper = 1; looper < geometryVertices; ++looper) {
+                            positions.copyWithin(submesh.vertices.count * 4 * looper, 0, submesh.vertices.count * 4);
+                        }
                     }
                     record.attributes.positions = positions;
                 }
 
                 if (features.hasNormal) {
-                    let normals = new Float32Array(submesh.vertices.count * 4 * (features.hasGeometryShader ? 4 : 1));
+                    let normals = new Float32Array(submesh.vertices.count * 4 * geometryVertices);
                     let index = 0;
                     while (index < data.length) {
                         let value = (features.hasNormal === true) ? data[index].normal : features.hasNormal;
@@ -1251,15 +1274,15 @@ Model.prototype.toJSON = function (pcs, options) {
                         ++index;
                     }
                     if (features.hasGeometryShader) {
-                        normals.copyWithin(submesh.vertices.count * 4, 0, submesh.vertices.count * 4);
-                        normals.copyWithin(submesh.vertices.count * 4 * 2, 0, submesh.vertices.count * 4);
-                        normals.copyWithin(submesh.vertices.count * 4 * 3, 0, submesh.vertices.count * 4);
+                        for (let looper = 1; looper < geometryVertices; ++looper) {
+                            normals.copyWithin(submesh.vertices.count * 4 * looper, 0, submesh.vertices.count * 4);
+                        }
                     }
                     record.attributes.normals = normals;
                 }
 
                 if (features.hasTangent) {
-                    let tangents = new Float32Array(submesh.vertices.count * 4 * (features.hasGeometryShader ? 4 : 1));
+                    let tangents = new Float32Array(submesh.vertices.count * 4 * geometryVertices);
                     let index = 0;
                     while (index < data.length) {
                         let value = (features.hasTangent === true) ? data[index].tangent : features.hasTangent;
@@ -1270,15 +1293,15 @@ Model.prototype.toJSON = function (pcs, options) {
                         ++index;
                     }
                     if (features.hasGeometryShader) {
-                        tangents.copyWithin(submesh.vertices.count * 4, 0, submesh.vertices.count * 4);
-                        tangents.copyWithin(submesh.vertices.count * 4 * 2, 0, submesh.vertices.count * 4);
-                        tangents.copyWithin(submesh.vertices.count * 4 * 3, 0, submesh.vertices.count * 4);
+                        for (let looper = 1; looper < geometryVertices; ++looper) {
+                            tangents.copyWithin(submesh.vertices.count * 4 * looper, 0, submesh.vertices.count * 4);
+                        }
                     }
                     record.attributes.tangents = tangents;
                 }
 
                 if (features.hasColor) {
-                    let colors = new Uint8Array(submesh.vertices.count * 4 * (features.hasGeometryShader ? 4 : 1));
+                    let colors = new Uint8Array(submesh.vertices.count * 4 * geometryVertices);
                     let index = 0;
                     while (index < data.length) {
                         let value = (features.hasColor === true) ? data[index].color : features.hasColor;
@@ -1290,15 +1313,15 @@ Model.prototype.toJSON = function (pcs, options) {
                         ++index;
                     }
                     if (features.hasGeometryShader) {
-                        colors.copyWithin(submesh.vertices.count * 4, 0, submesh.vertices.count * 4);
-                        colors.copyWithin(submesh.vertices.count * 4 * 2, 0, submesh.vertices.count * 4);
-                        colors.copyWithin(submesh.vertices.count * 4 * 3, 0, submesh.vertices.count * 4);
+                        for (let looper = 1; looper < geometryVertices; ++looper) {
+                            colors.copyWithin(submesh.vertices.count * 4 * looper, 0, submesh.vertices.count * 4);
+                        }
                     }
                     record.attributes.colors = colors;
                 }
 
                 if (features.hasTextureCoordinate0) {
-                    let uvs = new Float32Array(submesh.vertices.count * 4 * (features.hasGeometryShader ? 4 : 1));
+                    let uvs = new Float32Array(submesh.vertices.count * 4 * geometryVertices);
                     let index = 0;
                     while (index < data.length) {
                         let value = (features.hasTextureCoordinate0 === true) ? data[index].textures[0] : features.hasTextureCoordinate0;
@@ -1308,15 +1331,15 @@ Model.prototype.toJSON = function (pcs, options) {
                         ++index;
                     }
                     if (features.hasGeometryShader) {
-                        uvs.copyWithin(submesh.vertices.count * 4, 0, submesh.vertices.count * 4);
-                        uvs.copyWithin(submesh.vertices.count * 4 * 2, 0, submesh.vertices.count * 4);
-                        uvs.copyWithin(submesh.vertices.count * 4 * 3, 0, submesh.vertices.count * 4);
+                        for (let looper = 1; looper < geometryVertices; ++looper) {
+                            uvs.copyWithin(submesh.vertices.count * 4 * looper, 0, submesh.vertices.count * 4);
+                        }
                     }
                     record.attributes.uvs[0] = uvs;
                 }
 
                 if (features.hasTextureCoordinate1) {
-                    let uvs = new Float32Array(submesh.vertices.count * 4 * (features.hasGeometryShader ? 4 : 1));
+                    let uvs = new Float32Array(submesh.vertices.count * 4 * geometryVertices);
                     let index = 0;
                     while (index < data.length) {
                         let value = (features.hasTextureCoordinate1 === true) ? data[index].textures[1] : features.hasTextureCoordinate1;
@@ -1326,15 +1349,15 @@ Model.prototype.toJSON = function (pcs, options) {
                         ++index;
                     }
                     if (features.hasGeometryShader) {
-                        uvs.copyWithin(submesh.vertices.count * 4, 0, submesh.vertices.count * 4);
-                        uvs.copyWithin(submesh.vertices.count * 4 * 2, 0, submesh.vertices.count * 4);
-                        uvs.copyWithin(submesh.vertices.count * 4 * 3, 0, submesh.vertices.count * 4);
+                        for (let looper = 1; looper < geometryVertices; ++looper) {
+                            uvs.copyWithin(submesh.vertices.count * 4 * looper, 0, submesh.vertices.count * 4);
+                        }
                     }
                     record.attributes.uvs[1] = uvs;
                 }
 
                 if (features.hasTextureCoordinate2) {
-                    let uvs = new Float32Array(submesh.vertices.count * 4 * (features.hasGeometryShader ? 4 : 1));
+                    let uvs = new Float32Array(submesh.vertices.count * 4 * geometryVertices);
                     let index = 0;
                     while (index < data.length) {
                         let value = (features.hasTextureCoordinate2 === true) ? data[index].textures[2] : features.hasTextureCoordinate2;
@@ -1344,15 +1367,15 @@ Model.prototype.toJSON = function (pcs, options) {
                         ++index;
                     }
                     if (features.hasGeometryShader) {
-                        uvs.copyWithin(submesh.vertices.count * 4, 0, submesh.vertices.count * 4);
-                        uvs.copyWithin(submesh.vertices.count * 4 * 2, 0, submesh.vertices.count * 4);
-                        uvs.copyWithin(submesh.vertices.count * 4 * 3, 0, submesh.vertices.count * 4);
+                        for (let looper = 1; looper < geometryVertices; ++looper) {
+                            uvs.copyWithin(submesh.vertices.count * 4 * looper, 0, submesh.vertices.count * 4);
+                        }
                     }
                     record.attributes.uvs[2] = uvs;
                 }
 
                 if (features.hasBoneIndex) {
-                    const boneIndices = new Float32Array(submesh.vertices.count * 4 * (features.hasGeometryShader ? 4 : 1));
+                    const boneIndices = new Float32Array(submesh.vertices.count * 4 * geometryVertices);
                     let index = 0;
                     while (index < data.length) {
                         let value = (features.hasBoneIndex === true) ? data[index].boneIndices : features.hasBoneIndex;
@@ -1380,16 +1403,16 @@ Model.prototype.toJSON = function (pcs, options) {
                         ++index;
                     }
                     if (features.hasGeometryShader) {
-                        boneIndices.copyWithin(submesh.vertices.count * 4, 0, submesh.vertices.count * 4);
-                        boneIndices.copyWithin(submesh.vertices.count * 4 * 2, 0, submesh.vertices.count * 4);
-                        boneIndices.copyWithin(submesh.vertices.count * 4 * 3, 0, submesh.vertices.count * 4);
+                        for (let looper = 1; looper < geometryVertices; ++looper) {
+                            boneIndices.copyWithin(submesh.vertices.count * 4 * looper, 0, submesh.vertices.count * 4);
+                        }
                     }
                     record.attributes.bones.indices = boneIndices;
                     record.bones = submesh.boneIndices;
                 }
 
                 if (features.hasBoneWeight) {
-                    const boneWeights = new Float32Array(submesh.vertices.count * 4 * (features.hasGeometryShader ? 4 : 1));
+                    const boneWeights = new Float32Array(submesh.vertices.count * 4 * geometryVertices);
                     let index = 0;
                     while (index < data.length) {
                         let value = (features.hasBoneWeight === true) ? data[index].boneWeights : features.hasBoneWeight;
@@ -1401,39 +1424,35 @@ Model.prototype.toJSON = function (pcs, options) {
                         ++index;
                     }
                     if (features.hasGeometryShader) {
-                        boneWeights.copyWithin(submesh.vertices.count * 4, 0, submesh.vertices.count * 4);
-                        boneWeights.copyWithin(submesh.vertices.count * 4 * 2, 0, submesh.vertices.count * 4);
-                        boneWeights.copyWithin(submesh.vertices.count * 4 * 3, 0, submesh.vertices.count * 4);
+                        for (let looper = 1; looper < geometryVertices; ++looper) {
+                            boneWeights.copyWithin(submesh.vertices.count * 4 * looper, 0, submesh.vertices.count * 4);
+                        }
                     }
                     record.attributes.bones.weights = boneWeights;
                 }
 
                 if (features.hasGeometryShader) {
                     const geometryIndices = new Float32Array(submesh.vertices.count * 4 * 4);
-                    geometryIndices.fill(0, 0, submesh.vertices.count * 4);
-                    geometryIndices.fill(1, submesh.vertices.count * 4, submesh.vertices.count * 4 * 2);
-                    geometryIndices.fill(2, submesh.vertices.count * 4 * 2, submesh.vertices.count * 4 * 3);
-                    geometryIndices.fill(3, submesh.vertices.count * 4 * 3, submesh.vertices.count * 4 * 4);
+                    for (let looper = 0; looper < geometryVertices; ++looper) {
+                        geometryIndices.fill(looper, 
+                            submesh.vertices.count * 4 * looper, 
+                            submesh.vertices.count * 4 * (looper + 1));
+                    }
                     record.attributes.indices.geometry = geometryIndices;
                 }
 
-                const indices = new Uint16Array(submesh.vertexIndices.count * (features.hasGeometryShader ? 6 : 1));
+                const indices = new Uint16Array(submesh.vertexIndices.count * (features.hasGeometryShader ? geometryPrimitives.length : 1));
                 submesh.vertexIndices.data.forEach((vertexIndex, index) => {
                     if (features.hasGeometryShader) {
                         let vertices = submesh.vertices.data.length;
-                        indices[index * 6] = vertexIndex + vertices * 0;
-                        indices[index * 6 + 1] = vertexIndex + vertices;
-                        indices[index * 6 + 2] = vertexIndex + vertices * 2;
-                        indices[index * 6 + 3] = vertexIndex + vertices;
-                        indices[index * 6 + 4] = vertexIndex + vertices * 2;
-                        indices[index * 6 + 5] = vertexIndex + vertices * 3;
+                        for (let looper = 0; looper < geometryPrimitives.length; ++looper) {
+                            indices[index * geometryPrimitives.length + looper] = vertexIndex + vertices * geometryPrimitives[looper];
+                        }
                     } else {
                         indices[index] = vertexIndex;
                     }
                 });
                 record.attributes.indices.vertices = indices;
-
-                prepareMaterial(material, mesh);
 
                 record.uniforms = {
                     "hasTangent": (features.hasTangent === true),

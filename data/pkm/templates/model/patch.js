@@ -23,21 +23,18 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
         uniforms.hasBoneW.value = extra.hasBoneW;
     }
 
-    if (uniforms.worldScales) {
-        let worldScales = [1,1,1];
-        let parent = mesh;
-        while (parent) {
-            worldScales[0] *= parent.scale.x;
-            worldScales[1] *= parent.scale.y;
-            worldScales[2] *= parent.scale.z;
-            if (parent.modelScale) {
-                worldScales[0] *= parent.modelScale.x;
-                worldScales[1] *= parent.modelScale.y;
-                worldScales[2] *= parent.modelScale.z;   
-            }
-            parent = parent.parent;
+    let worldScales = [1,1,1];
+    let parent = mesh;
+    while (parent) {
+        worldScales[0] *= parent.scale.x;
+        worldScales[1] *= parent.scale.y;
+        worldScales[2] *= parent.scale.z;
+        if (parent.modelScale) {
+            worldScales[0] *= parent.modelScale.x;
+            worldScales[1] *= parent.modelScale.y;
+            worldScales[2] *= parent.modelScale.z;   
         }
-        uniforms.worldScales.value.set(worldScales[0], worldScales[1], worldScales[2], 1);
+        parent = parent.parent;
     }
 
     // gpu vectors
@@ -134,6 +131,10 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
             //     vectors[84].set(1, 1, 1, 0);
             // }
         // }
+
+        if (extra.isGeometryShader) {
+            vectors[85].x = worldScales[0] * uniforms.vectors.origin[85].x;
+        }
 
         // projection matrices
         vectors[86].set(projectionMatrix.elements[0],
