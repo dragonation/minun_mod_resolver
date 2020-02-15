@@ -5,7 +5,7 @@
              offset="${item.offset}" repeat="${item.repeat}" rotation="${item.rotation}"/>
 </tmpl:map><m3d-material id="${id}" name="${material.name}" priorities="${material.layer},${material.priority}"
               preset="shader" skinning="yes" 
-              side="${material.faceCulling;{'frontFace'?'back-face', 'backFace'?'front-face', 'never'?'both-side'}}"
+              side="${material.faceCulling; { 'frontFace'? 'back-face', 'backFace'? 'front-face', 'never'? 'both-sides'}}"
               transparent="yes" alpha-premultiplied="yes"
               vertex-shader="@shaders/${material.shaders.vertex}.vert" fragment-shader="@shaders/${material.shaders.fragment}.frag"
               textures="${join(concat(map(material.textures, {'@map' + ($2 ? ($2 + 1) : '') + ':' + id + '-' + $2}), map(keys(material.luts), {'@lut' + upperCase($1[0]) + slice($1, 1) + ':lut-' + material.luts[$1]})), ';')}"

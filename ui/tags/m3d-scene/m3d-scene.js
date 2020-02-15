@@ -13,7 +13,7 @@ const prepareScene = function (dom) {
     // let camera = options.camera;
     // if (!camera) {
     // TODO: make camera configurable
-    let camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 3000);
+    let camera = new THREE.PerspectiveCamera(50, width / height, 0.01, 3000);
     camera.position.set(50, 50, 100);
     // }
 

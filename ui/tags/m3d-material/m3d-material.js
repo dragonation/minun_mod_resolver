@@ -178,7 +178,7 @@ const syncDepthTestFunction = function (dom, value) {
         case "less-than": { dom.m3dMaterial.depthFunc = THREE.LessDepth; break; }
         case "less-than-or-equal-to": { dom.m3dMaterial.depthFunc = THREE.LessEqualDepth; break; }
         case "greater-than": { dom.m3dMaterial.depthFunc = THREE.GreaterDepth; break; }
-        case "greater-than-or-equal-to": { dom.m3dMaterial.depthFunc = THREE.GreaterDepth; break; }
+        case "greater-than-or-equal-to": { dom.m3dMaterial.depthFunc = THREE.GreaterEqualDepth; break; }
     }
 
 };
@@ -381,7 +381,7 @@ const syncStencilFailed = function (dom, value) {
         case "keep": { dom.m3dMaterial.stencilFail = THREE.KeepStencilOp; break; }
         case "zero": { dom.m3dMaterial.stencilFail = THREE.ZeroStencilOp; break; }
         case "replace": { dom.m3dMaterial.stencilFail = THREE.ReplaceStencilOp; break; }
-        case "increment": { dom.m3dMaterial.stencilFail = THREE.IncrementStencilOp; break; }
+        case "increment": { dom.m3dMaterial.stenPerspectiveCameracilFail = THREE.IncrementStencilOp; break; }
         case "decrement": { dom.m3dMaterial.stencilFail = THREE.DecrementStencilOp; break; }
         case "invert": { dom.m3dMaterial.stencilFail = THREE.InvertStencilOp; break; }
         case "incrementWrap": { dom.m3dMaterial.stencilFail = THREE.IncrementWrapStencilOp; break; }

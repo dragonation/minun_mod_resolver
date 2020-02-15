@@ -308,6 +308,7 @@ const syncAttributes = function (dom, attributes) {
     let loader = getBinLoader(dom);
     if (!loader) { return; }
 
+    console.log(dom.m3dMesh.geometry);
     attributes.split(";").map((setting) => {
         let name = setting.split(":")[0];
         let index = originKeys.indexOf(name);
