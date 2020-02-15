@@ -10,12 +10,9 @@
           uv-unit-size="4" uvs="@meshes/${index}-${mesh.name}/uvs[0].f32.bin"
           uv-2-unit-size="4" uvs-2="@meshes/${index}-${mesh.name}/uvs[1].f32.bin"
           uv-3-unit-size="4" uvs-3="@meshes/${index}-${mesh.name}/uvs[2].f32.bin"
-          bones="${join(mesh.bones, ',')}"
           bone-indices="@meshes/${index}-${mesh.name}/bone.indices.f32.bin"
           bone-weights="@meshes/${index}-${mesh.name}/bone.weights.f32.bin"
-          has-tangent="${mesh.uniforms.hasTangent ? 'yes' : 'no'}"
-          has-bone="${mesh.uniforms.hasBone ? 'yes' : 'no'}"
-          has-bone-w="${mesh.uniforms.hasBoneW ? 'yes' : 'no'}"
+          attributes="${mesh.attributes.indices.geometry ? 'geometryIndex:f32:4:@meshes/' + index + '-' + mesh.name + '/indices.geometry.f32.bin' : ''}"
           patch="@patch.js"
           extra="${json({
               'bones': mesh.bones, 

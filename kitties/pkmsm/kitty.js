@@ -332,7 +332,12 @@ let saveU8Buffer = (array, path, dict) => {
             for (let shader in json.shaders.vertices) {
                 let path = @path(basePath, "shaders", shader + ".vert");
                 @.fs.makeDirs(@.fs.dirname(path));
-                @.fs.writeFile.sync(path, json.shaders.vertices[shader]);
+                if (shader === "PokeFire") {
+                    @.fs.copyFile.sync(@path(@mewchan().workingPath, "data/pkm/templates/model/PokeFire.vert"), 
+                                       path);
+                } else {
+                    @.fs.writeFile.sync(path, json.shaders.vertices[shader]);
+                }
             }
 
             let makeU8TextureBuffer = (array) => {

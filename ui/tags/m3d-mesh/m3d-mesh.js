@@ -111,6 +111,7 @@ const prepareMesh = function (dom) {
         syncName(dom, $(dom).attr("name"));
         syncMaterials(dom, $(dom).attr("materials"));
         syncSkeleton(dom, $(dom).attr("skeleton"));
+        syncAttributes(dom, $(dom).attr("attributes"));
 
     }
 
@@ -292,6 +293,63 @@ const syncExtra = function (dom, value) {
 
 };
 
+const syncAttributes = function (dom, attributes) {
+
+    if (!dom.m3dMesh) { return; }
+
+    if (!attributes) { return; }
+
+    if (!dom.m3dAttributes) {
+        dom.m3dAttributes = Object.create(null);
+    }
+
+    let originKeys = Object.keys(dom.m3dAttributes);
+
+    let loader = getBinLoader(dom);
+    if (!loader) { return; }
+
+    attributes.split(";").map((setting) => {
+        let name = setting.split(":")[0];
+        let index = originKeys.indexOf(name);
+        if (index !== -1) {
+            originKeys.splice(index, 1);
+        }
+        let type = setting.split(":")[1];
+        let size = setting.split(":")[2];
+        let value = setting.split(":").slice(3).join(":");
+        if ((!value) || (value[0] !== "@")) {
+            return;
+        }
+        if (loader) {
+            loader.m3dGetBin(value.slice(1), (error, result) => {
+                if (error) {
+                    console.error(error); return;
+                }
+                if ($(dom).attr("attributes") !== attributes) { return; }
+                switch (type) {
+                    case "u8": { dom.m3dMesh.geometry.setAttribute(name, new THREE.Uint8BufferAttribute(result, parseInt(size))); break; }
+                    case "u16": { dom.m3dMesh.geometry.setAttribute(name, new THREE.Uint16BufferAttribute(result, parseInt(size))); break; }
+                    case "u32": { dom.m3dMesh.geometry.setAttribute(name, new THREE.Uint32BufferAttribute(result, parseInt(size))); break; }
+                    case "i8": { dom.m3dMesh.geometry.setAttribute(name, new THREE.Int8BufferAttribute(result, parseInt(size))); break; }
+                    case "i16": { dom.m3dMesh.geometry.setAttribute(name, new THREE.Int16BufferAttribute(result, parseInt(size))); break; }
+                    case "i32": { dom.m3dMesh.geometry.setAttribute(name, new THREE.Int32BufferAttribute(result, parseInt(size))); break; }
+                    case "f32": { dom.m3dMesh.geometry.setAttribute(name, new THREE.Float32BufferAttribute(result, parseInt(size))); break; }
+                    default: { console.warn(`Unknown attribute type ${type}`); break; }
+                }
+            });
+        } else {
+            delete dom.m3dAttributes[name];
+            delete dom.m3dMesh.geometry.attributes[key];
+        }
+    });
+
+    for (let key of originKeys) {
+        delete dom.m3dAttributes[key];
+        delete dom.m3dMesh.geometry.attributes[key];
+    }
+
+};
+
 const getBinLoader = function (dom) {
 
     while (dom && (typeof dom.m3dGetBin !== "function")) {
@@ -325,6 +383,7 @@ module.exports = {
         "uvs-2", "uv-2-unit-size",
         "uvs-3", "uv-3-unit-size",
         "bone-indices", "bone-weights",
+        "attributes",
         "patch",
         "extra"
     ],
@@ -359,6 +418,7 @@ module.exports = {
                     }
                     break;
                 }
+                case "attributes": { syncAttributes(this, value); break; }
                 case "name": { syncName(this, value); break; };
                 case "vertex-unit-size": {
                     if (this.m3dVertices && this.m3dMesh) {
@@ -618,6 +678,34 @@ module.exports = {
                     });
                 }
             }
+
+            let attributes = $(this).attr("attributes");
+            attributes.split(";").map((setting) => {
+                let name = setting.split(":")[0];
+                let size = setting.split(":")[1];
+                let value = setting.split(":").slice(2).join(":");
+                if ((!value) || (value[0] !== "@")) {
+                    return;
+                }
+                if (loader) {
+                    loader.m3dGetBin(value.slice(1), (error, result) => {
+                        if (error) {
+                            console.error(error); return;
+                        }
+                        if ($(this).attr("attributes") !== attributes) { return; }
+                        if (!this.m3dAttributes) {
+                            this.m3dAttributes = Object.create(null);
+                        }
+                        this.m3dAttributes[name] = result;
+                        this.m3dMesh.geometry.setAttribute(name, 
+                            new THREE.Float32BufferAttribute(result, parseInt(size)));
+                    });
+                } else {
+                    if (this.m3dAttributes) {
+                        delete this.m3dAttributes[name];
+                    }
+                }
+            });
 
         }
     }

@@ -23,6 +23,18 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
         uniforms.hasBoneW.value = extra.hasBoneW;
     }
 
+    if (uniforms.worldScales) {
+        let worldScales = [1,1,1];
+        let parent = mesh;
+        while (parent) {
+            worldScales[0] *= parent.scale.x;
+            worldScales[1] *= parent.scale.y;
+            worldScales[2] *= parent.scale.z;
+            parent = parent.parent;
+        }
+        uniforms.worldScales.value.set(worldScales[0], worldScales[1], worldScales[2], 1);
+    }
+
     // gpu vectors
     if (uniforms.vectors) {
 

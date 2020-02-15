@@ -64,6 +64,8 @@
     <!-- patches for normal map -->
     <m3d-uniform name="useDirectNormal" type="bool">${uniform(material.useDirectNormal)}</m3d-uniform>
 
+    <m3d-uniform name="worldScales" type="vec4">1,1,1,1</m3d-uniform>
+
     <!-- outlines.depth, outlines.alpha not covered -->
 
 </m3d-material>
