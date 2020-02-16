@@ -74,14 +74,26 @@ const zlib = require("zlib");
 
     this.break();
 
-    let path = @path(@mewchan().libraryPath, "pkmsm/models", request.path.slice("/~pkmsm/model/res/".length));
+    let originPath = request.path.slice("/~pkmsm/model/res/".length);
+
+    let path = @path(@mewchan().libraryPath, "pkmsm/models", originPath);
 
     let mime = @.fs.mime(path);
 
     return @.async(function () {
 
         if (!@.fs.exists.file(path)) {
-            throw @.error.http(404);
+            if ((originPath.split("/")[1] === "shadow") && 
+                (originPath.split("/")[2] === "textures")) {
+                // TODO: make it supports shiny shadow
+                path = @path(@mewchan().libraryPath, "pkmsm/models", 
+                    originPath.split("/")[0], "normal-" + originPath.split("/").slice(2).join("/"));
+                if (!@.fs.exists.file(path)) {
+                    throw @.error.http(404);
+                }
+            } else {
+                throw @.error.http(404);
+            }
         }
 
         @.fs.readFile(path).then(function (content) {

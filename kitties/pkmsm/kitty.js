@@ -494,12 +494,13 @@ let saveU8Buffer = (array, path, dict) => {
                                @path(basePath, "patch.js"));
 
             if (id.split("/").slice(-1)[0] === "shadow") {
-                @.fs.writeFile.sync(@path(basePath, "model.xml"), modelMXML);
+                @.fs.writeFile.sync(@path(basePath, "model.xml"),
+                                    modelMXML.replace(/\$\{prefix\}/g, ""));
             } else {
                 @.fs.writeFile.sync(@path(basePath, "normal-model.xml"), 
-                                    @.format(modelMXML, { "prefix": "normal-" }));
+                                    modelMXML.replace(/\$\{prefix\}/g, "normal-"));
                 @.fs.writeFile.sync(@path(basePath, "shiny-model.xml"), 
-                                    @.format(modelMXML, { "prefix": "shiny-" }));
+                                    modelMXML.replace(/\$\{prefix\}/g, "shiny-"));
             }
            
             return model;

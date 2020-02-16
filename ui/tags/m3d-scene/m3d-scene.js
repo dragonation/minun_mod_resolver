@@ -111,7 +111,8 @@ const startSceneRendering = function (dom) {
             if (dom.m3dStats) {
                 dom.m3dStats.update();
             }
-            if (dom.m3dAutolights) {
+            if (dom.m3dAutolights &&
+                dom.m3dAutocameraLights) {
                 dom.m3dCamera.getWorldDirection(worldDirection);
                 let light = dom.m3dAutolights.filter((light) => light.isDirectionalLight)[0];
                 light.position.set(-worldDirection.x, -worldDirection.y, -worldDirection.z);
@@ -230,6 +231,12 @@ const syncAutolights = function (dom, value) {
 
 };
 
+const syncAutocameraLights = function (dom, value) {
+
+    dom.m3dAutocameraLights = (value !== "no");
+
+};
+
 const syncClearColor = function (dom, value) {
 
     if (!dom.m3dRenderer) { return; }
@@ -304,10 +311,16 @@ const syncChildren = function (dom) {
 module.exports = {
     "attributes": [
         "autoclear", "clear-color",
-        "controls", "grids", "stats", "autolights",
+        "controls", "grids", "stats", 
+        "autolights", "autocamera-lights",
         "camera"
     ],
     "listeners": {
+        "oncreated": function () {
+
+            this.m3dAutocameraLights = true;
+
+        },
         "onconnected": function () {
 
             prepareScene(this);
@@ -333,6 +346,7 @@ module.exports = {
                 case "lights": { syncAutolights(this, value); break; };
                 case "clear-color": { syncClearColor(this, value); break; };
                 case "autoclear": { syncAutoclear(this, value); break; };
+                case "autocamera-lights": { syncAutocameraLights(this, value); break; };
                 default: { break; };
             }
         },
