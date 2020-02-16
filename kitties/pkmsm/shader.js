@@ -306,7 +306,10 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
     if ((report.type === "geometry") || (report.type === "vertex")) {
         if (glsl) {
 
-            let registers = {};
+            let registers = {
+                "v0": true, // position should be always used
+                "v1": true, // normal should be always available
+            };
             let callRegisters = {};
 
             let describe = (instruction, indent, nexts, supertype, geometryIndex) => {

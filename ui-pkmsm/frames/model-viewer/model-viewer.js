@@ -26,7 +26,7 @@ Frame.prototype.playAnimation = function (animationID) {
 
     this.playingAnimation = animationID;
 
-    this.filler.query("m3d-object")[0].playM3DClip(animationID);
+    this.filler.query("#pokemon-model")[0].playM3DClip(animationID);
 
     for (let listener of this.animationListeners) {
         try {
@@ -78,7 +78,7 @@ Frame.functors = {
                     this.animations = $(result);
                     $.ajax(`/~pkmsm/model/data/animation/${this.filler.parameters.id}`, {
                         "success": (result) => {
-                            let dom = this.filler.query("m3d-object")[0];
+                            let dom = this.filler.query("#pokemon-model")[0];
                             let decoded = dom.binDecoded;
                             for (let key in result) {
                                 let value = $.base64.decode(result[key]);
@@ -107,7 +107,7 @@ Frame.functors = {
                                     decoded[key] = value;
                                 }
                             }
-                            this.filler.query("m3d-object").append(this.animations);
+                            this.filler.query("#pokemon-model").append(this.animations);
                             $.app(this.dom).openAnimationList(this.filler.parameters.id, this);
                         },
                         "error": () => {

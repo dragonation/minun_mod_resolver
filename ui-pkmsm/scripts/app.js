@@ -118,7 +118,6 @@ App.prototype.openModel = function (id, from) {
             console.error(error); return;
         }
 
-        let dom = $(result.html);
 
         let mins = result.bounds.model.mins;
         let maxes = result.bounds.model.maxes;
@@ -131,129 +130,151 @@ App.prototype.openModel = function (id, from) {
         // scale to fit
         let scale = 60 / size;
 
-        dom.attr({
-            "model-scale": scale
-        });
+        const prepareDOM = (html, prefix) => {
 
-        let decoded = undefined;
-        let binaryCallbacks = Object.create(null);
-        $.ajax("/~pkmsm/model/data/mesh/" + result.id, {
-            "success": (result) => {
-                decoded = Object.create(null);
-                dom[0].binDecoded = decoded;
-                for (let key in result) {
-                    let value = $.base64.decode(result[key]);
-                    if (key.split(".").slice(-1)[0] === "bin") {
-                        let type = key.split(".").slice(-2)[0];
-                        switch (type) {
-                            case "f32": { decoded[key] = new Float32Array(value); break; }
-                            case "i8": { decoded[key] = new Int8Array(value); break; }
-                            case "i16": { decoded[key] = new Int16Array(value); break; }
-                            case "i32": { decoded[key] = new Int32Array(value); break; }
-                            case "u8": { decoded[key] = new Uint8Array(value); break; }
-                            case "u16": { decoded[key] = new Uint16Array(value); break; }
-                            case "u32": { decoded[key] = new Uint32Array(value); break; }
-                            default: { decoded[key] = value; break; }
-                        }
-                    } else {
-                        decoded[key] = value;
+            let dom = $(html);
+            
+            dom.attr({
+                "model-scale": scale
+            });
+
+            let decoded = undefined;
+            let binaryCallbacks = Object.create(null);
+            $.ajax("/~pkmsm/model/data/mesh/" + result.id + (prefix ? "/" + prefix : ""), {
+                "success": (result) => {
+                    decoded = Object.create(null);
+                    dom[0].binDecoded = decoded;
+                    if (!prefix) {
+                        m3dObject[0].binDecoded = decoded;
                     }
-                }
-                if (binaryCallbacks) {
-                    let callbacks = binaryCallbacks;
-                    binaryCallbacks = null;
-                    for (let key in callbacks) {
-                        for (let callback of callbacks[key]) {
-                            try {
-                                if (decoded[key]) {
-                                    callback(undefined, decoded[key]);
-                                } else {
-                                    callback(new Error(`Resource[${key}] not found`));
+                    for (let key in result) {
+                        let value = $.base64.decode(result[key]);
+                        if (key.split(".").slice(-1)[0] === "bin") {
+                            let type = key.split(".").slice(-2)[0];
+                            switch (type) {
+                                case "f32": { decoded[key] = new Float32Array(value); break; }
+                                case "i8": { decoded[key] = new Int8Array(value); break; }
+                                case "i16": { decoded[key] = new Int16Array(value); break; }
+                                case "i32": { decoded[key] = new Int32Array(value); break; }
+                                case "u8": { decoded[key] = new Uint8Array(value); break; }
+                                case "u16": { decoded[key] = new Uint16Array(value); break; }
+                                case "u32": { decoded[key] = new Uint32Array(value); break; }
+                                default: { decoded[key] = value; break; }
+                            }
+                        } else {
+                            decoded[key] = value;
+                        }
+                    }
+                    if (binaryCallbacks) {
+                        let callbacks = binaryCallbacks;
+                        binaryCallbacks = null;
+                        for (let key in callbacks) {
+                            for (let callback of callbacks[key]) {
+                                try {
+                                    if (decoded[key]) {
+                                        callback(undefined, decoded[key]);
+                                    } else {
+                                        callback(new Error(`Resource[${key}] not found`));
+                                    }
+                                } catch (error) {
+                                    console.error(error);
                                 }
-                            } catch (error) {
-                                console.error(error);
                             }
                         }
                     }
-                }
-            },
-            "error": () => {
-                if (binaryCallbacks) {
-                    let callbacks = binaryCallbacks;
-                    binaryCallbacks = null;
-                    for (let key in callbacks) {
-                        for (let callback of callbacks[key]) {
-                            try {
-                                callback(new Error(`Resource[${key}] not found`));
-                            } catch (error) {
-                                console.error(error);
+                },
+                "error": () => {
+                    if (binaryCallbacks) {
+                        let callbacks = binaryCallbacks;
+                        binaryCallbacks = null;
+                        for (let key in callbacks) {
+                            for (let callback of callbacks[key]) {
+                                try {
+                                    callback(new Error(`Resource[${prefix ? prefix + "/" : ""}${key}] not found`));
+                                } catch (error) {
+                                    console.error(error);
+                                }
                             }
                         }
                     }
+                    console.error("Failed to load model data");
                 }
-                console.error("Failed to load model bin");
-            }
-        });
+            });
 
-        dom[0].m3dGetBin = function (id, callback) {
-
-            if (decoded) {
-                try {
-                    if (decoded[id]) {
-                        callback(undefined, decoded[id]);
-                    } else {
-                        callback(new Error(`Resource[${id}] not found`));
+            dom[0].m3dGetBin = function (id, callback) {
+                if (decoded) {
+                    try {
+                        if (decoded[id]) {
+                            callback(undefined, decoded[id]);
+                        } else {
+                            callback(new Error(`Resource[${id}] not found`));
+                        }
+                    } catch (error) {
+                        console.error(error);
                     }
-                } catch (error) {
-                    console.error(error);
+                    return;
                 }
-                return;
-            }
+                if (!binaryCallbacks[id]) {
+                    binaryCallbacks[id] = [];
+                }
+                binaryCallbacks[id].push(callback);
+            };
 
-            if (!binaryCallbacks[id]) {
-                binaryCallbacks[id] = [];
-            }
+            let patches = Object.create(null);
 
-            binaryCallbacks[id].push(callback);
+            dom[0].m3dLoadPatch = function (id, callback) {
+
+                if (patches[id]) {
+                    callback(patches[id][0], patches[id][1]); return;
+                }
+
+                let path = `/~pkmsm/model/res/${result.id}/${prefix ? prefix + "/" : ""}${id}`;
+                $.res.load(path, (error, result) => {
+                    if (error) {
+                        patches[id] = [error];
+                        callback(error); return;
+                    }
+                    let module = undefined;
+                    try {
+                        let functor = eval([
+                            "(({ Vector2, Vector3, Vector4, Quaternion, Matrix3, Matrix4 }, module) => {" + result,
+                            `}) //# sourceURL=${path}`,
+                            ""
+                        ].join("\n"));
+                        let sandbox = { "exports": {} };
+                        functor(require("/scripts/three.js"), sandbox);
+                        module = sandbox.exports;
+                    } catch (error) {
+                        patches[id] = [error];
+                        callback(error); return;
+                    }
+                    patches[id] = [undefined, module];
+                    callback(undefined, module);
+                });
+
+            };
+
+            return dom;
 
         };
 
-        let patches = Object.create(null);
+        let m3dObject = $("<m3d-object>").attr({
+            "id": "pokemon-model"
+        });
 
-        dom[0].m3dLoadPatch = function (id, callback) {
+        let modelDOM = prepareDOM(result.html.model, "");
+        let shadowDOM = prepareDOM(result.html.shadow, "shadow");
 
-            if (patches[id]) {
-                callback(patches[id][0], patches[id][1]); return;
-            }
+        m3dObject.append(shadowDOM);
+        m3dObject.append(modelDOM);
 
-            let path = `/~pkmsm/model/res/${result.id}/${id}`;
-            $.res.load(path, (error, result) => {
-                if (error) {
-                    patches[id] = [error];
-                    callback(error); return;
-                }
-                let module = undefined;
-                try {
-                    let functor = eval([
-                        "(({ Vector2, Vector3, Vector4, Quaternion, Matrix3, Matrix4 }, module) => {" + result,
-                        `}) //# sourceURL=${path}`,
-                        ""
-                    ].join("\n"));
-                    module = { "exports": {} };
-                    functor(require("/scripts/three.js"), module);
-                } catch (error) {
-                    patches[id] = [error];
-                    callback(error); return;
-                }
-                patches[id] = [undefined, module.exports];
-                callback(undefined, module.exports);
-            });
-
+        m3dObject[0].m3dGetBin = function (id, callback) {
+            return modelDOM[0].m3dGetBin(id, callback);
         };
 
         let scene = frame[0].frame.filler.query("m3d-scene");
 
-        scene.append(dom);
+        scene.append(m3dObject);
 
     });
 
@@ -527,9 +548,20 @@ App.prototype.loadModel = function (id, callback) {
             $.ajax(`/~pkmsm/model/res/${result.id}/normal-model.xml`, {
                 "dataType": "text",
                 "success": (html) => {
-                    callback(null, Object.assign(result, {
-                        "html": html
-                    }));
+                    $.ajax(`/~pkmsm/model/res/${result.id}/shadow/model.xml`, {
+                        "dataType": "text",
+                        "success": (html2) => {
+                            callback(null, Object.assign(result, {
+                                "html": {
+                                    "model": html,
+                                    "shadow": html2
+                                }
+                            }));
+                        },
+                        "error": () => {
+                            callback(new Error("Failed to get model"));
+                        }
+                    });
                 },
                 "error": () => {
                     callback(new Error("Failed to get model"));
