@@ -258,6 +258,7 @@ let saveU8Buffer = (array, path, dict) => {
             }
 
             shadow.toJSON(pcs, Object.assign(options, {
+                "normalModel": model,
                 "isShadow": true
             })).then(function (shadowJSON) {
 
@@ -271,7 +272,7 @@ let saveU8Buffer = (array, path, dict) => {
 
     }).then(function (json) {
 
-        const saveModel = (id, json, extra) => {
+        const saveModel = (id, json, extra, baseOrder) => {
 
             let basePath = @path(@mewchan().libraryPath, "pkmsm/models", id);
 
@@ -344,10 +345,10 @@ let saveU8Buffer = (array, path, dict) => {
             };
 
             if (id.split("/").slice(-1)[0] === "shadow") {
-                for (let texture in json.textures.shadow) {
+                for (let texture in json.textures) {
                     let path = @path(basePath, "textures", texture + ".png");
                     @.fs.makeDirs(@.fs.dirname(path));
-                    let data = json.textures.shadow[texture].data;
+                    let data = json.textures[texture].data;
                     @.fs.writeFile.sync(path, @.img(data.width, data.height, makeU8TextureBuffer(data.pixels)).encodeAsPNG());
                 }
             } else {
@@ -449,6 +450,7 @@ let saveU8Buffer = (array, path, dict) => {
                 }
                 mxmls[`meshes/${looper}-${mesh.name}.xml`] = @.format(modelMeshTemplate, { 
                     "index": looper,
+                    "baseOrder": baseOrder,
                     "mesh": mesh
                 }, mxmlOptions);
             }
@@ -509,10 +511,10 @@ let saveU8Buffer = (array, path, dict) => {
 
         let extra = {};
         if (options.shadow && json.shadow) {
-            saveModel(`${id}/shadow`, json.shadow);
+            saveModel(`${id}/shadow`, json.shadow, {}, 0);
             extra.shadow = "@shadow/model.json";
         }
-        let model = saveModel(id, json, extra);
+        let model = saveModel(id, json, extra, json.shadow.meshes.length);
 
         @.fs.writeFile.sync(@path(basePath, "model.ready"), "");
 

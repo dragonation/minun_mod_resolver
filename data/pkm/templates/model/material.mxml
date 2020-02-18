@@ -9,12 +9,12 @@
               transparent="yes" alpha-premultiplied="yes"
               vertex-shader="@shaders/${material.shaders.vertex}.vert" fragment-shader="@shaders/${material.shaders.fragment}.frag"
               textures="${join(concat(map(material.textures, {'@map' + ($2 ? ($2 + 1) : '') + ':' + id + '-' + $2}), map(keys(material.luts), {'@lut' + upperCase($1[0]) + slice($1, 1) + ':lut-' + material.luts[$1]})), ';')}"
-              alpha-test="${material.alphaTest ? 0 : 1}"
+              alpha-test="${material.alphaTest.enabled ? 0 : 1}"
               depth-test="${material.depthTest.enabled ? 'yes' : 'no'}" depth-write="${material.depthTest.writable ? 'yes' : 'no'}" depth-test-function="${material.depthTest.tester}"
               stencil-test="${material.stencilTest.enabled ? 'yes' : 'no'}" stencil-test-function="${material.stencilTest.tester}" stencil-test-reference="${material.stencilTest.reference}" stencil-test-mask="${material.stencilTest.mask}"
               stencil-write-mask="${material.stencilTest.writeMask}" 
               stencil-failed="${material.stencilTest.failed}" stencil-z-failed="${material.stencilTest.zFailed}" stencil-z-passed="${material.stencilTest.zPassed}"
-              blending="custom" blending-destination="${material.blending.destination.color},${material.blending.destination.alpha}" blending-equation="${material.blending.equation.color},${material.blending.equation.alpha}" blending-source="${material.blending.source.color},${material.blending.source.alpha}"
+              blending="custom" blending-color="${join(material.blending.color, ',')}" blending-destination="${material.blending.destination.color},${material.blending.destination.alpha}" blending-equation="${material.blending.equation.color},${material.blending.equation.alpha}" blending-source="${material.blending.source.color},${material.blending.source.alpha}"
               extra="${json({
                   'isGeometryShader': isGeometryShader,
                   'constantsIndices': material.constants.indices

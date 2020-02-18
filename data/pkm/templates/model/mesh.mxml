@@ -13,6 +13,7 @@
           bone-indices="@meshes/${index}-${mesh.name}/bone.indices.f32.bin"
           bone-weights="@meshes/${index}-${mesh.name}/bone.weights.f32.bin"
           attributes="${mesh.attributes.indices.geometry ? 'geometryIndex:f32:4:@meshes/' + index + '-' + mesh.name + '/indices.geometry.f32.bin' : ''}"
+          rendering-order="${baseOrder + mesh.order}"
           patch="@patch.js"
           extra="${json({
               'bones': mesh.bones, 

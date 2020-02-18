@@ -109,6 +109,7 @@ const prepareMesh = function (dom) {
         dom.m3dSyncPatch();
 
         syncName(dom, $(dom).attr("name"));
+        syncRenderingOrder(dom, $(dom).attr("rendering-order"));
         syncMaterials(dom, $(dom).attr("materials"));
         syncSkeleton(dom, $(dom).attr("skeleton"));
         syncAttributes(dom, $(dom).attr("attributes"));
@@ -267,6 +268,14 @@ const syncName = function (dom, value) {
 
 };
 
+const syncRenderingOrder = function (dom, value) {
+
+    if (!dom.m3dMesh) { return; }
+
+    dom.m3dMesh.renderOrder = parseInt(value);
+
+};
+
 const syncExtra = function (dom, value) {
 
     if (/^{ \/\* Property\-([0-9]+) \*\/$/.test(dom)) {
@@ -384,6 +393,7 @@ module.exports = {
         "uvs-3", "uv-3-unit-size",
         "bone-indices", "bone-weights",
         "attributes",
+        "rendering-order",
         "patch",
         "extra"
     ],
@@ -418,6 +428,7 @@ module.exports = {
                     }
                     break;
                 }
+                case "rendering-order": { syncRenderingOrder(this, value); break; }
                 case "attributes": { syncAttributes(this, value); break; }
                 case "name": { syncName(this, value); break; };
                 case "vertex-unit-size": {

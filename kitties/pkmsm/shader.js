@@ -1047,7 +1047,9 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
         }
 
         codes.push("    if (!renderingDepth) {");
-        codes.push("        color.rgb *= color.a;");
+        if (material.pica.rendering.alphaTest && material.pica.rendering.alphaTest.enabled) {
+            codes.push("        color.rgb *= color.a;");
+        }
         codes.push("        gl_FragColor = color;");
         codes.push("    } else {");
         codes.push("        if (depthDiscard) {");

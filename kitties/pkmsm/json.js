@@ -640,6 +640,10 @@ const getBlendFunction = (code) => {
         case PICA.BlendFunctionOperation.DESTINATION_ALPHA: { return "destination-alpha"; }
         case PICA.BlendFunctionOperation.ONE_MINUS_DESTINATION_ALPHA: { return "one-minus-destination-alpha"; }
         case PICA.BlendFunctionOperation.SOURCE_ALPHA_SATURATE: { return "source-alpha-saturate"; }
+        case PICA.BlendFunctionOperation.CONSTANT_COLOR: { return "constant-color"; }
+        case PICA.BlendFunctionOperation.ONE_MINUS_CONSTANT_COLOR: { return "one-minus-constant-color"; }
+        case PICA.BlendFunctionOperation.CONSTANT_ALPHA: { return "constant-alpha"; }
+        case PICA.BlendFunctionOperation.ONE_MINUS_CONSTANT_ALPHA: { return "one-minus-constant-alpha"; }
     }
 };
 
@@ -824,19 +828,25 @@ Model.prototype.toJSON = function (pcs, options) {
                 "vertices": {},
                 "fragments": {}
             },
-            "textures": {
-                "shiny": {},
-                "normal": {}
-            },
+            "textures": {},
             "luts": {},
             "materials": {},
             "meshes": [],
             "animations": {}
         };
 
+        if (!options.isShadow) {
+            json.textures = { "shiny": {}, "normal": {} };
+        }
+
         const prepareTexture = (texture, prefix) => {
 
-            if (json.textures[texture.name]) {
+            let textures = json.textures;
+            if (prefix) {
+                textures = textures[prefix];
+            }
+
+            if (textures[texture.name]) {
                 return;
             }
 
@@ -853,7 +863,7 @@ Model.prototype.toJSON = function (pcs, options) {
                 looper += 4;
             }
 
-            json.textures[prefix][texture.name] = {
+            textures[texture.name] = {
                 "format": "rgba",
                 "name": texture.name,
                 "data": {
@@ -898,17 +908,51 @@ Model.prototype.toJSON = function (pcs, options) {
 
         const prepareMaterial = (material, mesh) => {
 
-            const textures = material.textureCoordinates.map((coordinate, index) => {
+            if (options.isShadow) {
+                // TODO: need more works on how to get correct material
+                if (!material.pica.rendering.stencilTest.enabled) {
+                    material.pica.rendering.stencilTest.enabled = true;
+                    material.pica.rendering.stencilTest.testFunction = new PICA.TestFunction(PICA.TestFunction.NOT_EQUAL_TO);
+                    material.pica.rendering.stencilTest.reference = 253;
+                    material.pica.rendering.stencilTest.mask = 255;
+                    material.pica.rendering.stencilTest.bufferMask = 255;
+                    material.pica.rendering.stencilTest.failOperation = new PICA.StencilOperationAction(PICA.StencilOperationAction.KEEP);
+                    material.pica.rendering.stencilTest.zFailOperation = new PICA.StencilOperationAction(PICA.StencilOperationAction.KEEP);
+                    material.pica.rendering.stencilTest.zPassOperation = new PICA.StencilOperationAction(PICA.StencilOperationAction.REPLACE);
+                }
+                if (material.pica.rendering.blendFunction.colorDestinationFunction.code === PICA.BlendFunctionOperation.ZERO) {
+                    material.pica.rendering.blendFunction.colorDestinationFunction = new PICA.BlendFunctionOperation(PICA.BlendFunctionOperation.ONE_MINUS_SOURCE_ALPHA);
+                    material.pica.rendering.blendFunction.alphaDestinationFunction = new PICA.BlendFunctionOperation(PICA.BlendFunctionOperation.ONE_MINUS_SOURCE_ALPHA);
+                    material.pica.rendering.blendFunction.colorSourceFunction = new PICA.BlendFunctionOperation(PICA.BlendFunctionOperation.SOURCE_ALPHA);
+                    material.pica.rendering.blendFunction.alphaSourceFunction = new PICA.BlendFunctionOperation(PICA.BlendFunctionOperation.SOURCE_ALPHA);
+                }
+                if (!material.pica.rendering.alphaTest.enabled) {
+                    material.pica.rendering.alphaTest.enabled = true;
+                    material.pica.rendering.alphaTest.testFunction = new PICA.TestFunction(PICA.TestFunction.GREATER_THAN_OR_EQUAL_TO);
+                    material.pica.rendering.alphaTest.reference = 0;
+                }
+            }
 
-                const shinyTexture = pcs.textures.shiny.files.filter((file) => @.is(file, Texture) && file.name === coordinate.name)[0];
-                const normalTexture = pcs.textures.normal.files.filter((file) => @.is(file, Texture) && file.name === coordinate.name)[0];
-                // const texture = normalTexture; 
+            let textureCoordinates = material.textureCoordinates;
 
-                prepareTexture(normalTexture, "normal");
-                prepareTexture(shinyTexture, "shiny");
+            let textures = textureCoordinates.map((coordinate, index) => {
+
+                let texture = undefined;
+                if (options.isShadow) {
+                    texture = pcs.textures.shadow.files.filter((file) => @.is(file, Texture) && file.name === coordinate.name)[0];
+                    if (texture) {
+                        prepareTexture(texture);
+                    }
+                } else {
+                    const shinyTexture = pcs.textures.shiny.files.filter((file) => @.is(file, Texture) && file.name === coordinate.name)[0];
+                    const normalTexture = pcs.textures.normal.files.filter((file) => @.is(file, Texture) && file.name === coordinate.name)[0];
+                    prepareTexture(normalTexture, "normal");
+                    prepareTexture(shinyTexture, "shiny");
+                    texture = normalTexture; 
+                }
 
                 let record = {
-                    "name": normalTexture.name,
+                    "name": coordinate.name,
                     "magFilter": (coordinate.magFilter.code === Model.TextureMagnificationFilter.NEAREST ?
                         "nearest" : "linear"),
                     "minFilter": (coordinate.minFilter.code === Model.TextureMinificationFilter.NEAREST ?
@@ -929,19 +973,24 @@ Model.prototype.toJSON = function (pcs, options) {
                     case PICA.TextureWrap.MIRROR: { record.wrapT = "mirror"; break; }
                 }
 
-                record.offset = [-coordinate.translation[0] * coordinate.scale[0],
-                                 -coordinate.translation[1] * coordinate.scale[1]];
-                record.repeat = [coordinate.scale[0], coordinate.scale[1]];
-                record.rotation = coordinate.rotation;
-
-                // 778
-                if (pcs.model.files[0].bones[0].name !== "pm0722_00") {
-                    record.repeat = [material.pica.shader.vertex.floats[1 + index * 3].x,
-                                     material.pica.shader.vertex.floats[2 + index * 3].y];
-                    record.offset = [
-                        -material.pica.shader.vertex.floats[1 + index * 3].w / material.pica.shader.vertex.floats[1 + index * 3].x,
-                        -material.pica.shader.vertex.floats[2 + index * 3].w / material.pica.shader.vertex.floats[2 + index * 3].y];
-                }
+                // if (options.isShadow) {
+                //     record.repeat = [1, 1];
+                //     record.offset = [0, 0];
+                //     record.rotation = 0;
+                // } else {
+                    record.offset = [-coordinate.translation[0] * coordinate.scale[0],
+                                     -coordinate.translation[1] * coordinate.scale[1]];
+                    record.repeat = [coordinate.scale[0], coordinate.scale[1]];
+                    record.rotation = coordinate.rotation;
+                    // 778
+                    if (pcs.model.files[0].bones[0].name !== "pm0722_00") {
+                        record.repeat = [material.pica.shader.vertex.floats[1 + index * 3].x,
+                                         material.pica.shader.vertex.floats[2 + index * 3].y];
+                        record.offset = [
+                            -material.pica.shader.vertex.floats[1 + index * 3].w / material.pica.shader.vertex.floats[1 + index * 3].x,
+                            -material.pica.shader.vertex.floats[2 + index * 3].w / material.pica.shader.vertex.floats[2 + index * 3].y];
+                    }
+                // }
 
                 return record;
 
@@ -1119,7 +1168,11 @@ Model.prototype.toJSON = function (pcs, options) {
                 },
 
                 // material rendering
-                "alphaTest": material.pica.rendering.alphaTest.enabled,
+                "alphaTest": { 
+                    "enabled": material.pica.rendering.alphaTest.enabled,
+                    "testFunction": getTestFunction(material.pica.rendering.alphaTest.testFunction),
+                    "reference": material.pica.rendering.alphaTest.reference,
+                },
 
                 "stencilTest": {
                     "enabled": material.pica.rendering.stencilTest.enabled,
@@ -1139,6 +1192,10 @@ Model.prototype.toJSON = function (pcs, options) {
                 },
 
                 "blending": {
+                    "color": [material.blendColor.r / 0xff, 
+                              material.blendColor.g / 0xff,
+                              material.blendColor.b / 0xff, 
+                              material.blendColor.a / 0xff],
                     "destination": {
                         "color": getBlendFunction(material.pica.rendering.blendFunction.colorDestinationFunction.code),
                         "alpha": getBlendFunction(material.pica.rendering.blendFunction.alphaDestinationFunction.code)
@@ -1358,7 +1415,7 @@ Model.prototype.toJSON = function (pcs, options) {
 
                 if (features.hasTextureCoordinate2) {
                     let uvs = new Float32Array(submesh.vertices.count * 4 * geometryVertices);
-                    let index = 0;
+                    let indrecordex = 0;
                     while (index < data.length) {
                         let value = (features.hasTextureCoordinate2 === true) ? data[index].textures[2] : features.hasTextureCoordinate2;
                         value.settled = true;

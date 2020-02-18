@@ -74,10 +74,6 @@ const patchObjectAnimation = function (threeObject) {
             ++looper;
         }
 
-        if (targets.length === 0) {
-            console.warn(`Animation target[${selector}] not found`);
-        }
-
         if (!animationMixers.origins[selector]) {
             animationMixers.origins[selector] = new Map();
         }
@@ -274,6 +270,10 @@ const patchObjectAnimation = function (threeObject) {
 
             const updater = resolveUpdater(type, target, path);
             if (!updater) { return; }
+            if (updater.targets.length === 0) {
+                console.warn(`Animation target[${updater.selector}] not found`);
+                console.warn(track.frames);
+            }
 
             const binding = {
                 "id": updater.selector,

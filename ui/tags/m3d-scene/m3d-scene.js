@@ -39,6 +39,8 @@ const prepareScene = function (dom) {
     dom.m3dScene = scene;
     dom.m3dCamera = camera;
 
+    syncAutosort(dom, $(dom).attr("autosort"));
+
     syncAutoclear(dom, $(dom).attr("autoclear"));
     syncClearColor(dom, $(dom).attr("clear-color"));
 
@@ -255,11 +257,19 @@ const syncClearColor = function (dom, value) {
 
 };
 
+const syncAutosort = function (dom, value) {
+
+    if (!dom.m3dRenderer) { return; }
+
+    dom.m3dRenderer.sortObjects = (value !== "no");
+
+};
+
 const syncAutoclear = function (dom, value) {
 
     if (!dom.m3dRenderer) { return; }
 
-    dom.m3dRenderer.autoClear = value !== "no";
+    dom.m3dRenderer.autoClear = (value !== "no");
 
 };
 
@@ -311,6 +321,7 @@ const syncChildren = function (dom) {
 module.exports = {
     "attributes": [
         "autoclear", "clear-color",
+        "autosort",
         "controls", "grids", "stats", 
         "autolights", "autocamera-lights",
         "camera"
@@ -346,6 +357,7 @@ module.exports = {
                 case "lights": { syncAutolights(this, value); break; };
                 case "clear-color": { syncClearColor(this, value); break; };
                 case "autoclear": { syncAutoclear(this, value); break; };
+                case "autosort": { syncAutosort(this, value); break; };
                 case "autocamera-lights": { syncAutocameraLights(this, value); break; };
                 default: { break; };
             }
