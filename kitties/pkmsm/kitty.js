@@ -233,7 +233,7 @@ let saveU8Buffer = (array, path, dict) => {
     }
 
     let options = {
-        "motions": [ "fighting", "pet", "map" ], // acting is just subset of others
+        "motions": [ "fighting", "pet", "map" ], // acting is just combining subset of others
         "shiny": true,
         "shadow": true
     };
@@ -511,10 +511,10 @@ let saveU8Buffer = (array, path, dict) => {
 
         let extra = {};
         if (options.shadow && json.shadow) {
-            saveModel(`${id}/shadow`, json.shadow, {}, 0);
+            saveModel(`${id}/shadow`, json.shadow, {}, json.meshes.length);
             extra.shadow = "@shadow/model.json";
         }
-        let model = saveModel(id, json, extra, json.shadow.meshes.length);
+        let model = saveModel(id, json, extra, 0);
 
         @.fs.writeFile.sync(@path(basePath, "model.ready"), "");
 

@@ -48,6 +48,7 @@ Frame.functors = {
             case "FightingAction5": { return "Dropping"; }
             case "FightingAction6": { return "Landing"; }
             case "FightingAction7": { return "Release No Landing"; }
+            case "FightingAction8": { return "Mega Upgraded"; }
             case "FightingAction9": { return "Attack"; }
             case "FightingAction10": { return "Attack 2"; }
             case "FightingAction11": { return "Attack 3"; }

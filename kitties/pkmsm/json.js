@@ -1021,10 +1021,10 @@ Model.prototype.toJSON = function (pcs, options) {
             var fragmentShaderSuffix = "[" + Object.keys(luts).sort().join(",") + "]";
 
             let vertexShader = pcs.model.files[options.isShadow ? 3 : 2].files.filter((file) => {
-                return @.is(file, Shader) && (file.name === material.vertexShader);
+                return @.is(file, Shader) && (file.name === material.vertexShader) && file.pica.shader;
             })[0];
             let fragmentShader = pcs.model.files[options.isShadow ? 3 : 2].files.filter((file) => {
-                return @.is(file, Shader) && (file.name === material.fragmentShader);
+                return @.is(file, Shader) && (file.name === material.fragmentShader) && file.pica.rendering.stages;
             })[0];
 
             let vertexShaderCode = null;
