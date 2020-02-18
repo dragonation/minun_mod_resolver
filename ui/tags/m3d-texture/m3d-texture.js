@@ -15,6 +15,9 @@ const prepareTexture = function (dom) {
             syncOffset(dom, $(dom).attr("offset"));
             syncRepeat(dom, $(dom).attr("repeat"));
             syncRotation(dom, $(dom).attr("rotation"));
+            syncMinFilter(dom, $(dom).attr("min-filter"));
+            syncMaxFilter(dom, $(dom).attr("max-filter"));
+            syncMipmap(dom, $(dom).attr("mipmap"));
             trigTextureUpdate(dom);
         }
     } else {
@@ -124,6 +127,42 @@ const syncRepeat = function (dom, value) {
 
 };
 
+const syncMinFilter = function (dom, value) {
+
+    if (!dom.m3dTexture) { return; }
+
+    if (!value) { return; }
+
+    switch (value) {
+        case "linear": { dom.m3dTexture.minFilter = THREE.LinearFilter; break; }
+        case "nearest": { dom.m3dTexture.minFilter = THREE.NearestFilter; break; }
+    }
+
+};
+
+const syncMaxFilter = function (dom, value) {
+
+    if (!dom.m3dTexture) { return; }
+
+    if (!value) { return; }
+
+    switch (value) {
+        case "linear": { dom.m3dTexture.maxFilter = THREE.LinearFilter; break; }
+        case "nearest": { dom.m3dTexture.maxFilter = THREE.NearestFilter; break; }
+    }
+
+};
+
+const syncMipmap = function (dom, value) {
+
+    if (!dom.m3dTexture) { return; }
+
+    if (!value) { return; }
+
+    dom.m3dTexture.generateMipmaps = (value !== "no");
+
+};
+
 const syncSRC = function (dom, value) {
 
     if (value && value[0] === "@") {
@@ -177,7 +216,13 @@ const trigTextureUpdate = function (dom) {
 };
 
 module.exports = {
-    "attributes": [ "id", "src", "flip-y", "wrap-s", "wrap-t", "offset", "repeat", "rotation" ],
+    "attributes": [ 
+        "id", "src", "flip-y", 
+        "wrap-s", "wrap-t", 
+        "offset", "repeat", "rotation",
+        "min-filter", "max-filter",
+        "mipmap"
+    ],
     "listeners": {
         "onconnected": function () {
             trigTextureUpdate(this);
@@ -192,6 +237,9 @@ module.exports = {
                 case "offset": { syncOffset(this, value); break; };
                 case "repeat": { syncRepeat(this, value); break; };
                 case "rotation": { syncRotation(this, value); break; };
+                case "min-filter": { syncMinFilter(this, value); break; };
+                case "max-filter": { syncMaxFilter(this, value); break; };
+                case "mipmap": { syncMipmap(this, value); break; };
                 default: { break; };
             }
         },

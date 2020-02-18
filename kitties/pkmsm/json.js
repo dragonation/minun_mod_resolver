@@ -953,6 +953,7 @@ Model.prototype.toJSON = function (pcs, options) {
 
                 let record = {
                     "name": coordinate.name,
+                    "mipmap": coordinate.mipmap,
                     "magFilter": (coordinate.magFilter.code === Model.TextureMagnificationFilter.NEAREST ?
                         "nearest" : "linear"),
                     "minFilter": (coordinate.minFilter.code === Model.TextureMinificationFilter.NEAREST ?

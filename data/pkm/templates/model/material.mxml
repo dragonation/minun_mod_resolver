@@ -1,7 +1,7 @@
 <tmpl:map list="material.textures"><m3d-texture id="${id}-${index}" name="${item.name}" 
              src="@${'$'}{prefix}textures/${item.name}.png" flip-y="yes"
              wrap-s="${item.wrapS}" wrap-t="${item.wrapT}"
-             min-filter="${item.minFilter}" mag-filter="${item.magFilter}"
+             min-filter="${item.minFilter}" mag-filter="${item.magFilter}" mipmap="no"
              offset="${item.offset}" repeat="${item.repeat}" rotation="${item.rotation}"/>
 </tmpl:map><m3d-material id="${id}" name="${material.name}" priorities="${material.layer},${material.priority}"
               preset="shader" skinning="yes" 

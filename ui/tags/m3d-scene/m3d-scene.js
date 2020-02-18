@@ -20,12 +20,22 @@ const prepareScene = function (dom) {
     let clock = new THREE.Clock();
 
     let renderer = new THREE.WebGLRenderer({
-        "antialias": true,
+        "antialias": $(dom).attr("antialias") !== "no",
         "alpha": true,
         "preserveDrawingBuffer": true,
         "premultipliedAlpha": true,
     });
-    renderer.setPixelRatio(1);
+    let pixelRatio = $(dom).attr("pixel-ratio");
+    if (pixelRatio) {
+        pixelRatio = parseFloat(pixelRatio);
+        if (isFinite(pixelRatio) && (pixelRatio > 0)) {
+            renderer.setPixelRatio(pixelRatio);
+        } else {
+            renderer.setPixelRatio(1);
+        }
+    } else {
+        renderer.setPixelRatio(1);
+    }
     renderer.setSize(width, height);
     renderer.gammaInput = true;
     renderer.gammaOutput = true;
@@ -265,6 +275,27 @@ const syncAutosort = function (dom, value) {
 
 };
 
+const syncAntialias = function (dom, value) {
+
+    if (!dom.m3dRenderer) { return; }
+
+    dom.m3dRenderer.antialias = (value !== "no");
+
+};
+
+const syncPixelRatio = function (dom, value) {
+
+    if (!dom.m3dRenderer) { return; }
+
+    if (!value) { return; }
+
+    value = parseFloat(value);
+    if (isFinite(value) && (value > 0)) {
+        dom.m3dRenderer.setPixelRatio(value);
+    }
+
+};
+
 const syncAutoclear = function (dom, value) {
 
     if (!dom.m3dRenderer) { return; }
@@ -322,6 +353,7 @@ module.exports = {
     "attributes": [
         "autoclear", "clear-color",
         "autosort",
+        "antialias", "pixel-ratio",
         "controls", "grids", "stats", 
         "autolights", "autocamera-lights",
         "camera"
@@ -359,6 +391,8 @@ module.exports = {
                 case "autoclear": { syncAutoclear(this, value); break; };
                 case "autosort": { syncAutosort(this, value); break; };
                 case "autocamera-lights": { syncAutocameraLights(this, value); break; };
+                case "antialias": { syncAntialias(this, value); break; };
+                case "pixel-ratio": { syncPixelRatio(this, value); break; };
                 default: { break; };
             }
         },
