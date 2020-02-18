@@ -49,6 +49,7 @@ ui-collection-view {
             text-overflow: ellipsis;
             overflow: hidden;
             width: 100%;
+            white-space: nowrap;
 
             &:hover {
                 background-color: $alpha($white(0), 0.05);
@@ -63,6 +64,27 @@ ui-collection-view {
                     background-color: $bright(#0d8ef1, -0.1);
                 }
 
+                .comment {
+                    color: $white(1);
+                }
+
+            }
+
+            .comment {
+                opacity: 0.8;
+                font-weight: bold;
+                margin-left: 3px;
+                color: #3270ff;
+                font-size: 8px;
+                &:before {
+                    content: '(';
+                }
+                &:after {
+                    content: ')';
+                }
+                &:empty {
+                    display: none;
+                }
             }
 
             .duration {

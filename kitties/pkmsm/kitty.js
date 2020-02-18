@@ -233,7 +233,7 @@ let saveU8Buffer = (array, path, dict) => {
     }
 
     let options = {
-        "motions": [ "fighting", "pet", "map", "acting"],
+        "motions": [ "fighting", "pet", "map" ], // acting is just subset of others
         "shiny": true,
         "shadow": true
     };

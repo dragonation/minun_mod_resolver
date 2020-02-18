@@ -130,18 +130,22 @@ App.prototype.openModel = function (id, from) {
         // scale to fit
         let scale = 60 / size;
 
+        let m3dObject = $("<m3d-object>").attr({
+            "id": "pokemon-model",
+            "model-scale": scale
+        });
+
         const prepareDOM = (html, prefix) => {
 
             let dom = $(html);
-            
-            dom.attr({
-                "model-scale": scale
-            });
+
+            let id = result.id;
 
             let decoded = undefined;
             let binaryCallbacks = Object.create(null);
             $.ajax("/~pkmsm/model/data/mesh/" + result.id + (prefix ? "/" + prefix : ""), {
                 "success": (result) => {
+
                     decoded = Object.create(null);
                     dom[0].binDecoded = decoded;
                     if (!prefix) {
@@ -182,6 +186,73 @@ App.prototype.openModel = function (id, from) {
                             }
                         }
                     }
+
+                    $.ajax(`/~pkmsm/model/res/${id}/animation.xml`, {
+                        "dataType": "text",
+                        "success": (html) => {
+                            let animations = $(html);
+                            frame[0].frame.animations = animations;
+                            $.ajax(`/~pkmsm/model/data/animation/${id}`, {
+                                "success": (result) => {
+                                    for (let key in result) {
+                                        let value = $.base64.decode(result[key]);
+                                        if (key.split(".").slice(-1)[0] === "bin") {
+                                            let type = key.split(".").slice(-2)[0];
+                                            switch (type) {
+                                                case "u8": { 
+                                                    decoded[key] = [];
+                                                    let array = new Uint8Array(value); 
+                                                    for (let value of array) {
+                                                        decoded[key].push(value ? true : false);
+                                                    }
+                                                    break; 
+                                                }
+                                                case "f32": 
+                                                default: { 
+                                                    decoded[key] = [];
+                                                    let array = new Float32Array(value); 
+                                                    for (let value of array) {
+                                                        decoded[key].push(value);
+                                                    }
+                                                    break; 
+                                                }
+                                            }
+                                        } else {
+                                            decoded[key] = value;
+                                        }
+                                    }
+                                    dom.append(animations);
+                                    let animationSet = Object.create(null);
+                                    for (let animation of animations) {
+                                        if (animation.id) {
+                                            animationSet[animation.id] = true;
+                                        }
+                                    }
+                                    if (animationSet["FightingAction1"]) {
+                                        m3dObject[0].playM3DClip("FightingAction1", {
+                                            "channel": "pose",
+                                            "priority": 1,
+                                            "loop": Infinity
+                                        });
+                                    }
+                                    if (animationSet["FightingAction26"]) {
+                                        m3dObject[0].playM3DClip("FightingAction26", {
+                                            "channel": "states",
+                                            "priority": 3,
+                                            "loop": Infinity
+                                        });
+                                    }
+                                },
+                                "error": () => {
+                                    console.error("Failed to get animations data");
+                                }
+                            });
+                        },
+                        "error": () => {
+                            console.error("Failed to list animations");
+                        }
+                    });
+
                 },
                 "error": () => {
                     if (binaryCallbacks) {
@@ -258,10 +329,6 @@ App.prototype.openModel = function (id, from) {
 
         };
 
-        let m3dObject = $("<m3d-object>").attr({
-            "id": "pokemon-model"
-        });
-
         let modelDOM = prepareDOM(result.html.model, "");
         let shadowDOM = prepareDOM(result.html.shadow, "shadow");
 
@@ -330,7 +397,7 @@ App.prototype.openAnimationList = function (id, from) {
     frame[0].loadUI("/~pkmsm/frames/animation-list/animation-list", {
         "id": id,
         "from": from,
-        "groups": Object.keys(animations).map((group) => ({
+        "groups": Object.keys(animations).sort().map((group) => ({
             "name": group,
             "animations": animations[group]
         }))

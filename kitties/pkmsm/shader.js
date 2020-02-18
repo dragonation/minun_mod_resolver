@@ -775,8 +775,8 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                 "Generated Date: " + @.format.date(new Date()),
                 "Comment: This file is just auto-generated from the raw decoded Nintendo 3DS vertex shader instructions for human readable",
                 "",
-                // "precision mediump float;",
-                // "",
+                "precision mediump float;",
+                "",
                 codes,
                 ""
             ].join("\n");

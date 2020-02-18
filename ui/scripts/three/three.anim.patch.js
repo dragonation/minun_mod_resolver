@@ -271,8 +271,7 @@ const patchObjectAnimation = function (threeObject) {
             const updater = resolveUpdater(type, target, path);
             if (!updater) { return; }
             if (updater.targets.length === 0) {
-                console.warn(`Animation target[${updater.selector}] not found`);
-                console.warn(track.frames);
+                // console.warn(`Animation target[${updater.selector}] not found`);
             }
 
             const binding = {
@@ -488,6 +487,7 @@ const patchObjectAnimation = function (threeObject) {
                             if ((!max) || ((max[0] === binding.priority) &&
                                            (max[1] < binding.weight * binding.fading) &&
                                            ((max[2] & constant) === constant))) {
+
                                 values = [[1, binding.values[binding.frame]]];
                                 max = [binding.priority, binding.weight * binding.fading, constant];
                                 fadings = 1;

@@ -290,17 +290,28 @@ const syncVisible = function (dom, value) {
 
 };
 
-const playAnimation = function (dom, clip) {
+const playAnimation = function (dom, clip, options) {
 
     if (!dom.m3dObject) { return; }
 
+    if (!options) {
+        options = {};
+    }
+
     let m3dObject = dom.m3dObject;
-    let updater = dom.m3dObject.playPatchedAnimation(clip, {
-        "onAnimationStarted": () => {},
-        "onAnimationEnded": () => {
+    let updater = dom.m3dObject.playPatchedAnimation(clip, Object.assign({}, options, {
+        "onAnimationStarted": function () {
+            if (options.onAnimationStarted) {
+                options.onAnimationStarted.apply(this, arguments);
+            }
+        },
+        "onAnimationEnded": function () {
             scene.m3dScene.removePatchedAnimationObject(m3dObject);
+            if (options.onAnimationEnded) {
+                options.onAnimationEnded.apply(this, arguments);
+            }
         }
-    });
+    }));
 
     let scene = dom;
     while (scene && (scene.localName.toLowerCase() !== "m3d-scene")) {
@@ -405,8 +416,8 @@ module.exports = {
         "m3dSyncChildren": function () {
             syncChildren(this);
         },
-        "playM3DClip": function (clip) {
-            playAnimation(this, clip);
+        "playM3DClip": function (clip, options) {
+            playAnimation(this, clip, options);
         }
     }
 };
