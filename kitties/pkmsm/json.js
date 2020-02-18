@@ -933,6 +933,12 @@ Model.prototype.toJSON = function (pcs, options) {
                 }
             }
 
+            // fix for 146 fire wing edge
+            if ((model.bones[0].name === "pm0146_00") && 
+                (material.fragmentShader === "FireCore_FireWingGRE")) {
+                material.pica.rendering.alphaTest.reference = 128;
+            }
+
             let textureCoordinates = material.textureCoordinates;
 
             let textures = textureCoordinates.map((coordinate, index) => {
