@@ -809,7 +809,7 @@ Model.prototype.toJSON = function (pcs, options) {
                     "min": model.boundingBox.min.slice(0, 3),
                     "max": model.boundingBox.max.slice(0, 3)
                 },
-                "fighting": {
+                "pose": {
                     "min": pcs.extra.files[0].boundingBox.min.slice(0, 3),
                     "max": pcs.extra.files[0].boundingBox.max.slice(0, 3)
                 }
@@ -937,6 +937,11 @@ Model.prototype.toJSON = function (pcs, options) {
             if ((model.bones[0].name === "pm0146_00") && 
                 (material.fragmentShader === "FireCore_FireWingGRE")) {
                 material.pica.rendering.alphaTest.reference = 128;
+            }
+
+            if ((model.bones[0].name === "pm0872_00") &&
+                (material.name === "Gas")) {
+                material.polygonOffset = -1;
             }
 
             let textureCoordinates = material.textureCoordinates;
@@ -1124,6 +1129,8 @@ Model.prototype.toJSON = function (pcs, options) {
             let record = {
 
                 "name": material.name,
+
+                "polygonOffset": material.polygonOffset ? material.polygonOffset : 0,
 
                 // rendering orders
                 "layer": material.renderLayer,

@@ -159,6 +159,8 @@ const prepareObject = function (dom) {
 
         syncVisible(dom, $(dom).attr("visible"));
 
+        syncFrustumCulled(dom, $(dom).attr("frustum-culled"));
+
         syncChildren(dom);
 
     }
@@ -290,6 +292,13 @@ const syncVisible = function (dom, value) {
 
 };
 
+const syncFrustumCulled = function (dom, value) {
+
+    if (!dom.m3dObject) { return; }
+
+    dom.m3dObject.frustomCulled = (value !== "no");
+};
+
 const playAnimation = function (dom, clip, options) {
 
     if (!dom.m3dObject) { return; }
@@ -383,6 +392,7 @@ module.exports = {
         "rotation", "translation", "scale",
         "model-rotation", "model-translation", "model-scale",
         "visible",
+        "frustum-culled",
         "bin"
     ],
     "listeners": {
@@ -402,6 +412,7 @@ module.exports = {
                 case "model-translation": { syncModelTranslation(this, value); break; };
                 case "model-scale": { syncModelScale(this, value); break; };
                 case "visible": { syncVisible(this, value); break; };
+                case "frustum-culled": { syncFrustumCulled(this, value); break; };
             }
         },
         "ondisconnected": function () {

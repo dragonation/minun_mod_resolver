@@ -5,6 +5,7 @@
              offset="${item.offset}" repeat="${item.repeat}" rotation="${item.rotation}"/>
 </tmpl:map><m3d-material id="${id}" name="${material.name}" priorities="${material.layer},${material.priority}"
               preset="shader" skinning="yes" 
+              polygon-offset="${material.polygonOffset}"
               side="${material.faceCulling; { 'frontFace'? 'back-face', 'backFace'? 'front-face', 'never'? 'both-sides'}}"
               transparent="yes" alpha-premultiplied="yes"
               vertex-shader="@shaders/${material.shaders.vertex}.vert" fragment-shader="@shaders/${material.shaders.fragment}.frag"

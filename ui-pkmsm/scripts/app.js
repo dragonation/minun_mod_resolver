@@ -118,13 +118,12 @@ App.prototype.openModel = function (id, from) {
             console.error(error); return;
         }
 
-
-        let mins = result.bounds.model.mins;
-        let maxes = result.bounds.model.maxes;
+        let mins = result.bounds.pose.mins;
+        let maxes = result.bounds.pose.maxes;
 
         // we need adjust the model to make it render in the window correctly
         let size = Math.max((maxes[0] - mins[0]),
-                            (maxes[1] - mins[1]),
+                            Math.max(maxes[1], maxes[1] - mins[1]),
                             (maxes[2] - mins[2]));
 
         // scale to fit
@@ -132,7 +131,8 @@ App.prototype.openModel = function (id, from) {
 
         let m3dObject = $("<m3d-object>").attr({
             "id": "pokemon-model",
-            "model-scale": scale
+            "model-scale": scale,
+            "frustom-culled": "no"
         });
 
         const prepareDOM = (html, prefix) => {

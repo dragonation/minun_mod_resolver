@@ -412,13 +412,13 @@ let saveU8Buffer = (array, path, dict) => {
                 }
                 if (attributes.positions) {
                     let path = @.fs.resolvePath("meshes", `${looper}-${mesh.name}`, "positions.f32.bin");
-                    for (let looper = 0; looper < attributes.positions.length; looper += 3) {
-                        if (mins[looper] > attributes.positions[looper]) { mins[looper] = attributes.positions[looper]; }
-                        if (mins[looper + 1] > attributes.positions[looper + 1]) { mins[looper + 1] = attributes.positions[looper + 1]; }
-                        if (mins[looper + 2] > attributes.positions[looper + 2]) { mins[looper + 2] = attributes.positions[looper + 2]; }
-                        if (maxes[looper] < attributes.positions[looper]) { maxes[looper] = attributes.positions[looper]; }
-                        if (maxes[looper + 1] < attributes.positions[looper + 1]) { maxes[looper + 1] = attributes.positions[looper + 1]; }
-                        if (maxes[looper + 2] < attributes.positions[looper + 2]) { maxes[looper + 2] = attributes.positions[looper + 2]; }
+                    for (let looper = 0; looper < attributes.positions.length; looper += 4) {
+                        if (mins[looper % 4] > attributes.positions[looper]) { mins[looper % 4] = attributes.positions[looper]; }
+                        if (mins[looper % 4 + 1] > attributes.positions[looper + 1]) { mins[looper % 4 + 1] = attributes.positions[looper + 1]; }
+                        if (mins[looper % 4 + 2] > attributes.positions[looper + 2]) { mins[looper % 4 + 2] = attributes.positions[looper + 2]; }
+                        if (maxes[looper % 4] < attributes.positions[looper]) { maxes[looper % 4] = attributes.positions[looper]; }
+                        if (maxes[looper % 4 + 1] < attributes.positions[looper + 1]) { maxes[looper % 4 + 1] = attributes.positions[looper + 1]; }
+                        if (maxes[looper % 4 + 2] < attributes.positions[looper + 2]) { maxes[looper % 4 + 2] = attributes.positions[looper + 2]; }
                     }
                     saveF32Buffer(attributes.positions, path, dict);
                 }
@@ -465,7 +465,11 @@ let saveU8Buffer = (array, path, dict) => {
             let model = {
                 "id": id,
                 "bounds": {
-                    "model": { "mins": mins, "maxes": maxes }
+                    "model": { "mins": mins, "maxes": maxes },
+                    "pose": { 
+                        "mins": json.boundingBox.pose.min,
+                        "maxes": json.boundingBox.pose.max
+                    }
                 },
                 "name": json.name
             };

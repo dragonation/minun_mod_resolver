@@ -69,6 +69,7 @@ const prepareMaterial = function (dom) {
         syncStencilZPassed(dom, $(dom).attr("stencil-z-passed"));
         syncVertexShader(dom, $(dom).attr("vertex-shader"));
         syncFragmentShader(dom, $(dom).attr("fragment-shader"));
+        syncPolygonOffset(dom, $(dom).attr("polygon-offset"));
         syncUniforms(dom);
         dom.m3dMaterial.m3dExtra = dom.m3dExtra;
         trigMaterialUpdate(dom);
@@ -83,6 +84,30 @@ const disposeMaterial = function (dom) {
     if (dom.m3dMaterial) {
         dom.m3dMaterial.dispose();
         delete dom.m3dMaterial;
+    }
+
+};
+
+const syncPolygonOffset = function (dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
+    if (!value) { return; }
+
+    value = parseFloat(value);
+    console.log(value);
+
+    if (value) {
+        dom.m3dMaterial.polygonOffset = true;
+        if (value > 0) {
+            dom.m3dMaterial.polygonOffsetFactor = 1.0;
+            dom.m3dMaterial.polygonOffsetUnit = value;
+        } else {
+            dom.m3dMaterial.polygonOffsetFactor = -1.0;
+            dom.m3dMaterial.polygonOffsetUnit = value;
+        }
+    } else {
+        dom.m3dMaterial.polygonOffset = false;
     }
 
 };
@@ -922,6 +947,7 @@ module.exports = {
         "stencil-failed", "stencil-z-failed", "stencil-z-passed",
         "stencil-write-mask", 
         "blending", "blending-destination", "blending-equation", "blending-source",
+        "polygon-offset",
         "extra"
     ],
     "listeners": {
@@ -962,6 +988,7 @@ module.exports = {
                 case "blending-source": { syncBlendingSource(this, value); break; }
                 case "blending-destination": { syncBlendingDestination(this, value); break; }
                 case "blending-equation": { syncBlendingEquation(this, value); break; }
+                case "polygon-offset": { syncPolygonOffset(this, value); break; }
                 case "extra": { syncExtra(this, value); break; }
                 default: { break; };
             }
