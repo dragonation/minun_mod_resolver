@@ -77,7 +77,7 @@ float getEdge(sampler2D depth, vec2 uv) {
 void main() {
     float z = clamp(getEdge(layer, fragUV), 0.0, 1.0);
     float z2 = clamp(getEdge(layer2, fragUV), 0.0, 1.0);
-    float edge = clamp((z + z2 * 0.5), 0.0, 1.0) * 0.6;
+    float edge = clamp((z + z2 * 0.5), 0.0, 1.0);
     vec4 pixel = texture2D(layer3, fragUV);
     if (edge > 0.0) {
         pixel.rgb = pixel.rgb * (1.0 - edge);
@@ -86,4 +86,8 @@ void main() {
     pixel.rgb = pixel.rgb + 1.0 - pixel.a;
     pixel.a = 1.0;
     gl_FragColor = pixel;
+    // gl_FragColor = vec4(edge, edge, edge, 1.0);
+    // gl_FragColor = vec4(z, z, z, 1.0);
+    // gl_FragColor = vec4(z2, z2, z2, 1.0);
+    // gl_FragColor = texture2D(layer2, fragUV);
 }

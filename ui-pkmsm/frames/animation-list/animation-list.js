@@ -44,6 +44,7 @@ Frame.functors = {
 
             case "FightingAction1": { return "Pose"; }
             case "FightingAction2": { return "Appear"; }
+            case "FightingAction3": { return "Transform"; }
             case "FightingAction4": { return "Release"; }
             case "FightingAction5": { return "Dropping"; }
             case "FightingAction6": { return "Landing"; }

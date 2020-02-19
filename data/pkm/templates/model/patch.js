@@ -14,7 +14,7 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
     }
     if (uniforms.depthRendering) {
         if (renderer.renderingLayer > 0) {
-            if (typeof extra.outlineDepth === "boolean") {
+            if (typeof extra.outlineDepthWrite === "boolean") {
                 uniforms.depthRendering.value = extra.outlineDepthWrite;
             } else if (extra.outlineDepthWrite) {
                 uniforms.depthRendering.value = extra.outlineDepthWrite[Math.round(renderer.renderingLayer * 2) - 1];
