@@ -377,6 +377,13 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                                 if (output !== -1) {
                                     return ["fragDepth = length(" + new Shader.Register("", "o" + output, "", "", shader).glsl + ".xyz);",
                                             "fragNormal = normal;",
+                                            "vec3 blendedNormal = vec3(0.0, 0.0, 0.0);",
+                                            "vec4 skinOffset = vec4(3.0, 3.0, 3.0, 3.0) * skinIndex;",
+                                            "blendedNormal += spicaBlendNormal(int(skinOffset.x), 0.0039216 * skinWeight.x);",
+                                            "blendedNormal += spicaBlendNormal(int(skinOffset.y), 0.0039216 * skinWeight.y);",
+                                            "blendedNormal += spicaBlendNormal(int(skinOffset.z), 0.0039216 * skinWeight.z);",
+                                            "blendedNormal += spicaBlendNormal(int(skinOffset.w), 0.0039216 * skinWeight.w);",
+                                            "fragBlendedNormal = blendedNormal;",
                                             "gl_Position = " + new Shader.Register("", "o" + output, "", "", shader).glsl
                                             ].join("\n    " + indent);
                                 } else {
@@ -631,6 +638,7 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                 }).join("\n"),
                 "",
                 "varying vec4 fragNormal;",
+                "varying vec3 fragBlendedNormal;",
                 "varying float fragDepth;",
                 "",
                 Object.keys(registers).filter((key) => key[0] === "v").sort(@.cmp.natural).map((register) => {
@@ -679,6 +687,7 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                 "",
                 "float spicaLog2(float value);",
                 "float spicaExp2(float value);",
+                "vec3 spicaBlendNormal(int index, float weight);",
                 report.codes.filter((instruction) => @.is.nil(instruction.line)).map((instruction) => {
                     if (instruction.label === "main") {
                         return "";
@@ -711,6 +720,14 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                 "    } else {",
                 "        return exp2(value);",
                 "    }",
+                "}",
+                "",
+                "vec3 spicaBlendNormal(int index, float weight) {",
+                "    vec3 result = vec3(0.0, 0.0, 0.0);",
+                "    result.x = weight * dot(vectors[10 + index].xyz, normal.xyz);",
+                "    result.y = weight * dot(vectors[11 + index].xyz, normal.xyz);",
+                "    result.z = weight * dot(vectors[12 + index].xyz, normal.xyz);",
+                "    return result;",
                 "}",
                 "",
                 codes,
@@ -804,6 +821,7 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
             "varying vec4 fragUV3;",
             "",
             "varying vec4 fragNormal;",
+            "varying vec3 fragBlendedNormal;",
             "varying float fragDepth;",
             "",
             "uniform mat4 modelViewMatrix;",
@@ -841,9 +859,10 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
             "uniform vec4 lightSpeculars[6];",
             "uniform bool lightDirectionals[3];",
             "",
-            "uniform bool renderingDepth;",
-            "uniform bool depthDiscard;",
+            "uniform float renderingDepth;",
             "uniform float depthAlpha;",
+            "uniform bool depthRendering;",
+            "uniform vec3 cameraDirection;",
             "uniform float cameraNear;",
             "uniform float cameraScale;",
             "",
@@ -1046,20 +1065,19 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
             codes.push("    color.a = 1.0;");
         }
 
-        codes.push("    if (!renderingDepth) {");
-        if (material.pica.rendering.alphaTest && material.pica.rendering.alphaTest.enabled) {
-            codes.push("        color.rgb *= color.a;");
-        }
+        codes.push("    if (renderingDepth == 0.0) {");
+        codes.push("        color.rgb *= color.a;");
         codes.push("        gl_FragColor = color;");
         codes.push("    } else {");
-        codes.push("        if (depthDiscard) {");
+        codes.push("        if ((!depthRendering) || (depthAlpha < renderingDepth)) {");
         codes.push("            discard;");
         codes.push("        }");
         codes.push("        float depth = (fragDepth - cameraNear) * cameraScale;");
-        codes.push("        float r = floor(depth * 255.0) / 255.0;");
-        codes.push("        float g = floor((depth - r) * 255.0 * 255.0) / 255.0;");
-        codes.push("        float b = floor((((depth - r) * 255.0) - g) * 255.0 * 255.0) / 255.0;");
-        codes.push("        gl_FragColor = vec4(r, g, b, depthAlpha == 1.0 ? 1.0 : 0.0);");
+        codes.push("        float r = floor(depth * 127.0) / 127.0;");
+        codes.push("        float g = floor((depth - r) * 127.0 * 255.0) / 255.0;");
+        codes.push("        float b = floor((((depth - r) * 127.0) - g) * 255.0 * 255.0) / 255.0;");
+        codes.push("        float n = -dot(fragBlendedNormal, cameraDirection);");
+        codes.push("        gl_FragColor = vec4(clamp(r, 0.0, 1.0) * 0.5 + 0.5, g, b, n * 0.5 + 0.5);");
         codes.push("    }");
         codes.push("");
         codes.push("}");

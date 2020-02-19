@@ -1251,8 +1251,9 @@ Model.prototype.toJSON = function (pcs, options) {
                 },
                 "useDirectNormal": useDirectNormal(model, material),
                 "outlines": {
-                    "depth": getOutlineDepthValue(model, mesh, material, outlineDepthWritePresets, null),
-                    "alpha": getOutlineDepthValue(model, mesh, material, outlineDepthAlphaPresets, 1)
+                    "depth": options.isShadow ? false : getOutlineDepthValue(model, mesh, material, outlineDepthWritePresets, null),
+                    "rendering": !options.isShadow,
+                    "alpha": options.isShadow ? 0 : getOutlineDepthValue(model, mesh, material, outlineDepthAlphaPresets, 1)
                 }
 
             };

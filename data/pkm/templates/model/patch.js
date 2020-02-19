@@ -10,7 +10,124 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
     const viewMatrix = camera.matrixWorldInverse;
 
     if (uniforms.renderingDepth) {
-        uniforms.renderingDepth.value = false;
+        uniforms.renderingDepth.value = renderer.renderingLayer;
+    }
+    if (uniforms.depthRendering) {
+        if (renderer.renderingLayer > 0) {
+            if (typeof extra.outlineDepth === "boolean") {
+                uniforms.depthRendering.value = extra.outlineDepthWrite;
+            } else if (extra.outlineDepthWrite) {
+                uniforms.depthRendering.value = extra.outlineDepthWrite[Math.round(renderer.renderingLayer * 2) - 1];
+            } else {
+                uniforms.depthRendering.value = true;
+            }
+        } else {
+            uniforms.depthRendering.value = true;
+        }
+
+    }
+
+    if (renderer.renderingLayer) {
+
+        if (extra.outlineDepthWrite !== null) {
+            if (typeof extra.outlineDepthWrite) {
+                material.depthWrite = extra.outlineDepthWrite;
+            } else {
+                material.depthWrite = extra.outlineDepthWrite[renderer.renderingLayer === 0.5 ? 0 : 1];
+            }
+            material.depthTest = true;
+            material.depthFunc = THREE.LessEqualDepth;
+        }
+
+        material.blendDst = THREE.ZeroFactor;
+        material.blendDstAlpha = THREE.ZeroFactor;
+        material.blendEquation = THREE.AddEquation;
+        material.blendEquationAlpha = THREE.AddEquation;
+        material.blendSrc = THREE.OneFactor;
+        material.blendSrcAlpha = THREE.OneFactor;
+
+    } else {
+
+        material.depthTest = extra.depthTest.enabled;
+        material.depthWrite = extra.depthTest.writable;
+        switch (extra.depthTest.tester) {
+            case "never": { material.depthFunc = THREE.NeverDepth; break; }
+            case "always": { material.depthFunc = THREE.AlwaysDepth; break; }
+            // case "equal-to": { material.depthFunc = THREE.EqualDepth; break; }
+            case "not-equal-to": { material.depthFunc = THREE.NotEqualDepth; break; }
+            case "less-than": { material.depthFunc = THREE.LessDepth; break; }
+            case "less-than-or-equal-to": { material.depthFunc = THREE.LessEqualDepth; break; }
+            case "greater-than": { material.depthFunc = THREE.GreaterDepth; break; }
+            case "greater-than-or-equal-to": { material.depthFunc = THREE.GreaterEqualDepth; break; }
+            default: { break; }
+        }
+
+        // material.stencilWrite = extra.stencilTest.enabled;
+        // material.stencilRef = extra.stencilTest.reference;
+        // material.stencilFuncMask = extra.stencilTest.mask;
+        // material.stencilWriteMask = extra.stencilTest.writeMask;
+        // switch (extra.stencilTest.tester) {
+        //     case "never": { material.stencilFunc = THREE.NeverStencilFunc; break; }
+        //     case "always": { material.stencilFunc = THREE.AlwaysStencilFunc; break; }
+        //     case "less-than": { material.stencilFunc = THREE.LessStencilFunc; break; }
+        //     case "less-than-or-equal-to": { material.stencilFunc = THREE.LessEqualStencilFunc; break; }
+        //     case "greater-than": { material.stencilFunc = THREE.GreaterStencilFunc; break; }
+        //     case "greater-than-or-equal-to": { material.stencilFunc = THREE.GreaterEqualStencilFunc; break; }
+        //     case "equal-to": { material.stencilFunc = THREE.EqualStencilFunc; break; }
+        //     case "not-equal-to": { material.stencilFunc = THREE.NotEqualStencilFunc; break; }
+        // }
+        // const getStencilOperation = function (value) {
+        //     switch (value) {
+        //         case "keep": { return THREE.KeepStencilOp; }
+        //         case "zero": { return THREE.ZeroStencilOp; }
+        //         case "replace": { return THREE.ReplaceStencilOp; }
+        //         case "increment": { return THREE.IncrementStencilOp; }
+        //         case "decrement": { return THREE.DecrementStencilOp; }
+        //         case "invert": { return THREE.InvertStencilOp; }
+        //         case "incrementWrap": { return THREE.IncrementWrapStencilOp; }
+        //         case "decrementWrap": { return THREE.DecrementWrapStencilOp; }
+        //     }
+        // };
+        // material.stencilFail = getStencilOperation(extra.stencilTest.failed);
+        // material.stencilZFail = getStencilOperation(extra.stencilTest.zFailed);
+        // material.stencilZPass = getStencilOperation(extra.stencilTest.zPassed);
+
+        material.blending = THREE.CustomBlending;
+        const getBlendingEquation = function (value) {
+            switch (value) {
+                case "add": { return THREE.AddEquation; }
+                case "subtract": { return THREE.SubtractEquation; }
+                case "reverse-subtract": { return THREE.ReverseSubtractEquation; }
+                case "min": { return THREE.MinEquation; }
+                case "max": { return THREE.MaxEquation; }
+            }
+        };
+        material.blendEquation = getBlendingEquation(extra.blending.equation.color);
+        material.blendEquationAlpha = getBlendingEquation(extra.blending.equation.alpha);
+        const getBlendingFactor = function (value) {
+            switch (value) {
+                case "zero": { return THREE.ZeroFactor; }
+                case "one": { return THREE.OneFactor; }
+                case "source-color": { return THREE.SrcColorFactor; }
+                case "one-minus-source-color": { return THREE.OneMinusSrcColorFactor; }
+                case "destination-color": { return THREE.DstColorFactor; }
+                case "one-minus-destination-color": { return THREE.OneMinusDstColorFactor; }
+                case "source-alpha": { return THREE.SrcAlphaFactor; }
+                case "one-minus-source-alpha": { return THREE.OneMinusSrcAlphaFactor; }
+                case "destination-alpha": { return THREE.DstAlphaFactor; }
+                case "one-minus-destination-alpha": { return THREE.OneMinusDstAlphaFactor; }
+                case "source-alpha-saturate": { return THREE.SrcAlphaSaturateFactor; }
+            }
+        };
+        material.blendSrc = getBlendingFactor(extra.blending.source.color);
+        material.blendSrcAlpha = getBlendingFactor(extra.blending.source.alpha);
+        material.blendDst = getBlendingFactor(extra.blending.destination.color);
+        material.blendDstAlpha = getBlendingFactor(extra.blending.destination.alpha);
+
+    }
+
+    if (uniforms.cameraDirection) {
+        camera.getWorldDirection(uniforms.cameraDirection.value);
     }
 
     if (uniforms.hasTangent) {

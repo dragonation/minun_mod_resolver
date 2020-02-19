@@ -18,7 +18,11 @@
               blending="custom" blending-color="${join(material.blending.color, ',')}" blending-destination="${material.blending.destination.color},${material.blending.destination.alpha}" blending-equation="${material.blending.equation.color},${material.blending.equation.alpha}" blending-source="${material.blending.source.color},${material.blending.source.alpha}"
               extra="${json({
                   'isGeometryShader': isGeometryShader,
-                  'constantsIndices': material.constants.indices
+                  'constantsIndices': material.constants.indices,
+                  'outlineDepthWrite': material.outlines.depth,
+                  'stencilTest': material.stencilTest,
+                  'blending': material.blending,
+                  'depthTest': material.depthTest
               })}">
 
     <!-- mesh uniforms -->
@@ -43,6 +47,7 @@
     <m3d-uniform name="environmentAmbient" type="vec4">0,0,0,0</m3d-uniform>
 
     <!-- camera uniforms -->
+    <m3d-uniform name="cameraDirection" type="vec3">1,0,0</m3d-uniform>
     <m3d-uniform name="cameraNear" type="float">10</m3d-uniform>
     <m3d-uniform name="cameraScale" type="float">0.01</m3d-uniform>
 
@@ -56,17 +61,15 @@
     <m3d-uniform name="lightSpeculars" type="vec4[]">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</m3d-uniform>
 
     <!-- rendering stage uniforms -->
-    <m3d-uniform name="renderingDepth" type="bool">false</m3d-uniform>
-    <m3d-uniform name="depthAlpha" type="float">1</m3d-uniform>
-    <m3d-uniform name="depthDiscard" type="bool">false</m3d-uniform>
+    <m3d-uniform name="renderingDepth" type="float">1</m3d-uniform>
+    <m3d-uniform name="depthAlpha" type="float">${material.outlines.alpha}</m3d-uniform>
+    <m3d-uniform name="depthRendering" type="bool">${material.outlines.rendering}</m3d-uniform>
 
     <!-- uv vectors -->
     <m3d-uniform name="uvVectors" type="vec4[]">${uniform(slice(material.uniforms.vectors, 0, 10))}</m3d-uniform>
 
     <!-- patches for normal map -->
     <m3d-uniform name="useDirectNormal" type="bool">${uniform(material.useDirectNormal)}</m3d-uniform>
-
-    <m3d-uniform name="worldScales" type="vec4">1,1,1,1</m3d-uniform>
 
     <!-- outlines.depth, outlines.alpha not covered -->
 

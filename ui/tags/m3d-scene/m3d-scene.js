@@ -130,7 +130,12 @@ const startSceneRendering = function (dom) {
                 light.position.set(-worldDirection.x, -worldDirection.y, -worldDirection.z);
                 light.matrixWorldNeedsUpdate = true;
             }
-            dom.m3dRenderer.render(dom.m3dScene, dom.m3dCamera);
+
+            if (dom.m3dCustomRender) {
+                dom.m3dCustomRender(dom.m3dRenderer, dom.m3dScene, dom.m3dCamera);
+            } else {
+                dom.m3dRenderer.render(dom.m3dScene, dom.m3dCamera);
+            }
         }
     };
 
@@ -369,8 +374,15 @@ module.exports = {
             prepareScene(this);
             startSceneRendering(this);
 
+            let size = new THREE.Vector2();
+
             this.resizeObserver = new ResizeObserver((entries) => {
                 syncSceneSize(this);
+                this.m3dRenderer.getSize(size);
+                $(this).trigger("resize", {
+                    "width": size.x,
+                    "height": size.y
+                });
             });
             this.resizeObserver.observe(this);
 

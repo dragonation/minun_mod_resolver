@@ -95,8 +95,6 @@ const syncPolygonOffset = function (dom, value) {
     if (!value) { return; }
 
     value = parseFloat(value);
-    console.log(value);
-
     if (value) {
         dom.m3dMaterial.polygonOffset = true;
         if (value > 0) {
