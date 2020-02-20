@@ -9,16 +9,27 @@ const { Model } = require("./model.js");
 
 const outlineStencilPresets = {
     // 15
-    "pm0015_51-PDC_pm_rediba_WingGRE": true,
+    "pm0015_00-PDC_pm_rediba_WingGRE": true,
     "pm0015_51-PDC_pm_rediba_WingGRE": true,
     // 284
     "pm0284_00-PDC_pm_rediba_WingGRE": true,
+    // 469
+    "pm0469_00-PDC_pm_rediba_WingGRE": true,
+    // 488
+    "pm0488_00-PDC_pm_hinoarashi_FireGRE": true,
     // 577
     // "pm0577_00-PDC_pm_uniran_CellGRE": true,
     // 578
     // "pm0578_00-PDC_pm_uniran_CellGRE": true,
     // 579
     // "pm0579_00-PDC_pm_uniran_CellGRE": true,
+    // 609
+    "pm0609_00-PDC_pm_chandela_FireGRE": true,
+    "pm0609_00-PDC_pm_chandela_FireALW": true,
+    // 742
+    "pm0834_00-PDC_pm_rediba_WingGRE": 0.5,
+    // 743
+    "pm0835_00-PDC_pm_rediba_WingGRE": true,
 };
 
 const outlineDepthWritePresets = {
@@ -162,6 +173,10 @@ const outlineDepthAlphaPresets = {
     // 392
     "pm0392_00-FireCore_FireWingGRE": 0.5,
     "pm0392_00-FireSten_lizardonGRE": 0.5,
+    // 415
+    "pm0415_00_mitsuhoney-PDC_pm_rediba_WingGRE": 0.5,
+    // 416
+    "pm0416_00-PDC_pm_rediba_WingGRE": 0.5,
     // 442
     "pm0442_00-PDC_BodyGRE": 0.5,
     // 469
