@@ -20,7 +20,6 @@
                   'isGeometryShader': isGeometryShader,
                   'constantsIndices': material.constants.indices,
                   'outlineDepthWrite': material.outlines.depth,
-                  'stencilTest': material.stencilTest,
                   'blending': material.blending,
                   'depthTest': material.depthTest
               })}">

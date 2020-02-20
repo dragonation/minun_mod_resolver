@@ -12,6 +12,7 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
     if (uniforms.renderingDepth) {
         uniforms.renderingDepth.value = renderer.renderingLayer;
     }
+
     if (uniforms.depthRendering) {
         if (renderer.renderingLayer > 0) {
             if (typeof extra.outlineDepthWrite === "boolean") {
@@ -24,7 +25,6 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
         } else {
             uniforms.depthRendering.value = true;
         }
-
     }
 
     if (renderer.renderingLayer) {
@@ -61,36 +61,6 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
             case "greater-than-or-equal-to": { material.depthFunc = THREE.GreaterEqualDepth; break; }
             default: { break; }
         }
-
-        // material.stencilWrite = extra.stencilTest.enabled;
-        // material.stencilRef = extra.stencilTest.reference;
-        // material.stencilFuncMask = extra.stencilTest.mask;
-        // material.stencilWriteMask = extra.stencilTest.writeMask;
-        // switch (extra.stencilTest.tester) {
-        //     case "never": { material.stencilFunc = THREE.NeverStencilFunc; break; }
-        //     case "always": { material.stencilFunc = THREE.AlwaysStencilFunc; break; }
-        //     case "less-than": { material.stencilFunc = THREE.LessStencilFunc; break; }
-        //     case "less-than-or-equal-to": { material.stencilFunc = THREE.LessEqualStencilFunc; break; }
-        //     case "greater-than": { material.stencilFunc = THREE.GreaterStencilFunc; break; }
-        //     case "greater-than-or-equal-to": { material.stencilFunc = THREE.GreaterEqualStencilFunc; break; }
-        //     case "equal-to": { material.stencilFunc = THREE.EqualStencilFunc; break; }
-        //     case "not-equal-to": { material.stencilFunc = THREE.NotEqualStencilFunc; break; }
-        // }
-        // const getStencilOperation = function (value) {
-        //     switch (value) {
-        //         case "keep": { return THREE.KeepStencilOp; }
-        //         case "zero": { return THREE.ZeroStencilOp; }
-        //         case "replace": { return THREE.ReplaceStencilOp; }
-        //         case "increment": { return THREE.IncrementStencilOp; }
-        //         case "decrement": { return THREE.DecrementStencilOp; }
-        //         case "invert": { return THREE.InvertStencilOp; }
-        //         case "incrementWrap": { return THREE.IncrementWrapStencilOp; }
-        //         case "decrementWrap": { return THREE.DecrementWrapStencilOp; }
-        //     }
-        // };
-        // material.stencilFail = getStencilOperation(extra.stencilTest.failed);
-        // material.stencilZFail = getStencilOperation(extra.stencilTest.zFailed);
-        // material.stencilZPass = getStencilOperation(extra.stencilTest.zPassed);
 
         material.blending = THREE.CustomBlending;
         const getBlendingEquation = function (value) {
@@ -295,11 +265,10 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
     }
 
     // constants
-    if (extra.constants && 
-        extra.constants.indices && 
+    if (extra.constantsIndices && 
         uniforms.constantSlots && uniforms.constants) {
         for (let looper = 0; looper < 6; ++looper) {
-            let index = extra.constants.indices[looper];
+            let index = extra.constantsIndices[looper];
             uniforms.constants.value[looper].set(
                 uniforms.constantSlots.value[index].x,
                 uniforms.constantSlots.value[index].y,

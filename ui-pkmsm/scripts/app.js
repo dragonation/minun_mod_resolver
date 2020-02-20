@@ -232,15 +232,24 @@ App.prototype.openModel = function (id, from) {
                                         m3dObject[0].playM3DClip("FightingAction1", {
                                             "channel": "pose",
                                             "priority": 1,
+                                            "fading": 0,
                                             "loop": Infinity
                                         });
                                     }
-                                    if (animationSet["FightingAction26"]) {
-                                        m3dObject[0].playM3DClip("FightingAction26", {
-                                            "channel": "states",
-                                            "priority": 3,
-                                            "loop": Infinity
-                                        });
+                                    let paused = id.split("-")[1] === "327";
+                                    for (let id of [26, 27, 28, 29]) {
+                                        let action = `FightingAction${id}`;
+                                        let frame = paused ? Math.floor(Math.random() * 128) : 0;
+                                        if (animationSet[action]) {
+                                            m3dObject[0].playM3DClip(action, {
+                                                "channel": `states-${id - 25}`,
+                                                "priority": (3 + id - 26),
+                                                "fading": 0,
+                                                "paused": paused,
+                                                "frame": frame,
+                                                "loop": Infinity
+                                            });
+                                        }
                                     }
                                 },
                                 "error": () => {

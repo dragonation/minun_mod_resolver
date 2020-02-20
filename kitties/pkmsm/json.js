@@ -7,12 +7,11 @@ const { Motion } = require("./motion.js");
 
 const { Model } = require("./model.js");
 
-
 const outlineDepthWritePresets = {
     "pm0351_14-PDC_pm_uniran_CellGRE": true,
     "pm0442_00-PDC_BodyGRE": true,
     "pm0442_00-PDC_BodyGRE@pm0442_00_BodyASkin1": false,
-    "pm0500_00-PDC_pm_enbuoh_FireALW": [false, true],
+    // "pm0500_00-PDC_pm_enbuoh_FireALW": [false, true],
     "pm0577_00-PDC_pm_uniran_CellGRE": true,
     "pm0578_00-PDC_pm_uniran_CellGRE": true,
     "pm0579_00-PDC_pm_uniran_CellGRE": true,
@@ -933,14 +932,17 @@ Model.prototype.toJSON = function (pcs, options) {
                 }
             }
 
-            // fix for 146 fire wing edge
-            if ((model.bones[0].name === "pm0146_00") && 
-                (material.fragmentShader === "FireCore_FireWingGRE")) {
+            // fix for fire core edge
+            if (material.fragmentShader === "FireCore_FireWingGRE") {
                 material.pica.rendering.alphaTest.reference = 128;
             }
 
             if ((model.bones[0].name === "pm0872_00") &&
                 (material.name === "Gas")) {
+                material.polygonOffset = -1;
+            }
+            if ((model.bones[0].name === "pm0877_00") &&
+                (material.name === "BodyA01Env")) {
                 material.polygonOffset = -1;
             }
 

@@ -68,6 +68,9 @@ Frame.functors = {
             case "FightingAction24": { return "Mouth 2 Emotion"; }
             case "FightingAction25": { return "Mouth 3 Emotion"; }
             case "FightingAction26": { return "State animation"; }
+            case "FightingAction27": { return "State 2 animation"; }
+            case "FightingAction28": { return "State 3 animation"; }
+            case "FightingAction29": { return "State 4 animation"; }
 
             case "MapAction1": { return "Pose"; }
             case "MapAction3": { return "Walk"; }
@@ -86,6 +89,9 @@ Frame.functors = {
             case "MapAction19": { return "Mouth 2 Emotion"; }
             case "MapAction20": { return "Mouth 3 Emotion"; }
             case "MapAction21": { return "State Animation"; }
+            case "MapAction22": { return "State 2 Animation"; }
+            case "MapAction23": { return "State 3 Animation"; }
+            case "MapAction24": { return "State 4 Animation"; }
 
             case "PetAction1": { return "Pose"; }
             case "PetAction2": { return "Turn"; }
@@ -121,6 +127,9 @@ Frame.functors = {
             case "PetAction32": { return "Mouth 2 Emotion"; }
             case "PetAction33": { return "Mouth 3 Emotion"; }
             case "PetAction34": { return "State Animation"; }
+            case "PetAction35": { return "State 2 Animation"; }
+            case "PetAction36": { return "State 3 Animation"; }
+            case "PetAction37": { return "State 4 Animation"; }
 
         }
 

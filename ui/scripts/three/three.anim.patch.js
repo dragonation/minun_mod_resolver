@@ -150,16 +150,27 @@ const patchObjectAnimation = function (threeObject) {
                     switch (this.property) {
                         case "x": case "y": case "z": case "w": 
                         case "rotation": {
-                            target[this.property] = mixed[1] / mixed[0]; break;
+                            if (mixed[0] === 0) {
+                                target[this.property] = mixed[1];
+                            } else {
+                                target[this.property] = mixed[1] / mixed[0]; break;
+                            }
+                            break;
                         }
                         case "visible": {
                             target[this.property] = mixed[1];
                             break;
                         }
                         case "quaternion": {
-                            target[this.property].set(
-                                mixed[1][0] / mixed[0], mixed[1][1] / mixed[0],
-                                mixed[1][2] / mixed[0], mixed[1][3] / mixed[0]);
+                            if (mixed[0] === 0) {
+                                target[this.property].set(
+                                    mixed[1][0], mixed[1][1],
+                                    mixed[1][2], mixed[1][3]);
+                            } else {
+                                target[this.property].set(
+                                    mixed[1][0] / mixed[0], mixed[1][1] / mixed[0],
+                                    mixed[1][2] / mixed[0], mixed[1][3] / mixed[0]);
+                            }
                             break;
                         }
                     }
@@ -376,9 +387,12 @@ const patchObjectAnimation = function (threeObject) {
                         if (index !== -1) {
                             idBindings.tracks.splice(index, 1);
                         }
+                        
                         if (idBindings.tracks.length === 0) {
                             $.delay(() => {
+                                if (!animationMixers.bindings[binding.path]) {
                                     idBindings.updater.update([[1, idBindings.origins]]);
+                                }
                             });
                             delete animationMixers.bindings[binding.path];
                         }
@@ -476,6 +490,7 @@ const patchObjectAnimation = function (threeObject) {
 
             let values = [];
             let max = null;
+            let xs = [];
             [false, true].forEach((constant) => {
                 let looper = 0;
                 while ((fadings < 1) && (looper < priorities.length)) {
@@ -487,7 +502,6 @@ const patchObjectAnimation = function (threeObject) {
                             if ((!max) || ((max[0] === binding.priority) &&
                                            (max[1] < binding.weight * binding.fading) &&
                                            ((max[2] & constant) === constant))) {
-
                                 values = [[1, binding.values[binding.frame]]];
                                 max = [binding.priority, binding.weight * binding.fading, constant];
                                 fadings = 1;
@@ -515,7 +529,10 @@ const patchObjectAnimation = function (threeObject) {
                 }
                 fadings = 1;
             }
-
+            // if (idBindings.id === "material#BPatch > .uniforms > .map2 > .value > .offset > .x") {
+            //     console.log(bindings);
+            // }
+            
             idBindings.updater.update(values);
 
         });
