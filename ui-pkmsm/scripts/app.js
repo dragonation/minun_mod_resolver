@@ -243,14 +243,14 @@ App.prototype.openModel = function (id, from) {
                                         let paused = id.split("-")[1] === "327";
                                         for (let id of [26, 27, 28, 29]) {
                                             let action = `FightingAction${id}`;
-                                            let frame = paused ? 128 : 0;
+                                            let pausedFrame = paused ? 128 : 0;
                                             if (animationSet[action]) {
                                                 m3dObject[0].playM3DClip(action, {
                                                     "channel": `state-${id - 25}`,
                                                     "priority": (3 + id - 26),
                                                     "fading": 0,
                                                     "paused": paused,
-                                                    "frame": frame,
+                                                    "frame": pausedFrame,
                                                     "loop": Infinity,
                                                     "onAnimationEnded": () => {
                                                         frame[0].frame.trigAnimationStatesChanges();

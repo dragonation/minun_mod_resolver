@@ -158,6 +158,40 @@ Frame.prototype.playAnimation = function (animationID, options) {
 
 };
 
+Frame.prototype.playAnimationSeries = function (series, options) {
+
+    let playVersion = $.uuid();
+    this.playVersion = playVersion;
+
+    this.playingAnimationSeries = series.slice(0);
+
+    let play = (index) => {
+        this.playAnimation(series[index], Object.assign({}, options, {
+            "onAnimationEnded": () => {
+                if (playVersion !== this.playVersion) {
+                    return;
+                }
+                if (index === series.length - 1) {
+                    if (options.onAnimationEnded) {
+                        options.onAnimationEnded();
+                    }
+                } else {
+                    play(index + 1);
+                }
+            }
+        }));
+    };
+
+    play(0);
+
+};
+
+Frame.prototype.getPlayingAnimationSeries = function () {
+
+    return this.playingAnimationSeries;
+
+};
+
 Frame.prototype.getPlayingAnimations = function () {
 
     return this.filler.query("#pokemon-model")[0].getPlayingM3DClips();

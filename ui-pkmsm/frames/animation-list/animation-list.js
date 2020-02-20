@@ -170,60 +170,59 @@ Frame.prototype.playAnimation = function (animation) {
         return $(dom).attr("wire-id") === modelID;
     })[0];
 
-    if (from) {
-        let group = undefined;
-        for (let candidate of this.filler.parameters.groups) {
-            if (candidate.name === animation.split("Action")[0]) {
-                group = candidate;
-            }
-        }
-        let stateClips = group.animations.filter((animation) => {
-            return getClipUsage(animation.id).split(" ")[0] === "State";
-        });
-        let paused = modelID.split("-")[1] === "327";
-        for (let looper = 0; looper < stateClips.length; ++looper) {
-            if (!this.filler.parameters.playings[stateClips[looper].id]) {
-                from.frame.playAnimation(stateClips[looper].id, {
-                    "channel": `state-${looper + 1}`,
-                    "priority": (3 + looper),
-                    "fading": 0,
-                    "paused": paused,
-                    "frame": 128,
-                    "loop": Infinity
-                });
-            }
-        }
-        let series = [animation];
-        let groupAnimations = group.animations.map((animation) => animation.id);
-        let index = groupAnimations.indexOf(animation);
-        while ((index !== -1) && (index < groupAnimations.length) && 
-               needPreviousClip(groupAnimations[index + 1])) {
-            series.push(groupAnimations[index + 1]);
-            ++index;
-        }
-        let play = (index) => {
-            from.frame.playAnimation(series[index], {
-                "channel": "action",
-                "priority": 2,
-                "fading": 0,
-                "onAnimationEnded": () => {
-                    if (playVersion !== this.playVersion) {
-                        return;
-                    }
-                    if (index === series.length - 1) {
-                        from.frame.playAnimation(`${group.name}Action1`, {
-                            "channel": "action",
-                            "priority": 1,
-                            "loop": Infinity
-                        });
-                    } else {
-                        play(index + 1);
-                    }
-                }
-            });
-        };
-        play(0);
+    if (!from) {
+        return;
     }
+
+    let group = undefined;
+    for (let candidate of this.filler.parameters.groups) {
+        if (candidate.name === animation.split("Action")[0]) {
+            group = candidate;
+        }
+    }
+
+    let stateClips = group.animations.filter((animation) => {
+        return getClipUsage(animation.id).split(" ")[0] === "State";
+    });
+
+    let paused = modelID.split("-")[1] === "327";
+    for (let looper = 0; looper < stateClips.length; ++looper) {
+        if (!this.filler.parameters.playings[stateClips[looper].id]) {
+            from.frame.playAnimation(stateClips[looper].id, {
+                "channel": `state-${looper + 1}`,
+                "priority": (3 + looper),
+                "fading": 0,
+                "paused": paused,
+                "frame": 128,
+                "loop": Infinity
+            });
+        }
+    }
+
+    let series = [animation];
+    let groupAnimations = group.animations.map((animation) => animation.id);
+    let index = groupAnimations.indexOf(animation);
+    while ((index !== -1) && (index < groupAnimations.length) && 
+           needPreviousClip(groupAnimations[index + 1])) {
+        series.push(groupAnimations[index + 1]);
+        ++index;
+    }
+
+    from.frame.playAnimationSeries(series, {
+        "channel": "action",
+        "priority": 2,
+        "fading": 0,
+        "onAnimationEnded": () => {
+            if (playVersion !== this.playVersion) {
+                return;
+            }
+            from.frame.playAnimation(`${group.name}Action1`, {
+                "channel": "action",
+                "priority": 1,
+                "loop": Infinity
+            });
+        }
+    });
 
 };
 

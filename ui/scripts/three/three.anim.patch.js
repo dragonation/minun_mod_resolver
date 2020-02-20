@@ -91,6 +91,7 @@ const patchObjectAnimation = function (threeObject) {
             case "x": case "y": case "z": case "w":
             case "rotation": {
                 merge = function (a, b, target) {
+                    if (!b[1]) { b1 = 0; }
                     if (b[1] instanceof Map) {
                         return [a[0] + b[0], a[1] + b[0] * b[1].get(target)];
                     } else {
@@ -100,6 +101,9 @@ const patchObjectAnimation = function (threeObject) {
             }
             case "quaternion": {
                 merge = function (a, b, target) {
+                    if (!b[1]) {
+                        b[1] = [0, 0, 0, 1];
+                    }
                     if (b[1] instanceof Map) {
                         const b1 = b[1].get(target);
                         return [a[0] + b[0], [
@@ -115,6 +119,7 @@ const patchObjectAnimation = function (threeObject) {
             case "visible": 
             default: {
                 merge = function (a, b, target) {
+                    if (!b[1]) { b1 = false; }
                     if (b[1] instanceof Map) {
                         return [a[0] + b[0], b[1].get(target)];
                     } else {
