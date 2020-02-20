@@ -4,6 +4,76 @@ let targetPosition = new Vector4(0, 0, 0, 1);
 let position = new Vector4(0, 0, 0, 1);
 let lightDirection = new Vector4(0, 0, 0, 0);
 
+const getDepthFunc = function (value) {
+    switch (value) {
+        case "never": { return THREE.NeverDepth; }
+        case "always": { return THREE.AlwaysDepth; }
+        // case "equal-to": { return THREE.EqualDepth; }
+        case "not-equal-to": { return THREE.NotEqualDepth; }
+        case "less-than": { return THREE.LessDepth; }
+        case "less-than-or-equal-to": { return THREE.LessEqualDepth; }
+        case "greater-than": { return THREE.GreaterDepth; }
+        case "greater-than-or-equal-to": { return THREE.GreaterEqualDepth; }
+        default: { break; }
+    }
+};
+
+const getStencilFunc = function (value) {
+    switch (value) {
+        case "never": { return THREE.NeverStencilFunc; }
+        case "always": { return THREE.AlwaysStencilFunc; }
+        case "less-than": { return THREE.LessStencilFunc; }
+        case "less-than-or-equal-to": { return THREE.LessEqualStencilFunc; }
+        case "greater-than": { return THREE.GreaterStencilFunc; }
+        case "greater-than-or-equal-to": { THREE.GreaterEqualStencilFunc; }
+        case "equal-to": { return THREE.EqualStencilFunc; }
+        case "not-equal-to": { return THREE.NotEqualStencilFunc; }
+        default: { break; }
+    }
+};
+
+const getStencilOperation = function (value) {
+    switch (value) {
+        case "keep": { return THREE.KeepStencilOp; }
+        case "zero": { return THREE.ZeroStencilOp; }
+        case "replace": { return THREE.ReplaceStencilOp; }
+        case "increment": { return THREE.IncrementStencilOp; }
+        case "decrement": { return THREE.DecrementStencilOp; }
+        case "invert": { return THREE.InvertStencilOp; }
+        case "incrementWrap": { return THREE.IncrementWrapStencilOp; }
+        case "decrementWrap": { return THREE.DecrementWrapStencilOp; }
+        default: { break; }
+    }
+};
+
+const getBlendingEquation = function (value) {
+    switch (value) {
+        case "add": { return THREE.AddEquation; }
+        case "subtract": { return THREE.SubtractEquation; }
+        case "reverse-subtract": { return THREE.ReverseSubtractEquation; }
+        case "min": { return THREE.MinEquation; }
+        case "max": { return THREE.MaxEquation; }
+        default: { break; }
+    }
+};
+
+const getBlendingFactor = function (value) {
+    switch (value) {
+        case "zero": { return THREE.ZeroFactor; }
+        case "one": { return THREE.OneFactor; }
+        case "source-color": { return THREE.SrcColorFactor; }
+        case "one-minus-source-color": { return THREE.OneMinusSrcColorFactor; }
+        case "destination-color": { return THREE.DstColorFactor; }
+        case "one-minus-destination-color": { return THREE.OneMinusDstColorFactor; }
+        case "source-alpha": { return THREE.SrcAlphaFactor; }
+        case "one-minus-source-alpha": { return THREE.OneMinusSrcAlphaFactor; }
+        case "destination-alpha": { return THREE.DstAlphaFactor; }
+        case "one-minus-destination-alpha": { return THREE.OneMinusDstAlphaFactor; }
+        case "source-alpha-saturate": { return THREE.SrcAlphaSaturateFactor; }
+        default: { break; }
+    }
+};
+
 module.exports = function (renderer, scene, camera, lights, mesh, geometry, material, uniforms, extra) {
 
     const projectionMatrix = camera.projectionMatrix;
@@ -39,6 +109,26 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
             material.depthFunc = THREE.LessEqualDepth;
         }
 
+        if (extra.outlineStencil && renderer.renderingSemidepth2) {
+            material.stencilWrite = true;
+            material.stencilRef = 63;
+            material.stencilFuncMask = 255;
+            material.stencilWriteMask = 255;
+            material.stencilFunc = THREE.NotEqualStencilFunc;
+            material.stencilFail = THREE.KeepStencilOp;
+            material.stencilZFail = THREE.KeepStencilOp;
+            material.stencilZPass = THREE.ReplaceStencilOp;
+        } else {
+            material.stencilWrite = extra.stencilTest.enabled;
+            material.stencilRef = extra.stencilTest.reference;
+            material.stencilFuncMask = extra.stencilTest.mask;
+            material.stencilWriteMask = extra.stencilTest.writeMask;
+            material.stencilFunc = getStencilFunc(extra.stencilTest.tester);
+            material.stencilFail = getStencilOperation(extra.stencilTest.failed);
+            material.stencilZFail = getStencilOperation(extra.stencilTest.zFailed);
+            material.stencilZPass = getStencilOperation(extra.stencilTest.zPassed);
+        }
+
         material.blendDst = THREE.ZeroFactor;
         material.blendDstAlpha = THREE.ZeroFactor;
         material.blendEquation = THREE.AddEquation;
@@ -50,45 +140,20 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
 
         material.depthTest = extra.depthTest.enabled;
         material.depthWrite = extra.depthTest.writable;
-        switch (extra.depthTest.tester) {
-            case "never": { material.depthFunc = THREE.NeverDepth; break; }
-            case "always": { material.depthFunc = THREE.AlwaysDepth; break; }
-            // case "equal-to": { material.depthFunc = THREE.EqualDepth; break; }
-            case "not-equal-to": { material.depthFunc = THREE.NotEqualDepth; break; }
-            case "less-than": { material.depthFunc = THREE.LessDepth; break; }
-            case "less-than-or-equal-to": { material.depthFunc = THREE.LessEqualDepth; break; }
-            case "greater-than": { material.depthFunc = THREE.GreaterDepth; break; }
-            case "greater-than-or-equal-to": { material.depthFunc = THREE.GreaterEqualDepth; break; }
-            default: { break; }
-        }
+        material.depthFunc = getDepthFunc(extra.depthTest.tester);
+        
+        material.stencilWrite = extra.stencilTest.enabled;
+        material.stencilRef = extra.stencilTest.reference;
+        material.stencilFuncMask = extra.stencilTest.mask;
+        material.stencilWriteMask = extra.stencilTest.writeMask;
+        material.stencilFunc = getStencilFunc(extra.stencilTest.tester);
+        material.stencilFail = getStencilOperation(extra.stencilTest.failed);
+        material.stencilZFail = getStencilOperation(extra.stencilTest.zFailed);
+        material.stencilZPass = getStencilOperation(extra.stencilTest.zPassed);
 
         material.blending = THREE.CustomBlending;
-        const getBlendingEquation = function (value) {
-            switch (value) {
-                case "add": { return THREE.AddEquation; }
-                case "subtract": { return THREE.SubtractEquation; }
-                case "reverse-subtract": { return THREE.ReverseSubtractEquation; }
-                case "min": { return THREE.MinEquation; }
-                case "max": { return THREE.MaxEquation; }
-            }
-        };
         material.blendEquation = getBlendingEquation(extra.blending.equation.color);
         material.blendEquationAlpha = getBlendingEquation(extra.blending.equation.alpha);
-        const getBlendingFactor = function (value) {
-            switch (value) {
-                case "zero": { return THREE.ZeroFactor; }
-                case "one": { return THREE.OneFactor; }
-                case "source-color": { return THREE.SrcColorFactor; }
-                case "one-minus-source-color": { return THREE.OneMinusSrcColorFactor; }
-                case "destination-color": { return THREE.DstColorFactor; }
-                case "one-minus-destination-color": { return THREE.OneMinusDstColorFactor; }
-                case "source-alpha": { return THREE.SrcAlphaFactor; }
-                case "one-minus-source-alpha": { return THREE.OneMinusSrcAlphaFactor; }
-                case "destination-alpha": { return THREE.DstAlphaFactor; }
-                case "one-minus-destination-alpha": { return THREE.OneMinusDstAlphaFactor; }
-                case "source-alpha-saturate": { return THREE.SrcAlphaSaturateFactor; }
-            }
-        };
         material.blendSrc = getBlendingFactor(extra.blending.source.color);
         material.blendSrcAlpha = getBlendingFactor(extra.blending.source.alpha);
         material.blendDst = getBlendingFactor(extra.blending.destination.color);

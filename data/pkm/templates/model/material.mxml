@@ -19,8 +19,10 @@
               extra="${json({
                   'isGeometryShader': isGeometryShader,
                   'constantsIndices': material.constants.indices,
+                  'outlineStencil': material.outlines.stencil,
                   'outlineDepthWrite': material.outlines.depth,
                   'blending': material.blending,
+                  'stencilTest': material.stencilTest,
                   'depthTest': material.depthTest
               })}">
 

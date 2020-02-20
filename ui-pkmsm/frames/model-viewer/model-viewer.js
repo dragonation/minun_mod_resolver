@@ -1,6 +1,6 @@
 const THREE = require("/scripts/three.js");
 
-const LAYERS = 2;
+const LAYERS = 3;
 
 const Frame = function Frame(dom, filler) {
 
@@ -59,6 +59,7 @@ const Frame = function Frame(dom, filler) {
                     "layer": { "value": layerTargets[0].texture },
                     "layer2": { "value": layerTargets[1].texture },
                     "layer3": { "value": layerTargets[2].texture },
+                    "layer4": { "value": layerTargets[3].texture },
                 }
             });
             let finalPlane = new THREE.PlaneBufferGeometry(2, 2);
@@ -71,9 +72,27 @@ const Frame = function Frame(dom, filler) {
 
                 let looper = 0;
                 while (looper < LAYERS + 1) {
-                    renderer.renderingLayer = 0;
-                    if (looper < LAYERS) {
-                        renderer.renderingLayer = 0.5 + looper / 2;
+                    switch (looper) {
+                        case 0: { 
+                            renderer.renderingSemidepth2 = false;
+                            renderer.renderingLayer = 0.5; 
+                            break; 
+                        }
+                        case 1: { 
+                            renderer.renderingSemidepth2 = true;
+                            renderer.renderingLayer = 0.5; 
+                            break; 
+                        }
+                        case 2: { 
+                            renderer.renderingSemidepth2 = false;
+                            renderer.renderingLayer = 1; 
+                            break; 
+                        }
+                        default: { 
+                            renderer.renderingLayer = 0;
+                            renderer.renderingSemidepth2 = false;
+                            break; 
+                        }
                     }
                     renderer.setRenderTarget(layerTargets[looper]);
                     renderer.clear();

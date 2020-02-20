@@ -8,6 +8,7 @@ uniform float uy;
 uniform sampler2D layer;
 uniform sampler2D layer2;
 uniform sampler2D layer3;
+uniform sampler2D layer4;
 
 uniform float cameraNear;
 uniform float cameraFar;
@@ -77,8 +78,9 @@ float getEdge(sampler2D depth, vec2 uv) {
 void main() {
     float z = clamp(getEdge(layer, fragUV), 0.0, 1.0);
     float z2 = clamp(getEdge(layer2, fragUV), 0.0, 1.0);
-    float edge = clamp((z + z2 * 0.5), 0.0, 1.0);
-    vec4 pixel = texture2D(layer3, fragUV);
+    float z3 = clamp(getEdge(layer3, fragUV), 0.0, 1.0);
+    float edge = clamp((z + z2 * 0.25 + z3 * 0.25), 0.0, 1.0);
+    vec4 pixel = texture2D(layer4, fragUV);
     if (edge > 0.0) {
         pixel.rgb = pixel.rgb * (1.0 - edge);
         pixel.a = pixel.a + (1.0 - pixel.a) * edge;

@@ -7,14 +7,35 @@ const { Motion } = require("./motion.js");
 
 const { Model } = require("./model.js");
 
+const outlineStencilPresets = {
+    // 15
+    "pm0015_51-PDC_pm_rediba_WingGRE": true,
+    "pm0015_51-PDC_pm_rediba_WingGRE": true,
+    // 284
+    "pm0284_00-PDC_pm_rediba_WingGRE": true,
+    // 577
+    // "pm0577_00-PDC_pm_uniran_CellGRE": true,
+    // 578
+    // "pm0578_00-PDC_pm_uniran_CellGRE": true,
+    // 579
+    // "pm0579_00-PDC_pm_uniran_CellGRE": true,
+};
+
 const outlineDepthWritePresets = {
+    // 351
     "pm0351_14-PDC_pm_uniran_CellGRE": true,
+    // 442
     "pm0442_00-PDC_BodyGRE": true,
     "pm0442_00-PDC_BodyGRE@pm0442_00_BodyASkin1": false,
+    // 500
     // "pm0500_00-PDC_pm_enbuoh_FireALW": [false, true],
+    // 577
     "pm0577_00-PDC_pm_uniran_CellGRE": true,
+    // 578
     "pm0578_00-PDC_pm_uniran_CellGRE": true,
+    // 579
     "pm0579_00-PDC_pm_uniran_CellGRE": true,
+    // 751
     "pm0850_00-PDC_pm_uniran_CellGRE": true
 };
 
@@ -112,6 +133,8 @@ const outlineDepthAlphaPresets = {
     "pm0257_00_bursyamo-FireSten_lizardonGRE": 0.5,
     "pm0257_51-FireCore_FireWingGRE": 0.5,
     "pm0257_51-FireSten_lizardonGRE": 0.5,
+    // 284
+    "pm0284_00-PDC_pm_rediba_WingGRE": 0.5,
     // 290
     "pm0290_00-PDC_pm_rediba_WingGRE": 0.5,
     // 313
@@ -1253,6 +1276,7 @@ Model.prototype.toJSON = function (pcs, options) {
                 },
                 "useDirectNormal": useDirectNormal(model, material),
                 "outlines": {
+                    "stencil": options.isShadow ? null : getOutlineDepthValue(model, mesh, material, outlineStencilPresets, null),
                     "depth": options.isShadow ? false : getOutlineDepthValue(model, mesh, material, outlineDepthWritePresets, null),
                     "rendering": !options.isShadow,
                     "alpha": options.isShadow ? 0 : getOutlineDepthValue(model, mesh, material, outlineDepthAlphaPresets, 1)
