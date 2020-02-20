@@ -187,86 +187,88 @@ App.prototype.openModel = function (id, from) {
                         }
                     }
 
-                    $.ajax(`/~pkmsm/model/res/${id}/animation.xml`, {
-                        "dataType": "text",
-                        "success": (html) => {
-                            let animations = $(html);
-                            frame[0].frame.animations = animations;
-                            $.ajax(`/~pkmsm/model/data/animation/${id}`, {
-                                "success": (result) => {
-                                    for (let key in result) {
-                                        let value = $.base64.decode(result[key]);
-                                        if (key.split(".").slice(-1)[0] === "bin") {
-                                            let type = key.split(".").slice(-2)[0];
-                                            switch (type) {
-                                                case "u8": { 
-                                                    decoded[key] = [];
-                                                    let array = new Uint8Array(value); 
-                                                    for (let value of array) {
-                                                        decoded[key].push(value ? true : false);
+                    if (!prefix) {
+                        $.ajax(`/~pkmsm/model/res/${id}/animation.xml`, {
+                            "dataType": "text",
+                            "success": (html) => {
+                                let animations = $(html);
+                                frame[0].frame.animations = animations;
+                                $.ajax(`/~pkmsm/model/data/animation/${id}`, {
+                                    "success": (result) => {
+                                        for (let key in result) {
+                                            let value = $.base64.decode(result[key]);
+                                            if (key.split(".").slice(-1)[0] === "bin") {
+                                                let type = key.split(".").slice(-2)[0];
+                                                switch (type) {
+                                                    case "u8": { 
+                                                        decoded[key] = [];
+                                                        let array = new Uint8Array(value); 
+                                                        for (let value of array) {
+                                                            decoded[key].push(value ? true : false);
+                                                        }
+                                                        break; 
                                                     }
-                                                    break; 
-                                                }
-                                                case "f32": 
-                                                default: { 
-                                                    decoded[key] = [];
-                                                    let array = new Float32Array(value); 
-                                                    for (let value of array) {
-                                                        decoded[key].push(value);
+                                                    case "f32": 
+                                                    default: { 
+                                                        decoded[key] = [];
+                                                        let array = new Float32Array(value); 
+                                                        for (let value of array) {
+                                                            decoded[key].push(value);
+                                                        }
+                                                        break; 
                                                     }
-                                                    break; 
                                                 }
+                                            } else {
+                                                decoded[key] = value;
                                             }
-                                        } else {
-                                            decoded[key] = value;
                                         }
-                                    }
-                                    dom.append(animations);
-                                    let animationSet = Object.create(null);
-                                    for (let animation of animations) {
-                                        if (animation.id) {
-                                            animationSet[animation.id] = true;
-                                        }
-                                    }
-                                    if (animationSet["FightingAction1"]) {
-                                        m3dObject[0].playM3DClip("FightingAction1", {
-                                            "channel": "action",
-                                            "priority": 1,
-                                            "fading": 0,
-                                            "loop": Infinity,
-                                            "onAnimationEnded": () => {
-                                                frame[0].frame.trigAnimationStatesChanges();
+                                        dom.append(animations);
+                                        let animationSet = Object.create(null);
+                                        for (let animation of animations) {
+                                            if (animation.id) {
+                                                animationSet[animation.id] = true;
                                             }
-                                        });
-                                    }
-                                    let paused = id.split("-")[1] === "327";
-                                    for (let id of [26, 27, 28, 29]) {
-                                        let action = `FightingAction${id}`;
-                                        let frame = paused ? 128 : 0;
-                                        if (animationSet[action]) {
-                                            m3dObject[0].playM3DClip(action, {
-                                                "channel": `state-${id - 25}`,
-                                                "priority": (3 + id - 26),
+                                        }
+                                        if (animationSet["FightingAction1"]) {
+                                            m3dObject[0].playM3DClip("FightingAction1", {
+                                                "channel": "action",
+                                                "priority": 1,
                                                 "fading": 0,
-                                                "paused": paused,
-                                                "frame": frame,
                                                 "loop": Infinity,
                                                 "onAnimationEnded": () => {
                                                     frame[0].frame.trigAnimationStatesChanges();
                                                 }
                                             });
                                         }
+                                        let paused = id.split("-")[1] === "327";
+                                        for (let id of [26, 27, 28, 29]) {
+                                            let action = `FightingAction${id}`;
+                                            let frame = paused ? 128 : 0;
+                                            if (animationSet[action]) {
+                                                m3dObject[0].playM3DClip(action, {
+                                                    "channel": `state-${id - 25}`,
+                                                    "priority": (3 + id - 26),
+                                                    "fading": 0,
+                                                    "paused": paused,
+                                                    "frame": frame,
+                                                    "loop": Infinity,
+                                                    "onAnimationEnded": () => {
+                                                        frame[0].frame.trigAnimationStatesChanges();
+                                                    }
+                                                });
+                                            }
+                                        }
+                                    },
+                                    "error": () => {
+                                        console.error("Failed to get animations data");
                                     }
-                                },
-                                "error": () => {
-                                    console.error("Failed to get animations data");
-                                }
-                            });
-                        },
-                        "error": () => {
-                            console.error("Failed to list animations");
-                        }
-                    });
+                                });
+                            },
+                            "error": () => {
+                                console.error("Failed to list animations");
+                            }
+                        });
+                    }
 
                 },
                 "error": () => {
@@ -311,31 +313,49 @@ App.prototype.openModel = function (id, from) {
             dom[0].m3dLoadPatch = function (id, callback) {
 
                 if (patches[id]) {
-                    callback(patches[id][0], patches[id][1]); return;
+                    if (patches[id] instanceof Array) {
+                        patches[id].push(callback);
+                    } else {
+                        callback(patches[id].error, patches[id].module); 
+                    }
+                    return;
                 }
+
+                patches[id] = [];
 
                 let path = `/~pkmsm/model/res/${result.id}/${prefix ? prefix + "/" : ""}${id}`;
                 $.res.load(path, (error, result) => {
+                    let callbacks = patches[id];
+                    if (callbacks && (!(callbacks instanceof Array))) {
+                        return;
+                    }
                     if (error) {
-                        patches[id] = [error];
-                        callback(error); return;
+                        patches[id] = { "error": error };
+                    } else {
+                        let module = undefined;
+                        try {
+                            let functor = eval([
+                                "(({ Vector2, Vector3, Vector4, Quaternion, Matrix3, Matrix4 }, module) => {" + result,
+                                `}) //# sourceURL=${path}`,
+                                ""
+                            ].join("\n"));
+                            let sandbox = { "exports": {} };
+                            functor(require("/scripts/three.js"), sandbox);
+                            module = sandbox.exports;
+                            patches[id] = { "module": module };
+                        } catch (error) {
+                            patches[id] = { "error": error };
+                        }
                     }
-                    let module = undefined;
-                    try {
-                        let functor = eval([
-                            "(({ Vector2, Vector3, Vector4, Quaternion, Matrix3, Matrix4 }, module) => {" + result,
-                            `}) //# sourceURL=${path}`,
-                            ""
-                        ].join("\n"));
-                        let sandbox = { "exports": {} };
-                        functor(require("/scripts/three.js"), sandbox);
-                        module = sandbox.exports;
-                    } catch (error) {
-                        patches[id] = [error];
-                        callback(error); return;
+                    if (callbacks) {
+                        for (let callback of callbacks) {
+                            try {
+                                callback(patches[id].error, patches[id].module);
+                            } catch (error) {
+                                console.error(error);
+                            }
+                        }
                     }
-                    patches[id] = [undefined, module];
-                    callback(undefined, module);
                 });
 
             };

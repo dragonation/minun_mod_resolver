@@ -1,3 +1,24 @@
+const needPreviousClip = function (name) {
+
+    switch (name) {
+
+        case "FightingAction5": { return true; }
+        case "FightingAction6": { return true; }
+
+        case "PetAction6": { return true; }
+        case "PetAction7": { return true; }
+
+        case "PetAction9": { return true; }
+
+        case "PetAction24": { return true; }
+        case "PetAction25": { return true; }
+
+        default: { return false; }
+
+    }
+
+};
+
 const getClipUsage = function (name) {
 
     switch (name) {
@@ -140,6 +161,9 @@ Frame.prototype.updatePlayingAnimations = function (animations) {
 
 Frame.prototype.playAnimation = function (animation) {
 
+    let playVersion = $.uuid();
+    this.playVersion = playVersion;
+
     let modelID = $(this.dom).attr("wire-id").split("/")[0];
 
     let from = $(this.dom).parent().children("ui-diagram-frame").filter((index, dom) => {
@@ -169,20 +193,36 @@ Frame.prototype.playAnimation = function (animation) {
                 });
             }
         }
-        from.frame.playAnimation(animation, {
-            "channel": "action",
-            "priority": 2,
-            "onAnimationEnded": () => {
-                if (this.filler.parameters.selected !== animation) {
-                    return;
+        let series = [animation];
+        let groupAnimations = group.animations.map((animation) => animation.id);
+        let index = groupAnimations.indexOf(animation);
+        while ((index !== -1) && (index < groupAnimations.length) && 
+               needPreviousClip(groupAnimations[index + 1])) {
+            series.push(groupAnimations[index + 1]);
+            ++index;
+        }
+        let play = (index) => {
+            from.frame.playAnimation(series[index], {
+                "channel": "action",
+                "priority": 2,
+                "fading": 0,
+                "onAnimationEnded": () => {
+                    if (playVersion !== this.playVersion) {
+                        return;
+                    }
+                    if (index === series.length - 1) {
+                        from.frame.playAnimation(`${group.name}Action1`, {
+                            "channel": "action",
+                            "priority": 1,
+                            "loop": Infinity
+                        });
+                    } else {
+                        play(index + 1);
+                    }
                 }
-                from.frame.playAnimation(`${group.name}Action1`, {
-                    "channel": "action",
-                    "priority": 1,
-                    "loop": Infinity
-                });
-            }
-        });
+            });
+        };
+        play(0);
     }
 
 };
@@ -247,6 +287,11 @@ Frame.functors = {
     "getClipUsage": function (name) {
 
         return getClipUsage(name);
+
+    },
+    "needPreviousClip": function (name) {
+
+        return needPreviousClip(name);
 
     }
 
