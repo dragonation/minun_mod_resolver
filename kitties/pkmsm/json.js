@@ -78,7 +78,7 @@ const outlineDepthAlphaPresets = {
     // "pm0092_00-FireCore_ghosGRE": 0,
     // "pm0092_00-FireSten_ghosGRE": 0,
     // 094
-    "pm0094_51-PDC_pm_megagangar_MaskALW": 0,
+    "pm0094_51-PDC_pm_megagangar_MaskALW": -1,
     // 105
     "pm0105_61-FireCore_FireWingGRE": 0.5,
     "pm0105_61-FireSten_lizardonGRE": 0.5,

@@ -21,6 +21,7 @@
                   'constantsIndices': material.constants.indices,
                   'outlineStencil': material.outlines.stencil,
                   'outlineDepthWrite': material.outlines.depth,
+                  'outlineAlpha': material.outlines.alpha,
                   'blending': material.blending,
                   'stencilTest': material.stencilTest,
                   'depthTest': material.depthTest
@@ -71,7 +72,5 @@
 
     <!-- patches for normal map -->
     <m3d-uniform name="useDirectNormal" type="bool">${uniform(material.useDirectNormal)}</m3d-uniform>
-
-    <!-- outlines.depth, outlines.alpha not covered -->
 
 </m3d-material>

@@ -1069,7 +1069,7 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
         codes.push("        color.rgb *= color.a;");
         codes.push("        gl_FragColor = color;");
         codes.push("    } else {");
-        codes.push("        if ((!depthRendering) || (depthAlpha < renderingDepth)) {");
+        codes.push("        if ((!depthRendering) || ((depthAlpha >= 0.0) && (depthAlpha < renderingDepth))) {");
         codes.push("            discard;");
         codes.push("        }");
         codes.push("        float depth = (fragDepth - cameraNear) * cameraScale;");

@@ -129,12 +129,21 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
             material.stencilZPass = getStencilOperation(extra.stencilTest.zPassed);
         }
 
-        material.blendDst = THREE.ZeroFactor;
-        material.blendDstAlpha = THREE.ZeroFactor;
-        material.blendEquation = THREE.AddEquation;
-        material.blendEquationAlpha = THREE.AddEquation;
-        material.blendSrc = THREE.OneFactor;
-        material.blendSrcAlpha = THREE.OneFactor;
+        if (extra.outlineAlpha < 0) {
+            material.blendDst = THREE.OneFactor;
+            material.blendDstAlpha = THREE.OneFactor;
+            material.blendEquation = THREE.AddEquation;
+            material.blendEquationAlpha = THREE.AddEquation;
+            material.blendSrc = THREE.ZeroFactor;
+            material.blendSrcAlpha = THREE.ZeroFactor;
+        } else {
+            material.blendDst = THREE.ZeroFactor;
+            material.blendDstAlpha = THREE.ZeroFactor;
+            material.blendEquation = THREE.AddEquation;
+            material.blendEquationAlpha = THREE.AddEquation;
+            material.blendSrc = THREE.OneFactor;
+            material.blendSrcAlpha = THREE.OneFactor;
+        }
 
     } else {
 
