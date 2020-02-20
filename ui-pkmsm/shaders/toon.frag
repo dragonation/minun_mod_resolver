@@ -88,8 +88,4 @@ void main() {
     pixel.rgb = pixel.rgb + 1.0 - pixel.a;
     pixel.a = 1.0;
     gl_FragColor = pixel;
-    // gl_FragColor = vec4(edge, edge, edge, 1.0);
-    // gl_FragColor = vec4(z, z, z, 1.0);
-    // gl_FragColor = vec4(z2, z2, z2, 1.0);
-    // gl_FragColor = texture2D(layer2, fragUV);
 }

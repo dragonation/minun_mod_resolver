@@ -451,7 +451,11 @@ let saveU8Buffer = (array, path, dict) => {
                 mxmls[`meshes/${looper}-${mesh.name}.xml`] = @.format(modelMeshTemplate, { 
                     "index": looper,
                     "baseOrder": baseOrder,
-                    "mesh": mesh
+                    "mesh": mesh,
+                    "boundingBox": {
+                        "mins": json.boundingBox.static.min,
+                        "maxes": json.boundingBox.static.max
+                    }
                 }, mxmlOptions);
             }
 

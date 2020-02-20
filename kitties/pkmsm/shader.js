@@ -1706,7 +1706,7 @@ Shader.floats  = {
     "82": { "name": "rim_and_phong_specular", "from": 82, "to": 82 },
 
     "83": { "name": "light_direction", "from": 83, "to": 83 },
-    "84": { "name": "bounding_box_or_light_diffuse", "from": 84, "to": 84 },
+    "84": { "name": "bounding_box", "from": 84, "to": 84 },
 
     "85": { "name": "shader_parameter", "from": 85, "to": 85 },
 

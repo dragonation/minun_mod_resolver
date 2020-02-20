@@ -19,5 +19,6 @@
               'bones': mesh.bones, 
               'hasTangent': mesh.uniforms.hasTangent,
               'hasBone': mesh.uniforms.hasBone,
-              'hasBoneW': mesh.uniforms.hasBoneW
+              'hasBoneW': mesh.uniforms.hasBoneW,
+              'boundingBox': boundingBox
           })}"/>

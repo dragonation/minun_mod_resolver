@@ -262,27 +262,15 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
                         position.y - targetPosition.y,
                         position.z - targetPosition.z, 0);
 
-        // bounding box or light color
-        // if (jsonMaterial.shaders.vertex !== "Default") {
-            if (extra.mins && extra.maxes) {
-                vectors[84].set(
-                    (extra.maxes[0] - extra.mins[0]) * scale, // + threeMesh.parent.position.x,
-                    (extra.maxes[2] - extra.mins[2]) * scale, // + threeMesh.parent.position.z,
-                    extra.mins[1] * scale, // + threeMesh.parent.position.y,
-                    extra.maxes[1] * scale // + threeMesh.parent.position.y
-                );
-            }
-        // } else {
-            // if (directionalLight) {
-            //     vectors[84].set(
-            //         directionalLight.color.r,
-            //         directionalLight.color.g,
-            //         directionalLight.color.b,
-            //         directionalLight.intensity);
-            // } else {
-            //     vectors[84].set(1, 1, 1, 0);
-            // }
-        // }
+        // bounding box
+        if (extra.boundingBox) {
+            vectors[84].set(
+                (extra.boundingBox.maxes[0] - extra.boundingBox.mins[0]) * scale + mesh.parent.position.x,
+                (extra.boundingBox.maxes[2] - extra.boundingBox.mins[2]) * scale + mesh.parent.position.z,
+                extra.boundingBox.mins[1] * scale + mesh.parent.position.y,
+                extra.boundingBox.maxes[1] * scale + mesh.parent.position.y
+            );
+        }
 
         if (extra.isGeometryShader) {
             vectors[85].x = worldScales[0] * uniforms.vectors.origin[85].x;
