@@ -50,6 +50,8 @@ ui-collection-view {
             overflow: hidden;
             width: 100%;
             white-space: nowrap;
+            display: flex;
+            align-items: center;
 
             &:hover {
                 background-color: $alpha($white(0), 0.05);
@@ -64,56 +66,80 @@ ui-collection-view {
                     background-color: $bright(#0d8ef1, -0.1);
                 }
 
-                .comment {
+                .channel {
                     color: $white(1);
+                    background-color: $alpha($white(1), 0.3);
+                    border-color: $white(1);
+                }
+
+                .priority {
+                    color: $alpha($white(1), 0.5);
                 }
 
             }
 
-            .comment {
+            &.system-clip {
+
+                opacity: 0.7;
+
+                .usage {
+                    font-style: italic;
+                }
+
+            }
+
+            .channel {
                 opacity: 0.8;
+                text-transform: uppercase;
+                background-color: $alpha(#3270ff, 0.2);
+                border: solid 1dpx $alpha(#3270ff, 0.3);
+                border-radius: 3px;
+                padding: 0 4px;
+                line-height: calc(12px - 2dpx);
+                height: 12px;
+                display: inline-block;
                 font-weight: bold;
-                margin-left: 3px;
+                margin-left: 8px;
                 color: #3270ff;
                 font-size: 8px;
-                &:before {
-                    content: '(';
-                }
-                &:after {
-                    content: ')';
-                }
+                transition: transform 0.2s, opacity 0.2s;
                 &:empty {
-                    display: none;
+                    transform: translateX(-10px);
+                    opacity: 0;
                 }
             }
 
-            .duration {
+            .priority {
                 margin-left: 5px;
                 font-style: italic;
-                font-size: 8px;
+                font-size: 7px;
                 line-height: 24px;
-                opacity: 0.4;
-            }
-
-            .tracks-count {
-
-                background-color: $alpha($white(0), 0.3);
-                color: $white(1);
-                line-height: 8px;
-                border-radius: 2px;
-                padding: 0px 4px;
-                font-size: 8px;
+                color: #ff6000;
                 font-weight: bold;
-                margin-right: 6px;
-
-                &::after {
-                    content: ' tracks';
+                transition: transform 0.2s, opacity 0.2s;
+                &:empty {
+                    transform: translateX(-10px);
+                    opacity: 0;
                 }
-
             }
 
-            .extname {
+            .paused {
                 opacity: 0.5;
+                text-transform: uppercase;
+                margin-left: 6px;
+                font-size: 7px;
+                background-color: $alpha($white(0), 0.7);
+                color: $white(1);
+                padding: 0 4px;
+                line-height: 10px;
+                height: 10px;
+                font-weight: bold;
+                border-radius: 9px;
+                transition: transform 0.2s, opacity 0.2s;
+                &:empty {
+                    transform: translateX(-10px);
+                    opacity: 0;
+                }
             }
 
         }

@@ -230,24 +230,30 @@ App.prototype.openModel = function (id, from) {
                                     }
                                     if (animationSet["FightingAction1"]) {
                                         m3dObject[0].playM3DClip("FightingAction1", {
-                                            "channel": "pose",
+                                            "channel": "action",
                                             "priority": 1,
                                             "fading": 0,
-                                            "loop": Infinity
+                                            "loop": Infinity,
+                                            "onAnimationEnded": () => {
+                                                frame[0].frame.trigAnimationStatesChanges();
+                                            }
                                         });
                                     }
                                     let paused = id.split("-")[1] === "327";
                                     for (let id of [26, 27, 28, 29]) {
                                         let action = `FightingAction${id}`;
-                                        let frame = paused ? Math.floor(Math.random() * 128) : 0;
+                                        let frame = paused ? 128 : 0;
                                         if (animationSet[action]) {
                                             m3dObject[0].playM3DClip(action, {
-                                                "channel": `states-${id - 25}`,
+                                                "channel": `state-${id - 25}`,
                                                 "priority": (3 + id - 26),
                                                 "fading": 0,
                                                 "paused": paused,
                                                 "frame": frame,
-                                                "loop": Infinity
+                                                "loop": Infinity,
+                                                "onAnimationEnded": () => {
+                                                    frame[0].frame.trigAnimationStatesChanges();
+                                                }
                                             });
                                         }
                                     }
@@ -405,7 +411,6 @@ App.prototype.openAnimationList = function (id, from) {
 
     frame[0].loadUI("/~pkmsm/frames/animation-list/animation-list", {
         "id": id,
-        "from": from,
         "groups": Object.keys(animations).sort().map((group) => ({
             "name": group,
             "animations": animations[group]
@@ -592,6 +597,14 @@ App.prototype.openShader = function (id, from) {
 };
 
 App.prototype.smartOpen = function (id, from) {
+
+    let frames = this.filler.query("#diagram").children("ui-diagram-frame");
+    for (let frame of frames) {
+        if ($(frame).attr("wire-id") === id) {
+            frame.bringToFirst();
+            return;
+        }
+    }
 
     let extname = id.split(".").slice(-1)[0];
     switch (extname) {

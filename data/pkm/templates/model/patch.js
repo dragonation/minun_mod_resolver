@@ -130,6 +130,7 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
         }
 
         if (extra.outlineAlpha < 0) {
+            // draw nothing but kept stencil works for mega gengar
             material.blendDst = THREE.OneFactor;
             material.blendDstAlpha = THREE.OneFactor;
             material.blendEquation = THREE.AddEquation;

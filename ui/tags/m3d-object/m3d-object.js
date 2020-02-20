@@ -299,6 +299,14 @@ const syncFrustumCulled = function (dom, value) {
     dom.m3dObject.frustomCulled = (value !== "no");
 };
 
+const getPlayingAnimations = function (dom) {
+
+    if (!dom.m3dObject) { return []; }
+
+    return dom.m3dObject.getPlayingPatchedAnimations();
+
+};
+
 const playAnimation = function (dom, clip, options) {
 
     if (!dom.m3dObject) { return; }
@@ -429,6 +437,9 @@ module.exports = {
         },
         "playM3DClip": function (clip, options) {
             playAnimation(this, clip, options);
+        },
+        "getPlayingM3DClips": function () {
+            return getPlayingAnimations(this);
         }
     }
 };

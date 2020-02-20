@@ -133,9 +133,20 @@ Frame.prototype.getTargetIDs = function () {
 
 Frame.prototype.playAnimation = function (animationID, options) {
 
-    this.playingAnimation = animationID;
-
-    this.filler.query("#pokemon-model")[0].playM3DClip(animationID, options);
+    this.filler.query("#pokemon-model")[0].playM3DClip(animationID, Object.assign({}, options, {
+        "onAnimationStarted": () => {
+            this.trigAnimationStatesChanges();
+            if (options.onAnimationStarted) {
+                options.onAnimationStarted();
+            }
+        },
+        "onAnimationEnded": () => {
+            this.trigAnimationStatesChanges();
+            if (options.onAnimationEnded) {
+                options.onAnimationEnded();
+            }
+        }
+    }));
 
     for (let listener of this.animationListeners) {
         try {
@@ -147,9 +158,28 @@ Frame.prototype.playAnimation = function (animationID, options) {
 
 };
 
-Frame.prototype.getPlayingAnimation = function () {
+Frame.prototype.getPlayingAnimations = function () {
 
-    return this.playingAnimation;
+    return this.filler.query("#pokemon-model")[0].getPlayingM3DClips();
+
+};
+
+Frame.prototype.trigAnimationStatesChanges = function () {
+
+    let id = $(this.dom).attr("wire-id");
+
+    let frames = $(this.dom).parent().children("ui-diagram-frame").filter((index, dom) => {
+        let wireID = $(dom).attr("wire-id");
+        return wireID.split("/")[0] === id;
+    });
+
+    let animations = this.getPlayingAnimations();
+
+    for (let frame of frames) {
+        if (frame.frame.updatePlayingAnimations) {
+            frame.frame.updatePlayingAnimations(animations);
+        }
+    }
 
 };
 

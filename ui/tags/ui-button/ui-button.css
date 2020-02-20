@@ -38,3 +38,7 @@
 :host(.disabled.dark) {
     background-color: #888;
 }
+
+shadow-root {
+    display: contents;
+}

@@ -185,6 +185,31 @@ const patchObjectAnimation = function (threeObject) {
 
     };
 
+    threeObject.getPlayingPatchedAnimations = function () {
+
+        let animations = [];
+
+        for (let channel in animationMixers.channels) {
+            let channels = animationMixers.channels[channel];
+            for (let actor of channels) {
+                animations.push({
+                    "channel": channel,
+                    "name": actor.name,
+                    "priority": actor.priority,
+                    "starting": actor.starting,
+                    "time": actor.time,
+                    "timeOffset": actor.timeOffset,
+                    "duration": actor.duration,
+                    "paused": actor.paused,
+                    "loop": actor.loop
+                });
+            }
+        }
+
+        return animations;
+
+    };
+
     threeObject.playPatchedAnimation = function (name, options) {
 
         if (!options) {
@@ -249,10 +274,6 @@ const patchObjectAnimation = function (threeObject) {
             options.callback = function (error) {
                 if (error) { console.error(error); }
             };
-        }
-
-        if (options.onAnimationStarted) {
-            options.onAnimationStarted();
         }
 
         if (options.fadings[0] > animation.duration * options.loop * 0.1) {
@@ -324,8 +345,11 @@ const patchObjectAnimation = function (threeObject) {
 
         let timeOffset = starting - Date.now() / 1000;
         let actor = {
+            "name": name,
             "listeners": [options.callback],
             "time": options.frame * animation.resample / animation.fps,
+            "timeOffset": timeOffset,
+            "priority": options.priority,
             "paused": options.paused,
             "starting": starting,
             "duration": animation.duration,
@@ -407,6 +431,10 @@ const patchObjectAnimation = function (threeObject) {
         }; 
 
         animationMixers.channels[options.channel].push(actor);
+
+        if (options.onAnimationStarted) {
+            options.onAnimationStarted();
+        }
 
     };
 
@@ -529,9 +557,6 @@ const patchObjectAnimation = function (threeObject) {
                 }
                 fadings = 1;
             }
-            // if (idBindings.id === "material#BPatch > .uniforms > .map2 > .value > .offset > .x") {
-            //     console.log(bindings);
-            // }
             
             idBindings.updater.update(values);
 

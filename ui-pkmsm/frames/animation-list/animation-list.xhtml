@@ -4,8 +4,8 @@
                     style:--section-header-size="24px"
                     prop:sections="${groups}" prop:cells-getter="{section.animations}">
     <tmpl:slot name="cell">
-        <ui-button class="cell" class:selected="${selected == cell.id}" title="${cell.tracks} tracks" @click="selectAnimation(cell)">
-            <span class="animation-id">${cell.id}</span><span class="comment">${getComment(cell.id)}</span><span class="duration">${fixed(cell.duration, 3)}s</span>
+        <ui-button class="cell" class:selected="${selected == cell.id}" class:playing="${playings[cell.id]}" class:system-clip="${isSystemClip(cell.id)}" title="${cell.id} (${fixed(cell.duration, 3)}s), ${cell.tracks} tracks" @click="selectAnimation(cell)">
+            <span class="usage">${getClipUsage(cell.id)}</span><span class="channel">${playings[cell.id].channel}</span><span class="priority">${playings[cell.id] ? 'Priority: ' + playings[cell.id].priority : ''}</span><span class="paused">${playings[cell.id].paused ? 'paused' : ''}</span>
         </ui-button>
     </tmpl:slot>
     <tmpl:slot name="section-header"><span class="group-name" class:empty="${!section.name}">${section.name ?: 'empty'}</span><span class="cell-count">${section.animations.length}</span></tmpl:slot>
