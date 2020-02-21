@@ -76,6 +76,21 @@ ui-collection-view {
                     color: $alpha($white(1), 0.5);
                 }
 
+                &.need-previous-clip .need-previous-clip {
+
+                    border-left-color: $alpha($white(1), 0.5);
+                    border-bottom-color: $alpha($white(1), 0.5);
+
+                    &:before {
+                        background-color: $alpha($white(1), 0.5);
+                    }
+
+                    &:after {
+                        border-left-color: $alpha($white(1), 0.5);
+                    }
+
+                }
+
             }
 
             &.system-clip {
