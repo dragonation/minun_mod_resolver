@@ -29,7 +29,7 @@ const Frame = function Frame(dom, filler) {
             size.width = parseInt(size.width);
             size.height = parseInt(size.height);
 
-            layerTargets = [];
+            let layerTargets = [];
 
             let looper = 0;
             while (looper < LAYERS + 1) {
@@ -68,8 +68,6 @@ const Frame = function Frame(dom, filler) {
 
             m3dScene[0].m3dCustomRender = function (renderer, scene, camera) {
 
-                let finalTarget = renderer.getRenderTarget();
-
                 let looper = 0;
                 while (looper < LAYERS + 1) {
                     switch (looper) {
@@ -107,7 +105,8 @@ const Frame = function Frame(dom, filler) {
                 finalMaterial.uniforms.ux.value = 1 / parseInt(size.width);
                 finalMaterial.uniforms.uy.value = 1 / parseInt(size.height);
 
-                renderer.setRenderTarget(finalTarget);
+                renderer.setRenderTarget(null);
+                renderer.clear();
                 renderer.render(finalScene, finalCamera);
 
             };
