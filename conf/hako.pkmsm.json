@@ -1,0 +1,25 @@
+{
+    "brainOptions": {
+        "shrinkingCodes": false,
+        "ui": "ui",
+        "apps": {
+            "pkmsm": "ui-pkmsm"
+        },
+        "pages": [ "index.html" ]
+    },
+    "playgrounds": {
+        "http": { "port": 12345 }
+    },
+    "kitties": {
+        "pkmsm": {
+            "path": "/path/to/pkmsm-a.0.9.4"
+        }
+    },
+    "resources": {
+        "ui-pkmsm": {
+            "playground": "http",
+            "innerPath": "ui-pkmsm",
+            "outerPath": "/~pkmsm"
+        }
+    }
+}
