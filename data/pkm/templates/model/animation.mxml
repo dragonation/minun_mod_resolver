@@ -1,4 +1,4 @@
-<m3d-clip id="${animation.name}" duration="${f16(animation.duration)}" times="@animations/${animation.name}/times.f32.bin"><tmpl:map list="keys(animation.tracks.materials ?: {})" item-name="material"><tmpl:map list="keys(animation.tracks.materials[material])" item-name="path">
+<m3d-clip id="${animation.name}" duration="${f16(animation.duration)}" times="@animations/${animation.name}/times.f32.bin" fps="24"><tmpl:map list="keys(animation.tracks.materials ?: {})" item-name="material"><tmpl:map list="keys(animation.tracks.materials[material])" item-name="path">
     <m3d-track type="${animation.tracks.materials[material][path].type}" constant="${animation.tracks.materials[material][path].constant ? 'yes' : 'no'}" target-type="material" target="${material}.${path}"
                times="@animations/${animation.name}/times.f32.bin"
                values="@animations/${animation.name}/materials/${material}/${path}.f32.bin"/></tmpl:map></tmpl:map><tmpl:map list="keys(animation.tracks.meshes ?: {})" item-name="mesh"><tmpl:map list="keys(animation.tracks.meshes[mesh])" item-name="path">

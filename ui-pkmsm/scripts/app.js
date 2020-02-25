@@ -435,7 +435,6 @@ App.prototype.openAnimationController = function (id, from) {
         }
     }
 
-
     frame[0].frame.updateAnimationState(
         viewer.getPlayingAnimationSeries(),
         viewer.getPlayingAnimations(),

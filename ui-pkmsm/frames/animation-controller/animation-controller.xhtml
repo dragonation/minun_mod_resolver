@@ -7,12 +7,12 @@
     </div>
     <div class="channel channel-time">
         <div class="channel-name">time</div>
-        <ui-ruler class="frames" unit="s" unit-scale="${1 / 24}" unit-fixed="1" base="24" max="${duration * 24 + 11}" @click="switchToFrame(event)"/>
+        <ui-ruler class="frames" unit="s" unit-scale="${1 / 24}" unit-fixed="1" base="24" max="${duration * 24 + 11}" @mousedown="stickAnimationIfNeeded(event)" @mousemove="stickAnimationIfNeeded(event)"/>
     </div>
-    <tmpl:map list="keys(channels)" item-name="channel">
+    <tmpl:map list="keys(channels)" item-name="channel" id-getter="{channel}">
         <div class="channel">
             <div class="channel-name">${channel}</div>
-            <tmpl:map list="channels[channel].clips" item-name="clip">
+            <tmpl:map list="channels[channel].clips" item-name="clip" id-getter="{index}">
                 <div class="clip" 
                      class:loop="${index == channels[channel].clips.length - 1}" 
                      class:playing="${channels[channel].playing.name == clip.id}"

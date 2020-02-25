@@ -27,6 +27,7 @@
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
         margin-left: -3px;
+        font-weight: bold;
 
         .time-indicator-label-unit,
         .cursor-indicator-label-unit {

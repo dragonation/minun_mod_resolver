@@ -192,6 +192,21 @@ const patchObjectAnimation = function (threeObject) {
 
     };
 
+    threeObject.clearPatchedPlayingAnimations = function () {
+
+        for (let channel in animationMixers.channels) {
+            let actors = animationMixers.channels[channel].slice(0);
+            for (let actor of actors) {
+                actor.stop();
+            }
+        }
+
+    };
+
+    threeObject.updatePatchedPlayingAnimationsStates = function () {
+        threeObject.patchedAnimationTicker(0);
+    };
+
     threeObject.getPlayingPatchedAnimations = function () {
 
         let animations = [];
@@ -291,8 +306,7 @@ const patchObjectAnimation = function (threeObject) {
             options.fadings[2] = animation.duration * options.loop * 0.1;
         }
 
-        let starting = animationMixers.time;
-
+        let starting = animationMixers.time - options.frame / animation.fps;
         if (animationMixers.channels[options.channel]) {
             animationMixers.channels[options.channel].forEach((channel) => {
                 channel.fadeOut(options.fadings[1]);
@@ -318,7 +332,7 @@ const patchObjectAnimation = function (threeObject) {
                 "id": updater.selector,
                 "constant": track.constant,
                 "priority": options.priority,
-                "frame": Math.round(options.frame * animation.resample),
+                "frame": options.frame,
                 "passed": options.frame * animation.resample / animation.fps,
                 "paused": options.paused,
                 "times": animation.times,
@@ -359,7 +373,7 @@ const patchObjectAnimation = function (threeObject) {
             "listeners": [options.callback],
             "time": options.frame * animation.resample / animation.fps,
             "timeOffset": timeOffset,
-            "frame": Math.round(options.frame * animation.resample),
+            "frame": options.frame,
             "fps": animation.resample * animation.fps,
             "priority": options.priority,
             "paused": options.paused,
@@ -516,7 +530,13 @@ const patchObjectAnimation = function (threeObject) {
                 }
 
                 if (binding.actor && actors[binding.actor]) {
-                    actors[binding.actor].frame = Math.round(binding.times[binding.frame] * actors[binding.actor].fps);
+                    let time = 0;
+                    if (binding.frame >= binding.times.length) {
+                        time = binding.times[binding.times.length - 1];
+                    } else if (binding.frame > 0) {
+                        time = binding.times[binding.frame];
+                    }
+                    actors[binding.actor].frame = Math.round(time * actors[binding.actor].fps);
                     delete actors[binding.actor];
                 }
 

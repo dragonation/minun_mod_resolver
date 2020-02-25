@@ -444,8 +444,14 @@ module.exports = {
         "playPausedM3DClips": function () {
             this.m3dObject.playPausedPatchedAnimations();
         },
+        "clearPlayingM3DClips": function () {
+            this.m3dObject.clearPatchedPlayingAnimations();
+        },
         "getPlayingM3DClips": function () {
             return getPlayingAnimations(this);
+        },
+        "updatePlayingM3DClipStates": function () {
+            this.m3dObject.updatePatchedPlayingAnimationsStates();
         }
     }
 };

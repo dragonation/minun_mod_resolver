@@ -131,6 +131,23 @@ Frame.prototype.getTargetIDs = function () {
 
 };
 
+Frame.prototype.clearAnimations = function () {
+
+    this.filler.query("#pokemon-model")[0].clearPlayingM3DClips();
+
+    delete this.playingAnimationSeries;
+    delete this.playVersion;
+
+    this.playPausedAnimations();
+
+};
+
+Frame.prototype.updateAnimation = function () {
+
+    this.filler.query("#pokemon-model")[0].updatePlayingM3DClipStates();
+
+};
+
 Frame.prototype.playAnimation = function (animationID, options) {
 
     this.filler.query("#pokemon-model")[0].playM3DClip(animationID, Object.assign({}, options, {
@@ -168,10 +185,15 @@ Frame.prototype.playAnimationSeries = function (series, options) {
         "options": Object.assign({}, options)
     };
 
-    let play = (index) => {
+    let play = (index, frame) => {
+
+        if (!frame) {
+            frame = 0;
+        }
 
         let newOptions = Object.assign({}, options, {
             "loop": null,
+            "frame": frame,
             "onAnimationEnded": () => {
                 if (playVersion !== this.playVersion) {
                     return;
@@ -210,7 +232,25 @@ Frame.prototype.playAnimationSeries = function (series, options) {
 
     };
 
-    play(0);
+    let animations = Object.create(null);
+    for (let clip of series) {
+        animations[clip] = parseFloat(this.filler.query(`m3d-clip#${clip}`).attr("duration"));
+    }
+
+    let lastClip = 0;
+    let frame = 0;
+    if (options.time) {
+        let clipTime = 0;
+        while ((lastClip < series.length) &&
+               (clipTime + animations[series[lastClip]] < options.time)) {
+            clipTime += animations[series[lastClip]];
+            ++lastClip;
+        }
+        let fps = 24;
+        frame = Math.round((options.time - clipTime) * fps);
+    }
+
+    play(lastClip, frame);
 
 };
 

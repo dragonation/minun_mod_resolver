@@ -8,7 +8,7 @@ const prepareClip = function (dom) {
 
         dom.m3dClip.getPatchedAnimation = function () {
 
-            let fps = $(dom.m3dClip).attr("fps");
+            let fps = $(dom).attr("fps");
             if (fps) { 
                 fps = parseInt(fps);
             }
