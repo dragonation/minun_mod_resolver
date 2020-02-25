@@ -234,7 +234,8 @@ Frame.prototype.playAnimationSeries = function (series, options) {
 
     let animations = Object.create(null);
     for (let clip of series) {
-        animations[clip] = parseFloat(this.filler.query(`m3d-clip#${clip}`).attr("duration"));
+        let duration = parseFloat(this.filler.query(`m3d-clip#${clip}`).attr("duration"));
+        animations[clip] = Math.round(duration * 24) / 24;
     }
 
     let lastClip = 0;
@@ -242,7 +243,7 @@ Frame.prototype.playAnimationSeries = function (series, options) {
     if (options.time) {
         let clipTime = 0;
         while ((lastClip < series.length) &&
-               (clipTime + animations[series[lastClip]] < options.time)) {
+               (clipTime + animations[series[lastClip]] <= options.time)) {
             clipTime += animations[series[lastClip]];
             ++lastClip;
         }

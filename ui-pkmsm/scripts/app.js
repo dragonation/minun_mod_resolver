@@ -405,7 +405,7 @@ App.prototype.openAnimationController = function (id, from) {
 
     let filename = id.split("#")[0].split("/").slice(-1)[0];
     let frame = $("<ui-diagram-frame>").attr({
-        "caption": `Controller of “${filename}”`,
+        "caption": `Animation Controller of “${filename}”`,
         "resizable": "yes",
         "wire-id": id + "/animation-controller"
     }).css({
