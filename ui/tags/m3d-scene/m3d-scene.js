@@ -532,6 +532,15 @@ module.exports = {
                 this.m3dTextureListeners[name] = [];
             }
             this.m3dTextureListeners[name].push(listener);
+        },
+        "snapshotAsDataURL": function () {
+
+            if (!this.m3dRenderer) {
+                return;
+            }
+
+            return this.m3dRenderer.domElement.toDataURL();
+
         }
     }
 };

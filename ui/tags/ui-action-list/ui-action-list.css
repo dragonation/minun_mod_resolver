@@ -111,4 +111,31 @@
         color: #333;
         background-color: $alpha($white(0), 0.07);
     }
+
+}
+
+.separator {
+
+    padding: 0 10px;
+    height: 30px;
+    width: calc(100% - 8px);
+    margin: 0 4px;
+    border-radius: 3px;
+    text-shadow: 0 0 2px #fff;
+
+    color: #666;
+    white-space: nowrap;
+    position: relative;
+ 
+    &:before {
+        display: block;
+        position: absolute;
+        width: 80%;
+        left: 10%;
+        content: '';
+        height: 1dpx;
+        top: 50%;
+        background-color: $alpha($white(0), 0.1);
+    }
+
 }

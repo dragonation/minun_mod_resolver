@@ -319,6 +319,43 @@ Frame.functors = {
         window.open(`/~pkmsm/model/save/${this.filler.parameters.id}`);
     },
 
+    "savePNGSnapshot": function () {
+
+        let m3dScene = this.filler.query("m3d-scene")[0];
+
+        let dataURL = m3dScene.snapshotAsDataURL();
+
+        let width = parseInt($(m3dScene).css("width"));
+        let height = parseInt($(m3dScene).css("height"));
+
+        let canvas = $("<canvas>").attr({
+            "width": width,
+            "height": height,
+        })[0];
+
+        let context = canvas.getContext("2d");
+        let image = new Image();
+        image.onload = () => {
+            context.drawImage(image, 0, 0, 2 * width, 2 * height, 0, 0, width, height);
+            $.ajax(`/~pkmsm/model/export/${this.filler.parameters.id}.png`, {
+                "data": canvas.toDataURL().split(",").slice(1).join(","),
+                "contentType": "text/base64",
+                "method": "POST",
+                "success": (result) => {
+                    window.open(result, "__blank");
+                },
+                "error": () => {
+                    console.error("Failed to save snapshot image");
+                }
+            });
+        };
+        image.onerror = (error) => {
+            console.error(error);
+        };
+        image.src = dataURL;
+
+    },
+
     "listResources": function () {
         $.app(this.dom).openResourceList(this.filler.parameters.id, this);
     },

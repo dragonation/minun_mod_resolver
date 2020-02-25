@@ -1,7 +1,12 @@
 <ui-scroll-view id="container" scroll-y="yes" scroll-indicator="no">
     <div style:width="100%" style:height="var(--menu-edge-padding)"></div>
     <tmpl:map list="tag.actions ?: []" id-getter="{item.value}">
-        <ui-button class="item" value="${item.value}" class:selected="${item.value == attributes.value}" @action="takeAction(item)">${item.text}</ui-button>
+        <tmpl:if test="item.text == '-'">
+            <div class="separator"></div>
+        </tmpl:if>
+        <tmpl:if test="item.text != '-'">
+            <ui-button class="item" value="${item.value}" class:selected="${item.value == attributes.value}" @action="takeAction(item)">${item.text}</ui-button>
+        </tmpl:if>
     </tmpl:map>
     <tmpl:if test="(!tag.actions) || (tag.actions.length == 0)">
         <div class="item empty">Empty</div>
