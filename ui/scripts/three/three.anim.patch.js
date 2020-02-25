@@ -9,7 +9,9 @@ const patchObjectAnimation = function (threeObject) {
         "bindings": Object.create(null),
         "channels": Object.create(null),
         "origins": Object.create(null),
-        "updaters": Object.create(null)
+        "updaters": Object.create(null),
+        "pausedTime": 0,
+        "pausedOffset": 0
     };
 
     const resolveUpdater = function (subject, name, path) {
@@ -202,8 +204,8 @@ const patchObjectAnimation = function (threeObject) {
                     "name": actor.name,
                     "priority": actor.priority,
                     "starting": actor.starting,
-                    "time": actor.time,
-                    "timeOffset": actor.timeOffset,
+                    "frame": actor.frame,
+                    "time": actor.frame / actor.fps,
                     "duration": actor.duration,
                     "paused": actor.paused,
                     "loop": actor.loop
@@ -297,6 +299,7 @@ const patchObjectAnimation = function (threeObject) {
             });
         }
 
+        let actorID = $.uuid();
         let bindings = [];
 
         animation.tracks.forEach((track) => {
@@ -325,6 +328,7 @@ const patchObjectAnimation = function (threeObject) {
                 "action": name,
                 "loop": options.loop,
                 "weight": options.weight,
+                "actor": actorID,
                 "fadings": options.fadings.slice(0)
             };
 
@@ -350,10 +354,13 @@ const patchObjectAnimation = function (threeObject) {
 
         let timeOffset = starting - Date.now() / 1000;
         let actor = {
+            "id": actorID,
             "name": name,
             "listeners": [options.callback],
             "time": options.frame * animation.resample / animation.fps,
             "timeOffset": timeOffset,
+            "frame": Math.round(options.frame * animation.resample),
+            "fps": animation.resample * animation.fps,
             "priority": options.priority,
             "paused": options.paused,
             "starting": starting,
@@ -443,9 +450,41 @@ const patchObjectAnimation = function (threeObject) {
 
     };
 
+    threeObject.pausePatchedAnimations = function () {
+
+        if (animationMixers.pausedTime) {
+            return;
+        }
+
+        animationMixers.pausedTime = Date.now();
+
+    };
+
+    threeObject.playPausedPatchedAnimations = function () {
+
+        if (!animationMixers.pausedTime) {
+            return;
+        }
+
+        animationMixers.pausedOffset += Date.now() - animationMixers.pausedTime;
+        animationMixers.pausedTime = 0;
+
+    };
+
     threeObject.patchedAnimationTicker = function (delta) {
 
+        if (animationMixers.pausedTime) {
+            return;
+        }
+
         let newTime = animationMixers.time + delta;
+
+        let actors = Object.create(null);
+        for (let channel in animationMixers.channels) {
+            for (let actor of animationMixers.channels[channel]) {
+                actors[actor.id] = actor;
+            }
+        }
 
         Object.keys(animationMixers.bindings).forEach((id) => {
 
@@ -474,6 +513,11 @@ const patchObjectAnimation = function (threeObject) {
                            (binding.times[binding.frame + 1] < passed)) {
                        ++binding.frame;
                     }
+                }
+
+                if (binding.actor && actors[binding.actor]) {
+                    actors[binding.actor].frame = Math.round(binding.times[binding.frame] * actors[binding.actor].fps);
+                    delete actors[binding.actor];
                 }
 
                 // update fading

@@ -105,6 +105,13 @@ functors["seq"] = function (template, call, parameters, options, start, end, ste
         }
     }
 
+    if ((start < end) && (step <= 0)) {
+        return [];
+    }
+    if ((start > end) && (step >= 0)) {
+        return [];
+    }
+
     var list = [];
 
     var looper = start;

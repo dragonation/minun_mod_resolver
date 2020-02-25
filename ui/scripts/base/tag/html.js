@@ -2,6 +2,8 @@
 
     const path = require("path");
 
+    const titleNamespaceURI = "http://mewchan.com/proj/query/ui/title";
+
     $.tmpl.attribute[$.tmpl.xhtmlNamespaceURI] = Object.create(null);
 
     $.tmpl.attribute[$.tmpl.xhtmlNamespaceURI][""] = Object.create(null);
@@ -140,6 +142,49 @@
 
     };
 
+    $.tmpl.attribute[$.tmpl.xhtmlNamespaceURI][""]["title"] = function (element, attribute, parameters, options, animations, updaters, actions, caches) {
+
+        if (attribute.template) {
+            let lastValue = null;
+            let lastTriggerValue = null;
+            let dependencies = null;
+            let triggerDependencies = null;
+            let updater = function (parameters, animations, actions) {
+                dependencies = $.tmpl.deps(attribute, options, dependencies);
+                let triggerChanged = false;
+                if (attribute.trigger) {
+                    triggerDependencies = $.tmpl.deps(attribute.trigger, options, triggerDependencies);
+                    triggerChanged = $.format.tmpl.deps.changed(triggerDependencies, parameters, options);
+                }
+                let changed = $.format.tmpl.deps.changed(dependencies, parameters, options);
+                if ((!changed) && (!triggerChanged)) {
+                    return;
+                }
+                
+                let value = $.format.parsers[options.textParser].parseTemplate(attribute.template, parameters, options);
+                let triggerValue = null;
+                if (attribute.trigger) {
+                    triggerValue = $.format.tmpl(attribute.trigger.template.parts[0].call, parameters, options);
+                }
+                if ((lastValue !== value) || (lastTriggerValue !== triggerValue)) {
+                    lastValue = value;
+                    lastTriggerValue = triggerValue;
+                    actions.push(function () {
+                        if (element.getAttributeNS(titleNamespaceURI, "content") !== value) {
+                            element.setAttributeNS(titleNamespaceURI, "content", value);
+                        }
+                    });
+                }
+            };
+            updaters.push(updater);
+            updater(parameters, animations, actions);
+        } else {
+            let value = attribute.content;
+            element.setAttributeNS(titleNamespaceURI, "content", value);
+        }
+
+    };
+ 
     if (!$.tmpl.attribute["*"][$.tmpl.classNamespaceURI]) {
         $.tmpl.attribute["*"][$.tmpl.classNamespaceURI] = {};
     }

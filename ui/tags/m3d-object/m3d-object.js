@@ -438,6 +438,12 @@ module.exports = {
         "playM3DClip": function (clip, options) {
             playAnimation(this, clip, options);
         },
+        "pauseM3DClips": function () {
+            this.m3dObject.pausePatchedAnimations();
+        },
+        "playPausedM3DClips": function () {
+            this.m3dObject.playPausedPatchedAnimations();
+        },
         "getPlayingM3DClips": function () {
             return getPlayingAnimations(this);
         }

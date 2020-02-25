@@ -1,0 +1,170 @@
+.time-indicator,
+.cursor-indicator {
+
+    $color: #ccc;
+    font-size: 8px;
+    font-weight: bold;
+    width: calc(var(--unit-size, 3px) + 1dpx);
+    line-height: calc(20px - 1dpx);
+    border-left: dashed 1dpx $alpha($color, 0.8);
+    margin-left: -1dpx;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    z-index: 1;
+
+    --unit-size: 3px;
+
+    .time-indicator-label,
+    .cursor-indicator-label {
+
+        white-space: nowrap;
+        background-image: linear-gradient(to right, $color 3px, $alpha($color, 0.5) 80%, $alpha($color, 0));
+        color: $white(1);
+        padding: 0 8px 0 3px;
+        border-left: solid 1dpx $color;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        margin-left: -3px;
+
+        .time-indicator-label-unit,
+        .cursor-indicator-label-unit {
+            font-style: italic;
+        }
+
+    }
+
+}
+
+#container .time-indicator {
+    border-left: solid 1dpx $alpha(#0d8ef1, 0.8);
+    background-image: linear-gradient(to right, $alpha(#0d8ef1, 0.5) 0%, $alpha(#0d8ef1, 0) 80%);
+    left: calc(80px + var(--time) * var(--unit-size) * 24);
+    .time-indicator-label {
+        display: none;
+        border-left: solid 1dpx #0d8ef1;
+        background-image: linear-gradient(to right, #0d8ef1 3px, $alpha(#0d8ef1, 0.5) 80%, $alpha(#0d8ef1, 0));
+    }
+}
+
+#container .cursor-indicator {
+    display: none;
+    left: calc(80px + var(--cursor, 0) * var(--unit-size) * 24);
+    .cursor-indicator-label {
+        text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    }
+}
+
+#container.cursor-visible .cursor-indicator {
+    display: block;
+}
+
+.channel {
+
+    display: flex;
+    height: 30px;
+    line-height: calc(30px - 1dpx);
+    border-bottom: solid 1dpx rgba(0, 0, 0, 0.1);
+    font-size: 10px;
+    width: calc(80px + var(--unit-size) * (var(--max-duration, 0) + 0.5) * 24);
+    min-width: 100%;
+
+    --unit-size: 3px;
+
+    &.channel-time {
+
+        background-color: rgba(0, 0, 0, 0.03);
+        height: 20px;
+        line-height: calc(20px - 1dpx);
+
+        ui-ruler {
+            height: 20px;
+        }
+
+    }
+
+    .channel-name {
+        width: 80px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 0;
+        flex-grow: 0;
+        padding: 0 6px;
+        text-align: right;
+        text-transform: uppercase;
+        border-right: solid 1dpx rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.05);
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.3);
+    }
+
+    .clip {
+
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-left: solid 2px rgba(0, 0, 0, 0.06);
+        text-indent: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-right: solid 1dpx rgba(0, 0, 0, 0.1);
+        white-space: nowrap;
+        position: relative;
+
+        width: calc(var(--unit-size) * var(--duration, 0) * 24);
+
+        &.loop {
+            border-left-color: $alpha(#ff6c25, 0.1);
+            background-color: $alpha(#ff6c25, 0.05);
+        }
+
+        &.playing {
+
+            color: #0d8ef1;
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: calc(var(--clip-time) * var(--unit-size) * 24 - 2px);
+                top: 0;
+                width: 1dpx;
+                height: 100%;
+                background-color: #0d8ef1;
+            }
+
+        }
+
+    }
+    
+}
+
+#container {
+    height: calc(100% - 20px);
+}
+
+#buttons {
+
+    height: 20px;
+    border-top: solid 1dpx rgba(0, 0, 0, 0.1);
+    display: flex;
+
+    ui-button {
+
+        width: 20px;
+        height: 20px;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        img {
+            width: 16px;
+            height: 16px;
+            margin: 2px;
+        }
+
+    }
+
+}

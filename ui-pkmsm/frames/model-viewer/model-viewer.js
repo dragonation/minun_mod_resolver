@@ -124,6 +124,7 @@ Frame.prototype.getTargetIDs = function () {
     let ids = {
         [`${id}/resource-list`]: [scene],
         [`${id}/animation-list`]: [scene],
+        [`${id}/animation-controller`]: [scene],
     };
 
     return ids;
@@ -162,26 +163,66 @@ Frame.prototype.playAnimationSeries = function (series, options) {
     let playVersion = $.uuid();
     this.playVersion = playVersion;
 
-    this.playingAnimationSeries = series.slice(0);
+    this.playingAnimationSeries = {
+        "clips": series.slice(0),
+        "options": Object.assign({}, options)
+    };
 
     let play = (index) => {
-        this.playAnimation(series[index], Object.assign({}, options, {
+
+        let newOptions = Object.assign({}, options, {
+            "loop": null,
             "onAnimationEnded": () => {
                 if (playVersion !== this.playVersion) {
                     return;
                 }
-                if (index === series.length - 1) {
+                play(index + 1);
+            }
+        });
+
+        switch (options.loop) {
+            case true: 
+            case "repeat": { 
+                if (index === series.length) {
+                    index = 0;
+                }
+                break; 
+            }
+            case "last": { 
+                if (index === series.length) {
+                    --index;
+                }
+                break; 
+            }
+            case false: 
+            case "no": { 
+                if (index === series.length) {
                     if (options.onAnimationEnded) {
                         options.onAnimationEnded();
                     }
-                } else {
-                    play(index + 1);
+                    return;
                 }
+                break; 
             }
-        }));
+        }
+
+        this.playAnimation(series[index], newOptions);
+
     };
 
     play(0);
+
+};
+
+Frame.prototype.pauseAnimations = function () {
+
+    this.filler.query("#pokemon-model")[0].pauseM3DClips();
+
+};
+
+Frame.prototype.playPausedAnimations = function () {
+
+    this.filler.query("#pokemon-model")[0].playPausedM3DClips();
 
 };
 
@@ -243,6 +284,10 @@ Frame.functors = {
 
     "listAnimations": function () {
         $.app(this.dom).openAnimationList(this.filler.parameters.id, this);
+    },
+
+    "showAnimationController": function () {
+        $.app(this.dom).openAnimationController(this.filler.parameters.id, this);
     },
 
     "resizeRenderingTarget": function (event) {

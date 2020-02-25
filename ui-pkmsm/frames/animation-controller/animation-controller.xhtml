@@ -1,0 +1,31 @@
+<ui-scroll-view id="container" scroll-y="yes" scroll-x="yes" style:--max-duration="${duration}" style:--time="${time}" style:--cursor="${cursor}" class:cursor-visible="${cursorVisible}" @mouseleave="hideCursor()" @mousemove="showCursor(event)">
+    <div class="time-indicator">
+        <span class="time-indicator-label">${fixed(time ?: 0, 2)}<span class="time-indicator-label-unit">s</span></span>
+    </div>
+    <div class="cursor-indicator">
+        <span class="cursor-indicator-label">${fixed(cursor ?: 0, 2)}<span class="cursor-indicator-label-unit">s</span></span>
+    </div>
+    <div class="channel channel-time">
+        <div class="channel-name">time</div>
+        <ui-ruler class="frames" unit="s" unit-scale="${1 / 24}" unit-fixed="1" base="24" max="${duration * 24 + 11}" @click="switchToFrame(event)"/>
+    </div>
+    <tmpl:map list="keys(channels)" item-name="channel">
+        <div class="channel">
+            <div class="channel-name">${channel}</div>
+            <tmpl:map list="channels[channel].clips" item-name="clip">
+                <div class="clip" 
+                     class:loop="${index == channels[channel].clips.length - 1}" 
+                     class:playing="${channels[channel].playing.name == clip.id}"
+                     style:--clip-time="${channels[channel].playing.time}"
+                     style:--duration="${clip.duration}" 
+                     title="${getClipUsage(clip.id)}, ${clip.duration}s" 
+                     @click="switchToFrame(event)"><span>${getClipUsage(clip.id)}</span></div>
+            </tmpl:map>
+        </div>
+    </tmpl:map>
+</ui-scroll-view>
+<div id="buttons">
+    <ui-button @action="replayAnimations()"><img src="/res/actions/replay.svg"/></ui-button>
+    <ui-button @action="playPausedAnimations()"><img src="/res/actions/play.svg"/></ui-button>
+    <ui-button @action="pauseAnimations()"><img src="/res/actions/pause.svg"/></ui-button>
+</div>

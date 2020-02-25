@@ -230,14 +230,11 @@ App.prototype.openModel = function (id, from) {
                                             }
                                         }
                                         if (animationSet["FightingAction1"]) {
-                                            m3dObject[0].playM3DClip("FightingAction1", {
+                                            frame[0].frame.playAnimationSeries(["FightingAction1"], {
                                                 "channel": "action",
                                                 "priority": 1,
                                                 "fading": 0,
-                                                "loop": Infinity,
-                                                "onAnimationEnded": () => {
-                                                    frame[0].frame.trigAnimationStatesChanges();
-                                                }
+                                                "loop": "last"
                                             });
                                         }
                                         let paused = id.split("-")[1] === "327";
@@ -251,10 +248,7 @@ App.prototype.openModel = function (id, from) {
                                                     "fading": 0,
                                                     "paused": paused,
                                                     "frame": pausedFrame,
-                                                    "loop": Infinity,
-                                                    "onAnimationEnded": () => {
-                                                        frame[0].frame.trigAnimationStatesChanges();
-                                                    }
+                                                    "loop": Infinity
                                                 });
                                             }
                                         }
@@ -386,14 +380,94 @@ App.prototype.openModel = function (id, from) {
 
 };
 
+App.prototype.openAnimationController = function (id, from) {
+
+    if (!from.animations) {
+        console.error("Animations not available"); return;
+    }
+
+    let modelID = id.split("/")[0];
+
+    let viewer = this.filler.query("#diagram").children("ui-diagram-frame").filter((index, dom) => {
+        return $(dom).attr("wire-id") === modelID;
+    })[0];
+
+    if (!viewer) {
+        viewer = from;
+    } else {
+        viewer = viewer.frame;
+    }
+    let size = {
+        "width": $.dom.getDevicePixels(480),
+        "height": $.dom.getDevicePixels(160)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("#")[0].split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": `Controller of “${filename}”`,
+        "resizable": "yes",
+        "wire-id": id + "/animation-controller"
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~pkmsm/frames/animation-controller/animation-controller", {
+        "id": id,
+    });
+
+    let animations = Object.create(null);
+    for (let animation of viewer.animations) {
+        if (animation.localName && 
+            (animation.localName.toLowerCase() === "m3d-clip")) {
+            let id = $(animation).attr("id");
+            let group = id.split("Action")[0];
+            let duration = parseFloat($(animation).attr("duration"));
+            animations[id] = {
+                "id": id,
+                "group": group,
+                "duration": duration,
+                "tracks": $(animation).children("m3d-track").length
+            };
+        }
+    }
+
+
+    frame[0].frame.updateAnimationState(
+        viewer.getPlayingAnimationSeries(),
+        viewer.getPlayingAnimations(),
+        animations
+    );
+
+    this.filler.query("#diagram").append(frame);
+
+    frame[0].bringToFirst();
+
+};
+
 App.prototype.openAnimationList = function (id, from) {
 
     if (!from.animations) {
         console.error("Animations not available"); return;
     }
 
+    let modelID = id.split("/")[0];
+
+    let viewer = this.filler.query("#diagram").children("ui-diagram-frame").filter((index, dom) => {
+        return $(dom).attr("wire-id") === modelID;
+    })[0];
+
+    if (!viewer) {
+        viewer = from;
+    } else {
+        viewer = viewer.frame;
+    }
+
     let animations = Object.create(null);
-    for (let animation of from.animations) {
+    for (let animation of viewer.animations) {
         if (animation.localName && 
             (animation.localName.toLowerCase() === "m3d-clip")) {
             let id = $(animation).attr("id");

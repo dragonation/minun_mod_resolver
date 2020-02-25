@@ -79,7 +79,7 @@ void main() {
     float z = clamp(getEdge(layer, fragUV), 0.0, 1.0);
     float z2 = clamp(getEdge(layer2, fragUV), 0.0, 1.0);
     float z3 = clamp(getEdge(layer3, fragUV), 0.0, 1.0);
-    float edge = clamp((z + z2 * 0.25 + z3 * 0.25), 0.0, 1.0);
+    float edge = clamp((z + z2 * 0.25 + z3 * 0.25), 0.0, 1.0) * 0.6;
     vec4 pixel = texture2D(layer4, fragUV);
     if (edge > 0.0) {
         pixel.rgb = pixel.rgb * (1.0 - edge);

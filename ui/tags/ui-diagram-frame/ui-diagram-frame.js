@@ -1,5 +1,17 @@
 module.exports = {
     "attributes": ["caption", "resizable", "wire-id", "actions"],
+    "listeners": {
+        "onconnected": function () {
+            if (this.frame.onFrameConnected) {
+                this.frame.onFrameConnected();
+            }
+        },
+        "ondisconnected": function () {
+            if (this.frame.onFrameDisconnected) {
+                this.frame.onFrameDisconnected();
+            }
+        }
+    },
     "methods": {
         "bringToFirst": function () {
             let parent = $(this).parent()[0];

@@ -1,0 +1,8 @@
+<div class="container">
+    <tmpl:map list="seq((attributes.min ?: 0), (attributes.max ?: 100), (attributes.step ?: 1)" id-getter="{index}">
+        <div class="unit" 
+             class:unit-half-base="(item % ((attributes.base ?: 10) / 2)) == 0" 
+             class:unit-base="(item % (attributes.base ?: 10)) == 0">${(item % (attributes.base ?: 10)) == 0 ? fixed(item * (attributes['unit-scale'] ?: 1), (attributes['unit-fixed'] ?: 2)) : ''}<span class="label-unit">${(item % (attributes.base ?: 10)) == 0 ? attributes.unit : ''}</span></div>
+    </tmpl:map>
+    <!-- <div class="indicator"></div> -->
+</div>
