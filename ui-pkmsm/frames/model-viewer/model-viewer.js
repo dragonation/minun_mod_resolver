@@ -232,11 +232,15 @@ Frame.prototype.playAnimationSeries = function (series, options) {
 
     };
 
+    let allDuration = 0;
     let animations = Object.create(null);
     for (let clip of series) {
         let duration = parseFloat(this.filler.query(`m3d-clip#${clip}`).attr("duration"));
         animations[clip] = Math.round(duration * 24) / 24;
+        allDuration += animations[clip];
     }
+
+    this.playingAnimationSeries.duration = allDuration; 
 
     let lastClip = 0;
     let frame = 0;
@@ -319,6 +323,77 @@ Frame.functors = {
         window.open(`/~pkmsm/model/save/${this.filler.parameters.id}`);
     },
 
+    "saveWebMVideo": function () {
+
+        let m3dScene = this.filler.query("m3d-scene")[0]; 
+        m3dScene.recordVideo((start, end) => {
+
+            let series = this.getPlayingAnimationSeries();
+            let playings = this.getPlayingAnimations();
+
+            this.clearAnimations();
+            this.playPausedAnimations();
+
+            for (let playing of playings) {
+                if (playing.channel !== "action") {
+                    let paused = false;
+                    let frame = 0;
+                    if ((playing.channel.split("-")[0] === "state") && 
+                        ($(this.dom).attr("wire-id").split("-")[1] === "327")) {
+                        paused = true;
+                        frame = 128;
+                    }
+                    this.playAnimation(playing.name, {
+                        "channel": playing.channel,
+                        "priority": playing.priority,
+                        "fading": 0,
+                        "paused": paused,
+                        "frame": frame,
+                        "loop": Infinity
+                    });
+                }
+            }
+
+            let clips = series.clips.slice(0);
+            if (clips.length > 1) {
+                clips = clips.slice(0, -1);
+            }
+
+            start();
+
+            this.playAnimationSeries(clips, {
+                "channel": series.options.channel,
+                "priority": series.options.priority,
+                "fading": 0,
+                "loop": "no",
+                "onAnimationEnded": () => {
+                    // 24fps, delay one frame to complete animation
+                    $.delay(1000 / 24, () => {
+                        end((error, blob) => {
+                            let a = $("<a>").attr({
+                                "href": URL.createObjectURL(blob),
+                                "download": `${this.filler.parameters.id}.webm`,
+                            }).css({
+                                "display": "none"
+                            });
+                            $("body").append(a);
+                            a[0].click();
+                            a.detach();
+                            this.playAnimationSeries(clips, {
+                                "channel": series.options.channel,
+                                "priority": series.options.priority,
+                                "fading": 0,
+                                "loop": "last"
+                            });
+                        });
+                    });
+                }
+            });
+
+        });
+
+    },
+
     "savePNGSnapshot": function () {
 
         let m3dScene = this.filler.query("m3d-scene")[0];
@@ -336,18 +411,22 @@ Frame.functors = {
         let context = canvas.getContext("2d");
         let image = new Image();
         image.onload = () => {
+
             context.drawImage(image, 0, 0, 2 * width, 2 * height, 0, 0, width, height);
-            $.ajax(`/~pkmsm/model/export/${this.filler.parameters.id}.png`, {
-                "data": canvas.toDataURL().split(",").slice(1).join(","),
-                "contentType": "text/base64",
-                "method": "POST",
-                "success": (result) => {
-                    window.open(result, "__blank");
-                },
-                "error": () => {
-                    console.error("Failed to save snapshot image");
-                }
+
+            let a = $("<a>").attr({
+                "href": canvas.toDataURL(),
+                "download": `${this.filler.parameters.id}.png`,
+            }).css({
+                "display": "none"
             });
+
+            $("body").append(a);
+
+            a[0].click();
+
+            a.detach();
+
         };
         image.onerror = (error) => {
             console.error(error);

@@ -534,12 +534,50 @@ module.exports = {
             this.m3dTextureListeners[name].push(listener);
         },
         "snapshotAsDataURL": function () {
+            if (!this.m3dRenderer) {
+                return;
+            }
+            return this.m3dRenderer.domElement.toDataURL();
+        },
+        "recordVideo": function (action) {
 
             if (!this.m3dRenderer) {
                 return;
             }
 
-            return this.m3dRenderer.domElement.toDataURL();
+            const chunks = new Set();
+
+            const mediaStream = this.m3dRenderer.domElement.captureStream(24);
+
+            const mediaRecorder = new MediaRecorder(mediaStream, {
+                "videoBitsPerSecond": 8500000
+            });
+
+            mediaRecorder.ondataavailable = (event) => {
+                chunks.add(event.data);
+            };
+
+            let callback = undefined;
+
+            mediaRecorder.onstop = () => {
+
+                const blob = new Blob(chunks, { "type" : "video/webm" });
+
+                callback(undefined, blob);
+
+            };
+
+            action(() => {
+
+                mediaRecorder.start();
+
+            }, (dataCallback) => {
+
+                callback = dataCallback;
+
+                mediaRecorder.stop();
+
+            });
 
         }
     }
