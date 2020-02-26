@@ -24,7 +24,8 @@
                   'outlineAlpha': material.outlines.alpha,
                   'blending': material.blending,
                   'stencilTest': material.stencilTest,
-                  'depthTest': material.depthTest
+                  'depthTest': material.depthTest,
+                  'useLight': material.shaders.vertex == 'Default'
               })}">
 
     <!-- mesh uniforms -->

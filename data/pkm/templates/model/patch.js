@@ -273,13 +273,25 @@ module.exports = function (renderer, scene, camera, lights, mesh, geometry, mate
                         position.z - targetPosition.z, 0);
 
         // bounding box
-        if (extra.boundingBox) {
-            vectors[84].set(
-                (extra.boundingBox.maxes[0] - extra.boundingBox.mins[0]) * scale + mesh.parent.position.x,
-                (extra.boundingBox.maxes[2] - extra.boundingBox.mins[2]) * scale + mesh.parent.position.z,
-                extra.boundingBox.mins[1] * scale + mesh.parent.position.y,
-                extra.boundingBox.maxes[1] * scale + mesh.parent.position.y
-            );
+        if (extra.useLight) {
+            if (directionalLight) {
+                vectors[84].set(
+                    directionalLight.color.r,
+                    directionalLight.color.g,
+                    directionalLight.color.b,
+                    directionalLight.intensity);
+            } else {
+                vectors[84].set(1, 1, 1, 1);
+            }
+        } else {
+            if (extra.boundingBox) {
+                vectors[84].set(
+                    (extra.boundingBox.maxes[0] - extra.boundingBox.mins[0]) * scale + mesh.parent.position.x,
+                    (extra.boundingBox.maxes[2] - extra.boundingBox.mins[2]) * scale + mesh.parent.position.z,
+                    extra.boundingBox.mins[1] * scale + mesh.parent.position.y,
+                    extra.boundingBox.maxes[1] * scale + mesh.parent.position.y
+                );
+            }
         }
 
         if (extra.isGeometryShader) {
