@@ -50,7 +50,7 @@ float analyzeEdge(vec2 z00, vec2 z01, vec2 z02, vec2 z10, vec2 z11, vec2 z12, ve
         c += (z11.x - z20.x);
         c += (z11.x - z21.x);
         c += (z11.x - z22.x);
-        if ((c <= 0.000001) && (ux >= 0.0013) && (uy >= 0.0013)) {
+        if ((c <= 0.000001) && (ux >= 0.0009) && (uy >= 0.0009)) {
             result = 0.0;
         } else {
             if (result > 0.8) {
@@ -98,7 +98,11 @@ vec4 getPixel(vec2 uv) {
     float z2 = clamp(getEdge(layer2, uv), 0.0, 1.0);
     float z3 = clamp(getEdge(layer3, uv), 0.0, 1.0);
     float edge = clamp((z + z2 * 0.25 + z3 * 0.25), 0.0, 1.0) * 0.7;
-    vec4 pixel = texture2D(layer4, uv);
+    vec4 pixel00 = texture2D(layer4, uv);
+    vec4 pixel01 = texture2D(layer4, vec2(uv.x, uv.y + uy));
+    vec4 pixel10 = texture2D(layer4, vec2(uv.x + ux, uv.y));
+    vec4 pixel11 = texture2D(layer4, vec2(uv.x + ux, uv.y + uy));
+    vec4 pixel = (pixel00 + pixel01 + pixel10 + pixel11) * 0.25;
     if (edge > 0.0) {
         pixel.rgb = pixel.rgb * (1.0 - edge);
         pixel.a = pixel.a + (1.0 - pixel.a) * edge;
