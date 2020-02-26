@@ -361,35 +361,62 @@ Frame.functors = {
                 clips = clips.slice(0, -1);
             }
 
-            start();
-
-            this.playAnimationSeries(clips, {
+            this.playAnimation(clips[0], {
                 "channel": series.options.channel,
                 "priority": series.options.priority,
                 "fading": 0,
-                "loop": "no",
-                "onAnimationEnded": () => {
-                    // 24fps, delay one frame to complete animation
-                    $.delay(1000 / 24, () => {
-                        end((error, blob) => {
-                            let a = $("<a>").attr({
-                                "href": URL.createObjectURL(blob),
-                                "download": `${this.filler.parameters.id}.webm`,
-                            }).css({
-                                "display": "none"
-                            });
-                            $("body").append(a);
-                            a[0].click();
-                            a.detach();
-                            this.playAnimationSeries(originClips, {
-                                "channel": series.options.channel,
-                                "priority": series.options.priority,
-                                "fading": 0,
-                                "loop": "last"
+                "loop": false,
+                "paused": true
+            });
+            this.updateAnimation();
+
+            start(() => {
+                this.playAnimationSeries(clips, {
+                    "channel": series.options.channel,
+                    "priority": series.options.priority,
+                    "fading": 0,
+                    "loop": "no",
+                    "onAnimationEnded": () => {
+
+                        let duration = parseFloat(this.filler.query(`m3d-clip#${clips[clips.length - 1]}`).attr("duration"));
+                        let frame = Math.round(duration * 24) - 1;
+
+                        this.playAnimation(clips[clips.length - 1], {
+                            "channel": series.options.channel,
+                            "priority": series.options.priority,
+                            "fading": 0,
+                            "loop": false,
+                            "frame": frame,
+                            "paused": true
+                        });
+                        this.updateAnimation();
+
+                        // 24fps, delay one frame to complete animation
+
+                        $.delay(1000 / 24, () => {
+                            end((error, blob) => {
+                                let url = URL.createObjectURL(blob);
+                                let a = $("<a>").attr({
+                                    "href": url,
+                                    "download": `${this.filler.parameters.id}.webm`,
+                                }).css({
+                                    "display": "none"
+                                });
+                                $("body").append(a);
+                                a[0].click();
+                                a.detach();
+                                URL.revokeObjectURL(url);
+                                this.playAnimationSeries(originClips, {
+                                    "channel": series.options.channel,
+                                    "priority": series.options.priority,
+                                    "fading": 0,
+                                    "loop": "last"
+                                });
                             });
                         });
-                    });
-                }
+                        
+                    }
+                });
             });
 
         });

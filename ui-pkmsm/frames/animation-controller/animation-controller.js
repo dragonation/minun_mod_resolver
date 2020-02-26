@@ -61,13 +61,15 @@ Frame.prototype.updateAnimationState = function (series, playings, animations) {
         channels[playing.channel].clips.push(animations[playing.name]);
     }
 
-    for (clip of series.clips) {
-        if (channels[series.options.channel]) {
-            channels[series.options.channel].clips = series.clips.map((clip) => {
-                return animations[clip];
-            });
-            channels[series.options.channel].loop = series.options.loop;
-            channels[series.options.channel].priority = series.options.priority;
+    if (series) {
+        for (clip of series.clips) {
+            if (channels[series.options.channel]) {
+                channels[series.options.channel].clips = series.clips.map((clip) => {
+                    return animations[clip];
+                });
+                channels[series.options.channel].loop = series.options.loop;
+                channels[series.options.channel].priority = series.options.priority;
+            }
         }
     }
 
@@ -88,17 +90,19 @@ Frame.prototype.updateAnimationState = function (series, playings, animations) {
 
     this.animations = animations;
 
-    let seriesChannel = channels[series.options.channel];
     let time = 0;
 
-    if (seriesChannel) {
-        let looper = 0;
-        while (seriesChannel.clips[looper].id !== seriesChannel.playing.name) {
-            time += seriesChannel.clips[looper].duration;
-            ++looper;
-        }
-        if (seriesChannel && seriesChannel.playing) {
-            time += seriesChannel.playing.time;
+    if (series) {
+        let seriesChannel = channels[series.options.channel];
+        if (seriesChannel) {
+            let looper = 0;
+            while (seriesChannel.clips[looper].id !== seriesChannel.playing.name) {
+                time += seriesChannel.clips[looper].duration;
+                ++looper;
+            }
+            if (seriesChannel && seriesChannel.playing) {
+                time += seriesChannel.playing.time;
+            }
         }
     }
 

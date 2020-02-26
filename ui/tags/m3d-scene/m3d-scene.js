@@ -545,29 +545,36 @@ module.exports = {
                 return;
             }
 
-            const chunks = new Set();
+            const chunks = [];
 
             const mediaStream = this.m3dRenderer.domElement.captureStream(60);
 
             const mediaRecorder = new MediaRecorder(mediaStream, {
-                "videoBitsPerSecond": 8500000
+                "videoBitsPerSecond": 20000000
             });
 
             mediaRecorder.ondataavailable = (event) => {
-                chunks.add(event.data);
+                if (event.data.size > 0) {
+                    chunks.push(event.data);
+                }
+            };
+
+            let start = undefined;
+            mediaRecorder.onstart = () => {
+                start();
             };
 
             let callback = undefined;
-
             mediaRecorder.onstop = () => {
-
-                const blob = new Blob(chunks, { "type" : "video/webm" });
-
-                callback(undefined, blob);
-
+                $.delay(500, () => {
+                    const blob = new Blob(chunks, { "type" : "video/webm" });
+                    callback(undefined, blob);
+                });
             };
 
-            action(() => {
+            action((startCallback) => {
+
+                start = startCallback;
 
                 mediaRecorder.start();
 
