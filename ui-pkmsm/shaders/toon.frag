@@ -19,25 +19,15 @@ vec2 readDepth(sampler2D depth, vec2 uv) {
 
     float depthValue = 255.0;
     if (values.r >= 0.5) {
-        depthValue = 127.0 * 2.0 * (values.r - 0.5) + values.g + values.b / 255.0;
+        depthValue = 127.0 * 2.0 * (values.r - 0.5) + values.g + values.b * 0.00392157;
     }
 
-    return vec2(depthValue / 255.0, values.a);
+    return vec2(depthValue * 0.00392157, values.a);
 
 }
 
-float getEdge(sampler2D depth, vec2 uv) {
-
-    vec2 z00 = readDepth(depth, vec2(uv.x - ux, uv.y - uy));
-    vec2 z01 = readDepth(depth, vec2(uv.x - ux, uv.y));
-    vec2 z02 = readDepth(depth, vec2(uv.x - ux, uv.y + uy));
-    vec2 z10 = readDepth(depth, vec2(uv.x, uv.y - uy));
-    vec2 z11 = readDepth(depth, vec2(uv.x, uv.y));
-    vec2 z12 = readDepth(depth, vec2(uv.x, uv.y + uy));
-    vec2 z20 = readDepth(depth, vec2(uv.x + ux, uv.y - uy));
-    vec2 z21 = readDepth(depth, vec2(uv.x + ux, uv.y));
-    vec2 z22 = readDepth(depth, vec2(uv.x + ux, uv.y + uy));
-
+float analyzeEdge(vec2 z00, vec2 z01, vec2 z02, vec2 z10, vec2 z11, vec2 z12, vec2 z20, vec2 z21, vec2 z22) {
+   
     float x = z20.x + 1.4 * z21.x + z22.x - z00.x - 1.4 * z01.x - z02.x;
     float y = z02.x + 1.4 * z12.x + z22.x - z00.x - 1.4 * z10.x - z20.x;
 
@@ -60,32 +50,66 @@ float getEdge(sampler2D depth, vec2 uv) {
         c += (z11.x - z20.x);
         c += (z11.x - z21.x);
         c += (z11.x - z22.x);
-        if (c <= 0.0002) {
+        if ((c <= 0.000001) && (ux >= 0.0013) && (uy >= 0.0013)) {
             result = 0.0;
         } else {
             if (result > 0.8) {
                 result = 1.0;
             } else {
-                result = (result - 0.3) / 0.5;
+                result = (result - 0.3) * 2.0;
             } 
         }
     }
 
-    return result; 
+    return result;  
+}
+
+float getEdge(sampler2D depth, vec2 uv) {
+
+    vec2 z00 = readDepth(depth, vec2(uv.x - ux, uv.y - uy));
+    vec2 z01 = readDepth(depth, vec2(uv.x - ux, uv.y));
+    vec2 z02 = readDepth(depth, vec2(uv.x - ux, uv.y + uy));
+    vec2 z03 = readDepth(depth, vec2(uv.x - ux, uv.y + uy + uy));
+    vec2 z10 = readDepth(depth, vec2(uv.x, uv.y - uy));
+    vec2 z11 = readDepth(depth, vec2(uv.x, uv.y));
+    vec2 z12 = readDepth(depth, vec2(uv.x, uv.y + uy));
+    vec2 z13 = readDepth(depth, vec2(uv.x, uv.y + uy + uy));
+    vec2 z20 = readDepth(depth, vec2(uv.x + ux, uv.y - uy));
+    vec2 z21 = readDepth(depth, vec2(uv.x + ux, uv.y));
+    vec2 z22 = readDepth(depth, vec2(uv.x + ux, uv.y + uy));
+    vec2 z23 = readDepth(depth, vec2(uv.x + ux, uv.y + uy + uy));
+    vec2 z30 = readDepth(depth, vec2(uv.x + ux + ux, uv.y - uy));
+    vec2 z31 = readDepth(depth, vec2(uv.x + ux + ux, uv.y));
+    vec2 z32 = readDepth(depth, vec2(uv.x + ux + ux, uv.y + uy));
+    vec2 z33 = readDepth(depth, vec2(uv.x + ux + ux, uv.y + uy + uy));
+
+    float e00 = analyzeEdge(z00, z01, z02, z10, z11, z12, z20, z21, z22);
+    float e01 = analyzeEdge(z01, z02, z03, z11, z12, z13, z21, z22, z23);
+    float e10 = analyzeEdge(z10, z11, z12, z20, z21, z22, z30, z31, z32);
+    float e11 = analyzeEdge(z11, z12, z13, z21, z22, z23, z31, z32, z33);
+
+    return (e00 + e01 + e10 + e11) * 0.25;
 
 }
 
-void main() {
-    float z = clamp(getEdge(layer, fragUV), 0.0, 1.0);
-    float z2 = clamp(getEdge(layer2, fragUV), 0.0, 1.0);
-    float z3 = clamp(getEdge(layer3, fragUV), 0.0, 1.0);
-    float edge = clamp((z + z2 * 0.25 + z3 * 0.25), 0.0, 1.0) * 0.6;
-    vec4 pixel = texture2D(layer4, fragUV);
+vec4 getPixel(vec2 uv) {
+
+    float z = clamp(getEdge(layer, uv), 0.0, 1.0);
+    float z2 = clamp(getEdge(layer2, uv), 0.0, 1.0);
+    float z3 = clamp(getEdge(layer3, uv), 0.0, 1.0);
+    float edge = clamp((z + z2 * 0.25 + z3 * 0.25), 0.0, 1.0) * 0.7;
+    vec4 pixel = texture2D(layer4, uv);
     if (edge > 0.0) {
         pixel.rgb = pixel.rgb * (1.0 - edge);
         pixel.a = pixel.a + (1.0 - pixel.a) * edge;
     }
     pixel.rgb = pixel.rgb + 1.0 - pixel.a;
     pixel.a = 1.0;
-    gl_FragColor = pixel;
+
+    return pixel;
+    
+}
+
+void main() {
+    gl_FragColor = getPixel(fragUV);
 }

@@ -102,8 +102,8 @@ const Frame = function Frame(dom, filler) {
 
                 finalMaterial.uniforms.cameraNear.value = finalCamera.near;
                 finalMaterial.uniforms.cameraFar.value = finalCamera.far;
-                finalMaterial.uniforms.ux.value = 1 / parseInt(size.width);
-                finalMaterial.uniforms.uy.value = 1 / parseInt(size.height);
+                finalMaterial.uniforms.ux.value = 1 / parseInt(size.width) / 2;
+                finalMaterial.uniforms.uy.value = 1 / parseInt(size.height) / 2;
 
                 renderer.setRenderTarget(null);
                 renderer.clear();
@@ -354,6 +354,8 @@ Frame.functors = {
                 }
             }
 
+            let originClips = series.clips.slice(0);
+
             let clips = series.clips.slice(0);
             if (clips.length > 1) {
                 clips = clips.slice(0, -1);
@@ -379,7 +381,7 @@ Frame.functors = {
                             $("body").append(a);
                             a[0].click();
                             a.detach();
-                            this.playAnimationSeries(clips, {
+                            this.playAnimationSeries(originClips, {
                                 "channel": series.options.channel,
                                 "priority": series.options.priority,
                                 "fading": 0,
@@ -408,30 +410,18 @@ Frame.functors = {
             "height": height,
         })[0];
 
-        let context = canvas.getContext("2d");
-        let image = new Image();
-        image.onload = () => {
+        let a = $("<a>").attr({
+            "href": dataURL,
+            "download": `${this.filler.parameters.id}.png`,
+        }).css({
+            "display": "none"
+        });
 
-            context.drawImage(image, 0, 0, 2 * width, 2 * height, 0, 0, width, height);
+        $("body").append(a);
 
-            let a = $("<a>").attr({
-                "href": canvas.toDataURL(),
-                "download": `${this.filler.parameters.id}.png`,
-            }).css({
-                "display": "none"
-            });
+        a[0].click();
 
-            $("body").append(a);
-
-            a[0].click();
-
-            a.detach();
-
-        };
-        image.onerror = (error) => {
-            console.error(error);
-        };
-        image.src = dataURL;
+        a.detach();
 
     },
 

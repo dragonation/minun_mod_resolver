@@ -547,7 +547,7 @@ module.exports = {
 
             const chunks = new Set();
 
-            const mediaStream = this.m3dRenderer.domElement.captureStream(24);
+            const mediaStream = this.m3dRenderer.domElement.captureStream(60);
 
             const mediaRecorder = new MediaRecorder(mediaStream, {
                 "videoBitsPerSecond": 8500000
