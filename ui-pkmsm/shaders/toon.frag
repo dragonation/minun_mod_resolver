@@ -107,8 +107,8 @@ vec4 getPixel(vec2 uv) {
         pixel.rgb = pixel.rgb * (1.0 - edge);
         pixel.a = pixel.a + (1.0 - pixel.a) * edge;
     }
-    pixel.rgb = pixel.rgb + 1.0 - pixel.a;
-    pixel.a = 1.0;
+    // pixel.rgb = pixel.rgb + 1.0 - pixel.a;
+    // pixel.a = 1.0;
 
     return pixel;
     
