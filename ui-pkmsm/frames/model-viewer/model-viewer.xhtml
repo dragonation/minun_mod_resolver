@@ -1,14 +1,14 @@
-<ui-diagram-action @action="savePNGSnapshot()">Save snapshot</ui-diagram-action>
-<ui-diagram-action @action="saveWebMVideo(0)">Save video</ui-diagram-action>
-<ui-diagram-action @action="saveWebMVideo(2)">Save video (with pose)</ui-diagram-action>
-<ui-diagram-action @action="saveM3DFile()">Save model</ui-diagram-action>
+<ui-diagram-action @action="savePNGSnapshot()">Capture snapshot</ui-diagram-action>
+<ui-diagram-action @action="saveWebMVideo(0)">Capture video</ui-diagram-action>
+<ui-diagram-action @action="saveWebMVideo(2)">Capture video (end with pose)</ui-diagram-action>
 <ui-diagram-action>-</ui-diagram-action>
 <ui-diagram-action @action="changeBackgroundColor()">Change background color</ui-diagram-action>
 <ui-diagram-action>-</ui-diagram-action>
 <ui-diagram-action @action="listAnimations()">List animations</ui-diagram-action>
-<ui-diagram-action @action="showAnimationController()">Show animation controller</ui-diagram-action>
-<ui-diagram-action>-</ui-diagram-action>
 <ui-diagram-action @action="listResources()">List resources</ui-diagram-action>
 <ui-diagram-action>-</ui-diagram-action>
-<ui-diagram-action>Show model info</ui-diagram-action>
+<ui-diagram-action @action="saveM3DFile()">Download M3D model</ui-diagram-action>
+<ui-diagram-action>-</ui-diagram-action>
+<ui-diagram-action @action="showAnimationController()">Show animation controller</ui-diagram-action>
+<ui-diagram-action>Inspect model</ui-diagram-action>
 <m3d-scene grids="no" controls="orbit" autolights="yes" autocamera-lights="no" pixel-ratio="1" antialias="no" @resize="resizeRenderingTarget(parameter)"></m3d-scene>
