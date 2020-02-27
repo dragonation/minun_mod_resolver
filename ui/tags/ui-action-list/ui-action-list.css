@@ -117,7 +117,7 @@
 .separator {
 
     padding: 0 10px;
-    height: 30px;
+    height: 10px;
     width: calc(100% - 8px);
     margin: 0 4px;
     border-radius: 3px;
@@ -130,8 +130,7 @@
     &:before {
         display: block;
         position: absolute;
-        width: 80%;
-        left: 10%;
+        width: calc(100% - 20px);
         content: '';
         height: 1dpx;
         top: 50%;

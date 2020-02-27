@@ -1,4 +1,5 @@
 const lineHeight = 30;
+const separatorHeight = 10;
 const extraPadding = 4;
 const extraMargin = 5;
 const extraIndent = 10;
@@ -16,7 +17,27 @@ const showActionList = function (actions, from, direction, callback) {
 
     let rect = from.getClientRects()[0];
 
-    let totalHeight = ($.dom.getDevicePixels(lineHeight) * Math.max(1, actions.length) + 
+    let separatorCount = 0;
+    let finalActions = [];
+    for (let action of actions) {
+        if (action.text === "-") {
+            ++separatorCount;
+            if ((finalActions.length > 0) &&
+                (finalActions[finalActions.length - 1].text !== "-")) {
+                finalActions.push(action);
+            }
+        } else {
+            finalActions.push(action);
+        }
+    }
+    if ((finalActions.length > 0) && 
+        (finalActions[finalActions.length - 1].text === "-")) {
+        finalActions.pop();
+    }
+    actions = finalActions;
+
+    let totalHeight = ($.dom.getDevicePixels(lineHeight) * Math.max(1, actions.length - separatorCount) + 
+                       $.dom.getDevicePixels(separatorHeight) * separatorCount +
                        $.dom.getDevicePixels(extraPadding) * 2 + 2);
     let totalWidth = $.dom.getDevicePixels(maxWidth);
 

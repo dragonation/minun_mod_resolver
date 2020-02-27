@@ -754,6 +754,25 @@ App.prototype.loadModel = function (id, callback) {
 
 };
 
+App.prototype.pickColor = function (callback) {
+
+    if (!this.colorPicker) {
+        this.colorPicker = this.createWindow("/windows/color-picker/color-picker", {
+            "caption": "Color Picker",
+            "left": 50, "top": 100,
+            "width": $.dom.getDevicePixels(240), 
+            "height": $.dom.getDevicePixels(340),
+            "resizable": false,
+            "justHideWhenClose": true
+        });
+    }
+
+    this.colorPicker.colorCallback = callback;
+    
+    this.colorPicker.dom.showWindow();
+
+};
+
 App.prototype.title = "Pokemon Ultra Sun/Moon - 3DS";
 
 App.functors = {

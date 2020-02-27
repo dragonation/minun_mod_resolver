@@ -6,11 +6,11 @@
     box-sizing: content-box !important;
     border: solid 1dpx rgba(0, 0, 0, 0.3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     z-index: 1;
-    backdrop-filter: blur(calc(3px * var(--ui-scale)));
-    background-color: $alpha($white(1), 0.8);
+    /*backdrop-filter: blur(calc(3px * var(--ui-scale)));*/
+    background-color: $white(1);
     font-family: 'Mew Sans', sans-serif;
     font-size: 13px;
     $transition(opacity, transform, 0.3s);
@@ -23,8 +23,23 @@
 }
 
 :host(.browsing) {
+
     box-shadow: none;
     background-color: #fff;
+
+    #ui-window-title-bar,
+    #ui-window-action-button,
+    #ui-window-close-button,
+    #ui-window-resizer {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #ui-window-title-bar {
+        transform: translateY(calc(32px + 1dpx));
+        box-shadow: none;
+    }
+
 }
 
 :host(.not-browsing) {
@@ -50,7 +65,7 @@
 
 #ui-window-title-bar {
 
-    width: 100%;
+    width: calc(100% + 2dpx);
     height: calc(32px + 1dpx);
     line-height: 32px;
     font-weight: bold;
@@ -61,16 +76,23 @@
     white-space: nowrap;
     overflow: hidden;
     cursor: default;
+    border: solid 1dpx rgba(0, 0, 0, 0.3);
+    margin-left: -1dpx;
+    margin-right: -1dpx;
     border-bottom: solid 1dpx rgba(0, 0, 0, 0.2);
     padding-right: 40px;
     flex-shrink: 0;
     flex-grow: 0;
-    background-color: rgba(0, 0, 0, 0.02);
-    transition: background-color 0.3s, color 0.3s;
+    background-color: $white(0.98);
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s, transform 0.3s;
+    margin-top: calc(-32px - 1dpx);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
     :host(.active) & {
         color: #0d8ef1;
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: $white(0.95);
     }
 
 }
@@ -84,6 +106,7 @@
     top: 8px;
     border-radius: 16px;
     border: solid 1dpx rgba(0, 0, 0, 0.3);
+    margin-top: calc(-32px - 1dpx);
     background-image: url('../../res/window/action-button.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -97,6 +120,7 @@
     position: absolute;
     right: 8px;
     top: 8px;
+    margin-top: calc(-32px - 1dpx);
     border-radius: 16px;
     border: solid 1dpx rgba(0, 0, 0, 0.3);
     background-image: url('../../res/window/close-button.svg');
@@ -111,6 +135,9 @@
     flex-shrink: 1;
     height: 10px;
     overflow: hidden;
+    background-color: $white(1);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
 #ui-window-resizer {

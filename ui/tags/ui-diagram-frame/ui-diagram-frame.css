@@ -7,19 +7,24 @@
     border: solid 1dpx rgba(0, 0, 0, 0.3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
-    border-bottom-right-radius: 2px;
     z-index: 1;
     /*backdrop-filter: blur(calc(3px * var(--ui-scale)));*/
     background-color: $white(1); 
     font-family: 'Mew Sans', sans-serif;
     font-size: 12px;
-    $transition(opacity, transform, 0.3s);
+    $transition(opacity, transform, border-radius, 0.3s);
 }
 
 :host(.closing) {
     pointer-events: none;
     opacity: 0;
     transform: scale(0.5);
+}
+
+
+:host(:hover) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 #ui-diagram-frame-container {
@@ -29,9 +34,11 @@
     display: flex;
     flex-direction: column;
 
+    &:hover #ui-diagram-frame-title-bar,
     &:hover #ui-diagram-frame-resizer,
     &:hover #ui-diagram-frame-close-button,
     &:hover #ui-diagram-frame-action-button,
+    :host(.acting) & #ui-diagram-frame-title-bar,
     :host(.acting) & #ui-diagram-frame-resizer,
     :host(.acting) & #ui-diagram-frame-close-button,
     :host(.acting) & #ui-diagram-frame-action-button {
@@ -40,10 +47,17 @@
         pointer-events: auto;
     }
 
+    &:hover #ui-diagram-frame-clients,
+    :host(.acting) & #ui-diagram-frame-clients {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
 }
 
 #ui-diagram-frame-title-bar {
-    width: 100%;
+    opacity: 0;
+    pointer-events: none;
     height: var(--diagram-title-bar-size, 20px);
     line-height: var(--diagram-title-bar-size, 20px);
     font-weight: bold;
@@ -53,11 +67,23 @@
     white-space: nowrap;
     overflow: hidden;
     cursor: default;
-    border-bottom: solid 1dpx rgba(0, 0, 0, 0.1);
     padding-right: 40px;
     flex-shrink: 0;
     flex-grow: 0;
     font-size: 11px;
+    margin-top: calc(0px - var(--diagram-title-bar-size, 20px));
+    background-color: $white(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: solid 1dpx rgba(0, 0, 0, 0.3);
+    border-bottom: solid 1dpx rgba(0, 0, 0, 0.2);
+    box-sizing: padding-box;
+    width: calc(100% + 2dpx);
+    margin-left: -1dpx;
+    margin-right: -1dpx;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    transform: translateY(var(--diagram-title-bar-size, 20px));
+    $transition(opacity, transform, 0.2s);
 }
 
 #ui-diagram-frame-action-button {
@@ -76,6 +102,8 @@
     background-size: 8px 8px;
     pointer-events: none;
     opacity: 0;
+    margin-top: calc(0px - var(--diagram-title-bar-size, 20px));
+    transform: translateY(var(--diagram-title-bar-size, 20px));
     $transition(opacity, transform, 0.2s);
 }
 
@@ -95,6 +123,8 @@
     background-size: 8px 8px;
     pointer-events: none;
     opacity: 0;
+    margin-top: calc(0px - var(--diagram-title-bar-size, 20px));
+    transform: translateY(var(--diagram-title-bar-size, 20px));
     $transition(opacity, transform, 0.2s);
 }
 
@@ -106,8 +136,8 @@
     overflow: hidden;
     position: relative;
     z-index: 0;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-radius: 3px;
+    background-color: $white(1);
 }
 
 #ui-diagram-frame-resizer {

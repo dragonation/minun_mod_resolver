@@ -470,6 +470,14 @@ Frame.functors = {
                 layer.setSize(event.width * 2, event.height * 2);
             }
         }
+    },
+
+    "changeBackgroundColor": function () {
+        $.app(this.dom).pickColor(({ r, g, b, a }) => {
+            this.filler.query("m3d-scene")[0].m3dRenderer.setClearColor(
+                new THREE.Color(r / 255, g / 255, b / 255),
+                a / 255);
+        });
     }
 
 };
