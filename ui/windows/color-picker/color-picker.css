@@ -1,0 +1,105 @@
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hsv-map-pallete {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+#hsv-map {
+    border: solid 1dpx $alpha($white(0), 0.5);
+    border-radius: 4px;
+    width: 200px;
+    height: 200px;
+}
+
+#hue-bar-slider,
+#alpha-bar-slider {
+    height: 8px;
+    width: 164px;
+    margin-top: 10px;
+    flex-shrink: 0;
+    margin-right: 36px;
+    position: relative;
+}
+
+#hue-bar-slider {
+    margin-top: 14px;
+}
+
+#hsv-map-dial,
+#hue-bar-slider-dial,
+#alpha-bar-slider-dial {
+    width: 12px;
+    height: 12px;
+    margin-left: -2px;
+    margin-top: -2px;
+    border: solid 3px $white(1);
+    border-radius: 12px;
+    position: absolute;
+    box-shadow: 0 0 1dpx 1dpx $alpha($white(0), 0.3), inset 0 0 1dpx 1dpx $alpha($white(0), 0.3); 
+    left: 0;
+    top: 0;
+}
+
+#hsv-map-dial {
+    margin-left: -6px;
+    margin-top: -6px;
+}
+
+#hue-bar,
+#alpha-bar {
+    border: solid 1dpx $alpha($white(0), 0.5);
+    border-radius: 4px;
+    height: 8px;
+    width: 164px;
+}
+
+#alpha-bar {
+    background-image: url('/res/transparent-background.svg');
+    background-size: calc(8px - 2dpx) calc(8px - 2dpx);
+    background-repeat: repeat;
+    background-position: left top;
+}
+
+#color {
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    border: solid 1dpx $alpha($white(0), 0.5);
+    margin-top: -26px;
+    margin-left: 174px;
+    flex-shrink: 0;
+    background-image: url('/res/transparent-background.svg');
+    background-size: calc(13px - 1dpx) calc(13px - 1dpx);
+    background-repeat: repeat;
+    background-position: left top;
+}
+
+#color-sample {
+    width: 100%;
+    height: 100%;
+    border-radius: calc(4px - 1dpx);
+}
+
+#color-text {
+    margin-top: 16px;
+    text-align: center;
+    font-family: 'Mew Source', 'Menlo', 'Consolas', monospace;
+    font-size: 20px;
+    color: #0d8ef1;
+    width: 200px;
+    height: 40px;
+    line-height: calc(40px - 2dpx);
+    border-radius: 4px;
+    border: solid 1dpx $alpha($white(0), 0.2);
+    flex-shrink: 0;
+}

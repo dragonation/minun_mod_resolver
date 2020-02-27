@@ -1,0 +1,21 @@
+<div id="container">
+    <div id="hsv-map-pallete" @mousedown="pickSV(event)">
+        <canvas id="hsv-map" width="100" height="100"></canvas>
+        <div id="hsv-map-dial" 
+             style:left="${saturate / 100 * 200}px" 
+             style:top="${(100 - value) / 100 * 200}px"
+             style:background-color="${hsv2rgba(hue, saturate, value, 255)}"></div>
+    </div>
+    <div id="hue-bar-slider" @mousedown="pickHue(event)">
+        <canvas id="hue-bar" width="360" height="10"></canvas>
+        <div id="hue-bar-slider-dial" style:left="${hue / 359 * 156}px"></div>
+    </div>
+    <div id="alpha-bar-slider" @mousedown="pickAlpha(event)">
+        <canvas id="alpha-bar" width="360" height="10"></canvas>
+        <div id="alpha-bar-slider-dial" style:left="${alpha / 255 * 156}px"></div>
+    </div>
+    <div id="color">
+        <div id="color-sample" style:background-color="${hsv2rgba(hue, saturate, value, alpha)}"></div>
+    </div>
+    <div id="color-text">${hsv2rgbaHash(hue, saturate, value, alpha)}</div>
+</div>

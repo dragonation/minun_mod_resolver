@@ -323,7 +323,7 @@ Frame.functors = {
         window.open(`/~pkmsm/model/save/${this.filler.parameters.id}`);
     },
 
-    "saveWebMVideo": function () {
+    "saveWebMVideo": function (poseTimes) {
 
         let m3dScene = this.filler.query("m3d-scene")[0]; 
         m3dScene.recordVideo((start, end) => {
@@ -370,6 +370,12 @@ Frame.functors = {
             });
             this.updateAnimation();
 
+            let restPoseTimes = poseTimes;
+
+            for (let looper = 0; looper < poseTimes; ++looper) {
+                clips.push(originClips[originClips.length - 1]);
+            }
+
             start(() => {
                 this.playAnimationSeries(clips, {
                     "channel": series.options.channel,
@@ -378,7 +384,9 @@ Frame.functors = {
                     "loop": "no",
                     "onAnimationEnded": () => {
 
-                        let duration = parseFloat(this.filler.query(`m3d-clip#${clips[clips.length - 1]}`).attr("duration"));
+                        let lastClip = clips[clips.length - 1];
+
+                        let duration = parseFloat(this.filler.query(`m3d-clip#${lastClip}`).attr("duration"));
                         let frame = Math.round(duration * 24) - 1;
 
                         this.playAnimation(clips[clips.length - 1], {
@@ -414,7 +422,7 @@ Frame.functors = {
                                 });
                             });
                         });
-                        
+
                     }
                 });
             });
