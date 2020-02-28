@@ -754,7 +754,7 @@ App.prototype.loadModel = function (id, callback) {
 
 };
 
-App.prototype.pickColor = function (callback) {
+App.prototype.pickColor = function (color, callback) {
 
     if (!this.colorPicker) {
         this.colorPicker = this.createWindow("/windows/color-picker/color-picker", {
@@ -768,6 +768,8 @@ App.prototype.pickColor = function (callback) {
     }
 
     this.colorPicker.colorCallback = callback;
+
+    this.colorPicker.setColor(color);
     
     this.colorPicker.dom.showWindow();
 

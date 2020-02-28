@@ -12,6 +12,21 @@ const Frame = function Frame(dom, filler) {
 
     let m3dScene = this.filler.query("m3d-scene");
 
+    let backgroundColor = $.local["pkmsm.model-viewer.background-color"];
+    if (backgroundColor) {
+        let r = ("0" + backgroundColor.r.toString(16)).slice(-2);
+        let g = ("0" + backgroundColor.g.toString(16)).slice(-2);
+        let b = ("0" + backgroundColor.b.toString(16)).slice(-2);
+        let a = ("0" + backgroundColor.a.toString(16)).slice(-2);
+        backgroundColor = `#${r}${g}${b}${a}`;
+    } else {
+        backgroundColor = "#ffffffff";
+    }
+
+    this.filler.fill({
+        "backgroundColor": backgroundColor
+    });
+
     $.res.load("/~pkmsm/shaders/toon.vert", (error, vertexShader) => {
 
         if (error) {
@@ -481,11 +496,22 @@ Frame.functors = {
     },
 
     "changeBackgroundColor": function () {
-        $.app(this.dom).pickColor(({ r, g, b, a }) => {
-            this.filler.query("m3d-scene")[0].m3dRenderer.setClearColor(
-                new THREE.Color(r / 255, g / 255, b / 255),
-                a / 255);
+
+        let renderer = this.filler.query("m3d-scene")[0].m3dRenderer;
+
+        let clearColor = renderer.getClearColor();
+        let clearAlpha = renderer.getClearAlpha();
+
+        $.app(this.dom).pickColor({
+            "r": clearColor.r * 255,
+            "g": clearColor.g * 255,
+            "b": clearColor.b * 255,
+            "a": clearAlpha * 255,
+        }, ({ r, g, b, a }) => {
+            renderer.setClearColor(new THREE.Color(r / 255, g / 255, b / 255), a / 255);
+            $.local["pkmsm.model-viewer.background-color"] = { r, g, b, a };
         });
+
     }
 
 };

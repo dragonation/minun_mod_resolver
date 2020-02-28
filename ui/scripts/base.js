@@ -74,6 +74,8 @@ $(() => {
             console.warn("Starter file not found");
         }
 
+        require("/scripts/base/local.js");
+
         require(`/${starter}`);
 
     });

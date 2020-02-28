@@ -5,9 +5,25 @@ const convertHSV2HSL = function (h, s, v) {
     v /= 100;
 
     return [
-        h * 360, 
+        (h * 360) % 360, 
         100 * s * v / ((h = (2 - s) * v) < 1 ? h : 2 - h), 
         100 * h * 0.5
+    ];
+
+};
+
+const convertHSL2HSV = function (h, s, l) {
+
+    h /= 360;
+    s /= 100;
+    l /= 100;
+
+    let t = s * (l < 0.5 ? l : 1 - l);
+
+    return [
+        (h * 360) % 360, 
+        (l > 0 ? 2 * t / (l + t) : 0) * 100,
+        (l + t) * 100
     ];
 
 };
@@ -61,8 +77,8 @@ const convertRGB2HSL = function (r, g, b) {
     let s = 0; 
     let l = 0;
 
-    let v = Math.Max(r, g, b); 
-    let m = Math.Min(r, g, b); 
+    let v = Math.max(r, g, b); 
+    let m = Math.min(r, g, b); 
 
     l = (m + v) / 2.0; 
     if (l <= 0.0) {
@@ -179,6 +195,28 @@ const Window = function Window(dom, filler) {
         "saturate": 100,
         "value": 100,
         "alpha": 255
+    });
+
+    prepareHueCanvas(this.filler.query("#hue-bar")[0]);
+    updateHSVMap(this.filler.query("#hsv-map")[0], this.filler.parameters.hue);
+    updateAlphaCanvas(this.filler.query("#alpha-bar")[0], [
+        this.filler.parameters.hue, 
+        this.filler.parameters.saturate, 
+        this.filler.parameters.value
+    ]);
+
+};
+
+Window.prototype.setColor = function (color) {
+
+    let hsl = convertRGB2HSL(color.r, color.g, color.b);
+    let hsv = convertHSL2HSV(hsl[0], hsl[1], hsl[2]);
+
+    this.filler.fill({
+        "hue": hsv[0],
+        "saturate": hsv[1],
+        "value": hsv[2],
+        "alpha": color.a
     });
 
     prepareHueCanvas(this.filler.query("#hue-bar")[0]);

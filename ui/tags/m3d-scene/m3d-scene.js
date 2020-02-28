@@ -259,8 +259,12 @@ const syncClearColor = function (dom, value) {
     if (!dom.m3dRenderer) { return; }
 
     let clearColor = value;
+    let clearAlpha = 1;
     if (clearColor && (clearColor[0] === "#")) {
-        clearColor = parseInt(clearColor.slice(1), 16);
+        clearColor = parseInt(clearColor.slice(1, 7), 16);
+        if (clearColor.length > 7) {
+            clearAlpha = parseInt(clearColor.slice(7, 9), 16) / 255;
+        }
     } else {
         clearColor = NaN;
     }
@@ -269,6 +273,7 @@ const syncClearColor = function (dom, value) {
     }
 
     dom.m3dRenderer.setClearColor(clearColor);
+    dom.m3dRenderer.setClearAlpha(clearAlpha);
 
 };
 
