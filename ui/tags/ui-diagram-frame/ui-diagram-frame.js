@@ -155,14 +155,16 @@ module.exports = {
                 points.push({
                     "size": { "width": frameRect.width, "height": frameRect.height },
                     "x": offset.x + framePosition.left,
-                    "y": offset.y + rect.top + titleBarSize / 2 - frameRect.top + framePosition.top,
+                    // "y": offset.y + rect.top + titleBarSize / 2 - frameRect.top + framePosition.top,
+                    "y": offset.y + (rect.top + rect.bottom) / 2 - frameRect.top + framePosition.top,
                     "id": "left",
                     "direction": "left"
                 });
                 points.push({
                     "size": { "width": frameRect.width, "height": frameRect.height },
                     "x": offset.x + framePosition.left + frameRect.width,
-                    "y": offset.y + rect.top + titleBarSize / 2 - frameRect.top + framePosition.top,
+                    "y": offset.y + (rect.top + rect.bottom) / 2 - frameRect.top + framePosition.top,
+                    // "y": offset.y + rect.top + titleBarSize / 2 - frameRect.top + framePosition.top,
                     "id": "right",
                     "direction": "right"
                 });
@@ -202,28 +204,28 @@ module.exports = {
                     if (point.y > offset.y + frameRect.bottom - frameRect.top + framePosition.top - arrowSize) {
                         point.y = offset.y + frameRect.bottom - frameRect.top + framePosition.top - arrowSize;
                     }
-                    if (direction === "from") {
-                        if (point.y < offset.y + titleBarSize + framePosition.top + arrowSize) {
-                            point.y = offset.y + titleBarSize + framePosition.top + arrowSize;
-                        }
-                    } else {
+                    // if (direction === "from") {
+                    //     if (point.y < offset.y + titleBarSize + framePosition.top + arrowSize) {
+                    //         point.y = offset.y + titleBarSize + framePosition.top + arrowSize;
+                    //     }
+                    // } else {
                         if (point.y < offset.y + framePosition.top + arrowSize) {
                             point.y = offset.y + framePosition.top + arrowSize;
                         }
-                    }
+                    // }
                 } else {
                     if (point.y > offset.y + frameRect.bottom - frameRect.top + framePosition.top) {
                         point.y = offset.y + frameRect.bottom - frameRect.top + framePosition.top;
                     }
-                    if (direction === "from") {
-                        if (point.y < offset.y + titleBarSize + framePosition.top) {
-                            point.y = offset.y + titleBarSize + framePosition.top;
-                        }
-                    } else {
+                    // if (direction === "from") {
+                    //     if (point.y < offset.y + titleBarSize + framePosition.top) {
+                    //         point.y = offset.y + titleBarSize + framePosition.top;
+                    //     }
+                    // } else {
                         if (point.y < offset.y + framePosition.top) {
                             point.y = offset.y + framePosition.top;
                         }
-                    }
+                    // }
                 }
             }
 

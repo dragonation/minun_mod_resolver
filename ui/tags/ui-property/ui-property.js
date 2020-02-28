@@ -73,10 +73,10 @@ module.exports = {
                     if (value[0] && (typeof value[0] == "object") &&
                         value[0].constructor && value[0].constructor.name &&
                         (!Object.hasOwnProperty.call(value[0], "constructor"))) {
-                        return `[${value[0].constructor.name} x ${value.length}]`;
+                        return `[${value[0].constructor.name} × ${value.length}]`;
                     }
 
-                    return `[${typeof value[0]} x ${value.length}]`;
+                    return `[${typeof value[0]} × ${value.length}]`;
 
                 }
 
@@ -93,6 +93,9 @@ module.exports = {
         },
         "isExpandable": function () {
             return this.isExpandable();
+        },
+        "getSubproperties": function () {
+            return this.getSubproperties();
         }
     },
     "methods": {
@@ -105,6 +108,15 @@ module.exports = {
                 return true;
             }
             return false;
+        },
+        "getSubproperties": function () {
+            let value = this.value;
+            if (this.resolver) {
+                value = this.resolver(value, "complex");
+            } else if (value instanceof Node) {
+                return null;
+            }
+            return value;
         },
         "getTargetIDs": function () {
 
@@ -121,13 +133,16 @@ module.exports = {
             }
 
             if (this.isExpandable()) {
-                let subids = this.filler.query("#sublist")[0].getTargetIDs();
-                for (let id in subids) {
-                    if (!ids[id]) {
-                        ids[id] = [];
-                    }
-                    for (let dom of subids[id]) {
-                        ids[id].push(dom);
+                let sublist = this.filler.query("#sublist")[0];
+                if (sublist) {
+                    let subids = sublist.getTargetIDs();
+                    for (let id in subids) {
+                        if (!ids[id]) {
+                            ids[id] = [];
+                        }
+                        for (let dom of subids[id]) {
+                            ids[id].push(dom);
+                        }
                     }
                 }
             }

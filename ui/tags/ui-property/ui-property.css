@@ -50,13 +50,17 @@
             color: #6a90d8;
         }
 
+        &.nil #value {
+            color: #ccc;
+        }
+
         &.array #value {
             color: #9bcaa8;
         }
 
         #key {
 
-            width: 100px;
+            width: 115px;
             text-align: right;
             padding-left: 26px;
             padding-right: 6px;
@@ -106,8 +110,8 @@
 
     #sublist {
 
-        margin-left: 20px;
-        width: calc(100% - 20px);
+        margin-left: 10px;
+        width: calc(100% - 10px);
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
         border-top: solid 1dpx $alpha($white(0), 0.05);

@@ -13,6 +13,95 @@ $.dom.autoregisterTag("m3d-uniform");
 $.dom.autoregisterTag("m3d-clip");
 $.dom.autoregisterTag("m3d-track");
 
+const getM3DElements = function (app, id, query) {
+
+    let from = app.filler.query("#diagram ui-diagram-frame").filter((index, dom) => {
+        return $(dom).attr("wire-id") === id;
+    })[0];
+    if (!from) {
+        return;
+    }
+
+    let objects = from.frame.filler.query("m3d-object#pokemon-model").children().filter("m3d-object").filter((index, dom) => {
+        return $(dom).attr("base").split("/").slice(-1)[0] !== "shadow";
+    });
+
+    if (!query) {
+        return objects;
+    }
+
+    return objects.find(query);
+
+};
+
+const EditableField = function (id, query, type, setter) {
+    this.id = id;
+    this.query = query;
+    this.type = type;
+    this.setter = setter;
+};
+
+const LinkField = function (id, query, text) {
+    this.id = id;
+    this.text = text;
+    this.query = query;
+};
+
+const MeshField = function Mesh(id, query, text) {
+    this.id = id;
+    this.text = text;
+    this.query = query;
+};
+
+const MaterialField = function Material(id, query, text) {
+    this.id = id;
+    this.text = text;
+    this.query = query;
+};
+
+const TokenField = function (value) {
+    if ((value === undefined) || (value === null)) {
+        return value;
+    }
+    this.value = value;
+};
+
+const TokenListField = function (value) {
+    this.value = value.split(",");
+};
+
+const ResourceField = function (id, target) {
+    this.id = id;
+    this.target = target;
+};
+
+const VectorField = function (value) {
+    if (typeof value === "string") {
+        value = value.split(",").map(x => parseFloat(x));
+    }
+    this.value = value;
+};
+
+const TexturesField = function Textures(value) {
+    Object.assign(this, value);
+};
+
+const BlendingField = function Blending(value) {
+    Object.assign(this, value);
+};
+
+const StencilField = function StencilTest(value) {
+    Object.assign(this, value);
+};
+
+const DepthField = function DepthTest(value) {
+    Object.assign(this, value);
+};
+
+const StencilOperationsField = function StencilOperations(value) {
+    Object.assign(this, value);
+};
+
 const App = function App(dom, filler) {
 
     this.dom = dom;
@@ -682,11 +771,221 @@ App.prototype.openShader = function (id, from) {
         "error": () => {
             console.error("Failed to load shader codes");
         }
-    })
+    });
 
     this.filler.query("#diagram").append(frame);
 
     frame[0].bringToFirst();
+};
+
+App.prototype.inspectModel = function (id, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(240),
+        "height": $.dom.getDevicePixels(180)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": `Inspector of “${id}”`,
+        "resizable": "yes",
+        "wire-id": id + "/inspector"
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~pkmsm/frames/model-inspector/model-inspector");
+
+    this.filler.query("#diagram").append(frame);
+
+    let meshes = [];
+    for (let mesh of getM3DElements(this, id, "m3d-mesh")) {
+        meshes.push(new MeshField(id, `m3d-mesh#${$(mesh).attr("id")}`, $(mesh).attr("name")));
+    }
+
+    frame[0].frame.filler.fill({
+        "target": {
+            "background": "#00000000",
+            "shadow": true,
+            "meshes": meshes
+        }
+    });
+
+    frame[0].bringToFirst();
+};
+
+App.prototype.inspectMesh = function (id, query, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(240),
+        "height": $.dom.getDevicePixels(200)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": `Inspector of “${id} ${query}”`,
+        "resizable": "yes",
+        "wire-id": id + "/inspector/" + query
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~pkmsm/frames/model-inspector/model-inspector");
+
+    this.filler.query("#diagram").append(frame);
+
+    let mesh = getM3DElements(this, id, query);
+
+    let extra = $(mesh).attr("extra");
+    if (extra) {
+        extra = JSON.parse(extra);
+    }
+    let order = $(mesh).attr("rendering-order");
+    order = order ? parseInt(order) : 0;
+    if (!isFinite(order)) {
+        order = 0;
+    }
+
+    let materials = $(mesh).attr("materials").split(";").map((material) => {
+        return new MaterialField(id, "m3d-material#" + material);
+    });
+
+    frame[0].frame.filler.fill({
+        "target": {
+            "visible": true,
+            "materials": materials,
+            "order": order,
+            "bones": extra.bones
+        }
+    });
+
+    frame[0].bringToFirst();
+};
+
+App.prototype.inspectMaterial = function (id, query, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(240),
+        "height": $.dom.getDevicePixels(360)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": `Inspector of “${id} ${query}”`,
+        "resizable": "yes",
+        "wire-id": id + "/inspector/" + query
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~pkmsm/frames/model-inspector/model-inspector");
+
+    this.filler.query("#diagram").append(frame);
+
+    let material = getM3DElements(this, id, query);
+
+    let materialExtra = $(material).attr("extra");
+    if (materialExtra) {
+        materialExtra = JSON.parse(materialExtra);
+    }
+    let textures = {};
+    $(material).attr("textures").split(";").forEach((texture) => {
+        let query = "m3d-texture#" + texture.split(":")[1];
+        let name = getM3DElements(this, id, query).attr("name");
+        textures[texture.split(":")[0].slice(1)] = new LinkField(id, query, name);
+    });
+
+    frame[0].frame.filler.fill({
+        "target": {
+            "vertexShader": new ResourceField(id, $(material).attr("vertex-shader").slice(1)),
+            "fragmentShader": new ResourceField(id, $(material).attr("fragment-shader").slice(1)),
+            "geometryShader": materialExtra.isGeometryShader === "yes",
+            "polygonOffset": parseInt($(material).attr("polygon-offset")),
+            "side": new TokenField($(material).attr("side")),
+            "depthTest": new DepthField({
+                "enabled": $(material).attr("depth-test") === "yes",
+                "writable": $(material).attr("depth-write") === "yes",
+                "function": new TokenField($(material).attr("depth-test-function")),
+            }),
+            "stencilTest": new StencilField({
+                "enabled": $(material).attr("stencil-test") === "yes",
+                "function": new TokenField($(material).attr("stencil-test-function")),
+                "reference": parseInt($(material).attr("stencil-test-reference")),
+                "testMask": parseInt($(material).attr("stencil-test-mask")),
+                "writeMask": parseInt($(material).attr("stencil-write-mask")),
+                "operator": new StencilOperationsField({
+                    "failed": new TokenField($(material).attr("stencil-failed")),
+                    "zFailed": new TokenField($(material).attr("stencil-z-failed")),
+                    "zPassed": new TokenField($(material).attr("stencil-z-passed")),
+                })
+            }),
+            "blending": new BlendingField({
+                "destination": new TokenListField($(material).attr("blending-destination")),
+                "equation": new TokenListField($(material).attr("blending-equation")),
+                "source": new TokenListField($(material).attr("blending-source")),
+            }),
+            "textures": new TexturesField(textures)
+        }
+    });
+
+    frame[0].bringToFirst();
+
+};
+
+App.prototype.inspectTexture = function (id, query, from) {
+
+    let size = {
+        "width": $.dom.getDevicePixels(240),
+        "height": $.dom.getDevicePixels(200)
+    };
+    let position = this.getNextFrameTopLeft(from, size);
+
+    let filename = id.split("/").slice(-1)[0];
+    let frame = $("<ui-diagram-frame>").attr({
+        "caption": `Inspector of “${id} ${query}”`,
+        "resizable": "yes",
+        "wire-id": id + "/inspector/" + query
+    }).css({
+        "left": position.left + "px",
+        "top": position.top + "px",
+        "width": size.width + "px",
+        "height": size.height + "px",
+    });
+
+    frame[0].loadUI("/~pkmsm/frames/model-inspector/model-inspector");
+
+    this.filler.query("#diagram").append(frame);
+
+    let texture = getM3DElements(this, id, query);
+
+    frame[0].frame.filler.fill({
+        "target": {
+            "src": new ResourceField(id, $(texture).attr("src").slice(1)),
+            "wrapS": $(texture).attr("wrap-s") ? new TokenField($(texture).attr("wrap-s")) : undefined,
+            "wrapT": $(texture).attr("wrap-t") ? new TokenField($(texture).attr("wrap-t")) : undefined,
+            "minFilter": $(texture).attr("min-filter") ? new TokenField($(texture).attr("min-filter")) : undefined,
+            "magFilter": $(texture).attr("mag-filter") ? new TokenField($(texture).attr("mag-filter")) : undefined,
+            "mipmap": $(texture).attr("mipmap") !== undefined ? ($(texture).attr("mipmap") === "yes") : undefined,
+            "offset": $(texture).attr("offset") ? new VectorField($(texture).attr("offset")) : undefined,
+            "repeat": $(texture).attr("repeat") ? new VectorField($(texture).attr("repeat")) : undefined,
+            "rotation": $(texture).attr("rotation") !== undefined ? parseFloat($(texture).attr("rotation")) : undefined,
+        }
+    });
+
+    frame[0].bringToFirst();
+
 };
 
 App.prototype.smartOpen = function (id, from) {
@@ -845,3 +1144,14 @@ App.functors = {
 };
 
 module.exports.App = App;
+
+module.exports.EditableField = EditableField;
+module.exports.LinkField = LinkField;
+module.exports.MaterialField = MaterialField;
+module.exports.MeshField = MeshField;
+module.exports.TokenField = TokenField;
+module.exports.ResourceField = ResourceField;
+module.exports.VectorField = VectorField;
+module.exports.TokenListField = TokenListField;
+
+module.exports.getM3DElements = getM3DElements;

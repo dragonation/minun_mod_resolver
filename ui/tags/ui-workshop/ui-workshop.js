@@ -9,7 +9,7 @@ $("body").on("keypress", function (event) {
         }
     }
 
-    if (typeof app.onKeyPressed === "function") {
+    if (app && (typeof app.onKeyPressed === "function")) {
         try {
             app.onKeyPressed(event);
         } catch (error) {

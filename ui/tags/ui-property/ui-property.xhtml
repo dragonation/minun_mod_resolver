@@ -10,6 +10,6 @@
         <div id="value" title="${getTextValue()}">${getTextValue()}</div>
     </div>
     <tmpl:if test="isExpandable()">
-        <ui-property-list id="sublist" prop:target="${tag.value}" prop:resolver="${tag.resolver}" @foldingchange="trigFoldingChanges()"/>
+        <ui-property-list id="sublist" prop:target="${getSubproperties()}" prop:resolver="${tag.resolver}" @foldingchange="trigFoldingChanges()"/>
     </tmpl:if>
 </div>

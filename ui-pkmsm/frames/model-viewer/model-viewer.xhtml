@@ -10,5 +10,5 @@
 <ui-diagram-action @action="saveM3DFile()">Download M3D model</ui-diagram-action>
 <ui-diagram-action>-</ui-diagram-action>
 <ui-diagram-action @action="showAnimationController()">Show animation controller</ui-diagram-action>
-<ui-diagram-action>Inspect model</ui-diagram-action>
+<ui-diagram-action @action="inspectModel()">Inspect model</ui-diagram-action>
 <m3d-scene grids="no" controls="orbit" autolights="yes" autocamera-lights="no" clear-color="${backgroundColor ?: '#ffffffff'}" pixel-ratio="1" antialias="no" @resize="resizeRenderingTarget(parameter)"></m3d-scene>

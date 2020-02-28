@@ -140,6 +140,7 @@ Frame.prototype.getTargetIDs = function () {
         [`${id}/resource-list`]: [scene],
         [`${id}/animation-list`]: [scene],
         [`${id}/animation-controller`]: [scene],
+        [`${id}/inspector`]: [scene],
     };
 
     return ids;
@@ -481,6 +482,10 @@ Frame.functors = {
 
     "listAnimations": function () {
         $.app(this.dom).openAnimationList(this.filler.parameters.id, this);
+    },
+
+    "inspectModel": function () {
+        $.app(this.dom).inspectModel(this.filler.parameters.id, this);
     },
 
     "showAnimationController": function () {

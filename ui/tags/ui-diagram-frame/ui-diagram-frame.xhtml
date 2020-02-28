@@ -1,5 +1,5 @@
 <div id="ui-diagram-frame-container" @mousedown="bringToFirst()">
-    <div id="ui-diagram-frame-title-bar" @mousedown="startDraggingTitleBar(event)">${attributes.caption}</div>
+    <div id="ui-diagram-frame-title-bar" @mousedown="startDraggingTitleBar(event)" title="${attributes.caption}">${attributes.caption}</div>
     <ui-button id="ui-diagram-frame-action-button" class:visible="${attributes.actions != 'no'}" @action="listActions()"></ui-button>
     <ui-button id="ui-diagram-frame-close-button" @action="closeFrame()"></ui-button>
     <div id="ui-diagram-frame-clients">
