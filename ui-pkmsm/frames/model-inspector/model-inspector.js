@@ -197,6 +197,21 @@ registerResolver(app.ToggleField, function (value, target, decorator) {
     }
 });
 
+registerResolver(app.NumberField, function (value, target, decorator) {
+    switch (target) {
+        case "text": { return value.value; };
+        case "class": { return "number editable"; };
+        case "complex": { return; };
+        case "link": { return; };
+        case "open": { 
+            // value.setter(!value.value);
+            return; 
+        };
+        case "decorate": { return; };
+        default: { return value; }; 
+    }
+});
+
 registerResolver(app.BackgroundColorField, function (value, target, decorator) {
     switch (target) {
         case "text": { 
@@ -253,7 +268,7 @@ registerResolver(app.BackgroundColorField, function (value, target, decorator) {
                 decorator.colorDOM.wellDOM = $("<div>").css({
                     "width": "100%",
                     "height": "100%",
-                    "border-radius": `${$.dom.getDevicePixels(2)}px`
+                    "border-radius": `${$.dom.getDevicePixels(1.5)}px`
                 });
                 decorator.colorDOM.append(decorator.colorDOM.wellDOM);
             }

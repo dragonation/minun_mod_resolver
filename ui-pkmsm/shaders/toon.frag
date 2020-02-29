@@ -13,6 +13,9 @@ uniform sampler2D layer4;
 uniform float cameraNear;
 uniform float cameraFar;
 
+uniform bool noAlpha;
+uniform bool noOutline;
+
 vec2 readDepth(sampler2D depth, vec2 uv) {
 
     vec4 values = texture2D(depth, vec2(uv.x, uv.y));
@@ -103,12 +106,16 @@ vec4 getPixel(vec2 uv) {
     vec4 pixel10 = texture2D(layer4, vec2(uv.x + ux, uv.y));
     vec4 pixel11 = texture2D(layer4, vec2(uv.x + ux, uv.y + uy));
     vec4 pixel = (pixel00 + pixel01 + pixel10 + pixel11) * 0.25;
-    if (edge > 0.0) {
+    if ((edge > 0.0) && (!noOutline)) {
         pixel.rgb = pixel.rgb * (1.0 - edge);
         pixel.a = pixel.a + (1.0 - pixel.a) * edge;
     }
-    // pixel.rgb = pixel.rgb + 1.0 - pixel.a;
-    // pixel.a = 1.0;
+
+    if (noAlpha) {
+        // regard background as white
+        pixel.rgb = pixel.rgb + 1.0 - pixel.a;
+        pixel.a = 1.0;
+    }
 
     return pixel;
     

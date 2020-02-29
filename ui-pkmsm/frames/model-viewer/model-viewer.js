@@ -6,6 +6,25 @@ const Frame = function Frame(dom, filler) {
 
     this.dom = dom;
 
+    this.resizeObserver = new ResizeObserver((entries) => {
+
+        let { width, height } = $(dom).css([ "width", "height" ]);
+
+        width = parseInt(width);
+        height = parseInt(height);
+
+        this.toastMessage(`${width} × ${height}`);
+
+        let originSize = $.local["pkmsm.model-viewer.size"];
+        if ((!originSize) || 
+            (originSize[0] !== width) || (originSize[1] !== height)) {
+            $.local["pkmsm.model-viewer.size"] = [width, height];
+        }
+
+    });
+    this.resizeObserver.observe(this.dom);
+
+
     this.filler = filler;
 
     this.animationListeners = [];
@@ -75,6 +94,8 @@ const Frame = function Frame(dom, filler) {
                     "layer2": { "value": layerTargets[1].texture },
                     "layer3": { "value": layerTargets[2].texture },
                     "layer4": { "value": layerTargets[3].texture },
+                    "noAlpha": { "value": true },
+                    "noOutline": { "value": false }
                 }
             });
             let finalPlane = new THREE.PlaneBufferGeometry(2, 2);
@@ -82,6 +103,15 @@ const Frame = function Frame(dom, filler) {
             finalScene.add(finalMesh);
 
             m3dScene[0].m3dCustomRender = function (renderer, scene, camera) {
+
+                if (!renderer.drawPokemonOutlineLoaded) {
+                    renderer.drawPokemonOutlineLoaded = true;
+                    if ($.local["pkmsm.model-viewer.outline"] !== undefined) {
+                        renderer.drawPokemonOutline = $.local["pkmsm.model-viewer.outline"];
+                    } else {
+                        renderer.drawPokemonOutline = true;
+                    }
+                }
 
                 let looper = 0;
                 while (looper < LAYERS + 1) {
@@ -119,6 +149,8 @@ const Frame = function Frame(dom, filler) {
                 finalMaterial.uniforms.cameraFar.value = finalCamera.far;
                 finalMaterial.uniforms.ux.value = 1 / parseInt(size.width) / 2;
                 finalMaterial.uniforms.uy.value = 1 / parseInt(size.height) / 2;
+                finalMaterial.uniforms.noAlpha.value = (renderer.getClearAlpha() === 1);
+                finalMaterial.uniforms.noOutline.value = renderer.drawPokemonOutline === false;
 
                 renderer.setRenderTarget(null);
                 renderer.clear();
@@ -333,6 +365,51 @@ Frame.prototype.removeAnimationListener = function (listener) {
 
 };
 
+Frame.prototype.toastMessage = function (message, duration) {
+
+    if (!message) { return; }
+
+    if (!duration) { duration = 1000; }
+
+    if (this.toastJob) {
+        this.toastJob.cancel();
+    }
+
+    this.filler.fill({
+        "toast": message,
+        "toastVisible": true
+    });
+
+    let version = $.uuid();
+    this.toastVersion = version;
+
+    let toastJob = null;
+    let controller = {
+        "cancel": () => {
+            if (this.toastVersion !== version) {
+                return;
+            }
+            this.toastVersion = $.uuid();
+            this.filler.fill({
+                "toastVisible": false
+            });
+            if (this.toastJob === toastJob) {
+                delete this.toastJob;
+            }
+        }
+    };
+
+    if (isFinite(duration)) {
+        toastJob = $.delay(duration, () => {
+            controller.cancel();
+        });
+        this.toastJob = toastJob;
+    }
+
+    return controller;
+
+};
+
 Frame.functors = {
 
     "saveM3DFile": function () {
@@ -340,6 +417,8 @@ Frame.functors = {
     },
 
     "saveWebMVideo": function (poseTimes) {
+
+        let toast = this.toastMessage("Recording...", Infinity);
 
         let m3dScene = this.filler.query("m3d-scene")[0]; 
         m3dScene.recordVideo((start, end) => {
@@ -419,6 +498,7 @@ Frame.functors = {
 
                         $.delay(1000 / 24, () => {
                             end((error, blob) => {
+                                toast.cancel();
                                 let url = URL.createObjectURL(blob);
                                 let a = $("<a>").attr({
                                     "href": url,
@@ -499,25 +579,6 @@ Frame.functors = {
             }
         }
     },
-
-    "changeBackgroundColor": function () {
-
-        let renderer = this.filler.query("m3d-scene")[0].m3dRenderer;
-
-        let clearColor = renderer.getClearColor();
-        let clearAlpha = renderer.getClearAlpha();
-
-        $.app(this.dom).pickColor({
-            "r": clearColor.r * 255,
-            "g": clearColor.g * 255,
-            "b": clearColor.b * 255,
-            "a": clearAlpha * 255,
-        }, ({ r, g, b, a }) => {
-            renderer.setClearColor(new THREE.Color(r / 255, g / 255, b / 255), a / 255);
-            $.local["pkmsm.model-viewer.background-color"] = { r, g, b, a };
-        });
-
-    }
 
 };
 

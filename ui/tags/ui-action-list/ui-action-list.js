@@ -21,9 +21,9 @@ const showActionList = function (actions, from, direction, callback) {
     let finalActions = [];
     for (let action of actions) {
         if (action.text === "-") {
-            ++separatorCount;
             if ((finalActions.length > 0) &&
                 (finalActions[finalActions.length - 1].text !== "-")) {
+                ++separatorCount;
                 finalActions.push(action);
             }
         } else {

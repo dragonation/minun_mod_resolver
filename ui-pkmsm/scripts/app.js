@@ -50,6 +50,11 @@ const ToggleField = function (value, setter) {
     this.setter = setter;
 };
 
+const NumberField = function (value, setter) {
+    this.value = value;
+    this.setter = setter;
+};
+
 const LinkField = function (id, query, text) {
     this.id = id;
     this.text = text;
@@ -188,9 +193,16 @@ App.prototype.getNextFrameTopLeft = function (from, size) {
 
 App.prototype.openModel = function (id, from) {
 
+    let sceneSize = $.local["pkmsm.model-viewer.size"];
+    if (sceneSize) {
+        sceneSize = sceneSize.map((x) => $.dom.getDesignPixels(x));
+    } else {
+        sceneSize = [240, 240];
+    }
+
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(240)
+        "width": $.dom.getDevicePixels(sceneSize[0]),
+        "height": $.dom.getDevicePixels(sceneSize[1])
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -458,6 +470,12 @@ App.prototype.openModel = function (id, from) {
 
         let modelDOM = prepareDOM(result.html.model, "");
         let shadowDOM = prepareDOM(result.html.shadow, "shadow");
+
+        let needShadow = $.local["pkmsm.model-viewer.shadow"];
+        if (needShadow === undefined) {
+            needShadow = true;
+        }
+        shadowDOM.attr("visible", needShadow ? "yes" : "no");
 
         m3dObject.append(shadowDOM);
         m3dObject.append(modelDOM);
@@ -858,6 +876,8 @@ App.prototype.inspectModel = function (id, from) {
                 frame[0].frame.filler.parameters.target.shadow.value = value;
                 frame[0].frame.filler.fill({});
 
+                $.local["pkmsm.model-viewer.shadow"] = value;
+
             }),
             "outline": new ToggleField(
                 modelFrame.filler.query("m3d-scene")[0].m3dRenderer.drawPokemonOutline !== false, (value) => {
@@ -872,7 +892,11 @@ App.prototype.inspectModel = function (id, from) {
                 frame[0].frame.filler.parameters.target.outline.value = value;
                 frame[0].frame.filler.fill({});
 
+                $.local["pkmsm.model-viewer.outline"] = value;
+
             }),
+            // "width": new NumberField(parseInt($(modelFrame).css("width")), (value) => {}),
+            // "height": new NumberField(parseInt($(modelFrame).css("height")), (value) => {}),
             // "statusHelper": false,
             "meshes": meshes
         }
@@ -1209,6 +1233,7 @@ App.functors = {
 module.exports.App = App;
 
 module.exports.ToggleField = ToggleField;
+module.exports.NumberField = NumberField;
 module.exports.LinkField = LinkField;
 module.exports.MaterialField = MaterialField;
 module.exports.MeshField = MeshField;
