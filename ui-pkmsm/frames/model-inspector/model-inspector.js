@@ -32,7 +32,7 @@ const Frame = function Frame(dom, filler) {
     this.filler = filler;
 
     this.filler.fill({
-        "resolver": (value, target) => {
+        "resolver": (value, target, decorator) => {
 
             let resolver = undefined;
             if ((value === null) || (value === undefined)) {
@@ -48,7 +48,7 @@ const Frame = function Frame(dom, filler) {
             }
 
             if (resolver) {
-                value = resolver.call(this, value, target);
+                value = resolver.call(this, value, target, decorator);
             }
 
             return value;
@@ -158,6 +158,112 @@ registerResolver(app.MaterialField, function (value, target) {
         case "open": { 
             $.app(this.dom).inspectMaterial(value.id, value.query, this);
             return; 
+        };
+        default: { return value; }; 
+    }
+});
+
+registerResolver(app.ToggleField, function (value, target, decorator) {
+    switch (target) {
+        case "text": { return value.value ? "yes" : "no"; };
+        case "class": { return "boolean editable"; };
+        case "complex": { return; };
+        case "link": { return; };
+        case "open": { 
+            value.setter(!value.value);
+            return; 
+        };
+        case "decorate": {
+            if (!decorator.checkDOM) {
+                decorator.checkDOM = $("<img>").css({
+                    "width": `${$.dom.getDevicePixels(16)}px`,
+                    "height": `${$.dom.getDevicePixels(16)}px`,
+                    "display": "inline-block",
+                    "margin-left": `${$.dom.getDevicePixels(-3)}px`,
+                    "margin-top": `${$.dom.getDevicePixels(1)}px`,
+                    "margin-right": `${$.dom.getDevicePixels(1)}px`,
+                    "margin-bottom": `${$.dom.getDevicePixels(1)}px`
+                });
+            }
+            decorator.checkDOM.attr({
+                "src": `/res/states/${value.value ? 'checked' : 'unchecked'}.svg`
+            });
+            if (decorator.checkDOM.parent()[0] !== decorator) {
+                $(decorator).append(decorator.checkDOM);
+            }
+            return;
+        };
+        default: { return value; }; 
+    }
+});
+
+registerResolver(app.BackgroundColorField, function (value, target, decorator) {
+    switch (target) {
+        case "text": { 
+            let r = ("0" + Math.floor(value.value.r).toString(16)).slice(-2);
+            let g = ("0" + Math.floor(value.value.g).toString(16)).slice(-2);
+            let b = ("0" + Math.floor(value.value.b).toString(16)).slice(-2);
+            let a = ("0" + Math.floor(value.value.a).toString(16)).slice(-2);
+            return `#${r}${g}${b}${a}`; 
+        };
+        case "class": { return "shrinked editable"; };
+        case "complex": { return; };
+        case "link": { return; };
+        case "open": { 
+
+            $.app(this.dom).pickColor(value.value, ({r, g, b, a}) => {
+
+                let id = $(this.dom).attr("wire-id").split("/")[0];
+
+                let modelFrame = $.app(this.dom).filler.query("#diagram ui-diagram-frame").filter((index, dom) => {
+                    return $(dom).attr("wire-id") === id;
+                })[0];
+
+                let renderer = modelFrame.filler.query("m3d-scene")[0].m3dRenderer;
+
+                renderer.setClearColor(new THREE.Color(r / 255, g / 255, b / 255), a / 255);
+
+                $.local["pkmsm.model-viewer.background-color"] = { r, g, b, a };
+
+                this.filler.parameters.target.background.value = { r, g, b, a };
+
+                this.filler.fill({});
+
+            });
+
+            return; 
+        };
+        case "decorate": {
+            if (!decorator.colorDOM) {
+                decorator.colorDOM = $("<div>").css({
+                    "border": `solid ${$.dom.getDevicePixels(1.5)}px #888`,
+                    "background-image": "url('/res/transparent-background.svg')",
+                    "background-size": "stretch",
+                    "background-repeat": "no-repeat",
+                    "background-position": "center",
+                    "width": `${$.dom.getDevicePixels(10)}px`,
+                    "height": `${$.dom.getDevicePixels(10)}px`,
+                    "border-radius": `${$.dom.getDevicePixels(3)}px`,
+                    "display": "inline-block",
+                    "position": "relative",
+                    "margin-top": `${$.dom.getDevicePixels(4)}px`,
+                    "margin-right": `${$.dom.getDevicePixels(4)}px`,
+                    "margin-bottom": `${$.dom.getDevicePixels(4)}px`
+                });
+                decorator.colorDOM.wellDOM = $("<div>").css({
+                    "width": "100%",
+                    "height": "100%",
+                    "border-radius": `${$.dom.getDevicePixels(2)}px`
+                });
+                decorator.colorDOM.append(decorator.colorDOM.wellDOM);
+            }
+            decorator.colorDOM.wellDOM.css({
+                "background-color": `rgba(${value.value.r}, ${value.value.g}, ${value.value.b}, ${value.value.a / 255})`
+            });
+            if (decorator.colorDOM.parent()[0] !== decorator) {
+                $(decorator).append(decorator.colorDOM);
+            }
+            return;
         };
         default: { return value; }; 
     }

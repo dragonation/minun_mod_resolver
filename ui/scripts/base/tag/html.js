@@ -342,27 +342,15 @@
             throw new Error("Invalid attribute template: " + attribute.content);
         }
 
-        let times = 0;
-
-        let lastValue = null;
-        var dependencies = null;
-
+        // property needs no dependency and changes check for complex deep path changes is needed
         let updater = function (parameters, animations, actions) {
-            dependencies = $.tmpl.deps(attribute, options, dependencies);
-            if (!$.format.tmpl.deps.changed(dependencies, parameters, options)) {
-                return;
-            }
             let value = $.format.tmpl(attribute.template.parts[0].call, parameters, options);
-            if (lastValue !== value) {
-                var lastValue2 = lastValue;
-                lastValue = value;
-                actions.push(function () {
-                    ++propertyTimes;
-                    let attributeValue = "{ /* Property-" + propertyTimes + " */ }";
-                    element[attribute.name] = value;
-                    element.setAttribute(attribute.name, attributeValue);
-                });
-            }
+            actions.push(function () {
+                ++propertyTimes;
+                let attributeValue = "{ /* Property-" + propertyTimes + " */ }";
+                element[attribute.name] = value;
+                element.setAttribute(attribute.name, attributeValue);
+            });
         };
 
         updaters.push(updater);

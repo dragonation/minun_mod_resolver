@@ -91,6 +91,23 @@ module.exports = {
 
             return value + "";
         },
+        "decorateValue": function () {
+            $.delay(() => {
+                let decorator = this.filler.query("#decorator")[0];
+                if (!decorator) {
+                    return;
+                }
+                if (this.lastDecoratedValue !== this.value) {
+                    this.lastDecoratedValue = this.value;
+                    while (decorator.firstChild) {
+                        decorator.removeChild(decorator.firstChild);
+                    }
+                }
+                if (this.resolver) {
+                    this.resolver(this.value, "decorate", decorator);
+                }
+            });
+        },
         "isExpandable": function () {
             return this.isExpandable();
         },

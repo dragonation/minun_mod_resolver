@@ -58,6 +58,10 @@
             color: #9bcaa8;
         }
 
+        &.editable #value {
+            cursor: pointer;
+        }
+
         #key {
 
             width: 115px;
@@ -95,6 +99,12 @@
 
         }
 
+        &.editable #key #key-name {
+            color: #009fff;
+            font-style: italic;
+            font-weight: bold;
+        }
+
         #value {
             padding: 0 6px;
             width: 160px;
@@ -104,6 +114,8 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             color: #006ccc;
+            display: flex;
+            align-self: center;
         }
 
     }

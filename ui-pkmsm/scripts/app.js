@@ -41,6 +41,15 @@ const EditableField = function (id, query, type, setter) {
     this.setter = setter;
 };
 
+const BackgroundColorField = function (value) {
+    this.value = value;
+};
+
+const ToggleField = function (value, setter) {
+    this.value = value;
+    this.setter = setter;
+};
+
 const LinkField = function (id, query, text) {
     this.id = id;
     this.text = text;
@@ -807,10 +816,64 @@ App.prototype.inspectModel = function (id, from) {
         meshes.push(new MeshField(id, `m3d-mesh#${$(mesh).attr("id")}`, $(mesh).attr("name")));
     }
 
+    let modelFrame = this.filler.query("#diagram ui-diagram-frame").filter((index, dom) => {
+        return $(dom).attr("wire-id") === id;
+    })[0];
+    if (!modelFrame) {
+        modelFrame = from;
+    }
+
+    let background = { "r": 255, "g": 255, "b": 255, "a": 255 };
+    let scene = modelFrame.frame.filler.query("m3d-scene")[0];
+    if (scene) {
+        let clearColor = scene.m3dRenderer.getClearColor();
+        background.r = clearColor.r * 255;
+        background.g = clearColor.g * 255;
+        background.b = clearColor.b * 255;
+        background.a = scene.m3dRenderer.getClearAlpha() * 255;
+    }
+
+    let m3dShadow = modelFrame.filler.query("m3d-object").filter((index, element) => {
+        let base = $(element).attr("base");
+        return base && (base.split("/").slice(-1)[0] === "shadow");
+    });
+
     frame[0].frame.filler.fill({
         "target": {
-            "background": "#00000000",
-            "shadow": true,
+            "background": new BackgroundColorField(background),
+            "shadow": new ToggleField(m3dShadow.attr("visible") !== "no", (value) => {
+
+                let modelFrame = this.filler.query("#diagram ui-diagram-frame").filter((index, dom) => {
+                    return $(dom).attr("wire-id") === id;
+                })[0];
+                if (!modelFrame) { return; }
+
+                let m3dShadow = modelFrame.filler.query("m3d-object").filter((index, element) => {
+                    let base = $(element).attr("base");
+                    return base && (base.split("/").slice(-1)[0] === "shadow");
+                });
+
+                m3dShadow.attr("visible", value ? "yes" : "no");
+
+                frame[0].frame.filler.parameters.target.shadow.value = value;
+                frame[0].frame.filler.fill({});
+
+            }),
+            "outline": new ToggleField(
+                modelFrame.filler.query("m3d-scene")[0].m3dRenderer.drawPokemonOutline !== false, (value) => {
+
+                let modelFrame = this.filler.query("#diagram ui-diagram-frame").filter((index, dom) => {
+                    return $(dom).attr("wire-id") === id;
+                })[0];
+                if (!modelFrame) { return; }
+
+                modelFrame.filler.query("m3d-scene")[0].m3dRenderer.drawPokemonOutline = value;
+
+                frame[0].frame.filler.parameters.target.outline.value = value;
+                frame[0].frame.filler.fill({});
+
+            }),
+            // "statusHelper": false,
             "meshes": meshes
         }
     });
@@ -1145,7 +1208,7 @@ App.functors = {
 
 module.exports.App = App;
 
-module.exports.EditableField = EditableField;
+module.exports.ToggleField = ToggleField;
 module.exports.LinkField = LinkField;
 module.exports.MaterialField = MaterialField;
 module.exports.MeshField = MeshField;
@@ -1153,5 +1216,6 @@ module.exports.TokenField = TokenField;
 module.exports.ResourceField = ResourceField;
 module.exports.VectorField = VectorField;
 module.exports.TokenListField = TokenListField;
+module.exports.BackgroundColorField = BackgroundColorField;
 
 module.exports.getM3DElements = getM3DElements;
