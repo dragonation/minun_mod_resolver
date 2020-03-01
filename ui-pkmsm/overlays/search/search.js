@@ -9,10 +9,14 @@ Overlay.parameters = {
     "scope": "pokemon"
 };
 
-Overlay.prototype.searchPokemonsWithKeyword = function (keyword) {
+Overlay.prototype.searchPokemonsWithKeyword = function (keyword, version) {
 
     $.ajax("/~pkmsm/search/pokemon/" + keyword, {
         "success": (data, status, request) => {
+
+            if (version !== this.searchVersion) {
+                return;
+            }
 
             let parsed = $.serial.deserialize(data);
             let items = parsed.map((pokemon) => ({
@@ -44,10 +48,14 @@ Overlay.prototype.searchPokemonsWithKeyword = function (keyword) {
 
 };
 
-Overlay.prototype.searchModelsWithKeyword = function (keyword) {
+Overlay.prototype.searchModelsWithKeyword = function (keyword, version) {
 
     $.ajax("/~pkmsm/search/model/" + keyword, {
         "success": (data, status, request) => {
+
+            if (version !== this.searchVersion) {
+                return;
+            }
 
             let parsed = $.serial.deserialize(data);
 
@@ -81,6 +89,8 @@ Overlay.prototype.searchModelsWithKeyword = function (keyword) {
 
 Overlay.prototype.searchWithKeyword = function (keyword) {
 
+    let version = $.uuid();
+    this.searchVersion = version;
     if (!keyword) {
         this.filler.fill({
             "results": []
@@ -92,13 +102,13 @@ Overlay.prototype.searchWithKeyword = function (keyword) {
 
     switch (this.filler.parameters.scope) {
         case "pokemon": {
-            this.searchPokemonsWithKeyword(keyword); break;
+            this.searchPokemonsWithKeyword(keyword, version); break;
         };
         case "model": {
-            this.searchModelsWithKeyword(keyword); break;
+            this.searchModelsWithKeyword(keyword, version); break;
         };
         default: {
-            this.searchPokemonsWithKeyword(keyword); break;
+            this.searchPokemonsWithKeyword(keyword, version); break;
         };
     }
 
