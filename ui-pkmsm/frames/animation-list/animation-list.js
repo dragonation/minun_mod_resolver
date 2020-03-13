@@ -96,7 +96,7 @@ Frame.prototype.playAnimation = function (animation) {
                 "priority": (3 + looper),
                 "fading": 0,
                 "paused": paused,
-                "frame": 128,
+                "frame": paused ? 128 : 0,
                 "loop": Infinity
             });
         }
