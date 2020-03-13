@@ -222,6 +222,7 @@ const patchObjectAnimation = function (threeObject) {
                     "frame": actor.frame,
                     "time": actor.frame / actor.fps,
                     "fps": actor.fps,
+                    "resample": actor.resample,
                     "duration": actor.duration,
                     "paused": actor.paused,
                     "loop": actor.loop
@@ -375,6 +376,7 @@ const patchObjectAnimation = function (threeObject) {
             "time": options.frame * animation.resample / animation.fps,
             "timeOffset": timeOffset,
             "frame": options.frame,
+            "resample": animation.resample,
             "fps": animation.resample * animation.fps,
             "priority": options.priority,
             "paused": options.paused,

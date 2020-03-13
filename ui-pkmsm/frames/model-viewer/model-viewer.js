@@ -450,9 +450,6 @@ Frame.prototype.saveAPNGFile = function () {
     let series = this.getPlayingAnimationSeries();
     let playings = this.getPlayingAnimations();
 
-    this.clearAnimations();
-    this.playPausedAnimations();
-
     let action = this.filler.query("#pokemon-model")[0].getM3DClip("FightingAction1");
 
     let frames = Math.round(action.duration * action.fps);
@@ -461,6 +458,9 @@ Frame.prototype.saveAPNGFile = function () {
     encoder.start();
 
     let recordFrame = (frame) => {
+
+        this.clearAnimations();
+        this.playPausedAnimations();
 
         if (frame > frames) {
 
@@ -487,12 +487,13 @@ Frame.prototype.saveAPNGFile = function () {
 
             for (let playing of playings) {
                 if (playing.channel !== "action") {
+                    let frame = Math.round(playing.frame / playing.resample);
                     this.playAnimation(playing.name, {
                         "channel": playing.channel,
                         "priority": playing.priority,
                         "fading": 0,
                         "paused": playing.paused,
-                        "frame": playing.frame,
+                        "frame": frame,
                         "loop": Infinity
                     });
                 }
@@ -510,7 +511,7 @@ Frame.prototype.saveAPNGFile = function () {
 
         for (let playing of playings) {
             if (playing.channel !== "action") {
-                let finalFrame = ((frame / action.fps) % playing.duration) * action.fps;
+                let finalFrame = Math.round(((frame / action.fps) % playing.duration) * action.fps);
                 if ((playing.channel.split("-")[0] === "state") && 
                     ($(this.dom).attr("wire-id").split("-")[1] === "327")) {
                     finalFrame = 128;
@@ -520,7 +521,7 @@ Frame.prototype.saveAPNGFile = function () {
                     "priority": playing.priority,
                     "fading": 0,
                     "paused": true,
-                    "frame": frame,
+                    "frame": finalFrame,
                     "loop": Infinity
                 });
             }
