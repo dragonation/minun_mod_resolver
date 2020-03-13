@@ -13,17 +13,28 @@ const prepareScene = function (dom) {
     // let camera = options.camera;
     // if (!camera) {
     // TODO: make camera configurable
-    let camera = new THREE.PerspectiveCamera(50, width / height, 0.001, 3000);
+    let camera = new THREE.PerspectiveCamera(50, width / height, 1, 3000);
     camera.position.set(50, 50, 100);
     // }
 
     let clock = new THREE.Clock();
 
-    let renderer = new THREE.WebGLRenderer({
+    let canvas = $("<canvas>")[0];
+    let context = canvas.getContext("webgl2", { 
         "antialias": $(dom).attr("antialias") !== "no",
         "alpha": true,
-        "preserveDrawingBuffer": true,
+        "depth": true, "stencil": true,
         "premultipliedAlpha": true,
+        "preserveDrawingBuffer": true,
+    });
+
+    let renderer = new THREE.WebGLRenderer({
+        "canvas": canvas,
+        "context": context,
+        // "antialias": $(dom).attr("antialias") !== "no",
+        // "alpha": true,
+        // "preserveDrawingBuffer": true,
+        // "premultipliedAlpha": true,
     });
     let pixelRatio = $(dom).attr("pixel-ratio");
     if (pixelRatio) {
