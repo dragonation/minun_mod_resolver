@@ -1,0 +1,37 @@
+{
+    "ids": [
+        557,
+        558
+    ],
+    "chains": [
+        {
+            "targets": {
+                "557-dwebble": {
+                    "pokemon": 557,
+                    "form": "dwebble"
+                },
+                "558-crustle": {
+                    "pokemon": 558,
+                    "form": "crustle"
+                }
+            },
+            "changes": {
+                "557-dwebble > 558-crustle": {
+                    "targets": [
+                        "557-dwebble",
+                        "558-crustle"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

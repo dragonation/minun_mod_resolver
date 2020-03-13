@@ -1,0 +1,57 @@
+{
+    "ids": [
+        679,
+        680,
+        681
+    ],
+    "chains": [
+        {
+            "targets": {
+                "679-honedge": {
+                    "pokemon": 679,
+                    "form": "honedge"
+                },
+                "680-doublade": {
+                    "pokemon": 680,
+                    "form": "doublade"
+                },
+                "681-shield-form": {
+                    "pokemon": 681,
+                    "form": "shield-form"
+                }
+            },
+            "changes": {
+                "679-honedge > 680-doublade": {
+                    "targets": [
+                        "679-honedge",
+                        "680-doublade"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                },
+                "680-doublade > 681-shield-form": {
+                    "targets": [
+                        "680-doublade",
+                        "681-shield-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dusk-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

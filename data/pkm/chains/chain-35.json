@@ -1,0 +1,45 @@
+{
+    "ids": [
+        83,
+        865
+    ],
+    "chains": [
+        {
+            "targets": {
+                "83-farfetch-d": {
+                    "pokemon": 83,
+                    "form": "farfetch-d"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "83-galarian-farfetch-d": {
+                    "pokemon": 83,
+                    "form": "galarian-farfetch-d"
+                },
+                "865-sirfetch-d": {
+                    "pokemon": 865,
+                    "form": "sirfetch-d"
+                }
+            },
+            "changes": {
+                "83-galarian-farfetch-d > 865-sirfetch-d": {
+                    "targets": [
+                        "83-galarian-farfetch-d",
+                        "865-sirfetch-d"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "battle",
+                            "battle": "critical-hits",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        276,
+        277
+    ],
+    "chains": [
+        {
+            "targets": {
+                "276-taillow": {
+                    "pokemon": 276,
+                    "form": "taillow"
+                },
+                "277-swellow": {
+                    "pokemon": 277,
+                    "form": "swellow"
+                }
+            },
+            "changes": {
+                "276-taillow > 277-swellow": {
+                    "targets": [
+                        "276-taillow",
+                        "277-swellow"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                22
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

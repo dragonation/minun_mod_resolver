@@ -1,0 +1,6 @@
+<div id="ui-dialog-container" @mousedown="hideOtherOverlays();activateDialog()">
+    <div id="ui-dialog-title-bar" @mousedown="startDraggingTitleBar(event)">${attributes.caption}</div>
+    <ui-button id="ui-dialog-close-button" @action="closeDialog()"></ui-button>
+    <div id="ui-dialog-clients"></div>
+    <div id="ui-dialog-resizer" class:resizable="${attributes.resizable == 'yes'}" @mousedown="startResizing(event)"></div>
+</div>

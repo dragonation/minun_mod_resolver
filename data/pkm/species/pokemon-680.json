@@ -1,0 +1,169 @@
+{
+    "id": 680,
+    "name": "Doublade",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Honedge evolves into twins. The two blades rub together to emit a metallic sound that unnerves opponents.",
+        "The two swords employ a strategy of rapidly alternating between offense and defense to bring down their prey."
+    ],
+    "forms": {
+        "doublade": {
+            "id": "doublade",
+            "name": "Doublade",
+            "shape": "multiple",
+            "abilities": [
+                "no-guard"
+            ],
+            "weight": 4.5,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 59,
+                "attack": 110,
+                "defense": 150,
+                "special-attack": 45,
+                "special-defense": 49,
+                "speed": 35
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 16,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "power-trick",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 56,
+                    "name": "sacred-sword",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel",
+                "ghost"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 341,
+    "classification": "sword",
+    "names": {
+        "de": "Duokles",
+        "en": "Doublade",
+        "es": "Doublade",
+        "fr": "Dimoclès",
+        "it": "Doublade",
+        "jp": "ニダンギル",
+        "kr": "쌍검킬",
+        "zh": "双剑鞘",
+        "zh-CHS": "双剑鞘",
+        "zh-CHT": "雙劍鞘"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 90,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 157
+    }
+}

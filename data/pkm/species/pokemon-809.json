@@ -1,0 +1,360 @@
+{
+    "id": 809,
+    "name": "Melmetal",
+    "experiences-type": "slow",
+    "texts": [
+        "At the end of its life-span, Melmetal will rust and fall apart. The small shards left behind will eventually be reborn as Meltan.",
+        "Centrifugal force is behind the punches of Melmetal's heavy hex-nut arms. Melmetal is said to deliver the strongest punches of all Pokémon."
+    ],
+    "forms": {
+        "melmetal": {
+            "id": "melmetal",
+            "name": "Melmetal",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "iron-fist"
+            ],
+            "weight": 800,
+            "height": 2.5,
+            "base-stats": {
+                "health-points": 135,
+                "attack": 143,
+                "defense": 143,
+                "special-attack": 80,
+                "special-defense": 65,
+                "speed": 34
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 32,
+                    "name": "acid-armor",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "flash-cannon",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "mega-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 85
+                },
+                {
+                    "level": 56,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 64,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 72,
+                    "name": "dynamic-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 50
+                },
+                {
+                    "level": 80,
+                    "name": "superpower",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 88,
+                    "name": "double-iron-bash",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 96,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "gray"
+        },
+        "gigantamax-melmetal": {
+            "id": "gigantamax-melmetal",
+            "name": "Gigantamax Melmetal",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "iron-fist"
+            ],
+            "height": 25,
+            "base-stats": {
+                "health-points": 135,
+                "attack": 143,
+                "defense": 143,
+                "special-attack": 80,
+                "special-defense": 65,
+                "speed": 34
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 32,
+                    "name": "acid-armor",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "flash-cannon",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "mega-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 85
+                },
+                {
+                    "level": 56,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 64,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 72,
+                    "name": "dynamic-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 50
+                },
+                {
+                    "level": 80,
+                    "name": "superpower",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 88,
+                    "name": "double-iron-bash",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 96,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 420,
+    "changes": [
+        {
+            "targets": {
+                "809-melmetal": {
+                    "pokemon": 809,
+                    "form": "melmetal"
+                },
+                "809-gigantamax-melmetal": {
+                    "pokemon": 809,
+                    "form": "gigantamax-melmetal"
+                }
+            },
+            "changes": {
+                "809-melmetal <> 809-gigantamax-melmetal": {
+                    "targets": [
+                        "809-melmetal",
+                        "809-gigantamax-melmetal"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dynamax-band"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "hex-nut",
+    "names": {
+        "de": "Melmetal",
+        "en": "Melmetal",
+        "es": "Melmetal",
+        "fr": "Melmetal",
+        "it": "Melmetal",
+        "jp": "メルメタル",
+        "kr": "멜메탈",
+        "zh": "美录梅塔",
+        "zh-CHS": "美录梅塔",
+        "zh-CHT": "美录梅塔"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 3,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 270
+    }
+}

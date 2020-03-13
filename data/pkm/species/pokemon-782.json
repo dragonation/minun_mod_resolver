@@ -1,0 +1,164 @@
+{
+    "id": 782,
+    "name": "Jangmo-o",
+    "experiences-type": "slow",
+    "texts": [
+        "They learn to fight by smashing their head scales together. The dueling strengthens both their skills and their spirits.",
+        "Jangmo-o strikes its scales to communicate with others of its kind. Its scales are actually fur that's become as hard as metal."
+    ],
+    "forms": {
+        "jangmo-o": {
+            "id": "jangmo-o",
+            "name": "Jangmo-o",
+            "shape": "quadruped",
+            "abilities": [
+                "bulletproof",
+                "soundproof"
+            ],
+            "weight": 29.7,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 55,
+                "defense": 65,
+                "special-attack": 45,
+                "special-defense": 45,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "overcoat"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "dragon-tail",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "work-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "noble-roar",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "dragon-dance",
+                    "type": "dragon",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dragon"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 400,
+    "classification": "scaly",
+    "names": {
+        "de": "Miniras",
+        "en": "Jangmo-o",
+        "es": "Jangmo-o",
+        "fr": "Bébécaille",
+        "it": "Jangmo-o",
+        "jp": "ジャラコ",
+        "kr": "짜랑꼬",
+        "zh": "心鳞宝",
+        "zh-CHS": "心鳞宝",
+        "zh-CHT": ""
+    },
+    "species": [
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "razor-claw"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 41,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

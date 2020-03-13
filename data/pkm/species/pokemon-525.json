@@ -1,0 +1,184 @@
+{
+    "id": 525,
+    "name": "Boldore",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "If you see its orange crystals start to glow, be wary. It's about to fire off bursts of energy.",
+        "It relies on sound in order to monitor what's in its vicinity. When angered, it will attack without ever changing the direction it's facing."
+    ],
+    "forms": {
+        "boldore": {
+            "id": "boldore",
+            "name": "Boldore",
+            "shape": "tentacles",
+            "abilities": [
+                "sturdy",
+                "weak-armor"
+            ],
+            "weight": 102,
+            "height": 0.9,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 105,
+                "defense": 105,
+                "special-attack": 50,
+                "special-defense": 40,
+                "speed": 20
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": null,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 42,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 54,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 260,
+    "classification": "ore",
+    "names": {
+        "de": "Sedimantur",
+        "en": "Boldore",
+        "es": "Boldore",
+        "fr": "Géolithe",
+        "it": "Boldore",
+        "jp": "ガントル",
+        "kr": "암트르",
+        "zh": "地幔岩",
+        "zh-CHS": "地幔岩",
+        "zh-CHT": "地幔岩"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "everstone",
+        "rare": "hard-stone"
+    },
+    "capture-rate": 120,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 137
+    }
+}

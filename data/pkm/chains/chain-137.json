@@ -1,0 +1,57 @@
+{
+    "ids": [
+        273,
+        274,
+        275
+    ],
+    "chains": [
+        {
+            "targets": {
+                "273-seedot": {
+                    "pokemon": 273,
+                    "form": "seedot"
+                },
+                "274-nuzleaf": {
+                    "pokemon": 274,
+                    "form": "nuzleaf"
+                },
+                "275-shiftry": {
+                    "pokemon": 275,
+                    "form": "shiftry"
+                }
+            },
+            "changes": {
+                "273-seedot > 274-nuzleaf": {
+                    "targets": [
+                        "273-seedot",
+                        "274-nuzleaf"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                14
+                            ]
+                        }
+                    ]
+                },
+                "274-nuzleaf > 275-shiftry": {
+                    "targets": [
+                        "274-nuzleaf",
+                        "275-shiftry"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "leaf-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

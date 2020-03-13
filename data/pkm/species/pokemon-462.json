@@ -1,0 +1,247 @@
+{
+    "id": 462,
+    "name": "Magnezone",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It uses radar to monitor its territory. Intruders are quickly disposed of with a hyper beam.",
+        "There are still people who believe that this Pokémon came from outer space. It emanates a powerful magnetic field."
+    ],
+    "forms": {
+        "magnezone": {
+            "id": "magnezone",
+            "name": "Magnezone",
+            "shape": "head-arms",
+            "abilities": [
+                "magnet-pull",
+                "sturdy"
+            ],
+            "weight": 180,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 70,
+                "defense": 115,
+                "special-attack": 130,
+                "special-defense": 90,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "analytic"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "barrier",
+                    "category": "psychic"
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "electric terrain",
+                    "category": "electric"
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "magnetic flux",
+                    "category": "electric"
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "mirror coat",
+                    "category": "psychic"
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "supersonic",
+                    "category": "normal"
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "tackle",
+                    "category": "normal",
+                    "accuracy": 40
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "thunder shock",
+                    "category": "electric",
+                    "accuracy": 40
+                },
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "thunder wave",
+                    "category": "electric"
+                },
+                {
+                    "level": 1,
+                    "name": "n/an/a",
+                    "type": "magnet bomb",
+                    "category": "steel",
+                    "accuracy": 60
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "tri attack",
+                    "category": "normal",
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "zap cannon",
+                    "category": "electric",
+                    "accuracy": 120
+                },
+                {
+                    "level": 5,
+                    "name": "0055",
+                    "type": "thunder shock",
+                    "category": "electric",
+                    "accuracy": 40
+                },
+                {
+                    "level": 11,
+                    "name": "0077",
+                    "type": "thunder wave",
+                    "category": "electric"
+                },
+                {
+                    "level": 7,
+                    "name": "01111",
+                    "type": "magnet bomb",
+                    "category": "steel",
+                    "accuracy": 60
+                },
+                {
+                    "level": 13,
+                    "name": "01313",
+                    "type": "light screen",
+                    "category": "psychic"
+                },
+                {
+                    "level": 17,
+                    "name": "01717",
+                    "type": "sonic boom",
+                    "category": "normal"
+                },
+                {
+                    "level": 19,
+                    "name": "01919",
+                    "type": "spark",
+                    "category": "electric",
+                    "accuracy": 65
+                },
+                {
+                    "level": 23,
+                    "name": "02323",
+                    "type": "mirror shot",
+                    "category": "steel",
+                    "accuracy": 65
+                },
+                {
+                    "level": 25,
+                    "name": "02525",
+                    "type": "metal sound",
+                    "category": "steel"
+                },
+                {
+                    "level": 29,
+                    "name": "02929",
+                    "type": "electro ball",
+                    "category": "electric"
+                },
+                {
+                    "level": 33,
+                    "name": "03333",
+                    "type": "flash cannon",
+                    "category": "steel",
+                    "accuracy": 80
+                },
+                {
+                    "level": 39,
+                    "name": "03939",
+                    "type": "screech",
+                    "category": "normal"
+                },
+                {
+                    "level": 43,
+                    "name": "04343",
+                    "type": "discharge",
+                    "category": "electric",
+                    "accuracy": 80
+                },
+                {
+                    "level": 49,
+                    "name": "04949",
+                    "type": "lock-on",
+                    "category": "normal"
+                },
+                {
+                    "level": 53,
+                    "name": "05353",
+                    "type": "magnet rise",
+                    "category": "electric"
+                },
+                {
+                    "level": 59,
+                    "name": "05959",
+                    "type": "gyro ball",
+                    "category": "steel"
+                },
+                {
+                    "level": 63,
+                    "name": "06363",
+                    "type": "zap cannon",
+                    "category": "electric",
+                    "accuracy": 120
+                }
+            ],
+            "types": [
+                "electric",
+                "steel"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 34,
+    "classification": "magnet-area",
+    "names": {
+        "de": "Magnezone",
+        "en": "Magnezone",
+        "es": "Magnezone",
+        "fr": "Magnézone",
+        "it": "Magnezone",
+        "jp": "ジバコイル",
+        "kr": "자포코일",
+        "zh": "自爆磁怪",
+        "zh-CHS": "自爆磁怪",
+        "zh-CHT": "自爆磁怪"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {
+        "rare": "metal-coat"
+    },
+    "capture-rate": 30,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 241
+    }
+}

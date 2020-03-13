@@ -1,0 +1,35 @@
+{
+    "ids": [
+        299,
+        476
+    ],
+    "chains": [
+        {
+            "targets": {
+                "299-nosepass": {
+                    "pokemon": 299,
+                    "form": "nosepass"
+                },
+                "476-probopass": {
+                    "pokemon": 476,
+                    "form": "probopass"
+                }
+            },
+            "changes": {
+                "299-nosepass > 476-probopass": {
+                    "targets": [
+                        "299-nosepass",
+                        "476-probopass"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

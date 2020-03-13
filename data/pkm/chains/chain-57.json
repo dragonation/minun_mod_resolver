@@ -1,0 +1,35 @@
+{
+    "ids": [
+        123,
+        212
+    ],
+    "chains": [
+        {
+            "targets": {
+                "123-scyther": {
+                    "pokemon": 123,
+                    "form": "scyther"
+                },
+                "212-scizor": {
+                    "pokemon": 212,
+                    "form": "scizor"
+                }
+            },
+            "changes": {
+                "123-scyther > 212-scizor": {
+                    "targets": [
+                        "123-scyther",
+                        "212-scizor"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

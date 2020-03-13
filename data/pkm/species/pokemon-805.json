@@ -1,0 +1,152 @@
+{
+    "id": 805,
+    "name": "Stakataka",
+    "experiences-type": "slow",
+    "texts": [
+        "It appeared from an Ultra Wormhole. Each one appears to be made up of many life-forms stacked one on top of each other.",
+        "When stone walls started moving and attacking, the brute's true identity was this mysterious life-form, which brings to mind an Ultra Beast."
+    ],
+    "forms": {
+        "stakataka": {
+            "id": "stakataka",
+            "name": "Stakataka",
+            "shape": "quadruped",
+            "abilities": [
+                "beast-boost"
+            ],
+            "weight": 820,
+            "height": 5.5,
+            "base-stats": {
+                "health-points": 61,
+                "attack": 131,
+                "defense": 211,
+                "special-attack": 53,
+                "special-defense": 101,
+                "speed": 13
+            },
+            "skills": [
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "protect",
+                    "category": "normal"
+                },
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "tackle",
+                    "category": "normal",
+                    "accuracy": 40
+                },
+                {
+                    "level": null,
+                    "name": "0055",
+                    "type": "rock slide",
+                    "category": "rock",
+                    "accuracy": 75
+                },
+                {
+                    "level": null,
+                    "name": "01111",
+                    "type": "stealth rock",
+                    "category": "rock"
+                },
+                {
+                    "level": null,
+                    "name": "01717",
+                    "type": "bide",
+                    "category": "normal"
+                },
+                {
+                    "level": null,
+                    "name": "01919",
+                    "type": "take down",
+                    "category": "normal",
+                    "accuracy": 90
+                },
+                {
+                    "level": null,
+                    "name": "02323",
+                    "type": "rock throw",
+                    "category": "rock",
+                    "accuracy": 50
+                },
+                {
+                    "level": null,
+                    "name": "03131",
+                    "type": "autotomize",
+                    "category": "steel"
+                },
+                {
+                    "level": null,
+                    "name": "03737",
+                    "type": "iron defense",
+                    "category": "steel"
+                },
+                {
+                    "level": null,
+                    "name": "04343",
+                    "type": "iron head",
+                    "category": "steel",
+                    "accuracy": 80
+                },
+                {
+                    "level": null,
+                    "name": "04747",
+                    "type": "rock blast",
+                    "category": "rock",
+                    "accuracy": 25
+                },
+                {
+                    "level": null,
+                    "name": "05353",
+                    "type": "wide guard",
+                    "category": "rock"
+                },
+                {
+                    "level": null,
+                    "name": "06161",
+                    "type": "double-edge",
+                    "category": "normal",
+                    "accuracy": 120
+                }
+            ],
+            "types": [
+                "rock",
+                "steel"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 417,
+    "classification": "rampart",
+    "names": {
+        "de": "Muramura",
+        "en": "Stakataka",
+        "es": "Stakataka",
+        "fr": "Ama-Ama",
+        "it": "Stakataka",
+        "jp": "ツンデツンデ",
+        "kr": "차곡차곡",
+        "zh": "垒磊石",
+        "zh-CHS": "垒磊石",
+        "zh-CHT": ""
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 30,
+    "hatching-cycles": 120,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 3,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 257
+    }
+}

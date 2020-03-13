@@ -1,0 +1,37 @@
+{
+    "ids": [
+        325,
+        326
+    ],
+    "chains": [
+        {
+            "targets": {
+                "325-spoink": {
+                    "pokemon": 325,
+                    "form": "spoink"
+                },
+                "326-grumpig": {
+                    "pokemon": 326,
+                    "form": "grumpig"
+                }
+            },
+            "changes": {
+                "325-spoink > 326-grumpig": {
+                    "targets": [
+                        "325-spoink",
+                        "326-grumpig"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

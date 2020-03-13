@@ -1,0 +1,38 @@
+{
+    "ids": [
+        734,
+        735
+    ],
+    "chains": [
+        {
+            "targets": {
+                "734-yungoos": {
+                    "pokemon": 734,
+                    "form": "yungoos"
+                },
+                "735-gumshoos": {
+                    "pokemon": 735,
+                    "form": "gumshoos"
+                }
+            },
+            "changes": {
+                "734-yungoos > 735-gumshoos": {
+                    "targets": [
+                        "734-yungoos",
+                        "735-gumshoos"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ],
+                            "time": "day"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

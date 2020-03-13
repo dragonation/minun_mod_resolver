@@ -1,0 +1,102 @@
+{
+    "ids": [
+        25,
+        26,
+        172
+    ],
+    "chains": [
+        {
+            "targets": {
+                "172-pichu": {
+                    "pokemon": 172,
+                    "form": "pichu"
+                },
+                "25-pikachu": {
+                    "pokemon": 25,
+                    "form": "pikachu"
+                },
+                "26-raichu": {
+                    "pokemon": 26,
+                    "form": "raichu"
+                },
+                "26-alolan-raichu": {
+                    "pokemon": 26,
+                    "form": "alolan-raichu"
+                }
+            },
+            "changes": {
+                "172-pichu > 25-pikachu": {
+                    "targets": [
+                        "172-pichu",
+                        "25-pikachu"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": []
+                        }
+                    ]
+                },
+                "25-pikachu > 26-raichu": {
+                    "targets": [
+                        "25-pikachu",
+                        "26-raichu"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "thunder-stone"
+                            ]
+                        }
+                    ]
+                },
+                "25-pikachu > 26-alolan-raichu": {
+                    "targets": [
+                        "25-pikachu",
+                        "26-alolan-raichu"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "thunder-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "25-pikachu": {
+                    "pokemon": 25,
+                    "form": "pikachu"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "25-pikachu": {
+                    "pokemon": 25,
+                    "form": "pikachu"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "25-pikachu": {
+                    "pokemon": 25,
+                    "form": "pikachu"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

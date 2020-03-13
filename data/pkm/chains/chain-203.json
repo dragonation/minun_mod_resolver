@@ -1,0 +1,57 @@
+{
+    "ids": [
+        387,
+        388,
+        389
+    ],
+    "chains": [
+        {
+            "targets": {
+                "387-turtwig": {
+                    "pokemon": 387,
+                    "form": "turtwig"
+                },
+                "388-grotle": {
+                    "pokemon": 388,
+                    "form": "grotle"
+                },
+                "389-torterra": {
+                    "pokemon": 389,
+                    "form": "torterra"
+                }
+            },
+            "changes": {
+                "387-turtwig > 388-grotle": {
+                    "targets": [
+                        "387-turtwig",
+                        "388-grotle"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "388-grotle > 389-torterra": {
+                    "targets": [
+                        "388-grotle",
+                        "389-torterra"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

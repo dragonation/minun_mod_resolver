@@ -1,0 +1,167 @@
+{
+    "id": 688,
+    "name": "Binacle",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "After two Binacle find a suitably sized rock, they adhere themselves to it and live together. They cooperate to gather food during high tide.",
+        "If the two don't work well together, both their offense and defense fall apart. Without good teamwork, they won't survive."
+    ],
+    "forms": {
+        "binacle": {
+            "id": "binacle",
+            "name": "Binacle",
+            "shape": "multiple",
+            "abilities": [
+                "tough-claws",
+                "sniper"
+            ],
+            "weight": 31,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 42,
+                "attack": 52,
+                "defense": 67,
+                "special-attack": 39,
+                "special-defense": 56,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "pickpocket"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 16,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 20,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "hone-claws",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "razor-shell",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 40,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "cross-chop",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "rock",
+                "water"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 345,
+    "classification": "two-handed",
+    "names": {
+        "de": "Bithora",
+        "en": "Binacle",
+        "es": "Binacle",
+        "fr": "Opermine",
+        "it": "Binacle",
+        "jp": "カメテテ",
+        "kr": "거북손손",
+        "zh": "龟脚脚",
+        "zh-CHS": "龟脚脚",
+        "zh-CHT": "龜腳腳"
+    },
+    "species": [
+        "aquatic"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 120,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 61
+    }
+}

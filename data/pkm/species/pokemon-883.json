@@ -1,0 +1,170 @@
+{
+    "id": 883,
+    "name": "Arctovish",
+    "experiences-type": "slow",
+    "texts": [
+        "Though it's able to capture prey by freezing its surroundings, it has trouble eating the prey afterward because its mouth is on top of its head.",
+        "The skin on its face is impervious to attack, but breathing difficulties made this Pokémon go extinct anyway."
+    ],
+    "forms": {
+        "arctovish": {
+            "id": "arctovish",
+            "name": "Arctovish",
+            "shape": "fins",
+            "abilities": [
+                "water-absorb",
+                "ice-body"
+            ],
+            "weight": 175,
+            "height": 2,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 90,
+                "defense": 100,
+                "special-attack": 80,
+                "special-defense": 90,
+                "speed": 55
+            },
+            "hidden-abilities": [
+                "slush-rush"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 14,
+                    "name": "icy-wind",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 21,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "aurora-veil",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "super-fang",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 90
+                },
+                {
+                    "level": 56,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 63,
+                    "name": "fishious-rend",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "icicle-crash",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 90
+                },
+                {
+                    "level": 77,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "water",
+                "ice"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 455,
+    "classification": "fossil",
+    "names": {
+        "de": "Pescryodon",
+        "en": "Arctovish",
+        "es": "Arctovish",
+        "fr": "Hydragla",
+        "it": "Arctovish",
+        "jp": "ウオチルドン",
+        "kr": "어치르돈",
+        "zh": "鳃鱼海兽",
+        "zh-CHS": "鳃鱼海兽",
+        "zh-CHT": "鰓魚海獸"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 35,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 177
+    }
+}

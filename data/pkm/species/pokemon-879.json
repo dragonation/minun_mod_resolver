@@ -1,0 +1,359 @@
+{
+    "id": 879,
+    "name": "Copperajah",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "They came over from another region long ago and worked together with humans. Their green skin is resistant to water.",
+        "These Pokémon live in herds. Their trunks have incredible grip strength, strong enough to crush giant rocks into powder."
+    ],
+    "forms": {
+        "copperajah": {
+            "id": "copperajah",
+            "name": "Copperajah",
+            "shape": "quadruped",
+            "abilities": [
+                "sheer-force"
+            ],
+            "weight": 650,
+            "height": 3,
+            "base-stats": {
+                "health-points": 122,
+                "attack": 130,
+                "defense": 69,
+                "special-attack": 80,
+                "special-defense": 69,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "heavy-metal"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "rock-smash",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "stomp",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "strength",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 58,
+                    "name": "high-horsepower",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 95
+                },
+                {
+                    "level": 65,
+                    "name": "superpower",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "green"
+        },
+        "gigantamax-copperajah": {
+            "id": "gigantamax-copperajah",
+            "name": "Gigantamax Copperajah",
+            "shape": "quadruped",
+            "abilities": [
+                "sheer-force"
+            ],
+            "height": 23,
+            "base-stats": {
+                "health-points": 122,
+                "attack": 130,
+                "defense": 69,
+                "special-attack": 80,
+                "special-defense": 69,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "heavy-metal"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "rock-smash",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "stomp",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "strength",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 58,
+                    "name": "high-horsepower",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 95
+                },
+                {
+                    "level": 65,
+                    "name": "superpower",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 451,
+    "changes": [
+        {
+            "targets": {
+                "879-copperajah": {
+                    "pokemon": 879,
+                    "form": "copperajah"
+                },
+                "879-gigantamax-copperajah": {
+                    "pokemon": 879,
+                    "form": "gigantamax-copperajah"
+                }
+            },
+            "changes": {
+                "879-copperajah <> 879-gigantamax-copperajah": {
+                    "targets": [
+                        "879-copperajah",
+                        "879-gigantamax-copperajah"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dynamax-band"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "copperderm",
+    "names": {
+        "de": "Patinaraja",
+        "en": "Copperajah",
+        "es": "Copperajah",
+        "fr": "Pachyradjah",
+        "it": "Copperajah",
+        "jp": "ダイオウドウ",
+        "kr": "대왕끼리동",
+        "zh": "大王铜象",
+        "zh-CHS": "大王铜象",
+        "zh-CHT": "大王銅象"
+    },
+    "species": [
+        "field",
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "lagging-tail"
+    },
+    "capture-rate": 90,
+    "hatching-cycles": 25,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 175
+    }
+}

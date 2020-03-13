@@ -1,0 +1,219 @@
+{
+    "id": 499,
+    "name": "Pignite",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "The more it eats, the more fuel it has to make the fire in its stomach stronger. This fills it with even more power.",
+        "When its internal fire flares up, its movements grow sharper and faster. When in trouble, it emits smoke."
+    ],
+    "forms": {
+        "pignite": {
+            "id": "pignite",
+            "name": "Pignite",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "blaze"
+            ],
+            "weight": 55.5,
+            "height": 1,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 93,
+                "defense": 55,
+                "special-attack": 70,
+                "special-defense": 55,
+                "speed": 55
+            },
+            "hidden-abilities": [
+                "thick-fat"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "arm-thrust",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "arm-thrust",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 13,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "flame-charge",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 30,
+                    "accuracy": 70
+                },
+                {
+                    "level": 23,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 28,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "heat-crash",
+                    "type": "fire",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                },
+                {
+                    "level": 47,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 52,
+                    "name": "flare-blitz",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire",
+                "fighting"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 249,
+    "classification": "fire-pig",
+    "names": {
+        "de": "Ferkokel",
+        "en": "Pignite",
+        "es": "Pignite",
+        "fr": "Grotichon",
+        "it": "Pignite",
+        "jp": "チャオブー",
+        "kr": "차오꿀",
+        "zh": "炒炒猪",
+        "zh-CHS": "炒炒猪",
+        "zh-CHT": "炒炒豬"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 146
+    }
+}

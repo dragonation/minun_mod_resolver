@@ -1,0 +1,35 @@
+{
+    "ids": [
+        108,
+        463
+    ],
+    "chains": [
+        {
+            "targets": {
+                "108-lickitung": {
+                    "pokemon": 108,
+                    "form": "lickitung"
+                },
+                "463-lickilicky": {
+                    "pokemon": 463,
+                    "form": "lickilicky"
+                }
+            },
+            "changes": {
+                "108-lickitung > 463-lickilicky": {
+                    "targets": [
+                        "108-lickitung",
+                        "463-lickilicky"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

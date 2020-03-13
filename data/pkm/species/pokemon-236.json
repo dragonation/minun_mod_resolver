@@ -1,0 +1,98 @@
+{
+    "id": 236,
+    "name": "Tyrogue",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It is always bursting with energy. To make itself stronger, it keeps on fighting even if it loses.",
+        "Even though it is small, it can't be ignored because it will slug any handy target without warning."
+    ],
+    "forms": {
+        "tyrogue": {
+            "id": "tyrogue",
+            "name": "Tyrogue",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "guts",
+                "steadfast"
+            ],
+            "weight": 21,
+            "height": 0.7,
+            "base-stats": {
+                "health-points": 35,
+                "attack": 35,
+                "defense": 35,
+                "special-attack": 35,
+                "special-defense": 35,
+                "speed": 35
+            },
+            "hidden-abilities": [
+                "vital-spirit"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 121,
+    "classification": "scuffle",
+    "names": {
+        "de": "Rabauz",
+        "en": "Tyrogue",
+        "es": "Tyrogue",
+        "fr": "Debugant",
+        "it": "Tyrogue",
+        "jp": "バルキー",
+        "kr": "배루키",
+        "zh": "无畏小子",
+        "zh-CHS": "无畏小子",
+        "zh-CHT": "無畏小子"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "8/0",
+    "holdings": {},
+    "capture-rate": 75,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 42
+    }
+}

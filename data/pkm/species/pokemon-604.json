@@ -1,0 +1,141 @@
+{
+    "id": 604,
+    "name": "Eelektross",
+    "experiences-type": "slow",
+    "texts": [
+        "With their sucker mouths, they suck in prey. Then they use their fangs to shock the prey with electricity.",
+        "They crawl out of the ocean using their arms. They will attack prey on shore and immediately drag it into the ocean."
+    ],
+    "forms": {
+        "eelektross": {
+            "id": "eelektross",
+            "name": "Eelektross",
+            "shape": "fins",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 80.5,
+            "height": 2.1,
+            "base-stats": {
+                "health-points": 85,
+                "attack": 115,
+                "defense": 80,
+                "special-attack": 105,
+                "special-defense": 80,
+                "speed": 50
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                },
+                {
+                    "level": 1,
+                    "name": "gastro-acid",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "coil",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "ion-deluge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "acid",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 298,
+    "classification": "elefish",
+    "names": {
+        "de": "Zapplarang",
+        "en": "Eelektross",
+        "es": "Eelektross",
+        "fr": "Ohmassacre",
+        "it": "Eelektross",
+        "jp": "シビルドン",
+        "kr": "저리더프",
+        "zh": "麻麻鳗鱼王",
+        "zh-CHS": "麻麻鳗鱼王",
+        "zh-CHT": "麻麻鰻魚王"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 30,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 3,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 232
+    }
+}

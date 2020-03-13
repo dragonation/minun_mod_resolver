@@ -1,0 +1,37 @@
+{
+    "ids": [
+        341,
+        342
+    ],
+    "chains": [
+        {
+            "targets": {
+                "341-corphish": {
+                    "pokemon": 341,
+                    "form": "corphish"
+                },
+                "342-crawdaunt": {
+                    "pokemon": 342,
+                    "form": "crawdaunt"
+                }
+            },
+            "changes": {
+                "341-corphish > 342-crawdaunt": {
+                    "targets": [
+                        "341-corphish",
+                        "342-crawdaunt"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

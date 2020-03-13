@@ -1,0 +1,78 @@
+{
+    "ids": [
+        280,
+        281,
+        282,
+        475
+    ],
+    "chains": [
+        {
+            "targets": {
+                "280-ralts": {
+                    "pokemon": 280,
+                    "form": "ralts"
+                },
+                "281-kirlia": {
+                    "pokemon": 281,
+                    "form": "kirlia"
+                },
+                "282-gardevoir": {
+                    "pokemon": 282,
+                    "form": "gardevoir"
+                },
+                "475-gallade": {
+                    "pokemon": 475,
+                    "form": "gallade"
+                }
+            },
+            "changes": {
+                "280-ralts > 281-kirlia": {
+                    "targets": [
+                        "280-ralts",
+                        "281-kirlia"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                },
+                "281-kirlia > 282-gardevoir": {
+                    "targets": [
+                        "281-kirlia",
+                        "282-gardevoir"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                },
+                "281-kirlia > 475-gallade": {
+                    "targets": [
+                        "281-kirlia",
+                        "475-gallade"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dawn-stone"
+                            ],
+                            "gender": "male"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

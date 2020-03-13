@@ -1,0 +1,418 @@
+{
+    "id": 354,
+    "name": "Banette",
+    "experiences-type": "fast",
+    "texts": [
+        "It's a stuffed toy that was thrown away and became possessed, ever searching for the one who threw it away so it can exact its revenge.",
+        "Resentment at being cast off made it spring into being. Some say that treating it well will satisfy it, and it will once more become a stuffed toy."
+    ],
+    "forms": {
+        "banette": {
+            "id": "banette",
+            "name": "Banette",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "insomnia",
+                "frisk"
+            ],
+            "weight": 12.5,
+            "height": 1.1,
+            "base-stats": {
+                "health-points": 64,
+                "attack": 115,
+                "defense": 65,
+                "special-attack": 83,
+                "special-defense": 63,
+                "speed": 65
+            },
+            "hidden-abilities": [
+                "cursed-body"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "phantom-force",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "spite",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 7,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "spite",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "will-o-wisp",
+                    "type": "fire",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 19,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 22,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "embargo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "snatch",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 52,
+                    "name": "grudge",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 58,
+                    "name": "trick",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "phantom-force",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost"
+            ],
+            "color": "black"
+        },
+        "mega-banette": {
+            "id": "mega-banette",
+            "name": "Mega Banette",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "prankster"
+            ],
+            "weight": 13,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 64,
+                "attack": 165,
+                "defense": 75,
+                "special-attack": 93,
+                "special-defense": 83,
+                "speed": 75
+            },
+            "hidden-abilities": [
+                "cursed-body"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "phantom-force",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "spite",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 7,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "spite",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "will-o-wisp",
+                    "type": "fire",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 19,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 22,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "embargo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "snatch",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 52,
+                    "name": "grudge",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 58,
+                    "name": "trick",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "phantom-force",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 181,
+    "changes": [
+        {
+            "targets": {
+                "354-banette": {
+                    "pokemon": 354,
+                    "form": "banette"
+                },
+                "354-mega-banette": {
+                    "pokemon": 354,
+                    "form": "mega-banette"
+                }
+            },
+            "changes": {
+                "354-banette <> 354-mega-banette": {
+                    "targets": [
+                        "354-banette",
+                        "354-mega-banette"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "banettite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "marionette",
+    "names": {
+        "de": "Banette",
+        "en": "Banette",
+        "es": "Banette",
+        "fr": "Branette",
+        "it": "Banette",
+        "jp": "ジュペッタ",
+        "kr": "다크펫",
+        "zh": "诅咒娃娃",
+        "zh-CHS": "诅咒娃娃",
+        "zh-CHT": "詛咒娃娃"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "spell-tag"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 26,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 159
+    }
+}

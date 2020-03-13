@@ -1,0 +1,57 @@
+{
+    "ids": [
+        840,
+        841,
+        842
+    ],
+    "chains": [
+        {
+            "targets": {
+                "840-applin": {
+                    "pokemon": 840,
+                    "form": "applin"
+                },
+                "841-flapple": {
+                    "pokemon": 841,
+                    "form": "flapple"
+                },
+                "842-appletun": {
+                    "pokemon": 842,
+                    "form": "appletun"
+                }
+            },
+            "changes": {
+                "840-applin > 841-flapple": {
+                    "targets": [
+                        "840-applin",
+                        "841-flapple"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "tart-apple"
+                            ]
+                        }
+                    ]
+                },
+                "840-applin > 842-appletun": {
+                    "targets": [
+                        "840-applin",
+                        "842-appletun"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "sweet-apple"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

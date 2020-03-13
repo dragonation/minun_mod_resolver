@@ -1,0 +1,37 @@
+{
+    "ids": [
+        624,
+        625
+    ],
+    "chains": [
+        {
+            "targets": {
+                "624-pawniard": {
+                    "pokemon": 624,
+                    "form": "pawniard"
+                },
+                "625-bisharp": {
+                    "pokemon": 625,
+                    "form": "bisharp"
+                }
+            },
+            "changes": {
+                "624-pawniard > 625-bisharp": {
+                    "targets": [
+                        "624-pawniard",
+                        "625-bisharp"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                52
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

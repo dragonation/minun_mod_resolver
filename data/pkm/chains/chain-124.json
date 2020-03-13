@@ -1,0 +1,16 @@
+{
+    "ids": [
+        244
+    ],
+    "chains": [
+        {
+            "targets": {
+                "244-entei": {
+                    "pokemon": 244,
+                    "form": "entei"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,184 @@
+{
+    "id": 126,
+    "name": "Magmar",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Its entire body is burning. When it breathes, the temperature rises. When it sneezes, flames shoot out!",
+        "The hotter the place, the better they feel. Magmar in Alola are said to be hardier than those in other areas."
+    ],
+    "forms": {
+        "magmar": {
+            "id": "magmar",
+            "name": "Magmar",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "flame-body"
+            ],
+            "weight": 44.5,
+            "height": 1.3,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 95,
+                "defense": 57,
+                "special-attack": 100,
+                "special-defense": 85,
+                "speed": 93
+            },
+            "hidden-abilities": [
+                "vital-spirit"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 30,
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "smokescreen",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 15,
+                    "name": "fire-spin",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 19,
+                    "name": "clear-smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 50
+                },
+                {
+                    "level": 22,
+                    "name": "flame-burst",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "fire-punch",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "lava-plume",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "fire"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 60,
+    "classification": "spitfire",
+    "names": {
+        "de": "Magmar",
+        "en": "Magmar",
+        "es": "Magmar",
+        "fr": "Magmar",
+        "it": "Magmar",
+        "jp": "ブーバー",
+        "kr": "마그마",
+        "zh": "鸭嘴火兽",
+        "zh-CHS": "鸭嘴火兽",
+        "zh-CHT": "鴨嘴火獸"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "6/2",
+    "holdings": {
+        "rare": "magmarizer"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 2,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 173
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "ids": [
+        63,
+        64,
+        65
+    ],
+    "chains": [
+        {
+            "targets": {
+                "63-abra": {
+                    "pokemon": 63,
+                    "form": "abra"
+                },
+                "64-kadabra": {
+                    "pokemon": 64,
+                    "form": "kadabra"
+                },
+                "65-alakazam": {
+                    "pokemon": 65,
+                    "form": "alakazam"
+                }
+            },
+            "changes": {
+                "63-abra > 64-kadabra": {
+                    "targets": [
+                        "63-abra",
+                        "64-kadabra"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "64-kadabra > 65-alakazam": {
+                    "targets": [
+                        "64-kadabra",
+                        "65-alakazam"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "ids": [
+        79,
+        80,
+        199
+    ],
+    "chains": [
+        {
+            "targets": {
+                "79-slowpoke": {
+                    "pokemon": 79,
+                    "form": "slowpoke"
+                },
+                "80-slowbro": {
+                    "pokemon": 80,
+                    "form": "slowbro"
+                },
+                "199-slowking": {
+                    "pokemon": 199,
+                    "form": "slowking"
+                }
+            },
+            "changes": {
+                "79-slowpoke > 80-slowbro": {
+                    "targets": [
+                        "79-slowpoke",
+                        "80-slowbro"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                37
+                            ]
+                        }
+                    ]
+                },
+                "79-slowpoke > 199-slowking": {
+                    "targets": [
+                        "79-slowpoke",
+                        "199-slowking"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "79-galarian-slowpoke": {
+                    "pokemon": 79,
+                    "form": "galarian-slowpoke"
+                },
+                "80-galarian-slowbro": {
+                    "pokemon": 80,
+                    "form": "galarian-slowbro"
+                },
+                "199-galarian-slowking": {
+                    "pokemon": 199,
+                    "form": "galarian-slowking"
+                }
+            },
+            "changes": {
+                "79-galarian-slowpoke > 80-galarian-slowbro": {
+                    "targets": [
+                        "79-galarian-slowpoke",
+                        "80-galarian-slowbro"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "unknown"
+                            ]
+                        }
+                    ]
+                },
+                "79-galarian-slowpoke > 199-galarian-slowking": {
+                    "targets": [
+                        "79-galarian-slowpoke",
+                        "199-galarian-slowking"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "unknown"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

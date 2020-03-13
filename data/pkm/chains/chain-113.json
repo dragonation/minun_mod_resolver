@@ -1,0 +1,37 @@
+{
+    "ids": [
+        223,
+        224
+    ],
+    "chains": [
+        {
+            "targets": {
+                "223-remoraid": {
+                    "pokemon": 223,
+                    "form": "remoraid"
+                },
+                "224-octillery": {
+                    "pokemon": 224,
+                    "form": "octillery"
+                }
+            },
+            "changes": {
+                "223-remoraid > 224-octillery": {
+                    "targets": [
+                        "223-remoraid",
+                        "224-octillery"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

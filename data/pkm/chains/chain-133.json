@@ -1,0 +1,37 @@
+{
+    "ids": [
+        261,
+        262
+    ],
+    "chains": [
+        {
+            "targets": {
+                "261-poochyena": {
+                    "pokemon": 261,
+                    "form": "poochyena"
+                },
+                "262-mightyena": {
+                    "pokemon": 262,
+                    "form": "mightyena"
+                }
+            },
+            "changes": {
+                "261-poochyena > 262-mightyena": {
+                    "targets": [
+                        "261-poochyena",
+                        "262-mightyena"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

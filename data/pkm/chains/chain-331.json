@@ -1,0 +1,57 @@
+{
+    "ids": [
+        656,
+        657,
+        658
+    ],
+    "chains": [
+        {
+            "targets": {
+                "656-froakie": {
+                    "pokemon": 656,
+                    "form": "froakie"
+                },
+                "657-frogadier": {
+                    "pokemon": 657,
+                    "form": "frogadier"
+                },
+                "658-greninja": {
+                    "pokemon": 658,
+                    "form": "greninja"
+                }
+            },
+            "changes": {
+                "656-froakie > 657-frogadier": {
+                    "targets": [
+                        "656-froakie",
+                        "657-frogadier"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "657-frogadier > 658-greninja": {
+                    "targets": [
+                        "657-frogadier",
+                        "658-greninja"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

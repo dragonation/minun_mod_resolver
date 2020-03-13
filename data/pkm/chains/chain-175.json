@@ -1,0 +1,37 @@
+{
+    "ids": [
+        343,
+        344
+    ],
+    "chains": [
+        {
+            "targets": {
+                "343-baltoy": {
+                    "pokemon": 343,
+                    "form": "baltoy"
+                },
+                "344-claydol": {
+                    "pokemon": 344,
+                    "form": "claydol"
+                }
+            },
+            "changes": {
+                "343-baltoy > 344-claydol": {
+                    "targets": [
+                        "343-baltoy",
+                        "344-claydol"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

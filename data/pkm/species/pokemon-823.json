@@ -1,0 +1,352 @@
+{
+    "id": 823,
+    "name": "Corviknight",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "This Pokémon reigns supreme in the skies of the Galar region. The black luster of its steel body could drive terror into the heart of any foe.",
+        "With their great intellect and flying skills, these Pokémon very successfully act as the Galar region's airborne taxi service."
+    ],
+    "forms": {
+        "corviknight": {
+            "id": "corviknight",
+            "name": "Corviknight",
+            "shape": "two-wings",
+            "abilities": [
+                "pressure",
+                "unnerve"
+            ],
+            "weight": 75,
+            "height": 2.2,
+            "base-stats": {
+                "health-points": 98,
+                "attack": 87,
+                "defense": 105,
+                "special-attack": 53,
+                "special-defense": 85,
+                "speed": 67
+            },
+            "hidden-abilities": [
+                "mirror-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "steel-wing",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "power-trip",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hone-claws",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "steel-wing",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "fury-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 16,
+                    "name": "pluck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "drill-peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 50,
+                    "name": "brave-bird",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "flying",
+                "steel"
+            ],
+            "color": "blue"
+        },
+        "gigantamax-corviknight": {
+            "id": "gigantamax-corviknight",
+            "name": "Gigantamax Corviknight",
+            "shape": "two-wings",
+            "abilities": [
+                "pressure",
+                "unnerve"
+            ],
+            "height": 14,
+            "base-stats": {
+                "health-points": 98,
+                "attack": 87,
+                "defense": 105,
+                "special-attack": 53,
+                "special-defense": 85,
+                "speed": 67
+            },
+            "hidden-abilities": [
+                "mirror-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "steel-wing",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "power-trip",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hone-claws",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "steel-wing",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "fury-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 16,
+                    "name": "pluck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "drill-peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 50,
+                    "name": "brave-bird",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "flying",
+                "steel"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 425,
+    "changes": [
+        {
+            "targets": {
+                "823-corviknight": {
+                    "pokemon": 823,
+                    "form": "corviknight"
+                },
+                "823-gigantamax-corviknight": {
+                    "pokemon": 823,
+                    "form": "gigantamax-corviknight"
+                }
+            },
+            "changes": {
+                "823-corviknight <> 823-gigantamax-corviknight": {
+                    "targets": [
+                        "823-corviknight",
+                        "823-gigantamax-corviknight"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dynamax-band"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "raven",
+    "names": {
+        "de": "Krarmor",
+        "en": "Corviknight",
+        "es": "Corviknight",
+        "fr": "Corvaillus",
+        "it": "Corviknight",
+        "jp": "アーマーガア",
+        "kr": "아머까오",
+        "zh": "钢铠鸦",
+        "zh-CHS": "钢铠鸦",
+        "zh-CHT": "鋼鎧鴉"
+    },
+    "species": [
+        "flying"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 15,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 3,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 248
+    }
+}

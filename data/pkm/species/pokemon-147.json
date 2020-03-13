@@ -1,0 +1,175 @@
+{
+    "id": 147,
+    "name": "Dratini",
+    "experiences-type": "slow",
+    "texts": [
+        "It's still weak, so it lurks on the floor of bodies of water, eating whatever food sinks down and living a quiet life.",
+        "It sheds its skin—almost on a daily basis—and grows larger. Its skin is soft just after it's been shed."
+    ],
+    "forms": {
+        "dratini": {
+            "id": "dratini",
+            "name": "Dratini",
+            "shape": "serpentine",
+            "abilities": [
+                "shed-skin"
+            ],
+            "weight": 3.3,
+            "height": 1.8,
+            "base-stats": {
+                "health-points": 41,
+                "attack": 64,
+                "defense": 45,
+                "special-attack": 50,
+                "special-defense": 50,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "marvel-scale"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 11,
+                    "name": "twister",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "dragon-rage",
+                    "type": "dragon",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 25,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "dragon-tail",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": 35,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 41,
+                    "name": "dragon-rush",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 75
+                },
+                {
+                    "level": 45,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 51,
+                    "name": "dragon-dance",
+                    "type": "dragon",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 61,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "dragon"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 75,
+    "classification": "dragon",
+    "names": {
+        "de": "Dratini",
+        "en": "Dratini",
+        "es": "Dratini",
+        "fr": "Minidraco",
+        "it": "Dratini",
+        "jp": "ミニリュウ",
+        "kr": "미뇽",
+        "zh": "迷你龙",
+        "zh-CHS": "迷你龙",
+        "zh-CHT": "迷你龍"
+    },
+    "species": [
+        "amphibians",
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "dragon-scale"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 41,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

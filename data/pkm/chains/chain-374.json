@@ -1,0 +1,37 @@
+{
+    "ids": [
+        742,
+        743
+    ],
+    "chains": [
+        {
+            "targets": {
+                "742-cutiefly": {
+                    "pokemon": 742,
+                    "form": "cutiefly"
+                },
+                "743-ribombee": {
+                    "pokemon": 743,
+                    "form": "ribombee"
+                }
+            },
+            "changes": {
+                "742-cutiefly > 743-ribombee": {
+                    "targets": [
+                        "742-cutiefly",
+                        "743-ribombee"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

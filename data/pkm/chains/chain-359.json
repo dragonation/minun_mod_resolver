@@ -1,0 +1,37 @@
+{
+    "ids": [
+        714,
+        715
+    ],
+    "chains": [
+        {
+            "targets": {
+                "714-noibat": {
+                    "pokemon": 714,
+                    "form": "noibat"
+                },
+                "715-noivern": {
+                    "pokemon": 715,
+                    "form": "noivern"
+                }
+            },
+            "changes": {
+                "714-noibat > 715-noivern": {
+                    "targets": [
+                        "714-noibat",
+                        "715-noivern"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                48
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        142
+    ],
+    "chains": [
+        {
+            "targets": {
+                "142-aerodactyl": {
+                    "pokemon": 142,
+                    "form": "aerodactyl"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

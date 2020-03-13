@@ -1,0 +1,16 @@
+{
+    "ids": [
+        441
+    ],
+    "chains": [
+        {
+            "targets": {
+                "441-chatot": {
+                    "pokemon": 441,
+                    "form": "chatot"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

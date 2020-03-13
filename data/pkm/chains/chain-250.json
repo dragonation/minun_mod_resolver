@@ -1,0 +1,57 @@
+{
+    "ids": [
+        501,
+        502,
+        503
+    ],
+    "chains": [
+        {
+            "targets": {
+                "501-oshawott": {
+                    "pokemon": 501,
+                    "form": "oshawott"
+                },
+                "502-dewott": {
+                    "pokemon": 502,
+                    "form": "dewott"
+                },
+                "503-samurott": {
+                    "pokemon": 503,
+                    "form": "samurott"
+                }
+            },
+            "changes": {
+                "501-oshawott > 502-dewott": {
+                    "targets": [
+                        "501-oshawott",
+                        "502-dewott"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                17
+                            ]
+                        }
+                    ]
+                },
+                "502-dewott > 503-samurott": {
+                    "targets": [
+                        "502-dewott",
+                        "503-samurott"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

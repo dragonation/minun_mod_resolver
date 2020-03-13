@@ -1,0 +1,37 @@
+{
+    "ids": [
+        228,
+        229
+    ],
+    "chains": [
+        {
+            "targets": {
+                "228-houndour": {
+                    "pokemon": 228,
+                    "form": "houndour"
+                },
+                "229-houndoom": {
+                    "pokemon": 229,
+                    "form": "houndoom"
+                }
+            },
+            "changes": {
+                "228-houndour > 229-houndoom": {
+                    "targets": [
+                        "228-houndour",
+                        "229-houndoom"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                24
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

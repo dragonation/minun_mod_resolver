@@ -1,0 +1,16 @@
+{
+    "ids": [
+        370
+    ],
+    "chains": [
+        {
+            "targets": {
+                "370-luvdisc": {
+                    "pokemon": 370,
+                    "form": "luvdisc"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

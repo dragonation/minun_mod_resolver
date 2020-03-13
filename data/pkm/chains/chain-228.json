@@ -1,0 +1,37 @@
+{
+    "ids": [
+        451,
+        452
+    ],
+    "chains": [
+        {
+            "targets": {
+                "451-skorupi": {
+                    "pokemon": 451,
+                    "form": "skorupi"
+                },
+                "452-drapion": {
+                    "pokemon": 452,
+                    "form": "drapion"
+                }
+            },
+            "changes": {
+                "451-skorupi > 452-drapion": {
+                    "targets": [
+                        "451-skorupi",
+                        "452-drapion"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

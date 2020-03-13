@@ -1,13 +1,13 @@
 <div id="caption">Search results (${results.length}${results.length >= 100 ? '+' : ''})</div>
 <div id="types">
-    <div class="type" class:selected="scope == 'pokemon'" @click="searchForPokemons()"><u>P</u>okemons</div>
-    <div class="type" class:selected="scope == 'model'" @click="searchForModels()"><u>M</u>odels</div>
+    <ui-button class="type" class:selected="scope == 'pokemon'" @action="searchForPokemons()"><u>P</u>okemons</ui-button>
+    <ui-button class="type" class:selected="scope == 'model'" @action="searchForModels()"><u>M</u>odels</ui-button>
 </div>
 <ui-collection-view id="results"
                     style:--cell-width="340px" style:--cell-height="50px"
                     prop:sections="${[results]}" prop:cells-getter="{section}">
     <tmpl:slot name="cell">
-        <div class="result result-type-${cell.type} result-color-${cell.pokemon.color}" @click="smartOpen(cell)">
+        <ui-button class="result result-type-${cell.type} result-color-${cell.pokemon.color}" @action="smartOpen(cell)">
             <pkmsm-snapshot model="${cell.snapshot}" class="snapshot"/>
             <div class="title">
                 <div class="name">${cell.pokemon.name}</div>
@@ -24,6 +24,6 @@
                 </tmpl:map>
             </div>
             <div class="pokemon-id">${cell.pokemon.id}</div>
-        </div>
+        </ui-button>
     </tmpl:slot>
 </ui-collection-view>

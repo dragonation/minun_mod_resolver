@@ -1,0 +1,16 @@
+{
+    "ids": [
+        357
+    ],
+    "chains": [
+        {
+            "targets": {
+                "357-tropius": {
+                    "pokemon": 357,
+                    "form": "tropius"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

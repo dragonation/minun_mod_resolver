@@ -1,0 +1,16 @@
+{
+    "ids": [
+        561
+    ],
+    "chains": [
+        {
+            "targets": {
+                "561-sigilyph": {
+                    "pokemon": 561,
+                    "form": "sigilyph"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

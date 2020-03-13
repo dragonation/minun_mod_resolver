@@ -1,0 +1,561 @@
+{
+    "id": 351,
+    "name": "Castform",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Although its form changes with the weather, that is apparently the result of a chemical reaction and not the result of its own free will.",
+        "Its form changes depending on the weather. The rougher conditions get, the rougher Castform's disposition!"
+    ],
+    "forms": {
+        "normal-form": {
+            "id": "normal-form",
+            "name": "Normal",
+            "shape": "head",
+            "abilities": [
+                "forecast"
+            ],
+            "weight": 0.8,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 70,
+                "defense": 70,
+                "special-attack": 70,
+                "special-defense": 70,
+                "speed": 70
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "hail",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "weather-ball",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 35,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 45,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "gray"
+        },
+        "sunny-form": {
+            "id": "sunny-form",
+            "name": "Sunny Form",
+            "shape": "head",
+            "abilities": [
+                "forecast"
+            ],
+            "weight": 0.8,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 70,
+                "defense": 70,
+                "special-attack": 70,
+                "special-defense": 70,
+                "speed": 70
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "hail",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "weather-ball",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 35,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 45,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "fire"
+            ],
+            "color": "red"
+        },
+        "rainy-form": {
+            "id": "rainy-form",
+            "name": "Rainy Form",
+            "shape": "head",
+            "abilities": [
+                "forecast"
+            ],
+            "weight": 0.8,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 70,
+                "defense": 70,
+                "special-attack": 70,
+                "special-defense": 70,
+                "speed": 70
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "hail",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "weather-ball",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 35,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 45,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        },
+        "snowy-form": {
+            "id": "snowy-form",
+            "name": "Snowy Form",
+            "shape": "head",
+            "abilities": [
+                "forecast"
+            ],
+            "weight": 0.8,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 70,
+                "defense": 70,
+                "special-attack": 70,
+                "special-defense": 70,
+                "speed": 70
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "hail",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "weather-ball",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 35,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 45,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "ice"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 179,
+    "changes": [
+        {
+            "targets": {
+                "351-normal-form": {
+                    "pokemon": 351,
+                    "weather": "cloudy",
+                    "form": "normal-form"
+                },
+                "351-sunny-form": {
+                    "pokemon": 351,
+                    "weather": "sunny",
+                    "form": "sunny-form"
+                },
+                "351-rainy-form": {
+                    "pokemon": 351,
+                    "weather": "rainy",
+                    "form": "rainy-form"
+                },
+                "351-snowy-form": {
+                    "pokemon": 351,
+                    "weather": "snowy",
+                    "form": "snowy-form"
+                }
+            },
+            "changes": {}
+        }
+    ],
+    "classification": "weather",
+    "names": {
+        "de": "Formeo",
+        "en": "Castform",
+        "es": "Castform",
+        "fr": "Morphéo",
+        "it": "Castform",
+        "jp": "ポワルン",
+        "kr": "캐스퐁",
+        "zh": "飘浮泡泡",
+        "zh-CHS": "飘浮泡泡",
+        "zh-CHT": "飄浮泡泡"
+    },
+    "species": [
+        "fairy",
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "mystic-water",
+        "rare": "mystic-water"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 147
+    }
+}

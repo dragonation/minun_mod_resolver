@@ -1,0 +1,37 @@
+{
+    "ids": [
+        425,
+        426
+    ],
+    "chains": [
+        {
+            "targets": {
+                "425-drifloon": {
+                    "pokemon": 425,
+                    "form": "drifloon"
+                },
+                "426-drifblim": {
+                    "pokemon": 426,
+                    "form": "drifblim"
+                }
+            },
+            "changes": {
+                "425-drifloon > 426-drifblim": {
+                    "targets": [
+                        "425-drifloon",
+                        "426-drifblim"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                28
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

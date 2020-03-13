@@ -1,0 +1,37 @@
+{
+    "ids": [
+        46,
+        47
+    ],
+    "chains": [
+        {
+            "targets": {
+                "46-paras": {
+                    "pokemon": 46,
+                    "form": "paras"
+                },
+                "47-parasect": {
+                    "pokemon": 47,
+                    "form": "parasect"
+                }
+            },
+            "changes": {
+                "46-paras > 47-parasect": {
+                    "targets": [
+                        "46-paras",
+                        "47-parasect"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                24
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

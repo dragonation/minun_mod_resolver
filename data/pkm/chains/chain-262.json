@@ -1,0 +1,37 @@
+{
+    "ids": [
+        529,
+        530
+    ],
+    "chains": [
+        {
+            "targets": {
+                "529-drilbur": {
+                    "pokemon": 529,
+                    "form": "drilbur"
+                },
+                "530-excadrill": {
+                    "pokemon": 530,
+                    "form": "excadrill"
+                }
+            },
+            "changes": {
+                "529-drilbur > 530-excadrill": {
+                    "targets": [
+                        "529-drilbur",
+                        "530-excadrill"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                31
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

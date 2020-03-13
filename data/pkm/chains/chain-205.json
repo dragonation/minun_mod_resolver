@@ -1,0 +1,57 @@
+{
+    "ids": [
+        393,
+        394,
+        395
+    ],
+    "chains": [
+        {
+            "targets": {
+                "393-piplup": {
+                    "pokemon": 393,
+                    "form": "piplup"
+                },
+                "394-prinplup": {
+                    "pokemon": 394,
+                    "form": "prinplup"
+                },
+                "395-empoleon": {
+                    "pokemon": 395,
+                    "form": "empoleon"
+                }
+            },
+            "changes": {
+                "393-piplup > 394-prinplup": {
+                    "targets": [
+                        "393-piplup",
+                        "394-prinplup"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "394-prinplup > 395-empoleon": {
+                    "targets": [
+                        "394-prinplup",
+                        "395-empoleon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

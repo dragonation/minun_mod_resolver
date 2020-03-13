@@ -1,0 +1,57 @@
+{
+    "ids": [
+        599,
+        600,
+        601
+    ],
+    "chains": [
+        {
+            "targets": {
+                "599-klink": {
+                    "pokemon": 599,
+                    "form": "klink"
+                },
+                "600-klang": {
+                    "pokemon": 600,
+                    "form": "klang"
+                },
+                "601-klinklang": {
+                    "pokemon": 601,
+                    "form": "klinklang"
+                }
+            },
+            "changes": {
+                "599-klink > 600-klang": {
+                    "targets": [
+                        "599-klink",
+                        "600-klang"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                38
+                            ]
+                        }
+                    ]
+                },
+                "600-klang > 601-klinklang": {
+                    "targets": [
+                        "600-klang",
+                        "601-klinklang"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                49
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+{
+    "id": 458,
+    "name": "Mantyke",
+    "experiences-type": "slow",
+    "texts": [
+        "Mantyke living in Galar seem to be somewhat sluggish. The colder waters of the seas in this region may be the cause.",
+        "It swims along with a school of Remoraid, and they'll all fight together to repel attackers."
+    ],
+    "forms": {
+        "mantyke": {
+            "id": "mantyke",
+            "name": "Mantyke",
+            "shape": "two-wings",
+            "abilities": [
+                "swift-swim",
+                "water-absorb"
+            ],
+            "weight": 65,
+            "height": 1,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 20,
+                "defense": 50,
+                "special-attack": 60,
+                "special-defense": 120,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "water-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 8,
+                    "name": "wing-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "wide-guard",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 36,
+                    "name": "aqua-ring",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "bounce",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 85
+                },
+                {
+                    "level": 44,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 48,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water",
+                "flying"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 115,
+    "classification": "kite",
+    "names": {
+        "de": "Mantirps",
+        "en": "Mantyke",
+        "es": "Mantyke",
+        "fr": "Babimanta",
+        "it": "Mantyke",
+        "jp": "タマンタ",
+        "kr": "타만타",
+        "zh": "小球飞鱼",
+        "zh-CHS": "小球飞鱼",
+        "zh-CHT": "小球飛魚"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 25,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 69
+    }
+}

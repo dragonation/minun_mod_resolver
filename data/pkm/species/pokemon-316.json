@@ -1,0 +1,187 @@
+{
+    "id": 316,
+    "name": "Gulpin",
+    "experiences-type": "fluctuating",
+    "texts": [
+        "It has a small heart and brain. Its stomach comprises most of its body, with enzymes to dissolve anything.",
+        "There is nothing its stomach can't digest. While it is digesting, vile, overpowering gases are expelled."
+    ],
+    "forms": {
+        "gulpin": {
+            "id": "gulpin",
+            "name": "Gulpin",
+            "shape": "head-arms",
+            "abilities": [
+                "liquid-ooze",
+                "sticky-hold"
+            ],
+            "weight": 10.3,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 43,
+                "defense": 53,
+                "special-attack": 43,
+                "special-defense": 53,
+                "speed": 40
+            },
+            "hidden-abilities": [
+                "gluttony"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "poison-gas",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "sludge",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "acid-spray",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "encore",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 28,
+                    "name": "stockpile",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "spit-up",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "swallow",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "sludge-bomb",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "gastro-acid",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "belch",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 90
+                },
+                {
+                    "level": 44,
+                    "name": "wring-out",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "gunk-shot",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "poison"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 159,
+    "classification": "stomach",
+    "names": {
+        "de": "Schluppuck",
+        "en": "Gulpin",
+        "es": "Gulpin",
+        "fr": "Gloupti",
+        "it": "Gulpin",
+        "jp": "ゴクリン",
+        "kr": "꼴깍몬",
+        "zh": "溶食兽",
+        "zh-CHS": "溶食兽",
+        "zh-CHT": "溶食獸"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "oran-berry",
+        "rare": "sitrus-berry"
+    },
+    "capture-rate": 225,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "ids": [
+        824,
+        825,
+        826
+    ],
+    "chains": [
+        {
+            "targets": {
+                "824-blipbug": {
+                    "pokemon": 824,
+                    "form": "blipbug"
+                },
+                "825-dottler": {
+                    "pokemon": 825,
+                    "form": "dottler"
+                },
+                "826-orbeetle": {
+                    "pokemon": 826,
+                    "form": "orbeetle"
+                }
+            },
+            "changes": {
+                "824-blipbug > 825-dottler": {
+                    "targets": [
+                        "824-blipbug",
+                        "825-dottler"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                10
+                            ]
+                        }
+                    ]
+                },
+                "825-dottler > 826-orbeetle": {
+                    "targets": [
+                        "825-dottler",
+                        "826-orbeetle"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

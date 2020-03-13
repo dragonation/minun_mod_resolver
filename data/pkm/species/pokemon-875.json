@@ -1,0 +1,284 @@
+{
+    "id": 875,
+    "name": "Eiscue",
+    "experiences-type": "slow",
+    "texts": [
+        "It drifted in on the flow of ocean waters from a frigid place. It keeps its head iced constantly to make sure it stays nice and cold.",
+        "This Pokémon keeps its heat-sensitive head cool with ice. It fishes for its food, dangling its single hair into the sea to lure in prey."
+    ],
+    "forms": {
+        "ice-face": {
+            "id": "ice-face",
+            "name": "Ice Face",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "ice-face"
+            ],
+            "weight": 89,
+            "height": 1.4,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 110,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 50
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "weather-ball",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "icy-wind",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 24,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "hail",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "aurora-veil",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 54,
+                    "name": "surf",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "ice"
+            ],
+            "color": "blue"
+        },
+        "noice-face": {
+            "id": "noice-face",
+            "name": "Noice Face",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "ice-face"
+            ],
+            "weight": 89,
+            "height": 1.4,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 70,
+                "special-attack": 65,
+                "special-defense": 50,
+                "speed": 130
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "weather-ball",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "icy-wind",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 24,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "hail",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "aurora-veil",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 54,
+                    "name": "surf",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "ice"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 448,
+    "changes": [
+        {
+            "targets": {
+                "875-ice-face": {
+                    "pokemon": 875,
+                    "form": "ice-face"
+                },
+                "875-noice-face": {
+                    "pokemon": 875,
+                    "situation": "battle",
+                    "form": "noice-face",
+                    "event": "attacked"
+                }
+            },
+            "changes": {}
+        }
+    ],
+    "classification": "penguin",
+    "names": {
+        "de": "Kubuin",
+        "en": "Eiscue",
+        "es": "Eiscue",
+        "fr": "Bekaglaçon",
+        "it": "Eiscue",
+        "jp": "コオリッポ",
+        "kr": "빙큐보",
+        "zh": "冰砌鹅",
+        "zh-CHS": "冰砌鹅",
+        "zh-CHT": "冰砌鵝"
+    },
+    "species": [
+        "amphibians",
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 60,
+    "hatching-cycles": 25,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 165
+    }
+}

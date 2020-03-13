@@ -1,0 +1,56 @@
+{
+    "ids": [
+        102,
+        103
+    ],
+    "chains": [
+        {
+            "targets": {
+                "102-exeggcute": {
+                    "pokemon": 102,
+                    "form": "exeggcute"
+                },
+                "103-exeggutor": {
+                    "pokemon": 103,
+                    "form": "exeggutor"
+                },
+                "103-alolan-exeggutor": {
+                    "pokemon": 103,
+                    "form": "alolan-exeggutor"
+                }
+            },
+            "changes": {
+                "102-exeggcute > 103-exeggutor": {
+                    "targets": [
+                        "102-exeggcute",
+                        "103-exeggutor"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "leaf-stone"
+                            ]
+                        }
+                    ]
+                },
+                "102-exeggcute > 103-alolan-exeggutor": {
+                    "targets": [
+                        "102-exeggcute",
+                        "103-alolan-exeggutor"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "leaf-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        882
+    ],
+    "chains": [
+        {
+            "targets": {
+                "882-dracovish": {
+                    "pokemon": 882,
+                    "form": "dracovish"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

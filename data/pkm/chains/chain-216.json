@@ -1,0 +1,37 @@
+{
+    "ids": [
+        420,
+        421
+    ],
+    "chains": [
+        {
+            "targets": {
+                "420-cherubi": {
+                    "pokemon": 420,
+                    "form": "cherubi"
+                },
+                "421-overcast-form": {
+                    "pokemon": 421,
+                    "form": "overcast-form"
+                }
+            },
+            "changes": {
+                "420-cherubi > 421-overcast-form": {
+                    "targets": [
+                        "420-cherubi",
+                        "421-overcast-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

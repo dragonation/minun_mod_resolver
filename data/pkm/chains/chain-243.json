@@ -1,0 +1,30 @@
+{
+    "ids": [
+        489,
+        490
+    ],
+    "chains": [
+        {
+            "targets": {
+                "489-phione": {
+                    "pokemon": 489,
+                    "form": "phione"
+                },
+                "490-manaphy": {
+                    "pokemon": 490,
+                    "form": "manaphy"
+                }
+            },
+            "changes": {
+                "490-manaphy > 489-phione": {
+                    "targets": [
+                        "490-manaphy",
+                        "489-phione"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                }
+            }
+        }
+    ]
+}

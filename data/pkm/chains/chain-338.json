@@ -1,0 +1,37 @@
+{
+    "ids": [
+        674,
+        675
+    ],
+    "chains": [
+        {
+            "targets": {
+                "674-pancham": {
+                    "pokemon": 674,
+                    "form": "pancham"
+                },
+                "675-pangoro": {
+                    "pokemon": 675,
+                    "form": "pangoro"
+                }
+            },
+            "changes": {
+                "674-pancham > 675-pangoro": {
+                    "targets": [
+                        "674-pancham",
+                        "675-pangoro"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

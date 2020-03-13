@@ -1,0 +1,57 @@
+{
+    "ids": [
+        104,
+        105
+    ],
+    "chains": [
+        {
+            "targets": {
+                "104-cubone": {
+                    "pokemon": 104,
+                    "form": "cubone"
+                },
+                "105-marowak": {
+                    "pokemon": 105,
+                    "form": "marowak"
+                },
+                "105-alolan-marowak": {
+                    "pokemon": 105,
+                    "form": "alolan-marowak"
+                }
+            },
+            "changes": {
+                "104-cubone > 105-marowak": {
+                    "targets": [
+                        "104-cubone",
+                        "105-marowak"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                28
+                            ]
+                        }
+                    ]
+                },
+                "104-cubone > 105-alolan-marowak": {
+                    "targets": [
+                        "104-cubone",
+                        "105-alolan-marowak"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                28
+                            ],
+                            "time": "night"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

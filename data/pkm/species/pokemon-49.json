@@ -1,0 +1,237 @@
+{
+    "id": 49,
+    "name": "Venomoth",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "The scales it scatters will paralyze anyone who touches them, making that person unable to stand.",
+        "The wings are covered with dustlike scales. Every time it flaps its wings, it looses highly toxic dust."
+    ],
+    "forms": {
+        "venomoth": {
+            "id": "venomoth",
+            "name": "Venomoth",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "tinted-lens"
+            ],
+            "weight": 12.5,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 65,
+                "defense": 60,
+                "special-attack": 90,
+                "special-defense": 75,
+                "speed": 90
+            },
+            "hidden-abilities": [
+                "wonder-skin"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "silver-wind",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "foresight",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 11,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 25,
+                    "name": "signal-beam",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 37,
+                    "name": "leech-life",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 47,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 59,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 63,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "bug",
+                "poison"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 20,
+    "classification": "poison-moth",
+    "names": {
+        "de": "Omot",
+        "en": "Venomoth",
+        "es": "Venomoth",
+        "fr": "Aéromite",
+        "it": "Venomoth",
+        "jp": "モルフォン",
+        "kr": "도나리",
+        "zh": "摩鲁蛾",
+        "zh-CHS": "摩鲁蛾",
+        "zh-CHT": "摩魯蛾"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "shed-shell"
+    },
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 158
+    }
+}

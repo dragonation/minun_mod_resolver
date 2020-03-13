@@ -1,0 +1,37 @@
+{
+    "ids": [
+        21,
+        22
+    ],
+    "chains": [
+        {
+            "targets": {
+                "21-spearow": {
+                    "pokemon": 21,
+                    "form": "spearow"
+                },
+                "22-fearow": {
+                    "pokemon": 22,
+                    "form": "fearow"
+                }
+            },
+            "changes": {
+                "21-spearow > 22-fearow": {
+                    "targets": [
+                        "21-spearow",
+                        "22-fearow"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

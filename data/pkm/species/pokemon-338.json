@@ -1,0 +1,187 @@
+{
+    "id": 338,
+    "name": "Solrock",
+    "experiences-type": "fast",
+    "texts": [
+        "When it rotates itself, it gives off light similar to the sun, thus blinding its foes.",
+        "Solar energy is the source of its power, so it is strong during the daytime. When it spins, its body shines."
+    ],
+    "forms": {
+        "solrock": {
+            "id": "solrock",
+            "name": "Solrock",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 154,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 95,
+                "defense": 85,
+                "special-attack": 55,
+                "special-defense": 65,
+                "speed": 70
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "flare-blitz",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "morning-sun",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 5,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 10,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 25,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 40,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "wonder-room",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "psychic"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 172,
+    "classification": "meteorite",
+    "names": {
+        "de": "Sonnfel",
+        "en": "Solrock",
+        "es": "Solrock",
+        "fr": "Solaroc",
+        "it": "Solrock",
+        "jp": "ソルロック",
+        "kr": "솔록",
+        "zh": "太阳岩",
+        "zh-CHS": "太阳岩",
+        "zh-CHT": "太陽岩"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {
+        "common": "stardust",
+        "rare": "sun-stone"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 161
+    }
+}

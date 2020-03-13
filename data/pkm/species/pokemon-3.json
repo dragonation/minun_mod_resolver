@@ -1,0 +1,589 @@
+{
+    "id": 3,
+    "name": "Venusaur",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.",
+        "A bewitching aroma wafts from its flower. The fragrance becalms those engaged in a battle."
+    ],
+    "forms": {
+        "venusaur": {
+            "id": "venusaur",
+            "name": "Venusaur",
+            "shape": "quadruped",
+            "abilities": [
+                "overgrow"
+            ],
+            "weight": 100,
+            "height": 2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 82,
+                "defense": 83,
+                "special-attack": 100,
+                "special-defense": 100,
+                "speed": 80
+            },
+            "hidden-abilities": [
+                "chlorophyll"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "petal-blizzard",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "petal-dance",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "vine-whip",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 45,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "petal-blizzard",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 15,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 15,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 20,
+                    "name": "seed-bomb",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 30,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "synthesis",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "worry-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass",
+                "poison"
+            ],
+            "color": "green"
+        },
+        "mega-venusaur": {
+            "id": "mega-venusaur",
+            "name": "Mega Venusaur",
+            "shape": "quadruped",
+            "abilities": [
+                "thick-fat"
+            ],
+            "weight": 155.5,
+            "height": 2.4,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 100,
+                "defense": 123,
+                "special-attack": 122,
+                "special-defense": 120,
+                "speed": 80
+            },
+            "hidden-abilities": [
+                "chlorophyll"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "petal-blizzard",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "petal-dance",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "vine-whip",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 45,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "petal-blizzard",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 15,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 15,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 20,
+                    "name": "seed-bomb",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 30,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "synthesis",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "worry-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass",
+                "poison"
+            ],
+            "color": "green"
+        },
+        "gigantamax-venusaur": {
+            "id": "gigantamax-venusaur",
+            "name": "Gigantamax Venusaur",
+            "shape": "quadruped",
+            "abilities": [
+                "overgrow"
+            ],
+            "weight": 100,
+            "height": 2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 82,
+                "defense": 83,
+                "special-attack": 100,
+                "special-defense": 100,
+                "speed": 80
+            },
+            "hidden-abilities": [
+                "chlorophyll"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "petal-blizzard",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "petal-dance",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "vine-whip",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 45,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "petal-blizzard",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 15,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 15,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 20,
+                    "name": "seed-bomb",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 30,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "synthesis",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "worry-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass",
+                "poison"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 1,
+    "changes": [
+        {
+            "targets": {
+                "3-venusaur": {
+                    "pokemon": 3,
+                    "form": "venusaur"
+                },
+                "3-mega-venusaur": {
+                    "pokemon": 3,
+                    "form": "mega-venusaur"
+                }
+            },
+            "changes": {
+                "3-venusaur <> 3-mega-venusaur": {
+                    "targets": [
+                        "3-venusaur",
+                        "3-mega-venusaur"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "venusaurite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "3-venusaur": {
+                    "pokemon": 3,
+                    "form": "venusaur"
+                },
+                "3-gigantamax-venusaur": {
+                    "pokemon": 3,
+                    "form": "gigantamax-venusaur"
+                }
+            },
+            "changes": {
+                "3-venusaur <> 3-gigantamax-venusaur": {
+                    "targets": [
+                        "3-venusaur",
+                        "3-gigantamax-venusaur"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dynamax-band"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "seed",
+    "names": {
+        "de": "Bisaflor",
+        "en": "Venusaur",
+        "es": "Venusaur",
+        "fr": "Florizarre",
+        "it": "Venusaur",
+        "jp": "フシギバナ",
+        "kr": "이상해꽃",
+        "zh": "妙蛙花",
+        "zh-CHS": "妙蛙花",
+        "zh-CHT": "妙蛙花"
+    },
+    "species": [
+        "monster",
+        "plant"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 2,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 236
+    }
+}

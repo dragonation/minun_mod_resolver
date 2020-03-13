@@ -1,0 +1,37 @@
+{
+    "ids": [
+        165,
+        166
+    ],
+    "chains": [
+        {
+            "targets": {
+                "165-ledyba": {
+                    "pokemon": 165,
+                    "form": "ledyba"
+                },
+                "166-ledian": {
+                    "pokemon": 166,
+                    "form": "ledian"
+                }
+            },
+            "changes": {
+                "165-ledyba > 166-ledian": {
+                    "targets": [
+                        "165-ledyba",
+                        "166-ledian"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

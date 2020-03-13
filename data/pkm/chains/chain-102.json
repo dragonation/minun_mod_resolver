@@ -1,0 +1,16 @@
+{
+    "ids": [
+        206
+    ],
+    "chains": [
+        {
+            "targets": {
+                "206-dunsparce": {
+                    "pokemon": 206,
+                    "form": "dunsparce"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

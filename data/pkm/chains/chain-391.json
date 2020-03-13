@@ -1,0 +1,36 @@
+{
+    "ids": [
+        772,
+        773
+    ],
+    "chains": [
+        {
+            "targets": {
+                "772-type-null": {
+                    "pokemon": 772,
+                    "form": "type-null"
+                },
+                "773-silvally": {
+                    "pokemon": 773,
+                    "form": "silvally"
+                }
+            },
+            "changes": {
+                "772-type-null > 773-silvally": {
+                    "targets": [
+                        "772-type-null",
+                        "773-silvally"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

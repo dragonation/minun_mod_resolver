@@ -1,0 +1,56 @@
+{
+    "ids": [
+        39,
+        40,
+        174
+    ],
+    "chains": [
+        {
+            "targets": {
+                "174-igglybuff": {
+                    "pokemon": 174,
+                    "form": "igglybuff"
+                },
+                "39-jigglypuff": {
+                    "pokemon": 39,
+                    "form": "jigglypuff"
+                },
+                "40-wigglytuff": {
+                    "pokemon": 40,
+                    "form": "wigglytuff"
+                }
+            },
+            "changes": {
+                "174-igglybuff > 39-jigglypuff": {
+                    "targets": [
+                        "174-igglybuff",
+                        "39-jigglypuff"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": []
+                        }
+                    ]
+                },
+                "39-jigglypuff > 40-wigglytuff": {
+                    "targets": [
+                        "39-jigglypuff",
+                        "40-wigglytuff"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "moon-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        843,
+        844
+    ],
+    "chains": [
+        {
+            "targets": {
+                "843-silicobra": {
+                    "pokemon": 843,
+                    "form": "silicobra"
+                },
+                "844-sandaconda": {
+                    "pokemon": 844,
+                    "form": "sandaconda"
+                }
+            },
+            "changes": {
+                "843-silicobra > 844-sandaconda": {
+                    "targets": [
+                        "843-silicobra",
+                        "844-sandaconda"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

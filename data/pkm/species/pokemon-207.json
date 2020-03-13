@@ -1,0 +1,182 @@
+{
+    "id": 207,
+    "name": "Gligar",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It usually clings to cliffs. When it spots its prey, it spreads its wings and glides down to attack.",
+        "It flies straight at its target's face then clamps down on the startled victim to inject poison."
+    ],
+    "forms": {
+        "gligar": {
+            "id": "gligar",
+            "name": "Gligar",
+            "shape": "two-wings",
+            "abilities": [
+                "hyper-cutter",
+                "sand-veil"
+            ],
+            "weight": 64.8,
+            "height": 1.1,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 75,
+                "defense": 105,
+                "special-attack": 35,
+                "special-defense": 65,
+                "speed": 85
+            },
+            "hidden-abilities": [
+                "immunity"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "poison-sting",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 19,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 22,
+                    "name": "acrobatics",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "u-turn",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "sky-uppercut",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 90
+                },
+                {
+                    "level": 50,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "guillotine",
+                    "type": "normal",
+                    "category": "physical"
+                }
+            ],
+            "types": [
+                "ground",
+                "flying"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 103,
+    "classification": "flyscorpion",
+    "names": {
+        "de": "Skorgla",
+        "en": "Gligar",
+        "es": "Gligar",
+        "fr": "Scorplane",
+        "it": "Gligar",
+        "jp": "グライガー",
+        "kr": "글라이거",
+        "zh": "天蝎",
+        "zh-CHS": "天蝎",
+        "zh-CHT": "天蠍"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 86
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "ids": [
+        696,
+        697
+    ],
+    "chains": [
+        {
+            "targets": {
+                "696-tyrunt": {
+                    "pokemon": 696,
+                    "form": "tyrunt"
+                },
+                "697-tyrantrum": {
+                    "pokemon": 697,
+                    "form": "tyrantrum"
+                }
+            },
+            "changes": {
+                "696-tyrunt > 697-tyrantrum": {
+                    "targets": [
+                        "696-tyrunt",
+                        "697-tyrantrum"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                39
+                            ],
+                            "time": "day"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

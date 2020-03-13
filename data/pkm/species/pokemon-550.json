@@ -1,0 +1,346 @@
+{
+    "id": 550,
+    "name": "Basculin",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Anglers love the fight this Pokémon puts up on the hook. And there are always more to catch— many people release them into lakes illicitly.",
+        "In the past, it often appeared on the dinner table. The meat of red-striped Basculin is on the fatty side, and it's more popular with the youth."
+    ],
+    "forms": {
+        "red-striped-form": {
+            "id": "red-striped-form",
+            "name": "Red Basculin",
+            "shape": "fins",
+            "abilities": [
+                "reckless",
+                "adaptability"
+            ],
+            "weight": 18,
+            "height": 1,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 92,
+                "defense": 65,
+                "special-attack": 80,
+                "special-defense": 55,
+                "speed": 98
+            },
+            "hidden-abilities": [
+                "mold-breaker"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "aqua-jet",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "soak",
+                    "type": "water",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 40,
+                    "name": "final-gambit",
+                    "type": "fighting",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 48,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 52,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "green"
+        },
+        "blue-striped-form": {
+            "id": "blue-striped-form",
+            "name": "Blue Basculin",
+            "shape": "fins",
+            "abilities": [
+                "rock-head",
+                "adaptability"
+            ],
+            "weight": 18,
+            "height": 1,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 92,
+                "defense": 65,
+                "special-attack": 80,
+                "special-defense": 55,
+                "speed": 98
+            },
+            "hidden-abilities": [
+                "mold-breaker"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "aqua-jet",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "soak",
+                    "type": "water",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 40,
+                    "name": "final-gambit",
+                    "type": "fighting",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 48,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 52,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 272,
+    "classification": "hostile",
+    "names": {
+        "de": "Barschuft",
+        "en": "Basculin",
+        "es": "Basculin",
+        "fr": "Bargantua",
+        "it": "Basculin",
+        "jp": "バスラオ",
+        "kr": "배쓰나이",
+        "zh": "野蛮鲈鱼",
+        "zh-CHS": "野蛮鲈鱼",
+        "zh-CHT": "野蠻鱸魚"
+    },
+    "species": [
+        "fish"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "deep-sea-tooth"
+    },
+    "capture-rate": 25,
+    "hatching-cycles": 41,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 2,
+        "experience": 161
+    }
+}

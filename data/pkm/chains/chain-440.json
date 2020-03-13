@@ -1,0 +1,66 @@
+{
+    "ids": [
+        854,
+        855
+    ],
+    "chains": [
+        {
+            "targets": {
+                "854-sinistea": {
+                    "pokemon": 854,
+                    "form": "sinistea"
+                },
+                "855-polteageist": {
+                    "pokemon": 855,
+                    "form": "polteageist"
+                }
+            },
+            "changes": {
+                "854-sinistea > 855-polteageist": {
+                    "targets": [
+                        "854-sinistea",
+                        "855-polteageist"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "cracked-pot"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "854-sinistea": {
+                    "pokemon": 854,
+                    "form": "sinistea"
+                },
+                "855-polteageist": {
+                    "pokemon": 855,
+                    "form": "polteageist"
+                }
+            },
+            "changes": {
+                "854-sinistea > 855-polteageist": {
+                    "targets": [
+                        "854-sinistea",
+                        "855-polteageist"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "chipped-pot"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

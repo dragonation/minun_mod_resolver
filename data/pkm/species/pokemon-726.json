@@ -1,0 +1,176 @@
+{
+    "id": 726,
+    "name": "Torracat",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "In the midst of battle, the fire pouch on Torracat's neck rings like a bell and produces stronger flames than usual.",
+        "When facing a powerful enemy, Torracat's fighting spirit gets pumped up, and its fire bell blazes hotter."
+    ],
+    "forms": {
+        "torracat": {
+            "id": "torracat",
+            "name": "Torracat",
+            "shape": "quadruped",
+            "abilities": [
+                "blaze"
+            ],
+            "weight": 25,
+            "height": 0.7,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 85,
+                "defense": 50,
+                "special-attack": 80,
+                "special-defense": 50,
+                "speed": 90
+            },
+            "hidden-abilities": [
+                "intimidate"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "lick",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 15,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "double-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 40,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "flare-blitz",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 367,
+    "classification": "fire-cat",
+    "names": {
+        "de": "Miezunder",
+        "en": "Torracat",
+        "es": "Torracat",
+        "fr": "Matoufeu",
+        "it": "Torracat",
+        "jp": "ニャヒート",
+        "kr": "냐오히트",
+        "zh": "炎热喵",
+        "zh-CHS": "炎热喵",
+        "zh-CHT": ""
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 2,
+        "experience": 147
+    }
+}

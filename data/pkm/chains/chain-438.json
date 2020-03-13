@@ -1,0 +1,37 @@
+{
+    "ids": [
+        850,
+        851
+    ],
+    "chains": [
+        {
+            "targets": {
+                "850-sizzlipede": {
+                    "pokemon": 850,
+                    "form": "sizzlipede"
+                },
+                "851-centiskorch": {
+                    "pokemon": 851,
+                    "form": "centiskorch"
+                }
+            },
+            "changes": {
+                "850-sizzlipede > 851-centiskorch": {
+                    "targets": [
+                        "850-sizzlipede",
+                        "851-centiskorch"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                28
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

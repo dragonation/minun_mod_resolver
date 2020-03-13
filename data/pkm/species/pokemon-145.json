@@ -1,0 +1,183 @@
+{
+    "id": 145,
+    "name": "Zapdos",
+    "experiences-type": "slow",
+    "texts": [
+        "A legendary bird Pokémon that is said to appear from clouds while dropping enormous lightning bolts.",
+        "A legendary Pokémon that is said to live in thunderclouds. It freely controls lightning bolts."
+    ],
+    "forms": {
+        "zapdos": {
+            "id": "zapdos",
+            "name": "Zapdos",
+            "shape": "two-wings",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 52.6,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 90,
+                "defense": 85,
+                "special-attack": 125,
+                "special-defense": 90,
+                "speed": 100
+            },
+            "hidden-abilities": [
+                "static"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 15,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 22,
+                    "name": "pluck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 64,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 71,
+                    "name": "drill-peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 78,
+                    "name": "thunder",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 85,
+                    "name": "roost",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 92,
+                    "name": "magnetic-flux",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 99,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                }
+            ],
+            "types": [
+                "electric",
+                "flying"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 73,
+    "classification": "electric",
+    "names": {
+        "de": "Zapdos",
+        "en": "Zapdos",
+        "es": "Zapdos",
+        "fr": "Électhor",
+        "it": "Zapdos",
+        "jp": "サンダー",
+        "kr": "썬더",
+        "zh": "闪电鸟",
+        "zh-CHS": "闪电鸟",
+        "zh-CHT": "閃電鳥"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 81,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 261
+    }
+}

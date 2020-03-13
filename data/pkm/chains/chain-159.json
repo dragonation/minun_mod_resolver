@@ -1,0 +1,37 @@
+{
+    "ids": [
+        316,
+        317
+    ],
+    "chains": [
+        {
+            "targets": {
+                "316-gulpin": {
+                    "pokemon": 316,
+                    "form": "gulpin"
+                },
+                "317-swalot": {
+                    "pokemon": 317,
+                    "form": "swalot"
+                }
+            },
+            "changes": {
+                "316-gulpin > 317-swalot": {
+                    "targets": [
+                        "316-gulpin",
+                        "317-swalot"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                26
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

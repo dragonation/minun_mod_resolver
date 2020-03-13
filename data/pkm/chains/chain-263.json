@@ -1,0 +1,16 @@
+{
+    "ids": [
+        531
+    ],
+    "chains": [
+        {
+            "targets": {
+                "531-audino": {
+                    "pokemon": 531,
+                    "form": "audino"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,213 @@
+{
+    "id": 101,
+    "name": "Electrode",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It explodes in response to even minor stimuli. It is feared, with the nickname of \"The Bomb Ball.\"",
+        "It stores an overflowing amount of electric energy inside its body. Even a small shock makes it explode."
+    ],
+    "forms": {
+        "electrode": {
+            "id": "electrode",
+            "name": "Electrode",
+            "shape": "head",
+            "abilities": [
+                "soundproof",
+                "static"
+            ],
+            "weight": 66.6,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 50,
+                "defense": 70,
+                "special-attack": 80,
+                "special-defense": 80,
+                "speed": 150
+            },
+            "hidden-abilities": [
+                "aftermath"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "magnetic-flux",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sonic-boom",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "eerie-impulse",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "sonic-boom",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 90
+                },
+                {
+                    "level": 6,
+                    "name": "eerie-impulse",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 13,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 16,
+                    "name": "charge-beam",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 22,
+                    "name": "electro-ball",
+                    "type": "electric",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "magnet-rise",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 41,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "gyro-ball",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "mirror-coat",
+                    "type": "psychic",
+                    "category": "special",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 44,
+    "classification": "ball",
+    "names": {
+        "de": "Lektrobal",
+        "en": "Electrode",
+        "es": "Electrode",
+        "fr": "Électrode",
+        "it": "Electrode",
+        "jp": "マルマイン",
+        "kr": "붐볼",
+        "zh": "顽皮雷弹",
+        "zh-CHS": "顽皮雷弹",
+        "zh-CHT": "頑皮雷彈"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 2,
+        "experience": 172
+    }
+}

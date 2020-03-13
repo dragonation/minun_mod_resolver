@@ -1,0 +1,37 @@
+{
+    "ids": [
+        300,
+        301
+    ],
+    "chains": [
+        {
+            "targets": {
+                "300-skitty": {
+                    "pokemon": 300,
+                    "form": "skitty"
+                },
+                "301-delcatty": {
+                    "pokemon": 301,
+                    "form": "delcatty"
+                }
+            },
+            "changes": {
+                "300-skitty > 301-delcatty": {
+                    "targets": [
+                        "300-skitty",
+                        "301-delcatty"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "moon-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

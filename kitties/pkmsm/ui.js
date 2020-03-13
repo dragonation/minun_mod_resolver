@@ -46,6 +46,18 @@ const zlib = require("zlib");
 
 });
 
+@servlet.get("/~pkmsm/model/list", function (request, response) {
+
+    this.break();
+
+    response.headers["Content-Type"] = "text/plain";
+
+    return @mew.rpc("pkmsm.listModels", {}).then(function (models) {
+        response.writer.end(@.serialize(models), this.test);
+    });
+    
+});
+
 @servlet.get("/~pkmsm/model/pokemon-*", function (request, response) {
 
     this.break();

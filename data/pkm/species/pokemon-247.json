@@ -1,0 +1,202 @@
+{
+    "id": 247,
+    "name": "Pupitar",
+    "experiences-type": "slow",
+    "texts": [
+        "Even sealed in its shell, it can move freely. Hard and fast, it has outstanding destructive power.",
+        "It will not stay still, even while it's a pupa. It already has arms and legs under its solid shell."
+    ],
+    "forms": {
+        "pupitar": {
+            "id": "pupitar",
+            "name": "Pupitar",
+            "shape": "serpentine",
+            "abilities": [
+                "shed-skin"
+            ],
+            "weight": 152,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 84,
+                "defense": 70,
+                "special-attack": 65,
+                "special-defense": 70,
+                "speed": 51
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 9,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 18,
+                    "name": "stomping-tantrum",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 24,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 42,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 52,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "rock",
+                "ground"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 126,
+    "classification": "hard-shell",
+    "names": {
+        "de": "Pupitar",
+        "en": "Pupitar",
+        "es": "Pupitar",
+        "fr": "Ymphect",
+        "it": "Pupitar",
+        "jp": "サナギラス",
+        "kr": "데기라스",
+        "zh": "沙基拉斯",
+        "zh-CHS": "沙基拉斯",
+        "zh-CHT": "沙基拉斯"
+    },
+    "species": [
+        "monster"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 41,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 144
+    }
+}

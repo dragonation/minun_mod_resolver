@@ -1,0 +1,57 @@
+{
+    "ids": [
+        287,
+        288,
+        289
+    ],
+    "chains": [
+        {
+            "targets": {
+                "287-slakoth": {
+                    "pokemon": 287,
+                    "form": "slakoth"
+                },
+                "288-vigoroth": {
+                    "pokemon": 288,
+                    "form": "vigoroth"
+                },
+                "289-slaking": {
+                    "pokemon": 289,
+                    "form": "slaking"
+                }
+            },
+            "changes": {
+                "287-slakoth > 288-vigoroth": {
+                    "targets": [
+                        "287-slakoth",
+                        "288-vigoroth"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "288-vigoroth > 289-slaking": {
+                    "targets": [
+                        "288-vigoroth",
+                        "289-slaking"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

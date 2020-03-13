@@ -1,0 +1,16 @@
+{
+    "ids": [
+        243
+    ],
+    "chains": [
+        {
+            "targets": {
+                "243-raikou": {
+                    "pokemon": 243,
+                    "form": "raikou"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

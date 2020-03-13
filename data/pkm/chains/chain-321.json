@@ -1,0 +1,16 @@
+{
+    "ids": [
+        642
+    ],
+    "chains": [
+        {
+            "targets": {
+                "642-incarnate-form": {
+                    "pokemon": 642,
+                    "form": "incarnate-form"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

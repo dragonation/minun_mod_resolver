@@ -1,0 +1,37 @@
+{
+    "ids": [
+        692,
+        693
+    ],
+    "chains": [
+        {
+            "targets": {
+                "692-clauncher": {
+                    "pokemon": 692,
+                    "form": "clauncher"
+                },
+                "693-clawitzer": {
+                    "pokemon": 693,
+                    "form": "clawitzer"
+                }
+            },
+            "changes": {
+                "692-clauncher > 693-clawitzer": {
+                    "targets": [
+                        "692-clauncher",
+                        "693-clawitzer"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                37
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

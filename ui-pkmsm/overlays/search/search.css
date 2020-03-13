@@ -37,6 +37,7 @@
         border: solid 1dpx $alpha($white(0), 0.5);
         border-left: none;
         cursor: pointer;
+        background-color: #fff;
 
         &:first-child {
             border-left: solid 1dpx $alpha($white(0), 0.5);
@@ -69,6 +70,7 @@
 
     .result {
 
+        display: block;
         position: relative;
         border-bottom: solid 1dpx rgba(0, 0, 0, 0.05);
         overflow: hidden;

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        399,
+        400
+    ],
+    "chains": [
+        {
+            "targets": {
+                "399-bidoof": {
+                    "pokemon": 399,
+                    "form": "bidoof"
+                },
+                "400-bibarel": {
+                    "pokemon": 400,
+                    "form": "bibarel"
+                }
+            },
+            "changes": {
+                "399-bidoof > 400-bibarel": {
+                    "targets": [
+                        "399-bidoof",
+                        "400-bibarel"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                15
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

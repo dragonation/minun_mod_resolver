@@ -1,0 +1,50 @@
+{
+    "ids": [
+        175,
+        176,
+        468
+    ],
+    "chains": [
+        {
+            "targets": {
+                "175-togepi": {
+                    "pokemon": 175,
+                    "form": "togepi"
+                },
+                "176-togetic": {
+                    "pokemon": 176,
+                    "form": "togetic"
+                },
+                "468-togekiss": {
+                    "pokemon": 468,
+                    "form": "togekiss"
+                }
+            },
+            "changes": {
+                "175-togepi > 176-togetic": {
+                    "targets": [
+                        "175-togepi",
+                        "176-togetic"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                },
+                "176-togetic > 468-togekiss": {
+                    "targets": [
+                        "176-togetic",
+                        "468-togekiss"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "shiny-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

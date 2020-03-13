@@ -1,0 +1,57 @@
+{
+    "ids": [
+        29,
+        30,
+        31
+    ],
+    "chains": [
+        {
+            "targets": {
+                "29-nidoran-female": {
+                    "pokemon": 29,
+                    "form": "nidoran-female"
+                },
+                "30-nidorina": {
+                    "pokemon": 30,
+                    "form": "nidorina"
+                },
+                "31-nidoqueen": {
+                    "pokemon": 31,
+                    "form": "nidoqueen"
+                }
+            },
+            "changes": {
+                "29-nidoran-female > 30-nidorina": {
+                    "targets": [
+                        "29-nidoran-female",
+                        "30-nidorina"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "30-nidorina > 31-nidoqueen": {
+                    "targets": [
+                        "30-nidorina",
+                        "31-nidoqueen"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "moon-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

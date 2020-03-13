@@ -1,0 +1,106 @@
+{
+    "id": 440,
+    "name": "Happiny",
+    "experiences-type": "fast",
+    "texts": [
+        "Usually it's a well-behaved Pokémon, but if you take its round rock away, it will cry and fuss and throw a big old tantrum.",
+        "When it sees something round and white, Happiny puts it into the pouch on its stomach. It sometimes becomes overloaded and can't move."
+    ],
+    "forms": {
+        "happiny": {
+            "id": "happiny",
+            "name": "Happiny",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "natural-cure",
+                "serene-grace"
+            ],
+            "weight": 24.4,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 5,
+                "defense": 5,
+                "special-attack": 15,
+                "special-defense": 65,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "copycat",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 9,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "sweet-kiss",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 75
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 50,
+    "classification": "playhouse",
+    "names": {
+        "de": "Wonneira",
+        "en": "Happiny",
+        "es": "Happiny",
+        "fr": "Ptiravi",
+        "it": "Happiny",
+        "jp": "ピンプク",
+        "kr": "핑복",
+        "zh": "小福蛋",
+        "zh-CHS": "小福蛋",
+        "zh-CHT": "小福蛋"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "0/8",
+    "holdings": {
+        "common": "oval-stone"
+    },
+    "capture-rate": 130,
+    "hatching-cycles": 41,
+    "initial-happiness": 140,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 110
+    }
+}

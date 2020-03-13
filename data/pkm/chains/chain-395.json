@@ -1,0 +1,16 @@
+{
+    "ids": [
+        777
+    ],
+    "chains": [
+        {
+            "targets": {
+                "777-togedemaru": {
+                    "pokemon": 777,
+                    "form": "togedemaru"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

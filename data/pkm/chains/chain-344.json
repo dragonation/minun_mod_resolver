@@ -1,0 +1,40 @@
+{
+    "ids": [
+        686,
+        687
+    ],
+    "chains": [
+        {
+            "targets": {
+                "686-inkay": {
+                    "pokemon": 686,
+                    "form": "inkay"
+                },
+                "687-malamar": {
+                    "pokemon": 687,
+                    "form": "malamar"
+                }
+            },
+            "changes": {
+                "686-inkay > 687-malamar": {
+                    "targets": [
+                        "686-inkay",
+                        "687-malamar"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ],
+                            "state": [
+                                "upside-down"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

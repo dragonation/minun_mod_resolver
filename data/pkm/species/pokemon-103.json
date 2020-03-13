@@ -1,0 +1,256 @@
+{
+    "id": 103,
+    "name": "Exeggutor",
+    "experiences-type": "slow",
+    "texts": [
+        "It engages its enemies using psychic powers. Each of its three heads fires off psychokinetic energy, tripling its power.",
+        "Each of its three heads has its own thoughts. When they want to go in different directions, Exeggutor becomes unable to move."
+    ],
+    "forms": {
+        "exeggutor": {
+            "id": "exeggutor",
+            "name": "Exeggutor",
+            "shape": "head-legs",
+            "abilities": [
+                "chlorophyll"
+            ],
+            "weight": 120,
+            "height": 2,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 85,
+                "special-attack": 125,
+                "special-defense": 75,
+                "speed": 55
+            },
+            "hidden-abilities": [
+                "harvest"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "stomp",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "seed-bomb",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "barrage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "stomp",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "psyshock",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "egg-bomb",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 75
+                },
+                {
+                    "level": 37,
+                    "name": "wood-hammer",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "leaf-storm",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "grass",
+                "psychic"
+            ],
+            "color": "yellow"
+        },
+        "alolan-exeggutor": {
+            "id": "alolan-exeggutor",
+            "name": "Alolan Exeggutor",
+            "shape": "head-legs",
+            "abilities": [
+                "frisk"
+            ],
+            "weight": 415.6,
+            "height": 10.9,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 105,
+                "defense": 85,
+                "special-attack": 125,
+                "special-defense": 75,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "harvest"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "dragon-hammer",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "seed-bomb",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "barrage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "dragon-hammer",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "psyshock",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "egg-bomb",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 75
+                },
+                {
+                    "level": 37,
+                    "name": "wood-hammer",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "leaf-storm",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "grass",
+                "dragon"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 45,
+    "classification": "coconut",
+    "names": {
+        "de": "Kokowei",
+        "en": "Exeggutor",
+        "es": "Exeggutor",
+        "fr": "Noadkoko",
+        "it": "Exeggutor",
+        "jp": "ナッシー",
+        "kr": "나시",
+        "zh": "椰蛋树",
+        "zh-CHS": "椰蛋树",
+        "zh-CHT": "椰蛋樹"
+    },
+    "species": [
+        "plant"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 2,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 186
+    }
+}

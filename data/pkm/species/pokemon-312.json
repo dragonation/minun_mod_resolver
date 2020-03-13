@@ -1,0 +1,215 @@
+{
+    "id": 312,
+    "name": "Minun",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Exposure to electricity from Minun and Plusle promotes blood circulation and relaxes muscles.",
+        "It cheers on friends. If its friends are losing, its body lets off more and more sparks."
+    ],
+    "forms": {
+        "minun": {
+            "id": "minun",
+            "name": "Minun",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "minus"
+            ],
+            "weight": 4.2,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 40,
+                "defense": 50,
+                "special-attack": 75,
+                "special-defense": 85,
+                "speed": 95
+            },
+            "hidden-abilities": [
+                "volt-absorb"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "nuzzle",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "play-nice",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "encore",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "switcheroo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 19,
+                    "name": "electro-ball",
+                    "type": "electric",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "copycat",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "fake-tears",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "trump-card",
+                    "type": "normal",
+                    "category": "special"
+                },
+                {
+                    "level": 43,
+                    "name": "thunder",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 46,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "entrainment",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 155,
+    "classification": "cheering",
+    "names": {
+        "de": "Minun",
+        "en": "Minun",
+        "es": "Minun",
+        "fr": "Négapi",
+        "it": "Minun",
+        "jp": "マイナン",
+        "kr": "마이농",
+        "zh": "负电拍拍",
+        "zh-CHS": "负电拍拍",
+        "zh-CHT": "負電拍拍"
+    },
+    "species": [
+        "fairy"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "cell-battery"
+    },
+    "capture-rate": 200,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 142
+    }
+}

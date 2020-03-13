@@ -1,0 +1,30 @@
+{
+    "ids": [
+        202,
+        360
+    ],
+    "chains": [
+        {
+            "targets": {
+                "360-wynaut": {
+                    "pokemon": 360,
+                    "form": "wynaut"
+                },
+                "202-wobbuffet": {
+                    "pokemon": 202,
+                    "form": "wobbuffet"
+                }
+            },
+            "changes": {
+                "360-wynaut > 202-wobbuffet": {
+                    "targets": [
+                        "360-wynaut",
+                        "202-wobbuffet"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                }
+            }
+        }
+    ]
+}

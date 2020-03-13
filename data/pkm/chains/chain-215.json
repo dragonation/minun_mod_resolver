@@ -1,0 +1,37 @@
+{
+    "ids": [
+        418,
+        419
+    ],
+    "chains": [
+        {
+            "targets": {
+                "418-buizel": {
+                    "pokemon": 418,
+                    "form": "buizel"
+                },
+                "419-floatzel": {
+                    "pokemon": 419,
+                    "form": "floatzel"
+                }
+            },
+            "changes": {
+                "418-buizel > 419-floatzel": {
+                    "targets": [
+                        "418-buizel",
+                        "419-floatzel"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                26
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

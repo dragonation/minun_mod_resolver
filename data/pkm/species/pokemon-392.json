@@ -1,0 +1,209 @@
+{
+    "id": 392,
+    "name": "Infernape",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "Its crown of fire is indicative of its fiery nature. It is beaten by none in terms of quickness.",
+        "It tosses its enemies around with agility. It uses all its limbs to fight in its own unique style."
+    ],
+    "forms": {
+        "infernape": {
+            "id": "infernape",
+            "name": "Infernape",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "blaze"
+            ],
+            "weight": 55,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 76,
+                "attack": 104,
+                "defense": 71,
+                "special-attack": 104,
+                "special-defense": 71,
+                "speed": 108
+            },
+            "hidden-abilities": [
+                "iron-fist"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mach-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flare-blitz",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 19,
+                    "name": "flame-wheel",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "fire-spin",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 52,
+                    "name": "acrobatics",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 68,
+                    "name": "flare-blitz",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire",
+                "fighting"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 204,
+    "classification": "flame",
+    "names": {
+        "de": "Panferno",
+        "en": "Infernape",
+        "es": "Infernape",
+        "fr": "Simiabraz",
+        "it": "Infernape",
+        "jp": "ゴウカザル",
+        "kr": "초염몽",
+        "zh": "烈焰猴",
+        "zh-CHS": "烈焰猴",
+        "zh-CHT": "烈焰猴"
+    },
+    "species": [
+        "field",
+        "creature"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 240
+    }
+}

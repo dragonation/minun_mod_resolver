@@ -1,0 +1,16 @@
+{
+    "ids": [
+        701
+    ],
+    "chains": [
+        {
+            "targets": {
+                "701-hawlucha": {
+                    "pokemon": 701,
+                    "form": "hawlucha"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

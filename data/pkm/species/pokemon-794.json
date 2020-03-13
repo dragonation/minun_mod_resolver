@@ -1,0 +1,215 @@
+{
+    "id": 794,
+    "name": "Buzzwole",
+    "experiences-type": "slow",
+    "texts": [
+        "Although it's alien to this world and a danger here, it's apparently a common organism in the world where it normally lives.",
+        "Buzzwole goes around showing off its abnormally swollen muscles. It is one kind of Ultra Beast."
+    ],
+    "forms": {
+        "buzzwole": {
+            "id": "buzzwole",
+            "name": "Buzzwole",
+            "shape": "tentacles",
+            "abilities": [
+                "beast-boost"
+            ],
+            "weight": 333.6,
+            "height": 2.4,
+            "base-stats": {
+                "health-points": 107,
+                "attack": 139,
+                "defense": 139,
+                "special-attack": 53,
+                "special-defense": 53,
+                "speed": 79
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "fell-stinger",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "power-up-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "comet-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 85
+                },
+                {
+                    "level": 13,
+                    "name": "bulk-up",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "vital-throw",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 70
+                },
+                {
+                    "level": 23,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "leech-life",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "mega-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 85
+                },
+                {
+                    "level": 43,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 53,
+                    "name": "lunge",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 59,
+                    "name": "dynamic-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 50
+                },
+                {
+                    "level": 67,
+                    "name": "superpower",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 73,
+                    "name": "focus-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "fighting"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 407,
+    "classification": "swollen",
+    "names": {
+        "de": "Masskito",
+        "en": "Buzzwole",
+        "es": "Buzzwole",
+        "fr": "Mouscoto",
+        "it": "Buzzwole",
+        "jp": "マッシブーン",
+        "kr": "매시붕",
+        "zh": "爆肌蚊",
+        "zh-CHS": "爆肌蚊",
+        "zh-CHT": ""
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 25,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 114
+    }
+}

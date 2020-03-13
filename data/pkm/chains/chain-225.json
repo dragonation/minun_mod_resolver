@@ -1,0 +1,57 @@
+{
+    "ids": [
+        443,
+        444,
+        445
+    ],
+    "chains": [
+        {
+            "targets": {
+                "443-gible": {
+                    "pokemon": 443,
+                    "form": "gible"
+                },
+                "444-gabite": {
+                    "pokemon": 444,
+                    "form": "gabite"
+                },
+                "445-garchomp": {
+                    "pokemon": 445,
+                    "form": "garchomp"
+                }
+            },
+            "changes": {
+                "443-gible > 444-gabite": {
+                    "targets": [
+                        "443-gible",
+                        "444-gabite"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                24
+                            ]
+                        }
+                    ]
+                },
+                "444-gabite > 445-garchomp": {
+                    "targets": [
+                        "444-gabite",
+                        "445-garchomp"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                48
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

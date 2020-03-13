@@ -1,0 +1,37 @@
+{
+    "ids": [
+        98,
+        99
+    ],
+    "chains": [
+        {
+            "targets": {
+                "98-krabby": {
+                    "pokemon": 98,
+                    "form": "krabby"
+                },
+                "99-kingler": {
+                    "pokemon": 99,
+                    "form": "kingler"
+                }
+            },
+            "changes": {
+                "98-krabby > 99-kingler": {
+                    "targets": [
+                        "98-krabby",
+                        "99-kingler"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                28
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

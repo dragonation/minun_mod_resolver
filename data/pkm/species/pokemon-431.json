@@ -1,0 +1,172 @@
+{
+    "id": 431,
+    "name": "Glameow",
+    "experiences-type": "fast",
+    "texts": [
+        "It claws if displeased and purrs when affectionate. Its fickleness is very popular among some.",
+        "When it's happy, Glameow demonstrates beautiful movements of its tail, like a dancing ribbon."
+    ],
+    "forms": {
+        "glameow": {
+            "id": "glameow",
+            "name": "Glameow",
+            "shape": "quadruped",
+            "abilities": [
+                "limber",
+                "own-tempo"
+            ],
+            "weight": 3.9,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 49,
+                "attack": 55,
+                "defense": 42,
+                "special-attack": 42,
+                "special-defense": 37,
+                "speed": 85
+            },
+            "hidden-abilities": [
+                "keen-eye"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 17,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 20,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 25,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "assist",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "attract",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "hone-claws",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 220,
+    "classification": "catty",
+    "names": {
+        "de": "Charmian",
+        "en": "Glameow",
+        "es": "Glameow",
+        "fr": "Chaglam",
+        "it": "Glameow",
+        "jp": "ニャルマー",
+        "kr": "나옹마",
+        "zh": "魅力喵",
+        "zh-CHS": "魅力喵",
+        "zh-CHT": "魅力喵"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "2/6",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 62
+    }
+}

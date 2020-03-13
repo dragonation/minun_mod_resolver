@@ -1,0 +1,55 @@
+{
+    "ids": [
+        116,
+        117,
+        230
+    ],
+    "chains": [
+        {
+            "targets": {
+                "116-horsea": {
+                    "pokemon": 116,
+                    "form": "horsea"
+                },
+                "117-seadra": {
+                    "pokemon": 117,
+                    "form": "seadra"
+                },
+                "230-kingdra": {
+                    "pokemon": 230,
+                    "form": "kingdra"
+                }
+            },
+            "changes": {
+                "116-horsea > 117-seadra": {
+                    "targets": [
+                        "116-horsea",
+                        "117-seadra"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                },
+                "117-seadra > 230-kingdra": {
+                    "targets": [
+                        "117-seadra",
+                        "230-kingdra"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

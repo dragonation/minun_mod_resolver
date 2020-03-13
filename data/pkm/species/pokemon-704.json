@@ -1,0 +1,161 @@
+{
+    "id": 704,
+    "name": "Goomy",
+    "experiences-type": "slow",
+    "texts": [
+        "Because most of its body is water, it will dry up if the weather becomes too arid. It's considered the weakest dragon Pokémon.",
+        "Their horns are powerful sensors. As soon as Goomy pick up any sign of enemies, they go into hiding. This is how they've survived."
+    ],
+    "forms": {
+        "goomy": {
+            "id": "goomy",
+            "name": "Goomy",
+            "shape": "serpentine",
+            "abilities": [
+                "sap-sipper",
+                "hydration"
+            ],
+            "weight": 2.8,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 50,
+                "defense": 35,
+                "special-attack": 55,
+                "special-defense": 75,
+                "speed": 40
+            },
+            "hidden-abilities": [
+                "gooey"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "muddy-water",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "dragon"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 354,
+    "classification": "soft-tissue",
+    "names": {
+        "de": "Viscora",
+        "en": "Goomy",
+        "es": "Goomy",
+        "fr": "Mucuscule",
+        "it": "Goomy",
+        "jp": "ヌメラ",
+        "kr": "미끄메라",
+        "zh": "黏黏宝",
+        "zh-CHS": "黏黏宝",
+        "zh-CHT": "黏黏寶"
+    },
+    "species": [
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "shed-shell"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 41,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 60
+    }
+}

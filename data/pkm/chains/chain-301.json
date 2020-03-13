@@ -1,0 +1,57 @@
+{
+    "ids": [
+        610,
+        611,
+        612
+    ],
+    "chains": [
+        {
+            "targets": {
+                "610-axew": {
+                    "pokemon": 610,
+                    "form": "axew"
+                },
+                "611-fraxure": {
+                    "pokemon": 611,
+                    "form": "fraxure"
+                },
+                "612-haxorus": {
+                    "pokemon": 612,
+                    "form": "haxorus"
+                }
+            },
+            "changes": {
+                "610-axew > 611-fraxure": {
+                    "targets": [
+                        "610-axew",
+                        "611-fraxure"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                38
+                            ]
+                        }
+                    ]
+                },
+                "611-fraxure > 612-haxorus": {
+                    "targets": [
+                        "611-fraxure",
+                        "612-haxorus"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                48
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

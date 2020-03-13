@@ -1,0 +1,37 @@
+{
+    "ids": [
+        566,
+        567
+    ],
+    "chains": [
+        {
+            "targets": {
+                "566-archen": {
+                    "pokemon": 566,
+                    "form": "archen"
+                },
+                "567-archeops": {
+                    "pokemon": 567,
+                    "form": "archeops"
+                }
+            },
+            "changes": {
+                "566-archen > 567-archeops": {
+                    "targets": [
+                        "566-archen",
+                        "567-archeops"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                37
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

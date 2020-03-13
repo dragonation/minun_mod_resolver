@@ -1,0 +1,192 @@
+{
+    "id": 47,
+    "name": "Parasect",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "The bug is mostly dead, with the mushroom on its back having become the main body. If the mushroom comes off, the bug stops moving.",
+        "Its poisonous spores are also used in traditional medicine. Apparently, spores produced in Alola are not of very good quality."
+    ],
+    "forms": {
+        "parasect": {
+            "id": "parasect",
+            "name": "Parasect",
+            "shape": "insectoid",
+            "abilities": [
+                "effect-spore",
+                "dry-skin"
+            ],
+            "weight": 29.5,
+            "height": 1,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 95,
+                "defense": 80,
+                "special-attack": 60,
+                "special-defense": 80,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "damp"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "cross-poison",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 6,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 11,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 22,
+                    "name": "spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "giga-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 59,
+                    "name": "rage-powder",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 66,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "grass"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 19,
+    "classification": "mushroom",
+    "names": {
+        "de": "Parasek",
+        "en": "Parasect",
+        "es": "Parasect",
+        "fr": "Parasect",
+        "it": "Parasect",
+        "jp": "パラセクト",
+        "kr": "파라섹트",
+        "zh": "派拉斯特",
+        "zh-CHS": "派拉斯特",
+        "zh-CHT": "派拉斯特"
+    },
+    "species": [
+        "bug",
+        "plant"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "tiny-mushroom",
+        "rare": "big-mushroom"
+    },
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 142
+    }
+}

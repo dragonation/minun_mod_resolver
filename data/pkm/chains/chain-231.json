@@ -1,0 +1,37 @@
+{
+    "ids": [
+        456,
+        457
+    ],
+    "chains": [
+        {
+            "targets": {
+                "456-finneon": {
+                    "pokemon": 456,
+                    "form": "finneon"
+                },
+                "457-lumineon": {
+                    "pokemon": 457,
+                    "form": "lumineon"
+                }
+            },
+            "changes": {
+                "456-finneon > 457-lumineon": {
+                    "targets": [
+                        "456-finneon",
+                        "457-lumineon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                31
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

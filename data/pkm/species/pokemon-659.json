@@ -1,0 +1,183 @@
+{
+    "id": 659,
+    "name": "Bunnelby",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It excels at digging holes. Using its ears, it can dig a nest 33 feet deep in one night.",
+        "It's very sensitive to danger. The sound of Corviknight's flapping will have Bunnelby digging a hole to hide underground in moments."
+    ],
+    "forms": {
+        "bunnelby": {
+            "id": "bunnelby",
+            "name": "Bunnelby",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "pickup",
+                "cheek-pouch"
+            ],
+            "weight": 5,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 38,
+                "attack": 36,
+                "defense": 38,
+                "special-attack": 32,
+                "special-defense": 36,
+                "speed": 57
+            },
+            "hidden-abilities": [
+                "huge-power"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "laser-focus",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 9,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "mud-shot",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 15,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "double-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "bounce",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 85
+                },
+                {
+                    "level": 30,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 33,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "super-fang",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 332,
+    "classification": "digging",
+    "names": {
+        "de": "Scoppel",
+        "en": "Bunnelby",
+        "es": "Bunnelby",
+        "fr": "Sapereau",
+        "it": "Bunnelby",
+        "jp": "ホルビー",
+        "kr": "파르빗",
+        "zh": "掘掘兔",
+        "zh-CHS": "掘掘兔",
+        "zh-CHT": "掘掘兔"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 47
+    }
+}

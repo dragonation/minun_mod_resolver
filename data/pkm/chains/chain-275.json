@@ -1,0 +1,16 @@
+{
+    "ids": [
+        556
+    ],
+    "chains": [
+        {
+            "targets": {
+                "556-maractus": {
+                    "pokemon": 556,
+                    "form": "maractus"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

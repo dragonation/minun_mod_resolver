@@ -1,0 +1,363 @@
+{
+    "id": 303,
+    "name": "Mawile",
+    "experiences-type": "fast",
+    "texts": [
+        "It uses its docile-looking face to lull foes into complacency, then bites with its huge, relentless jaws.",
+        "It chomps with its gaping mouth. Its huge jaws are actually steel horns that have been transformed."
+    ],
+    "forms": {
+        "mawile": {
+            "id": "mawile",
+            "name": "Mawile",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "hyper-cutter",
+                "intimidate"
+            ],
+            "weight": 11.5,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 85,
+                "defense": 85,
+                "special-attack": 55,
+                "special-defense": 55,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "sheer-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "fairy-wind",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "stockpile",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "swallow",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "spit-up",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "fake-tears",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "steel",
+                "fairy"
+            ],
+            "color": "black"
+        },
+        "mega-mawile": {
+            "id": "mega-mawile",
+            "name": "Mega Mawile",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "huge-power"
+            ],
+            "weight": 23.5,
+            "height": 1,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 105,
+                "defense": 125,
+                "special-attack": 55,
+                "special-defense": 95,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "sheer-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "fairy-wind",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "stockpile",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "swallow",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "spit-up",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "fake-tears",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "steel",
+                "fairy"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 150,
+    "changes": [
+        {
+            "targets": {
+                "303-mawile": {
+                    "pokemon": 303,
+                    "form": "mawile"
+                },
+                "303-mega-mawile": {
+                    "pokemon": 303,
+                    "form": "mega-mawile"
+                }
+            },
+            "changes": {
+                "303-mawile <> 303-mega-mawile": {
+                    "targets": [
+                        "303-mawile",
+                        "303-mega-mawile"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "mawilite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "deceiver",
+    "names": {
+        "de": "Flunkifer",
+        "en": "Mawile",
+        "es": "Mawile",
+        "fr": "Mysdibule",
+        "it": "Mawile",
+        "jp": "クチート",
+        "kr": "입치트",
+        "zh": "大嘴娃",
+        "zh-CHS": "大嘴娃",
+        "zh-CHT": "大嘴娃"
+    },
+    "species": [
+        "field",
+        "fairy"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "iron-ball"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 133
+    }
+}

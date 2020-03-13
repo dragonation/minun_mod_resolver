@@ -1,0 +1,57 @@
+{
+    "ids": [
+        390,
+        391,
+        392
+    ],
+    "chains": [
+        {
+            "targets": {
+                "390-chimchar": {
+                    "pokemon": 390,
+                    "form": "chimchar"
+                },
+                "391-monferno": {
+                    "pokemon": 391,
+                    "form": "monferno"
+                },
+                "392-infernape": {
+                    "pokemon": 392,
+                    "form": "infernape"
+                }
+            },
+            "changes": {
+                "390-chimchar > 391-monferno": {
+                    "targets": [
+                        "390-chimchar",
+                        "391-monferno"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                14
+                            ]
+                        }
+                    ]
+                },
+                "391-monferno > 392-infernape": {
+                    "targets": [
+                        "391-monferno",
+                        "392-infernape"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

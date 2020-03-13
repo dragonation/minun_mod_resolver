@@ -6,7 +6,7 @@ const Overlay = function Overlay(dom, filler) {
 };
 
 Overlay.parameters = {
-    "scope": "pokemon"
+    "scope": "model"
 };
 
 Overlay.prototype.searchPokemonsWithKeyword = function (keyword, version) {
@@ -19,25 +19,28 @@ Overlay.prototype.searchPokemonsWithKeyword = function (keyword, version) {
             }
 
             let parsed = $.serial.deserialize(data);
-            let items = parsed.map((pokemon) => ({
+            let items = parsed.map((pokemon) => {
 
-                // "id": pokemon.id,
-                "id": `pokemon-${("00" + pokemon.id).slice(-3)}-0`,
+                return {
 
-                "snapshot": `pokemon-${("00" + pokemon.id).slice(-3)}-0`,
+                    // "id": pokemon.id,
+                    "id": `pokemon-${("00" + pokemon.id).slice(-3)}-0`,
 
-                "pokemon": {
-                    "id": pokemon.id,
-                    "name": pokemon.name,
-                    "color": pokemon.color,
-                    "types": pokemon.types,
-                },
+                    "snapshot": `pokemon-${("00" + pokemon.id).slice(-3)}-0`,
 
-                "type": "pokemon",
+                    "pokemon": {
+                        "id": pokemon.id,
+                        "name": pokemon.name,
+                        "color": pokemon.forms[pokemon.candidate].color,
+                        "types": pokemon.forms[pokemon.candidate].types,
+                    },
 
-                "features": []
+                    "type": "pokemon",
 
-            }));
+                    "features": []
+                };
+
+            });
 
             this.filler.fill({
                 "results": items
@@ -68,8 +71,8 @@ Overlay.prototype.searchModelsWithKeyword = function (keyword, version) {
                 "pokemon": {
                     "id": model.pokemon.id,
                     "name": model.pokemon.name,
-                    "color": model.pokemon.color,
-                    "types": model.pokemon.types,
+                    "color": model.pokemon.forms[model.pokemon.candidate].color,
+                    "types": model.pokemon.forms[model.pokemon.candidate].types,
                 },
 
                 "type": "model",

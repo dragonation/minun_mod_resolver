@@ -1,0 +1,199 @@
+{
+    "id": 563,
+    "name": "Cofagrigus",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "This Pokémon has a body of sparkling gold. People say it no longer remembers that it was once human.",
+        "There are many depictions of Cofagrigus decorating ancient tombs. They're symbols of the wealth that kings of bygone eras had."
+    ],
+    "forms": {
+        "cofagrigus": {
+            "id": "cofagrigus",
+            "name": "Cofagrigus",
+            "shape": "head-base",
+            "abilities": [
+                "mummy"
+            ],
+            "weight": 76.5,
+            "height": 1.7,
+            "base-stats": {
+                "health-points": 58,
+                "attack": 50,
+                "defense": 145,
+                "special-attack": 95,
+                "special-defense": 105,
+                "speed": 30
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "shadow-claw",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "haze",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "shadow-claw",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "will-o-wisp",
+                    "type": "fire",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "crafty-shield",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "grudge",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "power-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 56,
+                    "name": "guard-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 62,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "ghost"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 279,
+    "classification": "coffin",
+    "names": {
+        "de": "Echnatoll",
+        "en": "Cofagrigus",
+        "es": "Cofagrigus",
+        "fr": "Tutankafer",
+        "it": "Cofagrigus",
+        "jp": "デスカーン",
+        "kr": "데스니칸",
+        "zh": "死神棺",
+        "zh-CHS": "死神棺",
+        "zh-CHT": "死神棺"
+    },
+    "species": [
+        "mineral",
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "spell-tag"
+    },
+    "capture-rate": 90,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 169
+    }
+}

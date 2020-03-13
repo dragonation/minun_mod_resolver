@@ -1,0 +1,190 @@
+{
+    "id": 601,
+    "name": "Klinklang",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "From its spikes, it launches powerful blasts of electricity. Its red core contains an enormous amount of energy.",
+        "The three gears that compose this Pokémon spin at high speed. Its new spiked gear isn't a living creature."
+    ],
+    "forms": {
+        "klinklang": {
+            "id": "klinklang",
+            "name": "Klinklang",
+            "shape": "multiple",
+            "abilities": [
+                "plus",
+                "minus"
+            ],
+            "weight": 81,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 100,
+                "defense": 115,
+                "special-attack": 70,
+                "special-defense": 85,
+                "speed": 90
+            },
+            "hidden-abilities": [
+                "clear-body"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gear-up",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "magnetic-flux",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "vise-grip",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bind",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "charge-beam",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 16,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 32,
+                    "name": "gear-grind",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 85
+                },
+                {
+                    "level": 36,
+                    "name": "lock-on",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "shift-gear",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                },
+                {
+                    "level": 56,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 64,
+                    "name": "electric-terrain",
+                    "type": "electric",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 297,
+    "classification": "gear",
+    "names": {
+        "de": "Klikdiklak",
+        "en": "Klinklang",
+        "es": "Klinklang",
+        "fr": "Cliticlic",
+        "it": "Klinklang",
+        "jp": "ギギギアル",
+        "kr": "기기기어르",
+        "zh": "齿轮怪",
+        "zh-CHS": "齿轮怪",
+        "zh-CHT": "齒輪怪"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 30,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 3,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 234
+    }
+}

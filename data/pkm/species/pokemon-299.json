@@ -1,0 +1,189 @@
+{
+    "id": 299,
+    "name": "Nosepass",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It moves less than an inch a year, but when it's in a jam, it will spin and drill down into the ground in a split second.",
+        "It hunts without twitching a muscle by pulling in its prey with powerful magnetism. But sometimes it pulls natural enemies in close."
+    ],
+    "forms": {
+        "nosepass": {
+            "id": "nosepass",
+            "name": "Nosepass",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "sturdy",
+                "magnet-pull"
+            ],
+            "weight": 97,
+            "height": 1,
+            "base-stats": {
+                "health-points": 30,
+                "attack": 45,
+                "defense": 135,
+                "special-attack": 45,
+                "special-defense": 90,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "block",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 13,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 16,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 25,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 31,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 43,
+                    "name": "lock-on",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 147,
+    "classification": "compass",
+    "names": {
+        "de": "Nasgnet",
+        "en": "Nosepass",
+        "es": "Nosepass",
+        "fr": "Tarinor",
+        "it": "Nosepass",
+        "jp": "ノズパス",
+        "kr": "코코파스",
+        "zh": "朝北鼻",
+        "zh-CHS": "朝北鼻",
+        "zh-CHT": "朝北鼻"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "magnet"
+    },
+    "capture-rate": 255,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 75
+    }
+}

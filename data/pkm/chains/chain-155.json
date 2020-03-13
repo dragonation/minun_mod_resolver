@@ -1,0 +1,16 @@
+{
+    "ids": [
+        312
+    ],
+    "chains": [
+        {
+            "targets": {
+                "312-minun": {
+                    "pokemon": 312,
+                    "form": "minun"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

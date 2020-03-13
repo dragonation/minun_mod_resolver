@@ -1,0 +1,37 @@
+{
+    "ids": [
+        672,
+        673
+    ],
+    "chains": [
+        {
+            "targets": {
+                "672-skiddo": {
+                    "pokemon": 672,
+                    "form": "skiddo"
+                },
+                "673-gogoat": {
+                    "pokemon": 673,
+                    "form": "gogoat"
+                }
+            },
+            "changes": {
+                "672-skiddo > 673-gogoat": {
+                    "targets": [
+                        "672-skiddo",
+                        "673-gogoat"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "ids": [
+        355,
+        356,
+        477
+    ],
+    "chains": [
+        {
+            "targets": {
+                "355-duskull": {
+                    "pokemon": 355,
+                    "form": "duskull"
+                },
+                "356-dusclops": {
+                    "pokemon": 356,
+                    "form": "dusclops"
+                },
+                "477-dusknoir": {
+                    "pokemon": 477,
+                    "form": "dusknoir"
+                }
+            },
+            "changes": {
+                "355-duskull > 356-dusclops": {
+                    "targets": [
+                        "355-duskull",
+                        "356-dusclops"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                37
+                            ]
+                        }
+                    ]
+                },
+                "356-dusclops > 477-dusknoir": {
+                    "targets": [
+                        "356-dusclops",
+                        "477-dusknoir"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

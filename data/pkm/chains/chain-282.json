@@ -1,0 +1,37 @@
+{
+    "ids": [
+        568,
+        569
+    ],
+    "chains": [
+        {
+            "targets": {
+                "568-trubbish": {
+                    "pokemon": 568,
+                    "form": "trubbish"
+                },
+                "569-garbodor": {
+                    "pokemon": 569,
+                    "form": "garbodor"
+                }
+            },
+            "changes": {
+                "568-trubbish > 569-garbodor": {
+                    "targets": [
+                        "568-trubbish",
+                        "569-garbodor"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

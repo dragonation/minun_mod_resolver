@@ -1,0 +1,57 @@
+{
+    "ids": [
+        13,
+        14,
+        15
+    ],
+    "chains": [
+        {
+            "targets": {
+                "13-weedle": {
+                    "pokemon": 13,
+                    "form": "weedle"
+                },
+                "14-kakuna": {
+                    "pokemon": 14,
+                    "form": "kakuna"
+                },
+                "15-beedrill": {
+                    "pokemon": 15,
+                    "form": "beedrill"
+                }
+            },
+            "changes": {
+                "13-weedle > 14-kakuna": {
+                    "targets": [
+                        "13-weedle",
+                        "14-kakuna"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                7
+                            ]
+                        }
+                    ]
+                },
+                "14-kakuna > 15-beedrill": {
+                    "targets": [
+                        "14-kakuna",
+                        "15-beedrill"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                10
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

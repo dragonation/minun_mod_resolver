@@ -1,0 +1,37 @@
+{
+    "ids": [
+        509,
+        510
+    ],
+    "chains": [
+        {
+            "targets": {
+                "509-purrloin": {
+                    "pokemon": 509,
+                    "form": "purrloin"
+                },
+                "510-liepard": {
+                    "pokemon": 510,
+                    "form": "liepard"
+                }
+            },
+            "changes": {
+                "509-purrloin > 510-liepard": {
+                    "targets": [
+                        "509-purrloin",
+                        "510-liepard"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

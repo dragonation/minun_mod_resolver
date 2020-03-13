@@ -1,5 +1,5 @@
 <div id="ui-overlay-container" @mousedown="hideOtherOverlays(); activateOverlay()">
-    <div id="ui-overlay-close-button" @click="closeOverlay()"></div>
+    <ui-button id="ui-overlay-close-button" @click="closeOverlay()"></ui-button>
     <div id="ui-overlay-clients"></div>
     <div id="ui-overlay-resizer" class:resizable="${attributes.resizable == 'yes'}" @mousedown="startResizing(event)"></div>
 </div>

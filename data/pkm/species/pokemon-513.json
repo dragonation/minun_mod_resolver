@@ -1,0 +1,186 @@
+{
+    "id": 513,
+    "name": "Pansear",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Very intelligent, it roasts berries before eating them. It likes to help people.",
+        "This Pokémon lives in caves in volcanoes. The fire within the tuft on its head can reach 600 degrees Fahrenheit."
+    ],
+    "forms": {
+        "pansear": {
+            "id": "pansear",
+            "name": "Pansear",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "gluttony"
+            ],
+            "weight": 11,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 53,
+                "defense": 48,
+                "special-attack": 53,
+                "special-defense": 48,
+                "speed": 64
+            },
+            "hidden-abilities": [
+                "blaze"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "play-nice",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "lick",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "incinerate",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 16,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "flame-burst",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "fling",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "acrobatics",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                },
+                {
+                    "level": 37,
+                    "name": "recycle",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 255,
+    "classification": "high-temp",
+    "names": {
+        "de": "Grillmak",
+        "en": "Pansear",
+        "es": "Pansear",
+        "fr": "Flamajou",
+        "it": "Pansear",
+        "jp": "バオップ",
+        "kr": "바오프",
+        "zh": "爆香猴",
+        "zh-CHS": "爆香猴",
+        "zh-CHT": "爆香猴"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 63
+    }
+}

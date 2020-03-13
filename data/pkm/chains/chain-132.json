@@ -1,0 +1,57 @@
+{
+    "ids": [
+        258,
+        259,
+        260
+    ],
+    "chains": [
+        {
+            "targets": {
+                "258-mudkip": {
+                    "pokemon": 258,
+                    "form": "mudkip"
+                },
+                "259-marshtomp": {
+                    "pokemon": 259,
+                    "form": "marshtomp"
+                },
+                "260-swampert": {
+                    "pokemon": 260,
+                    "form": "swampert"
+                }
+            },
+            "changes": {
+                "258-mudkip > 259-marshtomp": {
+                    "targets": [
+                        "258-mudkip",
+                        "259-marshtomp"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "259-marshtomp > 260-swampert": {
+                    "targets": [
+                        "259-marshtomp",
+                        "260-swampert"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

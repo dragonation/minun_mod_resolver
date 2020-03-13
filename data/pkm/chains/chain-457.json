@@ -1,0 +1,57 @@
+{
+    "ids": [
+        885,
+        886,
+        887
+    ],
+    "chains": [
+        {
+            "targets": {
+                "885-dreepy": {
+                    "pokemon": 885,
+                    "form": "dreepy"
+                },
+                "886-drakloak": {
+                    "pokemon": 886,
+                    "form": "drakloak"
+                },
+                "887-dragapult": {
+                    "pokemon": 887,
+                    "form": "dragapult"
+                }
+            },
+            "changes": {
+                "885-dreepy > 886-drakloak": {
+                    "targets": [
+                        "885-dreepy",
+                        "886-drakloak"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                50
+                            ]
+                        }
+                    ]
+                },
+                "886-drakloak > 887-dragapult": {
+                    "targets": [
+                        "886-drakloak",
+                        "887-dragapult"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                60
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

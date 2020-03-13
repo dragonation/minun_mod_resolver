@@ -1,0 +1,37 @@
+{
+    "ids": [
+        559,
+        560
+    ],
+    "chains": [
+        {
+            "targets": {
+                "559-scraggy": {
+                    "pokemon": 559,
+                    "form": "scraggy"
+                },
+                "560-scrafty": {
+                    "pokemon": 560,
+                    "form": "scrafty"
+                }
+            },
+            "changes": {
+                "559-scraggy > 560-scrafty": {
+                    "targets": [
+                        "559-scraggy",
+                        "560-scrafty"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                39
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

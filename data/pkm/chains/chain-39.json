@@ -1,0 +1,37 @@
+{
+    "ids": [
+        90,
+        91
+    ],
+    "chains": [
+        {
+            "targets": {
+                "90-shellder": {
+                    "pokemon": 90,
+                    "form": "shellder"
+                },
+                "91-cloyster": {
+                    "pokemon": 91,
+                    "form": "cloyster"
+                }
+            },
+            "changes": {
+                "90-shellder > 91-cloyster": {
+                    "targets": [
+                        "90-shellder",
+                        "91-cloyster"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "water-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

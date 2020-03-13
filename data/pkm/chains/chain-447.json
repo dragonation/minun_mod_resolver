@@ -1,0 +1,16 @@
+{
+    "ids": [
+        874
+    ],
+    "chains": [
+        {
+            "targets": {
+                "874-stonjourner": {
+                    "pokemon": 874,
+                    "form": "stonjourner"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

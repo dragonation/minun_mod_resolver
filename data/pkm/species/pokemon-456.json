@@ -1,0 +1,173 @@
+{
+    "id": 456,
+    "name": "Finneon",
+    "experiences-type": "erratic",
+    "texts": [
+        "When night falls, their pink patterns begin to shine. They're popular with divers, so there are resorts that feed them to keep them close.",
+        "It lures in prey with its shining tail fins. It stays near the surface during the day and moves to the depths when night falls."
+    ],
+    "forms": {
+        "finneon": {
+            "id": "finneon",
+            "name": "Finneon",
+            "shape": "fins",
+            "abilities": [
+                "swift-swim",
+                "storm-drain"
+            ],
+            "weight": 7,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 49,
+                "attack": 49,
+                "defense": 56,
+                "special-attack": 49,
+                "special-defense": 61,
+                "speed": 66
+            },
+            "hidden-abilities": [
+                "water-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "attract",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "aqua-ring",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 42,
+                    "name": "u-turn",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "bounce",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 85
+                },
+                {
+                    "level": 49,
+                    "name": "silver-wind",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "soak",
+                    "type": "water",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 231,
+    "classification": "wing-fish",
+    "names": {
+        "de": "Finneon",
+        "en": "Finneon",
+        "es": "Finneon",
+        "fr": "Écayon",
+        "it": "Finneon",
+        "jp": "ケイコウオ",
+        "kr": "형광어",
+        "zh": "荧光鱼",
+        "zh-CHS": "荧光鱼",
+        "zh-CHT": "螢光魚"
+    },
+    "species": [
+        "fish"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 66
+    }
+}

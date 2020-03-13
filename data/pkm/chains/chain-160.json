@@ -1,0 +1,37 @@
+{
+    "ids": [
+        318,
+        319
+    ],
+    "chains": [
+        {
+            "targets": {
+                "318-carvanha": {
+                    "pokemon": 318,
+                    "form": "carvanha"
+                },
+                "319-sharpedo": {
+                    "pokemon": 319,
+                    "form": "sharpedo"
+                }
+            },
+            "changes": {
+                "318-carvanha > 319-sharpedo": {
+                    "targets": [
+                        "318-carvanha",
+                        "319-sharpedo"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

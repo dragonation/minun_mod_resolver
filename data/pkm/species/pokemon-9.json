@@ -1,0 +1,535 @@
+{
+    "id": 9,
+    "name": "Blastoise",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
+        "The rocket cannons on its shell fire jets of water capable of punching holes through thick steel."
+    ],
+    "forms": {
+        "blastoise": {
+            "id": "blastoise",
+            "name": "Blastoise",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "torrent"
+            ],
+            "weight": 85.5,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 79,
+                "attack": 83,
+                "defense": 100,
+                "special-attack": 85,
+                "special-defense": 105,
+                "speed": 78
+            },
+            "hidden-abilities": [
+                "rain-dish"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "flash-cannon",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "flash-cannon",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 35,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 56,
+                    "name": "skull-bash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        },
+        "mega-blastoise": {
+            "id": "mega-blastoise",
+            "name": "Mega Blastoise",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "mega-launcher"
+            ],
+            "weight": 101.1,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 79,
+                "attack": 103,
+                "defense": 120,
+                "special-attack": 135,
+                "special-defense": 115,
+                "speed": 78
+            },
+            "hidden-abilities": [
+                "rain-dish"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "flash-cannon",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "flash-cannon",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 35,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 56,
+                    "name": "skull-bash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        },
+        "gigantamax-blastoise": {
+            "id": "gigantamax-blastoise",
+            "name": "Gigantamax Blastoise",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "torrent"
+            ],
+            "weight": 85.5,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 79,
+                "attack": 83,
+                "defense": 100,
+                "special-attack": 85,
+                "special-defense": 105,
+                "speed": 78
+            },
+            "hidden-abilities": [
+                "rain-dish"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "flash-cannon",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "flash-cannon",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 35,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 56,
+                    "name": "skull-bash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 3,
+    "changes": [
+        {
+            "targets": {
+                "9-blastoise": {
+                    "pokemon": 9,
+                    "form": "blastoise"
+                },
+                "9-mega-blastoise": {
+                    "pokemon": 9,
+                    "form": "mega-blastoise"
+                }
+            },
+            "changes": {
+                "9-blastoise <> 9-mega-blastoise": {
+                    "targets": [
+                        "9-blastoise",
+                        "9-mega-blastoise"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "blastoisinite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "9-blastoise": {
+                    "pokemon": 9,
+                    "form": "blastoise"
+                },
+                "9-gigantamax-blastoise": {
+                    "pokemon": 9,
+                    "form": "gigantamax-blastoise"
+                }
+            },
+            "changes": {
+                "9-blastoise <> 9-gigantamax-blastoise": {
+                    "targets": [
+                        "9-blastoise",
+                        "9-gigantamax-blastoise"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dynamax-band"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "shellfish",
+    "names": {
+        "de": "Turtok",
+        "en": "Blastoise",
+        "es": "Blastoise",
+        "fr": "Tortank",
+        "it": "Blastoise",
+        "jp": "カメックス",
+        "kr": "거북왕",
+        "zh": "水箭龟",
+        "zh-CHS": "水箭龟",
+        "zh-CHT": "水箭龜"
+    },
+    "species": [
+        "monster",
+        "amphibians"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 3,
+        "speed": 0,
+        "experience": 239
+    }
+}

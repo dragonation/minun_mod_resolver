@@ -1,0 +1,57 @@
+{
+    "ids": [
+        158,
+        159,
+        160
+    ],
+    "chains": [
+        {
+            "targets": {
+                "158-totodile": {
+                    "pokemon": 158,
+                    "form": "totodile"
+                },
+                "159-croconaw": {
+                    "pokemon": 159,
+                    "form": "croconaw"
+                },
+                "160-feraligatr": {
+                    "pokemon": 160,
+                    "form": "feraligatr"
+                }
+            },
+            "changes": {
+                "158-totodile > 159-croconaw": {
+                    "targets": [
+                        "158-totodile",
+                        "159-croconaw"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "159-croconaw > 160-feraligatr": {
+                    "targets": [
+                        "159-croconaw",
+                        "160-feraligatr"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

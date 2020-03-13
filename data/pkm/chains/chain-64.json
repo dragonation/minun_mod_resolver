@@ -1,0 +1,16 @@
+{
+    "ids": [
+        131
+    ],
+    "chains": [
+        {
+            "targets": {
+                "131-lapras": {
+                    "pokemon": 131,
+                    "form": "lapras"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

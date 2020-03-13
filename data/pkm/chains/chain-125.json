@@ -1,0 +1,16 @@
+{
+    "ids": [
+        245
+    ],
+    "chains": [
+        {
+            "targets": {
+                "245-suicune": {
+                    "pokemon": 245,
+                    "form": "suicune"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

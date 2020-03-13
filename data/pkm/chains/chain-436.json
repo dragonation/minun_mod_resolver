@@ -1,0 +1,37 @@
+{
+    "ids": [
+        846,
+        847
+    ],
+    "chains": [
+        {
+            "targets": {
+                "846-arrokuda": {
+                    "pokemon": 846,
+                    "form": "arrokuda"
+                },
+                "847-barraskewda": {
+                    "pokemon": 847,
+                    "form": "barraskewda"
+                }
+            },
+            "changes": {
+                "846-arrokuda > 847-barraskewda": {
+                    "targets": [
+                        "846-arrokuda",
+                        "847-barraskewda"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                26
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

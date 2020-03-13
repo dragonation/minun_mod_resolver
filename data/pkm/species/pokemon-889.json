@@ -1,0 +1,328 @@
+{
+    "id": 889,
+    "name": "Zamazenta",
+    "experiences-type": "slow",
+    "texts": [
+        "In times past, it worked together with a king of the people to save the Galar region. It absorbs metal that it then uses in battle.",
+        "This Pokémon slept for aeons while in the form of a statue. It was asleep for so long, people forgot that it ever existed."
+    ],
+    "forms": {
+        "hero-of-many-battles": {
+            "id": "hero-of-many-battles",
+            "name": "Hero of Many Battles",
+            "shape": "quadruped",
+            "abilities": [
+                "dauntless-shield"
+            ],
+            "weight": 210,
+            "height": 2.9,
+            "base-stats": {
+                "health-points": 92,
+                "attack": 130,
+                "defense": 115,
+                "special-attack": 80,
+                "special-defense": 115,
+                "speed": 138
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "metal-burst",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "wide-guard",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "metal-claw",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "howl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "laser-focus",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 66,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 77,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 88,
+                    "name": "giga-impact",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "red"
+        },
+        "crowned-shield": {
+            "id": "crowned-shield",
+            "name": "Crowned Shield",
+            "shape": "quadruped",
+            "abilities": [
+                "dauntless-shield"
+            ],
+            "weight": 785,
+            "height": 2.9,
+            "base-stats": {
+                "health-points": 92,
+                "attack": 130,
+                "defense": 145,
+                "special-attack": 80,
+                "special-defense": 145,
+                "speed": 128
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "metal-burst",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "wide-guard",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "metal-claw",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "howl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "laser-focus",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 66,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 77,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 88,
+                    "name": "giga-impact",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "fighting",
+                "steel"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 459,
+    "changes": [
+        {
+            "targets": {
+                "889-hero-of-many-battles": {
+                    "pokemon": 889,
+                    "form": "hero-of-many-battles"
+                },
+                "889-crowned-shield": {
+                    "pokemon": 889,
+                    "form": "crowned-shield"
+                }
+            },
+            "changes": {
+                "889-hero-of-many-battles <> 889-crowned-shield": {
+                    "targets": [
+                        "889-hero-of-many-battles",
+                        "889-crowned-shield"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "rusted-shield"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "warrior",
+    "names": {
+        "de": "Zamazenta",
+        "en": "Zamazenta",
+        "es": "Zamazenta",
+        "fr": "Zamazenta",
+        "it": "Zamazenta",
+        "jp": "ザマゼンタ",
+        "kr": "자마젠타",
+        "zh": "藏玛然特",
+        "zh-CHS": "藏玛然特",
+        "zh-CHT": "藏瑪然特"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 10,
+    "hatching-cycles": 120,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 3,
+        "experience": 335
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "ids": [
+        810,
+        811,
+        812
+    ],
+    "chains": [
+        {
+            "targets": {
+                "810-grookey": {
+                    "pokemon": 810,
+                    "form": "grookey"
+                },
+                "811-thwackey": {
+                    "pokemon": 811,
+                    "form": "thwackey"
+                },
+                "812-rillaboom": {
+                    "pokemon": 812,
+                    "form": "rillaboom"
+                }
+            },
+            "changes": {
+                "810-grookey > 811-thwackey": {
+                    "targets": [
+                        "810-grookey",
+                        "811-thwackey"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "811-thwackey > 812-rillaboom": {
+                    "targets": [
+                        "811-thwackey",
+                        "812-rillaboom"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "ids": [
+        524,
+        525,
+        526
+    ],
+    "chains": [
+        {
+            "targets": {
+                "524-roggenrola": {
+                    "pokemon": 524,
+                    "form": "roggenrola"
+                },
+                "525-boldore": {
+                    "pokemon": 525,
+                    "form": "boldore"
+                },
+                "526-gigalith": {
+                    "pokemon": 526,
+                    "form": "gigalith"
+                }
+            },
+            "changes": {
+                "524-roggenrola > 525-boldore": {
+                    "targets": [
+                        "524-roggenrola",
+                        "525-boldore"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                },
+                "525-boldore > 526-gigalith": {
+                    "targets": [
+                        "525-boldore",
+                        "526-gigalith"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

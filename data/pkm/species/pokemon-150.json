@@ -1,0 +1,525 @@
+{
+    "id": 150,
+    "name": "Mewtwo",
+    "experiences-type": "slow",
+    "texts": [
+        "Created from the DNA of Mew, this Pokémon is a dangerous combination of overwhelming power and a savage heart.",
+        "The research efforts of a certain scientist ultimately resulted in this Pokémon. Its powers are dedicated to battling."
+    ],
+    "forms": {
+        "mewtwo": {
+            "id": "mewtwo",
+            "name": "Mewtwo",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 122,
+            "height": 2,
+            "base-stats": {
+                "health-points": 106,
+                "attack": 110,
+                "defense": 90,
+                "special-attack": 154,
+                "special-defense": 90,
+                "speed": 130
+            },
+            "hidden-abilities": [
+                "unnerve"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "life-dew",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "laser-focus",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 8,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "psycho-cut",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "aura-sphere",
+                    "type": "fighting",
+                    "category": "special",
+                    "power": 80
+                },
+                {
+                    "level": 48,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "power-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 56,
+                    "name": "guard-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 64,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 72,
+                    "name": "psystrike",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 80,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 88,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "purple"
+        },
+        "mega-mewtwo-x": {
+            "id": "mega-mewtwo-x",
+            "name": "Mega Mewtwo X",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "steadfast"
+            ],
+            "weight": 127,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 106,
+                "attack": 190,
+                "defense": 100,
+                "special-attack": 154,
+                "special-defense": 100,
+                "speed": 130
+            },
+            "hidden-abilities": [
+                "unnerve"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "life-dew",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "laser-focus",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 8,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "psycho-cut",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "aura-sphere",
+                    "type": "fighting",
+                    "category": "special",
+                    "power": 80
+                },
+                {
+                    "level": 48,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "power-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 56,
+                    "name": "guard-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 64,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 72,
+                    "name": "psystrike",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 80,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 88,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic",
+                "fighting"
+            ],
+            "color": "purple"
+        },
+        "mega-mewtwo-y": {
+            "id": "mega-mewtwo-y",
+            "name": "Mega Mewtwo Y",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "insomnia"
+            ],
+            "weight": 33,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 106,
+                "attack": 150,
+                "defense": 70,
+                "special-attack": 194,
+                "special-defense": 120,
+                "speed": 140
+            },
+            "hidden-abilities": [
+                "unnerve"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "life-dew",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "laser-focus",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 8,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "psycho-cut",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "aura-sphere",
+                    "type": "fighting",
+                    "category": "special",
+                    "power": 80
+                },
+                {
+                    "level": 48,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "power-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 56,
+                    "name": "guard-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 64,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 72,
+                    "name": "psystrike",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 80,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 88,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 76,
+    "changes": [
+        {
+            "targets": {
+                "150-mega-mewtwo-x": {
+                    "pokemon": 150,
+                    "form": "mega-mewtwo-x"
+                },
+                "150-mewtwo": {
+                    "pokemon": 150,
+                    "form": "mewtwo"
+                },
+                "150-mega-mewtwo-y": {
+                    "pokemon": 150,
+                    "form": "mega-mewtwo-y"
+                }
+            },
+            "changes": {
+                "150-mega-mewtwo-x <> 150-mewtwo": {
+                    "targets": [
+                        "150-mega-mewtwo-x",
+                        "150-mewtwo"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "mewtwonite-x"
+                            ]
+                        }
+                    ]
+                },
+                "150-mewtwo <> 150-mega-mewtwo-y": {
+                    "targets": [
+                        "150-mewtwo",
+                        "150-mega-mewtwo-y"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "mewtwonite-y"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "genetic",
+    "names": {
+        "de": "Mewtu",
+        "en": "Mewtwo",
+        "es": "Mewtwo",
+        "fr": "Mewtwo",
+        "it": "Mewtwo",
+        "jp": "ミュウツー",
+        "kr": "뮤츠",
+        "zh": "超梦",
+        "zh-CHS": "超梦",
+        "zh-CHT": "超夢"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 306
+    }
+}

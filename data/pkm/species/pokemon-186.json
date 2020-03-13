@@ -1,0 +1,124 @@
+{
+    "id": 186,
+    "name": "Politoed",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "Although its cries sound like screams, a composer created a beautiful ballad that was influenced by the sounds.",
+        "The longer and more luxurious the curled hair on its head, the greater the number of Poliwag and Poliwhirl that will obey it."
+    ],
+    "forms": {
+        "politoed": {
+            "id": "politoed",
+            "name": "Politoed",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "water-absorb",
+                "damp"
+            ],
+            "weight": 33.9,
+            "height": 1.1,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 75,
+                "defense": 75,
+                "special-attack": 90,
+                "special-defense": 100,
+                "speed": 70
+            },
+            "hidden-abilities": [
+                "drizzle"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 1,
+                    "name": "double-slap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 27,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 37,
+                    "name": "bounce",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 85
+                },
+                {
+                    "level": 48,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 26,
+    "classification": "frog",
+    "names": {
+        "de": "Quaxo",
+        "en": "Politoed",
+        "es": "Politoed",
+        "fr": "Tarpaud",
+        "it": "Politoed",
+        "jp": "ニョロトノ",
+        "kr": "왕구리",
+        "zh": "蚊香蛙皇",
+        "zh-CHS": "蚊香蛙皇",
+        "zh-CHT": "蚊香蛙皇"
+    },
+    "species": [
+        "amphibians"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "king’s-rock"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 3,
+        "speed": 0,
+        "experience": 225
+    }
+}

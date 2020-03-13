@@ -1,0 +1,37 @@
+{
+    "ids": [
+        819,
+        820
+    ],
+    "chains": [
+        {
+            "targets": {
+                "819-skwovet": {
+                    "pokemon": 819,
+                    "form": "skwovet"
+                },
+                "820-greedent": {
+                    "pokemon": 820,
+                    "form": "greedent"
+                }
+            },
+            "changes": {
+                "819-skwovet > 820-greedent": {
+                    "targets": [
+                        "819-skwovet",
+                        "820-greedent"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                24
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

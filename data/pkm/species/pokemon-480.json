@@ -1,0 +1,169 @@
+{
+    "id": 480,
+    "name": "Uxie",
+    "experiences-type": "slow",
+    "texts": [
+        "Known as \"The Being of Knowledge.\" It is said that it can wipe out the memory of those who see its eyes.",
+        "It is said that its emergence gave humans the intelligence to improve their quality of life."
+    ],
+    "forms": {
+        "uxie": {
+            "id": "uxie",
+            "name": "Uxie",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 0.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 75,
+                "defense": 130,
+                "special-attack": 75,
+                "special-defense": 130,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 21,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 31,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 61,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 66,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 76,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 234,
+    "classification": "knowledge",
+    "names": {
+        "de": "Selfe",
+        "en": "Uxie",
+        "es": "Uxie",
+        "fr": "Créhelf",
+        "it": "Uxie",
+        "jp": "ユクシー",
+        "kr": "유크시",
+        "zh": "由克希",
+        "zh-CHS": "由克希",
+        "zh-CHT": "由克希"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 81,
+    "initial-happiness": 140,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 261
+    }
+}

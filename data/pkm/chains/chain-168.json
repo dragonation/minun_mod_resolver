@@ -1,0 +1,37 @@
+{
+    "ids": [
+        333,
+        334
+    ],
+    "chains": [
+        {
+            "targets": {
+                "333-swablu": {
+                    "pokemon": 333,
+                    "form": "swablu"
+                },
+                "334-altaria": {
+                    "pokemon": 334,
+                    "form": "altaria"
+                }
+            },
+            "changes": {
+                "333-swablu > 334-altaria": {
+                    "targets": [
+                        "333-swablu",
+                        "334-altaria"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

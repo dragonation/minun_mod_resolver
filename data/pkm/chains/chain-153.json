@@ -1,0 +1,37 @@
+{
+    "ids": [
+        309,
+        310
+    ],
+    "chains": [
+        {
+            "targets": {
+                "309-electrike": {
+                    "pokemon": 309,
+                    "form": "electrike"
+                },
+                "310-manectric": {
+                    "pokemon": 310,
+                    "form": "manectric"
+                }
+            },
+            "changes": {
+                "309-electrike > 310-manectric": {
+                    "targets": [
+                        "309-electrike",
+                        "310-manectric"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                26
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

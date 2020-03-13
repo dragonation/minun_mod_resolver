@@ -1,0 +1,58 @@
+{
+    "ids": [
+        361,
+        362,
+        478
+    ],
+    "chains": [
+        {
+            "targets": {
+                "361-snorunt": {
+                    "pokemon": 361,
+                    "form": "snorunt"
+                },
+                "362-glalie": {
+                    "pokemon": 362,
+                    "form": "glalie"
+                },
+                "478-froslass": {
+                    "pokemon": 478,
+                    "form": "froslass"
+                }
+            },
+            "changes": {
+                "361-snorunt > 362-glalie": {
+                    "targets": [
+                        "361-snorunt",
+                        "362-glalie"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                42
+                            ]
+                        }
+                    ]
+                },
+                "361-snorunt > 478-froslass": {
+                    "targets": [
+                        "361-snorunt",
+                        "478-froslass"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dawn-stone"
+                            ],
+                            "gender": "female"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

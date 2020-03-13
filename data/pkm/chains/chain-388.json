@@ -1,0 +1,37 @@
+{
+    "ids": [
+        767,
+        768
+    ],
+    "chains": [
+        {
+            "targets": {
+                "767-wimpod": {
+                    "pokemon": 767,
+                    "form": "wimpod"
+                },
+                "768-golisopod": {
+                    "pokemon": 768,
+                    "form": "golisopod"
+                }
+            },
+            "changes": {
+                "767-wimpod > 768-golisopod": {
+                    "targets": [
+                        "767-wimpod",
+                        "768-golisopod"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

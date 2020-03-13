@@ -1,0 +1,37 @@
+{
+    "ids": [
+        629,
+        630
+    ],
+    "chains": [
+        {
+            "targets": {
+                "629-vullaby": {
+                    "pokemon": 629,
+                    "form": "vullaby"
+                },
+                "630-mandibuzz": {
+                    "pokemon": 630,
+                    "form": "mandibuzz"
+                }
+            },
+            "changes": {
+                "629-vullaby > 630-mandibuzz": {
+                    "targets": [
+                        "629-vullaby",
+                        "630-mandibuzz"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                54
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

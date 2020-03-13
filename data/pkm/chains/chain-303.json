@@ -1,0 +1,16 @@
+{
+    "ids": [
+        615
+    ],
+    "chains": [
+        {
+            "targets": {
+                "615-cryogonal": {
+                    "pokemon": 615,
+                    "form": "cryogonal"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+    "ids": [
+        532,
+        533,
+        534
+    ],
+    "chains": [
+        {
+            "targets": {
+                "532-timburr": {
+                    "pokemon": 532,
+                    "form": "timburr"
+                },
+                "533-gurdurr": {
+                    "pokemon": 533,
+                    "form": "gurdurr"
+                },
+                "534-conkeldurr": {
+                    "pokemon": 534,
+                    "form": "conkeldurr"
+                }
+            },
+            "changes": {
+                "532-timburr > 533-gurdurr": {
+                    "targets": [
+                        "532-timburr",
+                        "533-gurdurr"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                },
+                "533-gurdurr > 534-conkeldurr": {
+                    "targets": [
+                        "533-gurdurr",
+                        "534-conkeldurr"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

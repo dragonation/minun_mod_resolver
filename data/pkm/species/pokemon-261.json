@@ -1,0 +1,185 @@
+{
+    "id": 261,
+    "name": "Poochyena",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "A Pokémon with a persistent nature, it chases its chosen prey until the prey becomes exhausted.",
+        "It has a very tenacious nature. Its acute sense of smell lets it chase a chosen prey without ever losing track."
+    ],
+    "forms": {
+        "poochyena": {
+            "id": "poochyena",
+            "name": "Poochyena",
+            "shape": "quadruped",
+            "abilities": [
+                "run-away",
+                "quick-feet"
+            ],
+            "weight": 13.6,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 35,
+                "attack": 55,
+                "defense": 35,
+                "special-attack": 30,
+                "special-defense": 30,
+                "speed": 35
+            },
+            "hidden-abilities": [
+                "rattled"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "howl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 22,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "embargo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 43,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "dark"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 133,
+    "classification": "bite",
+    "names": {
+        "de": "Fiffyen",
+        "en": "Poochyena",
+        "es": "Poochyena",
+        "fr": "Medhyèna",
+        "it": "Poochyena",
+        "jp": "ポチエナ",
+        "kr": "포챠나",
+        "zh": "土狼犬",
+        "zh-CHS": "土狼犬",
+        "zh-CHT": "土狼犬"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 56
+    }
+}

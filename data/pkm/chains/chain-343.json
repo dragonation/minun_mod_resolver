@@ -1,0 +1,35 @@
+{
+    "ids": [
+        684,
+        685
+    ],
+    "chains": [
+        {
+            "targets": {
+                "684-swirlix": {
+                    "pokemon": 684,
+                    "form": "swirlix"
+                },
+                "685-slurpuff": {
+                    "pokemon": 685,
+                    "form": "slurpuff"
+                }
+            },
+            "changes": {
+                "684-swirlix > 685-slurpuff": {
+                    "targets": [
+                        "684-swirlix",
+                        "685-slurpuff"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

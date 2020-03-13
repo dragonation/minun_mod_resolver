@@ -1,0 +1,172 @@
+{
+    "id": 750,
+    "name": "Mudsdale",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Mud that hardens around a Mudsdale's legs sets harder than stone. It's so hard that it allows this Pokémon to scrap a truck with a single kick.",
+        "Mudsdale has so much stamina that it could carry over 10 tons across the Galar region without rest or sleep."
+    ],
+    "forms": {
+        "mudsdale": {
+            "id": "mudsdale",
+            "name": "Mudsdale",
+            "shape": "quadruped",
+            "abilities": [
+                "own-tempo",
+                "stamina"
+            ],
+            "weight": 920,
+            "height": 2.5,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 125,
+                "defense": 100,
+                "special-attack": 55,
+                "special-defense": 85,
+                "speed": 35
+            },
+            "hidden-abilities": [
+                "inner-focus"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rock-smash",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "double-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "stomp",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "strength",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "high-horsepower",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 95
+                },
+                {
+                    "level": 34,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "mega-kick",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 75
+                },
+                {
+                    "level": 52,
+                    "name": "superpower",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 378,
+    "classification": "draft-horse",
+    "names": {
+        "de": "Pampross",
+        "en": "Mudsdale",
+        "es": "Mudsdale",
+        "fr": "Bourrinos",
+        "it": "Mudsdale",
+        "jp": "バンバドロ",
+        "kr": "만마드",
+        "zh": "重泥挽马",
+        "zh-CHS": "重泥挽马",
+        "zh-CHT": ""
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "light-clay"
+    },
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 175
+    }
+}

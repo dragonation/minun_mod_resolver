@@ -1,0 +1,37 @@
+{
+    "ids": [
+        755,
+        756
+    ],
+    "chains": [
+        {
+            "targets": {
+                "755-morelull": {
+                    "pokemon": 755,
+                    "form": "morelull"
+                },
+                "756-shiinotic": {
+                    "pokemon": 756,
+                    "form": "shiinotic"
+                }
+            },
+            "changes": {
+                "755-morelull > 756-shiinotic": {
+                    "targets": [
+                        "755-morelull",
+                        "756-shiinotic"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                24
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

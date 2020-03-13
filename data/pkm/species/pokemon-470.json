@@ -1,0 +1,249 @@
+{
+    "id": 470,
+    "name": "Leafeon",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Galarians favor the distinctive aroma that drifts from this Pokémon's leaves. There's a popular perfume made using that scent.",
+        "This Pokémon's tail is blade sharp, with a fantastic cutting edge that can slice right though large trees."
+    ],
+    "forms": {
+        "leafeon": {
+            "id": "leafeon",
+            "name": "Leafeon",
+            "shape": "quadruped",
+            "abilities": [
+                "leaf-guard"
+            ],
+            "weight": 25.5,
+            "height": 1,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 110,
+                "defense": 130,
+                "special-attack": 60,
+                "special-defense": 65,
+                "speed": 95
+            },
+            "hidden-abilities": [
+                "chlorophyll"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "covet",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "copycat",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 25,
+                    "name": "magical-leaf",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 30,
+                    "name": "synthesis",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "giga-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "leaf-blade",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "last-resort",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 66,
+    "classification": "verdant",
+    "names": {
+        "de": "Folipurba",
+        "en": "Leafeon",
+        "es": "Leafeon",
+        "fr": "Phyllali",
+        "it": "Leafeon",
+        "jp": "リーフィア",
+        "kr": "리피아",
+        "zh": "叶伊布",
+        "zh-CHS": "叶伊布",
+        "zh-CHT": "葉伊布"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 36,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 184
+    }
+}

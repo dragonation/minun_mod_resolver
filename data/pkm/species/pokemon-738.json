@@ -1,0 +1,217 @@
+{
+    "id": 738,
+    "name": "Vikavolt",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It builds up electricity in its abdomen, focuses it through its jaws, and then fires the electricity off in concentrated beams.",
+        "If it carries a Charjabug to use as a spare battery, a flying Vikavolt can rapidly fire high-powered beams of electricity."
+    ],
+    "forms": {
+        "vikavolt": {
+            "id": "vikavolt",
+            "name": "Vikavolt",
+            "shape": "insectoid",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 45,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 77,
+                "attack": 70,
+                "defense": 90,
+                "special-attack": 145,
+                "special-defense": 75,
+                "speed": 43
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thunderbolt",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "vise-grip",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "string-shot",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "thunderbolt",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "sticky-web",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "guillotine",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 30
+                },
+                {
+                    "level": 50,
+                    "name": "fly",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 95
+                },
+                {
+                    "level": 57,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 64,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                }
+            ],
+            "types": [
+                "bug",
+                "electric"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 371,
+    "classification": "stag-beetle",
+    "names": {
+        "de": "Donarion",
+        "en": "Vikavolt",
+        "es": "Vikavolt",
+        "fr": "Lucanon",
+        "it": "Vikavolt",
+        "jp": "クワガノン",
+        "kr": "투구뿌논",
+        "zh": "锹农炮虫",
+        "zh-CHS": "锹农炮虫",
+        "zh-CHT": ""
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 225
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "ids": [
+        52,
+        53,
+        863
+    ],
+    "chains": [
+        {
+            "targets": {
+                "52-meowth": {
+                    "pokemon": 52,
+                    "form": "meowth"
+                },
+                "53-persian": {
+                    "pokemon": 53,
+                    "form": "persian"
+                }
+            },
+            "changes": {
+                "52-meowth > 53-persian": {
+                    "targets": [
+                        "52-meowth",
+                        "53-persian"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                28
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "52-alolan-meowth": {
+                    "pokemon": 52,
+                    "form": "alolan-meowth"
+                },
+                "53-alolan-persian": {
+                    "pokemon": 53,
+                    "form": "alolan-persian"
+                }
+            },
+            "changes": {
+                "52-alolan-meowth > 53-alolan-persian": {
+                    "targets": [
+                        "52-alolan-meowth",
+                        "53-alolan-persian"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "52-galarian-meowth": {
+                    "pokemon": 52,
+                    "form": "galarian-meowth"
+                },
+                "863-perrserker": {
+                    "pokemon": 863,
+                    "form": "perrserker"
+                }
+            },
+            "changes": {
+                "52-galarian-meowth > 863-perrserker": {
+                    "targets": [
+                        "52-galarian-meowth",
+                        "863-perrserker"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                28
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

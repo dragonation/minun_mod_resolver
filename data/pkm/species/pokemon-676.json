@@ -1,0 +1,1420 @@
+{
+    "id": 676,
+    "name": "Furfrou",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "There was an era when aristocrats would compete to see who could trim their Furfrou's fur into the most exquisite style.",
+        "Left alone, its fur will grow longer and longer, but it will only allow someone it trusts to cut it."
+    ],
+    "forms": {
+        "natural-form": {
+            "id": "natural-form",
+            "name": "Natural Form Furfrou",
+            "shape": "quadruped",
+            "abilities": [
+                "fur-coat"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 102
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 38,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "heart-trim": {
+            "id": "heart-trim",
+            "name": "Heart Trim Furfrou",
+            "shape": "quadruped",
+            "abilities": [
+                "fur-coat"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 102
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 38,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "star-trim": {
+            "id": "star-trim",
+            "name": "Star Trim Furfrou",
+            "shape": "quadruped",
+            "abilities": [
+                "fur-coat"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 102
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 38,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "diamond-trim": {
+            "id": "diamond-trim",
+            "name": "Diamond Trim Furfrou",
+            "shape": "quadruped",
+            "abilities": [
+                "fur-coat"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 102
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 38,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "debutante-trim": {
+            "id": "debutante-trim",
+            "name": "Debutante Trim Furfrou",
+            "shape": "quadruped",
+            "abilities": [
+                "fur-coat"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 102
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 38,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "matron-trim": {
+            "id": "matron-trim",
+            "name": "Matron Trim Furfrou",
+            "shape": "quadruped",
+            "abilities": [
+                "fur-coat"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 102
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 38,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "dandy-trim": {
+            "id": "dandy-trim",
+            "name": "Dandy Trim Furfrou",
+            "shape": "quadruped",
+            "abilities": [
+                "fur-coat"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 102
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 38,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "la-reine-trim": {
+            "id": "la-reine-trim",
+            "name": "La Reine Trim Furfrou",
+            "shape": "quadruped",
+            "abilities": [
+                "fur-coat"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 102
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 38,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "kabuki-trim": {
+            "id": "kabuki-trim",
+            "name": "Kabuki Trim Furfrou",
+            "shape": "quadruped",
+            "abilities": [
+                "fur-coat"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 102
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 38,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "pharaoh-trim": {
+            "id": "pharaoh-trim",
+            "name": "Pharaoh Trim Furfrou",
+            "shape": "quadruped",
+            "abilities": [
+                "fur-coat"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 80,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 90,
+                "speed": 102
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 38,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 339,
+    "changes": [
+        {
+            "targets": {
+                "676-natural-form": {
+                    "pokemon": 676,
+                    "form": "natural-form"
+                },
+                "676-heart-trim": {
+                    "pokemon": 676,
+                    "form": "heart-trim"
+                },
+                "676-star-trim": {
+                    "pokemon": 676,
+                    "form": "star-trim"
+                },
+                "676-diamond-trim": {
+                    "pokemon": 676,
+                    "form": "diamond-trim"
+                },
+                "676-debutante-trim": {
+                    "pokemon": 676,
+                    "form": "debutante-trim"
+                },
+                "676-matron-trim": {
+                    "pokemon": 676,
+                    "form": "matron-trim"
+                },
+                "676-dandy-trim": {
+                    "pokemon": 676,
+                    "form": "dandy-trim"
+                },
+                "676-la-reine-trim": {
+                    "pokemon": 676,
+                    "form": "la-reine-trim"
+                },
+                "676-kabuki-trim": {
+                    "pokemon": 676,
+                    "form": "kabuki-trim"
+                },
+                "676-pharaoh-trim": {
+                    "pokemon": 676,
+                    "form": "pharaoh-trim"
+                }
+            },
+            "changes": {
+                "@676-natural-form": {
+                    "targets": [
+                        "676-natural-form"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hair-cut",
+                            "bidirectional": false,
+                            "parameters": [
+                                "natural-form"
+                            ]
+                        }
+                    ]
+                },
+                "@676-heart-trim": {
+                    "targets": [
+                        "676-heart-trim"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hair-cut",
+                            "bidirectional": false,
+                            "parameters": [
+                                "heart-trim"
+                            ]
+                        }
+                    ]
+                },
+                "@676-star-trim": {
+                    "targets": [
+                        "676-star-trim"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hair-cut",
+                            "bidirectional": false,
+                            "parameters": [
+                                "star-trim"
+                            ]
+                        }
+                    ]
+                },
+                "@676-diamond-trim": {
+                    "targets": [
+                        "676-diamond-trim"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hair-cut",
+                            "bidirectional": false,
+                            "parameters": [
+                                "diamond-trim"
+                            ]
+                        }
+                    ]
+                },
+                "@676-debutante-trim": {
+                    "targets": [
+                        "676-debutante-trim"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hair-cut",
+                            "bidirectional": false,
+                            "parameters": [
+                                "debutante-trim"
+                            ]
+                        }
+                    ]
+                },
+                "@676-matron-trim": {
+                    "targets": [
+                        "676-matron-trim"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hair-cut",
+                            "bidirectional": false,
+                            "parameters": [
+                                "matron-trim"
+                            ]
+                        }
+                    ]
+                },
+                "@676-dandy-trim": {
+                    "targets": [
+                        "676-dandy-trim"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hair-cut",
+                            "bidirectional": false,
+                            "parameters": [
+                                "dandy-trim"
+                            ]
+                        }
+                    ]
+                },
+                "@676-la-reine-trim": {
+                    "targets": [
+                        "676-la-reine-trim"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hair-cut",
+                            "bidirectional": false,
+                            "parameters": [
+                                "la-reine-trim"
+                            ]
+                        }
+                    ]
+                },
+                "@676-kabuki-trim": {
+                    "targets": [
+                        "676-kabuki-trim"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hair-cut",
+                            "bidirectional": false,
+                            "parameters": [
+                                "kabuki-trim"
+                            ]
+                        }
+                    ]
+                },
+                "@676-pharaoh-trim": {
+                    "targets": [
+                        "676-pharaoh-trim"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hair-cut",
+                            "bidirectional": false,
+                            "parameters": [
+                                "pharaoh-trim"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "poodle",
+    "names": {
+        "de": "Coiffwaff",
+        "en": "Furfrou",
+        "es": "Furfrou",
+        "fr": "Couafarel",
+        "it": "Furfrou",
+        "jp": "トリミアン",
+        "kr": "트리미앙",
+        "zh": "多丽米亚",
+        "zh-CHS": "多丽米亚",
+        "zh-CHT": "多麗米亞"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 160,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 165
+    }
+}

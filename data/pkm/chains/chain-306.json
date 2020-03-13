@@ -1,0 +1,37 @@
+{
+    "ids": [
+        619,
+        620
+    ],
+    "chains": [
+        {
+            "targets": {
+                "619-mienfoo": {
+                    "pokemon": 619,
+                    "form": "mienfoo"
+                },
+                "620-mienshao": {
+                    "pokemon": 620,
+                    "form": "mienshao"
+                }
+            },
+            "changes": {
+                "619-mienfoo > 620-mienshao": {
+                    "targets": [
+                        "619-mienfoo",
+                        "620-mienshao"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                50
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

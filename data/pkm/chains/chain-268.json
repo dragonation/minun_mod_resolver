@@ -1,0 +1,56 @@
+{
+    "ids": [
+        540,
+        541,
+        542
+    ],
+    "chains": [
+        {
+            "targets": {
+                "540-sewaddle": {
+                    "pokemon": 540,
+                    "form": "sewaddle"
+                },
+                "541-swadloon": {
+                    "pokemon": 541,
+                    "form": "swadloon"
+                },
+                "542-leavanny": {
+                    "pokemon": 542,
+                    "form": "leavanny"
+                }
+            },
+            "changes": {
+                "540-sewaddle > 541-swadloon": {
+                    "targets": [
+                        "540-sewaddle",
+                        "541-swadloon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                },
+                "541-swadloon > 542-leavanny": {
+                    "targets": [
+                        "541-swadloon",
+                        "542-leavanny"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

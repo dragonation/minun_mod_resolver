@@ -1,0 +1,172 @@
+{
+    "id": 137,
+    "name": "Porygon",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "This Pokémon was created using the cutting-edge science of 20 years ago, so many parts of it have since become obsolete.",
+        "It was built 20 years ago by scientists who dreamed of exploring space. Their dreams have yet to come true."
+    ],
+    "forms": {
+        "porygon": {
+            "id": "porygon",
+            "name": "Porygon",
+            "shape": "head-legs",
+            "abilities": [
+                "trace",
+                "download"
+            ],
+            "weight": 36.5,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 60,
+                "defense": 70,
+                "special-attack": 85,
+                "special-defense": 75,
+                "speed": 40
+            },
+            "hidden-abilities": [
+                "analytic"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "conversion-2",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "conversion",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "sharpen",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 23,
+                    "name": "magnet-rise",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "signal-beam",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "recycle",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "lock-on",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "magic-coat",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 62,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 67,
+    "classification": "virtual",
+    "names": {
+        "de": "Porygon",
+        "en": "Porygon",
+        "es": "Porygon",
+        "fr": "Porygon",
+        "it": "Porygon",
+        "jp": "ポリゴン",
+        "kr": "폴리곤",
+        "zh": "多边兽",
+        "zh-CHS": "多边兽",
+        "zh-CHT": "多邊獸"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 79
+    }
+}

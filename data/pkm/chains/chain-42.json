@@ -1,0 +1,37 @@
+{
+    "ids": [
+        96,
+        97
+    ],
+    "chains": [
+        {
+            "targets": {
+                "96-drowzee": {
+                    "pokemon": 96,
+                    "form": "drowzee"
+                },
+                "97-hypno": {
+                    "pokemon": 97,
+                    "form": "hypno"
+                }
+            },
+            "changes": {
+                "96-drowzee > 97-hypno": {
+                    "targets": [
+                        "96-drowzee",
+                        "97-hypno"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                26
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

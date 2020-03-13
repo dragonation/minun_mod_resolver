@@ -1,0 +1,182 @@
+{
+    "id": 685,
+    "name": "Slurpuff",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "By taking in a person's scent, it can sniff out their mental and physical condition. It's hoped that this skill will have many medical applications.",
+        "Slurpuff's fur contains a lot of air, making it soft to the touch and lighter than it looks."
+    ],
+    "forms": {
+        "slurpuff": {
+            "id": "slurpuff",
+            "name": "Slurpuff",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "sweet-veil"
+            ],
+            "weight": 5,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 82,
+                "attack": 80,
+                "defense": 86,
+                "special-attack": 85,
+                "special-defense": 75,
+                "speed": 72
+            },
+            "hidden-abilities": [
+                "unburden"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "play-nice",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "fairy-wind",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "fake-tears",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "round",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "string-shot",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 95
+                },
+                {
+                    "level": 24,
+                    "name": "cotton-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "energy-ball",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "wish",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 39,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "sticky-web",
+                    "type": "bug",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "fairy"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 343,
+    "classification": "meringue",
+    "names": {
+        "de": "Sabbaione",
+        "en": "Slurpuff",
+        "es": "Slurpuff",
+        "fr": "Cupcanaille",
+        "it": "Slurpuff",
+        "jp": "ペロリーム",
+        "kr": "나루림",
+        "zh": "胖甜妮",
+        "zh-CHS": "胖甜妮",
+        "zh-CHT": "胖甜妮"
+    },
+    "species": [
+        "fairy"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 140,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 168
+    }
+}

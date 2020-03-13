@@ -1,0 +1,57 @@
+{
+    "ids": [
+        4,
+        5,
+        6
+    ],
+    "chains": [
+        {
+            "targets": {
+                "4-charmander": {
+                    "pokemon": 4,
+                    "form": "charmander"
+                },
+                "5-charmeleon": {
+                    "pokemon": 5,
+                    "form": "charmeleon"
+                },
+                "6-charizard": {
+                    "pokemon": 6,
+                    "form": "charizard"
+                }
+            },
+            "changes": {
+                "4-charmander > 5-charmeleon": {
+                    "targets": [
+                        "4-charmander",
+                        "5-charmeleon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "5-charmeleon > 6-charizard": {
+                    "targets": [
+                        "5-charmeleon",
+                        "6-charizard"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

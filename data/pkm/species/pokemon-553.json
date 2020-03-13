@@ -1,0 +1,224 @@
+{
+    "id": 553,
+    "name": "Krookodile",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "When it spots prey, even at a distance of over 30 miles, it swims through the desert as if it were water, then jumps out and chomps them.",
+        "It conceals itself in sandstorms that Flygon whip up and waits patiently for prey to appear."
+    ],
+    "forms": {
+        "krookodile": {
+            "id": "krookodile",
+            "name": "Krookodile",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "intimidate",
+                "moxie"
+            ],
+            "weight": 96.3,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 117,
+                "defense": 80,
+                "special-attack": 65,
+                "special-defense": 70,
+                "speed": 92
+            },
+            "hidden-abilities": [
+                "anger-point"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "power-trip",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "torment",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "sand-tomb",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 16,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "embargo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "foul-play",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 54,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ground",
+                "dark"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 273,
+    "classification": "intimidation",
+    "names": {
+        "de": "Rabigator",
+        "en": "Krookodile",
+        "es": "Krookodile",
+        "fr": "Crocorible",
+        "it": "Krookodile",
+        "jp": "ワルビアル",
+        "kr": "악비아르",
+        "zh": "流氓鳄",
+        "zh-CHS": "流氓鳄",
+        "zh-CHT": "流氓鱷"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "black-glasses"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 3,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 234
+    }
+}

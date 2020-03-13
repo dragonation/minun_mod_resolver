@@ -1,0 +1,264 @@
+{
+    "id": 205,
+    "name": "Forretress",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "When something approaches it, it fires off fragments of its steel shell in attack. This is not a conscious action but a conditioned reflex.",
+        "In the moment that it gulps down its prey, the inside of its shell is exposed, but to this day, no one has ever seen that sight."
+    ],
+    "forms": {
+        "forretress": {
+            "id": "forretress",
+            "name": "Forretress",
+            "shape": "head",
+            "abilities": [
+                "sturdy"
+            ],
+            "weight": 125.8,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 90,
+                "defense": 140,
+                "special-attack": 60,
+                "special-defense": 60,
+                "speed": 40
+            },
+            "hidden-abilities": [
+                "overcoat"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "mirror-shot",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                },
+                {
+                    "level": 1,
+                    "name": "magnet-rise",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "toxic-spikes",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "mirror-shot",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 85
+                },
+                {
+                    "level": null,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 17,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "bide",
+                    "type": "normal",
+                    "category": "physical"
+                },
+                {
+                    "level": 23,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "spikes",
+                    "type": "ground",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "gyro-ball",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "magnet-rise",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                },
+                {
+                    "level": 64,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "steel"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 101,
+    "classification": "bagworm",
+    "names": {
+        "de": "Forstellka",
+        "en": "Forretress",
+        "es": "Forretress",
+        "fr": "Foretress",
+        "it": "Forretress",
+        "jp": "フォレトス",
+        "kr": "쏘콘",
+        "zh": "佛烈托斯",
+        "zh-CHS": "佛烈托斯",
+        "zh-CHT": "佛烈托斯"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 163
+    }
+}

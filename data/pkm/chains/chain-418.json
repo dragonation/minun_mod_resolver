@@ -1,0 +1,16 @@
+{
+    "ids": [
+        806
+    ],
+    "chains": [
+        {
+            "targets": {
+                "806-blacephalon": {
+                    "pokemon": 806,
+                    "form": "blacephalon"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

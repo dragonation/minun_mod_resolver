@@ -1,0 +1,37 @@
+{
+    "ids": [
+        572,
+        573
+    ],
+    "chains": [
+        {
+            "targets": {
+                "572-minccino": {
+                    "pokemon": 572,
+                    "form": "minccino"
+                },
+                "573-cinccino": {
+                    "pokemon": 573,
+                    "form": "cinccino"
+                }
+            },
+            "changes": {
+                "572-minccino > 573-cinccino": {
+                    "targets": [
+                        "572-minccino",
+                        "573-cinccino"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "shiny-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

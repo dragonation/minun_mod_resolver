@@ -1,0 +1,202 @@
+{
+    "id": 793,
+    "name": "Nihilego",
+    "experiences-type": "slow",
+    "texts": [
+        "A life-form from another world, it was dubbed a UB and is thought to produce a strong neurotoxin.",
+        "It appeared in this world from an Ultra Wormhole. Nihilego appears to be a parasite that lives by feeding on people and Pokémon."
+    ],
+    "forms": {
+        "nihilego": {
+            "id": "nihilego",
+            "name": "Nihilego",
+            "shape": "tentacles",
+            "abilities": [
+                "beast-boost"
+            ],
+            "weight": 55.5,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 109,
+                "attack": 53,
+                "defense": 47,
+                "special-attack": 127,
+                "special-defense": 131,
+                "speed": 103
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "power-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "guard-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tickle",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "acid",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "constrict",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 10,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "clear-smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 50
+                },
+                {
+                    "level": 13,
+                    "name": "psywave",
+                    "type": "psychic",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "venoshock",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "toxic-spikes",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "mirror-coat",
+                    "type": "psychic",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "acid-spray",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "venom-drench",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 59,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 67,
+                    "name": "wonder-room",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 73,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "rock",
+                "poison"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 406,
+    "classification": "parasite",
+    "names": {
+        "de": "Anego",
+        "en": "Nihilego",
+        "es": "Nihilego",
+        "fr": "Zéroïd",
+        "it": "Nihilego",
+        "jp": "ウツロイド",
+        "kr": "텅비드",
+        "zh": "虚吾伊德",
+        "zh-CHS": "虚吾伊德",
+        "zh-CHT": ""
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 3,
+        "speed": 0,
+        "experience": 114
+    }
+}

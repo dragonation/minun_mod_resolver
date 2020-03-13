@@ -1,0 +1,57 @@
+{
+    "ids": [
+        821,
+        822,
+        823
+    ],
+    "chains": [
+        {
+            "targets": {
+                "821-rookidee": {
+                    "pokemon": 821,
+                    "form": "rookidee"
+                },
+                "822-corvisquire": {
+                    "pokemon": 822,
+                    "form": "corvisquire"
+                },
+                "823-corviknight": {
+                    "pokemon": 823,
+                    "form": "corviknight"
+                }
+            },
+            "changes": {
+                "821-rookidee > 822-corvisquire": {
+                    "targets": [
+                        "821-rookidee",
+                        "822-corvisquire"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "822-corvisquire > 823-corviknight": {
+                    "targets": [
+                        "822-corvisquire",
+                        "823-corviknight"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                38
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "ids": [
+        551,
+        552,
+        553
+    ],
+    "chains": [
+        {
+            "targets": {
+                "551-sandile": {
+                    "pokemon": 551,
+                    "form": "sandile"
+                },
+                "552-krokorok": {
+                    "pokemon": 552,
+                    "form": "krokorok"
+                },
+                "553-krookodile": {
+                    "pokemon": 553,
+                    "form": "krookodile"
+                }
+            },
+            "changes": {
+                "551-sandile > 552-krokorok": {
+                    "targets": [
+                        "551-sandile",
+                        "552-krokorok"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                29
+                            ]
+                        }
+                    ]
+                },
+                "552-krokorok > 553-krookodile": {
+                    "targets": [
+                        "552-krokorok",
+                        "553-krookodile"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

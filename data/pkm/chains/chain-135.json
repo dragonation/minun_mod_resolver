@@ -1,0 +1,97 @@
+{
+    "ids": [
+        265,
+        266,
+        267,
+        268,
+        269
+    ],
+    "chains": [
+        {
+            "targets": {
+                "265-wurmple": {
+                    "pokemon": 265,
+                    "form": "wurmple"
+                },
+                "266-silcoon": {
+                    "pokemon": 266,
+                    "form": "silcoon"
+                },
+                "267-beautifly": {
+                    "pokemon": 267,
+                    "form": "beautifly"
+                },
+                "268-cascoon": {
+                    "pokemon": 268,
+                    "form": "cascoon"
+                },
+                "269-dustox": {
+                    "pokemon": 269,
+                    "form": "dustox"
+                }
+            },
+            "changes": {
+                "265-wurmple > 266-silcoon": {
+                    "targets": [
+                        "265-wurmple",
+                        "266-silcoon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                7
+                            ]
+                        }
+                    ]
+                },
+                "265-wurmple > 268-cascoon": {
+                    "targets": [
+                        "265-wurmple",
+                        "268-cascoon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                7
+                            ]
+                        }
+                    ]
+                },
+                "266-silcoon > 267-beautifly": {
+                    "targets": [
+                        "266-silcoon",
+                        "267-beautifly"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                10
+                            ]
+                        }
+                    ]
+                },
+                "268-cascoon > 269-dustox": {
+                    "targets": [
+                        "268-cascoon",
+                        "269-dustox"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                10
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

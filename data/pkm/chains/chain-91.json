@@ -1,0 +1,57 @@
+{
+    "ids": [
+        187,
+        188,
+        189
+    ],
+    "chains": [
+        {
+            "targets": {
+                "187-hoppip": {
+                    "pokemon": 187,
+                    "form": "hoppip"
+                },
+                "188-skiploom": {
+                    "pokemon": 188,
+                    "form": "skiploom"
+                },
+                "189-jumpluff": {
+                    "pokemon": 189,
+                    "form": "jumpluff"
+                }
+            },
+            "changes": {
+                "187-hoppip > 188-skiploom": {
+                    "targets": [
+                        "187-hoppip",
+                        "188-skiploom"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "188-skiploom > 189-jumpluff": {
+                    "targets": [
+                        "188-skiploom",
+                        "189-jumpluff"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                27
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,233 @@
+{
+    "id": 547,
+    "name": "Whimsicott",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It scatters cotton all over the place as a prank. If it gets wet, it’ll become too heavy to move and have no choice but to answer for its mischief.",
+        "As long as this Pokémon bathes in sunlight, its cotton keeps growing. If too much cotton fluff builds up, Whimsicott tears it off and scatters it."
+    ],
+    "forms": {
+        "whimsicott": {
+            "id": "whimsicott",
+            "name": "Whimsicott",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "prankster",
+                "infiltrator"
+            ],
+            "weight": 6.6,
+            "height": 0.7,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 67,
+                "defense": 85,
+                "special-attack": 77,
+                "special-defense": 75,
+                "speed": 116
+            },
+            "hidden-abilities": [
+                "chlorophyll"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tailwind",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "mega-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "giga-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "cotton-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "energy-ball",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "fairy-wind",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                }
+            ],
+            "types": [
+                "grass",
+                "fairy"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 270,
+    "classification": "windveiled",
+    "names": {
+        "de": "Elfun",
+        "en": "Whimsicott",
+        "es": "Whimsicott",
+        "fr": "Farfaduvet",
+        "it": "Whimsicott",
+        "jp": "エルフーン",
+        "kr": "엘풍",
+        "zh": "风妖精",
+        "zh-CHS": "风妖精",
+        "zh-CHT": "風妖精"
+    },
+    "species": [
+        "plant",
+        "fairy"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "absorb-bulb"
+    },
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 2,
+        "experience": 168
+    }
+}

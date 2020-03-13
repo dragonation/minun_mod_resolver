@@ -1,0 +1,432 @@
+{
+    "id": 641,
+    "name": "Tornadus",
+    "experiences-type": "slow",
+    "texts": [
+        "The lower half of its body is wrapped in a cloud of energy. It zooms through the sky at 200 mph.",
+        "Tornadus expels massive energy from its tail, causing severe storms. Its power is great enough to blow houses away."
+    ],
+    "forms": {
+        "incarnate-form": {
+            "id": "incarnate-form",
+            "name": "Incarnate Forme",
+            "shape": "head-arms",
+            "abilities": [
+                "prankster"
+            ],
+            "weight": 63,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 79,
+                "attack": 115,
+                "defense": 70,
+                "special-attack": 125,
+                "special-defense": 80,
+                "speed": 111
+            },
+            "hidden-abilities": [
+                "defiant"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "uproar",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 7,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "revenge",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "air-cutter",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 25,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 43,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "tailwind",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 61,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 67,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 73,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 79,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "flying"
+            ],
+            "color": "green"
+        },
+        "therian-form": {
+            "id": "therian-form",
+            "name": "Therian Forme",
+            "shape": "two-wings",
+            "abilities": [
+                "regenerator"
+            ],
+            "weight": 63,
+            "height": 1.4,
+            "base-stats": {
+                "health-points": 79,
+                "attack": 100,
+                "defense": 80,
+                "special-attack": 110,
+                "special-defense": 90,
+                "speed": 121
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "uproar",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 7,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "revenge",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "air-cutter",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 25,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 43,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "tailwind",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 61,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 67,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 73,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 79,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "flying"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 320,
+    "changes": [
+        {
+            "targets": {
+                "641-incarnate-form": {
+                    "pokemon": 641,
+                    "world": "real-world",
+                    "form": "incarnate-form"
+                },
+                "641-therian-form": {
+                    "pokemon": 641,
+                    "world": "dream-world",
+                    "form": "therian-form"
+                }
+            },
+            "changes": {
+                "641-incarnate-form <> 641-therian-form": {
+                    "targets": [
+                        "641-incarnate-form",
+                        "641-therian-form"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "reveal-glass"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "cyclone",
+    "names": {
+        "de": "Boreos",
+        "en": "Tornadus",
+        "es": "Tornadus",
+        "fr": "Boréas",
+        "it": "Tornadus",
+        "jp": "トルネロス",
+        "kr": "토네로스",
+        "zh": "龙卷云",
+        "zh-CHS": "龙卷云",
+        "zh-CHT": "龍捲雲"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "8/0",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 90,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 3,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 261
+    }
+}

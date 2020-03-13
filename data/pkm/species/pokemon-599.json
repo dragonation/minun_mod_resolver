@@ -1,0 +1,172 @@
+{
+    "id": 599,
+    "name": "Klink",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "The two minigears that compose this Pokémon are closer than twins. They mesh well only with each other.",
+        "It's suspected that Klink were the inspiration behind ancient people's invention of the first gears."
+    ],
+    "forms": {
+        "klink": {
+            "id": "klink",
+            "name": "Klink",
+            "shape": "multiple",
+            "abilities": [
+                "plus",
+                "minus"
+            ],
+            "weight": 21,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 40,
+                "attack": 55,
+                "defense": 70,
+                "special-attack": 45,
+                "special-defense": 60,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "clear-body"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "vise-grip",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "bind",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 8,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "charge-beam",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 16,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 32,
+                    "name": "gear-grind",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 85
+                },
+                {
+                    "level": 36,
+                    "name": "lock-on",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "shift-gear",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                },
+                {
+                    "level": 48,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 297,
+    "classification": "gear",
+    "names": {
+        "de": "Klikk",
+        "en": "Klink",
+        "es": "Klink",
+        "fr": "Tic",
+        "it": "Klink",
+        "jp": "ギアル",
+        "kr": "기어르",
+        "zh": "齿轮儿",
+        "zh-CHS": "齿轮儿",
+        "zh-CHT": "齒輪兒"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 130,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

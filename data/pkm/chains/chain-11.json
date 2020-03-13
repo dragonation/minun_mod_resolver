@@ -1,0 +1,66 @@
+{
+    "ids": [
+        27,
+        28
+    ],
+    "chains": [
+        {
+            "targets": {
+                "27-sandshrew": {
+                    "pokemon": 27,
+                    "form": "sandshrew"
+                },
+                "28-sandslash": {
+                    "pokemon": 28,
+                    "form": "sandslash"
+                }
+            },
+            "changes": {
+                "27-sandshrew > 28-sandslash": {
+                    "targets": [
+                        "27-sandshrew",
+                        "28-sandslash"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                22
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "27-alolan-sandshrew": {
+                    "pokemon": 27,
+                    "form": "alolan-sandshrew"
+                },
+                "28-alolan-sandslash": {
+                    "pokemon": 28,
+                    "form": "alolan-sandslash"
+                }
+            },
+            "changes": {
+                "27-alolan-sandshrew > 28-alolan-sandslash": {
+                    "targets": [
+                        "27-alolan-sandshrew",
+                        "28-alolan-sandslash"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "ice-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

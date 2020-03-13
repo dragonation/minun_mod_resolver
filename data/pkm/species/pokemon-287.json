@@ -1,0 +1,144 @@
+{
+    "id": 287,
+    "name": "Slakoth",
+    "experiences-type": "slow",
+    "texts": [
+        "The way Slakoth lolls around makes anyone who watches it feel like doing the same.",
+        "If it eats just three leaves in a day, it is satisfied. Other than that, it sleeps for 20 hours a day."
+    ],
+    "forms": {
+        "slakoth": {
+            "id": "slakoth",
+            "name": "Slakoth",
+            "shape": "quadruped",
+            "abilities": [
+                "truant"
+            ],
+            "weight": 24,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 60,
+                "defense": 60,
+                "special-attack": 35,
+                "special-defense": 35,
+                "speed": 30
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "encore",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "slack-off",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 14,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 22,
+                    "name": "covet",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "chip-away",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 143,
+    "classification": "slacker",
+    "names": {
+        "de": "Bummelz",
+        "en": "Slakoth",
+        "es": "Slakoth",
+        "fr": "Parecool",
+        "it": "Slakoth",
+        "jp": "ナマケロ",
+        "kr": "게을로",
+        "zh": "懒人獭",
+        "zh-CHS": "懒人獭",
+        "zh-CHT": "懶人獺"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 56
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        829,
+        830
+    ],
+    "chains": [
+        {
+            "targets": {
+                "829-gossifleur": {
+                    "pokemon": 829,
+                    "form": "gossifleur"
+                },
+                "830-eldegoss": {
+                    "pokemon": 830,
+                    "form": "eldegoss"
+                }
+            },
+            "changes": {
+                "829-gossifleur > 830-eldegoss": {
+                    "targets": [
+                        "829-gossifleur",
+                        "830-eldegoss"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

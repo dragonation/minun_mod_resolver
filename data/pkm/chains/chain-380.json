@@ -1,0 +1,38 @@
+{
+    "ids": [
+        753,
+        754
+    ],
+    "chains": [
+        {
+            "targets": {
+                "753-fomantis": {
+                    "pokemon": 753,
+                    "form": "fomantis"
+                },
+                "754-lurantis": {
+                    "pokemon": 754,
+                    "form": "lurantis"
+                }
+            },
+            "changes": {
+                "753-fomantis > 754-lurantis": {
+                    "targets": [
+                        "753-fomantis",
+                        "754-lurantis"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ],
+                            "time": "day"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        764
+    ],
+    "chains": [
+        {
+            "targets": {
+                "764-comfey": {
+                    "pokemon": 764,
+                    "form": "comfey"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

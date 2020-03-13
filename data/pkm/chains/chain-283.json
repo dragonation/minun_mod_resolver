@@ -1,0 +1,37 @@
+{
+    "ids": [
+        570,
+        571
+    ],
+    "chains": [
+        {
+            "targets": {
+                "570-zorua": {
+                    "pokemon": 570,
+                    "form": "zorua"
+                },
+                "571-zoroark": {
+                    "pokemon": 571,
+                    "form": "zoroark"
+                }
+            },
+            "changes": {
+                "570-zorua > 571-zoroark": {
+                    "targets": [
+                        "570-zorua",
+                        "571-zoroark"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

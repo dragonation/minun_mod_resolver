@@ -1,0 +1,238 @@
+{
+    "id": 73,
+    "name": "Tentacruel",
+    "experiences-type": "slow",
+    "texts": [
+        "It fires off ultrasonic waves from its red orbs to weaken its prey, and then it wraps them up in its 80 tentacles.",
+        "It communicates with others of its kind by lighting up the red orbs on its head. When the orbs are blinking, it's a warning sign."
+    ],
+    "forms": {
+        "tentacruel": {
+            "id": "tentacruel",
+            "name": "Tentacruel",
+            "shape": "tentacles",
+            "abilities": [
+                "clear-body",
+                "liquid-ooze"
+            ],
+            "weight": 55,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 70,
+                "defense": 65,
+                "special-attack": 80,
+                "special-defense": 120,
+                "speed": 100
+            },
+            "hidden-abilities": [
+                "rain-dish"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "reflect-type",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "wring-out",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "poison-sting",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 1,
+                    "name": "constrict",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 10,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "acid",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 7,
+                    "name": "constrict",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 10,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "acid",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "toxic-spikes",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 22,
+                    "name": "acid-spray",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "barrier",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "poison-jab",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 44,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "sludge-wave",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 52,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 56,
+                    "name": "wring-out",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water",
+                "poison"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 30,
+    "classification": "jellyfish",
+    "names": {
+        "de": "Tentoxa",
+        "en": "Tentacruel",
+        "es": "Tentacruel",
+        "fr": "Tentacruel",
+        "it": "Tentacruel",
+        "jp": "ドククラゲ",
+        "kr": "독파리",
+        "zh": "毒刺水母",
+        "zh-CHS": "毒刺水母",
+        "zh-CHT": "毒刺水母"
+    },
+    "species": [
+        "aquatic"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "poison-barb"
+    },
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 2,
+        "speed": 0,
+        "experience": 180
+    }
+}

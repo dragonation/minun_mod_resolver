@@ -1,0 +1,183 @@
+{
+    "id": 707,
+    "name": "Klefki",
+    "experiences-type": "fast",
+    "texts": [
+        "Although it's unclear why it collects keys, giving it a key makes Klefki very happy. However, it apparently only likes master keys.",
+        "Long ago it lived in mines, but once the minerals that make up its diet became scarcer, Klefki began appearing in human settlements."
+    ],
+    "forms": {
+        "klefki": {
+            "id": "klefki",
+            "name": "Klefki",
+            "shape": "head",
+            "abilities": [
+                "prankster"
+            ],
+            "weight": 3,
+            "height": 0.2,
+            "base-stats": {
+                "health-points": 57,
+                "attack": 80,
+                "defense": 91,
+                "special-attack": 80,
+                "special-defense": 87,
+                "speed": 75
+            },
+            "hidden-abilities": [
+                "magician"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "fairy-lock",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "fairy-wind",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 15,
+                    "name": "spikes",
+                    "type": "ground",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "crafty-shield",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 27,
+                    "name": "foul-play",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "torment",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "mirror-shot",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 85
+                },
+                {
+                    "level": 36,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "recycle",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 44,
+                    "name": "magic-room",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "heal-block",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel",
+                "fairy"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 355,
+    "classification": "key-ring",
+    "names": {
+        "de": "Clavion",
+        "en": "Klefki",
+        "es": "Klefki",
+        "fr": "Trousselin",
+        "it": "Klefki",
+        "jp": "クレッフィ",
+        "kr": "클레피",
+        "zh": "钥圈儿",
+        "zh-CHS": "钥圈儿",
+        "zh-CHT": "鑰圈兒"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 165
+    }
+}

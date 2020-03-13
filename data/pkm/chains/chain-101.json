@@ -1,0 +1,37 @@
+{
+    "ids": [
+        204,
+        205
+    ],
+    "chains": [
+        {
+            "targets": {
+                "204-pineco": {
+                    "pokemon": 204,
+                    "form": "pineco"
+                },
+                "205-forretress": {
+                    "pokemon": 205,
+                    "form": "forretress"
+                }
+            },
+            "changes": {
+                "204-pineco > 205-forretress": {
+                    "targets": [
+                        "204-pineco",
+                        "205-forretress"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                31
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

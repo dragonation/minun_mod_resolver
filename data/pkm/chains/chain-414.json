@@ -1,0 +1,16 @@
+{
+    "ids": [
+        801
+    ],
+    "chains": [
+        {
+            "targets": {
+                "801-magearna": {
+                    "pokemon": 801,
+                    "form": "magearna"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

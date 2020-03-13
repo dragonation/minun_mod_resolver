@@ -1,0 +1,311 @@
+{
+    "id": 562,
+    "name": "Yamask",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It wanders through ruins by night, carrying a mask that's said to have been the face it had when it was still human.",
+        "The spirit of a person from a bygone age became this Pokémon. It rambles through ruins, searching for someone who knows its face."
+    ],
+    "forms": {
+        "yamask": {
+            "id": "yamask",
+            "name": "Yamask",
+            "shape": "head-arms",
+            "abilities": [
+                "mummy"
+            ],
+            "weight": 1.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 38,
+                "attack": 30,
+                "defense": 85,
+                "special-attack": 55,
+                "special-defense": 65,
+                "speed": 30
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "haze",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "will-o-wisp",
+                    "type": "fire",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "crafty-shield",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "grudge",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "power-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "guard-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 52,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "ghost"
+            ],
+            "color": "black"
+        },
+        "galarian-yamask": {
+            "id": "galarian-yamask",
+            "name": "Galarian Yamask",
+            "shape": "head-arms",
+            "abilities": [
+                "wandering-spirit"
+            ],
+            "weight": 1.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 38,
+                "attack": 55,
+                "defense": 85,
+                "special-attack": 30,
+                "special-defense": 65,
+                "speed": 30
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "haze",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "brutal-swing",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "crafty-shield",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 36,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "power-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "guard-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 52,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "ground",
+                "ghost"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 279,
+    "classification": "spirit",
+    "names": {
+        "de": "Makabaja",
+        "en": "Yamask",
+        "es": "Yamask",
+        "fr": "Tutafeh",
+        "it": "Yamask",
+        "jp": "デスマス",
+        "kr": "데스마스",
+        "zh": "哭哭面具",
+        "zh-CHS": "哭哭面具",
+        "zh-CHT": "哭哭面具"
+    },
+    "species": [
+        "mineral",
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "spell-tag"
+    },
+    "capture-rate": 190,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 61
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "ids": [
+        868,
+        869
+    ],
+    "chains": [
+        {
+            "targets": {
+                "868-milcery": {
+                    "pokemon": 868,
+                    "form": "milcery"
+                },
+                "869-alcremie": {
+                    "pokemon": 869,
+                    "form": "alcremie"
+                }
+            },
+            "changes": {
+                "868-milcery > 869-alcremie": {
+                    "targets": [
+                        "868-milcery",
+                        "869-alcremie"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "sweet"
+                            ],
+                            "state": [
+                                "spin"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

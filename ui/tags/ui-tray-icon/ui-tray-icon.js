@@ -1,7 +1,7 @@
 const prepareTrayIcon = function (dom) {
 
     if (!dom.uiIcon) {
-        dom.uiIcon = $("<div>").addClass("tray-icon").append($("<ui-icon>").attr(dom.filler.parameters.attributes));
+        dom.uiIcon = $("<ui-button>").addClass("tray-icon").append($("<ui-icon>").attr(dom.filler.parameters.attributes));
         dom.uiIcon.trayIcon = dom;
         dom.uiIcon.on("click", (event) => {
             dom.trigAction(event);

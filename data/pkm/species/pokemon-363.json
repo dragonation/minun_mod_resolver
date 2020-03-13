@@ -1,0 +1,182 @@
+{
+    "id": 363,
+    "name": "Spheal",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "They can't swim well yet, and they move much faster by rolling. When they're happy, they clap fins.",
+        "Its body is covered in fluffy fur. The fur keeps it from feeling cold while it is rolling on ice."
+    ],
+    "forms": {
+        "spheal": {
+            "id": "spheal",
+            "name": "Spheal",
+            "shape": "fins",
+            "abilities": [
+                "thick-fat",
+                "ice-body"
+            ],
+            "weight": 39.5,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 40,
+                "defense": 50,
+                "special-attack": 55,
+                "special-defense": 50,
+                "speed": 25
+            },
+            "hidden-abilities": [
+                "oblivious"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 9,
+                    "name": "encore",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "ice-ball",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 17,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "aurora-beam",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "snore",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "hail",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 41,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 46,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special"
+                }
+            ],
+            "types": [
+                "ice",
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 187,
+    "classification": "clap",
+    "names": {
+        "de": "Seemops",
+        "en": "Spheal",
+        "es": "Spheal",
+        "fr": "Obalie",
+        "it": "Spheal",
+        "jp": "タマザラシ",
+        "kr": "대굴레오",
+        "zh": "海豹球",
+        "zh-CHS": "海豹球",
+        "zh-CHT": "海豹球"
+    },
+    "species": [
+        "amphibians",
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 58
+    }
+}

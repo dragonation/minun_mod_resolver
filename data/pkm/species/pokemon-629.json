@@ -1,0 +1,170 @@
+{
+    "id": 629,
+    "name": "Vullaby",
+    "experiences-type": "slow",
+    "texts": [
+        "It wears a bone to protect its rear. It often squabbles with others of its kind over particularly comfy bones.",
+        "Vullaby grow quickly. Bones that have gotten too small for older Vullaby to wear often get passed down to younger ones in the nest."
+    ],
+    "forms": {
+        "vullaby": {
+            "id": "vullaby",
+            "name": "Vullaby",
+            "shape": "two-wings",
+            "abilities": [
+                "big-pecks",
+                "overcoat"
+            ],
+            "weight": 9,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 55,
+                "defense": 75,
+                "special-attack": 45,
+                "special-defense": 65,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "weak-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "flatter",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "pluck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "tailwind",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "whirlwind",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 48,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "defog",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 66,
+                    "name": "attract",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 72,
+                    "name": "brave-bird",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dark",
+                "flying"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 312,
+    "classification": "diapered",
+    "names": {
+        "de": "Skallyk",
+        "en": "Vullaby",
+        "es": "Vullaby",
+        "fr": "Vostourno",
+        "it": "Vullaby",
+        "jp": "バルチャイ",
+        "kr": "벌차이",
+        "zh": "秃鹰丫头",
+        "zh-CHS": "秃鹰丫头",
+        "zh-CHT": "禿鷹丫頭"
+    },
+    "species": [
+        "flying"
+    ],
+    "gender": "0/8",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 74
+    }
+}

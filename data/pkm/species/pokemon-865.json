@@ -1,0 +1,211 @@
+{
+    "id": 865,
+    "name": "Sirfetch'd",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Only Farfetch'd that have survived many battles can attain this evolution. When this Pokémon's leek withers, it will retire from combat.",
+        "After deflecting attacks with its hard leaf shield, it strikes back with its sharp leek stalk. The leek stalk is both weapon and food."
+    ],
+    "forms": {
+        "sirfetch-d": {
+            "id": "sirfetch-d",
+            "name": "Sirfetch'd",
+            "shape": "two-wings",
+            "abilities": [
+                "steadfast"
+            ],
+            "weight": 117,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 62,
+                "attack": 135,
+                "defense": 95,
+                "special-attack": 68,
+                "special-defense": 82,
+                "speed": 65
+            },
+            "hidden-abilities": [
+                "scrappy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "first-impression",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": null,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "rock-smash",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "brutal-swing",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "defog",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "brick-break",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 55,
+                    "name": "leaf-blade",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "final-gambit",
+                    "type": "fighting",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 65,
+                    "name": "brave-bird",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "meteor-assault",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 35,
+    "classification": "wild-duck",
+    "names": {
+        "de": "Lauchzelot",
+        "en": "Sirfetch’d",
+        "es": "Sirfetch’d",
+        "fr": "Palarticho",
+        "it": "Sirfetch’d",
+        "jp": "ネギガナイト",
+        "kr": "창파나이트",
+        "zh": "葱游兵",
+        "zh-CHS": "葱游兵",
+        "zh-CHT": "蔥遊兵"
+    },
+    "species": [
+        "flying",
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "stick"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 20,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 177
+    }
+}

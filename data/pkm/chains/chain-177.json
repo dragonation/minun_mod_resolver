@@ -1,0 +1,37 @@
+{
+    "ids": [
+        347,
+        348
+    ],
+    "chains": [
+        {
+            "targets": {
+                "347-anorith": {
+                    "pokemon": 347,
+                    "form": "anorith"
+                },
+                "348-armaldo": {
+                    "pokemon": 348,
+                    "form": "armaldo"
+                }
+            },
+            "changes": {
+                "347-anorith > 348-armaldo": {
+                    "targets": [
+                        "347-anorith",
+                        "348-armaldo"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

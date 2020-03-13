@@ -1,0 +1,67 @@
+{
+    "ids": [
+        562,
+        563,
+        867
+    ],
+    "chains": [
+        {
+            "targets": {
+                "562-yamask": {
+                    "pokemon": 562,
+                    "form": "yamask"
+                },
+                "563-cofagrigus": {
+                    "pokemon": 563,
+                    "form": "cofagrigus"
+                }
+            },
+            "changes": {
+                "562-yamask > 563-cofagrigus": {
+                    "targets": [
+                        "562-yamask",
+                        "563-cofagrigus"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "562-galarian-yamask": {
+                    "pokemon": 562,
+                    "form": "galarian-yamask"
+                },
+                "867-runerigus": {
+                    "pokemon": 867,
+                    "form": "runerigus"
+                }
+            },
+            "changes": {
+                "562-galarian-yamask > 867-runerigus": {
+                    "targets": [
+                        "562-galarian-yamask",
+                        "867-runerigus"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "battle",
+                            "battle": "demaged",
+                            "parameters": [],
+                            "location": "dusty-field"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

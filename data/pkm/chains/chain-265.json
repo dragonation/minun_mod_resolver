@@ -1,0 +1,57 @@
+{
+    "ids": [
+        535,
+        536,
+        537
+    ],
+    "chains": [
+        {
+            "targets": {
+                "535-tympole": {
+                    "pokemon": 535,
+                    "form": "tympole"
+                },
+                "536-palpitoad": {
+                    "pokemon": 536,
+                    "form": "palpitoad"
+                },
+                "537-seismitoad": {
+                    "pokemon": 537,
+                    "form": "seismitoad"
+                }
+            },
+            "changes": {
+                "535-tympole > 536-palpitoad": {
+                    "targets": [
+                        "535-tympole",
+                        "536-palpitoad"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                },
+                "536-palpitoad > 537-seismitoad": {
+                    "targets": [
+                        "536-palpitoad",
+                        "537-seismitoad"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

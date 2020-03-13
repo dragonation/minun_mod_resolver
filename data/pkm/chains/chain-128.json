@@ -1,0 +1,16 @@
+{
+    "ids": [
+        250
+    ],
+    "chains": [
+        {
+            "targets": {
+                "250-ho-oh": {
+                    "pokemon": 250,
+                    "form": "ho-oh"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

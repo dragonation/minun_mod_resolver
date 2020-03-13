@@ -1,0 +1,16 @@
+{
+    "ids": [
+        720
+    ],
+    "chains": [
+        {
+            "targets": {
+                "720-confined-hoopa": {
+                    "pokemon": 720,
+                    "form": "confined-hoopa"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

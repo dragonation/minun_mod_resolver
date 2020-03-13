@@ -1,0 +1,16 @@
+{
+    "ids": [
+        144
+    ],
+    "chains": [
+        {
+            "targets": {
+                "144-articuno": {
+                    "pokemon": 144,
+                    "form": "articuno"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

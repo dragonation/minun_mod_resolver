@@ -1,0 +1,57 @@
+{
+    "ids": [
+        837,
+        838,
+        839
+    ],
+    "chains": [
+        {
+            "targets": {
+                "837-rolycoly": {
+                    "pokemon": 837,
+                    "form": "rolycoly"
+                },
+                "838-carkol": {
+                    "pokemon": 838,
+                    "form": "carkol"
+                },
+                "839-coalossal": {
+                    "pokemon": 839,
+                    "form": "coalossal"
+                }
+            },
+            "changes": {
+                "837-rolycoly > 838-carkol": {
+                    "targets": [
+                        "837-rolycoly",
+                        "838-carkol"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "838-carkol > 839-coalossal": {
+                    "targets": [
+                        "838-carkol",
+                        "839-coalossal"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

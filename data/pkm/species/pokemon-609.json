@@ -1,0 +1,187 @@
+{
+    "id": 609,
+    "name": "Chandelure",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "This Pokémon haunts dilapidated mansions. It sways its arms to hypnotize opponents with the ominous dancing of its flames.",
+        "In homes illuminated by Chandelure instead of lights, funerals were a constant occurrence— or so it's said."
+    ],
+    "forms": {
+        "chandelure": {
+            "id": "chandelure",
+            "name": "Chandelure",
+            "shape": "head-arms",
+            "abilities": [
+                "flash-fire",
+                "flame-body"
+            ],
+            "weight": 34.3,
+            "height": 1,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 55,
+                "defense": 90,
+                "special-attack": 145,
+                "special-defense": 90,
+                "speed": 80
+            },
+            "hidden-abilities": [
+                "infiltrator"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "will-o-wisp",
+                    "type": "fire",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "fire-spin",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "inferno",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 50
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "pain-split",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "overheat",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 30,
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "minimize",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "ghost",
+                "fire"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 300,
+    "classification": "luring",
+    "names": {
+        "de": "Skelabra",
+        "en": "Chandelure",
+        "es": "Chandelure",
+        "fr": "Lugulabre",
+        "it": "Chandelure",
+        "jp": "シャンデラ",
+        "kr": "샹델라",
+        "zh": "水晶灯火灵",
+        "zh-CHS": "水晶灯火灵",
+        "zh-CHT": "水晶燈火靈"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 234
+    }
+}

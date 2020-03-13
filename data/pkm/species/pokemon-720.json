@@ -1,0 +1,383 @@
+{
+    "id": 720,
+    "name": "Hoopa",
+    "experiences-type": "slow",
+    "texts": [
+        "This troublemaker sends anything and everything to faraway places using its loop, which can warp space.",
+        "It gathers things it likes and passes them through its loop to teleport them to a secret place."
+    ],
+    "forms": {
+        "confined-hoopa": {
+            "id": "confined-hoopa",
+            "name": "Hoopa Confined",
+            "shape": "head-arms",
+            "abilities": [
+                "magician"
+            ],
+            "weight": 9,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 110,
+                "defense": 60,
+                "special-attack": 150,
+                "special-defense": 130,
+                "speed": 70
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hyperspace-hole",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80
+                },
+                {
+                    "level": 1,
+                    "name": "trick",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "ally-switch",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "magic-coat",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "skill-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "power-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "guard-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "phantom-force",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 50,
+                    "name": "wonder-room",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "trick-room",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 68,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 75,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 85,
+                    "name": "hyperspace-hole",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80
+                }
+            ],
+            "types": [
+                "psychic",
+                "ghost"
+            ],
+            "color": "purple"
+        },
+        "unbound-hoopa": {
+            "id": "unbound-hoopa",
+            "name": "Hoopa Unbound",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "magician"
+            ],
+            "weight": 490,
+            "height": 6.5,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 160,
+                "defense": 60,
+                "special-attack": 170,
+                "special-defense": 130,
+                "speed": 80
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hyperspace-fury",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 100
+                },
+                {
+                    "level": 1,
+                    "name": "trick",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "ally-switch",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "magic-coat",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "skill-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "power-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "guard-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "wonder-room",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "trick-room",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 75,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 85,
+                    "name": "hyperspace-fury",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 100
+                }
+            ],
+            "types": [
+                "psychic",
+                "dark"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 364,
+    "changes": [
+        {
+            "targets": {
+                "720-confined-hoopa": {
+                    "pokemon": 720,
+                    "form": "confined-hoopa"
+                },
+                "720-unbound-hoopa": {
+                    "pokemon": 720,
+                    "form": "unbound-hoopa"
+                }
+            },
+            "changes": {
+                "720-confined-hoopa <> 720-unbound-hoopa": {
+                    "targets": [
+                        "720-confined-hoopa",
+                        "720-unbound-hoopa"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "prison-bottle"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "djinn-pok&eacute;monn",
+    "names": {
+        "de": "Hoopa",
+        "en": "Hoopa",
+        "es": "Hoopa",
+        "fr": "Hoopa",
+        "it": "Hoopa",
+        "jp": "フーパ",
+        "kr": "후파",
+        "zh": "胡帕",
+        "zh-CHS": "胡帕",
+        "zh-CHT": "胡帕"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 100,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 270
+    }
+}

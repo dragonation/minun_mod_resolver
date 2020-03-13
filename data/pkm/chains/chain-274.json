@@ -1,0 +1,66 @@
+{
+    "ids": [
+        554,
+        555
+    ],
+    "chains": [
+        {
+            "targets": {
+                "554-darumaka": {
+                    "pokemon": 554,
+                    "form": "darumaka"
+                },
+                "555-standard-mode": {
+                    "pokemon": 555,
+                    "form": "standard-mode"
+                }
+            },
+            "changes": {
+                "554-darumaka > 555-standard-mode": {
+                    "targets": [
+                        "554-darumaka",
+                        "555-standard-mode"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "554-galarian-darumaka": {
+                    "pokemon": 554,
+                    "form": "galarian-darumaka"
+                },
+                "555-galarian-standard-mode": {
+                    "pokemon": 555,
+                    "form": "galarian-standard-mode"
+                }
+            },
+            "changes": {
+                "554-galarian-darumaka > 555-galarian-standard-mode": {
+                    "targets": [
+                        "554-galarian-darumaka",
+                        "555-galarian-standard-mode"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "ice-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

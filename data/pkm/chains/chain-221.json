@@ -1,0 +1,37 @@
+{
+    "ids": [
+        434,
+        435
+    ],
+    "chains": [
+        {
+            "targets": {
+                "434-stunky": {
+                    "pokemon": 434,
+                    "form": "stunky"
+                },
+                "435-skuntank": {
+                    "pokemon": 435,
+                    "form": "skuntank"
+                }
+            },
+            "changes": {
+                "434-stunky > 435-skuntank": {
+                    "targets": [
+                        "434-stunky",
+                        "435-skuntank"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

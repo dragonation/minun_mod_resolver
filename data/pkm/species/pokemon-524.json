@@ -1,0 +1,168 @@
+{
+    "id": 524,
+    "name": "Roggenrola",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It's as hard as steel, but apparently a long soak in water will cause it to soften a bit.",
+        "When it detects a noise, it starts to move. The energy core inside it makes this Pokémon slightly warm to the touch."
+    ],
+    "forms": {
+        "roggenrola": {
+            "id": "roggenrola",
+            "name": "Roggenrola",
+            "shape": "head-legs",
+            "abilities": [
+                "sturdy",
+                "weak-armor"
+            ],
+            "weight": 18,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 55,
+                "attack": 75,
+                "defense": 85,
+                "special-attack": 25,
+                "special-defense": 25,
+                "speed": 15
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 32,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 44,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 260,
+    "classification": "mantle",
+    "names": {
+        "de": "Kiesling",
+        "en": "Roggenrola",
+        "es": "Roggenrola",
+        "fr": "Nodulithe",
+        "it": "Roggenrola",
+        "jp": "ダンゴロ",
+        "kr": "단굴",
+        "zh": "石丸子",
+        "zh-CHS": "石丸子",
+        "zh-CHT": "石丸子"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "everstone",
+        "rare": "hard-stone"
+    },
+    "capture-rate": 255,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 56
+    }
+}

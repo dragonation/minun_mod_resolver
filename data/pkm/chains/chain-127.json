@@ -1,0 +1,16 @@
+{
+    "ids": [
+        249
+    ],
+    "chains": [
+        {
+            "targets": {
+                "249-lugia": {
+                    "pokemon": 249,
+                    "form": "lugia"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

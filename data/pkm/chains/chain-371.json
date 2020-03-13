@@ -1,0 +1,62 @@
+{
+    "ids": [
+        736,
+        737,
+        738
+    ],
+    "chains": [
+        {
+            "targets": {
+                "736-grubbin": {
+                    "pokemon": 736,
+                    "form": "grubbin"
+                },
+                "737-charjabug": {
+                    "pokemon": 737,
+                    "form": "charjabug"
+                },
+                "738-vikavolt": {
+                    "pokemon": 738,
+                    "form": "vikavolt"
+                }
+            },
+            "changes": {
+                "736-grubbin > 737-charjabug": {
+                    "targets": [
+                        "736-grubbin",
+                        "737-charjabug"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                },
+                "737-charjabug > 738-vikavolt": {
+                    "targets": [
+                        "737-charjabug",
+                        "738-vikavolt"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [],
+                            "location": "magnetic-field"
+                        },
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "thunder-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "ids": [
+        152,
+        153,
+        154
+    ],
+    "chains": [
+        {
+            "targets": {
+                "152-chikorita": {
+                    "pokemon": 152,
+                    "form": "chikorita"
+                },
+                "153-bayleef": {
+                    "pokemon": 153,
+                    "form": "bayleef"
+                },
+                "154-meganium": {
+                    "pokemon": 154,
+                    "form": "meganium"
+                }
+            },
+            "changes": {
+                "152-chikorita > 153-bayleef": {
+                    "targets": [
+                        "152-chikorita",
+                        "153-bayleef"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "153-bayleef > 154-meganium": {
+                    "targets": [
+                        "153-bayleef",
+                        "154-meganium"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

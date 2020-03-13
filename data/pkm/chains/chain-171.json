@@ -1,0 +1,16 @@
+{
+    "ids": [
+        337
+    ],
+    "chains": [
+        {
+            "targets": {
+                "337-lunatone": {
+                    "pokemon": 337,
+                    "form": "lunatone"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

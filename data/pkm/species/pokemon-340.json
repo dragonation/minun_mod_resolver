@@ -1,0 +1,193 @@
+{
+    "id": 340,
+    "name": "Whiscash",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It makes its nest at the bottom of swamps. It will eat anything—if it is alive, Whiscash will eat it.",
+        "It claims a large swamp to itself. If a foe comes near it, it sets off tremors by thrashing around."
+    ],
+    "forms": {
+        "whiscash": {
+            "id": "whiscash",
+            "name": "Whiscash",
+            "shape": "fins",
+            "abilities": [
+                "oblivious",
+                "anticipation"
+            ],
+            "weight": 23.6,
+            "height": 0.9,
+            "base-stats": {
+                "health-points": 110,
+                "attack": 78,
+                "defense": 73,
+                "special-attack": 76,
+                "special-defense": 71,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "hydration"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "belch",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "tickle",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "snore",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 33,
+                    "name": "muddy-water",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 40,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "fissure",
+                    "type": "ground",
+                    "category": "physical",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "water",
+                "ground"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 173,
+    "classification": "whiskers",
+    "names": {
+        "de": "Welsar",
+        "en": "Whiscash",
+        "es": "Whiscash",
+        "fr": "Barbicha",
+        "it": "Whiscash",
+        "jp": "ナマズン",
+        "kr": "메깅",
+        "zh": "鲶鱼王",
+        "zh-CHS": "鲶鱼王",
+        "zh-CHT": "鯰魚王"
+    },
+    "species": [
+        "fish"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 2,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 164
+    }
+}

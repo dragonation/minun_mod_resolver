@@ -1,0 +1,148 @@
+{
+    "id": 151,
+    "name": "Mew",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It's very intelligent and can use an incredible variety of moves. Many believe that all other Pokémon are descendants of this one.",
+        "This mythical Pokémon is said to be extinct, but sightings of it are still being reported to this day."
+    ],
+    "forms": {
+        "mew": {
+            "id": "mew",
+            "name": "Mew",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "synchronize"
+            ],
+            "weight": 4,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 100,
+                "defense": 100,
+                "special-attack": 100,
+                "special-defense": 100,
+                "speed": 100
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "reflect-type",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "life-dew",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "metronome",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 70,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "transform",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 90,
+                    "name": "aura-sphere",
+                    "type": "fighting",
+                    "category": "special",
+                    "power": 80
+                },
+                {
+                    "level": 100,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 77,
+    "classification": "new-species",
+    "names": {
+        "de": "Mew",
+        "en": "Mew",
+        "es": "Mew",
+        "fr": "Mew",
+        "it": "Mew",
+        "jp": "ミュウ",
+        "kr": "뮤",
+        "zh": "梦幻",
+        "zh-CHS": "梦幻",
+        "zh-CHT": "夢幻"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {
+        "common": "lum-berry",
+        "rare": "lum-berry"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 121,
+    "initial-happiness": 100,
+    "battle-gain-factors": {
+        "health-points": 3,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 270
+    }
+}

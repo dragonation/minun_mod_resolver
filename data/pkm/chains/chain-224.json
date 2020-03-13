@@ -1,0 +1,16 @@
+{
+    "ids": [
+        442
+    ],
+    "chains": [
+        {
+            "targets": {
+                "442-spiritomb": {
+                    "pokemon": 442,
+                    "form": "spiritomb"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

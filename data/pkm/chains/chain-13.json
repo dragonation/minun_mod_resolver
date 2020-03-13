@@ -1,0 +1,57 @@
+{
+    "ids": [
+        32,
+        33,
+        34
+    ],
+    "chains": [
+        {
+            "targets": {
+                "32-nidoran-male": {
+                    "pokemon": 32,
+                    "form": "nidoran-male"
+                },
+                "33-nidorino": {
+                    "pokemon": 33,
+                    "form": "nidorino"
+                },
+                "34-nidoking": {
+                    "pokemon": 34,
+                    "form": "nidoking"
+                }
+            },
+            "changes": {
+                "32-nidoran-male > 33-nidorino": {
+                    "targets": [
+                        "32-nidoran-male",
+                        "33-nidorino"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "33-nidorino > 34-nidoking": {
+                    "targets": [
+                        "33-nidorino",
+                        "34-nidoking"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "moon-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

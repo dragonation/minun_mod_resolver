@@ -1,0 +1,178 @@
+{
+    "id": 368,
+    "name": "Gorebyss",
+    "experiences-type": "erratic",
+    "texts": [
+        "The color of its body changes with the water temperature. The coloration of Gorebyss in Alola is almost blindingly vivid.",
+        "It sucks bodily fluids out of its prey. The leftover meat sinks to the seafloor, where it becomes food for other Pokémon."
+    ],
+    "forms": {
+        "gorebyss": {
+            "id": "gorebyss",
+            "name": "Gorebyss",
+            "shape": "serpentine",
+            "abilities": [
+                "swift-swim"
+            ],
+            "weight": 22.6,
+            "height": 1.8,
+            "base-stats": {
+                "health-points": 55,
+                "attack": 84,
+                "defense": 105,
+                "special-attack": 114,
+                "special-defense": 75,
+                "speed": 52
+            },
+            "hidden-abilities": [
+                "hydration"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "water-sport",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 9,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 11,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 14,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "aqua-ring",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 23,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "dive",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 34,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 45,
+                    "name": "coil",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 188,
+    "classification": "south-sea",
+    "names": {
+        "de": "Saganabyss",
+        "en": "Gorebyss",
+        "es": "Gorebyss",
+        "fr": "Rosabyss",
+        "it": "Gorebyss",
+        "jp": "サクラビス",
+        "kr": "분홍장이",
+        "zh": "樱花鱼",
+        "zh-CHS": "樱花鱼",
+        "zh-CHT": "櫻花魚"
+    },
+    "species": [
+        "amphibians"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "deep-sea-scale"
+    },
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 2,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 170
+    }
+}

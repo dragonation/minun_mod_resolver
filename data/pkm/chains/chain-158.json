@@ -1,0 +1,50 @@
+{
+    "ids": [
+        315,
+        406,
+        407
+    ],
+    "chains": [
+        {
+            "targets": {
+                "406-budew": {
+                    "pokemon": 406,
+                    "form": "budew"
+                },
+                "315-roselia": {
+                    "pokemon": 315,
+                    "form": "roselia"
+                },
+                "407-roserade": {
+                    "pokemon": 407,
+                    "form": "roserade"
+                }
+            },
+            "changes": {
+                "406-budew > 315-roselia": {
+                    "targets": [
+                        "406-budew",
+                        "315-roselia"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                },
+                "315-roselia > 407-roserade": {
+                    "targets": [
+                        "315-roselia",
+                        "407-roserade"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "shiny-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

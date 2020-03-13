@@ -1,0 +1,191 @@
+{
+    "id": 333,
+    "name": "Swablu",
+    "experiences-type": "erratic",
+    "texts": [
+        "For some reason, it likes to land on people's heads softly and act like it's a hat.",
+        "It constantly grooms its cotton-like wings. It takes a shower to clean itself if it becomes dirty."
+    ],
+    "forms": {
+        "swablu": {
+            "id": "swablu",
+            "name": "Swablu",
+            "shape": "two-wings",
+            "abilities": [
+                "natural-cure"
+            ],
+            "weight": 1.2,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 40,
+                "defense": 60,
+                "special-attack": 40,
+                "special-defense": 75,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "cloud-nine"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "sing",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 7,
+                    "name": "fury-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 9,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 11,
+                    "name": "disarming-voice",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40
+                },
+                {
+                    "level": 14,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "round",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 26,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "mirror-move",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 34,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "normal",
+                "flying"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 168,
+    "classification": "cotton-bird",
+    "names": {
+        "de": "Wablu",
+        "en": "Swablu",
+        "es": "Swablu",
+        "fr": "Tylton",
+        "it": "Swablu",
+        "jp": "チルット",
+        "kr": "파비코",
+        "zh": "青绵鸟",
+        "zh-CHS": "青绵鸟",
+        "zh-CHT": "青綿鳥"
+    },
+    "species": [
+        "flying",
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 62
+    }
+}

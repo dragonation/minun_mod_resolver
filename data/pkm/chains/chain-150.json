@@ -1,0 +1,16 @@
+{
+    "ids": [
+        303
+    ],
+    "chains": [
+        {
+            "targets": {
+                "303-mawile": {
+                    "pokemon": 303,
+                    "form": "mawile"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

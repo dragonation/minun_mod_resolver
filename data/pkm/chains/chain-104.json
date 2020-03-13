@@ -1,0 +1,37 @@
+{
+    "ids": [
+        209,
+        210
+    ],
+    "chains": [
+        {
+            "targets": {
+                "209-snubbull": {
+                    "pokemon": 209,
+                    "form": "snubbull"
+                },
+                "210-granbull": {
+                    "pokemon": 210,
+                    "form": "granbull"
+                }
+            },
+            "changes": {
+                "209-snubbull > 210-granbull": {
+                    "targets": [
+                        "209-snubbull",
+                        "210-granbull"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                23
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

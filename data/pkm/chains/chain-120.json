@@ -1,0 +1,16 @@
+{
+    "ids": [
+        235
+    ],
+    "chains": [
+        {
+            "targets": {
+                "235-smeargle": {
+                    "pokemon": 235,
+                    "form": "smeargle"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

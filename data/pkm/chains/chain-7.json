@@ -1,0 +1,67 @@
+{
+    "ids": [
+        19,
+        20
+    ],
+    "chains": [
+        {
+            "targets": {
+                "19-rattata": {
+                    "pokemon": 19,
+                    "form": "rattata"
+                },
+                "20-raticate": {
+                    "pokemon": 20,
+                    "form": "raticate"
+                }
+            },
+            "changes": {
+                "19-rattata > 20-raticate": {
+                    "targets": [
+                        "19-rattata",
+                        "20-raticate"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "19-alolan-rattata": {
+                    "pokemon": 19,
+                    "form": "alolan-rattata"
+                },
+                "20-alolan-raticate": {
+                    "pokemon": 20,
+                    "form": "alolan-raticate"
+                }
+            },
+            "changes": {
+                "19-alolan-rattata > 20-alolan-raticate": {
+                    "targets": [
+                        "19-alolan-rattata",
+                        "20-alolan-raticate"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ],
+                            "time": "night"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

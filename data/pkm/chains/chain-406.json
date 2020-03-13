@@ -1,0 +1,16 @@
+{
+    "ids": [
+        793
+    ],
+    "chains": [
+        {
+            "targets": {
+                "793-nihilego": {
+                    "pokemon": 793,
+                    "form": "nihilego"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

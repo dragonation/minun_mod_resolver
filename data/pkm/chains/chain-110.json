@@ -1,0 +1,37 @@
+{
+    "ids": [
+        218,
+        219
+    ],
+    "chains": [
+        {
+            "targets": {
+                "218-slugma": {
+                    "pokemon": 218,
+                    "form": "slugma"
+                },
+                "219-magcargo": {
+                    "pokemon": 219,
+                    "form": "magcargo"
+                }
+            },
+            "changes": {
+                "218-slugma > 219-magcargo": {
+                    "targets": [
+                        "218-slugma",
+                        "219-magcargo"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                38
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "ids": [
+        328,
+        329,
+        330
+    ],
+    "chains": [
+        {
+            "targets": {
+                "328-trapinch": {
+                    "pokemon": 328,
+                    "form": "trapinch"
+                },
+                "329-vibrava": {
+                    "pokemon": 329,
+                    "form": "vibrava"
+                },
+                "330-flygon": {
+                    "pokemon": 330,
+                    "form": "flygon"
+                }
+            },
+            "changes": {
+                "328-trapinch > 329-vibrava": {
+                    "targets": [
+                        "328-trapinch",
+                        "329-vibrava"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                },
+                "329-vibrava > 330-flygon": {
+                    "targets": [
+                        "329-vibrava",
+                        "330-flygon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                45
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,171 @@
+{
+    "id": 371,
+    "name": "Bagon",
+    "experiences-type": "slow",
+    "texts": [
+        "Whenever it sees bird Pokémon flying through the sky, it becomes envious and smashes its surroundings to bits with headbutts.",
+        "Some theories suggest that its behavior of forcefully bashing its head into things stimulates cells that affect its evolution."
+    ],
+    "forms": {
+        "bagon": {
+            "id": "bagon",
+            "name": "Bagon",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "rock-head"
+            ],
+            "weight": 42.1,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 75,
+                "defense": 60,
+                "special-attack": 40,
+                "special-defense": 30,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "sheer-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 39,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dragon"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 191,
+    "classification": "rock-head",
+    "names": {
+        "de": "Kindwurm",
+        "en": "Bagon",
+        "es": "Bagon",
+        "fr": "Draby",
+        "it": "Bagon",
+        "jp": "タツベイ",
+        "kr": "아공이",
+        "zh": "宝贝龙",
+        "zh-CHS": "宝贝龙",
+        "zh-CHT": "寶貝龍"
+    },
+    "species": [
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "dragon-fang"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 41,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

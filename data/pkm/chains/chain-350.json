@@ -1,0 +1,38 @@
+{
+    "ids": [
+        698,
+        699
+    ],
+    "chains": [
+        {
+            "targets": {
+                "698-amaura": {
+                    "pokemon": 698,
+                    "form": "amaura"
+                },
+                "699-aurorus": {
+                    "pokemon": 699,
+                    "form": "aurorus"
+                }
+            },
+            "changes": {
+                "698-amaura > 699-aurorus": {
+                    "targets": [
+                        "698-amaura",
+                        "699-aurorus"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                39
+                            ],
+                            "time": "night"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

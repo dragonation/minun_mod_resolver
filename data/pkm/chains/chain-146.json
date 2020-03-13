@@ -1,0 +1,37 @@
+{
+    "ids": [
+        296,
+        297
+    ],
+    "chains": [
+        {
+            "targets": {
+                "296-makuhita": {
+                    "pokemon": 296,
+                    "form": "makuhita"
+                },
+                "297-hariyama": {
+                    "pokemon": 297,
+                    "form": "hariyama"
+                }
+            },
+            "changes": {
+                "296-makuhita > 297-hariyama": {
+                    "targets": [
+                        "296-makuhita",
+                        "297-hariyama"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                24
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

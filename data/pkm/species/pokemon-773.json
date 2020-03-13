@@ -1,0 +1,4008 @@
+{
+    "id": 773,
+    "name": "Silvally",
+    "experiences-type": "slow",
+    "texts": [
+        "A solid bond of trust between this Pokémon and its Trainer awakened the strength hidden within Silvally. It can change its type at will.",
+        "The final factor needed to release this Pokémon's true power was a strong bond with a Trainer it trusts."
+    ],
+    "forms": {
+        "normal-silvally": {
+            "id": "normal-silvally",
+            "name": "Normal Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "gray"
+        },
+        "fighting-silvally": {
+            "id": "fighting-silvally",
+            "name": "Fighting Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "gray"
+        },
+        "flying-silvally": {
+            "id": "flying-silvally",
+            "name": "Flying Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "flying"
+            ],
+            "color": "gray"
+        },
+        "poison-silvally": {
+            "id": "poison-silvally",
+            "name": "Poison Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "poison"
+            ],
+            "color": "gray"
+        },
+        "ground-silvally": {
+            "id": "ground-silvally",
+            "name": "Ground Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "gray"
+        },
+        "rock-silvally": {
+            "id": "rock-silvally",
+            "name": "Rock Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "gray"
+        },
+        "bug-silvally": {
+            "id": "bug-silvally",
+            "name": "Bug Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug"
+            ],
+            "color": "gray"
+        },
+        "ghost-silvally": {
+            "id": "ghost-silvally",
+            "name": "Ghost Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost"
+            ],
+            "color": "gray"
+        },
+        "steel-silvally": {
+            "id": "steel-silvally",
+            "name": "Steel Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "gray"
+        },
+        "fire-silvally": {
+            "id": "fire-silvally",
+            "name": "Fire Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire"
+            ],
+            "color": "gray"
+        },
+        "water-silvally": {
+            "id": "water-silvally",
+            "name": "Water Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "gray"
+        },
+        "grass-silvally": {
+            "id": "grass-silvally",
+            "name": "Grass Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "gray"
+        },
+        "electric-silvally": {
+            "id": "electric-silvally",
+            "name": "Electric Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "gray"
+        },
+        "psychic-silvally": {
+            "id": "psychic-silvally",
+            "name": "Psychic Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "gray"
+        },
+        "ice-silvally": {
+            "id": "ice-silvally",
+            "name": "Ice Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ice"
+            ],
+            "color": "gray"
+        },
+        "dragon-silvally": {
+            "id": "dragon-silvally",
+            "name": "Dragon Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dragon"
+            ],
+            "color": "gray"
+        },
+        "dark-silvally": {
+            "id": "dark-silvally",
+            "name": "Dark Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dark"
+            ],
+            "color": "gray"
+        },
+        "fairy-silvally": {
+            "id": "fairy-silvally",
+            "name": "Fairy Silvally",
+            "shape": "quadruped",
+            "abilities": [
+                "rks-system"
+            ],
+            "weight": 100.5,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 95,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 95,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "multi-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 55,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fairy"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 391,
+    "changes": [
+        {
+            "targets": {
+                "773-normal-silvally": {
+                    "pokemon": 773,
+                    "form": "normal-silvally"
+                },
+                "773-fighting-silvally": {
+                    "pokemon": 773,
+                    "form": "fighting-silvally"
+                },
+                "773-flying-silvally": {
+                    "pokemon": 773,
+                    "form": "flying-silvally"
+                },
+                "773-poison-silvally": {
+                    "pokemon": 773,
+                    "form": "poison-silvally"
+                },
+                "773-ground-silvally": {
+                    "pokemon": 773,
+                    "form": "ground-silvally"
+                },
+                "773-rock-silvally": {
+                    "pokemon": 773,
+                    "form": "rock-silvally"
+                },
+                "773-bug-silvally": {
+                    "pokemon": 773,
+                    "form": "bug-silvally"
+                },
+                "773-ghost-silvally": {
+                    "pokemon": 773,
+                    "form": "ghost-silvally"
+                },
+                "773-steel-silvally": {
+                    "pokemon": 773,
+                    "form": "steel-silvally"
+                },
+                "773-fire-silvally": {
+                    "pokemon": 773,
+                    "form": "fire-silvally"
+                },
+                "773-water-silvally": {
+                    "pokemon": 773,
+                    "form": "water-silvally"
+                },
+                "773-grass-silvally": {
+                    "pokemon": 773,
+                    "form": "grass-silvally"
+                },
+                "773-electric-silvally": {
+                    "pokemon": 773,
+                    "form": "electric-silvally"
+                },
+                "773-psychic-silvally": {
+                    "pokemon": 773,
+                    "form": "psychic-silvally"
+                },
+                "773-ice-silvally": {
+                    "pokemon": 773,
+                    "form": "ice-silvally"
+                },
+                "773-dragon-silvally": {
+                    "pokemon": 773,
+                    "form": "dragon-silvally"
+                },
+                "773-dark-silvally": {
+                    "pokemon": 773,
+                    "form": "dark-silvally"
+                },
+                "773-fairy-silvally": {
+                    "pokemon": 773,
+                    "form": "fairy-silvally"
+                }
+            },
+            "changes": {
+                "@773-normal-silvally": {
+                    "targets": [
+                        "773-normal-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": []
+                        }
+                    ]
+                },
+                "@773-fighting-silvally": {
+                    "targets": [
+                        "773-fighting-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "fighting-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-flying-silvally": {
+                    "targets": [
+                        "773-flying-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "flying-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-poison-silvally": {
+                    "targets": [
+                        "773-poison-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "poison-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-ground-silvally": {
+                    "targets": [
+                        "773-ground-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "ground-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-rock-silvally": {
+                    "targets": [
+                        "773-rock-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "rock-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-bug-silvally": {
+                    "targets": [
+                        "773-bug-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "bug-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-ghost-silvally": {
+                    "targets": [
+                        "773-ghost-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "ghost-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-steel-silvally": {
+                    "targets": [
+                        "773-steel-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "stell-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-fire-silvally": {
+                    "targets": [
+                        "773-fire-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "fire-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-water-silvally": {
+                    "targets": [
+                        "773-water-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "water-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-grass-silvally": {
+                    "targets": [
+                        "773-grass-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "grass-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-electric-silvally": {
+                    "targets": [
+                        "773-electric-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "electric-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-psychic-silvally": {
+                    "targets": [
+                        "773-psychic-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "psychic-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-ice-silvally": {
+                    "targets": [
+                        "773-ice-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "ice-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-dragon-silvally": {
+                    "targets": [
+                        "773-dragon-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "dragon-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-dark-silvally": {
+                    "targets": [
+                        "773-dark-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "dark-memory"
+                            ]
+                        }
+                    ]
+                },
+                "@773-fairy-silvally": {
+                    "targets": [
+                        "773-fairy-silvally"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "fairy-memory"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "synthetic",
+    "names": {
+        "de": "Amigento",
+        "en": "Silvally",
+        "es": "Silvally",
+        "fr": "Silvallié",
+        "it": "Silvally",
+        "jp": "シルヴァディ",
+        "kr": "실버디",
+        "zh": "银伴战兽",
+        "zh-CHS": "银伴战兽",
+        "zh-CHT": ""
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 3,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 114
+    }
+}

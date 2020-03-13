@@ -1,0 +1,402 @@
+{
+    "id": 302,
+    "name": "Sableye",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "This Pokémon is feared. When its gemstone eyes begin to glow with a sinister shine, it's believed that Sableye will steal people's spirits away.",
+        "It feeds on gemstone crystals. In darkness, its eyes sparkle with the glitter of jewels."
+    ],
+    "forms": {
+        "sableye": {
+            "id": "sableye",
+            "name": "Sableye",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "keen-eye",
+                "stall"
+            ],
+            "weight": 11,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 85,
+                "defense": 125,
+                "special-attack": 85,
+                "special-defense": 115,
+                "speed": 20
+            },
+            "hidden-abilities": [
+                "prankster"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 21,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 27,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "quash",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "shadow-claw",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 39,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 45,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "foul-play",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dark",
+                "ghost"
+            ],
+            "color": "purple"
+        },
+        "mega-sableye": {
+            "id": "mega-sableye",
+            "name": "Mega Sableye",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "magic-bounce"
+            ],
+            "weight": 161,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 85,
+                "defense": 125,
+                "special-attack": 85,
+                "special-defense": 115,
+                "speed": 20
+            },
+            "hidden-abilities": [
+                "prankster"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 21,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 27,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "quash",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "shadow-claw",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 39,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 45,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "foul-play",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dark",
+                "ghost"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 149,
+    "changes": [
+        {
+            "targets": {
+                "302-sableye": {
+                    "pokemon": 302,
+                    "form": "sableye"
+                },
+                "302-mega-sableye": {
+                    "pokemon": 302,
+                    "form": "mega-sableye"
+                }
+            },
+            "changes": {
+                "302-sableye <> 302-mega-sableye": {
+                    "targets": [
+                        "302-sableye",
+                        "302-mega-sableye"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "sablenite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "darkness",
+    "names": {
+        "de": "Zobiris",
+        "en": "Sableye",
+        "es": "Sableye",
+        "fr": "Ténéfix",
+        "it": "Sableye",
+        "jp": "ヤミラミ",
+        "kr": "깜까미",
+        "zh": "勾魂眼",
+        "zh-CHS": "勾魂眼",
+        "zh-CHT": "勾魂眼"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "wide-lens"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 26,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 133
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        449,
+        450
+    ],
+    "chains": [
+        {
+            "targets": {
+                "449-hippopotas": {
+                    "pokemon": 449,
+                    "form": "hippopotas"
+                },
+                "450-hippowdon": {
+                    "pokemon": 450,
+                    "form": "hippowdon"
+                }
+            },
+            "changes": {
+                "449-hippopotas > 450-hippowdon": {
+                    "targets": [
+                        "449-hippopotas",
+                        "450-hippowdon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        378
+    ],
+    "chains": [
+        {
+            "targets": {
+                "378-regice": {
+                    "pokemon": 378,
+                    "form": "regice"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

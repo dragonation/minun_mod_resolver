@@ -1,0 +1,413 @@
+{
+    "id": 648,
+    "name": "Meloetta",
+    "experiences-type": "slow",
+    "texts": [
+        "The melodies sung by Meloetta have the power to make Pokémon that hear them happy or sad.",
+        "Its melodies are sung with a special vocalization method that can control the feelings of those who hear it."
+    ],
+    "forms": {
+        "aria-form": {
+            "id": "aria-form",
+            "name": "Aria Forme",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "serene-grace"
+            ],
+            "weight": 6.5,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 77,
+                "defense": 77,
+                "special-attack": 128,
+                "special-defense": 128,
+                "speed": 90
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "round",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sing",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 6,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "sing",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 21,
+                    "name": "teeter-dance",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "acrobatics",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "echoed-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "u-turn",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "wake-up-slap",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 71,
+                    "name": "role-play",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 78,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 85,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal",
+                "psychic"
+            ],
+            "color": "white"
+        },
+        "pirouette-form": {
+            "id": "pirouette-form",
+            "name": "Pirouette Forme",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "serene-grace"
+            ],
+            "weight": 6.5,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 128,
+                "defense": 90,
+                "special-attack": 77,
+                "special-defense": 77,
+                "speed": 128
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "round",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sing",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 6,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "sing",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 21,
+                    "name": "teeter-dance",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "acrobatics",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "echoed-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "u-turn",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "wake-up-slap",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 71,
+                    "name": "role-play",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 78,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 85,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "normal",
+                "fighting"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 327,
+    "changes": [
+        {
+            "targets": {
+                "648-aria-form": {
+                    "pokemon": 648,
+                    "form": "aria-form"
+                },
+                "648-pirouette-form": {
+                    "pokemon": 648,
+                    "form": "pirouette-form"
+                }
+            },
+            "changes": {
+                "@648-aria-form": {
+                    "methods": [
+                        {
+                            "method": "use-move",
+                            "parameters": [
+                                "relic-song"
+                            ]
+                        }
+                    ],
+                    "targets": [
+                        "648-aria-form"
+                    ],
+                    "bidirectional": false
+                },
+                "@648-pirouette-form": {
+                    "methods": [
+                        {
+                            "method": "use-move",
+                            "parameters": [
+                                "relic-song"
+                            ]
+                        }
+                    ],
+                    "targets": [
+                        "648-pirouette-form"
+                    ],
+                    "bidirectional": false
+                }
+            }
+        }
+    ],
+    "classification": "melody",
+    "names": {
+        "de": "Meloetta",
+        "en": "Meloetta",
+        "es": "Meloetta",
+        "fr": "Meloetta",
+        "it": "Meloetta",
+        "jp": "メロエッタ",
+        "kr": "메로엣타",
+        "zh": "美洛耶塔",
+        "zh-CHS": "美洛耶塔",
+        "zh-CHT": "美洛耶塔"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {
+        "common": "star-piece",
+        "rare": "star-piece"
+    },
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 100,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 1,
+        "speed": 1,
+        "experience": 270
+    }
+}

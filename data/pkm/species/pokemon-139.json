@@ -1,0 +1,208 @@
+{
+    "id": 139,
+    "name": "Omastar",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Its heavy shell is thought to be the reason this ancient Pokémon died out. It's apparently a distant ancestor of Octillery.",
+        "It wraps its prey in its tentacles to immobilize them and then finishes them off with its sharp fangs."
+    ],
+    "forms": {
+        "omastar": {
+            "id": "omastar",
+            "name": "Omastar",
+            "shape": "tentacles",
+            "abilities": [
+                "swift-swim",
+                "shell-armor"
+            ],
+            "weight": 35,
+            "height": 1,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 60,
+                "defense": 125,
+                "special-attack": 115,
+                "special-defense": 70,
+                "speed": 55
+            },
+            "hidden-abilities": [
+                "weak-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "spike-cannon",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "constrict",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 10,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "spike-cannon",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 19,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "mud-shot",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 28,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "tickle",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 67,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 75,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "rock",
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 68,
+    "classification": "spiral",
+    "names": {
+        "de": "Amoroso",
+        "en": "Omastar",
+        "es": "Omastar",
+        "fr": "Amonistar",
+        "it": "Omastar",
+        "jp": "オムスター",
+        "kr": "암스타",
+        "zh": "多刺菊石兽",
+        "zh-CHS": "多刺菊石兽",
+        "zh-CHT": "多刺菊石獸"
+    },
+    "species": [
+        "amphibians",
+        "aquatic"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 173
+    }
+}

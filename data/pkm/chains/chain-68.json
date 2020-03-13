@@ -1,0 +1,37 @@
+{
+    "ids": [
+        138,
+        139
+    ],
+    "chains": [
+        {
+            "targets": {
+                "138-omanyte": {
+                    "pokemon": 138,
+                    "form": "omanyte"
+                },
+                "139-omastar": {
+                    "pokemon": 139,
+                    "form": "omastar"
+                }
+            },
+            "changes": {
+                "138-omanyte > 139-omastar": {
+                    "targets": [
+                        "138-omanyte",
+                        "139-omastar"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

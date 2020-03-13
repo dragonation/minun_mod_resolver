@@ -1,0 +1,198 @@
+{
+    "id": 394,
+    "name": "Prinplup",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It lives alone, away from others. Apparently, every one of them believes it is the most important.",
+        "It lives a solitary life. Its wings deliver wicked blows that can snap even the thickest of trees."
+    ],
+    "forms": {
+        "prinplup": {
+            "id": "prinplup",
+            "name": "Prinplup",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "torrent"
+            ],
+            "weight": 23,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 64,
+                "attack": 66,
+                "defense": 68,
+                "special-attack": 81,
+                "special-defense": 76,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "defiant"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "metal-claw",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bubble",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "metal-claw",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 95
+                },
+                {
+                    "level": 4,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "bubble",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "water-sport",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "bide",
+                    "type": "normal",
+                    "category": "physical"
+                },
+                {
+                    "level": 28,
+                    "name": "fury-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 33,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 42,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "drill-peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 205,
+    "classification": "penguin",
+    "names": {
+        "de": "Pliprin",
+        "en": "Prinplup",
+        "es": "Prinplup",
+        "fr": "Prinplouf",
+        "it": "Prinplup",
+        "jp": "ポッタイシ",
+        "kr": "팽태자",
+        "zh": "波皇子",
+        "zh-CHS": "波皇子",
+        "zh-CHT": "波皇子"
+    },
+    "species": [
+        "amphibians",
+        "field"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 2,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 142
+    }
+}

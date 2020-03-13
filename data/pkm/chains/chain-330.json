@@ -1,0 +1,57 @@
+{
+    "ids": [
+        653,
+        654,
+        655
+    ],
+    "chains": [
+        {
+            "targets": {
+                "653-fennekin": {
+                    "pokemon": 653,
+                    "form": "fennekin"
+                },
+                "654-braixen": {
+                    "pokemon": 654,
+                    "form": "braixen"
+                },
+                "655-delphox": {
+                    "pokemon": 655,
+                    "form": "delphox"
+                }
+            },
+            "changes": {
+                "653-fennekin > 654-braixen": {
+                    "targets": [
+                        "653-fennekin",
+                        "654-braixen"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "654-braixen > 655-delphox": {
+                    "targets": [
+                        "654-braixen",
+                        "655-delphox"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

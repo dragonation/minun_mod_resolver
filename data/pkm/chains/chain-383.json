@@ -1,0 +1,37 @@
+{
+    "ids": [
+        759,
+        760
+    ],
+    "chains": [
+        {
+            "targets": {
+                "759-stufful": {
+                    "pokemon": 759,
+                    "form": "stufful"
+                },
+                "760-bewear": {
+                    "pokemon": 760,
+                    "form": "bewear"
+                }
+            },
+            "changes": {
+                "759-stufful > 760-bewear": {
+                    "targets": [
+                        "759-stufful",
+                        "760-bewear"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                27
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

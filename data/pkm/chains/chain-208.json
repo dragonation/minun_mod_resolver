@@ -1,0 +1,37 @@
+{
+    "ids": [
+        401,
+        402
+    ],
+    "chains": [
+        {
+            "targets": {
+                "401-kricketot": {
+                    "pokemon": 401,
+                    "form": "kricketot"
+                },
+                "402-kricketune": {
+                    "pokemon": 402,
+                    "form": "kricketune"
+                }
+            },
+            "changes": {
+                "401-kricketot > 402-kricketune": {
+                    "targets": [
+                        "401-kricketot",
+                        "402-kricketune"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                10
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

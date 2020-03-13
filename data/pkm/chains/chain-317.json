@@ -1,0 +1,16 @@
+{
+    "ids": [
+        638
+    ],
+    "chains": [
+        {
+            "targets": {
+                "638-cobalion": {
+                    "pokemon": 638,
+                    "form": "cobalion"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        805
+    ],
+    "chains": [
+        {
+            "targets": {
+                "805-stakataka": {
+                    "pokemon": 805,
+                    "form": "stakataka"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

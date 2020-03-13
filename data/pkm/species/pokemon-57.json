@@ -1,0 +1,235 @@
+{
+    "id": 57,
+    "name": "Primeape",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It will never forgive opponents who have angered it. Even after it has beaten them down until they can't move, it never ever forgives.",
+        "The blood vessels in its brain are sturdier than those of other Pokémon, so it can stay healthy despite its constant raging."
+    ],
+    "forms": {
+        "primeape": {
+            "id": "primeape",
+            "name": "Primeape",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "vital-spirit",
+                "anger-point"
+            ],
+            "weight": 32,
+            "height": 1,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 105,
+                "defense": 60,
+                "special-attack": 60,
+                "special-defense": 70,
+                "speed": 95
+            },
+            "hidden-abilities": [
+                "defiant"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "final-gambit",
+                    "type": "fighting",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fling",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "low-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 8,
+                    "name": "karate-chop",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "pursuit",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 22,
+                    "name": "cross-chop",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 26,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 48,
+                    "name": "stomping-tantrum",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "final-gambit",
+                    "type": "fighting",
+                    "category": "special",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 24,
+    "classification": "pig-monkey",
+    "names": {
+        "de": "Rasaff",
+        "en": "Primeape",
+        "es": "Primeape",
+        "fr": "Colossinge",
+        "it": "Primeape",
+        "jp": "オコリザル",
+        "kr": "성원숭",
+        "zh": "火暴猴",
+        "zh-CHS": "火暴猴",
+        "zh-CHT": "火爆猴"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 159
+    }
+}

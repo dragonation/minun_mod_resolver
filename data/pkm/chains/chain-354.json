@@ -1,0 +1,57 @@
+{
+    "ids": [
+        704,
+        705,
+        706
+    ],
+    "chains": [
+        {
+            "targets": {
+                "704-goomy": {
+                    "pokemon": 704,
+                    "form": "goomy"
+                },
+                "705-sliggoo": {
+                    "pokemon": 705,
+                    "form": "sliggoo"
+                },
+                "706-goodra": {
+                    "pokemon": 706,
+                    "form": "goodra"
+                }
+            },
+            "changes": {
+                "704-goomy > 705-sliggoo": {
+                    "targets": [
+                        "704-goomy",
+                        "705-sliggoo"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                },
+                "705-sliggoo > 706-goodra": {
+                    "targets": [
+                        "705-sliggoo",
+                        "706-goodra"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                50
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

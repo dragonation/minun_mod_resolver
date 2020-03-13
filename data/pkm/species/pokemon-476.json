@@ -1,0 +1,248 @@
+{
+    "id": 476,
+    "name": "Probopass",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Although it can control its units known as Mini-Noses, they sometimes get lost and don't come back.",
+        "It uses three small units to catch prey and battle enemies. The main body mostly just gives orders."
+    ],
+    "forms": {
+        "probopass": {
+            "id": "probopass",
+            "name": "Probopass",
+            "shape": "multiple",
+            "abilities": [
+                "sturdy",
+                "magnet-pull"
+            ],
+            "weight": 340,
+            "height": 1.4,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 55,
+                "defense": 145,
+                "special-attack": 75,
+                "special-defense": 150,
+                "speed": 40
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "magnetic-flux",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "magnet-rise",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "wide-guard",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "block",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "magnet-bomb",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": null,
+                    "name": "tri-attack",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "block",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "magnet-bomb",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 13,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 16,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 25,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 31,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 43,
+                    "name": "lock-on",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                }
+            ],
+            "types": [
+                "rock",
+                "steel"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 147,
+    "classification": "compass",
+    "names": {
+        "de": "Voluminas",
+        "en": "Probopass",
+        "es": "Probopass",
+        "fr": "Tarinorme",
+        "it": "Probopass",
+        "jp": "ダイノーズ",
+        "kr": "대코파스",
+        "zh": "大朝北鼻",
+        "zh-CHS": "大朝北鼻",
+        "zh-CHT": "大朝北鼻"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "magnet"
+    },
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 2,
+        "speed": 0,
+        "experience": 184
+    }
+}

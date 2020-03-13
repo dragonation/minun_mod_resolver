@@ -1,0 +1,16 @@
+{
+    "ids": [
+        227
+    ],
+    "chains": [
+        {
+            "targets": {
+                "227-skarmory": {
+                    "pokemon": 227,
+                    "form": "skarmory"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

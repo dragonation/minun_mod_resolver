@@ -1,0 +1,16 @@
+{
+    "ids": [
+        676
+    ],
+    "chains": [
+        {
+            "targets": {
+                "676-furfrou": {
+                    "pokemon": 676,
+                    "form": "furfrou"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

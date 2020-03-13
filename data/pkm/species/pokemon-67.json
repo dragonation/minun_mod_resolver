@@ -1,0 +1,183 @@
+{
+    "id": 67,
+    "name": "Machoke",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "Its muscular body is so powerful, it must wear a power-save belt to be able to regulate its motions.",
+        "Its formidable body never gets tired. It helps people by doing work such as the moving of heavy goods."
+    ],
+    "forms": {
+        "machoke": {
+            "id": "machoke",
+            "name": "Machoke",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "guts",
+                "no-guard"
+            ],
+            "weight": 70.5,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 100,
+                "defense": 70,
+                "special-attack": 50,
+                "special-defense": 60,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "steadfast"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "low-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "revenge",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "low-sweep",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "vital-throw",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 70
+                },
+                {
+                    "level": 31,
+                    "name": "strength",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "dual-chop",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 90
+                },
+                {
+                    "level": 42,
+                    "name": "bulk-up",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "dynamic-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 50
+                },
+                {
+                    "level": 60,
+                    "name": "cross-chop",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 66,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 28,
+    "classification": "superpower",
+    "names": {
+        "de": "Maschock",
+        "en": "Machoke",
+        "es": "Machoke",
+        "fr": "Machopeur",
+        "it": "Machoke",
+        "jp": "ゴーリキー",
+        "kr": "근육몬",
+        "zh": "豪力",
+        "zh-CHS": "豪力",
+        "zh-CHT": "豪力"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "6/2",
+    "holdings": {
+        "rare": "focus-band"
+    },
+    "capture-rate": 90,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 142
+    }
+}

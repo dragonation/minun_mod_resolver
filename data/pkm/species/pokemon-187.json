@@ -1,0 +1,201 @@
+{
+    "id": 187,
+    "name": "Hoppip",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "Its body is so light, it must grip the ground firmly with its feet to keep from being blown away.",
+        "It drifts on winds. It is said that when Hoppip gather in fields and mountains, spring is on the way."
+    ],
+    "forms": {
+        "hoppip": {
+            "id": "hoppip",
+            "name": "Hoppip",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "chlorophyll",
+                "leaf-guard"
+            ],
+            "weight": 0.5,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 35,
+                "attack": 35,
+                "defense": 40,
+                "special-attack": 35,
+                "special-defense": 55,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "infiltrator"
+            ],
+            "skills": [
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "absorb",
+                    "category": "grass",
+                    "accuracy": 20
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "splash",
+                    "category": "normal"
+                },
+                {
+                    "level": 4,
+                    "name": "0044",
+                    "type": "synthesis",
+                    "category": "grass"
+                },
+                {
+                    "level": 6,
+                    "name": "0066",
+                    "type": "tail whip",
+                    "category": "normal"
+                },
+                {
+                    "level": 8,
+                    "name": "0088",
+                    "type": "tackle",
+                    "category": "normal",
+                    "accuracy": 40
+                },
+                {
+                    "level": 10,
+                    "name": "01010",
+                    "type": "fairy wind",
+                    "category": "fairy",
+                    "accuracy": 40
+                },
+                {
+                    "level": 12,
+                    "name": "01212",
+                    "type": "poison powder",
+                    "category": "poison"
+                },
+                {
+                    "level": 14,
+                    "name": "01414",
+                    "type": "stun spore",
+                    "category": "grass"
+                },
+                {
+                    "level": 16,
+                    "name": "01616",
+                    "type": "sleep powder",
+                    "category": "grass"
+                },
+                {
+                    "level": 19,
+                    "name": "01919",
+                    "type": "bullet seed",
+                    "category": "grass",
+                    "accuracy": 25
+                },
+                {
+                    "level": 22,
+                    "name": "02222",
+                    "type": "leech seed",
+                    "category": "grass"
+                },
+                {
+                    "level": 25,
+                    "name": "02525",
+                    "type": "mega drain",
+                    "category": "grass",
+                    "accuracy": 40
+                },
+                {
+                    "level": 28,
+                    "name": "02828",
+                    "type": "acrobatics",
+                    "category": "flying",
+                    "accuracy": 55
+                },
+                {
+                    "level": 31,
+                    "name": "03131",
+                    "type": "rage powder",
+                    "category": "bug"
+                },
+                {
+                    "level": 34,
+                    "name": "03434",
+                    "type": "cotton spore",
+                    "category": "grass"
+                },
+                {
+                    "level": 37,
+                    "name": "03737",
+                    "type": "u-turn",
+                    "category": "bug",
+                    "accuracy": 70
+                },
+                {
+                    "level": 40,
+                    "name": "04040",
+                    "type": "worry seed",
+                    "category": "grass"
+                },
+                {
+                    "level": 43,
+                    "name": "04343",
+                    "type": "giga drain",
+                    "category": "grass",
+                    "accuracy": 75
+                },
+                {
+                    "level": 46,
+                    "name": "04646",
+                    "type": "bounce",
+                    "category": "flying",
+                    "accuracy": 85
+                },
+                {
+                    "level": 49,
+                    "name": "04949",
+                    "type": "memento",
+                    "category": "dark"
+                }
+            ],
+            "types": [
+                "grass",
+                "flying"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 91,
+    "classification": "cottonweed",
+    "names": {
+        "de": "Hoppspross",
+        "en": "Hoppip",
+        "es": "Hoppip",
+        "fr": "Granivol",
+        "it": "Hoppip",
+        "jp": "ハネッコ",
+        "kr": "통통코",
+        "zh": "毽子草",
+        "zh-CHS": "毽子草",
+        "zh-CHT": "毽子草"
+    },
+    "species": [
+        "fairy",
+        "plant"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 50
+    }
+}

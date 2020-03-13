@@ -1,0 +1,217 @@
+{
+    "id": 477,
+    "name": "Dusknoir",
+    "experiences-type": "fast",
+    "texts": [
+        "At the bidding of transmissions from the spirit world, it steals people and Pokémon away. No one knows whether it has a will of its own.",
+        "With the mouth on its belly, Dusknoir swallows its target whole. The soul is the only thing eaten— Dusknoir disgorges the body before departing."
+    ],
+    "forms": {
+        "dusknoir": {
+            "id": "dusknoir",
+            "name": "Dusknoir",
+            "shape": "head-arms",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 106.6,
+            "height": 2.2,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 100,
+                "defense": 135,
+                "special-attack": 65,
+                "special-defense": 135,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "frisk"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "shadow-punch",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "fire-punch",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "bind",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "will-o-wisp",
+                    "type": "fire",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "ghost"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 182,
+    "classification": "gripper",
+    "names": {
+        "de": "Zwirrfinst",
+        "en": "Dusknoir",
+        "es": "Dusknoir",
+        "fr": "Noctunoir",
+        "it": "Dusknoir",
+        "jp": "ヨノワール",
+        "kr": "야느와르몽",
+        "zh": "黑夜魔灵",
+        "zh-CHS": "黑夜魔灵",
+        "zh-CHT": "黑夜魔靈"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "spell-tag"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 26,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 2,
+        "speed": 0,
+        "experience": 236
+    }
+}

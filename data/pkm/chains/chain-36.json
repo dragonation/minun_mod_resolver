@@ -1,0 +1,37 @@
+{
+    "ids": [
+        84,
+        85
+    ],
+    "chains": [
+        {
+            "targets": {
+                "84-doduo": {
+                    "pokemon": 84,
+                    "form": "doduo"
+                },
+                "85-dodrio": {
+                    "pokemon": 85,
+                    "form": "dodrio"
+                }
+            },
+            "changes": {
+                "84-doduo > 85-dodrio": {
+                    "targets": [
+                        "84-doduo",
+                        "85-dodrio"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                31
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

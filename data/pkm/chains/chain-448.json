@@ -1,0 +1,16 @@
+{
+    "ids": [
+        875
+    ],
+    "chains": [
+        {
+            "targets": {
+                "875-ice-face": {
+                    "pokemon": 875,
+                    "form": "ice-face"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

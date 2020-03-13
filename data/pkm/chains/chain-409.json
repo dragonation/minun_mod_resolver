@@ -1,0 +1,16 @@
+{
+    "ids": [
+        796
+    ],
+    "chains": [
+        {
+            "targets": {
+                "796-xurkitree": {
+                    "pokemon": 796,
+                    "form": "xurkitree"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "ids": [
+        215,
+        461
+    ],
+    "chains": [
+        {
+            "targets": {
+                "215-sneasel": {
+                    "pokemon": 215,
+                    "form": "sneasel"
+                },
+                "461-weavile": {
+                    "pokemon": 461,
+                    "form": "weavile"
+                }
+            },
+            "changes": {
+                "215-sneasel > 461-weavile": {
+                    "targets": [
+                        "215-sneasel",
+                        "461-weavile"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

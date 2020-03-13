@@ -1,0 +1,37 @@
+{
+    "ids": [
+        588,
+        589
+    ],
+    "chains": [
+        {
+            "targets": {
+                "588-karrablast": {
+                    "pokemon": 588,
+                    "form": "karrablast"
+                },
+                "589-escavalier": {
+                    "pokemon": 589,
+                    "form": "escavalier"
+                }
+            },
+            "changes": {
+                "588-karrablast > 589-escavalier": {
+                    "targets": [
+                        "588-karrablast",
+                        "589-escavalier"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": [
+                                "shelmet"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,321 @@
+{
+    "id": 844,
+    "name": "Sandaconda",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "When it contracts its body, over 220 pounds of sand sprays from its nose. If it ever runs out of sand, it becomes disheartened.",
+        "Its unique style of coiling allows it to blast sand out of its sand sac more efficiently."
+    ],
+    "forms": {
+        "sandaconda": {
+            "id": "sandaconda",
+            "name": "Sandaconda",
+            "shape": "serpentine",
+            "abilities": [
+                "sand-spit",
+                "shed-skin"
+            ],
+            "weight": 65.5,
+            "height": 3.8,
+            "base-stats": {
+                "health-points": 72,
+                "attack": 107,
+                "defense": 125,
+                "special-attack": 65,
+                "special-defense": 70,
+                "speed": 71
+            },
+            "hidden-abilities": [
+                "sand-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "skull-bash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "minimize",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "brutal-swing",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "glare",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 49,
+                    "name": "coil",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 51,
+                    "name": "sand-tomb",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "green"
+        },
+        "gigantamax-sandaconda": {
+            "id": "gigantamax-sandaconda",
+            "name": "Gigantamax Sandaconda",
+            "shape": "serpentine",
+            "abilities": [
+                "sand-spit",
+                "shed-skin"
+            ],
+            "height": 22,
+            "base-stats": {
+                "health-points": 72,
+                "attack": 107,
+                "defense": 125,
+                "special-attack": 65,
+                "special-defense": 70,
+                "speed": 71
+            },
+            "hidden-abilities": [
+                "sand-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "skull-bash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "minimize",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "brutal-swing",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "glare",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 49,
+                    "name": "coil",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 51,
+                    "name": "sand-tomb",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 434,
+    "changes": [
+        {
+            "targets": {
+                "844-sandaconda": {
+                    "pokemon": 844,
+                    "form": "sandaconda"
+                },
+                "844-gigantamax-sandaconda": {
+                    "pokemon": 844,
+                    "form": "gigantamax-sandaconda"
+                }
+            },
+            "changes": {
+                "844-sandaconda <> 844-gigantamax-sandaconda": {
+                    "targets": [
+                        "844-sandaconda",
+                        "844-gigantamax-sandaconda"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dynamax-band"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "sand-snake",
+    "names": {
+        "de": "Sanaconda",
+        "en": "Sandaconda",
+        "es": "Sandaconda",
+        "fr": "Dunaconda",
+        "it": "Sandaconda",
+        "jp": "サダイジャ",
+        "kr": "사다이사",
+        "zh": "沙螺蟒",
+        "zh-CHS": "沙螺蟒",
+        "zh-CHT": "沙螺蟒"
+    },
+    "species": [
+        "field",
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 120,
+    "hatching-cycles": 20,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 179
+    }
+}

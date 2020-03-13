@@ -1,0 +1,185 @@
+{
+    "id": 486,
+    "name": "Regigigas",
+    "experiences-type": "slow",
+    "texts": [
+        "It is said to have made Pokémon that look like itself from a special ice mountain, rocks, and magma.",
+        "There is an enduring legend that states this Pokémon towed continents with ropes."
+    ],
+    "forms": {
+        "regigigas": {
+            "id": "regigigas",
+            "name": "Regigigas",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "slow-start"
+            ],
+            "weight": 420,
+            "height": 3.7,
+            "base-stats": {
+                "health-points": 110,
+                "attack": 160,
+                "defense": 110,
+                "special-attack": 80,
+                "special-defense": 110,
+                "speed": 100
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "crush-grip",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fire-punch",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "dizzy-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "foresight",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "revenge",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "wide-guard",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 65,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 75,
+                    "name": "crush-grip",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 90,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 100,
+                    "name": "giga-impact",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 240,
+    "classification": "colossal",
+    "names": {
+        "de": "Regigigas",
+        "en": "Regigigas",
+        "es": "Regigigas",
+        "fr": "Regigigas",
+        "it": "Regigigas",
+        "jp": "レジギガス",
+        "kr": "레지기가스",
+        "zh": "雷吉奇卡斯",
+        "zh-CHS": "雷吉奇卡斯",
+        "zh-CHT": "雷吉奇卡斯"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 3,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 302
+    }
+}

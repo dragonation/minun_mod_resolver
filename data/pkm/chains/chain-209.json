@@ -1,0 +1,57 @@
+{
+    "ids": [
+        403,
+        404,
+        405
+    ],
+    "chains": [
+        {
+            "targets": {
+                "403-shinx": {
+                    "pokemon": 403,
+                    "form": "shinx"
+                },
+                "404-luxio": {
+                    "pokemon": 404,
+                    "form": "luxio"
+                },
+                "405-luxray": {
+                    "pokemon": 405,
+                    "form": "luxray"
+                }
+            },
+            "changes": {
+                "403-shinx > 404-luxio": {
+                    "targets": [
+                        "403-shinx",
+                        "404-luxio"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                15
+                            ]
+                        }
+                    ]
+                },
+                "404-luxio > 405-luxray": {
+                    "targets": [
+                        "404-luxio",
+                        "405-luxray"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

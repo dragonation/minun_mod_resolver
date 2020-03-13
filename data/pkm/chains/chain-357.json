@@ -1,0 +1,35 @@
+{
+    "ids": [
+        710,
+        711
+    ],
+    "chains": [
+        {
+            "targets": {
+                "710-average-size": {
+                    "pokemon": 710,
+                    "form": "average-size"
+                },
+                "711-average-size": {
+                    "pokemon": 711,
+                    "form": "average-size"
+                }
+            },
+            "changes": {
+                "710-average-size > 711-average-size": {
+                    "targets": [
+                        "710-average-size",
+                        "711-average-size"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

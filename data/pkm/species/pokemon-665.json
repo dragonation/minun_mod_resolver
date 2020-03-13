@@ -1,0 +1,87 @@
+{
+    "id": 665,
+    "name": "Spewpa",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It lives hidden within thicket shadows. When predators attack, it quickly bristles the fur covering its body in an effort to threaten them.",
+        "The beaks of birds can't begin to scratch its stalwart body. To defend itself, it spews powder."
+    ],
+    "forms": {
+        "spewpa": {
+            "id": "spewpa",
+            "name": "Spewpa",
+            "shape": "head-base",
+            "abilities": [
+                "shed-skin"
+            ],
+            "weight": 8.4,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 22,
+                "defense": 60,
+                "special-attack": 27,
+                "special-defense": 30,
+                "speed": 29
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "bug"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 334,
+    "classification": "scatterdust",
+    "names": {
+        "de": "Puponcho",
+        "en": "Spewpa",
+        "es": "Spewpa",
+        "fr": "Pérégrain",
+        "it": "Spewpa",
+        "jp": "コフーライ",
+        "kr": "분떠도리",
+        "zh": "粉蝶蛹",
+        "zh-CHS": "粉蝶蛹",
+        "zh-CHT": "粉蝶蛹"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 120,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 75
+    }
+}

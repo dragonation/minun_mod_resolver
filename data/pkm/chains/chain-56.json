@@ -1,0 +1,72 @@
+{
+    "ids": [
+        122,
+        439,
+        866
+    ],
+    "chains": [
+        {
+            "targets": {
+                "439-mime-jr": {
+                    "pokemon": 439,
+                    "form": "mime-jr"
+                },
+                "122-mr-mime": {
+                    "pokemon": 122,
+                    "form": "mr-mime"
+                }
+            },
+            "changes": {
+                "439-mime-jr > 122-mr-mime": {
+                    "targets": [
+                        "439-mime-jr",
+                        "122-mr-mime"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                }
+            }
+        },
+        {
+            "targets": {
+                "439-mime-jr": {
+                    "pokemon": 439,
+                    "form": "mime-jr"
+                },
+                "122-galarian-mr-mime": {
+                    "pokemon": 122,
+                    "form": "galarian-mr-mime"
+                },
+                "866-mr-rime": {
+                    "pokemon": 866,
+                    "form": "mr-rime"
+                }
+            },
+            "changes": {
+                "439-mime-jr > 122-galarian-mr-mime": {
+                    "targets": [
+                        "439-mime-jr",
+                        "122-galarian-mr-mime"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                },
+                "122-galarian-mr-mime > 866-mr-rime": {
+                    "targets": [
+                        "122-galarian-mr-mime",
+                        "866-mr-rime"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                42
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

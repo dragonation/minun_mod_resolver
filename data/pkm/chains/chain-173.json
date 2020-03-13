@@ -1,0 +1,37 @@
+{
+    "ids": [
+        339,
+        340
+    ],
+    "chains": [
+        {
+            "targets": {
+                "339-barboach": {
+                    "pokemon": 339,
+                    "form": "barboach"
+                },
+                "340-whiscash": {
+                    "pokemon": 340,
+                    "form": "whiscash"
+                }
+            },
+            "changes": {
+                "339-barboach > 340-whiscash": {
+                    "targets": [
+                        "339-barboach",
+                        "340-whiscash"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

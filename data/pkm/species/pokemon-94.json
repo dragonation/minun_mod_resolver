@@ -1,0 +1,539 @@
+{
+    "id": 94,
+    "name": "Gengar",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "On the night of a full moon, if shadows move on their own and laugh, it must be Gengar's doing.",
+        "It is said to emerge from darkness to steal the lives of those who become lost in mountains."
+    ],
+    "forms": {
+        "gengar": {
+            "id": "gengar",
+            "name": "Gengar",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "cursed-body"
+            ],
+            "weight": 40.5,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 65,
+                "defense": 60,
+                "special-attack": 130,
+                "special-defense": 75,
+                "speed": 110
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "shadow-punch",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "reflect-type",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "lick",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 1,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "spite",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "dream-eater",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost",
+                "poison"
+            ],
+            "color": "purple"
+        },
+        "mega-gengar": {
+            "id": "mega-gengar",
+            "name": "Mega Gengar",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "shadow-tag"
+            ],
+            "weight": 40.5,
+            "height": 1.4,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 65,
+                "defense": 80,
+                "special-attack": 170,
+                "special-defense": 95,
+                "speed": 130
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "shadow-punch",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "reflect-type",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "lick",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 1,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "spite",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "dream-eater",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost",
+                "poison"
+            ],
+            "color": "purple"
+        },
+        "gigantamax-gengar": {
+            "id": "gigantamax-gengar",
+            "name": "Gigantamax Gengar",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "cursed-body"
+            ],
+            "height": 20,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 65,
+                "defense": 60,
+                "special-attack": 130,
+                "special-defense": 75,
+                "speed": 110
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "shadow-punch",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "reflect-type",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "lick",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 1,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "spite",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "dream-eater",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost",
+                "poison"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 40,
+    "changes": [
+        {
+            "targets": {
+                "94-gengar": {
+                    "pokemon": 94,
+                    "form": "gengar"
+                },
+                "94-mega-gengar": {
+                    "pokemon": 94,
+                    "form": "mega-gengar"
+                }
+            },
+            "changes": {
+                "94-gengar <> 94-mega-gengar": {
+                    "targets": [
+                        "94-gengar",
+                        "94-mega-gengar"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "gengarite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "94-gengar": {
+                    "pokemon": 94,
+                    "form": "gengar"
+                },
+                "94-gigantamax-gengar": {
+                    "pokemon": 94,
+                    "form": "gigantamax-gengar"
+                }
+            },
+            "changes": {
+                "94-gengar <> 94-gigantamax-gengar": {
+                    "targets": [
+                        "94-gengar",
+                        "94-gigantamax-gengar"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dynamax-band"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "shadow",
+    "names": {
+        "de": "Gengar",
+        "en": "Gengar",
+        "es": "Gengar",
+        "fr": "Ectoplasma",
+        "it": "Gengar",
+        "jp": "ゲンガー",
+        "kr": "팬텀",
+        "zh": "耿鬼",
+        "zh-CHS": "耿鬼",
+        "zh-CHT": "耿鬼"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 225
+    }
+}

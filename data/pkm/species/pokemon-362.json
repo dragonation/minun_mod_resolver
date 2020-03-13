@@ -1,0 +1,385 @@
+{
+    "id": 362,
+    "name": "Glalie",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It has a body of ice that won't melt, even with fire. It can instantly freeze moisture in the atmosphere.",
+        "It can instantly freeze moisture in the atmosphere. It uses this power to freeze its foes."
+    ],
+    "forms": {
+        "glalie": {
+            "id": "glalie",
+            "name": "Glalie",
+            "shape": "head",
+            "abilities": [
+                "inner-focus",
+                "ice-body"
+            ],
+            "weight": 256.5,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 120,
+                "defense": 80,
+                "special-attack": 120,
+                "special-defense": 80,
+                "speed": 100
+            },
+            "hidden-abilities": [
+                "moody"
+            ],
+            "skills": [
+                {
+                    "level": null,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special",
+                    "accuracy": 30
+                },
+                {
+                    "level": 1,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "double-team",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "ice-shard",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "icy-wind",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "frost-breath",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": 35,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 47,
+                    "name": "hail",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 54,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 61,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 68,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "ice"
+            ],
+            "color": "gray"
+        },
+        "mega-glalie": {
+            "id": "mega-glalie",
+            "name": "Mega Glalie",
+            "shape": "head",
+            "abilities": [
+                "refrigerate"
+            ],
+            "weight": 350.2,
+            "height": 2.1,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 120,
+                "defense": 80,
+                "special-attack": 120,
+                "special-defense": 80,
+                "speed": 100
+            },
+            "hidden-abilities": [
+                "moody"
+            ],
+            "skills": [
+                {
+                    "level": null,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special",
+                    "accuracy": 30
+                },
+                {
+                    "level": 1,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "double-team",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "ice-shard",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "icy-wind",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "frost-breath",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": 35,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 47,
+                    "name": "hail",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 54,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 61,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 68,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "ice"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 186,
+    "changes": [
+        {
+            "targets": {
+                "362-glalie": {
+                    "pokemon": 362,
+                    "form": "glalie"
+                },
+                "362-mega-glalie": {
+                    "pokemon": 362,
+                    "form": "mega-glalie"
+                }
+            },
+            "changes": {
+                "362-glalie <> 362-mega-glalie": {
+                    "targets": [
+                        "362-glalie",
+                        "362-mega-glalie"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "glalitite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "face",
+    "names": {
+        "de": "Firnontor",
+        "en": "Glalie",
+        "es": "Glalie",
+        "fr": "Oniglali",
+        "it": "Glalie",
+        "jp": "オニゴーリ",
+        "kr": "얼음귀신",
+        "zh": "冰鬼护",
+        "zh-CHS": "冰鬼护",
+        "zh-CHT": "冰鬼護"
+    },
+    "species": [
+        "fairy",
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 2,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 168
+    }
+}

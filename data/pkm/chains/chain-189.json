@@ -1,0 +1,16 @@
+{
+    "ids": [
+        369
+    ],
+    "chains": [
+        {
+            "targets": {
+                "369-relicanth": {
+                    "pokemon": 369,
+                    "form": "relicanth"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

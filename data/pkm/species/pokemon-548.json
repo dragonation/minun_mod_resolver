@@ -1,0 +1,183 @@
+{
+    "id": 548,
+    "name": "Petilil",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Some say if you dry the leaves on its head, boil them down, and drink the infusion, your vigor will return, so Petilil is popular with the elderly.",
+        "They prefer clean water and soil. When the environment they live in turns bad, the whole bunch will up and move to a new area."
+    ],
+    "forms": {
+        "petilil": {
+            "id": "petilil",
+            "name": "Petilil",
+            "shape": "head-base",
+            "abilities": [
+                "chlorophyll",
+                "own-tempo"
+            ],
+            "weight": 6.6,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 35,
+                "defense": 50,
+                "special-attack": 70,
+                "special-defense": 50,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "leaf-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 13,
+                    "name": "mega-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "synthesis",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "magical-leaf",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 22,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 26,
+                    "name": "giga-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "energy-ball",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "entrainment",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "after-you",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "leaf-storm",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 271,
+    "classification": "bulb",
+    "names": {
+        "de": "Lilminip",
+        "en": "Petilil",
+        "es": "Petilil",
+        "fr": "Chlorobule",
+        "it": "Petilil",
+        "jp": "チュリネ",
+        "kr": "치릴리",
+        "zh": "百合根娃娃",
+        "zh-CHS": "百合根娃娃",
+        "zh-CHT": "百合根娃娃"
+    },
+    "species": [
+        "plant"
+    ],
+    "gender": "0/8",
+    "holdings": {
+        "rare": "absorb-bulb"
+    },
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 56
+    }
+}

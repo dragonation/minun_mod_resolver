@@ -1,0 +1,16 @@
+{
+    "ids": [
+        639
+    ],
+    "chains": [
+        {
+            "targets": {
+                "639-terrakion": {
+                    "pokemon": 639,
+                    "form": "terrakion"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

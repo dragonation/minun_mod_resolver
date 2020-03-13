@@ -1,0 +1,35 @@
+{
+    "ids": [
+        190,
+        424
+    ],
+    "chains": [
+        {
+            "targets": {
+                "190-aipom": {
+                    "pokemon": 190,
+                    "form": "aipom"
+                },
+                "424-ambipom": {
+                    "pokemon": 424,
+                    "form": "ambipom"
+                }
+            },
+            "changes": {
+                "190-aipom > 424-ambipom": {
+                    "targets": [
+                        "190-aipom",
+                        "424-ambipom"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

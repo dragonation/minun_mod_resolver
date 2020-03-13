@@ -1,0 +1,208 @@
+{
+    "id": 802,
+    "name": "Marshadow",
+    "experiences-type": "slow",
+    "texts": [
+        "By slipping into the shadow of a martial arts master and copying their movements, this Pokémon learned the ultimate techniques.",
+        "This Pokémon can conceal itself in any shadow, so it went undiscovered for a long time."
+    ],
+    "forms": {
+        "marshadow": {
+            "id": "marshadow",
+            "name": "Marshadow",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "technician"
+            ],
+            "weight": 22.2,
+            "height": 0.7,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 125,
+                "defense": 80,
+                "special-attack": 90,
+                "special-defense": 90,
+                "speed": 125
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "drain-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fire-punch",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "copycat",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "role-play",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "shadow-punch",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 27,
+                    "name": "force-palm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "drain-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 63,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 72,
+                    "name": "spectral-thief",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 81,
+                    "name": "laser-focus",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 90,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 99,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting",
+                "ghost"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 415,
+    "classification": "gloomdweller",
+    "names": {
+        "de": "Marshadow",
+        "en": "Marshadow",
+        "es": "Marshadow",
+        "fr": "Marshadow",
+        "it": "Marshadow",
+        "jp": "マーシャドー",
+        "kr": "마샤도",
+        "zh": "玛夏多",
+        "zh-CHS": "玛夏多",
+        "zh-CHT": ""
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 120
+    }
+}

@@ -1,0 +1,201 @@
+{
+    "id": 551,
+    "name": "Sandile",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "Alola, where it's warm all year round, is a comfortable environment for this Pokémon. Sometimes you'll even see it outside of deserts.",
+        "Sandile's still not good at hunting, so it mostly eats things that have collapsed in the desert. It's called “the cleaner of the desert.”"
+    ],
+    "forms": {
+        "sandile": {
+            "id": "sandile",
+            "name": "Sandile",
+            "shape": "quadruped",
+            "abilities": [
+                "intimidate",
+                "moxie"
+            ],
+            "weight": 15.2,
+            "height": 0.7,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 72,
+                "defense": 35,
+                "special-attack": 35,
+                "special-defense": 35,
+                "speed": 65
+            },
+            "hidden-abilities": [
+                "anger-point"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "torment",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "sand-tomb",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 16,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "embargo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "foul-play",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ground",
+                "dark"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 273,
+    "classification": "desert-croc",
+    "names": {
+        "de": "Ganovil",
+        "en": "Sandile",
+        "es": "Sandile",
+        "fr": "Mascaïman",
+        "it": "Sandile",
+        "jp": "メグロコ",
+        "kr": "깜눈크",
+        "zh": "黑眼鳄",
+        "zh-CHS": "黑眼鳄",
+        "zh-CHT": "黑眼鱷"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "black-glasses"
+    },
+    "capture-rate": 180,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 58
+    }
+}

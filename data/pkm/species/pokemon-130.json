@@ -1,0 +1,432 @@
+{
+    "id": 130,
+    "name": "Gyarados",
+    "experiences-type": "slow",
+    "texts": [
+        "It has an extremely aggressive nature. The Hyper Beam it shoots from its mouth totally incinerates all targets.",
+        "Once it begins to rampage, a Gyarados will burn everything down, even in a harsh storm."
+    ],
+    "forms": {
+        "gyarados": {
+            "id": "gyarados",
+            "name": "Gyarados",
+            "shape": "serpentine",
+            "abilities": [
+                "intimidate"
+            ],
+            "weight": 235,
+            "height": 6.5,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 125,
+                "defense": 79,
+                "special-attack": 60,
+                "special-defense": 100,
+                "speed": 81
+            },
+            "hidden-abilities": [
+                "moxie"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "splash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "twister",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 8,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 12,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "waterfall",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "dragon-dance",
+                    "type": "dragon",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 44,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 48,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 52,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "water",
+                "flying"
+            ],
+            "color": "blue"
+        },
+        "mega-gyarados": {
+            "id": "mega-gyarados",
+            "name": "Mega Gyarados",
+            "shape": "serpentine",
+            "abilities": [
+                "mold-breaker"
+            ],
+            "weight": 305,
+            "height": 6.5,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 155,
+                "defense": 109,
+                "special-attack": 70,
+                "special-defense": 130,
+                "speed": 81
+            },
+            "hidden-abilities": [
+                "moxie"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "splash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "twister",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 8,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 12,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "waterfall",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "dragon-dance",
+                    "type": "dragon",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 44,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 48,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 52,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "water",
+                "dark"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 63,
+    "changes": [
+        {
+            "targets": {
+                "130-gyarados": {
+                    "pokemon": 130,
+                    "form": "gyarados"
+                },
+                "130-mega-gyarados": {
+                    "pokemon": 130,
+                    "form": "mega-gyarados"
+                }
+            },
+            "changes": {
+                "130-gyarados <> 130-mega-gyarados": {
+                    "targets": [
+                        "130-gyarados",
+                        "130-mega-gyarados"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "gyaradosite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "atrocious",
+    "names": {
+        "de": "Garados",
+        "en": "Gyarados",
+        "es": "Gyarados",
+        "fr": "Léviator",
+        "it": "Gyarados",
+        "jp": "ギャラドス",
+        "kr": "갸라도스",
+        "zh": "暴鲤龙",
+        "zh-CHS": "暴鲤龙",
+        "zh-CHT": "暴鯉龍"
+    },
+    "species": [
+        "fish",
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 6,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 189
+    }
+}

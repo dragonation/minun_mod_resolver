@@ -1,0 +1,37 @@
+{
+    "ids": [
+        353,
+        354
+    ],
+    "chains": [
+        {
+            "targets": {
+                "353-shuppet": {
+                    "pokemon": 353,
+                    "form": "shuppet"
+                },
+                "354-banette": {
+                    "pokemon": 354,
+                    "form": "banette"
+                }
+            },
+            "changes": {
+                "353-shuppet > 354-banette": {
+                    "targets": [
+                        "353-shuppet",
+                        "354-banette"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                37
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

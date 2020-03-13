@@ -1,0 +1,16 @@
+{
+    "ids": [
+        787
+    ],
+    "chains": [
+        {
+            "targets": {
+                "787-tapu-bulu": {
+                    "pokemon": 787,
+                    "form": "tapu-bulu"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

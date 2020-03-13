@@ -1,0 +1,178 @@
+{
+    "id": 757,
+    "name": "Salandit",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Its venom sacs produce a fluid that this Pokémon then heats up with the flame in its tail. This process creates Salandit's poisonous gas.",
+        "This sneaky Pokémon will slink behind its prey and immobilize it with poisonous gas before the prey even realizes Salandit is there."
+    ],
+    "forms": {
+        "salandit": {
+            "id": "salandit",
+            "name": "Salandit",
+            "shape": "quadruped",
+            "abilities": [
+                "corrosion"
+            ],
+            "weight": 4.8,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 44,
+                "defense": 40,
+                "special-attack": 71,
+                "special-defense": 40,
+                "speed": 77
+            },
+            "hidden-abilities": [
+                "oblivious"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "poison-gas",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 5,
+                    "name": "smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 30,
+                    "accuracy": 70
+                },
+                {
+                    "level": 10,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "incinerate",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "venoshock",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "venom-drench",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 60,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "poison",
+                "fire"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 382,
+    "classification": "toxic-lizard",
+    "names": {
+        "de": "Molunk",
+        "en": "Salandit",
+        "es": "Salandit",
+        "fr": "Tritox",
+        "it": "Salandit",
+        "jp": "ヤトウモリ",
+        "kr": "야도뇽",
+        "zh": "夜盗火蜥",
+        "zh-CHS": "夜盗火蜥",
+        "zh-CHT": ""
+    },
+    "species": [
+        "monster",
+        "dragon"
+    ],
+    "gender": "7/1",
+    "holdings": {
+        "rare": "smoke-ball"
+    },
+    "capture-rate": 120,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 64
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "ids": [
+        111,
+        112,
+        464
+    ],
+    "chains": [
+        {
+            "targets": {
+                "111-rhyhorn": {
+                    "pokemon": 111,
+                    "form": "rhyhorn"
+                },
+                "112-rhydon": {
+                    "pokemon": 112,
+                    "form": "rhydon"
+                },
+                "464-rhyperior": {
+                    "pokemon": 464,
+                    "form": "rhyperior"
+                }
+            },
+            "changes": {
+                "111-rhyhorn > 112-rhydon": {
+                    "targets": [
+                        "111-rhyhorn",
+                        "112-rhydon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                42
+                            ]
+                        }
+                    ]
+                },
+                "112-rhydon > 464-rhyperior": {
+                    "targets": [
+                        "112-rhydon",
+                        "464-rhyperior"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

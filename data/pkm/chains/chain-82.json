@@ -1,0 +1,37 @@
+{
+    "ids": [
+        163,
+        164
+    ],
+    "chains": [
+        {
+            "targets": {
+                "163-hoothoot": {
+                    "pokemon": 163,
+                    "form": "hoothoot"
+                },
+                "164-noctowl": {
+                    "pokemon": 164,
+                    "form": "noctowl"
+                }
+            },
+            "changes": {
+                "163-hoothoot > 164-noctowl": {
+                    "targets": [
+                        "163-hoothoot",
+                        "164-noctowl"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

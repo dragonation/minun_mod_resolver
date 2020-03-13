@@ -1,0 +1,366 @@
+{
+    "id": 65,
+    "name": "Alakazam",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "Alakazam uses its psychic powers to make the spoons it carries. Each spoon is an original that there's only one of in the whole world.",
+        "If it trusts someone deeply, it will let them have one of its spoons. Anything you eat with that spoon is apparently delicious."
+    ],
+    "forms": {
+        "alakazam": {
+            "id": "alakazam",
+            "name": "Alakazam",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "synchronize",
+                "inner-focus"
+            ],
+            "weight": 48,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 55,
+                "attack": 50,
+                "defense": 45,
+                "special-attack": 135,
+                "special-defense": 95,
+                "speed": 120
+            },
+            "hidden-abilities": [
+                "magic-guard"
+            ],
+            "skills": [
+                {
+                    "level": null,
+                    "name": "kinesis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "kinesis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "teleport",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "miracle-eye",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 26,
+                    "name": "reflect",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "psycho-cut",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "telekinesis",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "ally-switch",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "trick",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "brown"
+        },
+        "mega-alakazam": {
+            "id": "mega-alakazam",
+            "name": "Mega Alakazam",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "trace"
+            ],
+            "weight": 48,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 55,
+                "attack": 50,
+                "defense": 65,
+                "special-attack": 175,
+                "special-defense": 95,
+                "speed": 150
+            },
+            "hidden-abilities": [
+                "magic-guard"
+            ],
+            "skills": [
+                {
+                    "level": null,
+                    "name": "kinesis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "kinesis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "teleport",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "miracle-eye",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 26,
+                    "name": "reflect",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "psycho-cut",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "telekinesis",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "ally-switch",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "trick",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 27,
+    "changes": [
+        {
+            "targets": {
+                "65-alakazam": {
+                    "pokemon": 65,
+                    "form": "alakazam"
+                },
+                "65-mega-alakazam": {
+                    "pokemon": 65,
+                    "form": "mega-alakazam"
+                }
+            },
+            "changes": {
+                "65-alakazam <> 65-mega-alakazam": {
+                    "targets": [
+                        "65-alakazam",
+                        "65-mega-alakazam"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "alakazite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "psi",
+    "names": {
+        "de": "Simsala",
+        "en": "Alakazam",
+        "es": "Alakazam",
+        "fr": "Alakazam",
+        "it": "Alakazam",
+        "jp": "フーディン",
+        "kr": "후딘",
+        "zh": "胡地",
+        "zh-CHS": "胡地",
+        "zh-CHT": "胡地"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "6/2",
+    "holdings": {
+        "rare": "twisted-spoon"
+    },
+    "capture-rate": 50,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 225
+    }
+}

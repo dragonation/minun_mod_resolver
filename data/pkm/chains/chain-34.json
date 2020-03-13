@@ -1,0 +1,55 @@
+{
+    "ids": [
+        81,
+        82,
+        462
+    ],
+    "chains": [
+        {
+            "targets": {
+                "81-magnemite": {
+                    "pokemon": 81,
+                    "form": "magnemite"
+                },
+                "82-magneton": {
+                    "pokemon": 82,
+                    "form": "magneton"
+                },
+                "462-magnezone": {
+                    "pokemon": 462,
+                    "form": "magnezone"
+                }
+            },
+            "changes": {
+                "81-magnemite > 82-magneton": {
+                    "targets": [
+                        "81-magnemite",
+                        "82-magneton"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                },
+                "82-magneton > 462-magnezone": {
+                    "targets": [
+                        "82-magneton",
+                        "462-magnezone"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

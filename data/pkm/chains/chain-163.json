@@ -1,0 +1,16 @@
+{
+    "ids": [
+        324
+    ],
+    "chains": [
+        {
+            "targets": {
+                "324-torkoal": {
+                    "pokemon": 324,
+                    "form": "torkoal"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

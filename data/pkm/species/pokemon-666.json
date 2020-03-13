@@ -1,0 +1,3062 @@
+{
+    "id": 666,
+    "name": "Vivillon",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Vivillon with many different patterns are found all over the world. These patterns are affected by the climate of their habitat.",
+        "The patterns on this Pokémon's wings depend on the climate and topography of its habitat. It scatters colorful scales."
+    ],
+    "forms": {
+        "icy-snow-form": {
+            "id": "icy-snow-form",
+            "name": "Icy Snow Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "polar-form": {
+            "id": "polar-form",
+            "name": "Polar Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "tunda-form": {
+            "id": "tunda-form",
+            "name": "Tunda Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "continental-form": {
+            "id": "continental-form",
+            "name": "Continental Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "garden-form": {
+            "id": "garden-form",
+            "name": "Garden Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "elegant-form": {
+            "id": "elegant-form",
+            "name": "Elegant Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "meadow-form": {
+            "id": "meadow-form",
+            "name": "Meadow Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "modern-form": {
+            "id": "modern-form",
+            "name": "Modern Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "marine-form": {
+            "id": "marine-form",
+            "name": "Marine Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "archipelago-form": {
+            "id": "archipelago-form",
+            "name": "Archipelago Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "high-plains-form": {
+            "id": "high-plains-form",
+            "name": "High Plains Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "sandstorm-form": {
+            "id": "sandstorm-form",
+            "name": "Sandstorm Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "river-form": {
+            "id": "river-form",
+            "name": "River Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "monsoon-form": {
+            "id": "monsoon-form",
+            "name": "Monsoon Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "savanna-form": {
+            "id": "savanna-form",
+            "name": "Savanna Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "sun-form": {
+            "id": "sun-form",
+            "name": "Sun Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "ocean-form": {
+            "id": "ocean-form",
+            "name": "Ocean Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "jungle-form": {
+            "id": "jungle-form",
+            "name": "Jungle Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "fancy-form": {
+            "id": "fancy-form",
+            "name": "Fancy Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "pokeball-form": {
+            "id": "pokeball-form",
+            "name": "Pokeball Form Vivillon",
+            "shape": "more-wings",
+            "abilities": [
+                "shield-dust",
+                "compound-eyes"
+            ],
+            "weight": 17,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 52,
+                "defense": 50,
+                "special-attack": 90,
+                "special-defense": 50,
+                "speed": 89
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 25,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 55,
+                    "name": "powder",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 334,
+    "classification": "scale",
+    "names": {
+        "de": "Vivillon",
+        "en": "Vivillon",
+        "es": "Vivillon",
+        "fr": "Prismillon",
+        "it": "Vivillon",
+        "jp": "ビビヨン",
+        "kr": "비비용",
+        "zh": "彩粉蝶",
+        "zh-CHS": "彩粉蝶",
+        "zh-CHT": "彩粉蝶"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 185
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "ids": [
+        109,
+        110
+    ],
+    "chains": [
+        {
+            "targets": {
+                "109-koffing": {
+                    "pokemon": 109,
+                    "form": "koffing"
+                },
+                "110-weezing": {
+                    "pokemon": 110,
+                    "form": "weezing"
+                },
+                "110-galarian-weezing": {
+                    "pokemon": 110,
+                    "form": "galarian-weezing"
+                }
+            },
+            "changes": {
+                "109-koffing > 110-weezing": {
+                    "targets": [
+                        "109-koffing",
+                        "110-weezing"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                },
+                "109-koffing > 110-galarian-weezing": {
+                    "targets": [
+                        "109-koffing",
+                        "110-galarian-weezing"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

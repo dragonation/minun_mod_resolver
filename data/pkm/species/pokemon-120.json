@@ -1,0 +1,207 @@
+{
+    "id": 120,
+    "name": "Staryu",
+    "experiences-type": "slow",
+    "texts": [
+        "In many places, there are folktales of stardust falling into the ocean and becoming Staryu.",
+        "No number of injuries can bother Staryu. Its amazing regenerative powers return it to its previous state in half a day!"
+    ],
+    "forms": {
+        "staryu": {
+            "id": "staryu",
+            "name": "Staryu",
+            "shape": "head-base",
+            "abilities": [
+                "illuminate",
+                "natural-cure"
+            ],
+            "weight": 34.5,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 30,
+                "attack": 45,
+                "defense": 55,
+                "special-attack": 70,
+                "special-defense": 55,
+                "speed": 85
+            },
+            "hidden-abilities": [
+                "analytic"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 13,
+                    "name": "psywave",
+                    "type": "psychic",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 18,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "camouflage",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "gyro-ball",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "minimize",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "reflect-type",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 53,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 55,
+    "classification": "starshape",
+    "names": {
+        "de": "Sterndu",
+        "en": "Staryu",
+        "es": "Staryu",
+        "fr": "Stari",
+        "it": "Staryu",
+        "jp": "ヒトデマン",
+        "kr": "별가사리",
+        "zh": "海星星",
+        "zh-CHS": "海星星",
+        "zh-CHT": "海星星"
+    },
+    "species": [
+        "aquatic"
+    ],
+    "gender": "-",
+    "holdings": {
+        "common": "stardust",
+        "rare": "star-piece"
+    },
+    "capture-rate": 225,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 68
+    }
+}

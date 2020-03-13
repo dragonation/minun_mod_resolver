@@ -1,0 +1,16 @@
+{
+    "ids": [
+        150
+    ],
+    "chains": [
+        {
+            "targets": {
+                "150-mewtwo": {
+                    "pokemon": 150,
+                    "form": "mewtwo"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

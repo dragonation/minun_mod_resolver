@@ -1,0 +1,184 @@
+{
+    "id": 446,
+    "name": "Munchlax",
+    "experiences-type": "slow",
+    "texts": [
+        "Stuffing itself with vast amounts of food is its only concern. Whether the food is rotten or fresh, yummy or tasteless—it does not care.",
+        "It stores food beneath its fur. It might share just one bite, but only if it really trusts you."
+    ],
+    "forms": {
+        "munchlax": {
+            "id": "munchlax",
+            "name": "Munchlax",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "pickup",
+                "thick-fat"
+            ],
+            "weight": 105,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 135,
+                "attack": 85,
+                "defense": 40,
+                "special-attack": 40,
+                "special-defense": 85,
+                "speed": 5
+            },
+            "hidden-abilities": [
+                "gluttony"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "lick",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "recycle",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "covet",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "stockpile",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "swallow",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "fling",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "metronome",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "belly-drum",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 52,
+                    "name": "last-resort",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 71,
+    "classification": "big-eater",
+    "names": {
+        "de": "Mampfaxo",
+        "en": "Munchlax",
+        "es": "Munchlax",
+        "fr": "Goinfrex",
+        "it": "Munchlax",
+        "jp": "ゴンベ",
+        "kr": "먹고자",
+        "zh": "小卡比兽",
+        "zh-CHS": "小卡比兽",
+        "zh-CHT": "小卡比獸"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "7/1",
+    "holdings": {
+        "common": "leftovers",
+        "rare": "leftovers"
+    },
+    "capture-rate": 50,
+    "hatching-cycles": 41,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 78
+    }
+}

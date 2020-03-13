@@ -1,0 +1,37 @@
+{
+    "ids": [
+        408,
+        409
+    ],
+    "chains": [
+        {
+            "targets": {
+                "408-cranidos": {
+                    "pokemon": 408,
+                    "form": "cranidos"
+                },
+                "409-rampardos": {
+                    "pokemon": 409,
+                    "form": "rampardos"
+                }
+            },
+            "changes": {
+                "408-cranidos > 409-rampardos": {
+                    "targets": [
+                        "408-cranidos",
+                        "409-rampardos"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

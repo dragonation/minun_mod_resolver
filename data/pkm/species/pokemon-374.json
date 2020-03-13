@@ -1,0 +1,80 @@
+{
+    "id": 374,
+    "name": "Beldum",
+    "experiences-type": "slow",
+    "texts": [
+        "Instead of blood, magnetism flows through its body. When it's feeling bad, try giving it a magnet.",
+        "If you anger it, it will do more than rampage. It will also burst out strong magnetism, causing nearby machines to break."
+    ],
+    "forms": {
+        "beldum": {
+            "id": "beldum",
+            "name": "Beldum",
+            "shape": "head-base",
+            "abilities": [
+                "clear-body"
+            ],
+            "weight": 95.2,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 40,
+                "attack": 55,
+                "defense": 80,
+                "special-attack": 35,
+                "special-defense": 60,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "light-metal"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "steel",
+                "psychic"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 192,
+    "classification": "iron-ball",
+    "names": {
+        "de": "Tanhel",
+        "en": "Beldum",
+        "es": "Beldum",
+        "fr": "Terhal",
+        "it": "Beldum",
+        "jp": "ダンバル",
+        "kr": "메탕",
+        "zh": "铁哑铃",
+        "zh-CHS": "铁哑铃",
+        "zh-CHT": "鐵啞鈴"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {
+        "rare": "metal-coat"
+    },
+    "capture-rate": 3,
+    "hatching-cycles": 41,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

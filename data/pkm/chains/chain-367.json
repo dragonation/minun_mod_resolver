@@ -1,0 +1,57 @@
+{
+    "ids": [
+        725,
+        726,
+        727
+    ],
+    "chains": [
+        {
+            "targets": {
+                "725-litten": {
+                    "pokemon": 725,
+                    "form": "litten"
+                },
+                "726-torracat": {
+                    "pokemon": 726,
+                    "form": "torracat"
+                },
+                "727-incineroar": {
+                    "pokemon": 727,
+                    "form": "incineroar"
+                }
+            },
+            "changes": {
+                "725-litten > 726-torracat": {
+                    "targets": [
+                        "725-litten",
+                        "726-torracat"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                17
+                            ]
+                        }
+                    ]
+                },
+                "726-torracat > 727-incineroar": {
+                    "targets": [
+                        "726-torracat",
+                        "727-incineroar"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

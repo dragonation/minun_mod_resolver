@@ -1,0 +1,461 @@
+{
+    "id": 308,
+    "name": "Medicham",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It elegantly avoids attacks with dance-like steps, then launches a devastating blow in the same motion.",
+        "Through yoga training, it gained the psychic power to predict its foe's next move."
+    ],
+    "forms": {
+        "medicham": {
+            "id": "medicham",
+            "name": "Medicham",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "pure-power"
+            ],
+            "weight": 31.5,
+            "height": 1.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 60,
+                "defense": 75,
+                "special-attack": 60,
+                "special-defense": 75,
+                "speed": 80
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "fire-punch",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bide",
+                    "type": "normal",
+                    "category": "physical"
+                },
+                {
+                    "level": 1,
+                    "name": "meditate",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "meditate",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "force-palm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "mind-reader",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "high-jump-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 90
+                },
+                {
+                    "level": 31,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "acupressure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "power-trick",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 53,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting",
+                "psychic"
+            ],
+            "color": "red"
+        },
+        "mega-medicham": {
+            "id": "mega-medicham",
+            "name": "Mega Medicham",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "pure-power"
+            ],
+            "weight": 31.5,
+            "height": 1.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 100,
+                "defense": 85,
+                "special-attack": 80,
+                "special-defense": 85,
+                "speed": 100
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "fire-punch",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bide",
+                    "type": "normal",
+                    "category": "physical"
+                },
+                {
+                    "level": 1,
+                    "name": "meditate",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "meditate",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "force-palm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "mind-reader",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "high-jump-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 90
+                },
+                {
+                    "level": 31,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "acupressure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "power-trick",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 53,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting",
+                "psychic"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 152,
+    "changes": [
+        {
+            "targets": {
+                "308-medicham": {
+                    "pokemon": 308,
+                    "form": "medicham"
+                },
+                "308-mega-medicham": {
+                    "pokemon": 308,
+                    "form": "mega-medicham"
+                }
+            },
+            "changes": {
+                "308-medicham <> 308-mega-medicham": {
+                    "targets": [
+                        "308-medicham",
+                        "308-mega-medicham"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "medichamite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "meditate",
+    "names": {
+        "de": "Meditalis",
+        "en": "Medicham",
+        "es": "Medicham",
+        "fr": "Charmina",
+        "it": "Medicham",
+        "jp": "チャーレム",
+        "kr": "요가램",
+        "zh": "恰雷姆",
+        "zh-CHS": "恰雷姆",
+        "zh-CHT": "恰雷姆"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 90,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 2,
+        "experience": 144
+    }
+}

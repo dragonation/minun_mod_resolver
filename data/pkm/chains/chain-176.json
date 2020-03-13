@@ -1,0 +1,37 @@
+{
+    "ids": [
+        345,
+        346
+    ],
+    "chains": [
+        {
+            "targets": {
+                "345-lileep": {
+                    "pokemon": 345,
+                    "form": "lileep"
+                },
+                "346-cradily": {
+                    "pokemon": 346,
+                    "form": "cradily"
+                }
+            },
+            "changes": {
+                "345-lileep > 346-cradily": {
+                    "targets": [
+                        "345-lileep",
+                        "346-cradily"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

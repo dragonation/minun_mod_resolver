@@ -1,0 +1,175 @@
+{
+    "id": 534,
+    "name": "Conkeldurr",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "Concrete mixed by Conkeldurr is much more durable than normal concrete, even when the compositions of the two materials are the same.",
+        "When going all out, this Pokémon throws aside its concrete pillars and leaps at opponents to pummel them with its fists."
+    ],
+    "forms": {
+        "conkeldurr": {
+            "id": "conkeldurr",
+            "name": "Conkeldurr",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "guts",
+                "sheer-force"
+            ],
+            "weight": 87,
+            "height": 1.4,
+            "base-stats": {
+                "health-points": 105,
+                "attack": 140,
+                "defense": 95,
+                "special-attack": 55,
+                "special-defense": 65,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "iron-fist"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "low-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "bulk-up",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 24,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 30,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "dynamic-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 50
+                },
+                {
+                    "level": 42,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 48,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 54,
+                    "name": "superpower",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "focus-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 264,
+    "classification": "muscular",
+    "names": {
+        "de": "Meistagrif",
+        "en": "Conkeldurr",
+        "es": "Conkeldurr",
+        "fr": "Bétochef",
+        "it": "Conkeldurr",
+        "jp": "ローブシン",
+        "kr": "노보청",
+        "zh": "修建老匠",
+        "zh-CHS": "修建老匠",
+        "zh-CHT": "修建老匠"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "6/2",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 3,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 227
+    }
+}

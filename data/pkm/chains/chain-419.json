@@ -1,0 +1,16 @@
+{
+    "ids": [
+        807
+    ],
+    "chains": [
+        {
+            "targets": {
+                "807-zeraora": {
+                    "pokemon": 807,
+                    "form": "zeraora"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

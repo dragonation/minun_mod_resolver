@@ -1,0 +1,46 @@
+{
+    "ids": [
+        222,
+        864
+    ],
+    "chains": [
+        {
+            "targets": {
+                "222-corsola": {
+                    "pokemon": 222,
+                    "form": "corsola"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "222-galarian-corsola": {
+                    "pokemon": 222,
+                    "form": "galarian-corsola"
+                },
+                "864-cursola": {
+                    "pokemon": 864,
+                    "form": "cursola"
+                }
+            },
+            "changes": {
+                "222-galarian-corsola > 864-cursola": {
+                    "targets": [
+                        "222-galarian-corsola",
+                        "864-cursola"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                38
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

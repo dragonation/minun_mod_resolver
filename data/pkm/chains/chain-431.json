@@ -1,0 +1,37 @@
+{
+    "ids": [
+        835,
+        836
+    ],
+    "chains": [
+        {
+            "targets": {
+                "835-yamper": {
+                    "pokemon": 835,
+                    "form": "yamper"
+                },
+                "836-boltund": {
+                    "pokemon": 836,
+                    "form": "boltund"
+                }
+            },
+            "changes": {
+                "835-yamper > 836-boltund": {
+                    "targets": [
+                        "835-yamper",
+                        "836-boltund"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

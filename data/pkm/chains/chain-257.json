@@ -1,0 +1,37 @@
+{
+    "ids": [
+        517,
+        518
+    ],
+    "chains": [
+        {
+            "targets": {
+                "517-munna": {
+                    "pokemon": 517,
+                    "form": "munna"
+                },
+                "518-musharna": {
+                    "pokemon": 518,
+                    "form": "musharna"
+                }
+            },
+            "changes": {
+                "517-munna > 518-musharna": {
+                    "targets": [
+                        "517-munna",
+                        "518-musharna"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "moon-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

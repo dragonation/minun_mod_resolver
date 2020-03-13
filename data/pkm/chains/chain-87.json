@@ -1,0 +1,37 @@
+{
+    "ids": [
+        177,
+        178
+    ],
+    "chains": [
+        {
+            "targets": {
+                "177-natu": {
+                    "pokemon": 177,
+                    "form": "natu"
+                },
+                "178-xatu": {
+                    "pokemon": 178,
+                    "form": "xatu"
+                }
+            },
+            "changes": {
+                "177-natu > 178-xatu": {
+                    "targets": [
+                        "177-natu",
+                        "178-xatu"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

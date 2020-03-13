@@ -1,0 +1,413 @@
+{
+    "id": 861,
+    "name": "Grimmsnarl",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "With the hair wrapped around its body helping to enhance its muscles, this Pokémon can overwhelm even Machamp.",
+        "Its hairs work like muscle fibers. When its hairs unfurl, they latch on to opponents, ensnaring them as tentacles would."
+    ],
+    "forms": {
+        "grimmsnarl": {
+            "id": "grimmsnarl",
+            "name": "Grimmsnarl",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "prankster",
+                "frisk"
+            ],
+            "weight": 61,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 120,
+                "defense": 65,
+                "special-attack": 95,
+                "special-defense": 75,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "pickpocket"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "spirit-break",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "false-surrender",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80
+                },
+                {
+                    "level": 1,
+                    "name": "bulk-up",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "power-up-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confide",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flatter",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "spirit-break",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "fake-tears",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 24,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "torment",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 56,
+                    "name": "foul-play",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "dark",
+                "fairy"
+            ],
+            "color": "purple"
+        },
+        "gigantamax-grimmsnarl": {
+            "id": "gigantamax-grimmsnarl",
+            "name": "Gigantamax Grimmsnarl",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "prankster",
+                "frisk"
+            ],
+            "height": 32,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 120,
+                "defense": 65,
+                "special-attack": 95,
+                "special-defense": 75,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "pickpocket"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "spirit-break",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "false-surrender",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80
+                },
+                {
+                    "level": 1,
+                    "name": "bulk-up",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "power-up-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confide",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flatter",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "spirit-break",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "fake-tears",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 24,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "torment",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 56,
+                    "name": "foul-play",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "dark",
+                "fairy"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 442,
+    "changes": [
+        {
+            "targets": {
+                "861-grimmsnarl": {
+                    "pokemon": 861,
+                    "form": "grimmsnarl"
+                },
+                "861-gigantamax-grimmsnarl": {
+                    "pokemon": 861,
+                    "form": "gigantamax-grimmsnarl"
+                }
+            },
+            "changes": {
+                "861-grimmsnarl <> 861-gigantamax-grimmsnarl": {
+                    "targets": [
+                        "861-grimmsnarl",
+                        "861-gigantamax-grimmsnarl"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dynamax-band"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "bulk-up",
+    "names": {
+        "de": "Olangaar",
+        "en": "Grimmsnarl",
+        "es": "Grimmsnarl",
+        "fr": "Angoliath",
+        "it": "Grimmsnarl",
+        "jp": "オーロンゲ",
+        "kr": "오롱털",
+        "zh": "长毛巨魔",
+        "zh-CHS": "长毛巨魔",
+        "zh-CHT": "長毛巨魔"
+    },
+    "species": [
+        "fairy",
+        "creature"
+    ],
+    "gender": "8/0",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 20,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 3,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 255
+    }
+}

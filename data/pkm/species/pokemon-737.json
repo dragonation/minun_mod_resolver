@@ -1,0 +1,172 @@
+{
+    "id": 737,
+    "name": "Charjabug",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "While its durable shell protects it from attacks, Charjabug strikes at enemies with jolts of electricity discharged from the tips of its jaws.",
+        "Its digestive processes convert the leaves it eats into electricity. An electric sac in its belly stores the electricity for later use."
+    ],
+    "forms": {
+        "charjabug": {
+            "id": "charjabug",
+            "name": "Charjabug",
+            "shape": "serpentine",
+            "abilities": [
+                "battery"
+            ],
+            "weight": 10.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 57,
+                "attack": 82,
+                "defense": 95,
+                "special-attack": 55,
+                "special-defense": 75,
+                "speed": 36
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "vise-grip",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "string-shot",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "sticky-web",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 64,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "electric"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 371,
+    "classification": "battery",
+    "names": {
+        "de": "Akkup",
+        "en": "Charjabug",
+        "es": "Charjabug",
+        "fr": "Chrysapile",
+        "it": "Charjabug",
+        "jp": "デンヂムシ",
+        "kr": "전지충이",
+        "zh": "虫电宝",
+        "zh-CHS": "虫电宝",
+        "zh-CHT": ""
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "cell-battery"
+    },
+    "capture-rate": 120,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 140
+    }
+}

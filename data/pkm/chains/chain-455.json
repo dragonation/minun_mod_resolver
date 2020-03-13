@@ -1,0 +1,16 @@
+{
+    "ids": [
+        883
+    ],
+    "chains": [
+        {
+            "targets": {
+                "883-arctovish": {
+                    "pokemon": 883,
+                    "form": "arctovish"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

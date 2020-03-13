@@ -1,0 +1,35 @@
+{
+    "ids": [
+        739,
+        740
+    ],
+    "chains": [
+        {
+            "targets": {
+                "739-crabrawler": {
+                    "pokemon": 739,
+                    "form": "crabrawler"
+                },
+                "740-crabominable": {
+                    "pokemon": 740,
+                    "form": "crabominable"
+                }
+            },
+            "changes": {
+                "739-crabrawler > 740-crabominable": {
+                    "targets": [
+                        "739-crabrawler",
+                        "740-crabominable"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        833,
+        834
+    ],
+    "chains": [
+        {
+            "targets": {
+                "833-chewtle": {
+                    "pokemon": 833,
+                    "form": "chewtle"
+                },
+                "834-drednaw": {
+                    "pokemon": 834,
+                    "form": "drednaw"
+                }
+            },
+            "changes": {
+                "833-chewtle > 834-drednaw": {
+                    "targets": [
+                        "833-chewtle",
+                        "834-drednaw"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                22
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

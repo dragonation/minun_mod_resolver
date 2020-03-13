@@ -1,0 +1,16 @@
+{
+    "ids": [
+        482
+    ],
+    "chains": [
+        {
+            "targets": {
+                "482-azelf": {
+                    "pokemon": 482,
+                    "form": "azelf"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        241
+    ],
+    "chains": [
+        {
+            "targets": {
+                "241-miltank": {
+                    "pokemon": 241,
+                    "form": "miltank"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

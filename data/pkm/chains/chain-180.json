@@ -1,0 +1,16 @@
+{
+    "ids": [
+        352
+    ],
+    "chains": [
+        {
+            "targets": {
+                "352-kecleon": {
+                    "pokemon": 352,
+                    "form": "kecleon"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

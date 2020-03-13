@@ -1,0 +1,16 @@
+{
+    "ids": [
+        127
+    ],
+    "chains": [
+        {
+            "targets": {
+                "127-pinsir": {
+                    "pokemon": 127,
+                    "form": "pinsir"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

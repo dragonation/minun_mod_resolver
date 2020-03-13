@@ -1,0 +1,57 @@
+{
+    "ids": [
+        816,
+        817,
+        818
+    ],
+    "chains": [
+        {
+            "targets": {
+                "816-sobble": {
+                    "pokemon": 816,
+                    "form": "sobble"
+                },
+                "817-drizzile": {
+                    "pokemon": 817,
+                    "form": "drizzile"
+                },
+                "818-inteleon": {
+                    "pokemon": 818,
+                    "form": "inteleon"
+                }
+            },
+            "changes": {
+                "816-sobble > 817-drizzile": {
+                    "targets": [
+                        "816-sobble",
+                        "817-drizzile"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "817-drizzile > 818-inteleon": {
+                    "targets": [
+                        "817-drizzile",
+                        "818-inteleon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        702
+    ],
+    "chains": [
+        {
+            "targets": {
+                "702-dedenne": {
+                    "pokemon": 702,
+                    "form": "dedenne"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

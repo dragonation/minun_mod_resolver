@@ -1,0 +1,161 @@
+{
+    "id": 430,
+    "name": "Honchkrow",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It will absolutely not forgive failure from or betrayal by its goons. It has no choice in this if it wants to maintain the order of the flock.",
+        "Its goons take care of most of the fighting for it. The only time it dirties its own hands is in delivering a final blow to finish off an opponent."
+    ],
+    "forms": {
+        "honchkrow": {
+            "id": "honchkrow",
+            "name": "Honchkrow",
+            "shape": "two-wings",
+            "abilities": [
+                "insomnia",
+                "super-luck"
+            ],
+            "weight": 27.3,
+            "height": 0.9,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 125,
+                "defense": 52,
+                "special-attack": 105,
+                "special-defense": 52,
+                "speed": 71
+            },
+            "hidden-abilities": [
+                "moxie"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "pursuit",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "haze",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "wing-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "foul-play",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 65,
+                    "name": "quash",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 75,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dark",
+                "flying"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 96,
+    "classification": "big-boss",
+    "names": {
+        "de": "Kramshef",
+        "en": "Honchkrow",
+        "es": "Honchkrow",
+        "fr": "Corboss",
+        "it": "Honchkrow",
+        "jp": "ドンカラス",
+        "kr": "돈크로우",
+        "zh": "乌鸦头头",
+        "zh-CHS": "乌鸦头头",
+        "zh-CHT": "烏鴉頭頭"
+    },
+    "species": [
+        "flying"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 30,
+    "hatching-cycles": 21,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 177
+    }
+}

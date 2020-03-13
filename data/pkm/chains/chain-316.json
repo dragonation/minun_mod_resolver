@@ -1,0 +1,37 @@
+{
+    "ids": [
+        636,
+        637
+    ],
+    "chains": [
+        {
+            "targets": {
+                "636-larvesta": {
+                    "pokemon": 636,
+                    "form": "larvesta"
+                },
+                "637-volcarona": {
+                    "pokemon": 637,
+                    "form": "volcarona"
+                }
+            },
+            "changes": {
+                "636-larvesta > 637-volcarona": {
+                    "targets": [
+                        "636-larvesta",
+                        "637-volcarona"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                59
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

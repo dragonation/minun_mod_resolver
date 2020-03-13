@@ -1,0 +1,37 @@
+{
+    "ids": [
+        307,
+        308
+    ],
+    "chains": [
+        {
+            "targets": {
+                "307-meditite": {
+                    "pokemon": 307,
+                    "form": "meditite"
+                },
+                "308-medicham": {
+                    "pokemon": 308,
+                    "form": "medicham"
+                }
+            },
+            "changes": {
+                "307-meditite > 308-medicham": {
+                    "targets": [
+                        "307-meditite",
+                        "308-medicham"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                37
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

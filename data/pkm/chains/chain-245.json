@@ -1,0 +1,16 @@
+{
+    "ids": [
+        492
+    ],
+    "chains": [
+        {
+            "targets": {
+                "492-land-form": {
+                    "pokemon": 492,
+                    "form": "land-form"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        410,
+        411
+    ],
+    "chains": [
+        {
+            "targets": {
+                "410-shieldon": {
+                    "pokemon": 410,
+                    "form": "shieldon"
+                },
+                "411-bastiodon": {
+                    "pokemon": 411,
+                    "form": "bastiodon"
+                }
+            },
+            "changes": {
+                "410-shieldon > 411-bastiodon": {
+                    "targets": [
+                        "410-shieldon",
+                        "411-bastiodon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

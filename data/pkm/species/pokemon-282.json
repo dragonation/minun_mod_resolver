@@ -1,0 +1,427 @@
+{
+    "id": 282,
+    "name": "Gardevoir",
+    "experiences-type": "slow",
+    "texts": [
+        "It has the power to predict the future. Its power peaks when it is protecting its Trainer.",
+        "To protect its Trainer, it will expend all its psychic power to create a small black hole."
+    ],
+    "forms": {
+        "gardevoir": {
+            "id": "gardevoir",
+            "name": "Gardevoir",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "synchronize",
+                "trace"
+            ],
+            "weight": 48.4,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 68,
+                "attack": 65,
+                "defense": 65,
+                "special-attack": 125,
+                "special-defense": 115,
+                "speed": 80
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "dazzling-gleam",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "misty-terrain",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "healing-wish",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "disarming-voice",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40
+                },
+                {
+                    "level": 1,
+                    "name": "double-team",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "dazzling-gleam",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 12,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "teleport",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "life-dew",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "wish",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 56,
+                    "name": "dream-eater",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 63,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic",
+                "fairy"
+            ],
+            "color": "white"
+        },
+        "mega-gardevoir": {
+            "id": "mega-gardevoir",
+            "name": "Mega Gardevoir",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "pixilate"
+            ],
+            "weight": 48.4,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 68,
+                "attack": 85,
+                "defense": 65,
+                "special-attack": 165,
+                "special-defense": 135,
+                "speed": 100
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "dazzling-gleam",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "misty-terrain",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "healing-wish",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "disarming-voice",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40
+                },
+                {
+                    "level": 1,
+                    "name": "double-team",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "dazzling-gleam",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 12,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "teleport",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "life-dew",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "wish",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 56,
+                    "name": "dream-eater",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 63,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic",
+                "fairy"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 140,
+    "changes": [
+        {
+            "targets": {
+                "282-gardevoir": {
+                    "pokemon": 282,
+                    "form": "gardevoir"
+                },
+                "282-mega-gardevoir": {
+                    "pokemon": 282,
+                    "form": "mega-gardevoir"
+                }
+            },
+            "changes": {
+                "282-gardevoir <> 282-mega-gardevoir": {
+                    "targets": [
+                        "282-gardevoir",
+                        "282-mega-gardevoir"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "gardevoirite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "embrace",
+    "names": {
+        "de": "Guardevoir",
+        "en": "Gardevoir",
+        "es": "Gardevoir",
+        "fr": "Gardevoir",
+        "it": "Gardevoir",
+        "jp": "サーナイト",
+        "kr": "가디안",
+        "zh": "沙奈朵",
+        "zh-CHS": "沙奈朵",
+        "zh-CHT": "沙奈朵"
+    },
+    "species": [
+        "creature",
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 233
+    }
+}

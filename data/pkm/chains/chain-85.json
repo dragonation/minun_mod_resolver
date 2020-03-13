@@ -1,0 +1,37 @@
+{
+    "ids": [
+        170,
+        171
+    ],
+    "chains": [
+        {
+            "targets": {
+                "170-chinchou": {
+                    "pokemon": 170,
+                    "form": "chinchou"
+                },
+                "171-lanturn": {
+                    "pokemon": 171,
+                    "form": "lanturn"
+                }
+            },
+            "changes": {
+                "170-chinchou > 171-lanturn": {
+                    "targets": [
+                        "170-chinchou",
+                        "171-lanturn"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                27
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

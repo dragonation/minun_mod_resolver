@@ -1,0 +1,2586 @@
+{
+    "id": 493,
+    "name": "Arceus",
+    "experiences-type": "slow",
+    "texts": [
+        "According to the legends of Sinnoh, this Pokémon emerged from an egg and shaped all there is in this world.",
+        "It is told in mythology that this Pokémon was born before the universe even existed."
+    ],
+    "forms": {
+        "normal-arceus": {
+            "id": "normal-arceus",
+            "name": "Normal Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "fighting-arceus": {
+            "id": "fighting-arceus",
+            "name": "Fighting Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "white"
+        },
+        "flying-arceus": {
+            "id": "flying-arceus",
+            "name": "Flying Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "flying"
+            ],
+            "color": "white"
+        },
+        "poison-arceus": {
+            "id": "poison-arceus",
+            "name": "Poison Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "poison"
+            ],
+            "color": "white"
+        },
+        "ground-arceus": {
+            "id": "ground-arceus",
+            "name": "Ground Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "white"
+        },
+        "rock-arceus": {
+            "id": "rock-arceus",
+            "name": "Rock Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "white"
+        },
+        "bug-arceus": {
+            "id": "bug-arceus",
+            "name": "Bug Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug"
+            ],
+            "color": "white"
+        },
+        "ghost-arceus": {
+            "id": "ghost-arceus",
+            "name": "Ghost Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost"
+            ],
+            "color": "white"
+        },
+        "steel-arceus": {
+            "id": "steel-arceus",
+            "name": "Steel Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "white"
+        },
+        "fire-arceus": {
+            "id": "fire-arceus",
+            "name": "Fire Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire"
+            ],
+            "color": "white"
+        },
+        "water-arceus": {
+            "id": "water-arceus",
+            "name": "Water Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "white"
+        },
+        "grass-arceus": {
+            "id": "grass-arceus",
+            "name": "Grass Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "white"
+        },
+        "electric-arceus": {
+            "id": "electric-arceus",
+            "name": "Electric Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "white"
+        },
+        "psychic-arceus": {
+            "id": "psychic-arceus",
+            "name": "Psychic Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "white"
+        },
+        "ice-arceus": {
+            "id": "ice-arceus",
+            "name": "Ice Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ice"
+            ],
+            "color": "white"
+        },
+        "dragon-arceus": {
+            "id": "dragon-arceus",
+            "name": "Dragon Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dragon"
+            ],
+            "color": "white"
+        },
+        "dark-arceus": {
+            "id": "dark-arceus",
+            "name": "Dark Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dark"
+            ],
+            "color": "white"
+        },
+        "fairy-arceus": {
+            "id": "fairy-arceus",
+            "name": "Fairy Arceus",
+            "shape": "quadruped",
+            "abilities": [
+                "multitype"
+            ],
+            "weight": 320,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 120,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 120,
+                "special-defense": 120,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "extreme-speed",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "judgment",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fairy"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 246,
+    "changes": [
+        {
+            "targets": {
+                "493-normal-arceus": {
+                    "pokemon": 493,
+                    "form": "normal-arceus"
+                },
+                "493-fighting-arceus": {
+                    "pokemon": 493,
+                    "form": "fighting-arceus"
+                },
+                "493-flying-arceus": {
+                    "pokemon": 493,
+                    "form": "flying-arceus"
+                },
+                "493-poison-arceus": {
+                    "pokemon": 493,
+                    "form": "poison-arceus"
+                },
+                "493-ground-arceus": {
+                    "pokemon": 493,
+                    "form": "ground-arceus"
+                },
+                "493-rock-arceus": {
+                    "pokemon": 493,
+                    "form": "rock-arceus"
+                },
+                "493-bug-arceus": {
+                    "pokemon": 493,
+                    "form": "bug-arceus"
+                },
+                "493-ghost-arceus": {
+                    "pokemon": 493,
+                    "form": "ghost-arceus"
+                },
+                "493-steel-arceus": {
+                    "pokemon": 493,
+                    "form": "steel-arceus"
+                },
+                "493-fire-arceus": {
+                    "pokemon": 493,
+                    "form": "fire-arceus"
+                },
+                "493-water-arceus": {
+                    "pokemon": 493,
+                    "form": "water-arceus"
+                },
+                "493-grass-arceus": {
+                    "pokemon": 493,
+                    "form": "grass-arceus"
+                },
+                "493-electric-arceus": {
+                    "pokemon": 493,
+                    "form": "electric-arceus"
+                },
+                "493-psychic-arceus": {
+                    "pokemon": 493,
+                    "form": "psychic-arceus"
+                },
+                "493-ice-arceus": {
+                    "pokemon": 493,
+                    "form": "ice-arceus"
+                },
+                "493-dragon-arceus": {
+                    "pokemon": 493,
+                    "form": "dragon-arceus"
+                },
+                "493-dark-arceus": {
+                    "pokemon": 493,
+                    "form": "dark-arceus"
+                },
+                "493-fairy-arceus": {
+                    "pokemon": 493,
+                    "form": "fairy-arceus"
+                }
+            },
+            "changes": {
+                "@493-normal-arceus": {
+                    "targets": [
+                        "493-normal-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": []
+                        }
+                    ]
+                },
+                "@493-fighting-arceus": {
+                    "targets": [
+                        "493-fighting-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "fist-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-flying-arceus": {
+                    "targets": [
+                        "493-flying-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "sky-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-poison-arceus": {
+                    "targets": [
+                        "493-poison-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "toxic-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-ground-arceus": {
+                    "targets": [
+                        "493-ground-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "earth-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-rock-arceus": {
+                    "targets": [
+                        "493-rock-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "stone-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-bug-arceus": {
+                    "targets": [
+                        "493-bug-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "insect-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-ghost-arceus": {
+                    "targets": [
+                        "493-ghost-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "spooky-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-steel-arceus": {
+                    "targets": [
+                        "493-steel-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "iron-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-fire-arceus": {
+                    "targets": [
+                        "493-fire-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "flame-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-water-arceus": {
+                    "targets": [
+                        "493-water-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "splash-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-grass-arceus": {
+                    "targets": [
+                        "493-grass-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "meadow-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-electric-arceus": {
+                    "targets": [
+                        "493-electric-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "zap-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-psychic-arceus": {
+                    "targets": [
+                        "493-psychic-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "mind-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-ice-arceus": {
+                    "targets": [
+                        "493-ice-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "icicle-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-dragon-arceus": {
+                    "targets": [
+                        "493-dragon-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "draco-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-dark-arceus": {
+                    "targets": [
+                        "493-dark-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "dread-plate"
+                            ]
+                        }
+                    ]
+                },
+                "@493-fairy-arceus": {
+                    "targets": [
+                        "493-fairy-arceus"
+                    ],
+                    "methods": [
+                        {
+                            "method": "hold-item",
+                            "bidirectional": false,
+                            "parameters": [
+                                "pixie-plate"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "alpha",
+    "names": {
+        "de": "Arceus",
+        "en": "Arceus",
+        "es": "Arceus",
+        "fr": "Arceus",
+        "it": "Arceus",
+        "jp": "アルセウス",
+        "kr": "아르세우스",
+        "zh": "阿尔宙斯",
+        "zh-CHS": "阿尔宙斯",
+        "zh-CHT": "阿爾宙斯"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 3,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 324
+    }
+}

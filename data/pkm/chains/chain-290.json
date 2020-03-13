@@ -1,0 +1,16 @@
+{
+    "ids": [
+        587
+    ],
+    "chains": [
+        {
+            "targets": {
+                "587-emolga": {
+                    "pokemon": 587,
+                    "form": "emolga"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

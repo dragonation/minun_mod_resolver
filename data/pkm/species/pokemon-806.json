@@ -1,0 +1,146 @@
+{
+    "id": 806,
+    "name": "Blacephalon",
+    "experiences-type": "slow",
+    "texts": [
+        "It slithers toward people. Then, without warning, it triggers the explosion of its own head. It's apparently one kind of Ultra Beast.",
+        "A UB that appeared from an Ultra Wormhole, it causes explosions, then takes advantage of opponents' surprise to rob them of their vitality."
+    ],
+    "forms": {
+        "blacephalon": {
+            "id": "blacephalon",
+            "name": "Blacephalon",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "beast-boost"
+            ],
+            "weight": 13,
+            "height": 1.8,
+            "base-stats": {
+                "health-points": 53,
+                "attack": 127,
+                "defense": 53,
+                "special-attack": 151,
+                "special-defense": 79,
+                "speed": 107
+            },
+            "skills": [
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "ember",
+                    "category": "fire",
+                    "accuracy": 40
+                },
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "astonish",
+                    "category": "ghost",
+                    "accuracy": 30
+                },
+                {
+                    "level": null,
+                    "name": "0077",
+                    "type": "magic coat",
+                    "category": "psychic"
+                },
+                {
+                    "level": null,
+                    "name": "01313",
+                    "type": "stored power",
+                    "category": "psychic",
+                    "accuracy": 20
+                },
+                {
+                    "level": null,
+                    "name": "01717",
+                    "type": "flame burst",
+                    "category": "fire",
+                    "accuracy": 70
+                },
+                {
+                    "level": null,
+                    "name": "02323",
+                    "type": "night shade",
+                    "category": "ghost"
+                },
+                {
+                    "level": null,
+                    "name": "02929",
+                    "type": "light screen",
+                    "category": "psychic"
+                },
+                {
+                    "level": null,
+                    "name": "03131",
+                    "type": "calm mind",
+                    "category": "psychic"
+                },
+                {
+                    "level": null,
+                    "name": "03737",
+                    "type": "fire blast",
+                    "category": "fire",
+                    "accuracy": 110
+                },
+                {
+                    "level": null,
+                    "name": "04141",
+                    "type": "shadow ball",
+                    "category": "ghost",
+                    "accuracy": 80
+                },
+                {
+                    "level": null,
+                    "name": "04747",
+                    "type": "trick",
+                    "category": "psychic"
+                },
+                {
+                    "level": null,
+                    "name": "05959",
+                    "type": "mind blown",
+                    "category": "fire",
+                    "accuracy": 150
+                }
+            ],
+            "types": [
+                "fire",
+                "ghost"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 418,
+    "classification": "fireworks",
+    "names": {
+        "de": "Kopplosio",
+        "en": "Blacephalon",
+        "es": "Blacephalon",
+        "fr": "Pierroteknik",
+        "it": "Blacephalon",
+        "jp": "ズガドーン",
+        "kr": "두파팡",
+        "zh": "砰头小丑",
+        "zh-CHS": "砰头小丑",
+        "zh-CHT": ""
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 30,
+    "hatching-cycles": 120,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 257
+    }
+}

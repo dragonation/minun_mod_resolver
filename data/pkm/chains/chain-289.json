@@ -1,0 +1,124 @@
+{
+    "ids": [
+        585,
+        586
+    ],
+    "chains": [
+        {
+            "targets": {
+                "585-spring-form": {
+                    "pokemon": 585,
+                    "form": "spring-form"
+                },
+                "586-spring-form": {
+                    "pokemon": 586,
+                    "form": "spring-form"
+                }
+            },
+            "changes": {
+                "585-spring-form > 586-spring-form": {
+                    "targets": [
+                        "585-spring-form",
+                        "586-spring-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "585-spring-form": {
+                    "pokemon": 585,
+                    "form": "spring-form"
+                },
+                "586-spring-form": {
+                    "pokemon": 586,
+                    "form": "spring-form"
+                }
+            },
+            "changes": {
+                "585-spring-form > 586-spring-form": {
+                    "targets": [
+                        "585-spring-form",
+                        "586-spring-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "585-spring-form": {
+                    "pokemon": 585,
+                    "form": "spring-form"
+                },
+                "586-spring-form": {
+                    "pokemon": 586,
+                    "form": "spring-form"
+                }
+            },
+            "changes": {
+                "585-spring-form > 586-spring-form": {
+                    "targets": [
+                        "585-spring-form",
+                        "586-spring-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "585-spring-form": {
+                    "pokemon": 585,
+                    "form": "spring-form"
+                },
+                "586-spring-form": {
+                    "pokemon": 586,
+                    "form": "spring-form"
+                }
+            },
+            "changes": {
+                "585-spring-form > 586-spring-form": {
+                    "targets": [
+                        "585-spring-form",
+                        "586-spring-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "ids": [
+        349,
+        350
+    ],
+    "chains": [
+        {
+            "targets": {
+                "349-feebas": {
+                    "pokemon": 349,
+                    "form": "feebas"
+                },
+                "350-milotic": {
+                    "pokemon": 350,
+                    "form": "milotic"
+                }
+            },
+            "changes": {
+                "349-feebas > 350-milotic": {
+                    "targets": [
+                        "349-feebas",
+                        "350-milotic"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [],
+                            "beauty": "high"
+                        },
+                        {
+                            "method": "trade",
+                            "parameters": [],
+                            "holding": "prism scale"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

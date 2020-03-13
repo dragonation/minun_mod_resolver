@@ -1,0 +1,25 @@
+{
+    "ids": [
+        618
+    ],
+    "chains": [
+        {
+            "targets": {
+                "618-stunfisk": {
+                    "pokemon": 618,
+                    "form": "stunfisk"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "618-galarian-stunfisk": {
+                    "pokemon": 618,
+                    "form": "galarian-stunfisk"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

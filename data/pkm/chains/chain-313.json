@@ -1,0 +1,16 @@
+{
+    "ids": [
+        631
+    ],
+    "chains": [
+        {
+            "targets": {
+                "631-heatmor": {
+                    "pokemon": 631,
+                    "form": "heatmor"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

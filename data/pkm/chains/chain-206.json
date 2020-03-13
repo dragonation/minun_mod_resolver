@@ -1,0 +1,57 @@
+{
+    "ids": [
+        396,
+        397,
+        398
+    ],
+    "chains": [
+        {
+            "targets": {
+                "396-starly": {
+                    "pokemon": 396,
+                    "form": "starly"
+                },
+                "397-staravia": {
+                    "pokemon": 397,
+                    "form": "staravia"
+                },
+                "398-staraptor": {
+                    "pokemon": 398,
+                    "form": "staraptor"
+                }
+            },
+            "changes": {
+                "396-starly > 397-staravia": {
+                    "targets": [
+                        "396-starly",
+                        "397-staravia"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                14
+                            ]
+                        }
+                    ]
+                },
+                "397-staravia > 398-staraptor": {
+                    "targets": [
+                        "397-staravia",
+                        "398-staraptor"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

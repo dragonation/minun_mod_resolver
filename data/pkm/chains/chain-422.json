@@ -1,0 +1,57 @@
+{
+    "ids": [
+        813,
+        814,
+        815
+    ],
+    "chains": [
+        {
+            "targets": {
+                "813-scorbunny": {
+                    "pokemon": 813,
+                    "form": "scorbunny"
+                },
+                "814-raboot": {
+                    "pokemon": 814,
+                    "form": "raboot"
+                },
+                "815-cinderace": {
+                    "pokemon": 815,
+                    "form": "cinderace"
+                }
+            },
+            "changes": {
+                "813-scorbunny > 814-raboot": {
+                    "targets": [
+                        "813-scorbunny",
+                        "814-raboot"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "814-raboot > 815-cinderace": {
+                    "targets": [
+                        "814-raboot",
+                        "815-cinderace"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

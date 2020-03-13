@@ -1,0 +1,163 @@
+{
+    "id": 836,
+    "name": "Boltund",
+    "experiences-type": "fast",
+    "texts": [
+        "This Pokémon generates electricity and channels it into its legs to keep them going strong. Boltund can run nonstop for three full days.",
+        "It sends electricity through its legs to boost their strength. Running at top speed, it easily breaks 50 mph."
+    ],
+    "forms": {
+        "boltund": {
+            "id": "boltund",
+            "name": "Boltund",
+            "shape": "quadruped",
+            "abilities": [
+                "strong-jaw"
+            ],
+            "weight": 34,
+            "height": 1,
+            "base-stats": {
+                "health-points": 69,
+                "attack": 90,
+                "defense": 60,
+                "special-attack": 90,
+                "special-defense": 60,
+                "speed": 121
+            },
+            "hidden-abilities": [
+                "competitive"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "electrify",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "nuzzle",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "wild-charge",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 62,
+                    "name": "electric-terrain",
+                    "type": "electric",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 431,
+    "classification": "dog",
+    "names": {
+        "de": "Bellektro",
+        "en": "Boltund",
+        "es": "Boltund",
+        "fr": "Fulgudog",
+        "it": "Boltund",
+        "jp": "パルスワン",
+        "kr": "펄스멍",
+        "zh": "逐电犬",
+        "zh-CHS": "逐电犬",
+        "zh-CHT": "逐電犬"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 20,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 2,
+        "experience": 172
+    }
+}

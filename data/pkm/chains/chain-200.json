@@ -1,0 +1,16 @@
+{
+    "ids": [
+        384
+    ],
+    "chains": [
+        {
+            "targets": {
+                "384-rayquaza": {
+                    "pokemon": 384,
+                    "form": "rayquaza"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

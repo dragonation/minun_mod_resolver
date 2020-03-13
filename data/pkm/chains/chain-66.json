@@ -1,0 +1,197 @@
+{
+    "ids": [
+        133,
+        134,
+        135,
+        136,
+        196,
+        197,
+        470,
+        471,
+        700
+    ],
+    "chains": [
+        {
+            "targets": {
+                "133-eevee": {
+                    "pokemon": 133,
+                    "form": "eevee"
+                },
+                "134-vaporeon": {
+                    "pokemon": 134,
+                    "form": "vaporeon"
+                },
+                "135-jolteon": {
+                    "pokemon": 135,
+                    "form": "jolteon"
+                },
+                "136-flareon": {
+                    "pokemon": 136,
+                    "form": "flareon"
+                },
+                "196-espeon": {
+                    "pokemon": 196,
+                    "form": "espeon"
+                },
+                "197-umbreon": {
+                    "pokemon": 197,
+                    "form": "umbreon"
+                },
+                "470-leafeon": {
+                    "pokemon": 470,
+                    "form": "leafeon"
+                },
+                "471-glaceon": {
+                    "pokemon": 471,
+                    "form": "glaceon"
+                },
+                "700-sylveon": {
+                    "pokemon": 700,
+                    "form": "sylveon"
+                }
+            },
+            "changes": {
+                "133-eevee > 134-vaporeon": {
+                    "targets": [
+                        "133-eevee",
+                        "134-vaporeon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "water-stone"
+                            ]
+                        }
+                    ]
+                },
+                "133-eevee > 135-jolteon": {
+                    "targets": [
+                        "133-eevee",
+                        "135-jolteon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "thunder-stone"
+                            ]
+                        }
+                    ]
+                },
+                "133-eevee > 136-flareon": {
+                    "targets": [
+                        "133-eevee",
+                        "136-flareon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "fire-stone"
+                            ]
+                        }
+                    ]
+                },
+                "133-eevee > 196-espeon": {
+                    "targets": [
+                        "133-eevee",
+                        "196-espeon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": [],
+                            "time": "day"
+                        },
+                        {
+                            "method": "level-up",
+                            "parameters": [],
+                            "holding": "sun-shard"
+                        }
+                    ]
+                },
+                "133-eevee > 197-umbreon": {
+                    "targets": [
+                        "133-eevee",
+                        "197-umbreon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": [],
+                            "time": "night"
+                        },
+                        {
+                            "method": "level-up",
+                            "parameters": [],
+                            "holding": "moon-shard"
+                        }
+                    ]
+                },
+                "133-eevee > 470-leafeon": {
+                    "targets": [
+                        "133-eevee",
+                        "470-leafeon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [],
+                            "location": "moss-field"
+                        },
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "leaf-stone"
+                            ]
+                        }
+                    ]
+                },
+                "133-eevee > 471-glaceon": {
+                    "targets": [
+                        "133-eevee",
+                        "471-glaceon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [],
+                            "location": "ice-field"
+                        },
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "ice-stone"
+                            ]
+                        }
+                    ]
+                },
+                "133-eevee > 700-sylveon": {
+                    "targets": [
+                        "133-eevee",
+                        "700-sylveon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "affection": "high",
+                            "parameters": [],
+                            "learnt": "@fairy"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

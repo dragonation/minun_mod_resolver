@@ -1,0 +1,213 @@
+{
+    "id": 358,
+    "name": "Chimecho",
+    "experiences-type": "fast",
+    "texts": [
+        "It uses the sucker on its head to hang from a tree or from eaves. It can produce seven different tones.",
+        "Emitting ultrasonic cries, it floats on winds to travel great distances."
+    ],
+    "forms": {
+        "chimecho": {
+            "id": "chimecho",
+            "name": "Chimecho",
+            "shape": "head-arms",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 1,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 50,
+                "defense": 80,
+                "special-attack": 95,
+                "special-defense": 90,
+                "speed": 65
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "healing-wish",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "synchronoise",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "psywave",
+                    "type": "psychic",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 22,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "heal-bell",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "uproar",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 52,
+                    "name": "synchronoise",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "healing-wish",
+                    "type": "psychic",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 184,
+    "classification": "wind-chime",
+    "names": {
+        "de": "Palimpalim",
+        "en": "Chimecho",
+        "es": "Chimecho",
+        "fr": "Éoko",
+        "it": "Chimecho",
+        "jp": "チリーン",
+        "kr": "치렁",
+        "zh": "风铃铃",
+        "zh-CHS": "风铃铃",
+        "zh-CHT": "風鈴鈴"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "cleanse-tag"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 159
+    }
+}

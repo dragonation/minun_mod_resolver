@@ -1,0 +1,56 @@
+{
+    "ids": [
+        761,
+        762,
+        763
+    ],
+    "chains": [
+        {
+            "targets": {
+                "761-bounsweet": {
+                    "pokemon": 761,
+                    "form": "bounsweet"
+                },
+                "762-steenee": {
+                    "pokemon": 762,
+                    "form": "steenee"
+                },
+                "763-tsareena": {
+                    "pokemon": 763,
+                    "form": "tsareena"
+                }
+            },
+            "changes": {
+                "761-bounsweet > 762-steenee": {
+                    "targets": [
+                        "761-bounsweet",
+                        "762-steenee"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "762-steenee > 763-tsareena": {
+                    "targets": [
+                        "762-steenee",
+                        "763-tsareena"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [],
+                            "learnt": "stomp"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

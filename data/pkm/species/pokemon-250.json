@@ -1,0 +1,189 @@
+{
+    "id": 250,
+    "name": "Ho-Oh",
+    "experiences-type": "slow",
+    "texts": [
+        "A legend says that its body glows in seven colors. A rainbow is said to form behind it when it flies.",
+        "It will reveal itself before a pure-hearted Trainer by shining its bright, rainbow-colored wings."
+    ],
+    "forms": {
+        "ho-oh": {
+            "id": "ho-oh",
+            "name": "Ho-Oh",
+            "shape": "two-wings",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 199,
+            "height": 3.8,
+            "base-stats": {
+                "health-points": 106,
+                "attack": 130,
+                "defense": 90,
+                "special-attack": 110,
+                "special-defense": 154,
+                "speed": 90
+            },
+            "hidden-abilities": [
+                "regenerator"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "whirlwind",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "weather-ball",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "brave-bird",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                },
+                {
+                    "level": 43,
+                    "name": "sacred-fire",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 95
+                },
+                {
+                    "level": 50,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 65,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 71,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 79,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 85,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 93,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 99,
+                    "name": "sky-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "fire",
+                "flying"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 128,
+    "classification": "rainbow",
+    "names": {
+        "de": "Ho-Oh",
+        "en": "Ho-Oh",
+        "es": "Ho-Oh",
+        "fr": "Ho-Oh",
+        "it": "Ho-Oh",
+        "jp": "ホウオウ",
+        "kr": "칠색조",
+        "zh": "凤王",
+        "zh-CHS": "凤王",
+        "zh-CHT": "鳳王"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {
+        "common": "sacred-ash",
+        "rare": "sacred-ash"
+    },
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 3,
+        "speed": 0,
+        "experience": 306
+    }
+}

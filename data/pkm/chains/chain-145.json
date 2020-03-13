@@ -1,0 +1,57 @@
+{
+    "ids": [
+        293,
+        294,
+        295
+    ],
+    "chains": [
+        {
+            "targets": {
+                "293-whismur": {
+                    "pokemon": 293,
+                    "form": "whismur"
+                },
+                "294-loudred": {
+                    "pokemon": 294,
+                    "form": "loudred"
+                },
+                "295-exploud": {
+                    "pokemon": 295,
+                    "form": "exploud"
+                }
+            },
+            "changes": {
+                "293-whismur > 294-loudred": {
+                    "targets": [
+                        "293-whismur",
+                        "294-loudred"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                },
+                "294-loudred > 295-exploud": {
+                    "targets": [
+                        "294-loudred",
+                        "295-exploud"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

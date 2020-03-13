@@ -1,0 +1,233 @@
+{
+    "id": 452,
+    "name": "Drapion",
+    "experiences-type": "slow",
+    "texts": [
+        "Its poison is potent, but it rarely sees use. This Pokémon prefers to use physical force instead, going on rampages with its car-crushing strength.",
+        "It's so vicious that it's called the Sand Demon. Yet when confronted by Hippowdon, Drapion keeps a low profile and will never pick a fight."
+    ],
+    "forms": {
+        "drapion": {
+            "id": "drapion",
+            "name": "Drapion",
+            "shape": "insectoid",
+            "abilities": [
+                "battle-armor",
+                "sniper"
+            ],
+            "weight": 61.5,
+            "height": 1.3,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 90,
+                "defense": 110,
+                "special-attack": 60,
+                "special-defense": 75,
+                "speed": 95
+            },
+            "hidden-abilities": [
+                "keen-eye"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "poison-sting",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hone-claws",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "fell-stinger",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "toxic-spikes",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "venoshock",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "pin-missile",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 95
+                },
+                {
+                    "level": 33,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "cross-poison",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "acupressure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 54,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "poison",
+                "dark"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 228,
+    "classification": "ogre-scorp",
+    "names": {
+        "de": "Piondragi",
+        "en": "Drapion",
+        "es": "Drapion",
+        "fr": "Drascore",
+        "it": "Drapion",
+        "jp": "ドラピオン",
+        "kr": "드래피온",
+        "zh": "龙王蝎",
+        "zh-CHS": "龙王蝎",
+        "zh-CHT": "龍王蠍"
+    },
+    "species": [
+        "bug",
+        "aquatic"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "poison-barb"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 175
+    }
+}

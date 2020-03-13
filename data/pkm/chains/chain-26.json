@@ -1,0 +1,76 @@
+{
+    "ids": [
+        60,
+        61,
+        62,
+        186
+    ],
+    "chains": [
+        {
+            "targets": {
+                "60-poliwag": {
+                    "pokemon": 60,
+                    "form": "poliwag"
+                },
+                "61-poliwhirl": {
+                    "pokemon": 61,
+                    "form": "poliwhirl"
+                },
+                "62-poliwrath": {
+                    "pokemon": 62,
+                    "form": "poliwrath"
+                },
+                "186-politoed": {
+                    "pokemon": 186,
+                    "form": "politoed"
+                }
+            },
+            "changes": {
+                "60-poliwag > 61-poliwhirl": {
+                    "targets": [
+                        "60-poliwag",
+                        "61-poliwhirl"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                },
+                "61-poliwhirl > 62-poliwrath": {
+                    "targets": [
+                        "61-poliwhirl",
+                        "62-poliwrath"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "water-stone"
+                            ]
+                        }
+                    ]
+                },
+                "61-poliwhirl > 186-politoed": {
+                    "targets": [
+                        "61-poliwhirl",
+                        "186-politoed"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": [],
+                            "holding": "king-s-rock"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

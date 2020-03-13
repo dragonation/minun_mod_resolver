@@ -1,0 +1,37 @@
+{
+    "ids": [
+        515,
+        516
+    ],
+    "chains": [
+        {
+            "targets": {
+                "515-panpour": {
+                    "pokemon": 515,
+                    "form": "panpour"
+                },
+                "516-simipour": {
+                    "pokemon": 516,
+                    "form": "simipour"
+                }
+            },
+            "changes": {
+                "515-panpour > 516-simipour": {
+                    "targets": [
+                        "515-panpour",
+                        "516-simipour"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "water-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

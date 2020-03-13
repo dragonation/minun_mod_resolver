@@ -1,0 +1,219 @@
+{
+    "id": 663,
+    "name": "Talonflame",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "Its tough wings don't allow fire to pass through them. A long time ago, firefighters' outfits were made from Talonflame wings.",
+        "Bird Pokémon make up most of its diet. It approaches at high speeds and smacks them down to the ground with its powerful kick."
+    ],
+    "forms": {
+        "talonflame": {
+            "id": "talonflame",
+            "name": "Talonflame",
+            "shape": "two-wings",
+            "abilities": [
+                "flame-body"
+            ],
+            "weight": 24.5,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 78,
+                "attack": 81,
+                "defense": 71,
+                "special-attack": 74,
+                "special-defense": 69,
+                "speed": 126
+            },
+            "hidden-abilities": [
+                "gale-wings"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "brave-bird",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flare-blitz",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "roost",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 27,
+                    "name": "razor-wind",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "flame-charge",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "acrobatics",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "me-first",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "tailwind",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "steel-wing",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 90
+                },
+                {
+                    "level": 64,
+                    "name": "brave-bird",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire",
+                "flying"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 333,
+    "classification": "scorching",
+    "names": {
+        "de": "Fiaro",
+        "en": "Talonflame",
+        "es": "Talonflame",
+        "fr": "Flambusard",
+        "it": "Talonflame",
+        "jp": "ファイアロー",
+        "kr": "파이어로",
+        "zh": "烈箭鹰",
+        "zh-CHS": "烈箭鹰",
+        "zh-CHT": "烈箭鷹"
+    },
+    "species": [
+        "flying"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 3,
+        "experience": 175
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        231,
+        232
+    ],
+    "chains": [
+        {
+            "targets": {
+                "231-phanpy": {
+                    "pokemon": 231,
+                    "form": "phanpy"
+                },
+                "232-donphan": {
+                    "pokemon": 232,
+                    "form": "donphan"
+                }
+            },
+            "changes": {
+                "231-phanpy > 232-donphan": {
+                    "targets": [
+                        "231-phanpy",
+                        "232-donphan"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

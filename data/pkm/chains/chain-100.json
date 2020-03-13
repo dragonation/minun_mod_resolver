@@ -1,0 +1,16 @@
+{
+    "ids": [
+        203
+    ],
+    "chains": [
+        {
+            "targets": {
+                "203-girafarig": {
+                    "pokemon": 203,
+                    "form": "girafarig"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

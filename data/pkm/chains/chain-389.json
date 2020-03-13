@@ -1,0 +1,37 @@
+{
+    "ids": [
+        769,
+        770
+    ],
+    "chains": [
+        {
+            "targets": {
+                "769-sandygast": {
+                    "pokemon": 769,
+                    "form": "sandygast"
+                },
+                "770-palossand": {
+                    "pokemon": 770,
+                    "form": "palossand"
+                }
+            },
+            "changes": {
+                "769-sandygast > 770-palossand": {
+                    "targets": [
+                        "769-sandygast",
+                        "770-palossand"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                42
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

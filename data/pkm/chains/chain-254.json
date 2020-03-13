@@ -1,0 +1,37 @@
+{
+    "ids": [
+        511,
+        512
+    ],
+    "chains": [
+        {
+            "targets": {
+                "511-pansage": {
+                    "pokemon": 511,
+                    "form": "pansage"
+                },
+                "512-simisage": {
+                    "pokemon": 512,
+                    "form": "simisage"
+                }
+            },
+            "changes": {
+                "511-pansage > 512-simisage": {
+                    "targets": [
+                        "511-pansage",
+                        "512-simisage"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "leaf-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

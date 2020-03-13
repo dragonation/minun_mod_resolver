@@ -1,0 +1,37 @@
+{
+    "ids": [
+        285,
+        286
+    ],
+    "chains": [
+        {
+            "targets": {
+                "285-shroomish": {
+                    "pokemon": 285,
+                    "form": "shroomish"
+                },
+                "286-breloom": {
+                    "pokemon": 286,
+                    "form": "breloom"
+                }
+            },
+            "changes": {
+                "285-shroomish > 286-breloom": {
+                    "targets": [
+                        "285-shroomish",
+                        "286-breloom"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                23
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

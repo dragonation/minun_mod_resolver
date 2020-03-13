@@ -1,0 +1,199 @@
+{
+    "id": 377,
+    "name": "Regirock",
+    "experiences-type": "slow",
+    "texts": [
+        "Its entire body is made of rock. If any part chips off in battle, it attaches rocks to repair itself.",
+        "The same rocks that form its body have been found in ground layers around the world."
+    ],
+    "forms": {
+        "regirock": {
+            "id": "regirock",
+            "name": "Regirock",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "clear-body"
+            ],
+            "weight": 230,
+            "height": 1.7,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 100,
+                "defense": 200,
+                "special-attack": 50,
+                "special-defense": 100,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "sturdy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "stomp",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "charge-beam",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 13,
+                    "name": "charge-beam",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 19,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 49,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 55,
+                    "name": "lock-on",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                },
+                {
+                    "level": 61,
+                    "name": "superpower",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 67,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 193,
+    "classification": "rock-peak",
+    "names": {
+        "de": "Regirock",
+        "en": "Regirock",
+        "es": "Regirock",
+        "fr": "Regirock",
+        "it": "Regirock",
+        "jp": "レジロック",
+        "kr": "레지락",
+        "zh": "雷吉洛克",
+        "zh-CHS": "雷吉洛克",
+        "zh-CHT": "雷吉洛克"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 81,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 3,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 261
+    }
+}

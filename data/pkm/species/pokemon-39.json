@@ -1,0 +1,208 @@
+{
+    "id": 39,
+    "name": "Jigglypuff",
+    "experiences-type": "fast",
+    "texts": [
+        "Recordings of Jigglypuff's strange lullabies can be purchased from department stores. These CDs can be found near the bedding area.",
+        "The songs they sing are totally different depending on the region they live in. Some even sound like they're shouting!"
+    ],
+    "forms": {
+        "jigglypuff": {
+            "id": "jigglypuff",
+            "name": "Jigglypuff",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "cute-charm",
+                "competitive"
+            ],
+            "weight": 5.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 115,
+                "attack": 45,
+                "defense": 20,
+                "special-attack": 45,
+                "special-defense": 25,
+                "speed": 20
+            },
+            "hidden-abilities": [
+                "friend-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "sing",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 5,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "play-nice",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 11,
+                    "name": "disarming-voice",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40
+                },
+                {
+                    "level": 14,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "double-slap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 22,
+                    "name": "round",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "stockpile",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "swallow",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "spit-up",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "wake-up-slap",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "gyro-ball",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "mimic",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 41,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "normal",
+                "fairy"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 16,
+    "classification": "balloon",
+    "names": {
+        "de": "Pummeluff",
+        "en": "Jigglypuff",
+        "es": "Jigglypuff",
+        "fr": "Rondoudou",
+        "it": "Jigglypuff",
+        "jp": "プリン",
+        "kr": "푸린",
+        "zh": "胖丁",
+        "zh-CHS": "胖丁",
+        "zh-CHT": "胖丁"
+    },
+    "species": [
+        "fairy"
+    ],
+    "gender": "2/6",
+    "holdings": {
+        "rare": "moon-stone"
+    },
+    "capture-rate": 170,
+    "hatching-cycles": 11,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 2,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 95
+    }
+}

@@ -1,0 +1,320 @@
+{
+    "id": 421,
+    "name": "Cherrim",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "As a bud, it barely moves. It sits still, placidly waiting for sunlight to appear.",
+        "Its folded petals are pretty tough. Bird Pokémon can peck at them all they want, and Cherrim won't be bothered at all."
+    ],
+    "forms": {
+        "overcast-form": {
+            "id": "overcast-form",
+            "name": "Overcast Form",
+            "shape": "head-legs",
+            "abilities": [
+                "flower-gift"
+            ],
+            "weight": 9.3,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 60,
+                "defense": 70,
+                "special-attack": 87,
+                "special-defense": 78,
+                "speed": 85
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "flower-shield",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "morning-sun",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leafage",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "magical-leaf",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 28,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 34,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 41,
+                    "name": "petal-blizzard",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "worry-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 62,
+                    "name": "petal-dance",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "purple"
+        },
+        "sunshine-form": {
+            "id": "sunshine-form",
+            "name": "Sunshine Form",
+            "shape": "head-legs",
+            "abilities": [
+                "flower-gift"
+            ],
+            "weight": 9.3,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 60,
+                "defense": 70,
+                "special-attack": 87,
+                "special-defense": 78,
+                "speed": 85
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "flower-shield",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "morning-sun",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leafage",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "magical-leaf",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 28,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 34,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 41,
+                    "name": "petal-blizzard",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "worry-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 62,
+                    "name": "petal-dance",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 216,
+    "changes": [
+        {
+            "targets": {
+                "421-overcast-form": {
+                    "pokemon": 421,
+                    "weather": "cloudy",
+                    "form": "overcast-form"
+                },
+                "421-sunshine-form": {
+                    "pokemon": 421,
+                    "weather": "sunny",
+                    "form": "sunshine-form"
+                }
+            },
+            "changes": {}
+        }
+    ],
+    "classification": "blossom",
+    "names": {
+        "de": "Kinoso",
+        "en": "Cherrim",
+        "es": "Cherrim",
+        "fr": "Ceriflor",
+        "it": "Cherrim",
+        "jp": "チェリム",
+        "kr": "체리꼬",
+        "zh": "樱花儿",
+        "zh-CHS": "樱花儿",
+        "zh-CHT": "櫻花兒"
+    },
+    "species": [
+        "fairy",
+        "plant"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "miracle-seed"
+    },
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 2,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 158
+    }
+}

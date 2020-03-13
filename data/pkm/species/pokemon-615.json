@@ -1,0 +1,225 @@
+{
+    "id": 615,
+    "name": "Cryogonal",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "They are born in snow clouds. They use chains made of ice crystals to capture prey.",
+        "They are composed of ice crystals. They capture prey with chains of ice, freezing the prey at -148° F."
+    ],
+    "forms": {
+        "cryogonal": {
+            "id": "cryogonal",
+            "name": "Cryogonal",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 148,
+            "height": 1.1,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 50,
+                "defense": 50,
+                "special-attack": 95,
+                "special-defense": 135,
+                "speed": 105
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special"
+                },
+                {
+                    "level": 1,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bind",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "ice-shard",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sharpen",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "icy-wind",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 9,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 9,
+                    "name": "haze",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 13,
+                    "name": "aurora-beam",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "acid-armor",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 21,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "ice-beam",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "reflect",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special"
+                }
+            ],
+            "types": [
+                "ice"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 303,
+    "classification": "crystallizing",
+    "names": {
+        "de": "Frigometri",
+        "en": "Cryogonal",
+        "es": "Cryogonal",
+        "fr": "Hexagel",
+        "it": "Cryogonal",
+        "jp": "フリージオ",
+        "kr": "프리지오",
+        "zh": "几何雪花",
+        "zh-CHS": "几何雪花",
+        "zh-CHT": "幾何雪花"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {
+        "rare": "never-melt-ice"
+    },
+    "capture-rate": 25,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 2,
+        "speed": 0,
+        "experience": 180
+    }
+}

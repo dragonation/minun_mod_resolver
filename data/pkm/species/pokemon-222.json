@@ -1,0 +1,286 @@
+{
+    "id": 222,
+    "name": "Corsola",
+    "experiences-type": "fast",
+    "texts": [
+        "It will regrow any branches that break off its head. People keep particularly beautiful Corsola branches as charms to promote safe childbirth.",
+        "These Pokémon live in warm seas. In prehistoric times, many lived in the oceans around the Galar region as well."
+    ],
+    "forms": {
+        "corsola": {
+            "id": "corsola",
+            "name": "Corsola",
+            "shape": "insectoid",
+            "abilities": [
+                "hustle",
+                "natural-cure"
+            ],
+            "weight": 5,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 55,
+                "attack": 55,
+                "defense": 85,
+                "special-attack": 65,
+                "special-defense": 85,
+                "speed": 35
+            },
+            "hidden-abilities": [
+                "regenerator"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 5,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "aqua-ring",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "life-dew",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "mirror-coat",
+                    "type": "psychic",
+                    "category": "special",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water",
+                "rock"
+            ],
+            "color": "pink"
+        },
+        "galarian-corsola": {
+            "id": "galarian-corsola",
+            "name": "Galarian Corsola",
+            "shape": "insectoid",
+            "abilities": [
+                "weak-armor"
+            ],
+            "weight": 0.5,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 55,
+                "defense": 100,
+                "special-attack": 65,
+                "special-defense": 100,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "cursed-body"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 5,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "spite",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "strength-sap",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "grudge",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "mirror-coat",
+                    "type": "psychic",
+                    "category": "special",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 112,
+    "classification": "coral",
+    "names": {
+        "de": "Corasonn",
+        "en": "Corsola",
+        "es": "Corsola",
+        "fr": "Corayon",
+        "it": "Corsola",
+        "jp": "サニーゴ",
+        "kr": "코산호",
+        "zh": "太阳珊瑚",
+        "zh-CHS": "太阳珊瑚",
+        "zh-CHT": "太陽珊瑚"
+    },
+    "species": [
+        "amphibians",
+        "aquatic"
+    ],
+    "gender": "2/6",
+    "holdings": {
+        "rare": "luminous-moss"
+    },
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 144
+    }
+}

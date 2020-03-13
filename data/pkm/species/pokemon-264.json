@@ -1,0 +1,382 @@
+{
+    "id": 264,
+    "name": "Linoone",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Its fur is strong and supple. Shaving brushes made with shed Linoone hairs are highly prized.",
+        "It uses its explosive speed and razor-sharp claws to bring down prey. Running along winding paths is not its strong suit."
+    ],
+    "forms": {
+        "linoone": {
+            "id": "linoone",
+            "name": "Linoone",
+            "shape": "quadruped",
+            "abilities": [
+                "pickup",
+                "gluttony"
+            ],
+            "weight": 32.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 78,
+                "attack": 70,
+                "defense": 61,
+                "special-attack": 50,
+                "special-defense": 61,
+                "speed": 100
+            },
+            "hidden-abilities": [
+                "quick-feet"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "switcheroo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "pin-missile",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "covet",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "hone-claws",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 23,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 33,
+                    "name": "fling",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "belly-drum",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "white"
+        },
+        "galarian-linoone": {
+            "id": "galarian-linoone",
+            "name": "Galarian Linoone",
+            "shape": "quadruped",
+            "abilities": [
+                "pickup",
+                "gluttony"
+            ],
+            "weight": 32.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 78,
+                "attack": 70,
+                "defense": 61,
+                "special-attack": 50,
+                "special-defense": 61,
+                "speed": 100
+            },
+            "hidden-abilities": [
+                "quick-feet"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "switcheroo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "pin-missile",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "lick",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "snarl",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 12,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "hone-claws",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 23,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 33,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dark",
+                "normal"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 134,
+    "classification": "rush",
+    "names": {
+        "de": "Geradaks",
+        "en": "Linoone",
+        "es": "Linoone",
+        "fr": "Linéon",
+        "it": "Linoone",
+        "jp": "マッスグマ",
+        "kr": "직구리",
+        "zh": "直冲熊",
+        "zh-CHS": "直冲熊",
+        "zh-CHT": "直衝熊"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "potion",
+        "rare": "max-revive"
+    },
+    "capture-rate": 90,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 2,
+        "experience": 147
+    }
+}

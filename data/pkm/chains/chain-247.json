@@ -1,0 +1,16 @@
+{
+    "ids": [
+        494
+    ],
+    "chains": [
+        {
+            "targets": {
+                "494-victini": {
+                    "pokemon": 494,
+                    "form": "victini"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

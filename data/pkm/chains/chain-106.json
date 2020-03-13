@@ -1,0 +1,16 @@
+{
+    "ids": [
+        213
+    ],
+    "chains": [
+        {
+            "targets": {
+                "213-shuckle": {
+                    "pokemon": 213,
+                    "form": "shuckle"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

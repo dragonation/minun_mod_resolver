@@ -1,0 +1,57 @@
+{
+    "ids": [
+        147,
+        148,
+        149
+    ],
+    "chains": [
+        {
+            "targets": {
+                "147-dratini": {
+                    "pokemon": 147,
+                    "form": "dratini"
+                },
+                "148-dragonair": {
+                    "pokemon": 148,
+                    "form": "dragonair"
+                },
+                "149-dragonite": {
+                    "pokemon": 149,
+                    "form": "dragonite"
+                }
+            },
+            "changes": {
+                "147-dratini > 148-dragonair": {
+                    "targets": [
+                        "147-dratini",
+                        "148-dragonair"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                },
+                "148-dragonair > 149-dragonite": {
+                    "targets": [
+                        "148-dragonair",
+                        "149-dragonite"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                55
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

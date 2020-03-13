@@ -1,0 +1,48 @@
+{
+    "ids": [
+        125,
+        239,
+        466
+    ],
+    "chains": [
+        {
+            "targets": {
+                "239-elekid": {
+                    "pokemon": 239,
+                    "form": "elekid"
+                },
+                "125-electabuzz": {
+                    "pokemon": 125,
+                    "form": "electabuzz"
+                },
+                "466-electivire": {
+                    "pokemon": 466,
+                    "form": "electivire"
+                }
+            },
+            "changes": {
+                "239-elekid > 125-electabuzz": {
+                    "targets": [
+                        "239-elekid",
+                        "125-electabuzz"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                },
+                "125-electabuzz > 466-electivire": {
+                    "targets": [
+                        "125-electabuzz",
+                        "466-electivire"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

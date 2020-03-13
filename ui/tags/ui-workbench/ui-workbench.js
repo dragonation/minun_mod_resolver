@@ -43,7 +43,7 @@ module.exports = {
             if (Workbench.functors) {
                 for (let key in Workbench.functors) {
                     functors[key] = (function (template, call, parameters, options) {
-                        return Workbench.functors[key].apply(this.window, Array.prototype.slice.call(arguments, 4));
+                        return Workbench.functors[key].apply(this.workbench, Array.prototype.slice.call(arguments, 4));
                     }).bind(this);
                 }
             }
@@ -52,7 +52,7 @@ module.exports = {
                 "functors": functors
             });
 
-            filler.render(this.filler.query("#ui-window-clients"));
+            filler.render(this.filler.query("#ui-workbench-container"));
 
             this.workbench = new Workbench(this, filler);
 
@@ -100,7 +100,7 @@ module.exports = {
 
             if ($(this).attr("just-hide-when-close") !== "yes") {
                 $.delay(500, () => {
-                    that.detach();
+                    $(this).detach();
                 });
             }
 

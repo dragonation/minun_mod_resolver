@@ -1,0 +1,163 @@
+{
+    "id": 231,
+    "name": "Phanpy",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "As a sign of affection, it bumps with its snout. However, it is so strong, it may send you flying.",
+        "It is strong despite its compact size. It can easily pick up and carry an adult human on its back."
+    ],
+    "forms": {
+        "phanpy": {
+            "id": "phanpy",
+            "name": "Phanpy",
+            "shape": "quadruped",
+            "abilities": [
+                "pickup"
+            ],
+            "weight": 33.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 60,
+                "defense": 60,
+                "special-attack": 40,
+                "special-defense": 40,
+                "speed": 40
+            },
+            "hidden-abilities": [
+                "sand-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 15,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 28,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 33,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "last-resort",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 118,
+    "classification": "long-nose",
+    "names": {
+        "de": "Phanpy",
+        "en": "Phanpy",
+        "es": "Phanpy",
+        "fr": "Phanpy",
+        "it": "Phanpy",
+        "jp": "ゴマゾウ",
+        "kr": "코코리",
+        "zh": "小小象",
+        "zh-CHS": "小小象",
+        "zh-CHT": "小小象"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 120,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 66
+    }
+}

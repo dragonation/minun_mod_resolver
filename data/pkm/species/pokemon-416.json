@@ -1,0 +1,220 @@
+{
+    "id": 416,
+    "name": "Vespiquen",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It skillfully commands its grubs in battles with its enemies. The grubs are willing to risk their lives to defend Vespiquen.",
+        "Vespiquen that give off more pheromones have larger swarms of Combee attendants."
+    ],
+    "forms": {
+        "vespiquen": {
+            "id": "vespiquen",
+            "name": "Vespiquen",
+            "shape": "more-wings",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 38.5,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 80,
+                "defense": 102,
+                "special-attack": 80,
+                "special-defense": 102,
+                "speed": 40
+            },
+            "hidden-abilities": [
+                "unnerve"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "poison-sting",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 8,
+                    "name": "aromatic-mist",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "fell-stinger",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 20,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 24,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 32,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 40,
+                    "name": "attack-order",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "defend-order",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 213,
+    "classification": "beehive",
+    "names": {
+        "de": "Honweisel",
+        "en": "Vespiquen",
+        "es": "Vespiquen",
+        "fr": "Apireine",
+        "it": "Vespiquen",
+        "jp": "ビークイン",
+        "kr": "비퀸",
+        "zh": "蜂女王",
+        "zh-CHS": "蜂女王",
+        "zh-CHT": "蜂女王"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "0/8",
+    "holdings": {
+        "rare": "poison-barb"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 166
+    }
+}

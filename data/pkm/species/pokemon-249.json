@@ -1,0 +1,186 @@
+{
+    "id": 249,
+    "name": "Lugia",
+    "experiences-type": "slow",
+    "texts": [
+        "It sleeps in a deep-sea trench. If it flaps its wings, it is said to cause a 40-day storm.",
+        "It is said to be the guardian of the seas. It is rumored to have been seen on the night of a storm."
+    ],
+    "forms": {
+        "lugia": {
+            "id": "lugia",
+            "name": "Lugia",
+            "shape": "two-wings",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 216,
+            "height": 5.2,
+            "base-stats": {
+                "health-points": 106,
+                "attack": 90,
+                "defense": 130,
+                "special-attack": 90,
+                "special-defense": 154,
+                "speed": 110
+            },
+            "hidden-abilities": [
+                "multiscale"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "whirlwind",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "weather-ball",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "dragon-rush",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 75
+                },
+                {
+                    "level": 23,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 43,
+                    "name": "aeroblast",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 95
+                },
+                {
+                    "level": 50,
+                    "name": "punishment",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 65,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 71,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 79,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 85,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 93,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 99,
+                    "name": "sky-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "psychic",
+                "flying"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 127,
+    "classification": "diving",
+    "names": {
+        "de": "Lugia",
+        "en": "Lugia",
+        "es": "Lugia",
+        "fr": "Lugia",
+        "it": "Lugia",
+        "jp": "ルギア",
+        "kr": "루기아",
+        "zh": "洛奇亚",
+        "zh-CHS": "洛奇亚",
+        "zh-CHT": "洛奇亞"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 3,
+        "speed": 0,
+        "experience": 306
+    }
+}

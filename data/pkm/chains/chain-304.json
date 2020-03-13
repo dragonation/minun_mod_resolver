@@ -1,0 +1,37 @@
+{
+    "ids": [
+        616,
+        617
+    ],
+    "chains": [
+        {
+            "targets": {
+                "616-shelmet": {
+                    "pokemon": 616,
+                    "form": "shelmet"
+                },
+                "617-accelgor": {
+                    "pokemon": 617,
+                    "form": "accelgor"
+                }
+            },
+            "changes": {
+                "616-shelmet > 617-accelgor": {
+                    "targets": [
+                        "616-shelmet",
+                        "617-accelgor"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": [
+                                "karrablast"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        590,
+        591
+    ],
+    "chains": [
+        {
+            "targets": {
+                "590-foongus": {
+                    "pokemon": 590,
+                    "form": "foongus"
+                },
+                "591-amoonguss": {
+                    "pokemon": 591,
+                    "form": "amoonguss"
+                }
+            },
+            "changes": {
+                "590-foongus > 591-amoonguss": {
+                    "targets": [
+                        "590-foongus",
+                        "591-amoonguss"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                39
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

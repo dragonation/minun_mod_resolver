@@ -1,0 +1,167 @@
+{
+    "id": 327,
+    "name": "Spinda",
+    "experiences-type": "fast",
+    "texts": [
+        "Its steps are shaky and stumbling. Walking for a long time makes it feel sick.",
+        "Each Spinda's spot pattern is different. With its stumbling movements, it evades opponents' attacks brilliantly!"
+    ],
+    "forms": {
+        "spinda": {
+            "id": "spinda",
+            "name": "Spinda",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "own-tempo",
+                "tangled-feet"
+            ],
+            "weight": 5,
+            "height": 1.1,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 60,
+                "defense": 60,
+                "special-attack": 60,
+                "special-defense": 60,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "contrary"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "copycat",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 14,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 23,
+                    "name": "dizzy-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "teeter-dance",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "uproar",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 165,
+    "classification": "spot-panda",
+    "names": {
+        "de": "Pandir",
+        "en": "Spinda",
+        "es": "Spinda",
+        "fr": "Spinda",
+        "it": "Spinda",
+        "jp": "パッチール",
+        "kr": "얼루기",
+        "zh": "晃晃斑",
+        "zh-CHS": "晃晃斑",
+        "zh-CHT": "晃晃斑"
+    },
+    "species": [
+        "field",
+        "creature"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 126
+    }
+}

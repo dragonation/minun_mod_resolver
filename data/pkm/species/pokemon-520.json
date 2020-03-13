@@ -1,0 +1,164 @@
+{
+    "id": 520,
+    "name": "Tranquill",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It can fly moderately quickly. No matter how far it travels, it can always find its way back to its master and its nest.",
+        "These bright Pokémon have acute memories. Apparently delivery workers often choose them as their partners."
+    ],
+    "forms": {
+        "tranquill": {
+            "id": "tranquill",
+            "name": "Tranquill",
+            "shape": "two-wings",
+            "abilities": [
+                "big-pecks",
+                "super-luck"
+            ],
+            "weight": 15,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 62,
+                "attack": 77,
+                "defense": 62,
+                "special-attack": 50,
+                "special-defense": 42,
+                "speed": 65
+            },
+            "hidden-abilities": [
+                "rivalry"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "air-cutter",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 20,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 26,
+                    "name": "feather-dance",
+                    "type": "flying",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 44,
+                    "name": "roost",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "tailwind",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 56,
+                    "name": "sky-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "normal",
+                "flying"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 258,
+    "classification": "wild-pigeon",
+    "names": {
+        "de": "Navitaub",
+        "en": "Tranquill",
+        "es": "Tranquill",
+        "fr": "Colombeau",
+        "it": "Tranquill",
+        "jp": "ハトーボー",
+        "kr": "유토브",
+        "zh": "咕咕鸽",
+        "zh-CHS": "咕咕鸽",
+        "zh-CHT": "咕咕鴿"
+    },
+    "species": [
+        "flying"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 120,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 125
+    }
+}

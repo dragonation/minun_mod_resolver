@@ -1,0 +1,37 @@
+{
+    "ids": [
+        522,
+        523
+    ],
+    "chains": [
+        {
+            "targets": {
+                "522-blitzle": {
+                    "pokemon": 522,
+                    "form": "blitzle"
+                },
+                "523-zebstrika": {
+                    "pokemon": 523,
+                    "form": "zebstrika"
+                }
+            },
+            "changes": {
+                "522-blitzle > 523-zebstrika": {
+                    "targets": [
+                        "522-blitzle",
+                        "523-zebstrika"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                27
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

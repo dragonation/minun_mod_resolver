@@ -1,0 +1,37 @@
+{
+    "ids": [
+        688,
+        689
+    ],
+    "chains": [
+        {
+            "targets": {
+                "688-binacle": {
+                    "pokemon": 688,
+                    "form": "binacle"
+                },
+                "689-barbaracle": {
+                    "pokemon": 689,
+                    "form": "barbaracle"
+                }
+            },
+            "changes": {
+                "688-binacle > 689-barbaracle": {
+                    "targets": [
+                        "688-binacle",
+                        "689-barbaracle"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                39
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

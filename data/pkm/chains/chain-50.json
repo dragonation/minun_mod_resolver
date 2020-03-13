@@ -1,0 +1,49 @@
+{
+    "ids": [
+        113,
+        242,
+        440
+    ],
+    "chains": [
+        {
+            "targets": {
+                "440-happiny": {
+                    "pokemon": 440,
+                    "form": "happiny"
+                },
+                "113-chansey": {
+                    "pokemon": 113,
+                    "form": "chansey"
+                },
+                "242-blissey": {
+                    "pokemon": 242,
+                    "form": "blissey"
+                }
+            },
+            "changes": {
+                "440-happiny > 113-chansey": {
+                    "targets": [
+                        "440-happiny",
+                        "113-chansey"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                },
+                "113-chansey > 242-blissey": {
+                    "targets": [
+                        "113-chansey",
+                        "242-blissey"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

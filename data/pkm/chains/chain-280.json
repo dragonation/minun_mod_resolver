@@ -1,0 +1,37 @@
+{
+    "ids": [
+        564,
+        565
+    ],
+    "chains": [
+        {
+            "targets": {
+                "564-tirtouga": {
+                    "pokemon": 564,
+                    "form": "tirtouga"
+                },
+                "565-carracosta": {
+                    "pokemon": 565,
+                    "form": "carracosta"
+                }
+            },
+            "changes": {
+                "564-tirtouga > 565-carracosta": {
+                    "targets": [
+                        "564-tirtouga",
+                        "565-carracosta"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                37
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

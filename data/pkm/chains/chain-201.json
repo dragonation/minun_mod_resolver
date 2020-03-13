@@ -1,0 +1,16 @@
+{
+    "ids": [
+        385
+    ],
+    "chains": [
+        {
+            "targets": {
+                "385-jirachi": {
+                    "pokemon": 385,
+                    "form": "jirachi"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

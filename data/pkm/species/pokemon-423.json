@@ -1,0 +1,263 @@
+{
+    "id": 423,
+    "name": "Gastrodon",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It secretes a purple fluid to deter enemies. This fluid isn't poisonous—instead, it's super sticky, and once it sticks, it's very hard to unstick.",
+        "Its body is covered in a sticky slime. It's very susceptible to dehydration, so it can't spend too much time on land."
+    ],
+    "forms": {
+        "east-sea-gastrodon": {
+            "id": "east-sea-gastrodon",
+            "name": "East Sea Gastrodon Gastrodon",
+            "shape": "serpentine",
+            "abilities": [
+                "sticky-hold",
+                "storm-drain"
+            ],
+            "weight": 29.9,
+            "height": 0.9,
+            "base-stats": {
+                "health-points": 111,
+                "attack": 83,
+                "defense": 68,
+                "special-attack": 92,
+                "special-defense": 82,
+                "speed": 39
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "muddy-water",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 39,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 53,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water",
+                "ground"
+            ],
+            "color": "blue"
+        },
+        "west-sea-gastrodon": {
+            "id": "west-sea-gastrodon",
+            "name": "West Sea Gastrodon Gastrodon",
+            "shape": "serpentine",
+            "abilities": [
+                "sticky-hold",
+                "storm-drain"
+            ],
+            "weight": 29.9,
+            "height": 0.9,
+            "base-stats": {
+                "health-points": 111,
+                "attack": 83,
+                "defense": 68,
+                "special-attack": 92,
+                "special-defense": 82,
+                "speed": 39
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "muddy-water",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 39,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 53,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water",
+                "ground"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 217,
+    "classification": "sea-slug",
+    "names": {
+        "de": "Gastrodon",
+        "en": "Gastrodon",
+        "es": "Gastrodon",
+        "fr": "Tritosor",
+        "it": "Gastrodon",
+        "jp": "トリトドン",
+        "kr": "트리토돈",
+        "zh": "海兔兽",
+        "zh-CHS": "海兔兽",
+        "zh-CHT": "海兔獸"
+    },
+    "species": [
+        "amphibians",
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 2,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 166
+    }
+}

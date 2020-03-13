@@ -1,0 +1,16 @@
+{
+    "ids": [
+        703
+    ],
+    "chains": [
+        {
+            "targets": {
+                "703-carbink": {
+                    "pokemon": 703,
+                    "form": "carbink"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

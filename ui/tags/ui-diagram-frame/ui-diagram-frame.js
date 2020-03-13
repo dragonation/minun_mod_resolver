@@ -231,6 +231,30 @@ module.exports = {
 
             return points;
 
+        },
+        "closeFrame": function () {
+
+            let that = $(this);
+
+            that.addClass("closing");
+
+            let parent = that.parent()[0];
+            if (parent && parent.updateLayouts) {
+                parent.updateLayouts();
+            }
+
+            if (this.frame.onClose) {
+                try {
+                    this.frame.onClose();
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+
+            $.delay(500, () => {
+                that.detach();
+            });
+
         }
     },
     "functors": {
@@ -346,27 +370,8 @@ module.exports = {
         },
         "closeFrame": function () {
 
-            let that = $(this);
-
-            that.addClass("closing");
-
-            let parent = that.parent()[0];
-            if (parent && parent.updateLayouts) {
-                parent.updateLayouts();
-            }
-
-            if (this.frame.onClose) {
-                try {
-                    this.frame.onClose();
-                } catch (error) {
-                    console.error(error);
-                }
-            }
-
-            $.delay(500, () => {
-                that.detach();
-            });
-
+            this.closeFrame();
+            
         },
         "listActions": function () {
 

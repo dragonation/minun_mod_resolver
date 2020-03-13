@@ -1,0 +1,37 @@
+{
+    "ids": [
+        712,
+        713
+    ],
+    "chains": [
+        {
+            "targets": {
+                "712-bergmite": {
+                    "pokemon": 712,
+                    "form": "bergmite"
+                },
+                "713-avalugg": {
+                    "pokemon": 713,
+                    "form": "avalugg"
+                }
+            },
+            "changes": {
+                "712-bergmite > 713-avalugg": {
+                    "targets": [
+                        "712-bergmite",
+                        "713-avalugg"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                37
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

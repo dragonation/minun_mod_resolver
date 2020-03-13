@@ -1,0 +1,203 @@
+{
+    "id": 675,
+    "name": "Pangoro",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "This Pokémon is quick to anger, and it has no problem using its prodigious strength to get its way. It lives for duels against Obstagoon.",
+        "Using its leaf, Pangoro can predict the moves of its opponents. It strikes with punches that can turn a dump truck into scrap with just one hit."
+    ],
+    "forms": {
+        "pangoro": {
+            "id": "pangoro",
+            "name": "Pangoro",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "iron-fist",
+                "mold-breaker"
+            ],
+            "weight": 136,
+            "height": 2.1,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 124,
+                "defense": 78,
+                "special-attack": 69,
+                "special-defense": 71,
+                "speed": 58
+            },
+            "hidden-abilities": [
+                "scrappy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bullet-punch",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "arm-thrust",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "circle-throw",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": 16,
+                    "name": "low-sweep",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "work-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "vital-throw",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 70
+                },
+                {
+                    "level": 35,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "parting-shot",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 52,
+                    "name": "entrainment",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "fighting",
+                "dark"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 338,
+    "classification": "daunting",
+    "names": {
+        "de": "Pandagro",
+        "en": "Pangoro",
+        "es": "Pangoro",
+        "fr": "Pandarbare",
+        "it": "Pangoro",
+        "jp": "ゴロンダ",
+        "kr": "부란다",
+        "zh": "流氓熊猫",
+        "zh-CHS": "流氓熊猫",
+        "zh-CHT": "流氓熊貓"
+    },
+    "species": [
+        "field",
+        "creature"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "mental-herb"
+    },
+    "capture-rate": 65,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 173
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        283,
+        284
+    ],
+    "chains": [
+        {
+            "targets": {
+                "283-surskit": {
+                    "pokemon": 283,
+                    "form": "surskit"
+                },
+                "284-masquerain": {
+                    "pokemon": 284,
+                    "form": "masquerain"
+                }
+            },
+            "changes": {
+                "283-surskit > 284-masquerain": {
+                    "targets": [
+                        "283-surskit",
+                        "284-masquerain"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                22
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

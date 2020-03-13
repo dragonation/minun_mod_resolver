@@ -1,0 +1,91 @@
+{
+    "ids": [
+        744,
+        745
+    ],
+    "chains": [
+        {
+            "targets": {
+                "744-rockruff": {
+                    "pokemon": 744,
+                    "form": "rockruff"
+                },
+                "745-midday-form": {
+                    "pokemon": 745,
+                    "form": "midday-form"
+                },
+                "745-midnight-form": {
+                    "pokemon": 745,
+                    "form": "midnight-form"
+                }
+            },
+            "changes": {
+                "744-rockruff > 745-midday-form": {
+                    "targets": [
+                        "744-rockruff",
+                        "745-midday-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ],
+                            "time": "day"
+                        }
+                    ]
+                },
+                "744-rockruff > 745-midnight-form": {
+                    "targets": [
+                        "744-rockruff",
+                        "745-midnight-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ],
+                            "time": "night"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "744-rockruff": {
+                    "pokemon": 744,
+                    "form": "rockruff"
+                },
+                "745-dusk-form": {
+                    "pokemon": 745,
+                    "form": "dusk-form"
+                }
+            },
+            "changes": {
+                "744-rockruff > 745-dusk-form": {
+                    "targets": [
+                        "744-rockruff",
+                        "745-dusk-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ],
+                            "time": "dusk",
+                            "abilities": [
+                                "own-tempo"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "ids": [
+        607,
+        608,
+        609
+    ],
+    "chains": [
+        {
+            "targets": {
+                "607-litwick": {
+                    "pokemon": 607,
+                    "form": "litwick"
+                },
+                "608-lampent": {
+                    "pokemon": 608,
+                    "form": "lampent"
+                },
+                "609-chandelure": {
+                    "pokemon": 609,
+                    "form": "chandelure"
+                }
+            },
+            "changes": {
+                "607-litwick > 608-lampent": {
+                    "targets": [
+                        "607-litwick",
+                        "608-lampent"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                41
+                            ]
+                        }
+                    ]
+                },
+                "608-lampent > 609-chandelure": {
+                    "targets": [
+                        "608-lampent",
+                        "609-chandelure"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dusk-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

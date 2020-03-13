@@ -1,0 +1,57 @@
+{
+    "ids": [
+        650,
+        651,
+        652
+    ],
+    "chains": [
+        {
+            "targets": {
+                "650-chespin": {
+                    "pokemon": 650,
+                    "form": "chespin"
+                },
+                "651-quilladin": {
+                    "pokemon": 651,
+                    "form": "quilladin"
+                },
+                "652-chesnaught": {
+                    "pokemon": 652,
+                    "form": "chesnaught"
+                }
+            },
+            "changes": {
+                "650-chespin > 651-quilladin": {
+                    "targets": [
+                        "650-chespin",
+                        "651-quilladin"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "651-quilladin > 652-chesnaught": {
+                    "targets": [
+                        "651-quilladin",
+                        "652-chesnaught"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

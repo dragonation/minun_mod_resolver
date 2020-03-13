@@ -1,0 +1,166 @@
+{
+    "id": 30,
+    "name": "Nidorina",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "The female has a gentle temperament. It emits ultrasonic cries that have the power to befuddle foes.",
+        "When feeding its young, it first chews the food into a paste, then spits it out for the offspring."
+    ],
+    "forms": {
+        "nidorina": {
+            "id": "nidorina",
+            "name": "Nidorina",
+            "shape": "quadruped",
+            "abilities": [
+                "poison-point",
+                "rivalry"
+            ],
+            "weight": 20,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 62,
+                "defense": 67,
+                "special-attack": 55,
+                "special-defense": 55,
+                "speed": 56
+            },
+            "hidden-abilities": [
+                "hustle"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "double-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "poison-sting",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 23,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "toxic-spikes",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "flatter",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "poison-fang",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "poison"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 12,
+    "classification": "poison-pin",
+    "names": {
+        "de": "Nidorina",
+        "en": "Nidorina",
+        "es": "Nidorina",
+        "fr": "Nidorina",
+        "it": "Nidorina",
+        "jp": "ニドリーナ",
+        "kr": "니드리나",
+        "zh": "尼多娜",
+        "zh-CHS": "尼多娜",
+        "zh-CHT": "尼多娜"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "0/8",
+    "holdings": {},
+    "capture-rate": 120,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 2,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 128
+    }
+}

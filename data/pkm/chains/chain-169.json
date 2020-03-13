@@ -1,0 +1,16 @@
+{
+    "ids": [
+        335
+    ],
+    "chains": [
+        {
+            "targets": {
+                "335-zangoose": {
+                    "pokemon": 335,
+                    "form": "zangoose"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

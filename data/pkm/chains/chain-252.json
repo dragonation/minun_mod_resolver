@@ -1,0 +1,57 @@
+{
+    "ids": [
+        506,
+        507,
+        508
+    ],
+    "chains": [
+        {
+            "targets": {
+                "506-lillipup": {
+                    "pokemon": 506,
+                    "form": "lillipup"
+                },
+                "507-herdier": {
+                    "pokemon": 507,
+                    "form": "herdier"
+                },
+                "508-stoutland": {
+                    "pokemon": 508,
+                    "form": "stoutland"
+                }
+            },
+            "changes": {
+                "506-lillipup > 507-herdier": {
+                    "targets": [
+                        "506-lillipup",
+                        "507-herdier"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "507-herdier > 508-stoutland": {
+                    "targets": [
+                        "507-herdier",
+                        "508-stoutland"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -296,7 +296,8 @@ const syncFrustumCulled = function (dom, value) {
 
     if (!dom.m3dObject) { return; }
 
-    dom.m3dObject.frustomCulled = (value !== "no");
+    dom.m3dObject.frustumCulled = (value !== "no");
+    
 };
 
 const getPlayingAnimations = function (dom) {
@@ -452,6 +453,20 @@ module.exports = {
         },
         "updatePlayingM3DClipStates": function () {
             this.m3dObject.updatePatchedPlayingAnimationsStates();
+        },
+        "getM3DClip": function (id) {
+
+            let clip = $(this).find(`m3d-clip#${id}`)[0];
+            if (!clip) {
+                return undefined;
+            }
+
+            return {
+                "name": id,
+                "fps": parseFloat($(clip).attr("fps")),
+                "duration": parseFloat($(clip).attr("duration")),
+            };
+
         }
     }
 };

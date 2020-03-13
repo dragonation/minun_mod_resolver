@@ -1,0 +1,159 @@
+{
+    "id": 843,
+    "name": "Silicobra",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "As it digs, it swallows sand and stores it in its neck pouch. The pouch can hold more than 17 pounds of sand.",
+        "It spews sand from its nostrils. While the enemy is blinded, it burrows into the ground to hide."
+    ],
+    "forms": {
+        "silicobra": {
+            "id": "silicobra",
+            "name": "Silicobra",
+            "shape": "serpentine",
+            "abilities": [
+                "sand-spit",
+                "shed-skin"
+            ],
+            "weight": 7.6,
+            "height": 2.2,
+            "base-stats": {
+                "health-points": 52,
+                "attack": 57,
+                "defense": 75,
+                "special-attack": 35,
+                "special-defense": 50,
+                "speed": 46
+            },
+            "hidden-abilities": [
+                "sand-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "minimize",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "brutal-swing",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "glare",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 45,
+                    "name": "coil",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "sand-tomb",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 434,
+    "classification": "sand-snake",
+    "names": {
+        "de": "Salanga",
+        "en": "Silicobra",
+        "es": "Silicobra",
+        "fr": "Dunaja",
+        "it": "Silicobra",
+        "jp": "スナヘビ",
+        "kr": "모래뱀",
+        "zh": "沙包蛇",
+        "zh-CHS": "沙包蛇",
+        "zh-CHT": "沙包蛇"
+    },
+    "species": [
+        "field",
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 20,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 63
+    }
+}

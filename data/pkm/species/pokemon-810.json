@@ -1,0 +1,154 @@
+{
+    "id": 810,
+    "name": "Grookey",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "When it uses its special stick to strike up a beat, the sound waves produced carry revitalizing energy to the plants and flowers in the area.",
+        "It attacks with rapid beats of its stick. As it strikes with amazing speed, it gets more and more pumped."
+    ],
+    "forms": {
+        "grookey": {
+            "id": "grookey",
+            "name": "Grookey",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "overgrow"
+            ],
+            "weight": 5,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 65,
+                "defense": 50,
+                "special-attack": 40,
+                "special-defense": 40,
+                "speed": 65
+            },
+            "hidden-abilities": [
+                "grassy-surge"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "branch-poke",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 17,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 28,
+                    "name": "uproar",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "wood-hammer",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 421,
+    "classification": "chimp",
+    "names": {
+        "de": "Chimpep",
+        "en": "Grookey",
+        "es": "Grookey",
+        "fr": "Ouistempo",
+        "it": "Grookey",
+        "jp": "サルノリ",
+        "kr": "흥나숭",
+        "zh": "敲音猴",
+        "zh-CHS": "敲音猴",
+        "zh-CHT": "敲音猴"
+    },
+    "species": [
+        "field",
+        "plant"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 20,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 62
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "ids": [
+        92,
+        93,
+        94
+    ],
+    "chains": [
+        {
+            "targets": {
+                "92-gastly": {
+                    "pokemon": 92,
+                    "form": "gastly"
+                },
+                "93-haunter": {
+                    "pokemon": 93,
+                    "form": "haunter"
+                },
+                "94-gengar": {
+                    "pokemon": 94,
+                    "form": "gengar"
+                }
+            },
+            "changes": {
+                "92-gastly > 93-haunter": {
+                    "targets": [
+                        "92-gastly",
+                        "93-haunter"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                },
+                "93-haunter > 94-gengar": {
+                    "targets": [
+                        "93-haunter",
+                        "94-gengar"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

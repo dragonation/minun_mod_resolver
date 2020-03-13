@@ -113,6 +113,7 @@ const prepareMesh = function (dom) {
         syncMaterials(dom, $(dom).attr("materials"));
         syncSkeleton(dom, $(dom).attr("skeleton"));
         syncAttributes(dom, $(dom).attr("attributes"));
+        syncFrustumCulled(dom, $(dom).attr("frustum-culled"));
 
     }
 
@@ -302,6 +303,14 @@ const syncExtra = function (dom, value) {
 
 };
 
+const syncFrustumCulled = function (dom, value) {
+
+    if (!dom.m3dMesh) { return; }
+
+    dom.m3dMesh.frustumCulled = (value !== "no");
+    
+};
+
 const syncAttributes = function (dom, attributes) {
 
     if (!dom.m3dMesh) { return; }
@@ -384,6 +393,7 @@ module.exports = {
         "skeleton",
         "materials",
         "indices",
+        "frustum-culled",
         "vertices", "vertex-unit-size",
         "normals", "normal-unit-size",
         "tangents", "tangent-unit-size",
@@ -404,6 +414,7 @@ module.exports = {
         },
         "onupdated": function (name, value) {
             switch (name) {
+                case "frustum-culled": { syncFrustumCulled(this, value); break; };
                 case "materials": { syncMaterials(this, value); break; };
                 case "indices": 
                 case "vertices": 

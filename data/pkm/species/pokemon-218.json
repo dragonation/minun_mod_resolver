@@ -1,0 +1,189 @@
+{
+    "id": 218,
+    "name": "Slugma",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "A common sight in volcanic areas, it slowly slithers around in a constant search for warm places.",
+        "Its body is made of magma. If it doesn't keep moving, its body will cool and harden."
+    ],
+    "forms": {
+        "slugma": {
+            "id": "slugma",
+            "name": "Slugma",
+            "shape": "serpentine",
+            "abilities": [
+                "magma-armor",
+                "flame-body"
+            ],
+            "weight": 35,
+            "height": 0.7,
+            "base-stats": {
+                "health-points": 40,
+                "attack": 40,
+                "defense": 40,
+                "special-attack": 70,
+                "special-defense": 40,
+                "speed": 20
+            },
+            "hidden-abilities": [
+                "weak-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 30,
+                    "accuracy": 70
+                },
+                {
+                    "level": 6,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 13,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "incinerate",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "clear-smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 50
+                },
+                {
+                    "level": 22,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "flame-burst",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 34,
+                    "name": "lava-plume",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 41,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 110,
+    "classification": "lava",
+    "names": {
+        "de": "Schneckmag",
+        "en": "Slugma",
+        "es": "Slugma",
+        "fr": "Limagma",
+        "it": "Slugma",
+        "jp": "マグマッグ",
+        "kr": "마그마그",
+        "zh": "熔岩虫",
+        "zh-CHS": "熔岩虫",
+        "zh-CHT": "熔岩蟲"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 50
+    }
+}

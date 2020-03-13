@@ -1,0 +1,228 @@
+{
+    "id": 505,
+    "name": "Watchog",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Using luminescent matter, it makes its eyes and body glow and stuns attacking opponents.",
+        "When they see an enemy, their tails stand high, and they spit the seeds of berries stored in their cheek pouches."
+    ],
+    "forms": {
+        "watchog": {
+            "id": "watchog",
+            "name": "Watchog",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "illuminate",
+                "keen-eye"
+            ],
+            "weight": 27,
+            "height": 1.1,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 85,
+                "defense": 69,
+                "special-attack": 60,
+                "special-defense": 69,
+                "speed": 77
+            },
+            "hidden-abilities": [
+                "analytic"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rototiller",
+                    "type": "ground",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "low-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "bide",
+                    "type": "normal",
+                    "category": "physical"
+                },
+                {
+                    "level": 11,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 13,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 22,
+                    "name": "super-fang",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 90
+                },
+                {
+                    "level": 25,
+                    "name": "after-you",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "hyper-fang",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 39,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 251,
+    "classification": "lookout",
+    "names": {
+        "de": "Kukmarda",
+        "en": "Watchog",
+        "es": "Watchog",
+        "fr": "Miradar",
+        "it": "Watchog",
+        "jp": "ミルホッグ",
+        "kr": "보르그",
+        "zh": "步哨鼠",
+        "zh-CHS": "步哨鼠",
+        "zh-CHT": "步哨鼠"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 147
+    }
+}

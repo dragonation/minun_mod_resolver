@@ -1,0 +1,37 @@
+{
+    "ids": [
+        118,
+        119
+    ],
+    "chains": [
+        {
+            "targets": {
+                "118-goldeen": {
+                    "pokemon": 118,
+                    "form": "goldeen"
+                },
+                "119-seaking": {
+                    "pokemon": 119,
+                    "form": "seaking"
+                }
+            },
+            "changes": {
+                "118-goldeen > 119-seaking": {
+                    "targets": [
+                        "118-goldeen",
+                        "119-seaking"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                33
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

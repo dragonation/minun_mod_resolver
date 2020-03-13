@@ -1,0 +1,198 @@
+{
+    "id": 437,
+    "name": "Bronzong",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Some believe it to be a deity that summons rain clouds. When angered, it lets out a warning cry that rings out like the tolling of a bell.",
+        "Many scientists suspect that this Pokémon originated outside the Galar region, based on the patterns on its body."
+    ],
+    "forms": {
+        "bronzong": {
+            "id": "bronzong",
+            "name": "Bronzong",
+            "shape": "head-arms",
+            "abilities": [
+                "levitate",
+                "heatproof"
+            ],
+            "weight": 187,
+            "height": 1.3,
+            "base-stats": {
+                "health-points": 67,
+                "attack": 89,
+                "defense": 116,
+                "special-attack": 79,
+                "special-defense": 116,
+                "speed": 33
+            },
+            "hidden-abilities": [
+                "heavy-metal"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "block",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "weather-ball",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "block",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "gyro-ball",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 24,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 50,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "steel",
+                "psychic"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 222,
+    "classification": "bronze-bell",
+    "names": {
+        "de": "Bronzong",
+        "en": "Bronzong",
+        "es": "Bronzong",
+        "fr": "Archéodong",
+        "it": "Bronzong",
+        "jp": "ドータクン",
+        "kr": "동탁군",
+        "zh": "青铜钟",
+        "zh-CHS": "青铜钟",
+        "zh-CHT": "青銅鐘"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {
+        "rare": "metal-coat"
+    },
+    "capture-rate": 90,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 175
+    }
+}

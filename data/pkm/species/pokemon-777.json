@@ -1,0 +1,176 @@
+{
+    "id": 777,
+    "name": "Togedemaru",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "With the long hairs on its back, this Pokémon takes in electricity from other electric Pokémon. It stores what it absorbs in an electric sac.",
+        "When it's in trouble, it curls up into a ball, makes its fur spikes stand on end, and then discharges electricity indiscriminately."
+    ],
+    "forms": {
+        "togedemaru": {
+            "id": "togedemaru",
+            "name": "Togedemaru",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "iron-barbs",
+                "lightning-rod"
+            ],
+            "weight": 3.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 98,
+                "defense": 63,
+                "special-attack": 40,
+                "special-defense": 73,
+                "speed": 96
+            },
+            "hidden-abilities": [
+                "sturdy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "nuzzle",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "fell-stinger",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "pin-missile",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 95
+                },
+                {
+                    "level": 35,
+                    "name": "magnet-rise",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "zing-zap",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "electric-terrain",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "wild-charge",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "spiky-shield",
+                    "type": "grass",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "electric",
+                "steel"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 395,
+    "classification": "roly-poly",
+    "names": {
+        "de": "Togedemaru",
+        "en": "Togedemaru",
+        "es": "Togedemaru",
+        "fr": "Togedemaru",
+        "it": "Togedemaru",
+        "jp": "トゲデマル",
+        "kr": "토게데마루",
+        "zh": "托戈德玛尔",
+        "zh-CHS": "托戈德玛尔",
+        "zh-CHT": ""
+    },
+    "species": [
+        "field",
+        "fairy"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "electric-seed"
+    },
+    "capture-rate": 180,
+    "hatching-cycles": 11,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 152
+    }
+}

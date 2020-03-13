@@ -1,0 +1,57 @@
+{
+    "ids": [
+        543,
+        544,
+        545
+    ],
+    "chains": [
+        {
+            "targets": {
+                "543-venipede": {
+                    "pokemon": 543,
+                    "form": "venipede"
+                },
+                "544-whirlipede": {
+                    "pokemon": 544,
+                    "form": "whirlipede"
+                },
+                "545-scolipede": {
+                    "pokemon": 545,
+                    "form": "scolipede"
+                }
+            },
+            "changes": {
+                "543-venipede > 544-whirlipede": {
+                    "targets": [
+                        "543-venipede",
+                        "544-whirlipede"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "544-whirlipede > 545-scolipede": {
+                    "targets": [
+                        "544-whirlipede",
+                        "545-scolipede"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "ids": [
+        708,
+        709
+    ],
+    "chains": [
+        {
+            "targets": {
+                "708-phantump": {
+                    "pokemon": 708,
+                    "form": "phantump"
+                },
+                "709-trevenant": {
+                    "pokemon": 709,
+                    "form": "trevenant"
+                }
+            },
+            "changes": {
+                "708-phantump > 709-trevenant": {
+                    "targets": [
+                        "708-phantump",
+                        "709-trevenant"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -507,7 +507,7 @@ const interpolateBoneTransform = function (animation, transform, property, rootB
         }
 
         ["x", "y", "z"].forEach((axis) => {
-            if (frames[0].hasOwnProperty(axis)) {
+            if (frames[0] && frames[0].hasOwnProperty(axis)) {
                 animation.tracks.bones[bone][`${single}.${axis}`] = {
                     "type": "number",
                     "constant": track[axis].constant,
@@ -596,7 +596,7 @@ const interpolateTextureTransform = function (animation, transform, property) {
         }
 
         keys.forEach((axis) => {
-            if (frames[0].hasOwnProperty(axis)) {
+            if (frames[0] && frames[0].hasOwnProperty(axis)) {
                 let scale = 1;
                 if (property === "translations") {
                     scale = -1;
@@ -1721,7 +1721,7 @@ Model.interpolateJSONAnimation = function (json, rootBoneName) {
     }
 
     const newFPS = Motion.FPS * interpolationTimes;
-    const frames = Math.round(json.frames * interpolationTimes) - 1;
+    const frames = Math.round(json.frames * interpolationTimes);
 
     let times = [];
     for (let looper = 0; looper < frames; ++looper) {

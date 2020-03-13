@@ -1,0 +1,192 @@
+{
+    "id": 348,
+    "name": "Armaldo",
+    "experiences-type": "erratic",
+    "texts": [
+        "It lived on land and went out into the sea to hunt for prey. Its sharp claws were its greatest weapon.",
+        "Armaldo adapted from living in water to living on land. It has been determined that it is the ancestor of some bug Pokémon."
+    ],
+    "forms": {
+        "armaldo": {
+            "id": "armaldo",
+            "name": "Armaldo",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "battle-armor"
+            ],
+            "weight": 68.2,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 125,
+                "defense": 100,
+                "special-attack": 70,
+                "special-defense": 80,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "swift-swim"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "harden",
+                    "category": "normal"
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "mud sport",
+                    "category": "ground"
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "scratch",
+                    "category": "normal",
+                    "accuracy": 40
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "water gun",
+                    "category": "water",
+                    "accuracy": 40
+                },
+                {
+                    "level": 4,
+                    "name": "0044",
+                    "type": "mud sport",
+                    "category": "ground"
+                },
+                {
+                    "level": 7,
+                    "name": "0077",
+                    "type": "water gun",
+                    "category": "water",
+                    "accuracy": 40
+                },
+                {
+                    "level": 10,
+                    "name": "01010",
+                    "type": "fury cutter",
+                    "category": "bug",
+                    "accuracy": 40
+                },
+                {
+                    "level": 13,
+                    "name": "01313",
+                    "type": "smack down",
+                    "category": "rock",
+                    "accuracy": 50
+                },
+                {
+                    "level": 17,
+                    "name": "01717",
+                    "type": "metal claw",
+                    "category": "steel",
+                    "accuracy": 50
+                },
+                {
+                    "level": 21,
+                    "name": "02121",
+                    "type": "ancient power",
+                    "category": "rock",
+                    "accuracy": 60
+                },
+                {
+                    "level": null,
+                    "name": "02525",
+                    "type": "bug bite",
+                    "category": "bug",
+                    "accuracy": 60
+                },
+                {
+                    "level": 25,
+                    "name": "n/an/a",
+                    "type": "slash",
+                    "category": "normal",
+                    "accuracy": 70
+                },
+                {
+                    "level": 29,
+                    "name": "02929",
+                    "type": "brine",
+                    "category": "water",
+                    "accuracy": 65
+                },
+                {
+                    "level": 34,
+                    "name": "03434",
+                    "type": "slash",
+                    "category": "normal",
+                    "accuracy": 70
+                },
+                {
+                    "level": 39,
+                    "name": "03939",
+                    "type": "crush claw",
+                    "category": "normal",
+                    "accuracy": 75
+                },
+                {
+                    "level": 46,
+                    "name": "04646",
+                    "type": "x-scissor",
+                    "category": "bug",
+                    "accuracy": 80
+                },
+                {
+                    "level": 53,
+                    "name": "05353",
+                    "type": "protect",
+                    "category": "normal"
+                },
+                {
+                    "level": 61,
+                    "name": "06161",
+                    "type": "rock blast",
+                    "category": "rock",
+                    "accuracy": 25
+                }
+            ],
+            "types": [
+                "rock",
+                "bug"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 177,
+    "classification": "plate",
+    "names": {
+        "de": "Armaldo",
+        "en": "Armaldo",
+        "es": "Armaldo",
+        "fr": "Armaldo",
+        "it": "Armaldo",
+        "jp": "アーマルド",
+        "kr": "아말도",
+        "zh": "太古盔甲",
+        "zh-CHS": "太古盔甲",
+        "zh-CHT": "太古盔甲"
+    },
+    "species": [
+        "aquatic"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 173
+    }
+}

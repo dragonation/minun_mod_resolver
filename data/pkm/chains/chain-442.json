@@ -1,0 +1,57 @@
+{
+    "ids": [
+        859,
+        860,
+        861
+    ],
+    "chains": [
+        {
+            "targets": {
+                "859-impidimp": {
+                    "pokemon": 859,
+                    "form": "impidimp"
+                },
+                "860-morgrem": {
+                    "pokemon": 860,
+                    "form": "morgrem"
+                },
+                "861-grimmsnarl": {
+                    "pokemon": 861,
+                    "form": "grimmsnarl"
+                }
+            },
+            "changes": {
+                "859-impidimp > 860-morgrem": {
+                    "targets": [
+                        "859-impidimp",
+                        "860-morgrem"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                },
+                "860-morgrem > 861-grimmsnarl": {
+                    "targets": [
+                        "860-morgrem",
+                        "861-grimmsnarl"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                42
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

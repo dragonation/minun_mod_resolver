@@ -1,0 +1,159 @@
+{
+    "ids": [
+        412,
+        413,
+        414
+    ],
+    "chains": [
+        {
+            "targets": {
+                "412-plant-cloak": {
+                    "pokemon": 412,
+                    "form": "plant-cloak"
+                },
+                "413-plant-cloak": {
+                    "pokemon": 413,
+                    "form": "plant-cloak"
+                },
+                "414-mothim": {
+                    "pokemon": 414,
+                    "form": "mothim"
+                }
+            },
+            "changes": {
+                "412-plant-cloak > 413-plant-cloak": {
+                    "targets": [
+                        "412-plant-cloak",
+                        "413-plant-cloak"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ],
+                            "gender": "female"
+                        }
+                    ]
+                },
+                "412-plant-cloak > 414-mothim": {
+                    "targets": [
+                        "412-plant-cloak",
+                        "414-mothim"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ],
+                            "gender": "male"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "412-sandy-cloak": {
+                    "pokemon": 412,
+                    "form": "sandy-cloak"
+                },
+                "413-sandy-cloak": {
+                    "pokemon": 413,
+                    "form": "sandy-cloak"
+                },
+                "414-mothim": {
+                    "pokemon": 414,
+                    "form": "mothim"
+                }
+            },
+            "changes": {
+                "412-sandy-cloak > 413-sandy-cloak": {
+                    "targets": [
+                        "412-sandy-cloak",
+                        "413-sandy-cloak"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ],
+                            "gender": "female"
+                        }
+                    ]
+                },
+                "412-sandy-cloak > 414-mothim": {
+                    "targets": [
+                        "412-sandy-cloak",
+                        "414-mothim"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ],
+                            "gender": "male"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "412-trash-cloak": {
+                    "pokemon": 412,
+                    "form": "trash-cloak"
+                },
+                "413-trash-cloak": {
+                    "pokemon": 413,
+                    "form": "trash-cloak"
+                },
+                "414-mothim": {
+                    "pokemon": 414,
+                    "form": "mothim"
+                }
+            },
+            "changes": {
+                "412-trash-cloak > 413-trash-cloak": {
+                    "targets": [
+                        "412-trash-cloak",
+                        "413-trash-cloak"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ],
+                            "gender": "female"
+                        }
+                    ]
+                },
+                "412-trash-cloak > 414-mothim": {
+                    "targets": [
+                        "412-trash-cloak",
+                        "414-mothim"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ],
+                            "gender": "male"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

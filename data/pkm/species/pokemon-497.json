@@ -1,0 +1,205 @@
+{
+    "id": 497,
+    "name": "Serperior",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It only gives its all against strong opponents who are not fazed by the glare from Serperior's noble eyes.",
+        "It can stop its opponents' movements with just a glare. It takes in solar energy and boosts it internally."
+    ],
+    "forms": {
+        "serperior": {
+            "id": "serperior",
+            "name": "Serperior",
+            "shape": "serpentine",
+            "abilities": [
+                "overgrow"
+            ],
+            "weight": 63,
+            "height": 3.3,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 75,
+                "defense": 95,
+                "special-attack": 75,
+                "special-defense": 95,
+                "speed": 113
+            },
+            "hidden-abilities": [
+                "contrary"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "vine-whip",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 45,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 4,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "vine-whip",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 45,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 13,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "leaf-tornado",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 90
+                },
+                {
+                    "level": 20,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 24,
+                    "name": "mega-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 32,
+                    "name": "leaf-blade",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "coil",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "giga-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "wring-out",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "gastro-acid",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 62,
+                    "name": "leaf-storm",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 248,
+    "classification": "regal",
+    "names": {
+        "de": "Serpiroyal",
+        "en": "Serperior",
+        "es": "Serperior",
+        "fr": "Majaspic",
+        "it": "Serperior",
+        "jp": "ジャローダ",
+        "kr": "샤로다",
+        "zh": "君主蛇",
+        "zh-CHS": "君主蛇",
+        "zh-CHT": "君主蛇"
+    },
+    "species": [
+        "field",
+        "plant"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 3,
+        "experience": 238
+    }
+}

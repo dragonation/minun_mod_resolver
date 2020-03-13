@@ -1,0 +1,36 @@
+{
+    "ids": [
+        872,
+        873
+    ],
+    "chains": [
+        {
+            "targets": {
+                "872-snom": {
+                    "pokemon": 872,
+                    "form": "snom"
+                },
+                "873-frosmoth": {
+                    "pokemon": 873,
+                    "form": "frosmoth"
+                }
+            },
+            "changes": {
+                "872-snom > 873-frosmoth": {
+                    "targets": [
+                        "872-snom",
+                        "873-frosmoth"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

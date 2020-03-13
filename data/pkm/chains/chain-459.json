@@ -1,0 +1,16 @@
+{
+    "ids": [
+        889
+    ],
+    "chains": [
+        {
+            "targets": {
+                "889-hero-of-many-battles": {
+                    "pokemon": 889,
+                    "form": "hero-of-many-battles"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

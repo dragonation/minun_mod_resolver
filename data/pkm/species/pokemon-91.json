@@ -1,0 +1,212 @@
+{
+    "id": 91,
+    "name": "Cloyster",
+    "experiences-type": "slow",
+    "texts": [
+        "Its shell is extremely hard. It cannot be shattered, even with a bomb. The shell opens only when it is attacking.",
+        "Once it slams its shell shut, it is impossible to open, even by those with superior strength."
+    ],
+    "forms": {
+        "cloyster": {
+            "id": "cloyster",
+            "name": "Cloyster",
+            "shape": "head",
+            "abilities": [
+                "shell-armor",
+                "skill-link"
+            ],
+            "weight": 132.5,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 95,
+                "defense": 180,
+                "special-attack": 85,
+                "special-defense": 45,
+                "speed": 70
+            },
+            "hidden-abilities": [
+                "overcoat"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "icicle-spear",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "icicle-crash",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "toxic-spikes",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "spikes",
+                    "type": "ground",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 1,
+                    "name": "aurora-beam",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "razor-shell",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "ice-beam",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "ice-shard",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "icicle-spear",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water",
+                "ice"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 39,
+    "classification": "bivalve",
+    "names": {
+        "de": "Austos",
+        "en": "Cloyster",
+        "es": "Cloyster",
+        "fr": "Crustabri",
+        "it": "Cloyster",
+        "jp": "パルシェン",
+        "kr": "파르셀",
+        "zh": "刺甲贝",
+        "zh-CHS": "刺甲贝",
+        "zh-CHT": "刺甲貝"
+    },
+    "species": [
+        "aquatic"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "pearl",
+        "rare": "big-pearl"
+    },
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 184
+    }
+}

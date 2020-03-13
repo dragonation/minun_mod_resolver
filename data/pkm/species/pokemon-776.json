@@ -1,0 +1,181 @@
+{
+    "id": 776,
+    "name": "Turtonator",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Explosive substances coat the shell on its back. Enemies that dare attack it will be blown away by an immense detonation.",
+        "Eating sulfur in its volcanic habitat is what causes explosive compounds to develop in its shell. Its droppings are also dangerously explosive."
+    ],
+    "forms": {
+        "turtonator": {
+            "id": "turtonator",
+            "name": "Turtonator",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "shell-armor"
+            ],
+            "weight": 212,
+            "height": 2,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 78,
+                "defense": 135,
+                "special-attack": 91,
+                "special-defense": 85,
+                "speed": 36
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 30,
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "incinerate",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "shell-trap",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "overheat",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 90
+                },
+                {
+                    "level": 52,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire",
+                "dragon"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 394,
+    "classification": "blast-turtle",
+    "names": {
+        "de": "Tortunator",
+        "en": "Turtonator",
+        "es": "Turtonator",
+        "fr": "Boumata",
+        "it": "Turtonator",
+        "jp": "バクガメス",
+        "kr": "폭거북스",
+        "zh": "爆焰龟兽",
+        "zh-CHS": "爆焰龟兽",
+        "zh-CHT": ""
+    },
+    "species": [
+        "monster",
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "charcoal"
+    },
+    "capture-rate": 70,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 170
+    }
+}

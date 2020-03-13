@@ -1,0 +1,37 @@
+{
+    "ids": [
+        54,
+        55
+    ],
+    "chains": [
+        {
+            "targets": {
+                "54-psyduck": {
+                    "pokemon": 54,
+                    "form": "psyduck"
+                },
+                "55-golduck": {
+                    "pokemon": 55,
+                    "form": "golduck"
+                }
+            },
+            "changes": {
+                "54-psyduck > 55-golduck": {
+                    "targets": [
+                        "54-psyduck",
+                        "55-golduck"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                33
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        779
+    ],
+    "chains": [
+        {
+            "targets": {
+                "779-bruxish": {
+                    "pokemon": 779,
+                    "form": "bruxish"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

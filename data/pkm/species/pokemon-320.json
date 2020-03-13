@@ -1,0 +1,189 @@
+{
+    "id": 320,
+    "name": "Wailmer",
+    "experiences-type": "fluctuating",
+    "texts": [
+        "It shows off by spraying jets of seawater from the nostrils above its eyes. It eats a solid ton of Wishiwashi every day.",
+        "When it sucks in a large volume of seawater, it becomes like a big, bouncy ball. It eats a ton of food daily."
+    ],
+    "forms": {
+        "wailmer": {
+            "id": "wailmer",
+            "name": "Wailmer",
+            "shape": "fins",
+            "abilities": [
+                "water-veil",
+                "oblivious"
+            ],
+            "weight": 130,
+            "height": 2,
+            "base-stats": {
+                "health-points": 130,
+                "attack": 70,
+                "defense": 35,
+                "special-attack": 70,
+                "special-defense": 35,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "pressure"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "splash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 3,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 30,
+                    "name": "dive",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "bounce",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 85
+                },
+                {
+                    "level": 36,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 48,
+                    "name": "water-spout",
+                    "type": "water",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 161,
+    "classification": "ball-whale",
+    "names": {
+        "de": "Wailmer",
+        "en": "Wailmer",
+        "es": "Wailmer",
+        "fr": "Wailmer",
+        "it": "Wailmer",
+        "jp": "ホエルコ",
+        "kr": "고래왕자",
+        "zh": "吼吼鲸",
+        "zh-CHS": "吼吼鲸",
+        "zh-CHT": "吼吼鯨"
+    },
+    "species": [
+        "field",
+        "fish"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 125,
+    "hatching-cycles": 41,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 80
+    }
+}

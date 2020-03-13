@@ -1,0 +1,16 @@
+{
+    "ids": [
+        311
+    ],
+    "chains": [
+        {
+            "targets": {
+                "311-plusle": {
+                    "pokemon": 311,
+                    "form": "plusle"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

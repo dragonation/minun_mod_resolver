@@ -1,0 +1,66 @@
+{
+    "ids": [
+        37,
+        38
+    ],
+    "chains": [
+        {
+            "targets": {
+                "37-vulpix": {
+                    "pokemon": 37,
+                    "form": "vulpix"
+                },
+                "38-ninetales": {
+                    "pokemon": 38,
+                    "form": "ninetales"
+                }
+            },
+            "changes": {
+                "37-vulpix > 38-ninetales": {
+                    "targets": [
+                        "37-vulpix",
+                        "38-ninetales"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "fire-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "37-alolan-vulpix": {
+                    "pokemon": 37,
+                    "form": "alolan-vulpix"
+                },
+                "38-alolan-ninetales": {
+                    "pokemon": 38,
+                    "form": "alolan-ninetales"
+                }
+            },
+            "changes": {
+                "37-alolan-vulpix > 38-alolan-ninetales": {
+                    "targets": [
+                        "37-alolan-vulpix",
+                        "38-alolan-ninetales"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "ice-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

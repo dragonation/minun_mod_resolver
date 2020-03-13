@@ -1,0 +1,16 @@
+{
+    "ids": [
+        626
+    ],
+    "chains": [
+        {
+            "targets": {
+                "626-bouffalant": {
+                    "pokemon": 626,
+                    "form": "bouffalant"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,328 @@
+{
+    "id": 487,
+    "name": "Giratina",
+    "experiences-type": "slow",
+    "texts": [
+        "This Pokémon is said to live in a world on the reverse side of ours, where common knowledge is distorted and strange.",
+        "It was banished for its violence. It silently gazed upon the old world from the Distortion World."
+    ],
+    "forms": {
+        "altered-form": {
+            "id": "altered-form",
+            "name": "Altered Forme",
+            "shape": "tentacles",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 750,
+            "height": 4.5,
+            "base-stats": {
+                "health-points": 150,
+                "attack": 100,
+                "defense": 120,
+                "special-attack": 100,
+                "special-defense": 120,
+                "speed": 90
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "ominous-wind",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "aura-sphere",
+                    "type": "fighting",
+                    "category": "special",
+                    "power": 80
+                },
+                {
+                    "level": 42,
+                    "name": "shadow-claw",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "shadow-force",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost",
+                "dragon"
+            ],
+            "color": "black"
+        },
+        "origin-form": {
+            "id": "origin-form",
+            "name": "Origin Forme",
+            "shape": "serpentine",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 650,
+            "height": 6.9,
+            "base-stats": {
+                "health-points": 150,
+                "attack": 120,
+                "defense": 100,
+                "special-attack": 120,
+                "special-defense": 100,
+                "speed": 90
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "ominous-wind",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "aura-sphere",
+                    "type": "fighting",
+                    "category": "special",
+                    "power": 80
+                },
+                {
+                    "level": 42,
+                    "name": "shadow-claw",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "shadow-force",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost",
+                "dragon"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 241,
+    "changes": [
+        {
+            "targets": {
+                "487-altered-form": {
+                    "pokemon": 487,
+                    "world": "real-world",
+                    "form": "altered-form"
+                },
+                "487-origin-form": {
+                    "pokemon": 487,
+                    "world": "distortion-world",
+                    "form": "origin-form"
+                }
+            },
+            "changes": {
+                "487-altered-form <> 487-origin-form": {
+                    "targets": [
+                        "487-altered-form",
+                        "487-origin-form"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "griseous-orb"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "renegade",
+    "names": {
+        "de": "Giratina",
+        "en": "Giratina",
+        "es": "Giratina",
+        "fr": "Giratina",
+        "it": "Giratina",
+        "jp": "ギラティナ",
+        "kr": "기라티나",
+        "zh": "骑拉帝纳",
+        "zh-CHS": "骑拉帝纳",
+        "zh-CHT": "騎拉帝納"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 3,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 306
+    }
+}

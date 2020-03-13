@@ -1,0 +1,25 @@
+{
+    "ids": [
+        550
+    ],
+    "chains": [
+        {
+            "targets": {
+                "550-red-striped-form": {
+                    "pokemon": 550,
+                    "form": "red-striped-form"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "550-blue-striped-form": {
+                    "pokemon": 550,
+                    "form": "blue-striped-form"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

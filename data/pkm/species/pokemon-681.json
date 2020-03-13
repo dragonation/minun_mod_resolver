@@ -1,0 +1,380 @@
+{
+    "id": 681,
+    "name": "Aegislash",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "In this defensive stance, Aegislash uses its steel body and a force field of spectral power to reduce the damage of any attack.",
+        "Its potent spectral powers allow it to manipulate others. It once used its powers to force people and Pokémon to build a kingdom to its liking."
+    ],
+    "forms": {
+        "shield-form": {
+            "id": "shield-form",
+            "name": "Shield Aegislash",
+            "shape": "head-base",
+            "abilities": [
+                "stance-change"
+            ],
+            "weight": 53,
+            "height": 1.7,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 50,
+                "defense": 140,
+                "special-attack": 50,
+                "special-defense": 140,
+                "speed": 60
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "king's-shield",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "power-trick",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "sacred-sword",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "king's-shield",
+                    "type": "steel",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "steel",
+                "ghost"
+            ],
+            "color": "brown"
+        },
+        "blade-form": {
+            "id": "blade-form",
+            "name": "Blade Aegislash",
+            "shape": "head-base",
+            "abilities": [
+                "stance-change"
+            ],
+            "weight": 53,
+            "height": 1.7,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 140,
+                "defense": 50,
+                "special-attack": 140,
+                "special-defense": 50,
+                "speed": 60
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "king's-shield",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "power-trick",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "sacred-sword",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "king's-shield",
+                    "type": "steel",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "steel",
+                "ghost"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 341,
+    "changes": [
+        {
+            "targets": {
+                "681-shield-form": {
+                    "pokemon": 681,
+                    "form": "shield-form"
+                },
+                "681-blade-form": {
+                    "pokemon": 681,
+                    "form": "blade-form"
+                }
+            },
+            "changes": {
+                "@681-blade-form": {
+                    "methods": [
+                        {
+                            "method": "use-move",
+                            "parameters": [
+                                "@attack"
+                            ]
+                        }
+                    ],
+                    "targets": [
+                        "681-blade-form"
+                    ],
+                    "bidirectional": false
+                },
+                "@681-shield-form": {
+                    "methods": [
+                        {
+                            "method": "use-move",
+                            "parameters": [
+                                "king-s-shield"
+                            ]
+                        }
+                    ],
+                    "targets": [
+                        "681-shield-form"
+                    ],
+                    "bidirectional": false
+                }
+            }
+        }
+    ],
+    "classification": "royal-sword",
+    "names": {
+        "de": "Durengard",
+        "en": "Aegislash",
+        "es": "Aegislash",
+        "fr": "Exagide",
+        "it": "Aegislash",
+        "jp": "ギルガルド",
+        "kr": "킬가르도",
+        "zh": "坚盾剑怪",
+        "zh-CHS": "坚盾剑怪",
+        "zh-CHT": "堅盾劍怪"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 234
+    }
+}

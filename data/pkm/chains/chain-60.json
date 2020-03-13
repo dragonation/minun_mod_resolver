@@ -1,0 +1,48 @@
+{
+    "ids": [
+        126,
+        240,
+        467
+    ],
+    "chains": [
+        {
+            "targets": {
+                "240-magby": {
+                    "pokemon": 240,
+                    "form": "magby"
+                },
+                "126-magmar": {
+                    "pokemon": 126,
+                    "form": "magmar"
+                },
+                "467-magmortar": {
+                    "pokemon": 467,
+                    "form": "magmortar"
+                }
+            },
+            "changes": {
+                "240-magby > 126-magmar": {
+                    "targets": [
+                        "240-magby",
+                        "126-magmar"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                },
+                "126-magmar > 467-magmortar": {
+                    "targets": [
+                        "126-magmar",
+                        "467-magmortar"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

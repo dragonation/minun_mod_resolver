@@ -1,0 +1,57 @@
+{
+    "ids": [
+        10,
+        11,
+        12
+    ],
+    "chains": [
+        {
+            "targets": {
+                "10-caterpie": {
+                    "pokemon": 10,
+                    "form": "caterpie"
+                },
+                "11-metapod": {
+                    "pokemon": 11,
+                    "form": "metapod"
+                },
+                "12-butterfree": {
+                    "pokemon": 12,
+                    "form": "butterfree"
+                }
+            },
+            "changes": {
+                "10-caterpie > 11-metapod": {
+                    "targets": [
+                        "10-caterpie",
+                        "11-metapod"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                7
+                            ]
+                        }
+                    ]
+                },
+                "11-metapod > 12-butterfree": {
+                    "targets": [
+                        "11-metapod",
+                        "12-butterfree"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                10
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

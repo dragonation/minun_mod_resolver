@@ -1,0 +1,37 @@
+{
+    "ids": [
+        58,
+        59
+    ],
+    "chains": [
+        {
+            "targets": {
+                "58-growlithe": {
+                    "pokemon": 58,
+                    "form": "growlithe"
+                },
+                "59-arcanine": {
+                    "pokemon": 59,
+                    "form": "arcanine"
+                }
+            },
+            "changes": {
+                "58-growlithe > 59-arcanine": {
+                    "targets": [
+                        "58-growlithe",
+                        "59-arcanine"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "fire-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

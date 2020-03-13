@@ -1,0 +1,37 @@
+{
+    "ids": [
+        613,
+        614
+    ],
+    "chains": [
+        {
+            "targets": {
+                "613-cubchoo": {
+                    "pokemon": 613,
+                    "form": "cubchoo"
+                },
+                "614-beartic": {
+                    "pokemon": 614,
+                    "form": "beartic"
+                }
+            },
+            "changes": {
+                "613-cubchoo > 614-beartic": {
+                    "targets": [
+                        "613-cubchoo",
+                        "614-beartic"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                37
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

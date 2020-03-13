@@ -1,0 +1,16 @@
+{
+    "ids": [
+        381
+    ],
+    "chains": [
+        {
+            "targets": {
+                "381-latios": {
+                    "pokemon": 381,
+                    "form": "latios"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

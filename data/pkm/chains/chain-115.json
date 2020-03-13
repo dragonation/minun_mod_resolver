@@ -1,0 +1,30 @@
+{
+    "ids": [
+        226,
+        458
+    ],
+    "chains": [
+        {
+            "targets": {
+                "458-mantyke": {
+                    "pokemon": 458,
+                    "form": "mantyke"
+                },
+                "226-mantine": {
+                    "pokemon": 226,
+                    "form": "mantine"
+                }
+            },
+            "changes": {
+                "458-mantyke > 226-mantine": {
+                    "targets": [
+                        "458-mantyke",
+                        "226-mantine"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                }
+            }
+        }
+    ]
+}

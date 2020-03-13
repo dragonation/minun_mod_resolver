@@ -1,0 +1,37 @@
+{
+    "ids": [
+        320,
+        321
+    ],
+    "chains": [
+        {
+            "targets": {
+                "320-wailmer": {
+                    "pokemon": 320,
+                    "form": "wailmer"
+                },
+                "321-wailord": {
+                    "pokemon": 321,
+                    "form": "wailord"
+                }
+            },
+            "changes": {
+                "320-wailmer > 321-wailord": {
+                    "targets": [
+                        "320-wailmer",
+                        "321-wailord"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

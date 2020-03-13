@@ -1,0 +1,172 @@
+{
+    "id": 850,
+    "name": "Sizzlipede",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It stores flammable gas in its body and uses it to generate heat. The yellow sections on its belly get particularly hot.",
+        "It wraps prey up with its heated body, cooking them in its coils. Once they're well-done, it will voraciously nibble them down to the last morsel."
+    ],
+    "forms": {
+        "sizzlipede": {
+            "id": "sizzlipede",
+            "name": "Sizzlipede",
+            "shape": "tentacles",
+            "abilities": [
+                "flash-fire",
+                "white-smoke"
+            ],
+            "weight": 1,
+            "height": 0.7,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 65,
+                "defense": 45,
+                "special-attack": 50,
+                "special-defense": 50,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "flame-body"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "smokescreen",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "flame-wheel",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "coil",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 35,
+                    "name": "fire-spin",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 40,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "fire-lash",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "lunge",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "burn-up",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire",
+                "bug"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 438,
+    "classification": "radiator",
+    "names": {
+        "de": "Thermopod",
+        "en": "Sizzlipede",
+        "es": "Sizzlipede",
+        "fr": "Grillepattes",
+        "it": "Sizzlipede",
+        "jp": "ヤクデ",
+        "kr": "태우지네",
+        "zh": "烧火蚣",
+        "zh-CHS": "烧火蚣",
+        "zh-CHT": "燒火蚣"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 20,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 61
+    }
+}

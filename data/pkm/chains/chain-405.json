@@ -1,0 +1,79 @@
+{
+    "ids": [
+        789,
+        790,
+        791,
+        792
+    ],
+    "chains": [
+        {
+            "targets": {
+                "789-cosmog": {
+                    "pokemon": 789,
+                    "form": "cosmog"
+                },
+                "790-cosmoem": {
+                    "pokemon": 790,
+                    "form": "cosmoem"
+                },
+                "791-solgaleo": {
+                    "pokemon": 791,
+                    "form": "solgaleo"
+                },
+                "792-lunala": {
+                    "pokemon": 792,
+                    "form": "lunala"
+                }
+            },
+            "changes": {
+                "789-cosmog > 790-cosmoem": {
+                    "targets": [
+                        "789-cosmog",
+                        "790-cosmoem"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                43
+                            ]
+                        }
+                    ]
+                },
+                "790-cosmoem > 791-solgaleo": {
+                    "targets": [
+                        "790-cosmoem",
+                        "791-solgaleo"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                53
+                            ],
+                            "time": "day"
+                        }
+                    ]
+                },
+                "790-cosmoem > 792-lunala": {
+                    "targets": [
+                        "790-cosmoem",
+                        "792-lunala"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                53
+                            ],
+                            "time": "night"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

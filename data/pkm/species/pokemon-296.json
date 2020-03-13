@@ -1,0 +1,195 @@
+{
+    "id": 296,
+    "name": "Makuhita",
+    "experiences-type": "fluctuating",
+    "texts": [
+        "It practices its slaps by repeatedly slapping tree trunks. It has been known to slap an Exeggutor and get flung away.",
+        "There's a rumor of a traditional recipe for stew that Trainers can use to raise strong Makuhita."
+    ],
+    "forms": {
+        "makuhita": {
+            "id": "makuhita",
+            "name": "Makuhita",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "thick-fat",
+                "guts"
+            ],
+            "weight": 86.4,
+            "height": 1,
+            "base-stats": {
+                "health-points": 72,
+                "attack": 60,
+                "defense": 30,
+                "special-attack": 20,
+                "special-defense": 30,
+                "speed": 25
+            },
+            "hidden-abilities": [
+                "sheer-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "arm-thrust",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "force-palm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "whirlwind",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "vital-throw",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 70
+                },
+                {
+                    "level": 25,
+                    "name": "belly-drum",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "smelling-salts",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "wake-up-slap",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 146,
+    "classification": "guts",
+    "names": {
+        "de": "Makuhita",
+        "en": "Makuhita",
+        "es": "Makuhita",
+        "fr": "Makuhita",
+        "it": "Makuhita",
+        "jp": "マクノシタ",
+        "kr": "마크탕",
+        "zh": "幕下力士",
+        "zh-CHS": "幕下力士",
+        "zh-CHT": "幕下力士"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "6/2",
+    "holdings": {
+        "rare": "black-belt"
+    },
+    "capture-rate": 180,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 47
+    }
+}

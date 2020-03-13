@@ -1,0 +1,16 @@
+{
+    "ids": [
+        778
+    ],
+    "chains": [
+        {
+            "targets": {
+                "778-disguised-form": {
+                    "pokemon": 778,
+                    "form": "disguised-form"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

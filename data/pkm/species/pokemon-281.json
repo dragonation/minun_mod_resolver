@@ -1,0 +1,178 @@
+{
+    "id": 281,
+    "name": "Kirlia",
+    "experiences-type": "slow",
+    "texts": [
+        "If its Trainer becomes happy, it overflows with energy, dancing joyously while spinning about.",
+        "It has a psychic power that enables it to distort the space around it and see into the future."
+    ],
+    "forms": {
+        "kirlia": {
+            "id": "kirlia",
+            "name": "Kirlia",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "synchronize",
+                "trace"
+            ],
+            "weight": 20.2,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 38,
+                "attack": 35,
+                "defense": 35,
+                "special-attack": 65,
+                "special-defense": 55,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "disarming-voice",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40
+                },
+                {
+                    "level": 1,
+                    "name": "double-team",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 12,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "teleport",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "life-dew",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "dream-eater",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic",
+                "fairy"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 140,
+    "classification": "emotion",
+    "names": {
+        "de": "Kirlia",
+        "en": "Kirlia",
+        "es": "Kirlia",
+        "fr": "Kirlia",
+        "it": "Kirlia",
+        "jp": "キルリア",
+        "kr": "킬리아",
+        "zh": "奇鲁莉安",
+        "zh-CHS": "奇鲁莉安",
+        "zh-CHT": "奇魯莉安"
+    },
+    "species": [
+        "creature",
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 120,
+    "hatching-cycles": 21,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 2,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 97
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "ids": [
+        193,
+        469
+    ],
+    "chains": [
+        {
+            "targets": {
+                "193-yanma": {
+                    "pokemon": 193,
+                    "form": "yanma"
+                },
+                "469-yanmega": {
+                    "pokemon": 469,
+                    "form": "yanmega"
+                }
+            },
+            "changes": {
+                "193-yanma > 469-yanmega": {
+                    "targets": [
+                        "193-yanma",
+                        "469-yanmega"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

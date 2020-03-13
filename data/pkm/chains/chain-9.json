@@ -1,0 +1,37 @@
+{
+    "ids": [
+        23,
+        24
+    ],
+    "chains": [
+        {
+            "targets": {
+                "23-ekans": {
+                    "pokemon": 23,
+                    "form": "ekans"
+                },
+                "24-arbok": {
+                    "pokemon": 24,
+                    "form": "arbok"
+                }
+            },
+            "changes": {
+                "23-ekans > 24-arbok": {
+                    "targets": [
+                        "23-ekans",
+                        "24-arbok"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                22
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

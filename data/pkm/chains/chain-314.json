@@ -1,0 +1,16 @@
+{
+    "ids": [
+        632
+    ],
+    "chains": [
+        {
+            "targets": {
+                "632-durant": {
+                    "pokemon": 632,
+                    "form": "durant"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

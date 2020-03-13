@@ -1,0 +1,36 @@
+{
+    "ids": [
+        527,
+        528
+    ],
+    "chains": [
+        {
+            "targets": {
+                "527-woobat": {
+                    "pokemon": 527,
+                    "form": "woobat"
+                },
+                "528-swoobat": {
+                    "pokemon": 528,
+                    "form": "swoobat"
+                }
+            },
+            "changes": {
+                "527-woobat > 528-swoobat": {
+                    "targets": [
+                        "527-woobat",
+                        "528-swoobat"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

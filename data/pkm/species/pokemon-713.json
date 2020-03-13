@@ -1,0 +1,219 @@
+{
+    "id": 713,
+    "name": "Avalugg",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "At high latitudes, this Pokémon can be found with clusters of Bergmite on its back as it swims among the icebergs.",
+        "As Avalugg moves about during the day, the cracks in its body deepen. The Pokémon's body returns to a pristine state overnight."
+    ],
+    "forms": {
+        "avalugg": {
+            "id": "avalugg",
+            "name": "Avalugg",
+            "shape": "quadruped",
+            "abilities": [
+                "own-tempo",
+                "ice-body"
+            ],
+            "weight": 505,
+            "height": 2,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 117,
+                "defense": 184,
+                "special-attack": 44,
+                "special-defense": 46,
+                "speed": 28
+            },
+            "hidden-abilities": [
+                "sturdy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "wide-guard",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "icy-wind",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 15,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "avalanche",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 27,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 41,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 46,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "skull-bash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ice"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 358,
+    "classification": "iceberg",
+    "names": {
+        "de": "Arktilas",
+        "en": "Avalugg",
+        "es": "Avalugg",
+        "fr": "Séracrawl",
+        "it": "Avalugg",
+        "jp": "クレベース",
+        "kr": "크레베이스",
+        "zh": "冰岩怪",
+        "zh-CHS": "冰岩怪",
+        "zh-CHT": "冰岩怪"
+    },
+    "species": [
+        "monster",
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 55,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 180
+    }
+}

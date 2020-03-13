@@ -1,0 +1,180 @@
+{
+    "id": 345,
+    "name": "Lileep",
+    "experiences-type": "erratic",
+    "texts": [
+        "In ancient times, it lived in warm seas. It disguised itself as seaweed to ambush its prey and devoured them whole when they got close.",
+        "It sticks to rocks with its powerful suckers and can't be washed away no matter how rough the surf gets."
+    ],
+    "forms": {
+        "lileep": {
+            "id": "lileep",
+            "name": "Lileep",
+            "shape": "head-base",
+            "abilities": [
+                "suction-cups"
+            ],
+            "weight": 23.8,
+            "height": 1,
+            "base-stats": {
+                "health-points": 66,
+                "attack": 41,
+                "defense": 77,
+                "special-attack": 61,
+                "special-defense": 87,
+                "speed": 23
+            },
+            "hidden-abilities": [
+                "storm-drain"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "constrict",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 10,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "acid",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "ingrain",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 13,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "giga-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "gastro-acid",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 41,
+                    "name": "energy-ball",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "stockpile",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "spit-up",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "swallow",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 52,
+                    "name": "wring-out",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "grass"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 176,
+    "classification": "sea-lily",
+    "names": {
+        "de": "Liliep",
+        "en": "Lileep",
+        "es": "Lileep",
+        "fr": "Lilia",
+        "it": "Lileep",
+        "jp": "リリーラ",
+        "kr": "릴링",
+        "zh": "触手百合",
+        "zh-CHS": "触手百合",
+        "zh-CHT": "觸手百合"
+    },
+    "species": [
+        "aquatic"
+    ],
+    "gender": "7/1",
+    "holdings": {
+        "rare": "big-root"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 71
+    }
+}

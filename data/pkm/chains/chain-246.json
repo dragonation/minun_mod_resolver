@@ -1,0 +1,16 @@
+{
+    "ids": [
+        493
+    ],
+    "chains": [
+        {
+            "targets": {
+                "493-arceus": {
+                    "pokemon": 493,
+                    "form": "arceus"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

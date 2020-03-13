@@ -1,0 +1,37 @@
+{
+    "ids": [
+        436,
+        437
+    ],
+    "chains": [
+        {
+            "targets": {
+                "436-bronzor": {
+                    "pokemon": 436,
+                    "form": "bronzor"
+                },
+                "437-bronzong": {
+                    "pokemon": 437,
+                    "form": "bronzong"
+                }
+            },
+            "changes": {
+                "436-bronzor > 437-bronzong": {
+                    "targets": [
+                        "436-bronzor",
+                        "437-bronzong"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                33
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

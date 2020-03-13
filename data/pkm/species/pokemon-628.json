@@ -1,0 +1,196 @@
+{
+    "id": 628,
+    "name": "Braviary",
+    "experiences-type": "slow",
+    "texts": [
+        "Known for its bravery and pride, this majestic Pokémon is often seen as a motif for various kinds of emblems.",
+        "Because this Pokémon is hotheaded and belligerent, it's Corviknight that's taken the role of transportation in Galar."
+    ],
+    "forms": {
+        "braviary": {
+            "id": "braviary",
+            "name": "Braviary",
+            "shape": "two-wings",
+            "abilities": [
+                "keen-eye",
+                "sheer-force"
+            ],
+            "weight": 41,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 123,
+                "defense": 75,
+                "special-attack": 57,
+                "special-defense": 75,
+                "speed": 80
+            },
+            "hidden-abilities": [
+                "defiant"
+            ],
+            "skills": [
+                {
+                    "level": null,
+                    "name": "superpower",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "superpower",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sky-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hone-claws",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "wing-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "tailwind",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 36,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "whirlwind",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "crush-claw",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 57,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 64,
+                    "name": "defog",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 72,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 80,
+                    "name": "brave-bird",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "normal",
+                "flying"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 311,
+    "classification": "valiant",
+    "names": {
+        "de": "Washakwil",
+        "en": "Braviary",
+        "es": "Braviary",
+        "fr": "Gueriaigle",
+        "it": "Braviary",
+        "jp": "ウォーグル",
+        "kr": "워글",
+        "zh": "勇士雄鹰",
+        "zh-CHS": "勇士雄鹰",
+        "zh-CHT": "勇士雄鷹"
+    },
+    "species": [
+        "flying"
+    ],
+    "gender": "8/0",
+    "holdings": {},
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 179
+    }
+}

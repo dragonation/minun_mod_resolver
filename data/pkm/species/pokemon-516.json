@@ -1,0 +1,100 @@
+{
+    "id": 516,
+    "name": "Simipour",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "The high-pressure water expelled from its tail is so powerful, it can destroy a concrete wall.",
+        "It prefers places with clean water. When its tuft runs low, it replenishes it by siphoning up water with its tail."
+    ],
+    "forms": {
+        "simipour": {
+            "id": "simipour",
+            "name": "Simipour",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "gluttony"
+            ],
+            "weight": 29,
+            "height": 1,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 98,
+                "defense": 63,
+                "special-attack": 98,
+                "special-defense": 63,
+                "speed": 101
+            },
+            "hidden-abilities": [
+                "torrent"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "lick",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "scald",
+                    "type": "water",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 256,
+    "classification": "geyser",
+    "names": {
+        "de": "Sodachita",
+        "en": "Simipour",
+        "es": "Simipour",
+        "fr": "Flotoutan",
+        "it": "Simipour",
+        "jp": "ヒヤッキー",
+        "kr": "앗차키",
+        "zh": "冷水猿",
+        "zh-CHS": "冷水猿",
+        "zh-CHT": "冷水猿"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 2,
+        "experience": 174
+    }
+}

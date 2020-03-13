@@ -1,0 +1,210 @@
+{
+    "id": 106,
+    "name": "Hitmonlee",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "This amazing Pokémon has an awesome sense of balance. It can kick in succession from any position.",
+        "The legs freely contract and stretch. The stretchy legs allow it to hit a distant foe with a rising kick."
+    ],
+    "forms": {
+        "hitmonlee": {
+            "id": "hitmonlee",
+            "name": "Hitmonlee",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "limber",
+                "reckless"
+            ],
+            "weight": 49.8,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 120,
+                "defense": 53,
+                "special-attack": 35,
+                "special-defense": 110,
+                "speed": 87
+            },
+            "hidden-abilities": [
+                "unburden"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "brick-break",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "low-sweep",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "brick-break",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "double-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "low-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "revenge",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "wide-guard",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "blaze-kick",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 90
+                },
+                {
+                    "level": 28,
+                    "name": "mind-reader",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "mega-kick",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 75
+                },
+                {
+                    "level": 36,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "high-jump-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 121,
+    "classification": "kicking",
+    "names": {
+        "de": "Kicklee",
+        "en": "Hitmonlee",
+        "es": "Hitmonlee",
+        "fr": "Kicklee",
+        "it": "Hitmonlee",
+        "jp": "サワムラー",
+        "kr": "시라소몬",
+        "zh": "飞腿郎",
+        "zh-CHS": "飞腿郎",
+        "zh-CHT": "飛腿郎"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "8/0",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 159
+    }
+}

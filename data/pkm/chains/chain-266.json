@@ -1,0 +1,16 @@
+{
+    "ids": [
+        538
+    ],
+    "chains": [
+        {
+            "targets": {
+                "538-throh": {
+                    "pokemon": 538,
+                    "form": "throh"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

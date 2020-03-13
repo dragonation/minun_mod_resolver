@@ -1,0 +1,261 @@
+{
+    "id": 422,
+    "name": "Shellos",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "There's speculation that its appearance is determined by what it eats, but the truth remains elusive.",
+        "Its appearance changes depending on the environment. One theory suggests that living in cold seas causes Shellos to take on this form."
+    ],
+    "forms": {
+        "east-sea-shellos": {
+            "id": "east-sea-shellos",
+            "name": "East Sea Shellos Shellos",
+            "shape": "serpentine",
+            "abilities": [
+                "sticky-hold",
+                "storm-drain"
+            ],
+            "weight": 6.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 76,
+                "attack": 48,
+                "defense": 48,
+                "special-attack": 57,
+                "special-defense": 62,
+                "speed": 34
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "muddy-water",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        },
+        "west-sea-shellos": {
+            "id": "west-sea-shellos",
+            "name": "West Sea Shellos Shellos",
+            "shape": "serpentine",
+            "abilities": [
+                "sticky-hold",
+                "storm-drain"
+            ],
+            "weight": 6.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 76,
+                "attack": 48,
+                "defense": 48,
+                "special-attack": 57,
+                "special-defense": 62,
+                "speed": 34
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "muddy-water",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 217,
+    "classification": "sea-slug",
+    "names": {
+        "de": "Schalellos",
+        "en": "Shellos",
+        "es": "Shellos",
+        "fr": "Sancoki",
+        "it": "Shellos",
+        "jp": "カラナクシ",
+        "kr": "깝질무",
+        "zh": "无壳海兔",
+        "zh-CHS": "无壳海兔",
+        "zh-CHT": "無殼海兔"
+    },
+    "species": [
+        "amphibians",
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 65
+    }
+}

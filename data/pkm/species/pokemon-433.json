@@ -1,0 +1,128 @@
+{
+    "id": 433,
+    "name": "Chingling",
+    "experiences-type": "fast",
+    "texts": [
+        "Each time it hops, it makes a ringing sound. It deafens foes by emitting high-frequency cries.",
+        "There is an orb inside its mouth. When it hops, the orb bounces all over and makes a ringing sound."
+    ],
+    "forms": {
+        "chingling": {
+            "id": "chingling",
+            "name": "Chingling",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 0.6,
+            "height": 0.2,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 30,
+                "defense": 50,
+                "special-attack": 65,
+                "special-defense": 50,
+                "speed": 45
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 4,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "last-resort",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "entrainment",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "uproar",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 184,
+    "classification": "bell",
+    "names": {
+        "de": "Klingplim",
+        "en": "Chingling",
+        "es": "Chingling",
+        "fr": "Korillon",
+        "it": "Chingling",
+        "jp": "リーシャン",
+        "kr": "랑딸랑",
+        "zh": "铃铛响",
+        "zh-CHS": "铃铛响",
+        "zh-CHT": "鈴鐺響"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "cleanse-tag"
+    },
+    "capture-rate": 120,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 57
+    }
+}

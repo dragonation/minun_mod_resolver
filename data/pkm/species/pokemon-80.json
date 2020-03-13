@@ -1,0 +1,570 @@
+{
+    "id": 80,
+    "name": "Slowbro",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Spacing out is basically all it does. It turns back into Slowpoke if its tail, along with Shellder, breaks off.",
+        "Shellder, in its greed to suck out more and more sweetness from Slowbro's tail, has metamorphosed into a spiral-shaped shell."
+    ],
+    "forms": {
+        "slowbro": {
+            "id": "slowbro",
+            "name": "Slowbro",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "oblivious",
+                "own-tempo"
+            ],
+            "weight": 78.5,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 75,
+                "defense": 110,
+                "special-attack": 100,
+                "special-defense": 80,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "regenerator"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 5,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 14,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "slack-off",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 62,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 68,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "water",
+                "psychic"
+            ],
+            "color": "pink"
+        },
+        "mega-slowbro": {
+            "id": "mega-slowbro",
+            "name": "Mega Slowbro",
+            "shape": "head-arms",
+            "abilities": [
+                "shell-armor"
+            ],
+            "weight": 120,
+            "height": 2,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 75,
+                "defense": 180,
+                "special-attack": 130,
+                "special-defense": 80,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "regenerator"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 5,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 14,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "slack-off",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 62,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 68,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "water",
+                "psychic"
+            ],
+            "color": "pink"
+        },
+        "galarian-slowbro": {
+            "id": "galarian-slowbro",
+            "name": "Galarian Slowbro",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "oblivious",
+                "own-tempo"
+            ],
+            "weight": 78.5,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 75,
+                "defense": 110,
+                "special-attack": 100,
+                "special-defense": 80,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "regenerator"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 5,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 14,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "slack-off",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 62,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 68,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                }
+            ],
+            "types": [],
+            "color": "pink"
+        }
+    },
+    "evolution": 33,
+    "changes": [
+        {
+            "targets": {
+                "80-slowbro": {
+                    "pokemon": 80,
+                    "form": "slowbro"
+                },
+                "80-mega-slowbro": {
+                    "pokemon": 80,
+                    "form": "mega-slowbro"
+                }
+            },
+            "changes": {
+                "80-slowbro <> 80-mega-slowbro": {
+                    "targets": [
+                        "80-slowbro",
+                        "80-mega-slowbro"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "slowbronite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "hermit-crab",
+    "names": {
+        "de": "Lahmus",
+        "en": "Slowbro",
+        "es": "Slowbro",
+        "fr": "Flagadoss",
+        "it": "Slowbro",
+        "jp": "ヤドラン",
+        "kr": "야도란",
+        "zh": "呆壳兽",
+        "zh-CHS": "呆壳兽",
+        "zh-CHT": "呆殼獸"
+    },
+    "species": [
+        "monster",
+        "amphibians"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "king’s-rock"
+    },
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 172
+    }
+}

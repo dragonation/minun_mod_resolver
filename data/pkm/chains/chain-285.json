@@ -1,0 +1,57 @@
+{
+    "ids": [
+        574,
+        575,
+        576
+    ],
+    "chains": [
+        {
+            "targets": {
+                "574-gothita": {
+                    "pokemon": 574,
+                    "form": "gothita"
+                },
+                "575-gothorita": {
+                    "pokemon": 575,
+                    "form": "gothorita"
+                },
+                "576-gothitelle": {
+                    "pokemon": 576,
+                    "form": "gothitelle"
+                }
+            },
+            "changes": {
+                "574-gothita > 575-gothorita": {
+                    "targets": [
+                        "574-gothita",
+                        "575-gothorita"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                },
+                "575-gothorita > 576-gothitelle": {
+                    "targets": [
+                        "575-gothorita",
+                        "576-gothitelle"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                41
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

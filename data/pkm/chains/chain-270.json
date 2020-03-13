@@ -1,0 +1,37 @@
+{
+    "ids": [
+        546,
+        547
+    ],
+    "chains": [
+        {
+            "targets": {
+                "546-cottonee": {
+                    "pokemon": 546,
+                    "form": "cottonee"
+                },
+                "547-whimsicott": {
+                    "pokemon": 547,
+                    "form": "whimsicott"
+                }
+            },
+            "changes": {
+                "546-cottonee > 547-whimsicott": {
+                    "targets": [
+                        "546-cottonee",
+                        "547-whimsicott"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "sun-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

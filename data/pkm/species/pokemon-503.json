@@ -1,0 +1,226 @@
+{
+    "id": 503,
+    "name": "Samurott",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "In the time it takes a foe to blink, it can draw and sheathe the seamitars attached to its front legs.",
+        "One swing of the sword incorporated in its armor can fell an opponent. A simple glare from one of them quiets everybody."
+    ],
+    "forms": {
+        "samurott": {
+            "id": "samurott",
+            "name": "Samurott",
+            "shape": "quadruped",
+            "abilities": [
+                "torrent"
+            ],
+            "weight": 94.6,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 100,
+                "defense": 85,
+                "special-attack": 108,
+                "special-defense": 70,
+                "speed": 70
+            },
+            "hidden-abilities": [
+                "shell-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "megahorn",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-sport",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "water-sport",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 13,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "razor-shell",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 21,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 25,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "revenge",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "aqua-jet",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "encore",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 51,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 63,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 250,
+    "classification": "formidable",
+    "names": {
+        "de": "Admurai",
+        "en": "Samurott",
+        "es": "Samurott",
+        "fr": "Clamiral",
+        "it": "Samurott",
+        "jp": "ダイケンキ",
+        "kr": "대검귀",
+        "zh": "大剑鬼",
+        "zh-CHS": "大剑鬼",
+        "zh-CHT": "大劍鬼"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 238
+    }
+}

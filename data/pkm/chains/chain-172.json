@@ -1,0 +1,16 @@
+{
+    "ids": [
+        338
+    ],
+    "chains": [
+        {
+            "targets": {
+                "338-solrock": {
+                    "pokemon": 338,
+                    "form": "solrock"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

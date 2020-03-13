@@ -1,0 +1,56 @@
+{
+    "ids": [
+        236,
+        106,
+        107,
+        237
+    ],
+    "chains": [
+        {
+            "targets": {
+                "236-tyrogue": {
+                    "pokemon": 236,
+                    "form": "tyrogue"
+                },
+                "106-hitmonlee": {
+                    "pokemon": 106,
+                    "form": "hitmonlee"
+                },
+                "107-hitmonchan": {
+                    "pokemon": 107,
+                    "form": "hitmonchan"
+                },
+                "237-hitmontop": {
+                    "pokemon": 237,
+                    "form": "hitmontop"
+                }
+            },
+            "changes": {
+                "236-tyrogue > 106-hitmonlee": {
+                    "targets": [
+                        "236-tyrogue",
+                        "106-hitmonlee"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                },
+                "236-tyrogue > 107-hitmonchan": {
+                    "targets": [
+                        "236-tyrogue",
+                        "107-hitmonchan"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                },
+                "236-tyrogue > 237-hitmontop": {
+                    "targets": [
+                        "236-tyrogue",
+                        "237-hitmontop"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                }
+            }
+        }
+    ]
+}

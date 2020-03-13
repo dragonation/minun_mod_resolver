@@ -1,0 +1,231 @@
+{
+    "id": 691,
+    "name": "Dragalge",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "This vicious Pokémon sprays a poisonous liquid on opponents that come near. For whatever reason, it gets along really well with Dhelmise.",
+        "It blends in with seaweed to ambush its prey and then takes them down with a poisonous liquid strong enough to melt metal."
+    ],
+    "forms": {
+        "dragalge": {
+            "id": "dragalge",
+            "name": "Dragalge",
+            "shape": "head-base",
+            "abilities": [
+                "poison-point",
+                "poison-touch"
+            ],
+            "weight": 81.5,
+            "height": 1.8,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 75,
+                "defense": 90,
+                "special-attack": 97,
+                "special-defense": 123,
+                "speed": 44
+            },
+            "hidden-abilities": [
+                "adaptability"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "twister",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "dragon-tail",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "smokescreen",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": null,
+                    "name": "twister",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 9,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "bubble",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "acid",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "camouflage",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 23,
+                    "name": "poison-tail",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "double-team",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 35,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 38,
+                    "name": "sludge-bomb",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 53,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 59,
+                    "name": "dragon-tail",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "poison",
+                "dragon"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 346,
+    "classification": "mock-kelp",
+    "names": {
+        "de": "Tandrak",
+        "en": "Dragalge",
+        "es": "Dragalge",
+        "fr": "Kravarech",
+        "it": "Dragalge",
+        "jp": "ドラミドロ",
+        "kr": "드래캄",
+        "zh": "毒藻龙",
+        "zh-CHS": "毒藻龙",
+        "zh-CHT": "毒藻龍"
+    },
+    "species": [
+        "amphibians",
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 55,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 2,
+        "speed": 0,
+        "experience": 173
+    }
+}

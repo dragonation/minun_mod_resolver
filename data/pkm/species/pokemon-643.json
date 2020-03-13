@@ -1,0 +1,184 @@
+{
+    "id": 643,
+    "name": "Reshiram",
+    "experiences-type": "slow",
+    "texts": [
+        "Flames spew from its tail as it flies through the sky like a jet airplane. It's said that this Pokémon will scorch the world.",
+        "According to myth, if people ignore truth and let themselves become consumed by greed, Reshiram will arrive to burn their kingdoms down."
+    ],
+    "forms": {
+        "reshiram": {
+            "id": "reshiram",
+            "name": "Reshiram",
+            "shape": "two-wings",
+            "abilities": [
+                "turboblaze"
+            ],
+            "weight": 330,
+            "height": 3.2,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 120,
+                "defense": 100,
+                "special-attack": 150,
+                "special-defense": 120,
+                "speed": 90
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "noble-roar",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 8,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "fusion-flare",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                },
+                {
+                    "level": 72,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 80,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 88,
+                    "name": "blue-flare",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "dragon",
+                "fire"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 322,
+    "classification": "vast-white",
+    "names": {
+        "de": "Reshiram",
+        "en": "Reshiram",
+        "es": "Reshiram",
+        "fr": "Reshiram",
+        "it": "Reshiram",
+        "jp": "レシラム",
+        "kr": "레시라무",
+        "zh": "莱希拉姆",
+        "zh-CHS": "莱希拉姆",
+        "zh-CHT": "萊希拉姆"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 306
+    }
+}

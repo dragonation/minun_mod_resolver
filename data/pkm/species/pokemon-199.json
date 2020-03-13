@@ -1,0 +1,370 @@
+{
+    "id": 199,
+    "name": "Slowking",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It's constantly coming up with new ideas that would change the world, but as soon as it hits upon a new idea, it forgets it.",
+        "It's called “the sage of the sea.” It engages in battles of wits with Oranguru, but the result is usually a draw."
+    ],
+    "forms": {
+        "slowking": {
+            "id": "slowking",
+            "name": "Slowking",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "oblivious",
+                "own-tempo"
+            ],
+            "weight": 79.5,
+            "height": 2,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 75,
+                "defense": 80,
+                "special-attack": 100,
+                "special-defense": 110,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "regenerator"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 14,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 41,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 45,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "trump-card",
+                    "type": "normal",
+                    "category": "special"
+                },
+                {
+                    "level": 54,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 58,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "water",
+                "psychic"
+            ],
+            "color": "pink"
+        },
+        "galarian-slowking": {
+            "id": "galarian-slowking",
+            "name": "Galarian Slowking",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "oblivious",
+                "own-tempo"
+            ],
+            "weight": 79.5,
+            "height": 2,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 75,
+                "defense": 80,
+                "special-attack": 100,
+                "special-defense": 110,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "regenerator"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 14,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 41,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 45,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "trump-card",
+                    "type": "normal",
+                    "category": "special"
+                },
+                {
+                    "level": 54,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 58,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                }
+            ],
+            "types": [],
+            "color": "pink"
+        }
+    },
+    "evolution": 33,
+    "classification": "royal",
+    "names": {
+        "de": "Laschoking",
+        "en": "Slowking",
+        "es": "Slowking",
+        "fr": "Roigada",
+        "it": "Slowking",
+        "jp": "ヤドキング",
+        "kr": "야도킹",
+        "zh": "呆呆王",
+        "zh-CHS": "呆呆王",
+        "zh-CHT": "呆呆王"
+    },
+    "species": [
+        "monster",
+        "amphibians"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "king’s-rock"
+    },
+    "capture-rate": 70,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 3,
+        "speed": 0,
+        "experience": 172
+    }
+}

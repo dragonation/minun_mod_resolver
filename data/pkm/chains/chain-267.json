@@ -1,0 +1,16 @@
+{
+    "ids": [
+        539
+    ],
+    "chains": [
+        {
+            "targets": {
+                "539-sawk": {
+                    "pokemon": 539,
+                    "form": "sawk"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

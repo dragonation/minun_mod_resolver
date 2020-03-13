@@ -1,0 +1,57 @@
+{
+    "ids": [
+        255,
+        256,
+        257
+    ],
+    "chains": [
+        {
+            "targets": {
+                "255-torchic": {
+                    "pokemon": 255,
+                    "form": "torchic"
+                },
+                "256-combusken": {
+                    "pokemon": 256,
+                    "form": "combusken"
+                },
+                "257-blaziken": {
+                    "pokemon": 257,
+                    "form": "blaziken"
+                }
+            },
+            "changes": {
+                "255-torchic > 256-combusken": {
+                    "targets": [
+                        "255-torchic",
+                        "256-combusken"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "256-combusken > 257-blaziken": {
+                    "targets": [
+                        "256-combusken",
+                        "257-blaziken"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

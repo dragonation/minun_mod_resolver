@@ -1,0 +1,36 @@
+{
+    "ids": [
+        852,
+        853
+    ],
+    "chains": [
+        {
+            "targets": {
+                "852-clobbopus": {
+                    "pokemon": 852,
+                    "form": "clobbopus"
+                },
+                "853-grapploct": {
+                    "pokemon": 853,
+                    "form": "grapploct"
+                }
+            },
+            "changes": {
+                "852-clobbopus > 853-grapploct": {
+                    "targets": [
+                        "852-clobbopus",
+                        "853-grapploct"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [],
+                            "learnt": "taunt"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

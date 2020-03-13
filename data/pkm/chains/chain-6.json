@@ -1,0 +1,57 @@
+{
+    "ids": [
+        16,
+        17,
+        18
+    ],
+    "chains": [
+        {
+            "targets": {
+                "16-pidgey": {
+                    "pokemon": 16,
+                    "form": "pidgey"
+                },
+                "17-pidgeotto": {
+                    "pokemon": 17,
+                    "form": "pidgeotto"
+                },
+                "18-pidgeot": {
+                    "pokemon": 18,
+                    "form": "pidgeot"
+                }
+            },
+            "changes": {
+                "16-pidgey > 17-pidgeotto": {
+                    "targets": [
+                        "16-pidgey",
+                        "17-pidgeotto"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                },
+                "17-pidgeotto > 18-pidgeot": {
+                    "targets": [
+                        "17-pidgeotto",
+                        "18-pidgeot"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

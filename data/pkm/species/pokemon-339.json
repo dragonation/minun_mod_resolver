@@ -1,0 +1,154 @@
+{
+    "id": 339,
+    "name": "Barboach",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Its slimy body is hard to grasp. In one region, it is said to have been born from hardened mud.",
+        "It probes muddy riverbeds with its two long whiskers. A slimy film protects its body."
+    ],
+    "forms": {
+        "barboach": {
+            "id": "barboach",
+            "name": "Barboach",
+            "shape": "fins",
+            "abilities": [
+                "oblivious",
+                "anticipation"
+            ],
+            "weight": 1.9,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 48,
+                "defense": 43,
+                "special-attack": 46,
+                "special-defense": 41,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "hydration"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "snore",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 31,
+                    "name": "muddy-water",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 36,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "fissure",
+                    "type": "ground",
+                    "category": "physical",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "water",
+                "ground"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 173,
+    "classification": "whiskers",
+    "names": {
+        "de": "Schmerbe",
+        "en": "Barboach",
+        "es": "Barboach",
+        "fr": "Barloche",
+        "it": "Barboach",
+        "jp": "ドジョッチ",
+        "kr": "미꾸리",
+        "zh": "泥泥鳅",
+        "zh-CHS": "泥泥鳅",
+        "zh-CHT": "泥泥鰍"
+    },
+    "species": [
+        "fish"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 58
+    }
+}

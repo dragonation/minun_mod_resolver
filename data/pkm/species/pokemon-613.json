@@ -1,0 +1,186 @@
+{
+    "id": 613,
+    "name": "Cubchoo",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "When this Pokémon is in good health, its snot becomes thicker and stickier. It will smear its snot on anyone it doesn't like.",
+        "It sniffles before performing a move, using its frosty snot to provide an icy element to any move that needs it."
+    ],
+    "forms": {
+        "cubchoo": {
+            "id": "cubchoo",
+            "name": "Cubchoo",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "snow-cloak",
+                "slush-rush"
+            ],
+            "weight": 8.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 55,
+                "attack": 70,
+                "defense": 40,
+                "special-attack": 60,
+                "special-defense": 40,
+                "speed": 40
+            },
+            "hidden-abilities": [
+                "rattled"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 9,
+                    "name": "icy-wind",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 12,
+                    "name": "play-nice",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "frost-breath",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": 21,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "hail",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 39,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 42,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "ice"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 302,
+    "classification": "chill",
+    "names": {
+        "de": "Petznief",
+        "en": "Cubchoo",
+        "es": "Cubchoo",
+        "fr": "Polarhume",
+        "it": "Cubchoo",
+        "jp": "クマシュン",
+        "kr": "코고미",
+        "zh": "喷嚏熊",
+        "zh-CHS": "喷嚏熊",
+        "zh-CHT": "噴嚏熊"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 120,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 61
+    }
+}

@@ -1,0 +1,393 @@
+{
+    "id": 76,
+    "name": "Golem",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "When Golem grow old, they stop shedding their shells. Those that have lived a long, long time have shells green with moss.",
+        "It detonates its own body. The power from that explosion can propel it up steep mountain paths with amazing speed."
+    ],
+    "forms": {
+        "golem": {
+            "id": "golem",
+            "name": "Golem",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "rock-head",
+                "sturdy"
+            ],
+            "weight": 300,
+            "height": 1.4,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 120,
+                "defense": 130,
+                "special-attack": 55,
+                "special-defense": 65,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "sand-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "mud-sport",
+                    "type": "ground",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "mud-sport",
+                    "type": "ground",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "steamroller",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "magnitude",
+                    "type": "ground",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 18,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 34,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 40,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 60,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "ground"
+            ],
+            "color": "brown"
+        },
+        "alolan-golem": {
+            "id": "alolan-golem",
+            "name": "Alolan Golem",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "magnet-pull",
+                "sturdy"
+            ],
+            "weight": 316,
+            "height": 1.7,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 120,
+                "defense": 130,
+                "special-attack": 55,
+                "special-defense": 65,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "galvanize"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "steamroller",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 18,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 34,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 40,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 60,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "electric"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 31,
+    "classification": "megaton",
+    "names": {
+        "de": "Geowaz",
+        "en": "Golem",
+        "es": "Golem",
+        "fr": "Grolem",
+        "it": "Golem",
+        "jp": "ゴローニャ",
+        "kr": "딱구리",
+        "zh": "隆隆岩",
+        "zh-CHS": "隆隆岩",
+        "zh-CHT": "隆隆岩"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "everstone"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 3,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 223
+    }
+}

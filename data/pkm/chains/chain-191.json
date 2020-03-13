@@ -1,0 +1,57 @@
+{
+    "ids": [
+        371,
+        372,
+        373
+    ],
+    "chains": [
+        {
+            "targets": {
+                "371-bagon": {
+                    "pokemon": 371,
+                    "form": "bagon"
+                },
+                "372-shelgon": {
+                    "pokemon": 372,
+                    "form": "shelgon"
+                },
+                "373-salamence": {
+                    "pokemon": 373,
+                    "form": "salamence"
+                }
+            },
+            "changes": {
+                "371-bagon > 372-shelgon": {
+                    "targets": [
+                        "371-bagon",
+                        "372-shelgon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                },
+                "372-shelgon > 373-salamence": {
+                    "targets": [
+                        "372-shelgon",
+                        "373-salamence"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                50
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

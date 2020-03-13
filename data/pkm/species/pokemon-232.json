@@ -1,0 +1,200 @@
+{
+    "id": 232,
+    "name": "Donphan",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It has sharp, hard tusks and a rugged hide. Its Tackle is strong enough to knock down a house.",
+        "The longer and bigger its tusks, the higher its rank in its herd. The tusks take long to grow."
+    ],
+    "forms": {
+        "donphan": {
+            "id": "donphan",
+            "name": "Donphan",
+            "shape": "quadruped",
+            "abilities": [
+                "sturdy"
+            ],
+            "weight": 120,
+            "height": 1.1,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 60,
+                "special-defense": 60,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "sand-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "fury-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "horn-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "fury-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 6,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 15,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 30,
+                    "name": "magnitude",
+                    "type": "ground",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "giga-impact",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 118,
+    "classification": "armor",
+    "names": {
+        "de": "Donphan",
+        "en": "Donphan",
+        "es": "Donphan",
+        "fr": "Donphan",
+        "it": "Donphan",
+        "jp": "ドンファン",
+        "kr": "코리갑",
+        "zh": "顿甲",
+        "zh-CHS": "顿甲",
+        "zh-CHT": "頓甲"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 175
+    }
+}

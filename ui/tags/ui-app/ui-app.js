@@ -8,6 +8,48 @@ const showActionList = function (actions, from, direction, callback) {
 
 };
 
+const createDialog = function (path, options) {
+
+    if (!options) { options = {}; }
+
+    let getNumber = (key, defaultValue) => {
+        let value = parseInt(options[key]);
+        if (isFinite(value)) {
+            value = Math.max(0, value);
+        } else {
+            value = defaultValue;
+        }
+        return value;
+    };
+
+    let width = getNumber("width", 600);
+    let height = getNumber("height", 400);
+    let left = getNumber("left");
+    if (typeof left !== "number") {
+        left = Math.round((parseInt($("body").css("width")) - width) / 2);
+    }
+    let top = getNumber("top");
+    if (typeof top !== "number") {
+        top = Math.round((parseInt($("body").css("height")) - height) / 2.5);
+    }
+
+    let dom = $("<ui-dialog>").css({
+        "left": `${left}px`,
+        "top": `${top}px`,
+        "width": `${width}px`,
+        "height": `${height}px`
+    }).attr({
+        "app": this.name,
+        "path": path,
+        "caption": options.caption ? options.caption : "untitled",
+        "resizable": options.resizable ? "yes" : "no",
+        "just-hide-when-close": options.justHideWhenClose ? "yes" : "no"
+    }).addClass("hidden");
+
+    return dom[0].dialog;
+
+};
+
 const createWindow = function (path, options) {
 
     if (!options) { options = {}; }
@@ -101,6 +143,10 @@ const activateApp = function () {
 };
 
 const completeApp = function (App) {
+
+    if (!App.prototype.createDialog) {
+        App.prototype.createDialog = createDialog;
+    }
 
     if (!App.prototype.createWindow) {
         App.prototype.createWindow = createWindow;

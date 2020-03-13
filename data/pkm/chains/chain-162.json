@@ -1,0 +1,37 @@
+{
+    "ids": [
+        322,
+        323
+    ],
+    "chains": [
+        {
+            "targets": {
+                "322-numel": {
+                    "pokemon": 322,
+                    "form": "numel"
+                },
+                "323-camerupt": {
+                    "pokemon": 323,
+                    "form": "camerupt"
+                }
+            },
+            "changes": {
+                "322-numel > 323-camerupt": {
+                    "targets": [
+                        "322-numel",
+                        "323-camerupt"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                33
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,175 @@
+{
+    "id": 90,
+    "name": "Shellder",
+    "experiences-type": "slow",
+    "texts": [
+        "It swims facing backward by opening and closing its two-piece shell. It is surprisingly fast.",
+        "Its hard shell repels any kind of attack. It is vulnerable only when its shell is open."
+    ],
+    "forms": {
+        "shellder": {
+            "id": "shellder",
+            "name": "Shellder",
+            "shape": "head",
+            "abilities": [
+                "shell-armor",
+                "skill-link"
+            ],
+            "weight": 4,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 30,
+                "attack": 65,
+                "defense": 100,
+                "special-attack": 45,
+                "special-defense": 25,
+                "speed": 40
+            },
+            "hidden-abilities": [
+                "overcoat"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "ice-shard",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 24,
+                    "name": "aurora-beam",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "razor-shell",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 36,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "ice-beam",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 39,
+    "classification": "bivalve",
+    "names": {
+        "de": "Muschas",
+        "en": "Shellder",
+        "es": "Shellder",
+        "fr": "Kokiyas",
+        "it": "Shellder",
+        "jp": "シェルダー",
+        "kr": "셀러",
+        "zh": "大舌贝",
+        "zh-CHS": "大舌贝",
+        "zh-CHT": "大舌貝"
+    },
+    "species": [
+        "aquatic"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "pearl",
+        "rare": "big-pearl"
+    },
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 61
+    }
+}

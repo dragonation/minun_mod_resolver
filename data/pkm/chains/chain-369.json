@@ -1,0 +1,57 @@
+{
+    "ids": [
+        731,
+        732,
+        733
+    ],
+    "chains": [
+        {
+            "targets": {
+                "731-pikipek": {
+                    "pokemon": 731,
+                    "form": "pikipek"
+                },
+                "732-trumbeak": {
+                    "pokemon": 732,
+                    "form": "trumbeak"
+                },
+                "733-toucannon": {
+                    "pokemon": 733,
+                    "form": "toucannon"
+                }
+            },
+            "changes": {
+                "731-pikipek > 732-trumbeak": {
+                    "targets": [
+                        "731-pikipek",
+                        "732-trumbeak"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                14
+                            ]
+                        }
+                    ]
+                },
+                "732-trumbeak > 733-toucannon": {
+                    "targets": [
+                        "732-trumbeak",
+                        "733-toucannon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                28
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

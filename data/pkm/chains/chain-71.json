@@ -1,0 +1,30 @@
+{
+    "ids": [
+        143,
+        446
+    ],
+    "chains": [
+        {
+            "targets": {
+                "446-munchlax": {
+                    "pokemon": 446,
+                    "form": "munchlax"
+                },
+                "143-snorlax": {
+                    "pokemon": 143,
+                    "form": "snorlax"
+                }
+            },
+            "changes": {
+                "446-munchlax > 143-snorlax": {
+                    "targets": [
+                        "446-munchlax",
+                        "143-snorlax"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                }
+            }
+        }
+    ]
+}

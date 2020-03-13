@@ -1,0 +1,188 @@
+{
+    "id": 409,
+    "name": "Rampardos",
+    "experiences-type": "erratic",
+    "texts": [
+        "In ancient times, people would dig up fossils of this Pokémon and use its skull, which is harder than steel, to make helmets.",
+        "This ancient Pokémon used headbutts skillfully. Its brain was really small, so some theories suggest that its stupidity led to its extinction."
+    ],
+    "forms": {
+        "rampardos": {
+            "id": "rampardos",
+            "name": "Rampardos",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "mold-breaker"
+            ],
+            "weight": 102.5,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 97,
+                "attack": 165,
+                "defense": 60,
+                "special-attack": 65,
+                "special-defense": 50,
+                "speed": 58
+            },
+            "hidden-abilities": [
+                "sheer-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "pursuit",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "pursuit",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 19,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "chip-away",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 51,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 58,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 210,
+    "classification": "head-butt",
+    "names": {
+        "de": "Rameidon",
+        "en": "Rampardos",
+        "es": "Rampardos",
+        "fr": "Charkos",
+        "it": "Rampardos",
+        "jp": "ラムパルド",
+        "kr": "램펄드",
+        "zh": "战槌龙",
+        "zh-CHS": "战槌龙",
+        "zh-CHT": "戰槌龍"
+    },
+    "species": [
+        "monster"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 173
+    }
+}

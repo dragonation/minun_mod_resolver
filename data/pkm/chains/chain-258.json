@@ -1,0 +1,57 @@
+{
+    "ids": [
+        519,
+        520,
+        521
+    ],
+    "chains": [
+        {
+            "targets": {
+                "519-pidove": {
+                    "pokemon": 519,
+                    "form": "pidove"
+                },
+                "520-tranquill": {
+                    "pokemon": 520,
+                    "form": "tranquill"
+                },
+                "521-unfezant": {
+                    "pokemon": 521,
+                    "form": "unfezant"
+                }
+            },
+            "changes": {
+                "519-pidove > 520-tranquill": {
+                    "targets": [
+                        "519-pidove",
+                        "520-tranquill"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                21
+                            ]
+                        }
+                    ]
+                },
+                "520-tranquill > 521-unfezant": {
+                    "targets": [
+                        "520-tranquill",
+                        "521-unfezant"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "ids": [
+        498,
+        499,
+        500
+    ],
+    "chains": [
+        {
+            "targets": {
+                "498-tepig": {
+                    "pokemon": 498,
+                    "form": "tepig"
+                },
+                "499-pignite": {
+                    "pokemon": 499,
+                    "form": "pignite"
+                },
+                "500-emboar": {
+                    "pokemon": 500,
+                    "form": "emboar"
+                }
+            },
+            "changes": {
+                "498-tepig > 499-pignite": {
+                    "targets": [
+                        "498-tepig",
+                        "499-pignite"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                17
+                            ]
+                        }
+                    ]
+                },
+                "499-pignite > 500-emboar": {
+                    "targets": [
+                        "499-pignite",
+                        "500-emboar"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

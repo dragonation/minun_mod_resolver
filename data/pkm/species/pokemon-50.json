@@ -1,0 +1,299 @@
+{
+    "id": 50,
+    "name": "Diglett",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "If a Diglett digs through a field, it leaves the soil perfectly tilled and ideal for planting crops.",
+        "It burrows through the ground at a shallow depth. It leaves raised earth in its wake, making it easy to spot."
+    ],
+    "forms": {
+        "diglett": {
+            "id": "diglett",
+            "name": "Diglett",
+            "shape": "head-base",
+            "abilities": [
+                "sand-veil",
+                "arena-trap"
+            ],
+            "weight": 0.8,
+            "height": 0.2,
+            "base-stats": {
+                "health-points": 10,
+                "attack": 55,
+                "defense": 25,
+                "special-attack": 35,
+                "special-defense": 45,
+                "speed": 95
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "fissure",
+                    "type": "ground",
+                    "category": "physical",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "brown"
+        },
+        "alolan-diglett": {
+            "id": "alolan-diglett",
+            "name": "Alolan Diglett",
+            "shape": "head-base",
+            "abilities": [
+                "sand-veil",
+                "tangling-hair"
+            ],
+            "weight": 1,
+            "height": 0.2,
+            "base-stats": {
+                "health-points": 10,
+                "attack": 55,
+                "defense": 30,
+                "special-attack": 35,
+                "special-defense": 45,
+                "speed": 90
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "metal-claw",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 95
+                },
+                {
+                    "level": 4,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "fissure",
+                    "type": "ground",
+                    "category": "physical",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "ground",
+                "steel"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 21,
+    "classification": "mole",
+    "names": {
+        "de": "Digda",
+        "en": "Diglett",
+        "es": "Diglett",
+        "fr": "Taupiqueur",
+        "it": "Diglett",
+        "jp": "ディグダ",
+        "kr": "디그다",
+        "zh": "地鼠",
+        "zh-CHS": "地鼠",
+        "zh-CHT": "地鼠"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "soft-sand"
+    },
+    "capture-rate": 255,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 53
+    }
+}

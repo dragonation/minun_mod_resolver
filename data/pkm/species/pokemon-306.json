@@ -1,0 +1,425 @@
+{
+    "id": 306,
+    "name": "Aggron",
+    "experiences-type": "slow",
+    "texts": [
+        "It claims an entire mountain as its own. The more wounds it has, the more it has battled, so don't take it lightly.",
+        "While seeking iron for food, it digs tunnels by breaking through bedrock with its steel horns."
+    ],
+    "forms": {
+        "aggron": {
+            "id": "aggron",
+            "name": "Aggron",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "sturdy",
+                "rock-head"
+            ],
+            "weight": 360,
+            "height": 2.1,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 110,
+                "defense": 180,
+                "special-attack": 60,
+                "special-defense": 60,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "heavy-metal"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "metal-claw",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 95
+                },
+                {
+                    "level": 13,
+                    "name": "rock-tomb",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 16,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 22,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 28,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "iron-tail",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 75
+                },
+                {
+                    "level": 39,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 57,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 63,
+                    "name": "metal-burst",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel",
+                "rock"
+            ],
+            "color": "gray"
+        },
+        "mega-aggron": {
+            "id": "mega-aggron",
+            "name": "Mega Aggron",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "filter"
+            ],
+            "weight": 395,
+            "height": 2.2,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 140,
+                "defense": 230,
+                "special-attack": 60,
+                "special-defense": 80,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "heavy-metal"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "metal-claw",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 95
+                },
+                {
+                    "level": 13,
+                    "name": "rock-tomb",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 16,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 22,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 28,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "iron-tail",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 75
+                },
+                {
+                    "level": 39,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 57,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 63,
+                    "name": "metal-burst",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 151,
+    "changes": [
+        {
+            "targets": {
+                "306-aggron": {
+                    "pokemon": 306,
+                    "form": "aggron"
+                },
+                "306-mega-aggron": {
+                    "pokemon": 306,
+                    "form": "mega-aggron"
+                }
+            },
+            "changes": {
+                "306-aggron <> 306-mega-aggron": {
+                    "targets": [
+                        "306-aggron",
+                        "306-mega-aggron"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "aggronite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "iron-armor",
+    "names": {
+        "de": "Stolloss",
+        "en": "Aggron",
+        "es": "Aggron",
+        "fr": "Galeking",
+        "it": "Aggron",
+        "jp": "ボスゴドラ",
+        "kr": "보스로라",
+        "zh": "波士可多拉",
+        "zh-CHS": "波士可多拉",
+        "zh-CHT": "波士可多拉"
+    },
+    "species": [
+        "monster"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "hard-stone"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 36,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 3,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 239
+    }
+}

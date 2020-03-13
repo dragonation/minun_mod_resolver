@@ -1,0 +1,358 @@
+{
+    "id": 115,
+    "name": "Kangaskhan",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Kangaskhan protects its child by keeping it in its pouch. It has zero forgiveness for those who harm its child and will beat them down.",
+        "You shouldn't get close to the child when it's playing outside its mother's pouch. Its mother is always nearby watching over it."
+    ],
+    "forms": {
+        "kangaskhan": {
+            "id": "kangaskhan",
+            "name": "Kangaskhan",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "early-bird",
+                "scrappy"
+            ],
+            "weight": 80,
+            "height": 2.2,
+            "base-stats": {
+                "health-points": 105,
+                "attack": 95,
+                "defense": 80,
+                "special-attack": 40,
+                "special-defense": 80,
+                "speed": 90
+            },
+            "hidden-abilities": [
+                "inner-focus"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "comet-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 22,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "mega-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "chip-away",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "dizzy-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "brown"
+        },
+        "mega-kangaskhan": {
+            "id": "mega-kangaskhan",
+            "name": "Mega Kangaskhan",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "parental-bond"
+            ],
+            "weight": 100,
+            "height": 2.2,
+            "base-stats": {
+                "health-points": 105,
+                "attack": 125,
+                "defense": 100,
+                "special-attack": 60,
+                "special-defense": 100,
+                "speed": 100
+            },
+            "hidden-abilities": [
+                "inner-focus"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "comet-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 22,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "mega-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "chip-away",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "dizzy-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "normal"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 52,
+    "changes": [
+        {
+            "targets": {
+                "115-kangaskhan": {
+                    "pokemon": 115,
+                    "form": "kangaskhan"
+                },
+                "115-mega-kangaskhan": {
+                    "pokemon": 115,
+                    "form": "mega-kangaskhan"
+                }
+            },
+            "changes": {
+                "115-kangaskhan <> 115-mega-kangaskhan": {
+                    "targets": [
+                        "115-kangaskhan",
+                        "115-mega-kangaskhan"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "kangaskhanite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "parent",
+    "names": {
+        "de": "Kangama",
+        "en": "Kangaskhan",
+        "es": "Kangaskhan",
+        "fr": "Kangourex",
+        "it": "Kangaskhan",
+        "jp": "ガルーラ",
+        "kr": "캥카",
+        "zh": "袋兽",
+        "zh-CHS": "袋兽",
+        "zh-CHT": "袋獸"
+    },
+    "species": [
+        "monster"
+    ],
+    "gender": "0/8",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 2,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 172
+    }
+}

@@ -1,0 +1,182 @@
+{
+    "id": 703,
+    "name": "Carbink",
+    "experiences-type": "slow",
+    "texts": [
+        "Some say that deep beneath the surface of the world, a pack of Carbink live with their queen in a kingdom of jewels.",
+        "To keep the jewels on their bodies free of tarnish, packs of Carbink use their soft manes to polish one another's jewels."
+    ],
+    "forms": {
+        "carbink": {
+            "id": "carbink",
+            "name": "Carbink",
+            "shape": "head",
+            "abilities": [
+                "clear-body"
+            ],
+            "weight": 5.7,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 50,
+                "defense": 150,
+                "special-attack": 50,
+                "special-defense": 150,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "sturdy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 5,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 8,
+                    "name": "sharpen",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "reflect",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 21,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 27,
+                    "name": "guard-split",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "skill-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 50,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 70,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "rock",
+                "fairy"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 353,
+    "classification": "jewel",
+    "names": {
+        "de": "Rocara",
+        "en": "Carbink",
+        "es": "Carbink",
+        "fr": "Strassie",
+        "it": "Carbink",
+        "jp": "メレシー",
+        "kr": "멜리시",
+        "zh": "小碎钻",
+        "zh-CHS": "小碎钻",
+        "zh-CHT": "小碎鑽"
+    },
+    "species": [
+        "fairy",
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 60,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 100
+    }
+}

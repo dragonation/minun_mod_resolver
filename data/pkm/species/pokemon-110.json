@@ -1,0 +1,411 @@
+{
+    "id": 110,
+    "name": "Weezing",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It mixes gases between its two bodies. It's said that these Pokémon were seen all over the Galar region back in the day.",
+        "It can't suck in air quite as well as a Galarian Weezing, but the toxins it creates are more potent than those of its counterpart."
+    ],
+    "forms": {
+        "weezing": {
+            "id": "weezing",
+            "name": "Weezing",
+            "shape": "multiple",
+            "abilities": [
+                "levitate",
+                "neutralizing-gas"
+            ],
+            "weight": 9.5,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 90,
+                "defense": 120,
+                "special-attack": 85,
+                "special-defense": 70,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "stench"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "heat-wave",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "poison-gas",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 30,
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "smokescreen",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "clear-smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 50
+                },
+                {
+                    "level": 16,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "sludge",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "haze",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "sludge-bomb",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 44,
+                    "name": "belch",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 90
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 62,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "poison"
+            ],
+            "color": "purple"
+        },
+        "galarian-weezing": {
+            "id": "galarian-weezing",
+            "name": "Galarian Weezing",
+            "shape": "multiple",
+            "abilities": [
+                "levitate",
+                "neutralizing-gas"
+            ],
+            "weight": 16,
+            "height": 3,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 90,
+                "defense": 120,
+                "special-attack": 85,
+                "special-defense": 70,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "misty-surge"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "strange-steam",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "defog",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "heat-wave",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 30,
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "smokescreen",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "haze",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "poison-gas",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fairy-wind",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aromatic-mist",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "clear-smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 50
+                },
+                {
+                    "level": 16,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "sludge",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "sludge-bomb",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 44,
+                    "name": "belch",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 90
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 62,
+                    "name": "destiny-bond",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 68,
+                    "name": "misty-terrain",
+                    "type": "fairy",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "poison",
+                "fairy"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 48,
+    "classification": "poison-gas",
+    "names": {
+        "de": "Smogmog",
+        "en": "Weezing",
+        "es": "Weezing",
+        "fr": "Smogogo",
+        "it": "Weezing",
+        "jp": "マタドガス",
+        "kr": "또도가스",
+        "zh": "双弹瓦斯",
+        "zh-CHS": "双弹瓦斯",
+        "zh-CHT": "雙彈瓦斯"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "smoke-ball"
+    },
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 172
+    }
+}

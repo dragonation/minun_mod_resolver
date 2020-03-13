@@ -1,0 +1,16 @@
+{
+    "ids": [
+        880
+    ],
+    "chains": [
+        {
+            "targets": {
+                "880-dracozolt": {
+                    "pokemon": 880,
+                    "form": "dracozolt"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

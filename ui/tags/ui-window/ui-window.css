@@ -83,16 +83,18 @@
     padding-right: 40px;
     flex-shrink: 0;
     flex-grow: 0;
-    background-color: $white(0.98);
     transition: background-color 0.3s, color 0.3s, opacity 0.3s, transform 0.3s;
     margin-top: calc(-32px - 1dpx);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: $alpha($white(1), 0.7);
+    backdrop-filter: blur(4px);
+    text-shadow: 0 0 2px #fff;
 
     :host(.active) & {
         color: #0d8ef1;
-        background-color: $white(0.95);
+        background-color: $alpha($white(1), 0.85);
     }
 
 }

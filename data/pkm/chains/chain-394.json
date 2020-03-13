@@ -1,0 +1,16 @@
+{
+    "ids": [
+        776
+    ],
+    "chains": [
+        {
+            "targets": {
+                "776-turtonator": {
+                    "pokemon": 776,
+                    "form": "turtonator"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,167 @@
+{
+    "id": 482,
+    "name": "Azelf",
+    "experiences-type": "slow",
+    "texts": [
+        "Known as \"The Being of Willpower.\" It sleeps at the bottom of a lake to keep the world in balance.",
+        "It is thought that Uxie, Mesprit and Azelf all came from the same egg."
+    ],
+    "forms": {
+        "azelf": {
+            "id": "azelf",
+            "name": "Azelf",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 0.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 125,
+                "defense": 70,
+                "special-attack": 125,
+                "special-defense": 70,
+                "speed": 115
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "last-resort",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 21,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 31,
+                    "name": "uproar",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 61,
+                    "name": "last-resort",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 100
+                },
+                {
+                    "level": 66,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 76,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 236,
+    "classification": "willpower",
+    "names": {
+        "de": "Tobutz",
+        "en": "Azelf",
+        "es": "Azelf",
+        "fr": "Créfadet",
+        "it": "Azelf",
+        "jp": "アグノム",
+        "kr": "아그놈",
+        "zh": "亚克诺姆",
+        "zh-CHS": "亚克诺姆",
+        "zh-CHT": "亞克諾姆"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 81,
+    "initial-happiness": 140,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 261
+    }
+}

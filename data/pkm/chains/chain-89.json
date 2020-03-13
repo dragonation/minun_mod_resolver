@@ -1,0 +1,50 @@
+{
+    "ids": [
+        183,
+        184,
+        298
+    ],
+    "chains": [
+        {
+            "targets": {
+                "298-azurill": {
+                    "pokemon": 298,
+                    "form": "azurill"
+                },
+                "183-marill": {
+                    "pokemon": 183,
+                    "form": "marill"
+                },
+                "184-azumarill": {
+                    "pokemon": 184,
+                    "form": "azumarill"
+                }
+            },
+            "changes": {
+                "298-azurill > 183-marill": {
+                    "targets": [
+                        "298-azurill",
+                        "183-marill"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                },
+                "183-marill > 184-azumarill": {
+                    "targets": [
+                        "183-marill",
+                        "184-azumarill"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                18
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

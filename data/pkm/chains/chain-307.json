@@ -1,0 +1,16 @@
+{
+    "ids": [
+        621
+    ],
+    "chains": [
+        {
+            "targets": {
+                "621-druddigon": {
+                    "pokemon": 621,
+                    "form": "druddigon"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

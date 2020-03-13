@@ -1,0 +1,16 @@
+{
+    "ids": [
+        336
+    ],
+    "chains": [
+        {
+            "targets": {
+                "336-seviper": {
+                    "pokemon": 336,
+                    "form": "seviper"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

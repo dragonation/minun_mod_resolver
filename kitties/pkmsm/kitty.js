@@ -44,20 +44,20 @@ const mxmlOptions = {
 
 
 const modelAnimationTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
-                                                        "data/pkm/templates/model/animation.mxml"), 
+                                                        "data/pkm/templates/pkmsm/animation.mxml"), 
                                                   "utf8");
 const modelSkeletonTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
-                                                       "data/pkm/templates/model/skeleton.mxml"), 
+                                                       "data/pkm/templates/pkmsm/skeleton.mxml"), 
                                                  "utf8");
 const modelMaterialTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
-                                                       "data/pkm/templates/model/material.mxml"), 
+                                                       "data/pkm/templates/pkmsm/material.mxml"), 
                                                  "utf8");
 const modelMeshTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
-                                                   "data/pkm/templates/model/mesh.mxml"), 
+                                                   "data/pkm/templates/pkmsm/mesh.mxml"), 
                                              "utf8");
 
 const modelTemplate = @.fs.readFile.sync(@path(@mewchan().entryPath, 
-                                               "data/pkm/templates/model/model.mxml"), 
+                                               "data/pkm/templates/pkmsm/model.mxml"), 
                                          "utf8");
 
 
@@ -134,23 +134,36 @@ let saveU8Buffer = (array, path, dict) => {
 
     const pokemonBaseScore = 100;
 
-    let keywords = request.keywords.map((keyword) => keyword.trim().toLowerCase());
+    let keywords = request.keywords.map((keyword) => keyword.trim().toLowerCase()).filter((keyword) => keyword);
+    if (keywords.length === 0) {
+        return @.async.resolve([]);
+    }
 
     let pokemons = Object.create(null);
 
     for (let pokemon of Index.list) {
         let score = 0;
         for (let keyword of keywords) {
-            if ((pokemon.id + "").indexOf(keyword) !== -1) {
+            if (("00" + pokemon.id).slice(-3) === keyword) {
                 score += pokemonBaseScore;
-            } else if (("00" + pokemon.id).slice(-3).indexOf(keyword) !== -1) {
+            } else if ((pokemon.id + "") === keyword) {
                 score += pokemonBaseScore;
+            } else if (("00" + pokemon.id).slice(-3).slice(0, keyword.length) === keyword) {
+                score += pokemonBaseScore / 2;
+            } else if ((pokemon.id + "").slice(0, keyword.length) === keyword) {
+                score += pokemonBaseScore / 2;
             }
+
             if (pokemon.name.toLowerCase().indexOf(keyword) !== -1) {
                 score += pokemonBaseScore;
             }
+            for (let lang in pokemon.names) {
+                if (pokemon.names[lang].toLowerCase().indexOf(keyword) !== -1) {
+                    score += pokemonBaseScore;
+                }   
+            }
         }
-        if (score) {
+        if (score && (pokemon.id <= 807)) {
             pokemons[pokemon.id] = @.merge.simple({
                 "score": score,
             }, pokemon);
@@ -171,7 +184,10 @@ let saveU8Buffer = (array, path, dict) => {
         "keywords": request.keywords
     }).then(function (list) {
 
-        let keywords = request.keywords.map((keyword) => keyword.trim().toLowerCase());
+        let keywords = request.keywords.map((keyword) => keyword.trim().toLowerCase()).filter((keyword) => keyword);
+        if (keywords.length === 0) {
+            this.next([]); return;
+        }
 
         let pokemons = Object.create(null);
         for (let pokemon of list) {
@@ -183,12 +199,12 @@ let saveU8Buffer = (array, path, dict) => {
             let models = [];
 
             for (let pokemon of index.pokemons) {
-                if (pokemons[pokemon.id] || (list.length === 0)) {
-                    for (let looper = 0; looper < pokemon.models.length; ++looper) {
-                        let model = pokemon.models[looper];
+                for (let looper = 0; looper < pokemon.models.length; ++looper) {
+                    let model = pokemon.models[looper];
+                    if (Index.isValidModel(pokemon.id, looper)) {
                         let score = 0;
                         if (pokemons[pokemon.id]) {
-                            score = pokemons[pokemon.id].score;
+                            score = pokemons[pokemon.id].score / 2;
                         }
                         for (let feature of model.features) {
                             for (let keyword of keywords) {
@@ -197,13 +213,15 @@ let saveU8Buffer = (array, path, dict) => {
                                 }
                             }
                         }
-                        models.push({
-                            "id": `pokemon-${("00" + pokemon.id).slice(-3)}-${looper}`,
-                            "file": model.file,
-                            "score": score,
-                            "pokemon": Index.list[parseInt(pokemon.id) - 1],
-                            "features": model.features,
-                        });
+                        if (score > 0) {
+                            models.push({
+                                "id": `pokemon-${("00" + pokemon.id).slice(-3)}-${looper}`,
+                                "file": model.file,
+                                "score": score,
+                                "pokemon": Index.list[parseInt(pokemon.id) - 1],
+                                "features": model.features,
+                            });
+                        }
                     }
                 }
             }
@@ -217,6 +235,29 @@ let saveU8Buffer = (array, path, dict) => {
 });
 
 @heard.rpc("pkmsm.listModels").then(function (request) {
+
+    return index.then(function () {
+
+        let models = [];
+
+        for (let pokemon of index.pokemons) {
+            for (let looper = 0; looper < pokemon.models.length; ++looper) {
+                let model = pokemon.models[looper];
+                if (Index.isValidModel(pokemon.id, looper)) {
+                    models.push({
+                        "id": `pokemon-${("00" + pokemon.id).slice(-3)}-${looper}`,
+                        "file": model.file,
+                        "pokemon": Index.list[parseInt(pokemon.id) - 1],
+                        "model": looper,
+                        "features": model.features,
+                    });
+                }
+            }
+        }
+
+        this.next(models);
+
+    });
 
 });
 
@@ -500,7 +541,7 @@ let saveU8Buffer = (array, path, dict) => {
                 }, mxmlOptions.functors)
             }));
 
-            @.fs.copyFile.sync(@path(@mewchan().workingPath, "data/pkm/templates/model/patch.js"),
+            @.fs.copyFile.sync(@path(@mewchan().workingPath, "data/pkm/templates/pkmsm/patch.js"),
                                @path(basePath, "patch.js"));
 
             if (id.split("/").slice(-1)[0] === "shadow") {

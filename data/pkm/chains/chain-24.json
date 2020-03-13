@@ -1,0 +1,37 @@
+{
+    "ids": [
+        56,
+        57
+    ],
+    "chains": [
+        {
+            "targets": {
+                "56-mankey": {
+                    "pokemon": 56,
+                    "form": "mankey"
+                },
+                "57-primeape": {
+                    "pokemon": 57,
+                    "form": "primeape"
+                }
+            },
+            "changes": {
+                "56-mankey > 57-primeape": {
+                    "targets": [
+                        "56-mankey",
+                        "57-primeape"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                28
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

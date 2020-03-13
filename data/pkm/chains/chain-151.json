@@ -1,0 +1,57 @@
+{
+    "ids": [
+        304,
+        305,
+        306
+    ],
+    "chains": [
+        {
+            "targets": {
+                "304-aron": {
+                    "pokemon": 304,
+                    "form": "aron"
+                },
+                "305-lairon": {
+                    "pokemon": 305,
+                    "form": "lairon"
+                },
+                "306-aggron": {
+                    "pokemon": 306,
+                    "form": "aggron"
+                }
+            },
+            "changes": {
+                "304-aron > 305-lairon": {
+                    "targets": [
+                        "304-aron",
+                        "305-lairon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                },
+                "305-lairon > 306-aggron": {
+                    "targets": [
+                        "305-lairon",
+                        "306-aggron"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                42
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

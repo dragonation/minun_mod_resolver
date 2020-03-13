@@ -1,0 +1,169 @@
+{
+    "id": 679,
+    "name": "Honedge",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Honedge's soul once belonged to a person who was killed a long time ago by the sword that makes up Honedge's body.",
+        "The blue eye on the sword's handguard is the true body of Honedge. With its old cloth, it drains people's lives away."
+    ],
+    "forms": {
+        "honedge": {
+            "id": "honedge",
+            "name": "Honedge",
+            "shape": "head-base",
+            "abilities": [
+                "no-guard"
+            ],
+            "weight": 2,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 80,
+                "defense": 100,
+                "special-attack": 35,
+                "special-defense": 37,
+                "speed": 28
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 4,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 16,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "power-trick",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "sacred-sword",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel",
+                "ghost"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 341,
+    "classification": "sword",
+    "names": {
+        "de": "Gramokles",
+        "en": "Honedge",
+        "es": "Honedge",
+        "fr": "Monorpale",
+        "it": "Honedge",
+        "jp": "ヒトツキ",
+        "kr": "단칼빙",
+        "zh": "独剑鞘",
+        "zh-CHS": "独剑鞘",
+        "zh-CHT": "獨劍鞘"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 180,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 65
+    }
+}

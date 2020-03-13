@@ -1,0 +1,167 @@
+{
+    "id": 527,
+    "name": "Woobat",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "While inside a cave, if you look up and see lots of heart-shaped marks lining the walls, it's evidence that Woobat live there.",
+        "It emits ultrasonic waves as it flutters about, searching for its prey—bug Pokémon."
+    ],
+    "forms": {
+        "woobat": {
+            "id": "woobat",
+            "name": "Woobat",
+            "shape": "two-wings",
+            "abilities": [
+                "unaware",
+                "klutz"
+            ],
+            "weight": 2.1,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 45,
+                "defense": 43,
+                "special-attack": 55,
+                "special-defense": 43,
+                "speed": 72
+            },
+            "hidden-abilities": [
+                "simple"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "attract",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "air-cutter",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 20,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 40,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "simple-beam",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic",
+                "flying"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 261,
+    "classification": "bat",
+    "names": {
+        "de": "Fleknoil",
+        "en": "Woobat",
+        "es": "Woobat",
+        "fr": "Chovsourir",
+        "it": "Woobat",
+        "jp": "コロモリ",
+        "kr": "또르박쥐",
+        "zh": "滚滚蝙蝠",
+        "zh-CHS": "滚滚蝙蝠",
+        "zh-CHT": "滾滾蝙蝠"
+    },
+    "species": [
+        "field",
+        "flying"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 65
+    }
+}

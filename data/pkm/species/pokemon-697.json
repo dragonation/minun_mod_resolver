@@ -1,0 +1,235 @@
+{
+    "id": 697,
+    "name": "Tyrantrum",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Complete restoration is impossible, allowing room for theories that its entire body was once covered in a feather-like coat.",
+        "The king of the ancient world, it can easily crunch a car with the devastating strength of its enormous jaws."
+    ],
+    "forms": {
+        "tyrantrum": {
+            "id": "tyrantrum",
+            "name": "Tyrantrum",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "strong-jaw"
+            ],
+            "weight": 270,
+            "height": 2.5,
+            "base-stats": {
+                "health-points": 82,
+                "attack": 121,
+                "defense": 119,
+                "special-attack": 69,
+                "special-defense": 59,
+                "speed": 71
+            },
+            "hidden-abilities": [
+                "rock-head"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "stomp",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 6,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "stomp",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "bide",
+                    "type": "normal",
+                    "category": "physical"
+                },
+                {
+                    "level": 15,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 17,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "dragon-tail",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": 34,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "horn-drill",
+                    "type": "normal",
+                    "category": "physical"
+                },
+                {
+                    "level": 58,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                },
+                {
+                    "level": 68,
+                    "name": "giga-impact",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "rock",
+                "dragon"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 349,
+    "classification": "despot",
+    "names": {
+        "de": "Monargoras",
+        "en": "Tyrantrum",
+        "es": "Tyrantrum",
+        "fr": "Rexillius",
+        "it": "Tyrantrum",
+        "jp": "ガチゴラス",
+        "kr": "견고라스",
+        "zh": "怪颚龙",
+        "zh-CHS": "怪颚龙",
+        "zh-CHT": "怪顎龍"
+    },
+    "species": [
+        "monster",
+        "dragon"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 182
+    }
+}

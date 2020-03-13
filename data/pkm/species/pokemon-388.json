@@ -1,0 +1,173 @@
+{
+    "id": 388,
+    "name": "Grotle",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It lives along water in forests. In the daytime, it leaves the forest to sunbathe its treed shell.",
+        "It knows where pure water wells up. It carries fellow Pokémon there on its back."
+    ],
+    "forms": {
+        "grotle": {
+            "id": "grotle",
+            "name": "Grotle",
+            "shape": "quadruped",
+            "abilities": [
+                "overgrow"
+            ],
+            "weight": 97,
+            "height": 1.1,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 89,
+                "defense": 85,
+                "special-attack": 55,
+                "special-defense": 65,
+                "speed": 36
+            },
+            "hidden-abilities": [
+                "shell-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 9,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 17,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 22,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "mega-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 37,
+                    "name": "synthesis",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "giga-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 52,
+                    "name": "leaf-storm",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 203,
+    "classification": "grove",
+    "names": {
+        "de": "Chelcarain",
+        "en": "Grotle",
+        "es": "Grotle",
+        "fr": "Boskara",
+        "it": "Grotle",
+        "jp": "ハヤシガメ",
+        "kr": "수풀부기",
+        "zh": "树林龟",
+        "zh-CHS": "树林龟",
+        "zh-CHT": "樹林龜"
+    },
+    "species": [
+        "monster",
+        "plant"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 142
+    }
+}

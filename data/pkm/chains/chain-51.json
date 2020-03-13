@@ -1,0 +1,35 @@
+{
+    "ids": [
+        114,
+        465
+    ],
+    "chains": [
+        {
+            "targets": {
+                "114-tangela": {
+                    "pokemon": 114,
+                    "form": "tangela"
+                },
+                "465-tangrowth": {
+                    "pokemon": 465,
+                    "form": "tangrowth"
+                }
+            },
+            "changes": {
+                "114-tangela > 465-tangrowth": {
+                    "targets": [
+                        "114-tangela",
+                        "465-tangrowth"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

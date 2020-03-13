@@ -1,0 +1,37 @@
+{
+    "ids": [
+        677,
+        678
+    ],
+    "chains": [
+        {
+            "targets": {
+                "677-espurr": {
+                    "pokemon": 677,
+                    "form": "espurr"
+                },
+                "678-male-meowstic": {
+                    "pokemon": 678,
+                    "form": "male-meowstic"
+                }
+            },
+            "changes": {
+                "677-espurr > 678-male-meowstic": {
+                    "targets": [
+                        "677-espurr",
+                        "678-male-meowstic"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

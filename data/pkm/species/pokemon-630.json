@@ -1,0 +1,201 @@
+{
+    "id": 630,
+    "name": "Mandibuzz",
+    "experiences-type": "slow",
+    "texts": [
+        "Although it's a bit of a ruffian, this Pokémon will take lost Vullaby under its wing and care for them till they're ready to leave the nest.",
+        "They adorn themselves with bones. There seem to be fashion trends among them, as different bones come into and fall out of popularity."
+    ],
+    "forms": {
+        "mandibuzz": {
+            "id": "mandibuzz",
+            "name": "Mandibuzz",
+            "shape": "two-wings",
+            "abilities": [
+                "big-pecks",
+                "overcoat"
+            ],
+            "weight": 39.5,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 110,
+                "attack": 65,
+                "defense": 105,
+                "special-attack": 55,
+                "special-defense": 95,
+                "speed": 80
+            },
+            "hidden-abilities": [
+                "weak-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "bone-rush",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "sky-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flatter",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "pluck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "bone-rush",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 18,
+                    "name": "tailwind",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "whirlwind",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 48,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 64,
+                    "name": "defog",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 72,
+                    "name": "attract",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 80,
+                    "name": "brave-bird",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dark",
+                "flying"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 312,
+    "classification": "bone-vulture",
+    "names": {
+        "de": "Grypheldis",
+        "en": "Mandibuzz",
+        "es": "Mandibuzz",
+        "fr": "Vaututrice",
+        "it": "Mandibuzz",
+        "jp": "バルジーナ",
+        "kr": "버랜지나",
+        "zh": "秃鹰娜",
+        "zh-CHS": "秃鹰娜",
+        "zh-CHT": "禿鷹娜"
+    },
+    "species": [
+        "flying"
+    ],
+    "gender": "0/8",
+    "holdings": {},
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 2,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 179
+    }
+}

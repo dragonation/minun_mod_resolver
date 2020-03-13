@@ -1,0 +1,37 @@
+{
+    "ids": [
+        513,
+        514
+    ],
+    "chains": [
+        {
+            "targets": {
+                "513-pansear": {
+                    "pokemon": 513,
+                    "form": "pansear"
+                },
+                "514-simisear": {
+                    "pokemon": 514,
+                    "form": "simisear"
+                }
+            },
+            "changes": {
+                "513-pansear > 514-simisear": {
+                    "targets": [
+                        "513-pansear",
+                        "514-simisear"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "fire-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

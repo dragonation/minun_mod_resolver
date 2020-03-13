@@ -1,0 +1,57 @@
+{
+    "ids": [
+        495,
+        496,
+        497
+    ],
+    "chains": [
+        {
+            "targets": {
+                "495-snivy": {
+                    "pokemon": 495,
+                    "form": "snivy"
+                },
+                "496-servine": {
+                    "pokemon": 496,
+                    "form": "servine"
+                },
+                "497-serperior": {
+                    "pokemon": 497,
+                    "form": "serperior"
+                }
+            },
+            "changes": {
+                "495-snivy > 496-servine": {
+                    "targets": [
+                        "495-snivy",
+                        "496-servine"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                17
+                            ]
+                        }
+                    ]
+                },
+                "496-servine > 497-serperior": {
+                    "targets": [
+                        "496-servine",
+                        "497-serperior"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

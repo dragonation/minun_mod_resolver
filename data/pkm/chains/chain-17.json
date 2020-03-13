@@ -1,0 +1,56 @@
+{
+    "ids": [
+        41,
+        42,
+        169
+    ],
+    "chains": [
+        {
+            "targets": {
+                "41-zubat": {
+                    "pokemon": 41,
+                    "form": "zubat"
+                },
+                "42-golbat": {
+                    "pokemon": 42,
+                    "form": "golbat"
+                },
+                "169-crobat": {
+                    "pokemon": 169,
+                    "form": "crobat"
+                }
+            },
+            "changes": {
+                "41-zubat > 42-golbat": {
+                    "targets": [
+                        "41-zubat",
+                        "42-golbat"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                22
+                            ]
+                        }
+                    ]
+                },
+                "42-golbat > 169-crobat": {
+                    "targets": [
+                        "42-golbat",
+                        "169-crobat"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

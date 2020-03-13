@@ -1,0 +1,50 @@
+{
+    "ids": [
+        35,
+        36,
+        173
+    ],
+    "chains": [
+        {
+            "targets": {
+                "173-cleffa": {
+                    "pokemon": 173,
+                    "form": "cleffa"
+                },
+                "35-clefairy": {
+                    "pokemon": 35,
+                    "form": "clefairy"
+                },
+                "36-clefable": {
+                    "pokemon": 36,
+                    "form": "clefable"
+                }
+            },
+            "changes": {
+                "173-cleffa > 35-clefairy": {
+                    "targets": [
+                        "173-cleffa",
+                        "35-clefairy"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                },
+                "35-clefairy > 36-clefable": {
+                    "targets": [
+                        "35-clefairy",
+                        "36-clefable"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "moon-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,194 @@
+{
+    "id": 633,
+    "name": "Deino",
+    "experiences-type": "slow",
+    "texts": [
+        "When it encounters something, its first urge is usually to bite it. If it likes what it tastes, it will commit the associated scent to memory.",
+        "Because it can't see, this Pokémon is constantly biting at everything it touches, trying to keep track of its surroundings."
+    ],
+    "forms": {
+        "deino": {
+            "id": "deino",
+            "name": "Deino",
+            "shape": "quadruped",
+            "abilities": [
+                "hustle"
+            ],
+            "weight": 17.3,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 52,
+                "attack": 65,
+                "defense": 50,
+                "special-attack": 45,
+                "special-defense": 50,
+                "speed": 38
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "assurance",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "work-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 32,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 52,
+                    "name": "dragon-rush",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 75
+                },
+                {
+                    "level": 56,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dark",
+                "dragon"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 315,
+    "classification": "irate",
+    "names": {
+        "de": "Kapuno",
+        "en": "Deino",
+        "es": "Deino",
+        "fr": "Solochi",
+        "it": "Deino",
+        "jp": "モノズ",
+        "kr": "모노두",
+        "zh": "单首龙",
+        "zh-CHS": "单首龙",
+        "zh-CHT": "單首龍"
+    },
+    "species": [
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 41,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

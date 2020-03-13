@@ -1,0 +1,205 @@
+{
+    "id": 781,
+    "name": "Dhelmise",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "After a piece of seaweed merged with debris from a sunken ship, it was reborn as this ghost Pokémon.",
+        "After lowering its anchor, it waits for its prey. It catches large Wailord and drains their life-force."
+    ],
+    "forms": {
+        "dhelmise": {
+            "id": "dhelmise",
+            "name": "Dhelmise",
+            "shape": "head-base",
+            "abilities": [
+                "steelworker"
+            ],
+            "weight": 210,
+            "height": 3.9,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 131,
+                "defense": 100,
+                "special-attack": 86,
+                "special-defense": 90,
+                "speed": 40
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "mega-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "gyro-ball",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "switcheroo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "giga-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 36,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 75
+                },
+                {
+                    "level": 44,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 52,
+                    "name": "anchor-shot",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "energy-ball",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "phantom-force",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "power-whip",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "ghost",
+                "grass"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 399,
+    "classification": "sea-creeper",
+    "names": {
+        "de": "Moruda",
+        "en": "Dhelmise",
+        "es": "Dhelmise",
+        "fr": "Sinistrail",
+        "it": "Dhelmise",
+        "jp": "ダダリン",
+        "kr": "타타륜",
+        "zh": "破破舵轮",
+        "zh-CHS": "破破舵轮",
+        "zh-CHT": ""
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 25,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 181
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "ids": [
+        427,
+        428
+    ],
+    "chains": [
+        {
+            "targets": {
+                "427-buneary": {
+                    "pokemon": 427,
+                    "form": "buneary"
+                },
+                "428-lopunny": {
+                    "pokemon": 428,
+                    "form": "lopunny"
+                }
+            },
+            "changes": {
+                "427-buneary > 428-lopunny": {
+                    "targets": [
+                        "427-buneary",
+                        "428-lopunny"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "friendship": "high",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

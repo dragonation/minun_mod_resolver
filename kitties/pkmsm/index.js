@@ -271,12 +271,16 @@ Index.features = {
     "195": { "0": ["male"], "1": ["female"] },
     "198": { "0": ["male"], "1": ["female"] },
     "201": {
-        "0": ["a"], "1": ["b"], "2": ["c"], "3": ["d"], "4": ["e"],
-        "5": ["f"], "6": ["g"], "7": ["h"], "8": ["i"], "9": ["j"],
-        "10": ["k"], "11": ["l"], "12": ["m"], "13": ["n"], "14": ["o"],
-        "15": ["p"], "16": ["q"], "17": ["r"], "18": ["s"], "19": ["t"],
-        "20": ["u"], "21": ["v"], "22": ["w"], "23": ["x"], "24": ["y"],
-        "25": ["z"], "26": ["!"], "27": ["?"]
+        "0": ["letter-a"], "1": ["letter-b"], "2": ["letter-c"], 
+        "3": ["letter-d"], "4": ["letter-e"], "5": ["letter-f"], 
+        "6": ["letter-g"], "7": ["letter-h"], "8": ["letter-i"], 
+        "9": ["letter-j"], "10": ["letter-k"], "11": ["letter-l"], 
+        "12": ["letter-m"], "13": ["letter-n"], "14": ["letter-o"],
+        "15": ["letter-p"], "16": ["letter-q"], "17": ["letter-r"], 
+        "18": ["letter-s"], "19": ["letter-t"], "20": ["letter-u"], 
+        "21": ["letter-v"], "22": ["letter-w"], "23": ["letter-x"], 
+        "24": ["letter-y"], "25": ["letter-z"], 
+        "26": ["exclamation-mark"], "27": ["question-mark"]
     },
     "202": { "0": ["male"], "1": ["female"] },
     "203": { "0": ["male"], "1": ["female"] },
@@ -396,14 +400,14 @@ Index.features = {
         "9": ["archipelago"], "10": ["high-plains"], "11": ["sandstorm"],
         "12": ["river"], "13": ["monsoon"], "14": ["savanna"],
         "15": ["sun"], "16": ["ocean"], "17": ["jungle"],
-        "18": ["fancy"], "19": ["poke-ball"]
+        "18": ["fancy"], "19": ["pokeball"]
     },
     "668": { "0": ["male"], "1": ["female"] },
     "669": { "0": ["red"], "1": ["yellow"], "2": ["orange"], "3": ["blue"], "4": ["white"] },
     "670": { "0": ["red"], "1": ["yellow"], "2": ["orange"], "3": ["blue"], "4": ["white"], "5": ["eternal"] },
     "671": { "0": ["red"], "1": ["yellow"], "2": ["orange"], "3": ["blue"], "4": ["white"] },
     "676": {
-        "0": ["wild"],
+        "0": ["natural"],
         "1": ["heart"], "2": ["star"], "3": ["diamond"],
         "4": ["debutante"], "5": ["matron"],
         "6": ["dandy"],
@@ -417,7 +421,7 @@ Index.features = {
     "720": { "0": ["confined"], "1": ["unbound"] },
     "735": { "1": ["tatem"] },
     "738": { "1": ["tatem"] },
-    "741": { "0": ["baile"], "1": ["pom-pom"], "2": ["pau"], "3": ["sensu"] },
+    "741": { "0": ["baile"], "1": ["pom-pom"], "2": ["pa-u"], "3": ["sensu"] },
     "743": { "0": ["male"], "1": ["female"] },
     "745": { "0": ["midday"], "1": ["midnight"], "2": ["dusk"] },
     "746": { "0": ["solo"], "1": ["school"] },
@@ -449,5 +453,31 @@ Index.features = {
 };
 
 Index.list = require(@path(entryPath, "data/pkm/list.json"));
+
+Index.isValidModel = function (pokemon, model) {
+
+    if (pokemon >= 808) { return false; }
+
+    switch (pokemon) {
+        case 25: { return model < 2; }
+        case 493: { return model === 0; }
+        case 649: { return model === 0; }
+        case 658: { return model !== 1; }
+        case 710: { return model === 0; }
+        case 711: { return model === 0; }
+        case 718: { return (model === 0) || (model === 1) || (model >= 4); }
+        case 773: { return model === 0; }
+        case 774: { return (model === 0) || (model >= 7); }
+        default: { 
+            if (Index.features[pokemon] && 
+                Index.features[pokemon][model] && 
+                (Index.features[pokemon][model].indexOf("tatem") !== -1)) {
+                return false;
+            }
+            return true; 
+        }
+    }
+
+};
 
 module.exports.Index = Index;

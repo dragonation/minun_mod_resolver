@@ -1,0 +1,57 @@
+{
+    "ids": [
+        582,
+        583,
+        584
+    ],
+    "chains": [
+        {
+            "targets": {
+                "582-vanillite": {
+                    "pokemon": 582,
+                    "form": "vanillite"
+                },
+                "583-vanillish": {
+                    "pokemon": 583,
+                    "form": "vanillish"
+                },
+                "584-vanilluxe": {
+                    "pokemon": 584,
+                    "form": "vanilluxe"
+                }
+            },
+            "changes": {
+                "582-vanillite > 583-vanillish": {
+                    "targets": [
+                        "582-vanillite",
+                        "583-vanillish"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                },
+                "583-vanillish > 584-vanilluxe": {
+                    "targets": [
+                        "583-vanillish",
+                        "584-vanilluxe"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                47
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

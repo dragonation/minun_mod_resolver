@@ -1,0 +1,171 @@
+{
+    "id": 661,
+    "name": "Fletchling",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "While it's an amiable Pokémon, if you touch it unexpectedly, it will heat up its body in an instant, and you'll be burned.",
+        "Its body is always warm. Trainers who live in cold areas apparently sleep with it in their bed."
+    ],
+    "forms": {
+        "fletchling": {
+            "id": "fletchling",
+            "name": "Fletchling",
+            "shape": "two-wings",
+            "abilities": [
+                "big-pecks"
+            ],
+            "weight": 1.7,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 50,
+                "defense": 43,
+                "special-attack": 40,
+                "special-defense": 38,
+                "speed": 62
+            },
+            "hidden-abilities": [
+                "gale-wings"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "roost",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "razor-wind",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "flame-charge",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "acrobatics",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "me-first",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "tailwind",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "steel-wing",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "normal",
+                "flying"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 333,
+    "classification": "tiny-robin",
+    "names": {
+        "de": "Dartiri",
+        "en": "Fletchling",
+        "es": "Fletchling",
+        "fr": "Passerouge",
+        "it": "Fletchling",
+        "jp": "ヤヤコマ",
+        "kr": "화살꼬빈",
+        "zh": "小箭雀",
+        "zh-CHS": "小箭雀",
+        "zh-CHT": "小箭雀"
+    },
+    "species": [
+        "flying"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 56
+    }
+}

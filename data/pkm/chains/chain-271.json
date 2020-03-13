@@ -1,0 +1,37 @@
+{
+    "ids": [
+        548,
+        549
+    ],
+    "chains": [
+        {
+            "targets": {
+                "548-petilil": {
+                    "pokemon": 548,
+                    "form": "petilil"
+                },
+                "549-lilligant": {
+                    "pokemon": 549,
+                    "form": "lilligant"
+                }
+            },
+            "changes": {
+                "548-petilil > 549-lilligant": {
+                    "targets": [
+                        "548-petilil",
+                        "549-lilligant"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "sun-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

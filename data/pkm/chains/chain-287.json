@@ -1,0 +1,37 @@
+{
+    "ids": [
+        580,
+        581
+    ],
+    "chains": [
+        {
+            "targets": {
+                "580-ducklett": {
+                    "pokemon": 580,
+                    "form": "ducklett"
+                },
+                "581-swanna": {
+                    "pokemon": 581,
+                    "form": "swanna"
+                }
+            },
+            "changes": {
+                "580-ducklett > 581-swanna": {
+                    "targets": [
+                        "580-ducklett",
+                        "581-swanna"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

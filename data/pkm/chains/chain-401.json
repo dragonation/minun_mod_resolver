@@ -1,0 +1,16 @@
+{
+    "ids": [
+        785
+    ],
+    "chains": [
+        {
+            "targets": {
+                "785-tapu-koko": {
+                    "pokemon": 785,
+                    "form": "tapu-koko"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

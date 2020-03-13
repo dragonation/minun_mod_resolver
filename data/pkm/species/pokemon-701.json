@@ -1,0 +1,189 @@
+{
+    "id": 701,
+    "name": "Hawlucha",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It drives its opponents to exhaustion with its agile maneuvers, then ends the fight with a flashy finishing move.",
+        "It always strikes a pose before going for its finishing move. Sometimes opponents take advantage of that time to counterattack."
+    ],
+    "forms": {
+        "hawlucha": {
+            "id": "hawlucha",
+            "name": "Hawlucha",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "limber",
+                "unburden"
+            ],
+            "weight": 21.5,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 78,
+                "attack": 92,
+                "defense": 75,
+                "special-attack": 74,
+                "special-defense": 63,
+                "speed": 118
+            },
+            "hidden-abilities": [
+                "mold-breaker"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hone-claws",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "wing-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 16,
+                    "name": "encore",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "feather-dance",
+                    "type": "flying",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "submission",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 80
+                },
+                {
+                    "level": 28,
+                    "name": "bounce",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 85
+                },
+                {
+                    "level": 32,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "roost",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "flying-press",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 95
+                },
+                {
+                    "level": 48,
+                    "name": "high-jump-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 90
+                },
+                {
+                    "level": 52,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "sky-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "fighting",
+                "flying"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 351,
+    "classification": "wrestling",
+    "names": {
+        "de": "Resladero",
+        "en": "Hawlucha",
+        "es": "Hawlucha",
+        "fr": "Brutalibré",
+        "it": "Hawlucha",
+        "jp": "ルチャブル",
+        "kr": "루차불",
+        "zh": "摔角鹰人",
+        "zh-CHS": "摔角鹰人",
+        "zh-CHT": "摔角鷹人"
+    },
+    "species": [
+        "flying",
+        "creature"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "king’s-rock"
+    },
+    "capture-rate": 100,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 175
+    }
+}

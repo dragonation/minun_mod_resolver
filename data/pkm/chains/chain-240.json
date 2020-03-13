@@ -1,0 +1,16 @@
+{
+    "ids": [
+        486
+    ],
+    "chains": [
+        {
+            "targets": {
+                "486-regigigas": {
+                    "pokemon": 486,
+                    "form": "regigigas"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

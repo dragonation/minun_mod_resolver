@@ -1,0 +1,66 @@
+{
+    "ids": [
+        88,
+        89
+    ],
+    "chains": [
+        {
+            "targets": {
+                "88-grimer": {
+                    "pokemon": 88,
+                    "form": "grimer"
+                },
+                "89-muk": {
+                    "pokemon": 89,
+                    "form": "muk"
+                }
+            },
+            "changes": {
+                "88-grimer > 89-muk": {
+                    "targets": [
+                        "88-grimer",
+                        "89-muk"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                38
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "88-alolan-grimer": {
+                    "pokemon": 88,
+                    "form": "alolan-grimer"
+                },
+                "89-alolan-muk": {
+                    "pokemon": 89,
+                    "form": "alolan-muk"
+                }
+            },
+            "changes": {
+                "88-alolan-grimer > 89-alolan-muk": {
+                    "targets": [
+                        "88-alolan-grimer",
+                        "89-alolan-muk"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                38
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

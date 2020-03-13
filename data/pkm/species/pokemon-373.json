@@ -1,0 +1,469 @@
+{
+    "id": 373,
+    "name": "Salamence",
+    "experiences-type": "slow",
+    "texts": [
+        "Overjoyed at finally being able to fly, it flies all over the place and usually doesn't land until it's completely exhausted and needs to sleep.",
+        "Thanks to its fervent wishes, the cells in its body finally mutated, and at last it has its heart's desire—wings."
+    ],
+    "forms": {
+        "salamence": {
+            "id": "salamence",
+            "name": "Salamence",
+            "shape": "quadruped",
+            "abilities": [
+                "intimidate"
+            ],
+            "weight": 102.6,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 145,
+                "defense": 130,
+                "special-attack": 120,
+                "special-defense": 90,
+                "speed": 120
+            },
+            "hidden-abilities": [
+                "moxie"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "fly",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "dragon-tail",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "fly",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 95
+                },
+                {
+                    "level": 4,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 42,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 63,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dragon",
+                "flying"
+            ],
+            "color": "blue"
+        },
+        "mega-salamence": {
+            "id": "mega-salamence",
+            "name": "Mega Salamence",
+            "shape": "quadruped",
+            "abilities": [
+                "aerilate"
+            ],
+            "weight": 112.6,
+            "height": 1.8,
+            "base-stats": {
+                "health-points": 95,
+                "attack": 145,
+                "defense": 130,
+                "special-attack": 120,
+                "special-defense": 90,
+                "speed": 120
+            },
+            "hidden-abilities": [
+                "moxie"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "fly",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "dragon-tail",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "fly",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 95
+                },
+                {
+                    "level": 4,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 42,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 63,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dragon",
+                "flying"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 191,
+    "changes": [
+        {
+            "targets": {
+                "373-salamence": {
+                    "pokemon": 373,
+                    "form": "salamence"
+                },
+                "373-mega-salamence": {
+                    "pokemon": 373,
+                    "form": "mega-salamence"
+                }
+            },
+            "changes": {
+                "373-salamence <> 373-mega-salamence": {
+                    "targets": [
+                        "373-salamence",
+                        "373-mega-salamence"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "salamencite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "dragon",
+    "names": {
+        "de": "Brutalanda",
+        "en": "Salamence",
+        "es": "Salamence",
+        "fr": "Drattak",
+        "it": "Salamence",
+        "jp": "ボーマンダ",
+        "kr": "보만다",
+        "zh": "暴飞龙",
+        "zh-CHS": "暴飞龙",
+        "zh-CHT": "暴飛龍"
+    },
+    "species": [
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "dragon-fang"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 41,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 3,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 270
+    }
+}

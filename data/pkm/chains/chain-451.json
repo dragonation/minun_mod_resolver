@@ -1,0 +1,37 @@
+{
+    "ids": [
+        878,
+        879
+    ],
+    "chains": [
+        {
+            "targets": {
+                "878-cufant": {
+                    "pokemon": 878,
+                    "form": "cufant"
+                },
+                "879-copperajah": {
+                    "pokemon": 879,
+                    "form": "copperajah"
+                }
+            },
+            "changes": {
+                "878-cufant > 879-copperajah": {
+                    "targets": [
+                        "878-cufant",
+                        "879-copperajah"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

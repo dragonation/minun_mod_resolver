@@ -1,0 +1,16 @@
+{
+    "ids": [
+        488
+    ],
+    "chains": [
+        {
+            "targets": {
+                "488-cresselia": {
+                    "pokemon": 488,
+                    "form": "cresselia"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

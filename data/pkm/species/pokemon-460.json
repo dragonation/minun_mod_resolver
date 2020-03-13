@@ -1,0 +1,354 @@
+{
+    "id": 460,
+    "name": "Abomasnow",
+    "experiences-type": "slow",
+    "texts": [
+        "If it sees any packs of Darumaka going after Snover, it chases them off, swinging its sizable arms like hammers.",
+        "This Pokémon is known to bring blizzards. A shake of its massive body is enough to cause whiteout conditions."
+    ],
+    "forms": {
+        "abomasnow": {
+            "id": "abomasnow",
+            "name": "Abomasnow",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "snow-warning"
+            ],
+            "weight": 135.5,
+            "height": 2.2,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 92,
+                "defense": 75,
+                "special-attack": 92,
+                "special-defense": 85,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "soundproof"
+            ],
+            "skills": [
+                {
+                    "level": null,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aurora-veil",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leafage",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "ice-shard",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 25,
+                    "name": "icy-wind",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "ingrain",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "wood-hammer",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 56,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "grass",
+                "ice"
+            ],
+            "color": "white"
+        },
+        "mega-abomasnow": {
+            "id": "mega-abomasnow",
+            "name": "Mega Abomasnow",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "snow-warning"
+            ],
+            "weight": 185,
+            "height": 2.7,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 132,
+                "defense": 105,
+                "special-attack": 132,
+                "special-defense": 105,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "soundproof"
+            ],
+            "skills": [
+                {
+                    "level": null,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "aurora-veil",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "powder-snow",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leafage",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "ice-shard",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 25,
+                    "name": "icy-wind",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 35,
+                    "name": "ingrain",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "wood-hammer",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 56,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "grass",
+                "ice"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 232,
+    "changes": [
+        {
+            "targets": {
+                "460-abomasnow": {
+                    "pokemon": 460,
+                    "form": "abomasnow"
+                },
+                "460-mega-abomasnow": {
+                    "pokemon": 460,
+                    "form": "mega-abomasnow"
+                }
+            },
+            "changes": {
+                "460-abomasnow <> 460-mega-abomasnow": {
+                    "targets": [
+                        "460-abomasnow",
+                        "460-mega-abomasnow"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "abomasite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "frosted-tree",
+    "names": {
+        "de": "Rexblisar",
+        "en": "Abomasnow",
+        "es": "Abomasnow",
+        "fr": "Blizzaroi",
+        "it": "Abomasnow",
+        "jp": "ユキノオー",
+        "kr": "눈설왕",
+        "zh": "暴雪王",
+        "zh-CHS": "暴雪王",
+        "zh-CHT": "暴雪王"
+    },
+    "species": [
+        "monster",
+        "plant"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "never-melt-ice"
+    },
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 173
+    }
+}

@@ -1,0 +1,176 @@
+{
+    "id": 267,
+    "name": "Beautifly",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Vibrantly patterned wings are its prominent feature. It sucks sweet flower nectar with its long mouth.",
+        "It has an aggressive nature. It stabs prey with its long, narrow mouth to drain the prey's fluids."
+    ],
+    "forms": {
+        "beautifly": {
+            "id": "beautifly",
+            "name": "Beautifly",
+            "shape": "more-wings",
+            "abilities": [
+                "swarm"
+            ],
+            "weight": 28.4,
+            "height": 1,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 70,
+                "defense": 50,
+                "special-attack": 100,
+                "special-defense": 50,
+                "speed": 65
+            },
+            "hidden-abilities": [
+                "rivalry"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "gust",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 17,
+                    "name": "morning-sun",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "air-cutter",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 22,
+                    "name": "mega-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "silver-wind",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "attract",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "whirlwind",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "giga-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "bug",
+                "flying"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 135,
+    "classification": "butterfly",
+    "names": {
+        "de": "Papinella",
+        "en": "Beautifly",
+        "es": "Beautifly",
+        "fr": "Charmillon",
+        "it": "Beautifly",
+        "jp": "アゲハント",
+        "kr": "뷰티플라이",
+        "zh": "狩猎凤蝶",
+        "zh-CHS": "狩猎凤蝶",
+        "zh-CHT": "狩獵鳳蝶"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "shed-shell"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 178
+    }
+}

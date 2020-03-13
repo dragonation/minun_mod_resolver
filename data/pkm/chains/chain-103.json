@@ -1,0 +1,35 @@
+{
+    "ids": [
+        207,
+        472
+    ],
+    "chains": [
+        {
+            "targets": {
+                "207-gligar": {
+                    "pokemon": 207,
+                    "form": "gligar"
+                },
+                "472-gliscor": {
+                    "pokemon": 472,
+                    "form": "gliscor"
+                }
+            },
+            "changes": {
+                "207-gligar > 472-gliscor": {
+                    "targets": [
+                        "207-gligar",
+                        "472-gliscor"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

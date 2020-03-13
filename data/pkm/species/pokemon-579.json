@@ -1,0 +1,188 @@
+{
+    "id": 579,
+    "name": "Reuniclus",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "While it could use its psychic abilities in battle, this Pokémon prefers to swing its powerful arms around to beat opponents into submission.",
+        "It's said that drinking the liquid surrounding Reuniclus grants wisdom. Problem is, the liquid is highly toxic to anything besides Reuniclus itself."
+    ],
+    "forms": {
+        "reuniclus": {
+            "id": "reuniclus",
+            "name": "Reuniclus",
+            "shape": "head-arms",
+            "abilities": [
+                "overcoat",
+                "magic-guard"
+            ],
+            "weight": 20.1,
+            "height": 1,
+            "base-stats": {
+                "health-points": 110,
+                "attack": 65,
+                "defense": 75,
+                "special-attack": 125,
+                "special-defense": 85,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "regenerator"
+            ],
+            "skills": [
+                {
+                    "level": null,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "psyshock",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "reflect",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "ally-switch",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "pain-split",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "skill-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 56,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "wonder-room",
+                    "type": "psychic",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 286,
+    "classification": "multiplying",
+    "names": {
+        "de": "Zytomega",
+        "en": "Reuniclus",
+        "es": "Reuniclus",
+        "fr": "Symbios",
+        "it": "Reuniclus",
+        "jp": "ランクルス",
+        "kr": "란쿨루스",
+        "zh": "人造细胞卵",
+        "zh-CHS": "人造细胞卵",
+        "zh-CHT": "人造細胞卵"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 50,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 221
+    }
+}

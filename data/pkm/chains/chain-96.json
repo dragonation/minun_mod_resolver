@@ -1,0 +1,37 @@
+{
+    "ids": [
+        198,
+        430
+    ],
+    "chains": [
+        {
+            "targets": {
+                "198-murkrow": {
+                    "pokemon": 198,
+                    "form": "murkrow"
+                },
+                "430-honchkrow": {
+                    "pokemon": 430,
+                    "form": "honchkrow"
+                }
+            },
+            "changes": {
+                "198-murkrow > 430-honchkrow": {
+                    "targets": [
+                        "198-murkrow",
+                        "430-honchkrow"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dusk-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

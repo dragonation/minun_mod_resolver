@@ -1,0 +1,57 @@
+{
+    "ids": [
+        633,
+        634,
+        635
+    ],
+    "chains": [
+        {
+            "targets": {
+                "633-deino": {
+                    "pokemon": 633,
+                    "form": "deino"
+                },
+                "634-zweilous": {
+                    "pokemon": 634,
+                    "form": "zweilous"
+                },
+                "635-hydreigon": {
+                    "pokemon": 635,
+                    "form": "hydreigon"
+                }
+            },
+            "changes": {
+                "633-deino > 634-zweilous": {
+                    "targets": [
+                        "633-deino",
+                        "634-zweilous"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                50
+                            ]
+                        }
+                    ]
+                },
+                "634-zweilous > 635-hydreigon": {
+                    "targets": [
+                        "634-zweilous",
+                        "635-hydreigon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                64
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

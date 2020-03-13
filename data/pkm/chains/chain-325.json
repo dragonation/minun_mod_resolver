@@ -1,0 +1,16 @@
+{
+    "ids": [
+        646
+    ],
+    "chains": [
+        {
+            "targets": {
+                "646-kyurem": {
+                    "pokemon": 646,
+                    "form": "kyurem"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

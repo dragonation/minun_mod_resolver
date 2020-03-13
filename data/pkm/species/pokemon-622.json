@@ -1,0 +1,192 @@
+{
+    "id": 622,
+    "name": "Golett",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "They were sculpted from clay in ancient times. No one knows why, but some of them are driven to continually line up boulders.",
+        "This Pokémon was created from clay. It received orders from its master many thousands of years ago, and it still follows those orders to this day."
+    ],
+    "forms": {
+        "golett": {
+            "id": "golett",
+            "name": "Golett",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "iron-fist",
+                "klutz"
+            ],
+            "weight": 92,
+            "height": 1,
+            "base-stats": {
+                "health-points": 59,
+                "attack": 74,
+                "defense": 50,
+                "special-attack": 35,
+                "special-defense": 50,
+                "speed": 35
+            },
+            "hidden-abilities": [
+                "no-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "shadow-punch",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 16,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stomping-tantrum",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "mega-punch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 85
+                },
+                {
+                    "level": 36,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "phantom-force",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 52,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "dynamic-punch",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 50
+                }
+            ],
+            "types": [
+                "ground",
+                "ghost"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 308,
+    "classification": "automaton",
+    "names": {
+        "de": "Golbit",
+        "en": "Golett",
+        "es": "Golett",
+        "fr": "Gringolem",
+        "it": "Golett",
+        "jp": "ゴビット",
+        "kr": "골비람",
+        "zh": "泥偶小人",
+        "zh-CHS": "泥偶小人",
+        "zh-CHT": "泥偶小人"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {
+        "rare": "light-clay"
+    },
+    "capture-rate": 190,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 61
+    }
+}

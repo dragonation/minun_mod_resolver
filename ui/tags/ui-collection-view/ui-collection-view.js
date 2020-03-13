@@ -47,7 +47,7 @@ module.exports = {
 
                 if ((key === "cells") || (key === "sectionHeaders")) { return; }
 
-                let header =this.cellCaches[key].header;
+                let header = this.cellCaches[key].header;
                 if (!header) {
                     return;
                 }
@@ -304,31 +304,7 @@ module.exports = {
             let sizeChanged = sizes.clientWidth !== this.lastClientWidth;
             this.lastClientWidth = sizes.clientWidth;
 
-            if (dataReloaded) {
-                Object.keys(this.cellCaches).forEach((key) => {
-                    if ((key === "cells") || (key === "sectionHeaders")) {
-                        return;
-                    }
-                    if (this.cellCaches[key].header) {
-                        this.cellCaches[key].header.container.addClass("not-used").css({
-                            "top": (-sizes.sectionHeaderSize) + "px"
-                        });
-                        this.cellCaches.sectionHeaders.push(this.cellCaches[key].header);
-                        delete this.cellCaches[key].header;
-                    }
-                    Object.keys(this.cellCaches[key]).forEach((key2) => {
-                        if (key2 === "header") { return; }
-                        if (this.cellCaches[key][key2].cellContainer) {
-                            this.cellCaches[key][key2].cellContainer.addClass("not-used").css({
-                                "left": (-sizes.cellWidth) + "px",
-                                "top": (-sizes.cellHeight) + "px"
-                            });
-                            this.cellCaches.cells.push(this.cellCaches[key][key2]);
-                            delete this.cellCaches[key][key2];
-                        }
-                    });
-                });
-            }
+            let usedCells = Object.create(null);
 
             let cellsGetter = this["cells-getter"];
 
@@ -375,6 +351,10 @@ module.exports = {
                         if (!this.cellCaches[sectionIndex]) {
                             this.cellCaches[sectionIndex] = {};
                         }
+                        if (!usedCells[sectionIndex]) {
+                            usedCells[sectionIndex] = {};
+                        }
+                        usedCells[sectionIndex][cellIndex] = true;
                         let newCell = false;
                         if (!this.cellCaches[sectionIndex][cellIndex]) {
                             this.cellCaches[sectionIndex][cellIndex] = this.cellCaches.cells.pop();
@@ -464,6 +444,10 @@ module.exports = {
                     if (!this.cellCaches[sectionIndex]) {
                         this.cellCaches[sectionIndex] = {};
                     }
+                    if (!usedCells[sectionIndex]) {
+                        usedCells[sectionIndex] = {};
+                    }
+                    usedCells[sectionIndex].header = true;
 
                     let newHeader = false;
                     if (!this.cellCaches[sectionIndex].header) {
@@ -539,6 +523,30 @@ module.exports = {
             }
 
             placeholder.css("height", y + "px");
+
+            Object.keys(this.cellCaches).forEach((key) => {
+                if ((key === "cells") || (key === "sectionHeaders")) {
+                    return;
+                }
+                if (this.cellCaches[key].header && (!usedCells[key].header)) {
+                    this.cellCaches[key].header.container.addClass("not-used").css({
+                        "top": (-sizes.sectionHeaderSize) + "px"
+                    });
+                    this.cellCaches.sectionHeaders.push(this.cellCaches[key].header);
+                    delete this.cellCaches[key].header;
+                }
+                Object.keys(this.cellCaches[key]).forEach((key2) => {
+                    if (key2 === "header") { return; }
+                    if (this.cellCaches[key][key2].cellContainer && (!usedCells[key][key2])) {
+                        this.cellCaches[key][key2].cellContainer.addClass("not-used").css({
+                            "left": (-sizes.cellWidth) + "px",
+                            "top": (-sizes.cellHeight) + "px"
+                        });
+                        this.cellCaches.cells.push(this.cellCaches[key][key2]);
+                        delete this.cellCaches[key][key2];
+                    }
+                });
+            });
 
         }
     },

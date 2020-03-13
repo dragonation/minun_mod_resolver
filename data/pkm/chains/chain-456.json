@@ -1,0 +1,16 @@
+{
+    "ids": [
+        884
+    ],
+    "chains": [
+        {
+            "targets": {
+                "884-duraludon": {
+                    "pokemon": 884,
+                    "form": "duraludon"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

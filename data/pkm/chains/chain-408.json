@@ -1,0 +1,16 @@
+{
+    "ids": [
+        795
+    ],
+    "chains": [
+        {
+            "targets": {
+                "795-pheromosa": {
+                    "pokemon": 795,
+                    "form": "pheromosa"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

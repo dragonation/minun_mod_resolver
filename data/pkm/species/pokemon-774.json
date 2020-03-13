@@ -1,0 +1,2013 @@
+{
+    "id": 774,
+    "name": "Minior",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It lives in the ozone layer, where it becomes food for stronger Pokémon. When it tries to run away, it falls to the ground.",
+        "Although its outer shell is uncommonly durable, the shock of falling to the ground smashes the shell to smithereens."
+    ],
+    "forms": {
+        "red-meteor-form": {
+            "id": "red-meteor-form",
+            "name": "Red Meteor Form Meteor Form",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 40,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 60,
+                "defense": 100,
+                "special-attack": 60,
+                "special-defense": 100,
+                "speed": 60
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "brown"
+        },
+        "orange-meteor-form": {
+            "id": "orange-meteor-form",
+            "name": "Orange Meteor Form Meteor Form",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 40,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 60,
+                "defense": 100,
+                "special-attack": 60,
+                "special-defense": 100,
+                "speed": 60
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "brown"
+        },
+        "yellow-meteor-form": {
+            "id": "yellow-meteor-form",
+            "name": "Yellow Meteor Form Meteor Form",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 40,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 60,
+                "defense": 100,
+                "special-attack": 60,
+                "special-defense": 100,
+                "speed": 60
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "brown"
+        },
+        "green-meteor-form": {
+            "id": "green-meteor-form",
+            "name": "Green Meteor Form Meteor Form",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 40,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 60,
+                "defense": 100,
+                "special-attack": 60,
+                "special-defense": 100,
+                "speed": 60
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "brown"
+        },
+        "blue-meteor-form": {
+            "id": "blue-meteor-form",
+            "name": "Blue Meteor Form Meteor Form",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 40,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 60,
+                "defense": 100,
+                "special-attack": 60,
+                "special-defense": 100,
+                "speed": 60
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "brown"
+        },
+        "indigo-meteor-form": {
+            "id": "indigo-meteor-form",
+            "name": "Indigo Meteor Form Meteor Form",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 40,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 60,
+                "defense": 100,
+                "special-attack": 60,
+                "special-defense": 100,
+                "speed": 60
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "brown"
+        },
+        "violet-meteor-form": {
+            "id": "violet-meteor-form",
+            "name": "Violet Meteor Form Meteor Form",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 40,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 60,
+                "defense": 100,
+                "special-attack": 60,
+                "special-defense": 100,
+                "speed": 60
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "brown"
+        },
+        "red-core-form": {
+            "id": "red-core-form",
+            "name": "Red Core Form Core",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 0.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 100,
+                "defense": 60,
+                "special-attack": 100,
+                "special-defense": 60,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "orange-core-form": {
+            "id": "orange-core-form",
+            "name": "Orange Core Form Core",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 0.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 100,
+                "defense": 60,
+                "special-attack": 100,
+                "special-defense": 60,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "yellow-core-form": {
+            "id": "yellow-core-form",
+            "name": "Yellow Core Form Core",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 0.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 100,
+                "defense": 60,
+                "special-attack": 100,
+                "special-defense": 60,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "green-core-form": {
+            "id": "green-core-form",
+            "name": "Green Core Form Core",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 0.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 100,
+                "defense": 60,
+                "special-attack": 100,
+                "special-defense": 60,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "blue-core-form": {
+            "id": "blue-core-form",
+            "name": "Blue Core Form Core",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 0.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 100,
+                "defense": 60,
+                "special-attack": 100,
+                "special-defense": 60,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "indigo-core-form": {
+            "id": "indigo-core-form",
+            "name": "Indigo Core Form Core",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 0.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 100,
+                "defense": 60,
+                "special-attack": 100,
+                "special-defense": 60,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "white"
+        },
+        "violet-core-form": {
+            "id": "violet-core-form",
+            "name": "Violet Core Form Core",
+            "shape": "head",
+            "abilities": [
+                "shields-down"
+            ],
+            "weight": 0.3,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 100,
+                "defense": 60,
+                "special-attack": 100,
+                "special-defense": 60,
+                "speed": 120
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 8,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 10,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 17,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "flying"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 392,
+    "changes": [
+        {
+            "targets": {
+                "774-red-meteor-form": {
+                    "pokemon": 774,
+                    "strength": "strong",
+                    "form": "red-meteor-form"
+                },
+                "774-red-core-form": {
+                    "pokemon": 774,
+                    "strength": "weak",
+                    "form": "red-core-form"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "774-orange-meteor-form": {
+                    "pokemon": 774,
+                    "strength": "strong",
+                    "form": "orange-meteor-form"
+                },
+                "774-orange-core-form": {
+                    "pokemon": 774,
+                    "strength": "weak",
+                    "form": "orange-core-form"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "774-yellow-meteor-form": {
+                    "pokemon": 774,
+                    "strength": "strong",
+                    "form": "yellow-meteor-form"
+                },
+                "774-yellow-core-form": {
+                    "pokemon": 774,
+                    "strength": "weak",
+                    "form": "yellow-core-form"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "774-green-meteor-form": {
+                    "pokemon": 774,
+                    "strength": "strong",
+                    "form": "green-meteor-form"
+                },
+                "774-green-core-form": {
+                    "pokemon": 774,
+                    "strength": "weak",
+                    "form": "green-core-form"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "774-blue-meteor-form": {
+                    "pokemon": 774,
+                    "strength": "strong",
+                    "form": "blue-meteor-form"
+                },
+                "774-blue-core-form": {
+                    "pokemon": 774,
+                    "strength": "weak",
+                    "form": "blue-core-form"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "774-indigo-meteor-form": {
+                    "pokemon": 774,
+                    "strength": "strong",
+                    "form": "indigo-meteor-form"
+                },
+                "774-indigo-core-form": {
+                    "pokemon": 774,
+                    "strength": "weak",
+                    "form": "indigo-core-form"
+                }
+            },
+            "changes": {}
+        },
+        {
+            "targets": {
+                "774-violet-meteor-form": {
+                    "pokemon": 774,
+                    "strength": "strong",
+                    "form": "violet-meteor-form"
+                },
+                "774-violet-core-form": {
+                    "pokemon": 774,
+                    "strength": "weak",
+                    "form": "violet-core-form"
+                }
+            },
+            "changes": {}
+        }
+    ],
+    "classification": "meteor",
+    "names": {
+        "de": "Meteno",
+        "en": "Minior",
+        "es": "Minior",
+        "fr": "Météno",
+        "it": "Minior",
+        "jp": "メテノ",
+        "kr": "메테노",
+        "zh": "小陨星",
+        "zh-CHS": "小陨星",
+        "zh-CHT": ""
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {
+        "rare": "star-piece"
+    },
+    "capture-rate": 30,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 154
+    }
+}

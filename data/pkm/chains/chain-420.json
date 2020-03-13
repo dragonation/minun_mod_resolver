@@ -1,0 +1,37 @@
+{
+    "ids": [
+        808,
+        809
+    ],
+    "chains": [
+        {
+            "targets": {
+                "808-meltan": {
+                    "pokemon": 808,
+                    "form": "meltan"
+                },
+                "809-melmetal": {
+                    "pokemon": 809,
+                    "form": "melmetal"
+                }
+            },
+            "changes": {
+                "808-meltan > 809-melmetal": {
+                    "targets": [
+                        "808-meltan",
+                        "809-melmetal"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "meltan-candy"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

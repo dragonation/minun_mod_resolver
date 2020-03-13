@@ -1,0 +1,176 @@
+{
+    "id": 138,
+    "name": "Omanyte",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Omanyte lived in the seas of antiquity. Its fossils have been found bearing bite marks from Archeops, so apparently Archeops preyed on it.",
+        "It was restored from an ancient fossil. Those Helix Fossils are excavated from areas that were once oceans long, long ago."
+    ],
+    "forms": {
+        "omanyte": {
+            "id": "omanyte",
+            "name": "Omanyte",
+            "shape": "tentacles",
+            "abilities": [
+                "swift-swim",
+                "shell-armor"
+            ],
+            "weight": 7.5,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 35,
+                "attack": 40,
+                "defense": 100,
+                "special-attack": 90,
+                "special-defense": 55,
+                "speed": 35
+            },
+            "hidden-abilities": [
+                "weak-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "constrict",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 10,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 19,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "mud-shot",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 28,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "tickle",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 50,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "rock",
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 68,
+    "classification": "spiral",
+    "names": {
+        "de": "Amonitas",
+        "en": "Omanyte",
+        "es": "Omanyte",
+        "fr": "Amonita",
+        "it": "Omanyte",
+        "jp": "オムナイト",
+        "kr": "암나이트",
+        "zh": "菊石兽",
+        "zh-CHS": "菊石兽",
+        "zh-CHT": "菊石獸"
+    },
+    "species": [
+        "amphibians",
+        "aquatic"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 71
+    }
+}

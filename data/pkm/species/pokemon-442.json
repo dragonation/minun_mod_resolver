@@ -1,0 +1,165 @@
+{
+    "id": 442,
+    "name": "Spiritomb",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "A Pokémon that was formed by 108 spirits. It is bound to a fissure in an Odd Keystone.",
+        "It was bound to a fissure in an Odd Keystone as punishment for misdeeds 500 years ago."
+    ],
+    "forms": {
+        "spiritomb": {
+            "id": "spiritomb",
+            "name": "Spiritomb",
+            "shape": "head-base",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 108,
+            "height": 1,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 92,
+                "defense": 108,
+                "special-attack": 92,
+                "special-defense": 108,
+                "speed": 35
+            },
+            "hidden-abilities": [
+                "infiltrator"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "pursuit",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "spite",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 13,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 19,
+                    "name": "dream-eater",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "ominous-wind",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost",
+                "dark"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 224,
+    "classification": "forbidden",
+    "names": {
+        "de": "Kryppuk",
+        "en": "Spiritomb",
+        "es": "Spiritomb",
+        "fr": "Spiritomb",
+        "it": "Spiritomb",
+        "jp": "ミカルゲ",
+        "kr": "화강돌",
+        "zh": "花岩怪",
+        "zh-CHS": "花岩怪",
+        "zh-CHT": "花岩怪"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 100,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 170
+    }
+}

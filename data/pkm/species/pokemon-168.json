@@ -1,0 +1,254 @@
+{
+    "id": 168,
+    "name": "Ariados",
+    "experiences-type": "fast",
+    "texts": [
+        "Every night, it wanders around in search of prey, whose movements it restrains by spewing threads before it bites into them with its fangs.",
+        "It spews threads from its mouth to catch its prey. When night falls, it leaves its web to go hunt aggressively."
+    ],
+    "forms": {
+        "ariados": {
+            "id": "ariados",
+            "name": "Ariados",
+            "shape": "insectoid",
+            "abilities": [
+                "swarm",
+                "insomnia"
+            ],
+            "weight": 33.5,
+            "height": 1.1,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 90,
+                "defense": 70,
+                "special-attack": 60,
+                "special-defense": 70,
+                "speed": 40
+            },
+            "hidden-abilities": [
+                "sniper"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "venom-drench",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fell-stinger",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "poison-sting",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "string-shot",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "constrict",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 10,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 5,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "infestation",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 28,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "spider-web",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 41,
+                    "name": "pin-missile",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 95
+                },
+                {
+                    "level": 46,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "poison-jab",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "cross-poison",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "sticky-web",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 63,
+                    "name": "toxic-thread",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "poison"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 84,
+    "classification": "long-leg",
+    "names": {
+        "de": "Ariados",
+        "en": "Ariados",
+        "es": "Ariados",
+        "fr": "Migalos",
+        "it": "Ariados",
+        "jp": "アリアドス",
+        "kr": "아리아도스",
+        "zh": "阿利多斯",
+        "zh-CHS": "阿利多斯",
+        "zh-CHT": "阿利多斯"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 90,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 140
+    }
+}

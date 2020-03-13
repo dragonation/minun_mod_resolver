@@ -1,0 +1,57 @@
+{
+    "ids": [
+        856,
+        857,
+        858
+    ],
+    "chains": [
+        {
+            "targets": {
+                "856-hatenna": {
+                    "pokemon": 856,
+                    "form": "hatenna"
+                },
+                "857-hattrem": {
+                    "pokemon": 857,
+                    "form": "hattrem"
+                },
+                "858-hatterene": {
+                    "pokemon": 858,
+                    "form": "hatterene"
+                }
+            },
+            "changes": {
+                "856-hatenna > 857-hattrem": {
+                    "targets": [
+                        "856-hatenna",
+                        "857-hattrem"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                },
+                "857-hattrem > 858-hatterene": {
+                    "targets": [
+                        "857-hattrem",
+                        "858-hatterene"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                42
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

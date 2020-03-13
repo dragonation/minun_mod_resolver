@@ -1,0 +1,16 @@
+{
+    "ids": [
+        718
+    ],
+    "chains": [
+        {
+            "targets": {
+                "718-50-percent-form": {
+                    "pokemon": 718,
+                    "form": "50-percent-form"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "ids": [
+        358,
+        433
+    ],
+    "chains": [
+        {
+            "targets": {
+                "433-chingling": {
+                    "pokemon": 433,
+                    "form": "chingling"
+                },
+                "358-chimecho": {
+                    "pokemon": 358,
+                    "form": "chimecho"
+                }
+            },
+            "changes": {
+                "433-chingling > 358-chimecho": {
+                    "targets": [
+                        "433-chingling",
+                        "358-chimecho"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                }
+            }
+        }
+    ]
+}

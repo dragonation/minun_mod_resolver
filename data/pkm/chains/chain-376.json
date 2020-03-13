@@ -1,0 +1,16 @@
+{
+    "ids": [
+        746
+    ],
+    "chains": [
+        {
+            "targets": {
+                "746-solo-form": {
+                    "pokemon": 746,
+                    "form": "solo-form"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

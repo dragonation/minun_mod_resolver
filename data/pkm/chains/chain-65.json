@@ -1,0 +1,16 @@
+{
+    "ids": [
+        132
+    ],
+    "chains": [
+        {
+            "targets": {
+                "132-ditto": {
+                    "pokemon": 132,
+                    "form": "ditto"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

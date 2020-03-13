@@ -1,0 +1,37 @@
+{
+    "ids": [
+        191,
+        192
+    ],
+    "chains": [
+        {
+            "targets": {
+                "191-sunkern": {
+                    "pokemon": 191,
+                    "form": "sunkern"
+                },
+                "192-sunflora": {
+                    "pokemon": 192,
+                    "form": "sunflora"
+                }
+            },
+            "changes": {
+                "191-sunkern > 192-sunflora": {
+                    "targets": [
+                        "191-sunkern",
+                        "192-sunflora"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "sun-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

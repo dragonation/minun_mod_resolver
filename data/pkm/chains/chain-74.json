@@ -1,0 +1,16 @@
+{
+    "ids": [
+        146
+    ],
+    "chains": [
+        {
+            "targets": {
+                "146-moltres": {
+                    "pokemon": 146,
+                    "form": "moltres"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

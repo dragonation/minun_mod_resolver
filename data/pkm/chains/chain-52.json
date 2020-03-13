@@ -1,0 +1,16 @@
+{
+    "ids": [
+        115
+    ],
+    "chains": [
+        {
+            "targets": {
+                "115-kangaskhan": {
+                    "pokemon": 115,
+                    "form": "kangaskhan"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

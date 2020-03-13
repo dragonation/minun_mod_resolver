@@ -1,0 +1,312 @@
+{
+    "id": 449,
+    "name": "Hippopotas",
+    "experiences-type": "slow",
+    "texts": [
+        "It moves through the sands with its mouth open, swallowing sand along with its prey. It gets rid of the sand by spouting it from its nose.",
+        "This Pokémon is active during the day and passes the cold desert nights burrowed snugly into the sand."
+    ],
+    "forms": {
+        "male-hippopotas": {
+            "id": "male-hippopotas",
+            "name": "Male Hippopotas Hippopotas",
+            "shape": "quadruped",
+            "abilities": [
+                "sand-stream"
+            ],
+            "weight": 49.5,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 68,
+                "attack": 72,
+                "defense": 78,
+                "special-attack": 38,
+                "special-defense": 42,
+                "speed": 32
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "sand-tomb",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 16,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 32,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "fissure",
+                    "type": "ground",
+                    "category": "physical",
+                    "accuracy": 30
+                },
+                {
+                    "level": 52,
+                    "name": "slack-off",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "brown"
+        },
+        "female-hippopotas": {
+            "id": "female-hippopotas",
+            "name": "Female Hippopotas Hippopotas",
+            "shape": "quadruped",
+            "abilities": [
+                "sand-stream"
+            ],
+            "weight": 49.5,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 68,
+                "attack": 72,
+                "defense": 78,
+                "special-attack": 38,
+                "special-defense": 42,
+                "speed": 32
+            },
+            "hidden-abilities": [
+                "sand-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "sand-tomb",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 16,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 32,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "fissure",
+                    "type": "ground",
+                    "category": "physical",
+                    "accuracy": 30
+                },
+                {
+                    "level": 52,
+                    "name": "slack-off",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 227,
+    "classification": "hippo",
+    "names": {
+        "de": "Hippopotas",
+        "en": "Hippopotas",
+        "es": "Hippopotas",
+        "fr": "Hippopotas",
+        "it": "Hippopotas",
+        "jp": "ヒポポタス",
+        "kr": "히포포타스",
+        "zh": "沙河马",
+        "zh-CHS": "沙河马",
+        "zh-CHT": "沙河馬"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 140,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 66
+    }
+}

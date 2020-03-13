@@ -1,0 +1,226 @@
+{
+    "id": 219,
+    "name": "Magcargo",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Its brittle shell occasionally spouts intense flames that circulate throughout its body.",
+        "Its body is as hot as lava and is always billowing. Flames will occasionally burst from its shell."
+    ],
+    "forms": {
+        "magcargo": {
+            "id": "magcargo",
+            "name": "Magcargo",
+            "shape": "serpentine",
+            "abilities": [
+                "magma-armor",
+                "flame-body"
+            ],
+            "weight": 55,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 50,
+                "defense": 120,
+                "special-attack": 90,
+                "special-defense": 80,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "weak-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 30,
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": null,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 13,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "incinerate",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "clear-smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 50
+                },
+                {
+                    "level": 22,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "flame-burst",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 34,
+                    "name": "lava-plume",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "amnesia",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 54,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire",
+                "rock"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 110,
+    "classification": "lava",
+    "names": {
+        "de": "Magcargo",
+        "en": "Magcargo",
+        "es": "Magcargo",
+        "fr": "Volcaropod",
+        "it": "Magcargo",
+        "jp": "マグカルゴ",
+        "kr": "마그카르고",
+        "zh": "熔岩蜗牛",
+        "zh-CHS": "熔岩蜗牛",
+        "zh-CHT": "熔岩蝸牛"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 151
+    }
+}

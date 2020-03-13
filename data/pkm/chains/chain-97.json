@@ -1,0 +1,37 @@
+{
+    "ids": [
+        200,
+        429
+    ],
+    "chains": [
+        {
+            "targets": {
+                "200-misdreavus": {
+                    "pokemon": 200,
+                    "form": "misdreavus"
+                },
+                "429-mismagius": {
+                    "pokemon": 429,
+                    "form": "mismagius"
+                }
+            },
+            "changes": {
+                "200-misdreavus > 429-mismagius": {
+                    "targets": [
+                        "200-misdreavus",
+                        "429-mismagius"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dusk-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

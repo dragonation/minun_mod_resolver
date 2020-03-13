@@ -1,0 +1,16 @@
+{
+    "ids": [
+        870
+    ],
+    "chains": [
+        {
+            "targets": {
+                "870-falinks": {
+                    "pokemon": 870,
+                    "form": "falinks"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

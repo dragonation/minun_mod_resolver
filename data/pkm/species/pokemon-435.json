@@ -1,0 +1,215 @@
+{
+    "id": 435,
+    "name": "Skuntank",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "In its belly, it reserves stinky fluid that it shoots from its tail during battle. As this Pokémon's diet varies, so does the stench of its fluid.",
+        "It digs holes in the ground to make its nest. The stench of the fluid it lets fly from the tip of its tail is extremely potent."
+    ],
+    "forms": {
+        "skuntank": {
+            "id": "skuntank",
+            "name": "Skuntank",
+            "shape": "quadruped",
+            "abilities": [
+                "stench",
+                "aftermath"
+            ],
+            "weight": 38,
+            "height": 1,
+            "base-stats": {
+                "health-points": 103,
+                "attack": 93,
+                "defense": 67,
+                "special-attack": 71,
+                "special-defense": 61,
+                "speed": 84
+            },
+            "hidden-abilities": [
+                "keen-eye"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "poison-gas",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "smokescreen",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "acid-spray",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 15,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 18,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "venoshock",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 27,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 30,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "memento",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "belch",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 90
+                },
+                {
+                    "level": 48,
+                    "name": "venom-drench",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "poison",
+                "dark"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 221,
+    "classification": "skunk",
+    "names": {
+        "de": "Skuntank",
+        "en": "Skuntank",
+        "es": "Skuntank",
+        "fr": "Moufflair",
+        "it": "Skuntank",
+        "jp": "スカタンク",
+        "kr": "스컹탱크",
+        "zh": "坦克臭鼬",
+        "zh-CHS": "坦克臭鼬",
+        "zh-CHT": "坦克臭鼬"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 2,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 168
+    }
+}

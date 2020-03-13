@@ -1,0 +1,341 @@
+{
+    "id": 74,
+    "name": "Geodude",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "Geodude that have lived a long life have had all their edges smoothed out until they're totally round. They also have a calm, quiet disposition.",
+        "It uses both hands to climb precipitous cliffs. People who see it in action have been known to take up bouldering."
+    ],
+    "forms": {
+        "geodude": {
+            "id": "geodude",
+            "name": "Geodude",
+            "shape": "head-arms",
+            "abilities": [
+                "rock-head",
+                "sturdy"
+            ],
+            "weight": 20,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 40,
+                "attack": 80,
+                "defense": 100,
+                "special-attack": 30,
+                "special-defense": 30,
+                "speed": 20
+            },
+            "hidden-abilities": [
+                "sand-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "mud-sport",
+                    "type": "ground",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "magnitude",
+                    "type": "ground",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 18,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 34,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "rock",
+                "ground"
+            ],
+            "color": "brown"
+        },
+        "alolan-geodude": {
+            "id": "alolan-geodude",
+            "name": "Alolan Geodude",
+            "shape": "head-arms",
+            "abilities": [
+                "magnet-pull",
+                "sturdy"
+            ],
+            "weight": 20.3,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 40,
+                "attack": 80,
+                "defense": 100,
+                "special-attack": 30,
+                "special-defense": 30,
+                "speed": 20
+            },
+            "hidden-abilities": [
+                "galvanize"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 18,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "self-destruct",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 200,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 34,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "rock",
+                "electric"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 31,
+    "classification": "rock",
+    "names": {
+        "de": "Kleinstein",
+        "en": "Geodude",
+        "es": "Geodude",
+        "fr": "Racaillou",
+        "it": "Geodude",
+        "jp": "イシツブテ",
+        "kr": "꼬마돌",
+        "zh": "小拳石",
+        "zh-CHS": "小拳石",
+        "zh-CHT": "小拳石"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "everstone"
+    },
+    "capture-rate": 255,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

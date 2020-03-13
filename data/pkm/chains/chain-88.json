@@ -1,0 +1,57 @@
+{
+    "ids": [
+        179,
+        180,
+        181
+    ],
+    "chains": [
+        {
+            "targets": {
+                "179-mareep": {
+                    "pokemon": 179,
+                    "form": "mareep"
+                },
+                "180-flaaffy": {
+                    "pokemon": 180,
+                    "form": "flaaffy"
+                },
+                "181-ampharos": {
+                    "pokemon": 181,
+                    "form": "ampharos"
+                }
+            },
+            "changes": {
+                "179-mareep > 180-flaaffy": {
+                    "targets": [
+                        "179-mareep",
+                        "180-flaaffy"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                15
+                            ]
+                        }
+                    ]
+                },
+                "180-flaaffy > 181-ampharos": {
+                    "targets": [
+                        "180-flaaffy",
+                        "181-ampharos"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

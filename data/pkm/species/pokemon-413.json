@@ -1,0 +1,551 @@
+{
+    "id": 413,
+    "name": "Wormadam",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Its appearance changes depending on where it evolved. The materials on hand become a part of its body.",
+        "When Burmy evolved, its cloak became a part of this Pokémon's body. The cloak is never shed."
+    ],
+    "forms": {
+        "plant-cloak": {
+            "id": "plant-cloak",
+            "name": "Plant Cloak",
+            "shape": "head-base",
+            "abilities": [
+                "anticipation"
+            ],
+            "weight": 6.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 59,
+                "defense": 85,
+                "special-attack": 79,
+                "special-defense": 105,
+                "speed": 36
+            },
+            "hidden-abilities": [
+                "overcoat"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 29,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "attract",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "leaf-storm",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 90
+                },
+                {
+                    "level": 50,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "grass"
+            ],
+            "color": "green"
+        },
+        "sandy-cloak": {
+            "id": "sandy-cloak",
+            "name": "Sandy Cloak",
+            "shape": "head-base",
+            "abilities": [
+                "anticipation"
+            ],
+            "weight": 6.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 79,
+                "defense": 105,
+                "special-attack": 59,
+                "special-defense": 85,
+                "speed": 36
+            },
+            "hidden-abilities": [
+                "overcoat"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 29,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "attract",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "fissure",
+                    "type": "ground",
+                    "category": "physical"
+                },
+                {
+                    "level": 50,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "ground"
+            ],
+            "color": "brown"
+        },
+        "trash-cloak": {
+            "id": "trash-cloak",
+            "name": "Trash Cloak",
+            "shape": "head-base",
+            "abilities": [
+                "anticipation"
+            ],
+            "weight": 6.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 69,
+                "defense": 95,
+                "special-attack": 69,
+                "special-defense": 95,
+                "speed": 36
+            },
+            "hidden-abilities": [
+                "overcoat"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "metal-burst",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "mirror-shot",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 85
+                },
+                {
+                    "level": 29,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 32,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "attract",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "steel"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 212,
+    "classification": "bagworm",
+    "names": {
+        "de": "Burmadame",
+        "en": "Wormadam",
+        "es": "Wormadam",
+        "fr": "Cheniselle",
+        "it": "Wormadam",
+        "jp": "ミノマダム",
+        "kr": "도롱마담",
+        "zh": "结草贵妇",
+        "zh-CHS": "结草贵妇",
+        "zh-CHT": "結草貴婦"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "0/8",
+    "holdings": {
+        "rare": "silver-powder"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 2,
+        "speed": 0,
+        "experience": 148
+    }
+}

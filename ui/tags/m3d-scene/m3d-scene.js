@@ -13,7 +13,7 @@ const prepareScene = function (dom) {
     // let camera = options.camera;
     // if (!camera) {
     // TODO: make camera configurable
-    let camera = new THREE.PerspectiveCamera(50, width / height, 0.01, 3000);
+    let camera = new THREE.PerspectiveCamera(50, width / height, 0.001, 3000);
     camera.position.set(50, 50, 100);
     // }
 
@@ -262,8 +262,8 @@ const syncClearColor = function (dom, value) {
     let clearAlpha = 1;
     if (clearColor && (clearColor[0] === "#")) {
         clearColor = parseInt(clearColor.slice(1, 7), 16);
-        if (clearColor.length > 7) {
-            clearAlpha = parseInt(clearColor.slice(7, 9), 16) / 255;
+        if (value.length > 7) {
+            clearAlpha = parseInt(value.slice(7, 9), 16) / 255;
         }
     } else {
         clearColor = NaN;

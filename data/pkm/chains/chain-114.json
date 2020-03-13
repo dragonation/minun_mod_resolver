@@ -1,0 +1,16 @@
+{
+    "ids": [
+        225
+    ],
+    "chains": [
+        {
+            "targets": {
+                "225-delibird": {
+                    "pokemon": 225,
+                    "form": "delibird"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

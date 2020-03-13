@@ -1,0 +1,37 @@
+{
+    "ids": [
+        667,
+        668
+    ],
+    "chains": [
+        {
+            "targets": {
+                "667-litleo": {
+                    "pokemon": 667,
+                    "form": "litleo"
+                },
+                "668-pyroar": {
+                    "pokemon": 668,
+                    "form": "pyroar"
+                }
+            },
+            "changes": {
+                "667-litleo > 668-pyroar": {
+                    "targets": [
+                        "667-litleo",
+                        "668-pyroar"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        359
+    ],
+    "chains": [
+        {
+            "targets": {
+                "359-absol": {
+                    "pokemon": 359,
+                    "form": "absol"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

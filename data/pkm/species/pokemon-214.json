@@ -1,0 +1,406 @@
+{
+    "id": 214,
+    "name": "Heracross",
+    "experiences-type": "slow",
+    "texts": [
+        "It's proud of its thick horn. In Alola, its biggest rival is Vikavolt, which it's always fighting with.",
+        "It roams through forests searching for sweet nectar. Although it boasts fantastic physical strength, it's not that good at flying."
+    ],
+    "forms": {
+        "heracross": {
+            "id": "heracross",
+            "name": "Heracross",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "swarm",
+                "guts"
+            ],
+            "weight": 54,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 125,
+                "defense": 75,
+                "special-attack": 40,
+                "special-defense": 95,
+                "speed": 85
+            },
+            "hidden-abilities": [
+                "moxie"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "arm-thrust",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bullet-seed",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "horn-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 16,
+                    "name": "chip-away",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "fury-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "brick-break",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "pin-missile",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 95
+                },
+                {
+                    "level": 34,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 37,
+                    "name": "megahorn",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 85
+                },
+                {
+                    "level": 43,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "fighting"
+            ],
+            "color": "blue"
+        },
+        "mega-heracross": {
+            "id": "mega-heracross",
+            "name": "Mega Heracross",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "skill-link"
+            ],
+            "weight": 62.5,
+            "height": 1.7,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 185,
+                "defense": 115,
+                "special-attack": 40,
+                "special-defense": 105,
+                "speed": 75
+            },
+            "hidden-abilities": [
+                "moxie"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "arm-thrust",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bullet-seed",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "horn-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "aerial-ace",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 16,
+                    "name": "chip-away",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "fury-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "brick-break",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "pin-missile",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 95
+                },
+                {
+                    "level": 34,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 37,
+                    "name": "megahorn",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 85
+                },
+                {
+                    "level": 43,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "bug",
+                "fighting"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 107,
+    "changes": [
+        {
+            "targets": {
+                "214-heracross": {
+                    "pokemon": 214,
+                    "form": "heracross"
+                },
+                "214-mega-heracross": {
+                    "pokemon": 214,
+                    "form": "mega-heracross"
+                }
+            },
+            "changes": {
+                "214-heracross <> 214-mega-heracross": {
+                    "targets": [
+                        "214-heracross",
+                        "214-mega-heracross"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "heracronite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "singlehorn",
+    "names": {
+        "de": "Skaraborn",
+        "en": "Heracross",
+        "es": "Heracross",
+        "fr": "Scarhino",
+        "it": "Heracross",
+        "jp": "ヘラクロス",
+        "kr": "헤라크로스",
+        "zh": "赫拉克罗斯",
+        "zh-CHS": "赫拉克罗斯",
+        "zh-CHT": "赫拉克羅斯"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 175
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "ids": [
+        682,
+        683
+    ],
+    "chains": [
+        {
+            "targets": {
+                "682-spritzee": {
+                    "pokemon": 682,
+                    "form": "spritzee"
+                },
+                "683-aromatisse": {
+                    "pokemon": 683,
+                    "form": "aromatisse"
+                }
+            },
+            "changes": {
+                "682-spritzee > 683-aromatisse": {
+                    "targets": [
+                        "682-spritzee",
+                        "683-aromatisse"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": [],
+                            "holding": "while-holding"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

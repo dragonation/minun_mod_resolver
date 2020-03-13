@@ -1,0 +1,108 @@
+{
+    "id": 366,
+    "name": "Clamperl",
+    "experiences-type": "erratic",
+    "texts": [
+        "Despite its appearance, it's carnivorous. It clamps down on its prey with both sides of its shell and doesn't let go until they stop moving.",
+        "Clamperl's pearls are exceedingly precious. They can be more than 10 times as costly as Shellder's pearls."
+    ],
+    "forms": {
+        "clamperl": {
+            "id": "clamperl",
+            "name": "Clamperl",
+            "shape": "head",
+            "abilities": [
+                "shell-armor"
+            ],
+            "weight": 52.5,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 35,
+                "attack": 64,
+                "defense": 85,
+                "special-attack": 74,
+                "special-defense": 55,
+                "speed": 32
+            },
+            "hidden-abilities": [
+                "rattled"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "clamp",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 188,
+    "classification": "bivalve",
+    "names": {
+        "de": "Perlu",
+        "en": "Clamperl",
+        "es": "Clamperl",
+        "fr": "Coquiperl",
+        "it": "Clamperl",
+        "jp": "パールル",
+        "kr": "진주몽",
+        "zh": "珍珠贝",
+        "zh-CHS": "珍珠贝",
+        "zh-CHT": "珍珠貝"
+    },
+    "species": [
+        "amphibians"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "pearl",
+        "rare": "big-pearl"
+    },
+    "capture-rate": 255,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 69
+    }
+}

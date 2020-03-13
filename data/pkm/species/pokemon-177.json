@@ -1,0 +1,155 @@
+{
+    "id": 177,
+    "name": "Natu",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It is extremely good at climbing tree trunks and likes to eat the new sprouts on the trees.",
+        "Because its wings aren't yet fully grown, it has to hop to get around. It is always staring at something."
+    ],
+    "forms": {
+        "natu": {
+            "id": "natu",
+            "name": "Natu",
+            "shape": "two-wings",
+            "abilities": [
+                "synchronize",
+                "early-bird"
+            ],
+            "weight": 2,
+            "height": 0.2,
+            "base-stats": {
+                "health-points": 40,
+                "attack": 50,
+                "defense": 45,
+                "special-attack": 70,
+                "special-defense": 45,
+                "speed": 70
+            },
+            "hidden-abilities": [
+                "magic-bounce"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "stored-power",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "teleport",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "psycho-shift",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "power-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "guard-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "wish",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic",
+                "flying"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 87,
+    "classification": "little-bird",
+    "names": {
+        "de": "Natu",
+        "en": "Natu",
+        "es": "Natu",
+        "fr": "Natu",
+        "it": "Natu",
+        "jp": "ネイティ",
+        "kr": "네이티",
+        "zh": "天然雀",
+        "zh-CHS": "天然雀",
+        "zh-CHT": "天然雀"
+    },
+    "species": [
+        "flying"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 64
+    }
+}

@@ -1,0 +1,386 @@
+{
+    "id": 445,
+    "name": "Garchomp",
+    "experiences-type": "slow",
+    "texts": [
+        "It flies at the speed of sound while searching for prey, and it has midair battles with Salamence as the two compete for food.",
+        "Its fine scales don't just reduce wind resistance—their sharp edges also cause injury to any opponent who attacks it."
+    ],
+    "forms": {
+        "garchomp": {
+            "id": "garchomp",
+            "name": "Garchomp",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "sand-veil"
+            ],
+            "weight": 95,
+            "height": 1.9,
+            "base-stats": {
+                "health-points": 108,
+                "attack": 130,
+                "defense": 95,
+                "special-attack": 80,
+                "special-defense": 85,
+                "speed": 102
+            },
+            "hidden-abilities": [
+                "rough-skin"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "dual-chop",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "dragon-rage",
+                    "type": "dragon",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "dragon-rage",
+                    "type": "dragon",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 19,
+                    "name": "sand-tomb",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "dragon-rush",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 75
+                }
+            ],
+            "types": [
+                "dragon",
+                "ground"
+            ],
+            "color": "blue"
+        },
+        "mega-garchomp": {
+            "id": "mega-garchomp",
+            "name": "Mega Garchomp",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "sand-force"
+            ],
+            "weight": 95,
+            "height": 1.9,
+            "base-stats": {
+                "health-points": 108,
+                "attack": 170,
+                "defense": 115,
+                "special-attack": 120,
+                "special-defense": 95,
+                "speed": 92
+            },
+            "hidden-abilities": [
+                "rough-skin"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "dual-chop",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "dragon-rage",
+                    "type": "dragon",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "dragon-rage",
+                    "type": "dragon",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "sandstorm",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 19,
+                    "name": "sand-tomb",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "dig",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "dragon-rush",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 75
+                }
+            ],
+            "types": [
+                "dragon",
+                "ground"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 225,
+    "changes": [
+        {
+            "targets": {
+                "445-garchomp": {
+                    "pokemon": 445,
+                    "form": "garchomp"
+                },
+                "445-mega-garchomp": {
+                    "pokemon": 445,
+                    "form": "mega-garchomp"
+                }
+            },
+            "changes": {
+                "445-garchomp <> 445-mega-garchomp": {
+                    "targets": [
+                        "445-garchomp",
+                        "445-mega-garchomp"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "garchompite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "mach",
+    "names": {
+        "de": "Knakrack",
+        "en": "Garchomp",
+        "es": "Garchomp",
+        "fr": "Carchacrok",
+        "it": "Garchomp",
+        "jp": "ガブリアス",
+        "kr": "한카리아스",
+        "zh": "烈咬陆鲨",
+        "zh-CHS": "烈咬陆鲨",
+        "zh-CHT": "烈咬陸鯊"
+    },
+    "species": [
+        "monster",
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 41,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 3,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 270
+    }
+}

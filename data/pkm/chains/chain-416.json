@@ -1,0 +1,36 @@
+{
+    "ids": [
+        803,
+        804
+    ],
+    "chains": [
+        {
+            "targets": {
+                "803-poipole": {
+                    "pokemon": 803,
+                    "form": "poipole"
+                },
+                "804-naganadel": {
+                    "pokemon": 804,
+                    "form": "naganadel"
+                }
+            },
+            "changes": {
+                "803-poipole > 804-naganadel": {
+                    "targets": [
+                        "803-poipole",
+                        "804-naganadel"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [],
+                            "learnt": "dragon-pulse"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

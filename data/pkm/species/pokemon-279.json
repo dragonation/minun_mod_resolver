@@ -1,0 +1,207 @@
+{
+    "id": 279,
+    "name": "Pelipper",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It is a messenger of the skies, carrying small Pokémon and eggs to safety in its bill.",
+        "Skimming the water's surface, it dips its large bill in the sea, scoops up food and water, and carries it."
+    ],
+    "forms": {
+        "pelipper": {
+            "id": "pelipper",
+            "name": "Pelipper",
+            "shape": "two-wings",
+            "abilities": [
+                "keen-eye",
+                "drizzle"
+            ],
+            "weight": 28,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 50,
+                "defense": 100,
+                "special-attack": 95,
+                "special-defense": 70,
+                "speed": 65
+            },
+            "hidden-abilities": [
+                "rain-dish"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "soak",
+                    "type": "water",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tailwind",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 15,
+                    "name": "wing-attack",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "stockpile",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "swallow",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "spit-up",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "fling",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "roost",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 55,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 62,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water",
+                "flying"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 139,
+    "classification": "water-bird",
+    "names": {
+        "de": "Pelipper",
+        "en": "Pelipper",
+        "es": "Pelipper",
+        "fr": "Bekipan",
+        "it": "Pelipper",
+        "jp": "ペリッパー",
+        "kr": "패리퍼",
+        "zh": "大嘴鸥",
+        "zh-CHS": "大嘴鸥",
+        "zh-CHT": "大嘴鷗"
+    },
+    "species": [
+        "amphibians",
+        "flying"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "pretty-wing"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 154
+    }
+}

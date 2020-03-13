@@ -1,0 +1,214 @@
+{
+    "id": 693,
+    "name": "Clawitzer",
+    "experiences-type": "slow",
+    "texts": [
+        "It compresses the water it has sucked up and then projects it with enough power to punch a hole right through a thick sheet of iron.",
+        "Its right arm is packed with meat. When its pincer falls off, it's exported to be used as a cooking ingredient."
+    ],
+    "forms": {
+        "clawitzer": {
+            "id": "clawitzer",
+            "name": "Clawitzer",
+            "shape": "serpentine",
+            "abilities": [
+                "mega-launcher"
+            ],
+            "weight": 35.3,
+            "height": 1.3,
+            "base-stats": {
+                "health-points": 71,
+                "attack": 73,
+                "defense": 88,
+                "special-attack": 120,
+                "special-defense": 89,
+                "speed": 59
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "aura-sphere",
+                    "type": "fighting",
+                    "category": "special",
+                    "power": 80
+                },
+                {
+                    "level": 1,
+                    "name": "dark-pulse",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "splash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-sport",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "vice-grip",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "aura-sphere",
+                    "type": "fighting",
+                    "category": "special",
+                    "power": 80
+                },
+                {
+                    "level": 7,
+                    "name": "water-sport",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 9,
+                    "name": "vice-grip",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "bubble",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "crabhammer",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 34,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "aqua-jet",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "muddy-water",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 347,
+    "classification": "howitzer",
+    "names": {
+        "de": "Wummer",
+        "en": "Clawitzer",
+        "es": "Clawitzer",
+        "fr": "Gamblast",
+        "it": "Clawitzer",
+        "jp": "ブロスター",
+        "kr": "블로스터",
+        "zh": "钢炮臂虾",
+        "zh-CHS": "钢炮臂虾",
+        "zh-CHT": "鋼炮臂蝦"
+    },
+    "species": [
+        "amphibians",
+        "aquatic"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 55,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 2,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 100
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        766
+    ],
+    "chains": [
+        {
+            "targets": {
+                "766-passimian": {
+                    "pokemon": 766,
+                    "form": "passimian"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

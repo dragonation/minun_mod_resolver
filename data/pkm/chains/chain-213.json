@@ -1,0 +1,38 @@
+{
+    "ids": [
+        415,
+        416
+    ],
+    "chains": [
+        {
+            "targets": {
+                "415-combee": {
+                    "pokemon": 415,
+                    "form": "combee"
+                },
+                "416-vespiquen": {
+                    "pokemon": 416,
+                    "form": "vespiquen"
+                }
+            },
+            "changes": {
+                "415-combee > 416-vespiquen": {
+                    "targets": [
+                        "415-combee",
+                        "416-vespiquen"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                21
+                            ],
+                            "gender": "female"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

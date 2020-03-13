@@ -1,0 +1,37 @@
+{
+    "ids": [
+        120,
+        121
+    ],
+    "chains": [
+        {
+            "targets": {
+                "120-staryu": {
+                    "pokemon": 120,
+                    "form": "staryu"
+                },
+                "121-starmie": {
+                    "pokemon": 121,
+                    "form": "starmie"
+                }
+            },
+            "changes": {
+                "120-staryu > 121-starmie": {
+                    "targets": [
+                        "120-staryu",
+                        "121-starmie"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "water-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

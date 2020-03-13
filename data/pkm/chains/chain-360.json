@@ -1,0 +1,16 @@
+{
+    "ids": [
+        716
+    ],
+    "chains": [
+        {
+            "targets": {
+                "716-active-mode": {
+                    "pokemon": 716,
+                    "form": "active-mode"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

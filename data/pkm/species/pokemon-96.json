@@ -1,0 +1,189 @@
+{
+    "id": 96,
+    "name": "Drowzee",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It can be spotted near recreational facilities, intending to eat the pleasant dreams of children who enjoyed themselves there that day.",
+        "It puts its prey to sleep and devours their dreams. It seems that bad dreams taste sour, so Drowzee doesn't particularly like eating them."
+    ],
+    "forms": {
+        "drowzee": {
+            "id": "drowzee",
+            "name": "Drowzee",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "insomnia",
+                "forewarn"
+            ],
+            "weight": 32.4,
+            "height": 1,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 48,
+                "defense": 45,
+                "special-attack": 43,
+                "special-defense": 90,
+                "speed": 42
+            },
+            "hidden-abilities": [
+                "inner-focus"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "hypnosis",
+                    "category": "psychic"
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "pound",
+                    "category": "normal",
+                    "accuracy": 40
+                },
+                {
+                    "level": 5,
+                    "name": "0055",
+                    "type": "disable",
+                    "category": "normal"
+                },
+                {
+                    "level": 9,
+                    "name": "0099",
+                    "type": "confusion",
+                    "category": "psychic",
+                    "accuracy": 50
+                },
+                {
+                    "level": 13,
+                    "name": "01313",
+                    "type": "headbutt",
+                    "category": "normal",
+                    "accuracy": 70
+                },
+                {
+                    "level": 17,
+                    "name": "01717",
+                    "type": "poison gas",
+                    "category": "poison"
+                },
+                {
+                    "level": 21,
+                    "name": "02121",
+                    "type": "meditate",
+                    "category": "psychic"
+                },
+                {
+                    "level": 25,
+                    "name": "02525",
+                    "type": "psybeam",
+                    "category": "psychic",
+                    "accuracy": 65
+                },
+                {
+                    "level": null,
+                    "name": "02929",
+                    "type": "wake-up slap",
+                    "category": "fighting",
+                    "accuracy": 70
+                },
+                {
+                    "level": 29,
+                    "name": "n/an/a",
+                    "type": "headbutt",
+                    "category": "normal",
+                    "accuracy": 70
+                },
+                {
+                    "level": 33,
+                    "name": "03333",
+                    "type": "psych up",
+                    "category": "normal"
+                },
+                {
+                    "level": 37,
+                    "name": "03737",
+                    "type": "synchronoise",
+                    "category": "psychic",
+                    "accuracy": 120
+                },
+                {
+                    "level": 41,
+                    "name": "04141",
+                    "type": "zen headbutt",
+                    "category": "psychic",
+                    "accuracy": 80
+                },
+                {
+                    "level": 45,
+                    "name": "04545",
+                    "type": "swagger",
+                    "category": "normal"
+                },
+                {
+                    "level": 49,
+                    "name": "04949",
+                    "type": "psychic",
+                    "category": "psychic",
+                    "accuracy": 90
+                },
+                {
+                    "level": 53,
+                    "name": "05353",
+                    "type": "nasty plot",
+                    "category": "dark"
+                },
+                {
+                    "level": 57,
+                    "name": "05757",
+                    "type": "psyshock",
+                    "category": "psychic",
+                    "accuracy": 80
+                },
+                {
+                    "level": 61,
+                    "name": "06161",
+                    "type": "future sight",
+                    "category": "psychic",
+                    "accuracy": 120
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 42,
+    "classification": "hypnosis",
+    "names": {
+        "de": "Traumato",
+        "en": "Drowzee",
+        "es": "Drowzee",
+        "fr": "Soporifik",
+        "it": "Drowzee",
+        "jp": "スリープ",
+        "kr": "슬리프",
+        "zh": "催眠貘",
+        "zh-CHS": "催眠貘",
+        "zh-CHT": "催眠貘"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 66
+    }
+}

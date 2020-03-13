@@ -1,0 +1,209 @@
+{
+    "id": 271,
+    "name": "Lombre",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It is nocturnal and becomes active at nightfall. It feeds on aquatic mosses that grow in the riverbed.",
+        "It lives at the water's edge where it is sunny. It sleeps on a bed of water grass by day and becomes active at night."
+    ],
+    "forms": {
+        "lombre": {
+            "id": "lombre",
+            "name": "Lombre",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "swift-swim",
+                "rain-dish"
+            ],
+            "weight": 32.5,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 50,
+                "defense": 50,
+                "special-attack": 60,
+                "special-defense": 70,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "own-tempo"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "teeter-dance",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "mega-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 24,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "nature-power",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "giga-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 57,
+                    "name": "energy-ball",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water",
+                "grass"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 136,
+    "classification": "jolly",
+    "names": {
+        "de": "Lombrero",
+        "en": "Lombre",
+        "es": "Lombre",
+        "fr": "Lombre",
+        "it": "Lombre",
+        "jp": "ハスブレロ",
+        "kr": "로토스",
+        "zh": "莲帽小童",
+        "zh-CHS": "莲帽小童",
+        "zh-CHT": "蓮帽小童"
+    },
+    "species": [
+        "amphibians",
+        "plant"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "mental-herb"
+    },
+    "capture-rate": 120,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 2,
+        "speed": 0,
+        "experience": 119
+    }
+}

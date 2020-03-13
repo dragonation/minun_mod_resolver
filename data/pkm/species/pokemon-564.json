@@ -1,0 +1,202 @@
+{
+    "id": 564,
+    "name": "Tirtouga",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It was restored from an ancient fossil. Tirtouga lived in the sea but came up onto the land to search for prey.",
+        "Its hunting grounds encompassed a broad area, from the land to more than half a mile deep in the ocean."
+    ],
+    "forms": {
+        "tirtouga": {
+            "id": "tirtouga",
+            "name": "Tirtouga",
+            "shape": "quadruped",
+            "abilities": [
+                "solid-rock",
+                "sturdy"
+            ],
+            "weight": 16.5,
+            "height": 0.7,
+            "base-stats": {
+                "health-points": 54,
+                "attack": 78,
+                "defense": 103,
+                "special-attack": 53,
+                "special-defense": 45,
+                "speed": 22
+            },
+            "hidden-abilities": [
+                "swift-swim"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "bide",
+                    "type": "normal",
+                    "category": "physical"
+                },
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 8,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "aqua-jet",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "wide-guard",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "shell-smash",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 41,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 45,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 48,
+                    "name": "rain-dance",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water",
+                "rock"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 280,
+    "classification": "prototurtle",
+    "names": {
+        "de": "Galapaflos",
+        "en": "Tirtouga",
+        "es": "Tirtouga",
+        "fr": "Carapagos",
+        "it": "Tirtouga",
+        "jp": "プロトーガ",
+        "kr": "프로토가",
+        "zh": "原盖海龟",
+        "zh-CHS": "原盖海龟",
+        "zh-CHT": "原蓋海龜"
+    },
+    "species": [
+        "amphibians",
+        "aquatic"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 71
+    }
+}

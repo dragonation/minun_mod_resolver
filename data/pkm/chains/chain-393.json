@@ -1,0 +1,16 @@
+{
+    "ids": [
+        775
+    ],
+    "chains": [
+        {
+            "targets": {
+                "775-komala": {
+                    "pokemon": 775,
+                    "form": "komala"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

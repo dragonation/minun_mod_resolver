@@ -1,0 +1,16 @@
+{
+    "ids": [
+        377
+    ],
+    "chains": [
+        {
+            "targets": {
+                "377-regirock": {
+                    "pokemon": 377,
+                    "form": "regirock"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

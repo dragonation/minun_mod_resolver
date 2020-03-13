@@ -1,0 +1,31 @@
+.line {
+
+    display: flex;
+    margin: 0 20px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 10px;
+    align-items: center;
+
+    .label {
+        width: 100px;
+        font-size: 12px;
+        text-align: right;
+        margin-right: 10px;
+        color: #888;
+    }
+
+    .input {
+        flex-grow: 1;
+    }
+
+    .button {
+        height: 34px;
+        line-height: 34px;
+        margin: 10px 0px;
+        flex-grow: 1;
+        text-transform: uppercase;
+    }
+
+}
+

@@ -1,0 +1,53 @@
+{
+    "ids": [
+        137,
+        233,
+        474
+    ],
+    "chains": [
+        {
+            "targets": {
+                "137-porygon": {
+                    "pokemon": 137,
+                    "form": "porygon"
+                },
+                "233-porygon2": {
+                    "pokemon": 233,
+                    "form": "porygon2"
+                },
+                "474-porygon-z": {
+                    "pokemon": 474,
+                    "form": "porygon-z"
+                }
+            },
+            "changes": {
+                "137-porygon > 233-porygon2": {
+                    "targets": [
+                        "137-porygon",
+                        "233-porygon2"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                },
+                "233-porygon2 > 474-porygon-z": {
+                    "targets": [
+                        "233-porygon2",
+                        "474-porygon-z"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

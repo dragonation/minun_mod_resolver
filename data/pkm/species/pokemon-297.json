@@ -1,0 +1,218 @@
+{
+    "id": 297,
+    "name": "Hariyama",
+    "experiences-type": "fluctuating",
+    "texts": [
+        "Although they enjoy comparing their strength, they're also kind. They value etiquette, praising opponents they battle.",
+        "Hariyama that are big and fat aren't necessarily strong. There are some small ones that move nimbly and use moves skillfully."
+    ],
+    "forms": {
+        "hariyama": {
+            "id": "hariyama",
+            "name": "Hariyama",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "thick-fat",
+                "guts"
+            ],
+            "weight": 253.8,
+            "height": 2.3,
+            "base-stats": {
+                "health-points": 144,
+                "attack": 120,
+                "defense": 60,
+                "special-attack": 40,
+                "special-defense": 60,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "sheer-force"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "arm-thrust",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "arm-thrust",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "force-palm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "whirlwind",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 19,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "vital-throw",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 70
+                },
+                {
+                    "level": 26,
+                    "name": "belly-drum",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "smelling-salts",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "seismic-toss",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "wake-up-slap",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 146,
+    "classification": "arm-thrust",
+    "names": {
+        "de": "Hariyama",
+        "en": "Hariyama",
+        "es": "Hariyama",
+        "fr": "Hariyama",
+        "it": "Hariyama",
+        "jp": "ハリテヤマ",
+        "kr": "하리뭉",
+        "zh": "铁掌力士",
+        "zh-CHS": "铁掌力士",
+        "zh-CHT": "鐵掌力士"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "6/2",
+    "holdings": {
+        "rare": "king’s-rock"
+    },
+    "capture-rate": 200,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 2,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 166
+    }
+}

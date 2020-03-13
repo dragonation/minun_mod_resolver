@@ -1,0 +1,37 @@
+{
+    "ids": [
+        100,
+        101
+    ],
+    "chains": [
+        {
+            "targets": {
+                "100-voltorb": {
+                    "pokemon": 100,
+                    "form": "voltorb"
+                },
+                "101-electrode": {
+                    "pokemon": 101,
+                    "form": "electrode"
+                }
+            },
+            "changes": {
+                "100-voltorb > 101-electrode": {
+                    "targets": [
+                        "100-voltorb",
+                        "101-electrode"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

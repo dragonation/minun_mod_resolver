@@ -1,0 +1,197 @@
+{
+    "id": 786,
+    "name": "Tapu Lele",
+    "experiences-type": "slow",
+    "texts": [
+        "It heals the wounds of people and Pokémon by sprinkling them with its sparkling scales. This guardian deity is worshiped on Akala.",
+        "Although called a guardian deity, Tapu Lele is devoid of guilt about its cruel disposition and can be described as nature incarnate."
+    ],
+    "forms": {
+        "tapu-lele": {
+            "id": "tapu-lele",
+            "name": "Tapu Lele",
+            "shape": "head-arms",
+            "abilities": [
+                "psychic-surge"
+            ],
+            "weight": 18.6,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 85,
+                "defense": 75,
+                "special-attack": 130,
+                "special-defense": 115,
+                "speed": 95
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "psychic-terrain",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "aromatic-mist",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "psywave",
+                    "type": "psychic",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 14,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "skill-swap",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "psyshock",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "tickle",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "nature's-madness",
+                    "type": "fairy",
+                    "category": "special",
+                    "accuracy": 90
+                },
+                {
+                    "level": 48,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "flatter",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic",
+                "fairy"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 402,
+    "classification": "land-spirit",
+    "names": {
+        "de": "Kapu-Fala",
+        "en": "Tapu Lele",
+        "es": "Tapu Lele",
+        "fr": "Tokopiyon",
+        "it": "Tapu Lele",
+        "jp": "カプ・テテフ",
+        "kr": "카푸나비나",
+        "zh": "卡璞·蝶蝶",
+        "zh-CHS": "卡璞·蝶蝶",
+        "zh-CHT": ""
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 114
+    }
+}

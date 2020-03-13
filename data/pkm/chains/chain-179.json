@@ -1,0 +1,16 @@
+{
+    "ids": [
+        351
+    ],
+    "chains": [
+        {
+            "targets": {
+                "351-normal-form": {
+                    "pokemon": 351,
+                    "form": "normal-form"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "ids": [
+        728,
+        729,
+        730
+    ],
+    "chains": [
+        {
+            "targets": {
+                "728-popplio": {
+                    "pokemon": 728,
+                    "form": "popplio"
+                },
+                "729-brionne": {
+                    "pokemon": 729,
+                    "form": "brionne"
+                },
+                "730-primarina": {
+                    "pokemon": 730,
+                    "form": "primarina"
+                }
+            },
+            "changes": {
+                "728-popplio > 729-brionne": {
+                    "targets": [
+                        "728-popplio",
+                        "729-brionne"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                17
+                            ]
+                        }
+                    ]
+                },
+                "729-brionne > 730-primarina": {
+                    "targets": [
+                        "729-brionne",
+                        "730-primarina"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

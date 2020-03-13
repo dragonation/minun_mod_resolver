@@ -1,0 +1,186 @@
+{
+    "id": 209,
+    "name": "Snubbull",
+    "experiences-type": "fast",
+    "texts": [
+        "It grows close to others easily and is also easily spoiled. The disparity between its face and its actions makes many young people wild about it.",
+        "In contrast to its appearance, it's quite timid. When playing with other puppy Pokémon, it sometimes gets bullied."
+    ],
+    "forms": {
+        "snubbull": {
+            "id": "snubbull",
+            "name": "Snubbull",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "intimidate",
+                "run-away"
+            ],
+            "weight": 7.8,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 80,
+                "defense": 50,
+                "special-attack": 40,
+                "special-defense": 40,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "rattled"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "lick",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 43,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fairy"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 104,
+    "classification": "fairy",
+    "names": {
+        "de": "Snubbull",
+        "en": "Snubbull",
+        "es": "Snubbull",
+        "fr": "Snubbull",
+        "it": "Snubbull",
+        "jp": "ブルー",
+        "kr": "블루",
+        "zh": "布鲁",
+        "zh-CHS": "布鲁",
+        "zh-CHT": "布魯"
+    },
+    "species": [
+        "field",
+        "fairy"
+    ],
+    "gender": "2/6",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

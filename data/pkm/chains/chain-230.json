@@ -1,0 +1,16 @@
+{
+    "ids": [
+        455
+    ],
+    "chains": [
+        {
+            "targets": {
+                "455-carnivine": {
+                    "pokemon": 455,
+                    "form": "carnivine"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

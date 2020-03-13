@@ -1,0 +1,181 @@
+{
+    "id": 111,
+    "name": "Rhyhorn",
+    "experiences-type": "slow",
+    "texts": [
+        "Strong, but not too bright, this Pokémon can shatter even a skyscraper with its charging tackles.",
+        "It can remember only one thing at a time. Once it starts rushing, it forgets why it started."
+    ],
+    "forms": {
+        "rhyhorn": {
+            "id": "rhyhorn",
+            "name": "Rhyhorn",
+            "shape": "quadruped",
+            "abilities": [
+                "lightning-rod",
+                "rock-head"
+            ],
+            "weight": 115,
+            "height": 1,
+            "base-stats": {
+                "health-points": 80,
+                "attack": 85,
+                "defense": 95,
+                "special-attack": 30,
+                "special-defense": 30,
+                "speed": 25
+            },
+            "hidden-abilities": [
+                "reckless"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "bulldoze",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "horn-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "stomp",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 35,
+                    "name": "drill-run",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 95
+                },
+                {
+                    "level": 40,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 45,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                },
+                {
+                    "level": 55,
+                    "name": "megahorn",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 85
+                },
+                {
+                    "level": 60,
+                    "name": "horn-drill",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "ground",
+                "rock"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 49,
+    "classification": "spikes",
+    "names": {
+        "de": "Rihorn",
+        "en": "Rhyhorn",
+        "es": "Rhyhorn",
+        "fr": "Rhinocorne",
+        "it": "Rhyhorn",
+        "jp": "サイホーン",
+        "kr": "뿔카노",
+        "zh": "独角犀牛",
+        "zh-CHS": "独角犀牛",
+        "zh-CHT": "獨角犀牛"
+    },
+    "species": [
+        "monster",
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 120,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 69
+    }
+}

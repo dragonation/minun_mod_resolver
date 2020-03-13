@@ -1,0 +1,450 @@
+{
+    "id": 359,
+    "name": "Absol",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "The only thing unlucky about Absol is its appearance. It protects fields and warns people of disaster, so one ought to be grateful for it.",
+        "The elderly call it the disaster Pokémon and detest it, but interest in its power to predict disasters is on the rise."
+    ],
+    "forms": {
+        "absol": {
+            "id": "absol",
+            "name": "Absol",
+            "shape": "quadruped",
+            "abilities": [
+                "pressure",
+                "super-luck"
+            ],
+            "weight": 47,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 130,
+                "defense": 60,
+                "special-attack": 75,
+                "special-defense": 60,
+                "speed": 75
+            },
+            "hidden-abilities": [
+                "justified"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "pursuit",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "double-team",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 22,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "psycho-cut",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "me-first",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "razor-wind",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "dark"
+            ],
+            "color": "white"
+        },
+        "mega-absol": {
+            "id": "mega-absol",
+            "name": "Mega Absol",
+            "shape": "quadruped",
+            "abilities": [
+                "magic-bounce"
+            ],
+            "weight": 49,
+            "height": 1.2,
+            "base-stats": {
+                "health-points": 65,
+                "attack": 150,
+                "defense": 60,
+                "special-attack": 115,
+                "special-defense": 60,
+                "speed": 115
+            },
+            "hidden-abilities": [
+                "justified"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "pursuit",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "double-team",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 22,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "psycho-cut",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "me-first",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "razor-wind",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "dark"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 185,
+    "changes": [
+        {
+            "targets": {
+                "359-absol": {
+                    "pokemon": 359,
+                    "form": "absol"
+                },
+                "359-mega-absol": {
+                    "pokemon": 359,
+                    "form": "mega-absol"
+                }
+            },
+            "changes": {
+                "359-absol <> 359-mega-absol": {
+                    "targets": [
+                        "359-absol",
+                        "359-mega-absol"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "absolite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "disaster",
+    "names": {
+        "de": "Absol",
+        "en": "Absol",
+        "es": "Absol",
+        "fr": "Absol",
+        "it": "Absol",
+        "jp": "アブソル",
+        "kr": "앱솔",
+        "zh": "阿勃梭鲁",
+        "zh-CHS": "阿勃梭鲁",
+        "zh-CHT": "阿勃梭魯"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 30,
+    "hatching-cycles": 26,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 163
+    }
+}

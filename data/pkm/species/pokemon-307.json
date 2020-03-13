@@ -1,0 +1,184 @@
+{
+    "id": 307,
+    "name": "Meditite",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It always trains deep in mountains. It levitates when it heightens its spiritual power through meditation.",
+        "It eats just one berry a day. By enduring hunger, its spirit is tempered and made sharper."
+    ],
+    "forms": {
+        "meditite": {
+            "id": "meditite",
+            "name": "Meditite",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "pure-power"
+            ],
+            "weight": 11.2,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 30,
+                "attack": 40,
+                "defense": 55,
+                "special-attack": 40,
+                "special-defense": 55,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "bide",
+                    "type": "normal",
+                    "category": "physical"
+                },
+                {
+                    "level": 4,
+                    "name": "meditate",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "detect",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "feint",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "force-palm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "mind-reader",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "high-jump-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 130,
+                    "accuracy": 90
+                },
+                {
+                    "level": 31,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "acupressure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "power-trick",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 39,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fighting",
+                "psychic"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 152,
+    "classification": "meditate",
+    "names": {
+        "de": "Meditie",
+        "en": "Meditite",
+        "es": "Meditite",
+        "fr": "Méditikka",
+        "it": "Meditite",
+        "jp": "アサナン",
+        "kr": "요가랑",
+        "zh": "玛沙那",
+        "zh-CHS": "玛沙那",
+        "zh-CHT": "瑪沙那"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 180,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 56
+    }
+}

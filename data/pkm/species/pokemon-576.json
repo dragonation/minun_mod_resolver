@@ -1,0 +1,171 @@
+{
+    "id": 576,
+    "name": "Gothitelle",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It has tremendous psychic power, but it dislikes conflict. It's also able to predict the future based on the movement of the stars.",
+        "A criminal who was shown his fate by a Gothitelle went missing that same day and was never seen again."
+    ],
+    "forms": {
+        "gothitelle": {
+            "id": "gothitelle",
+            "name": "Gothitelle",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "frisk",
+                "competitive"
+            ],
+            "weight": 44,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 55,
+                "defense": 95,
+                "special-attack": 95,
+                "special-defense": 110,
+                "speed": 65
+            },
+            "hidden-abilities": [
+                "shadow-tag"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "play-nice",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tickle",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "psyshock",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 28,
+                    "name": "fake-tears",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "psych-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "flatter",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "magic-room",
+                    "type": "psychic",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 285,
+    "classification": "astral-body",
+    "names": {
+        "de": "Morbitesse",
+        "en": "Gothitelle",
+        "es": "Gothitelle",
+        "fr": "Sidérella",
+        "it": "Gothitelle",
+        "jp": "ゴチルゼル",
+        "kr": "고디모아젤",
+        "zh": "哥德小姐",
+        "zh-CHS": "哥德小姐",
+        "zh-CHT": "哥德小姐"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "2/6",
+    "holdings": {},
+    "capture-rate": 50,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 3,
+        "speed": 0,
+        "experience": 221
+    }
+}

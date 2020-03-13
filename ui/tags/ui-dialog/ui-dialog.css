@@ -1,0 +1,148 @@
+:host {
+    position: absolute;
+    display: block;
+    min-width: 120px;
+    min-height: 30px;
+    box-sizing: content-box !important;
+    border: solid 1dpx rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    z-index: 1;
+    /*backdrop-filter: blur(calc(3px * var(--ui-scale)));*/
+    background-color: $white(1);
+    font-family: 'Mew Sans', sans-serif;
+    font-size: 13px;
+    $transition(opacity, transform, 0.3s);
+}
+
+:host(.hidden) {
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+:host(.browsing) {
+
+    box-shadow: none;
+    background-color: #fff;
+
+    #ui-dialog-title-bar,
+    #ui-dialog-close-button,
+    #ui-dialog-resizer {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #ui-dialog-title-bar {
+        transform: translateY(calc(32px + 1dpx));
+        box-shadow: none;
+    }
+
+}
+
+:host(.not-browsing) {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#ui-dialog-container {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+
+    :host(.browsing) & * {
+        pointer-events: none;
+    }
+
+    $import('../ui-workshop/ui-view.browsing.css');
+
+}
+
+#ui-dialog-title-bar {
+
+    width: calc(100% + 2dpx);
+    height: calc(32px + 1dpx);
+    line-height: 32px;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: default;
+    border: solid 1dpx rgba(0, 0, 0, 0.3);
+    margin-left: -1dpx;
+    margin-right: -1dpx;
+    border-bottom: solid 1dpx rgba(0, 0, 0, 0.2);
+    padding-right: 40px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s, transform 0.3s;
+    margin-top: calc(-32px - 1dpx);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: $alpha($white(1), 0.7);
+    backdrop-filter: blur(4px);
+    text-shadow: 0 0 2px #fff;
+
+    :host(.active) & {
+        color: #0d8ef1;
+        background-color: $alpha($white(1), 0.85);
+        /*background-color: $white(0.95);*/
+    }
+
+}
+
+#ui-dialog-close-button {
+    background-color: #ed6868;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    margin-top: calc(-32px - 1dpx);
+    border-radius: 16px;
+    border: solid 1dpx rgba(0, 0, 0, 0.3);
+    background-image: url('../../res/window/close-button.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 8px;
+}
+
+#ui-dialog-clients {
+    min-height: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 10px;
+    overflow: hidden;
+    background-color: $white(1);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    position: relative;
+}
+
+#ui-dialog-resizer {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 9px;
+    background-color: #6ebaff;
+    border: solid 1dpx rgba(0, 0, 0, 0.3);
+    cursor: se-resize;
+    display: none;
+}
+
+#ui-dialog-resizer.resizable {
+    display: block;
+}

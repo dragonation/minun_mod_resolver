@@ -1,0 +1,57 @@
+{
+    "ids": [
+        664,
+        665,
+        666
+    ],
+    "chains": [
+        {
+            "targets": {
+                "664-scatterbug": {
+                    "pokemon": 664,
+                    "form": "scatterbug"
+                },
+                "665-spewpa": {
+                    "pokemon": 665,
+                    "form": "spewpa"
+                },
+                "666-vivillon": {
+                    "pokemon": 666,
+                    "form": "vivillon"
+                }
+            },
+            "changes": {
+                "664-scatterbug > 665-spewpa": {
+                    "targets": [
+                        "664-scatterbug",
+                        "665-spewpa"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                9
+                            ]
+                        }
+                    ]
+                },
+                "665-spewpa > 666-vivillon": {
+                    "targets": [
+                        "665-spewpa",
+                        "666-vivillon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                12
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

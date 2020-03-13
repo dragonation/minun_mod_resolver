@@ -1,0 +1,37 @@
+{
+    "ids": [
+        431,
+        432
+    ],
+    "chains": [
+        {
+            "targets": {
+                "431-glameow": {
+                    "pokemon": 431,
+                    "form": "glameow"
+                },
+                "432-purugly": {
+                    "pokemon": 432,
+                    "form": "purugly"
+                }
+            },
+            "changes": {
+                "431-glameow > 432-purugly": {
+                    "targets": [
+                        "431-glameow",
+                        "432-purugly"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                38
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

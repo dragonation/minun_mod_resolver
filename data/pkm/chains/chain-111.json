@@ -1,0 +1,56 @@
+{
+    "ids": [
+        220,
+        221,
+        473
+    ],
+    "chains": [
+        {
+            "targets": {
+                "220-swinub": {
+                    "pokemon": 220,
+                    "form": "swinub"
+                },
+                "221-piloswine": {
+                    "pokemon": 221,
+                    "form": "piloswine"
+                },
+                "473-mamoswine": {
+                    "pokemon": 473,
+                    "form": "mamoswine"
+                }
+            },
+            "changes": {
+                "220-swinub > 221-piloswine": {
+                    "targets": [
+                        "220-swinub",
+                        "221-piloswine"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                33
+                            ]
+                        }
+                    ]
+                },
+                "221-piloswine > 473-mamoswine": {
+                    "targets": [
+                        "221-piloswine",
+                        "473-mamoswine"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [],
+                            "learnt": "ancient-power"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

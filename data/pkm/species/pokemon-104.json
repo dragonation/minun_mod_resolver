@@ -1,0 +1,193 @@
+{
+    "id": 104,
+    "name": "Cubone",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "At night, it weeps loudly for its dead mother, but those cries only attract its natural enemy—Mandibuzz.",
+        "It wears its mother's skull on its head, so no one knows what its bare face looks like. However, it's clear that it's always crying."
+    ],
+    "forms": {
+        "cubone": {
+            "id": "cubone",
+            "name": "Cubone",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "rock-head",
+                "lightning-rod"
+            ],
+            "weight": 6.5,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 50,
+                "defense": 95,
+                "special-attack": 40,
+                "special-defense": 50,
+                "speed": 35
+            },
+            "hidden-abilities": [
+                "battle-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "bone-club",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 85
+                },
+                {
+                    "level": 11,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 21,
+                    "name": "bonemerang",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 23,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "false-swipe",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 31,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "fling",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "stomping-tantrum",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 47,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "bone-rush",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 46,
+    "classification": "lonely",
+    "names": {
+        "de": "Tragosso",
+        "en": "Cubone",
+        "es": "Cubone",
+        "fr": "Osselait",
+        "it": "Cubone",
+        "jp": "カラカラ",
+        "kr": "탕구리",
+        "zh": "卡拉卡拉",
+        "zh-CHS": "卡拉卡拉",
+        "zh-CHT": "卡拉卡拉"
+    },
+    "species": [
+        "monster"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "thick-club"
+    },
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 64
+    }
+}

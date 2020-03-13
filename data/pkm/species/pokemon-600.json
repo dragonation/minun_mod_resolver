@@ -1,0 +1,172 @@
+{
+    "id": 600,
+    "name": "Klang",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "When Klang goes all out, the minigear links up perfectly with the outer part of the big gear, and this Pokémon's rotation speed increases sharply.",
+        "Many companies in the Galar region choose Klang as their logo. This Pokémon is considered the symbol of industrial technology."
+    ],
+    "forms": {
+        "klang": {
+            "id": "klang",
+            "name": "Klang",
+            "shape": "multiple",
+            "abilities": [
+                "plus",
+                "minus"
+            ],
+            "weight": 51,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 80,
+                "defense": 95,
+                "special-attack": 70,
+                "special-defense": 85,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "clear-body"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "vise-grip",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bind",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "charge-beam",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 16,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 32,
+                    "name": "gear-grind",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 85
+                },
+                {
+                    "level": 36,
+                    "name": "lock-on",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "shift-gear",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                },
+                {
+                    "level": 54,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 297,
+    "classification": "gear",
+    "names": {
+        "de": "Kliklak",
+        "en": "Klang",
+        "es": "Klang",
+        "fr": "Clic",
+        "it": "Klang",
+        "jp": "ギギアル",
+        "kr": "기기어르",
+        "zh": "齿轮组",
+        "zh-CHS": "齿轮组",
+        "zh-CHT": "齒輪組"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 154
+    }
+}

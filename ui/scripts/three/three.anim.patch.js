@@ -221,6 +221,7 @@ const patchObjectAnimation = function (threeObject) {
                     "starting": actor.starting,
                     "frame": actor.frame,
                     "time": actor.frame / actor.fps,
+                    "fps": actor.fps,
                     "duration": actor.duration,
                     "paused": actor.paused,
                     "loop": actor.loop
@@ -519,8 +520,8 @@ const patchObjectAnimation = function (threeObject) {
                         passed = binding.duration;
                     }
                     binding.passed = passed;
-                    while ((binding.frame > 1) &&
-                           (binding.times[binding.frame - 1] > passed)) {
+                    while ((binding.frame) &&
+                           (binding.times[binding.frame] > passed)) {
                         --binding.frame;
                     }
                     while ((binding.frame < binding.times.length - 1) &&

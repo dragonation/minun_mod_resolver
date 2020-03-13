@@ -1,0 +1,566 @@
+{
+    "id": 745,
+    "name": "Lycanroc",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "The sharp rocks in its mane can cut like knives. Lycanroc wears its prey down by degrees before finishing them off.",
+        "The rocks in its mane are sharper than a knife. Fragments that break off are treasured as good luck charms."
+    ],
+    "forms": {
+        "midday-form": {
+            "id": "midday-form",
+            "name": "Midday Form",
+            "shape": "quadruped",
+            "abilities": [
+                "keen-eye",
+                "sand-rush"
+            ],
+            "weight": 25,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 115,
+                "defense": 65,
+                "special-attack": 55,
+                "special-defense": 65,
+                "speed": 112
+            },
+            "hidden-abilities": [
+                "steadfast"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "accelerock",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "quick-guard",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "accelerock",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "howl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 18,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 23,
+                    "name": "rock-tomb",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 26,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 34,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 37,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "rock-climb",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 48,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "brown"
+        },
+        "midnight-form": {
+            "id": "midnight-form",
+            "name": "Midnight Form",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "keen-eye",
+                "vital-spirit"
+            ],
+            "weight": 25,
+            "height": 1.1,
+            "base-stats": {
+                "health-points": 85,
+                "attack": 115,
+                "defense": 75,
+                "special-attack": 55,
+                "special-defense": 75,
+                "speed": 82
+            },
+            "hidden-abilities": [
+                "no-guard"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "reversal",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "howl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 15,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 18,
+                    "name": "odor-sleuth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 23,
+                    "name": "rock-tomb",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 26,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 29,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 34,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 37,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "rock-climb",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 48,
+                    "name": "stone-edge",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "red"
+        },
+        "dusk-form": {
+            "id": "dusk-form",
+            "name": "Dusk Form",
+            "shape": "quadruped",
+            "abilities": [
+                "tough-claws"
+            ],
+            "weight": 25,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 117,
+                "defense": 65,
+                "special-attack": 55,
+                "special-defense": 65,
+                "speed": 110
+            },
+            "skills": [
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "thrash",
+                    "category": "normal",
+                    "accuracy": 120
+                },
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "accelerock",
+                    "category": "rock",
+                    "accuracy": 40
+                },
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "counter",
+                    "category": "fighting"
+                },
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "tackle",
+                    "category": "normal",
+                    "accuracy": 40
+                },
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "leer",
+                    "category": "normal"
+                },
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "sand attack",
+                    "category": "ground"
+                },
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "bite",
+                    "category": "dark",
+                    "accuracy": 60
+                },
+                {
+                    "level": null,
+                    "name": "evo.evo.",
+                    "type": "thrash",
+                    "category": "normal",
+                    "accuracy": 120
+                },
+                {
+                    "level": null,
+                    "name": "0044",
+                    "type": "sand attack",
+                    "category": "ground"
+                },
+                {
+                    "level": null,
+                    "name": "0077",
+                    "type": "bite",
+                    "category": "dark",
+                    "accuracy": 60
+                },
+                {
+                    "level": null,
+                    "name": "01212",
+                    "type": "howl",
+                    "category": "normal"
+                },
+                {
+                    "level": null,
+                    "name": "01515",
+                    "type": "rock throw",
+                    "category": "rock",
+                    "accuracy": 50
+                },
+                {
+                    "level": null,
+                    "name": "01818",
+                    "type": "odor sleuth",
+                    "category": "normal"
+                },
+                {
+                    "level": null,
+                    "name": "02323",
+                    "type": "rock tomb",
+                    "category": "rock",
+                    "accuracy": 60
+                },
+                {
+                    "level": null,
+                    "name": "02626",
+                    "type": "roar",
+                    "category": "normal"
+                },
+                {
+                    "level": null,
+                    "name": "02929",
+                    "type": "stealth rock",
+                    "category": "rock"
+                },
+                {
+                    "level": null,
+                    "name": "03434",
+                    "type": "rock slide",
+                    "category": "rock",
+                    "accuracy": 75
+                },
+                {
+                    "level": null,
+                    "name": "03737",
+                    "type": "scary face",
+                    "category": "normal"
+                },
+                {
+                    "level": null,
+                    "name": "04040",
+                    "type": "crunch",
+                    "category": "dark",
+                    "accuracy": 80
+                },
+                {
+                    "level": null,
+                    "name": "04545",
+                    "type": "rock climb",
+                    "category": "normal",
+                    "accuracy": 90
+                },
+                {
+                    "level": null,
+                    "name": "04848",
+                    "type": "stone edge",
+                    "category": "rock",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 375,
+    "classification": "wolf",
+    "names": {
+        "de": "Wolwerock",
+        "en": "Lycanroc",
+        "es": "Lycanroc",
+        "fr": "Lougaroc",
+        "it": "Lycanroc",
+        "jp": "ルガルガン",
+        "kr": "루가루암",
+        "zh": "鬃岩狼人",
+        "zh-CHS": "鬃岩狼人",
+        "zh-CHT": ""
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 90,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 170
+    }
+}

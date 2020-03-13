@@ -1,0 +1,361 @@
+{
+    "id": 834,
+    "name": "Drednaw",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "With jaws that can shear through steel rods, this highly aggressive Pokémon chomps down on its unfortunate prey.",
+        "This Pokémon rapidly extends its retractable neck to sink its sharp fangs into distant enemies and take them down."
+    ],
+    "forms": {
+        "drednaw": {
+            "id": "drednaw",
+            "name": "Drednaw",
+            "shape": "quadruped",
+            "abilities": [
+                "strong-jaw",
+                "shell-armor"
+            ],
+            "weight": 115.5,
+            "height": 1,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 115,
+                "defense": 90,
+                "special-attack": 48,
+                "special-defense": 68,
+                "speed": 74
+            },
+            "hidden-abilities": [
+                "swift-swim"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "rock-tomb",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "razor-shell",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "rock-tomb",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 21,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "jaw-lock",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "liquidation",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 66,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water",
+                "rock"
+            ],
+            "color": "green"
+        },
+        "gigantamax-drednaw": {
+            "id": "gigantamax-drednaw",
+            "name": "Gigantamax Drednaw",
+            "shape": "quadruped",
+            "abilities": [
+                "strong-jaw",
+                "shell-armor"
+            ],
+            "height": 24,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 115,
+                "defense": 90,
+                "special-attack": 48,
+                "special-defense": 68,
+                "speed": 74
+            },
+            "hidden-abilities": [
+                "swift-swim"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "rock-tomb",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "razor-shell",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "rock-tomb",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 21,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "jaw-lock",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "liquidation",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "body-slam",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 66,
+                    "name": "head-smash",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 150,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water",
+                "rock"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 430,
+    "changes": [
+        {
+            "targets": {
+                "834-drednaw": {
+                    "pokemon": 834,
+                    "form": "drednaw"
+                },
+                "834-gigantamax-drednaw": {
+                    "pokemon": 834,
+                    "form": "gigantamax-drednaw"
+                }
+            },
+            "changes": {
+                "834-drednaw <> 834-gigantamax-drednaw": {
+                    "targets": [
+                        "834-drednaw",
+                        "834-gigantamax-drednaw"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dynamax-band"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "bite",
+    "names": {
+        "de": "Kamalm",
+        "en": "Drednaw",
+        "es": "Drednaw",
+        "fr": "Torgamord",
+        "it": "Drednaw",
+        "jp": "カジリガメ",
+        "kr": "갈가부기",
+        "zh": "暴噬龟",
+        "zh-CHS": "暴噬龟",
+        "zh-CHT": "暴噬龜"
+    },
+    "species": [
+        "monster",
+        "amphibians"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 75,
+    "hatching-cycles": 20,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 170
+    }
+}

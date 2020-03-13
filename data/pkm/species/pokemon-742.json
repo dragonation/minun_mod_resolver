@@ -1,0 +1,155 @@
+{
+    "id": 742,
+    "name": "Cutiefly",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Nectar and pollen are its favorite fare. You can find Cutiefly hovering around Gossifleur, trying to get some of Gossifleur's pollen.",
+        "An opponent's aura can tell Cutiefly what that opponent's next move will be. Then Cutiefly can glide around the attack and strike back."
+    ],
+    "forms": {
+        "cutiefly": {
+            "id": "cutiefly",
+            "name": "Cutiefly",
+            "shape": "insectoid",
+            "abilities": [
+                "honey-gather",
+                "shield-dust"
+            ],
+            "weight": 0.2,
+            "height": 0.1,
+            "base-stats": {
+                "health-points": 40,
+                "attack": 45,
+                "defense": 40,
+                "special-attack": 55,
+                "special-defense": 40,
+                "speed": 84
+            },
+            "hidden-abilities": [
+                "sweet-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fairy-wind",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "stun-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 12,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "struggle-bug",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "switcheroo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "dazzling-gleam",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "quiver-dance",
+                    "type": "bug",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "bug",
+                "fairy"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 374,
+    "classification": "bee-fly",
+    "names": {
+        "de": "Wommel",
+        "en": "Cutiefly",
+        "es": "Cutiefly",
+        "fr": "Bombydou",
+        "it": "Cutiefly",
+        "jp": "アブリー",
+        "kr": "에블리",
+        "zh": "萌虻",
+        "zh-CHS": "萌虻",
+        "zh-CHT": ""
+    },
+    "species": [
+        "bug",
+        "fairy"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "honey"
+    },
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 61
+    }
+}

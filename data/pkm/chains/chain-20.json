@@ -1,0 +1,37 @@
+{
+    "ids": [
+        48,
+        49
+    ],
+    "chains": [
+        {
+            "targets": {
+                "48-venonat": {
+                    "pokemon": 48,
+                    "form": "venonat"
+                },
+                "49-venomoth": {
+                    "pokemon": 49,
+                    "form": "venomoth"
+                }
+            },
+            "changes": {
+                "48-venonat > 49-venomoth": {
+                    "targets": [
+                        "48-venonat",
+                        "49-venomoth"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                31
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

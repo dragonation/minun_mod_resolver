@@ -1,0 +1,167 @@
+{
+    "id": 273,
+    "name": "Seedot",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "If it remains still, it looks just like a real nut. It delights in surprising foraging Pokémon.",
+        "It attaches itself to a tree branch using the top of its head. Strong winds can sometimes make it fall."
+    ],
+    "forms": {
+        "seedot": {
+            "id": "seedot",
+            "name": "Seedot",
+            "shape": "head-legs",
+            "abilities": [
+                "chlorophyll",
+                "early-bird"
+            ],
+            "weight": 4,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 40,
+                "attack": 40,
+                "defense": 50,
+                "special-attack": 30,
+                "special-defense": 30,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "pickpocket"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 3,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "rollout",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 90
+                },
+                {
+                    "level": 15,
+                    "name": "mega-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "nature-power",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 27,
+                    "name": "synthesis",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 30,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "explosion",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 250,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 137,
+    "classification": "acorn",
+    "names": {
+        "de": "Samurzel",
+        "en": "Seedot",
+        "es": "Seedot",
+        "fr": "Grainipiot",
+        "it": "Seedot",
+        "jp": "タネボー",
+        "kr": "도토링",
+        "zh": "橡实果",
+        "zh-CHS": "橡实果",
+        "zh-CHT": "橡實果"
+    },
+    "species": [
+        "field",
+        "plant"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "power-herb"
+    },
+    "capture-rate": 255,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 44
+    }
+}

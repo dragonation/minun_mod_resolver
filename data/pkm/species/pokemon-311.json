@@ -1,0 +1,216 @@
+{
+    "id": 311,
+    "name": "Plusle",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It cheers on friends with pom-poms made of sparks. It drains power from telephone poles.",
+        "It absorbs electricity from telephone poles. It shorts out its body to create crackling noises."
+    ],
+    "forms": {
+        "plusle": {
+            "id": "plusle",
+            "name": "Plusle",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "plus"
+            ],
+            "weight": 4.2,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 50,
+                "defense": 40,
+                "special-attack": 85,
+                "special-defense": 75,
+                "speed": 95
+            },
+            "hidden-abilities": [
+                "lightning-rod"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "nuzzle",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "play-nice",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 7,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "encore",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "bestow",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "swift",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 19,
+                    "name": "electro-ball",
+                    "type": "electric",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "copycat",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "charm",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "last-resort",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "thunder",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 46,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 49,
+                    "name": "entrainment",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 154,
+    "classification": "cheering",
+    "names": {
+        "de": "Plusle",
+        "en": "Plusle",
+        "es": "Plusle",
+        "fr": "Posipi",
+        "it": "Plusle",
+        "jp": "プラスル",
+        "kr": "플러시",
+        "zh": "正电拍拍",
+        "zh-CHS": "正电拍拍",
+        "zh-CHT": "正電拍拍"
+    },
+    "species": [
+        "fairy"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "cell-battery"
+    },
+    "capture-rate": 200,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 142
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        504,
+        505
+    ],
+    "chains": [
+        {
+            "targets": {
+                "504-patrat": {
+                    "pokemon": 504,
+                    "form": "patrat"
+                },
+                "505-watchog": {
+                    "pokemon": 505,
+                    "form": "watchog"
+                }
+            },
+            "changes": {
+                "504-patrat > 505-watchog": {
+                    "targets": [
+                        "504-patrat",
+                        "505-watchog"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

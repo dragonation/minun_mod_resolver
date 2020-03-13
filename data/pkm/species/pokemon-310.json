@@ -1,0 +1,346 @@
+{
+    "id": 310,
+    "name": "Manectric",
+    "experiences-type": "slow",
+    "texts": [
+        "It stimulates its own muscles with electricity, so it can move quickly. It eases its soreness with electricity, too, so it can recover quickly as well.",
+        "It rarely appears before people. It is said to nest where lightning has fallen."
+    ],
+    "forms": {
+        "manectric": {
+            "id": "manectric",
+            "name": "Manectric",
+            "shape": "quadruped",
+            "abilities": [
+                "static",
+                "lightning-rod"
+            ],
+            "weight": 40.2,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 75,
+                "defense": 60,
+                "special-attack": 105,
+                "special-defense": 60,
+                "speed": 105
+            },
+            "hidden-abilities": [
+                "minus"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "howl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "shock-wave",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 20,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "wild-charge",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "thunder",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 60,
+                    "name": "electric-terrain",
+                    "type": "electric",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "yellow"
+        },
+        "mega-manectric": {
+            "id": "mega-manectric",
+            "name": "Mega Manectric",
+            "shape": "quadruped",
+            "abilities": [
+                "intimidate"
+            ],
+            "weight": 44,
+            "height": 1.8,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 75,
+                "defense": 80,
+                "special-attack": 135,
+                "special-defense": 80,
+                "speed": 135
+            },
+            "hidden-abilities": [
+                "minus"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "fire-fang",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "howl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "shock-wave",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 20,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 48,
+                    "name": "wild-charge",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "thunder",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 60,
+                    "name": "electric-terrain",
+                    "type": "electric",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 153,
+    "changes": [
+        {
+            "targets": {
+                "310-manectric": {
+                    "pokemon": 310,
+                    "form": "manectric"
+                },
+                "310-mega-manectric": {
+                    "pokemon": 310,
+                    "form": "mega-manectric"
+                }
+            },
+            "changes": {
+                "310-manectric <> 310-mega-manectric": {
+                    "targets": [
+                        "310-manectric",
+                        "310-mega-manectric"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "manectite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "discharge",
+    "names": {
+        "de": "Voltenso",
+        "en": "Manectric",
+        "es": "Manectric",
+        "fr": "Élecsprint",
+        "it": "Manectric",
+        "jp": "ライボルト",
+        "kr": "썬더볼트",
+        "zh": "雷电兽",
+        "zh-CHS": "雷电兽",
+        "zh-CHT": "雷電獸"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 2,
+        "experience": 166
+    }
+}

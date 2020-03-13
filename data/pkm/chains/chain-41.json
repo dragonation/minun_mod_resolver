@@ -1,0 +1,35 @@
+{
+    "ids": [
+        95,
+        208
+    ],
+    "chains": [
+        {
+            "targets": {
+                "95-onix": {
+                    "pokemon": 95,
+                    "form": "onix"
+                },
+                "208-steelix": {
+                    "pokemon": 208,
+                    "form": "steelix"
+                }
+            },
+            "changes": {
+                "95-onix > 208-steelix": {
+                    "targets": [
+                        "95-onix",
+                        "208-steelix"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

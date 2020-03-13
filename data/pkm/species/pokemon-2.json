@@ -1,0 +1,181 @@
+{
+    "id": 2,
+    "name": "Ivysaur",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.",
+        "Exposure to sunlight adds to its strength. Sunlight also makes the bud on its back grow larger."
+    ],
+    "forms": {
+        "ivysaur": {
+            "id": "ivysaur",
+            "name": "Ivysaur",
+            "shape": "quadruped",
+            "abilities": [
+                "overgrow"
+            ],
+            "weight": 13,
+            "height": 1,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 62,
+                "defense": 63,
+                "special-attack": 80,
+                "special-defense": 80,
+                "speed": 60
+            },
+            "hidden-abilities": [
+                "chlorophyll"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "vine-whip",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 45,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 9,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "razor-leaf",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 15,
+                    "name": "poison-powder",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 15,
+                    "name": "sleep-powder",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 20,
+                    "name": "seed-bomb",
+                    "type": "grass",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 30,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "synthesis",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "worry-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "grass",
+                "poison"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 1,
+    "classification": "seed",
+    "names": {
+        "de": "Bisaknosp",
+        "en": "Ivysaur",
+        "es": "Ivysaur",
+        "fr": "Herbizarre",
+        "it": "Ivysaur",
+        "jp": "フシギソウ",
+        "kr": "이상해풀",
+        "zh": "妙蛙草",
+        "zh-CHS": "妙蛙草",
+        "zh-CHT": "妙蛙草"
+    },
+    "species": [
+        "monster",
+        "plant"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 142
+    }
+}

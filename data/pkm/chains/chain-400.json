@@ -1,0 +1,57 @@
+{
+    "ids": [
+        782,
+        783,
+        784
+    ],
+    "chains": [
+        {
+            "targets": {
+                "782-jangmo-o": {
+                    "pokemon": 782,
+                    "form": "jangmo-o"
+                },
+                "783-hakamo-o": {
+                    "pokemon": 783,
+                    "form": "hakamo-o"
+                },
+                "784-kommo-o": {
+                    "pokemon": 784,
+                    "form": "kommo-o"
+                }
+            },
+            "changes": {
+                "782-jangmo-o > 783-hakamo-o": {
+                    "targets": [
+                        "782-jangmo-o",
+                        "783-hakamo-o"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                },
+                "783-hakamo-o > 784-kommo-o": {
+                    "targets": [
+                        "783-hakamo-o",
+                        "784-kommo-o"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                45
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

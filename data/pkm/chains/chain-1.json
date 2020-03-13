@@ -1,0 +1,57 @@
+{
+    "ids": [
+        1,
+        2,
+        3
+    ],
+    "chains": [
+        {
+            "targets": {
+                "1-bulbasaur": {
+                    "pokemon": 1,
+                    "form": "bulbasaur"
+                },
+                "2-ivysaur": {
+                    "pokemon": 2,
+                    "form": "ivysaur"
+                },
+                "3-venusaur": {
+                    "pokemon": 3,
+                    "form": "venusaur"
+                }
+            },
+            "changes": {
+                "1-bulbasaur > 2-ivysaur": {
+                    "targets": [
+                        "1-bulbasaur",
+                        "2-ivysaur"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "2-ivysaur > 3-venusaur": {
+                    "targets": [
+                        "2-ivysaur",
+                        "3-venusaur"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

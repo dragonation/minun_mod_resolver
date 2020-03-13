@@ -1,0 +1,30 @@
+{
+    "ids": [
+        185,
+        438
+    ],
+    "chains": [
+        {
+            "targets": {
+                "438-bonsly": {
+                    "pokemon": 438,
+                    "form": "bonsly"
+                },
+                "185-sudowoodo": {
+                    "pokemon": 185,
+                    "form": "sudowoodo"
+                }
+            },
+            "changes": {
+                "438-bonsly > 185-sudowoodo": {
+                    "targets": [
+                        "438-bonsly",
+                        "185-sudowoodo"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                }
+            }
+        }
+    ]
+}

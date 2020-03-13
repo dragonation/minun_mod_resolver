@@ -1,0 +1,16 @@
+{
+    "ids": [
+        890
+    ],
+    "chains": [
+        {
+            "targets": {
+                "890-eternatus": {
+                    "pokemon": 890,
+                    "form": "eternatus"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

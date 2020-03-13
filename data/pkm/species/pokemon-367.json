@@ -1,0 +1,184 @@
+{
+    "id": 367,
+    "name": "Huntail",
+    "experiences-type": "erratic",
+    "texts": [
+        "It's not the strongest swimmer. It wags its tail to lure in its prey and then gulps them down as soon as they get close.",
+        "Deep seas are their habitat. According to tradition, when Huntail wash up onshore, something unfortunate will happen."
+    ],
+    "forms": {
+        "huntail": {
+            "id": "huntail",
+            "name": "Huntail",
+            "shape": "serpentine",
+            "abilities": [
+                "swift-swim"
+            ],
+            "weight": 27,
+            "height": 1.7,
+            "base-stats": {
+                "health-points": 55,
+                "attack": 104,
+                "defense": 105,
+                "special-attack": 94,
+                "special-defense": 75,
+                "speed": 52
+            },
+            "hidden-abilities": [
+                "water-veil"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 9,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 14,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "ice-fang",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 19,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "dive",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 34,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 39,
+                    "name": "aqua-tail",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 45,
+                    "name": "coil",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 188,
+    "classification": "deep-sea",
+    "names": {
+        "de": "Aalabyss",
+        "en": "Huntail",
+        "es": "Huntail",
+        "fr": "Serpang",
+        "it": "Huntail",
+        "jp": "ハンテール",
+        "kr": "헌테일",
+        "zh": "猎斑鱼",
+        "zh-CHS": "猎斑鱼",
+        "zh-CHT": "獵斑魚"
+    },
+    "species": [
+        "amphibians"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "deep-sea-tooth"
+    },
+    "capture-rate": 60,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 170
+    }
+}

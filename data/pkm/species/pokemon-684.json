@@ -1,0 +1,176 @@
+{
+    "id": 684,
+    "name": "Swirlix",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It eats its own weight in sugar every day. If it doesn't get enough sugar, it becomes incredibly grumpy.",
+        "The sweet smell of cotton candy perfumes Swirlix's fluffy fur. This Pokémon spits out sticky string to tangle up its enemies."
+    ],
+    "forms": {
+        "swirlix": {
+            "id": "swirlix",
+            "name": "Swirlix",
+            "shape": "head-legs",
+            "abilities": [
+                "sweet-veil"
+            ],
+            "weight": 3.5,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 62,
+                "attack": 48,
+                "defense": 66,
+                "special-attack": 59,
+                "special-defense": 57,
+                "speed": 49
+            },
+            "hidden-abilities": [
+                "unburden"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "play-nice",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "fairy-wind",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 12,
+                    "name": "draining-kiss",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "fake-tears",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "round",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "string-shot",
+                    "type": "bug",
+                    "category": "status",
+                    "accuracy": 95
+                },
+                {
+                    "level": 24,
+                    "name": "cotton-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "energy-ball",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "wish",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "play-rough",
+                    "type": "fairy",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 39,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fairy"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 343,
+    "classification": "cotton-candy",
+    "names": {
+        "de": "Flauschling",
+        "en": "Swirlix",
+        "es": "Swirlix",
+        "fr": "Sucroquin",
+        "it": "Swirlix",
+        "jp": "ペロッパフ",
+        "kr": "나룸퍼프",
+        "zh": "绵绵泡芙",
+        "zh-CHS": "绵绵泡芙",
+        "zh-CHT": "綿綿泡芙"
+    },
+    "species": [
+        "fairy"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 200,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 68
+    }
+}

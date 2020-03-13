@@ -1,0 +1,53 @@
+{
+    "ids": [
+        366,
+        367,
+        368
+    ],
+    "chains": [
+        {
+            "targets": {
+                "366-clamperl": {
+                    "pokemon": 366,
+                    "form": "clamperl"
+                },
+                "367-huntail": {
+                    "pokemon": 367,
+                    "form": "huntail"
+                },
+                "368-gorebyss": {
+                    "pokemon": 368,
+                    "form": "gorebyss"
+                }
+            },
+            "changes": {
+                "366-clamperl > 367-huntail": {
+                    "targets": [
+                        "366-clamperl",
+                        "367-huntail"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                },
+                "366-clamperl > 368-gorebyss": {
+                    "targets": [
+                        "366-clamperl",
+                        "368-gorebyss"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "ids": [
+        43,
+        44,
+        45,
+        182
+    ],
+    "chains": [
+        {
+            "targets": {
+                "43-oddish": {
+                    "pokemon": 43,
+                    "form": "oddish"
+                },
+                "44-gloom": {
+                    "pokemon": 44,
+                    "form": "gloom"
+                },
+                "45-vileplume": {
+                    "pokemon": 45,
+                    "form": "vileplume"
+                },
+                "182-bellossom": {
+                    "pokemon": 182,
+                    "form": "bellossom"
+                }
+            },
+            "changes": {
+                "43-oddish > 44-gloom": {
+                    "targets": [
+                        "43-oddish",
+                        "44-gloom"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                21
+                            ]
+                        }
+                    ]
+                },
+                "44-gloom > 45-vileplume": {
+                    "targets": [
+                        "44-gloom",
+                        "45-vileplume"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "leaf-stone"
+                            ]
+                        }
+                    ]
+                },
+                "44-gloom > 182-bellossom": {
+                    "targets": [
+                        "44-gloom",
+                        "182-bellossom"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "sun-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

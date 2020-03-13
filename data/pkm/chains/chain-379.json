@@ -1,0 +1,37 @@
+{
+    "ids": [
+        751,
+        752
+    ],
+    "chains": [
+        {
+            "targets": {
+                "751-dewpider": {
+                    "pokemon": 751,
+                    "form": "dewpider"
+                },
+                "752-araquanid": {
+                    "pokemon": 752,
+                    "form": "araquanid"
+                }
+            },
+            "changes": {
+                "751-dewpider > 752-araquanid": {
+                    "targets": [
+                        "751-dewpider",
+                        "752-araquanid"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                22
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,338 @@
+{
+    "id": 839,
+    "name": "Coalossal",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It's usually peaceful, but the vandalism of mines enrages it. Offenders will be incinerated with flames that reach 2,700 degrees Fahrenheit.",
+        "While it's engaged in battle, its mountain of coal will burn bright red, sending off sparks that scorch the surrounding area."
+    ],
+    "forms": {
+        "coalossal": {
+            "id": "coalossal",
+            "name": "Coalossal",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "steam-engine",
+                "flame-body"
+            ],
+            "weight": 310.5,
+            "height": 2.8,
+            "base-stats": {
+                "health-points": 110,
+                "attack": 80,
+                "defense": 120,
+                "special-attack": 80,
+                "special-defense": 90,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "flash-fire"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tar-shot",
+                    "type": "rock",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flame-charge",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "smokescreen",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "tar-shot",
+                    "type": "rock",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "incinerate",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "heat-crash",
+                    "type": "fire",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 63,
+                    "name": "burn-up",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "fire"
+            ],
+            "color": "black"
+        },
+        "gigantamax-coalossal": {
+            "id": "gigantamax-coalossal",
+            "name": "Gigantamax Coalossal",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "steam-engine",
+                "flame-body"
+            ],
+            "height": 42,
+            "base-stats": {
+                "health-points": 110,
+                "attack": 80,
+                "defense": 120,
+                "special-attack": 80,
+                "special-defense": 90,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "flash-fire"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tar-shot",
+                    "type": "rock",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "flame-charge",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "smokescreen",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "rapid-spin",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "smack-down",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "tar-shot",
+                    "type": "rock",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "rock-polish",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "incinerate",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "stealth-rock",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 45,
+                    "name": "heat-crash",
+                    "type": "fire",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 54,
+                    "name": "rock-blast",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                },
+                {
+                    "level": 63,
+                    "name": "burn-up",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "fire"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 432,
+    "changes": [
+        {
+            "targets": {
+                "839-coalossal": {
+                    "pokemon": 839,
+                    "form": "coalossal"
+                },
+                "839-gigantamax-coalossal": {
+                    "pokemon": 839,
+                    "form": "gigantamax-coalossal"
+                }
+            },
+            "changes": {
+                "839-coalossal <> 839-gigantamax-coalossal": {
+                    "targets": [
+                        "839-coalossal",
+                        "839-gigantamax-coalossal"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dynamax-band"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "coal",
+    "names": {
+        "de": "Montecarbo",
+        "en": "Coalossal",
+        "es": "Coalossal",
+        "fr": "Monthracite",
+        "it": "Coalossal",
+        "jp": "セキタンザン",
+        "kr": "석탄산",
+        "zh": "巨炭山",
+        "zh-CHS": "巨炭山",
+        "zh-CHT": "巨炭山"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 15,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 3,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 255
+    }
+}

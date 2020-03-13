@@ -1,0 +1,511 @@
+{
+    "id": 646,
+    "name": "Kyurem",
+    "experiences-type": "slow",
+    "texts": [
+        "Dwelling within it is a power even greater than that of Reshiram or Zekrom, but the extreme cold keeps that power bound.",
+        "It appears that this Pokémon uses its powers over ice to freeze its own body in order to stabilize its cellular structure."
+    ],
+    "forms": {
+        "kyurem": {
+            "id": "kyurem",
+            "name": "Kyurem",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 325,
+            "height": 3,
+            "base-stats": {
+                "health-points": 125,
+                "attack": 130,
+                "defense": 90,
+                "special-attack": 130,
+                "special-defense": 90,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "noble-roar",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "ice-beam",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 64,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 72,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 80,
+                    "name": "glaciate",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 88,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "dragon",
+                "ice"
+            ],
+            "color": "gray"
+        },
+        "white-kyurem": {
+            "id": "white-kyurem",
+            "name": "White Kyurem",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "turboblaze"
+            ],
+            "weight": 325,
+            "height": 3.6,
+            "base-stats": {
+                "health-points": 125,
+                "attack": 120,
+                "defense": 90,
+                "special-attack": 170,
+                "special-defense": 100,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "noble-roar",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "ice-beam",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "fusion-flare",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 64,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 72,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 80,
+                    "name": "ice-burn",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 140,
+                    "accuracy": 90
+                },
+                {
+                    "level": 88,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "dragon",
+                "ice"
+            ],
+            "color": "gray"
+        },
+        "black-kyurem": {
+            "id": "black-kyurem",
+            "name": "Black Kyurem",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "teravolt"
+            ],
+            "weight": 325,
+            "height": 3.3,
+            "base-stats": {
+                "health-points": 125,
+                "attack": 170,
+                "defense": 100,
+                "special-attack": 120,
+                "special-defense": 90,
+                "speed": 95
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "noble-roar",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "freeze-dry",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "ice-beam",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "hyper-voice",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "fusion-bolt",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 56,
+                    "name": "blizzard",
+                    "type": "ice",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 64,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 72,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 80,
+                    "name": "freeze-shock",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 140,
+                    "accuracy": 90
+                },
+                {
+                    "level": 88,
+                    "name": "sheer-cold",
+                    "type": "ice",
+                    "category": "special",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "dragon",
+                "ice"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 325,
+    "changes": [
+        {
+            "targets": {
+                "646-white-kyurem": {
+                    "pokemon": 646,
+                    "form": "white-kyurem"
+                },
+                "646-kyurem": {
+                    "pokemon": 646,
+                    "form": "kyurem"
+                },
+                "646-black-kyurem": {
+                    "pokemon": 646,
+                    "form": "black-kyurem"
+                }
+            },
+            "changes": {
+                "@646-white-kyurem": {
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dna-splicers"
+                            ],
+                            "merge": "reshiram"
+                        }
+                    ],
+                    "targets": [
+                        "646-white-kyurem"
+                    ],
+                    "bidirectional": false
+                },
+                "@646-black-kyurem": {
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "dna-splicers"
+                            ],
+                            "merge": "zekrom"
+                        }
+                    ],
+                    "targets": [
+                        "646-black-kyurem"
+                    ],
+                    "bidirectional": false
+                }
+            }
+        }
+    ],
+    "classification": "boundary",
+    "names": {
+        "de": "Kyurem",
+        "en": "Kyurem",
+        "es": "Kyurem",
+        "fr": "Kyurem",
+        "it": "Kyurem",
+        "jp": "キュレム",
+        "kr": "큐레무",
+        "zh": "酋雷姆",
+        "zh-CHS": "酋雷姆",
+        "zh-CHT": "酋雷姆"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 297
+    }
+}

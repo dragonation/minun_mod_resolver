@@ -1,0 +1,16 @@
+{
+    "ids": [
+        648
+    ],
+    "chains": [
+        {
+            "targets": {
+                "648-aria-form": {
+                    "pokemon": 648,
+                    "form": "aria-form"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

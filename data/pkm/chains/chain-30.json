@@ -1,0 +1,37 @@
+{
+    "ids": [
+        72,
+        73
+    ],
+    "chains": [
+        {
+            "targets": {
+                "72-tentacool": {
+                    "pokemon": 72,
+                    "form": "tentacool"
+                },
+                "73-tentacruel": {
+                    "pokemon": 73,
+                    "form": "tentacruel"
+                }
+            },
+            "changes": {
+                "72-tentacool > 73-tentacruel": {
+                    "targets": [
+                        "72-tentacool",
+                        "73-tentacruel"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

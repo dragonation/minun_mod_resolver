@@ -1,0 +1,57 @@
+{
+    "ids": [
+        7,
+        8,
+        9
+    ],
+    "chains": [
+        {
+            "targets": {
+                "7-squirtle": {
+                    "pokemon": 7,
+                    "form": "squirtle"
+                },
+                "8-wartortle": {
+                    "pokemon": 8,
+                    "form": "wartortle"
+                },
+                "9-blastoise": {
+                    "pokemon": 9,
+                    "form": "blastoise"
+                }
+            },
+            "changes": {
+                "7-squirtle > 8-wartortle": {
+                    "targets": [
+                        "7-squirtle",
+                        "8-wartortle"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "8-wartortle > 9-blastoise": {
+                    "targets": [
+                        "8-wartortle",
+                        "9-blastoise"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

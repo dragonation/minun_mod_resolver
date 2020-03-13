@@ -1,0 +1,180 @@
+{
+    "id": 751,
+    "name": "Dewpider",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It forms a water bubble at the rear of its body and then covers its head with it. Meeting another Dewpider means comparing water-bubble sizes.",
+        "Dewpider normally lives underwater. When it comes onto land in search of food, it takes water with it in the form of a bubble on its head."
+    ],
+    "forms": {
+        "dewpider": {
+            "id": "dewpider",
+            "name": "Dewpider",
+            "shape": "head-legs",
+            "abilities": [
+                "water-bubble"
+            ],
+            "weight": 4,
+            "height": 0.3,
+            "base-stats": {
+                "health-points": 38,
+                "attack": 40,
+                "defense": 52,
+                "special-attack": 40,
+                "special-defense": 72,
+                "speed": 27
+            },
+            "hidden-abilities": [
+                "water-absorb"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "infestation",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "bug-bite",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "aqua-ring",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "soak",
+                    "type": "water",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "entrainment",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "lunge",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "liquidation",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "leech-life",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "mirror-coat",
+                    "type": "psychic",
+                    "category": "special",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water",
+                "bug"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 379,
+    "classification": "water-bubble",
+    "names": {
+        "de": "Araqua",
+        "en": "Dewpider",
+        "es": "Dewpider",
+        "fr": "Araqua",
+        "it": "Dewpider",
+        "jp": "シズクモ",
+        "kr": "물거미",
+        "zh": "滴蛛",
+        "zh-CHS": "滴蛛",
+        "zh-CHT": ""
+    },
+    "species": [
+        "amphibians",
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "mystic-water"
+    },
+    "capture-rate": 200,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 54
+    }
+}

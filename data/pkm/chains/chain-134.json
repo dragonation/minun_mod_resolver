@@ -1,0 +1,87 @@
+{
+    "ids": [
+        263,
+        264,
+        862
+    ],
+    "chains": [
+        {
+            "targets": {
+                "263-zigzagoon": {
+                    "pokemon": 263,
+                    "form": "zigzagoon"
+                },
+                "264-linoone": {
+                    "pokemon": 264,
+                    "form": "linoone"
+                }
+            },
+            "changes": {
+                "263-zigzagoon > 264-linoone": {
+                    "targets": [
+                        "263-zigzagoon",
+                        "264-linoone"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "263-galarian-zigzagoon": {
+                    "pokemon": 263,
+                    "form": "galarian-zigzagoon"
+                },
+                "264-galarian-linoone": {
+                    "pokemon": 264,
+                    "form": "galarian-linoone"
+                },
+                "862-obstagoon": {
+                    "pokemon": 862,
+                    "form": "obstagoon"
+                }
+            },
+            "changes": {
+                "263-galarian-zigzagoon > 264-galarian-linoone": {
+                    "targets": [
+                        "263-galarian-zigzagoon",
+                        "264-galarian-linoone"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                },
+                "264-galarian-linoone > 862-obstagoon": {
+                    "targets": [
+                        "264-galarian-linoone",
+                        "862-obstagoon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ],
+                            "time": "night"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

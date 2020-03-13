@@ -1,0 +1,37 @@
+{
+    "ids": [
+        605,
+        606
+    ],
+    "chains": [
+        {
+            "targets": {
+                "605-elgyem": {
+                    "pokemon": 605,
+                    "form": "elgyem"
+                },
+                "606-beheeyem": {
+                    "pokemon": 606,
+                    "form": "beheeyem"
+                }
+            },
+            "changes": {
+                "605-elgyem > 606-beheeyem": {
+                    "targets": [
+                        "605-elgyem",
+                        "606-beheeyem"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                42
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

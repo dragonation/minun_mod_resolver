@@ -1,0 +1,176 @@
+{
+    "id": 240,
+    "name": "Magby",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "When flames drip from its nose, that means it has a cold. Have it lie down for a nice rest in some magma.",
+        "Its body temperature is always around 1,100 degrees Fahrenheit. If Magby falls into a small- enough pond, the whole thing will dry up."
+    ],
+    "forms": {
+        "magby": {
+            "id": "magby",
+            "name": "Magby",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "flame-body"
+            ],
+            "weight": 21.4,
+            "height": 0.7,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 75,
+                "defense": 37,
+                "special-attack": 70,
+                "special-defense": 55,
+                "speed": 83
+            },
+            "hidden-abilities": [
+                "vital-spirit"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 30,
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "smokescreen",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "feint-attack",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 15,
+                    "name": "fire-spin",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 19,
+                    "name": "clear-smog",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 50
+                },
+                {
+                    "level": 22,
+                    "name": "flame-burst",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "fire-punch",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "lava-plume",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "fire"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 60,
+    "classification": "live-coal",
+    "names": {
+        "de": "Magby",
+        "en": "Magby",
+        "es": "Magby",
+        "fr": "Magby",
+        "it": "Magby",
+        "jp": "ブビィ",
+        "kr": "마그비",
+        "zh": "鸭嘴宝宝",
+        "zh-CHS": "鸭嘴宝宝",
+        "zh-CHT": "鴨嘴寶寶"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "6/2",
+    "holdings": {
+        "rare": "magmarizer"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 26,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 1,
+        "experience": 73
+    }
+}

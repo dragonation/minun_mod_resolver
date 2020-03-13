@@ -1,0 +1,16 @@
+{
+    "ids": [
+        379
+    ],
+    "chains": [
+        {
+            "targets": {
+                "379-registeel": {
+                    "pokemon": 379,
+                    "form": "registeel"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

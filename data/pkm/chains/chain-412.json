@@ -1,0 +1,16 @@
+{
+    "ids": [
+        799
+    ],
+    "chains": [
+        {
+            "targets": {
+                "799-guzzlord": {
+                    "pokemon": 799,
+                    "form": "guzzlord"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,253 @@
+{
+    "id": 655,
+    "name": "Delphox",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It gazes into the flame at the tip of its branch to achieve a focused state, which allows it to see into the future.",
+        "Using psychic power, it generates a fiery vortex of 5,400 degree Fahrenheit, incinerating foes swept into this whirl of flame."
+    ],
+    "forms": {
+        "delphox": {
+            "id": "delphox",
+            "name": "Delphox",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "blaze"
+            ],
+            "weight": 39,
+            "height": 1.5,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 69,
+                "defense": 72,
+                "special-attack": 114,
+                "special-defense": 100,
+                "speed": 104
+            },
+            "hidden-abilities": [
+                "magician"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "mystical-fire",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "role-play",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "switcheroo",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "howl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": null,
+                    "name": "mystical-fire",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "ember",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "howl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 14,
+                    "name": "flame-charge",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 22,
+                    "name": "fire-spin",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "lucky-chant",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 38,
+                    "name": "psyshock",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "flamethrower",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "will-o-wisp",
+                    "type": "fire",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 57,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 62,
+                    "name": "sunny-day",
+                    "type": "fire",
+                    "category": "status"
+                },
+                {
+                    "level": 68,
+                    "name": "magic-room",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 74,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                },
+                {
+                    "level": 80,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "fire",
+                "psychic"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 330,
+    "classification": "fox",
+    "names": {
+        "de": "Fennexis",
+        "en": "Delphox",
+        "es": "Delphox",
+        "fr": "Goupelin",
+        "it": "Delphox",
+        "jp": "マフォクシー",
+        "kr": "마폭시",
+        "zh": "妖火红狐",
+        "zh-CHS": "妖火红狐",
+        "zh-CHT": "妖火紅狐"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 240
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "ids": [
+        331,
+        332
+    ],
+    "chains": [
+        {
+            "targets": {
+                "331-cacnea": {
+                    "pokemon": 331,
+                    "form": "cacnea"
+                },
+                "332-cacturne": {
+                    "pokemon": 332,
+                    "form": "cacturne"
+                }
+            },
+            "changes": {
+                "331-cacnea > 332-cacturne": {
+                    "targets": [
+                        "331-cacnea",
+                        "332-cacturne"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "ids": [
+        124,
+        238
+    ],
+    "chains": [
+        {
+            "targets": {
+                "238-smoochum": {
+                    "pokemon": 238,
+                    "form": "smoochum"
+                },
+                "124-jynx": {
+                    "pokemon": 124,
+                    "form": "jynx"
+                }
+            },
+            "changes": {
+                "238-smoochum > 124-jynx": {
+                    "targets": [
+                        "238-smoochum",
+                        "124-jynx"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                }
+            }
+        }
+    ]
+}

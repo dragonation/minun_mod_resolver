@@ -1,0 +1,16 @@
+{
+    "ids": [
+        481
+    ],
+    "chains": [
+        {
+            "targets": {
+                "481-mesprit": {
+                    "pokemon": 481,
+                    "form": "mesprit"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

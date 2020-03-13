@@ -1,0 +1,30 @@
+{
+    "ids": [
+        447,
+        448
+    ],
+    "chains": [
+        {
+            "targets": {
+                "447-riolu": {
+                    "pokemon": 447,
+                    "form": "riolu"
+                },
+                "448-lucario": {
+                    "pokemon": 448,
+                    "form": "lucario"
+                }
+            },
+            "changes": {
+                "447-riolu > 448-lucario": {
+                    "targets": [
+                        "447-riolu",
+                        "448-lucario"
+                    ],
+                    "bidirectional": false,
+                    "methods": []
+                }
+            }
+        }
+    ]
+}

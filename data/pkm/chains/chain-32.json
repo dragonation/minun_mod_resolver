@@ -1,0 +1,66 @@
+{
+    "ids": [
+        77,
+        78
+    ],
+    "chains": [
+        {
+            "targets": {
+                "77-ponyta": {
+                    "pokemon": 77,
+                    "form": "ponyta"
+                },
+                "78-rapidash": {
+                    "pokemon": 78,
+                    "form": "rapidash"
+                }
+            },
+            "changes": {
+                "77-ponyta > 78-rapidash": {
+                    "targets": [
+                        "77-ponyta",
+                        "78-rapidash"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "77-galarian-ponyta": {
+                    "pokemon": 77,
+                    "form": "galarian-ponyta"
+                },
+                "78-galarian-rapidash": {
+                    "pokemon": 78,
+                    "form": "galarian-rapidash"
+                }
+            },
+            "changes": {
+                "77-galarian-ponyta > 78-galarian-rapidash": {
+                    "targets": [
+                        "77-galarian-ponyta",
+                        "78-galarian-rapidash"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

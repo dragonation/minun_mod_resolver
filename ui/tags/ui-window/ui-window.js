@@ -101,7 +101,7 @@ module.exports = {
 
             if ($(this).attr("just-hide-when-close") !== "yes") {
                 $.delay(500, () => {
-                    that.detach();
+                    $(this).detach();
                 });
             }
 

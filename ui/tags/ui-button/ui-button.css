@@ -4,11 +4,11 @@
 
 :host(.pressing) {
     transition: filter 0.3s;
-    filter: brightness(0.7);
+    filter: brightness(0.8);
 }
 
 :host(.picking) {
-    filter: brightness(0.8);
+    filter: brightness(0.9);
 }
 
 :host(.light) {

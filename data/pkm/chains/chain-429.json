@@ -1,0 +1,37 @@
+{
+    "ids": [
+        831,
+        832
+    ],
+    "chains": [
+        {
+            "targets": {
+                "831-wooloo": {
+                    "pokemon": 831,
+                    "form": "wooloo"
+                },
+                "832-dubwool": {
+                    "pokemon": 832,
+                    "form": "dubwool"
+                }
+            },
+            "changes": {
+                "831-wooloo > 832-dubwool": {
+                    "targets": [
+                        "831-wooloo",
+                        "832-dubwool"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                24
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

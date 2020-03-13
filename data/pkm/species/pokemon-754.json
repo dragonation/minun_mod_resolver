@@ -1,0 +1,191 @@
+{
+    "id": 754,
+    "name": "Lurantis",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "For self-protection, it pretends to be a bug Pokémon. Both of its arms bear keen-edged petals.",
+        "As it slashes into its enemies, it looks like it's dancing. Its elegant appearance has led some to call it the most glamorous Grass Pokémon."
+    ],
+    "forms": {
+        "lurantis": {
+            "id": "lurantis",
+            "name": "Lurantis",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "leaf-guard"
+            ],
+            "weight": 18.5,
+            "height": 0.9,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 105,
+                "defense": 90,
+                "special-attack": 80,
+                "special-defense": 90,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "contrary"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "petal blizzard",
+                    "category": "grass",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "x-scissor",
+                    "category": "bug",
+                    "accuracy": 80
+                },
+                {
+                    "level": null,
+                    "name": "0011",
+                    "type": "night slash",
+                    "category": "dark",
+                    "accuracy": 70
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "fury cutter",
+                    "category": "bug",
+                    "accuracy": 40
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "leafage",
+                    "category": "grass",
+                    "accuracy": 40
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "razor leaf",
+                    "category": "grass",
+                    "accuracy": 55
+                },
+                {
+                    "level": 1,
+                    "name": "0011",
+                    "type": "growth",
+                    "category": "normal"
+                },
+                {
+                    "level": null,
+                    "name": "evo.evo.",
+                    "type": "petal blizzard",
+                    "category": "grass",
+                    "accuracy": 90
+                },
+                {
+                    "level": 5,
+                    "name": "0055",
+                    "type": "leafage",
+                    "category": "grass",
+                    "accuracy": 40
+                },
+                {
+                    "level": 10,
+                    "name": "01010",
+                    "type": "razor leaf",
+                    "category": "grass",
+                    "accuracy": 55
+                },
+                {
+                    "level": 14,
+                    "name": "01414",
+                    "type": "growth",
+                    "category": "normal"
+                },
+                {
+                    "level": 19,
+                    "name": "01919",
+                    "type": "ingrain",
+                    "category": "grass"
+                },
+                {
+                    "level": 23,
+                    "name": "02323",
+                    "type": "leaf blade",
+                    "category": "grass",
+                    "accuracy": 90
+                },
+                {
+                    "level": 28,
+                    "name": "02828",
+                    "type": "synthesis",
+                    "category": "grass"
+                },
+                {
+                    "level": 32,
+                    "name": "03232",
+                    "type": "slash",
+                    "category": "normal",
+                    "accuracy": 70
+                },
+                {
+                    "level": 40,
+                    "name": "04040",
+                    "type": "sweet scent",
+                    "category": "normal"
+                },
+                {
+                    "level": 47,
+                    "name": "04747",
+                    "type": "solar blade",
+                    "category": "grass",
+                    "accuracy": 125
+                },
+                {
+                    "level": 55,
+                    "name": "05555",
+                    "type": "sunny day",
+                    "category": "fire"
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 380,
+    "classification": "bloom-sickle",
+    "names": {
+        "de": "Mantidea",
+        "en": "Lurantis",
+        "es": "Lurantis",
+        "fr": "Floramantis",
+        "it": "Lurantis",
+        "jp": "ラランテス",
+        "kr": "라란티스",
+        "zh": "兰螳花",
+        "zh-CHS": "兰螳花",
+        "zh-CHT": ""
+    },
+    "species": [
+        "plant"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "miracle-seed"
+    },
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 168
+    }
+}

@@ -1,0 +1,390 @@
+{
+    "id": 105,
+    "name": "Marowak",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It throws bones at Mandibuzz to knock it down. It's thought that Marowak is trying to avenge its parent.",
+        "They thump their bones rhythmically to communicate among themselves. There are nearly 50 different rhythmic patterns."
+    ],
+    "forms": {
+        "marowak": {
+            "id": "marowak",
+            "name": "Marowak",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "rock-head",
+                "lightning-rod"
+            ],
+            "weight": 45,
+            "height": 1,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 80,
+                "defense": 110,
+                "special-attack": 50,
+                "special-defense": 80,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "battle-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bone-club",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "bone-club",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 85
+                },
+                {
+                    "level": 11,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 21,
+                    "name": "bonemerang",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 23,
+                    "name": "rage",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 27,
+                    "name": "false-swipe",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "fling",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "stomping-tantrum",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 59,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 65,
+                    "name": "bone-rush",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "brown"
+        },
+        "alolan-marowak": {
+            "id": "alolan-marowak",
+            "name": "Alolan Marowak",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "cursed-body",
+                "lightning-rod"
+            ],
+            "weight": 34,
+            "height": 1,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 80,
+                "defense": 110,
+                "special-attack": 50,
+                "special-defense": 80,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "rock-head"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bone-club",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "flame-wheel",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 3,
+                    "name": "tail-whip",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "bone-club",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 85
+                },
+                {
+                    "level": 11,
+                    "name": "flame-wheel",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "bonemerang",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 23,
+                    "name": "will-o-wisp",
+                    "type": "fire",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 27,
+                    "name": "shadow-bone",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "fling",
+                    "type": "dark",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "stomping-tantrum",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 49,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 53,
+                    "name": "flare-blitz",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 59,
+                    "name": "retaliate",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 65,
+                    "name": "bone-rush",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "fire",
+                "ghost"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 46,
+    "classification": "bone-keeper",
+    "names": {
+        "de": "Knogga",
+        "en": "Marowak",
+        "es": "Marowak",
+        "fr": "Ossatueur",
+        "it": "Marowak",
+        "jp": "ガラガラ",
+        "kr": "텅구리",
+        "zh": "嘎啦嘎啦",
+        "zh-CHS": "嘎啦嘎啦",
+        "zh-CHT": "嘎啦嘎啦"
+    },
+    "species": [
+        "monster"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "thick-club"
+    },
+    "capture-rate": 75,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 149
+    }
+}

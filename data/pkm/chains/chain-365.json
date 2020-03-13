@@ -1,0 +1,16 @@
+{
+    "ids": [
+        721
+    ],
+    "chains": [
+        {
+            "targets": {
+                "721-volcanion": {
+                    "pokemon": 721,
+                    "form": "volcanion"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

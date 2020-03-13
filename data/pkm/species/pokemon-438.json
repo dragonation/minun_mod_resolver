@@ -1,0 +1,162 @@
+{
+    "id": 438,
+    "name": "Bonsly",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It expels both sweat and tears from its eyes. The sweat is a little salty, while the tears have a slight bitterness.",
+        "This Pokémon lives in dry, rocky areas. As its green spheres dry out, their dull luster increases."
+    ],
+    "forms": {
+        "bonsly": {
+            "id": "bonsly",
+            "name": "Bonsly",
+            "shape": "head-legs",
+            "abilities": [
+                "sturdy",
+                "rock-head"
+            ],
+            "weight": 15,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 80,
+                "defense": 95,
+                "special-attack": 10,
+                "special-defense": 45,
+                "speed": 10
+            },
+            "hidden-abilities": [
+                "rattled"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "fake-tears",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "copycat",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "rock-throw",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "block",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "mimic",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "rock-tomb",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 24,
+                    "name": "tearful-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "rock-slide",
+                    "type": "rock",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 90
+                },
+                {
+                    "level": 36,
+                    "name": "low-kick",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "counter",
+                    "type": "fighting",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "double-edge",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 90,
+    "classification": "bonsai",
+    "names": {
+        "de": "Mobai",
+        "en": "Bonsly",
+        "es": "Bonsly",
+        "fr": "Manzaï",
+        "it": "Bonsly",
+        "jp": "ウソハチ",
+        "kr": "꼬지지",
+        "zh": "盆才怪",
+        "zh-CHS": "盆才怪",
+        "zh-CHT": "盆才怪"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 255,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 58
+    }
+}

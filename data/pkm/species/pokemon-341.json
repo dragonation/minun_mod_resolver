@@ -1,0 +1,181 @@
+{
+    "id": 341,
+    "name": "Corphish",
+    "experiences-type": "fluctuating",
+    "texts": [
+        "No matter how dirty the water in the river, it will adapt and thrive. It has a strong will to survive.",
+        "It was originally a Pokémon from afar that escaped to the wild. It can adapt to the dirtiest river."
+    ],
+    "forms": {
+        "corphish": {
+            "id": "corphish",
+            "name": "Corphish",
+            "shape": "insectoid",
+            "abilities": [
+                "hyper-cutter",
+                "shell-armor"
+            ],
+            "weight": 11.5,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 43,
+                "attack": 80,
+                "defense": 65,
+                "special-attack": 50,
+                "special-defense": 35,
+                "speed": 35
+            },
+            "hidden-abilities": [
+                "adaptability"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "knock-off",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "double-hit",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 90
+                },
+                {
+                    "level": 24,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "razor-shell",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 36,
+                    "name": "swords-dance",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "crabhammer",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 48,
+                    "name": "endeavor",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 52,
+                    "name": "guillotine",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 30
+                }
+            ],
+            "types": [
+                "water"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 174,
+    "classification": "ruffian",
+    "names": {
+        "de": "Krebscorps",
+        "en": "Corphish",
+        "es": "Corphish",
+        "fr": "Écrapince",
+        "it": "Corphish",
+        "jp": "ヘイガニ",
+        "kr": "가재군",
+        "zh": "龙虾小兵",
+        "zh-CHS": "龙虾小兵",
+        "zh-CHT": "龍蝦小兵"
+    },
+    "species": [
+        "amphibians",
+        "aquatic"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 205,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 62
+    }
+}

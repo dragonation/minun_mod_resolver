@@ -1,0 +1,218 @@
+{
+    "id": 356,
+    "name": "Dusclops",
+    "experiences-type": "fast",
+    "texts": [
+        "Its body is entirely hollow. When it opens its mouth, it sucks everything in as if it were a black hole.",
+        "It seeks drifting will-o'-the-wisps and sucks them into its empty body. What happens inside is a mystery."
+    ],
+    "forms": {
+        "dusclops": {
+            "id": "dusclops",
+            "name": "Dusclops",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 30.6,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 40,
+                "attack": 70,
+                "defense": 130,
+                "special-attack": 60,
+                "special-defense": 130,
+                "speed": 25
+            },
+            "hidden-abilities": [
+                "frisk"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "shadow-punch",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 1,
+                    "name": "fire-punch",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "ice-punch",
+                    "type": "ice",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "gravity",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "bind",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 1,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "disable",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "shadow-sneak",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "shadow-punch",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 60
+                },
+                {
+                    "level": 12,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "will-o-wisp",
+                    "type": "fire",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "curse",
+                    "type": "ghost",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ghost"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 182,
+    "classification": "beckon",
+    "names": {
+        "de": "Zwirrklop",
+        "en": "Dusclops",
+        "es": "Dusclops",
+        "fr": "Téraclope",
+        "it": "Dusclops",
+        "jp": "サマヨール",
+        "kr": "미라몽",
+        "zh": "彷徨夜灵",
+        "zh-CHS": "彷徨夜灵",
+        "zh-CHT": "彷徨夜靈"
+    },
+    "species": [
+        "amorphous"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "spell-tag"
+    },
+    "capture-rate": 90,
+    "hatching-cycles": 26,
+    "initial-happiness": 35,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 159
+    }
+}

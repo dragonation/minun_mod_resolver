@@ -1,0 +1,24 @@
+<div class="line" style:margin-top="20px">
+    <div class="label">Width</div>
+    <ui-number-field value="${size[0]}" class="input width-input"/>
+</div>
+<div class="line">
+    <div class="label">Height</div>
+    <ui-number-field value="${size[1]}" class="input height-input"/>
+</div>
+<div class="line">
+    <div class="label">From No.</div>
+    <ui-number-field value="${range[0]}" class="input from-input"/>
+</div>
+<div class="line">
+    <div class="label">To No.</div>
+    <ui-number-field value="${range[1]}" class="input to-input"/>
+</div>
+<div class="line" style:height="34px" style:margin-top="20px">
+    <tmpl:if test="${!state}">
+        <ui-button class="input button dark" @action="batchSnapshots()">Batch snapshots</ui-button>
+    </tmpl:if>
+    <tmpl:if test="${state}">
+        <ui-button class="input button dark" style:background-color="#f12c0d" @action="cancelBatch()">Cancel<tmpl:if test="name"> (${name}-${pokemon}-${model}, ${finished} / ${total})</tmpl:if></ui-button>
+    </tmpl:if>
+</div>

@@ -1,0 +1,297 @@
+{
+    "id": 492,
+    "name": "Shaymin",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It can dissolve toxins in the air to instantly transform ruined land into a lush field of flowers.",
+        "The blooming of Gracidea flowers confers the power of flight upon it. Feelings of gratitude are the message it delivers."
+    ],
+    "forms": {
+        "land-form": {
+            "id": "land-form",
+            "name": "Land Forme",
+            "shape": "quadruped",
+            "abilities": [
+                "natural-cure"
+            ],
+            "weight": 2.1,
+            "height": 0.2,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 100,
+                "defense": 100,
+                "special-attack": 100,
+                "special-defense": 100,
+                "speed": 100
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "magical-leaf",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 19,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 28,
+                    "name": "synthesis",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 37,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "worry-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "aromatherapy",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 73,
+                    "name": "energy-ball",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 82,
+                    "name": "sweet-kiss",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 91,
+                    "name": "healing-wish",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 100,
+                    "name": "seed-flare",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "grass"
+            ],
+            "color": "green"
+        },
+        "sky-form": {
+            "id": "sky-form",
+            "name": "Sky Forme",
+            "shape": "quadruped",
+            "abilities": [
+                "serene-grace"
+            ],
+            "weight": 5.2,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 103,
+                "defense": 75,
+                "special-attack": 120,
+                "special-defense": 75,
+                "speed": 127
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "growth",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "magical-leaf",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 60
+                },
+                {
+                    "level": 19,
+                    "name": "leech-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 28,
+                    "name": "quick-attack",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "sweet-scent",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "natural-gift",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 55,
+                    "name": "worry-seed",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 64,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 73,
+                    "name": "energy-ball",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 82,
+                    "name": "sweet-kiss",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 75
+                },
+                {
+                    "level": 91,
+                    "name": "leaf-storm",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 130,
+                    "accuracy": 90
+                },
+                {
+                    "level": 100,
+                    "name": "seed-flare",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 85
+                }
+            ],
+            "types": [
+                "grass",
+                "flying"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 245,
+    "changes": [
+        {
+            "targets": {
+                "492-land-form": {
+                    "pokemon": 492,
+                    "time": "night",
+                    "form": "land-form"
+                },
+                "492-sky-form": {
+                    "pokemon": 492,
+                    "time": "day",
+                    "form": "sky-form"
+                }
+            },
+            "changes": {
+                "492-land-form <> 492-sky-form": {
+                    "targets": [
+                        "492-land-form",
+                        "492-sky-form"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "gracidea"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "gratitude",
+    "names": {
+        "de": "Shaymin",
+        "en": "Shaymin",
+        "es": "Shaymin",
+        "fr": "Shaymin",
+        "it": "Shaymin",
+        "jp": "シェイミ",
+        "kr": "쉐이미",
+        "zh": "谢米",
+        "zh-CHS": "谢米",
+        "zh-CHT": "謝米"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {
+        "common": "lum-berry",
+        "rare": "lum-berry"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 121,
+    "initial-happiness": 100,
+    "battle-gain-factors": {
+        "health-points": 3,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 270
+    }
+}

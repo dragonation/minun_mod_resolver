@@ -1,0 +1,166 @@
+{
+    "id": 436,
+    "name": "Bronzor",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It appears in ancient ruins. The pattern on its body doesn't come from any culture in the Galar region, so it remains shrouded in mystery.",
+        "Polishing Bronzor to a shine makes its surface reflect the truth, according to common lore. Be that as it may, Bronzor hates being polished."
+    ],
+    "forms": {
+        "bronzor": {
+            "id": "bronzor",
+            "name": "Bronzor",
+            "shape": "head",
+            "abilities": [
+                "levitate",
+                "heatproof"
+            ],
+            "weight": 60.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 57,
+                "attack": 24,
+                "defense": 86,
+                "special-attack": 24,
+                "special-defense": 86,
+                "speed": 23
+            },
+            "hidden-abilities": [
+                "heavy-metal"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "payback",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "gyro-ball",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 24,
+                    "name": "safeguard",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "extrasensory",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 40,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 44,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel",
+                "psychic"
+            ],
+            "color": "green"
+        }
+    },
+    "evolution": 222,
+    "classification": "bronze",
+    "names": {
+        "de": "Bronzel",
+        "en": "Bronzor",
+        "es": "Bronzor",
+        "fr": "Archéomire",
+        "it": "Bronzor",
+        "jp": "ドーミラー",
+        "kr": "동미러",
+        "zh": "铜镜怪",
+        "zh-CHS": "铜镜怪",
+        "zh-CHT": "銅鏡怪"
+    },
+    "species": [
+        "mineral"
+    ],
+    "gender": "-",
+    "holdings": {
+        "rare": "metal-coat"
+    },
+    "capture-rate": 255,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

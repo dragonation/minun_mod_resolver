@@ -1,0 +1,171 @@
+{
+    "id": 483,
+    "name": "Dialga",
+    "experiences-type": "slow",
+    "texts": [
+        "A Pokémon spoken of in legend. It is said that time began moving when Dialga was born.",
+        "It has the power to control time. It appears in Sinnoh-region myths as an ancient deity."
+    ],
+    "forms": {
+        "dialga": {
+            "id": "dialga",
+            "name": "Dialga",
+            "shape": "quadruped",
+            "abilities": [
+                "pressure"
+            ],
+            "weight": 683,
+            "height": 5.4,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 120,
+                "defense": 120,
+                "special-attack": 150,
+                "special-defense": 100,
+                "speed": 90
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "dragon-breath",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "metal-claw",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 95
+                },
+                {
+                    "level": 10,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "metal-burst",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 33,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "aura-sphere",
+                    "type": "fighting",
+                    "category": "special",
+                    "power": 80
+                },
+                {
+                    "level": 42,
+                    "name": "iron-tail",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 75
+                },
+                {
+                    "level": 46,
+                    "name": "roar-of-time",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                },
+                {
+                    "level": 50,
+                    "name": "flash-cannon",
+                    "type": "steel",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel",
+                "dragon"
+            ],
+            "color": "white"
+        }
+    },
+    "evolution": 237,
+    "classification": "temporal",
+    "names": {
+        "de": "Dialga",
+        "en": "Dialga",
+        "es": "Dialga",
+        "fr": "Dialga",
+        "it": "Dialga",
+        "jp": "ディアルガ",
+        "kr": "디아루가",
+        "zh": "帝牙卢卡",
+        "zh-CHS": "帝牙卢卡",
+        "zh-CHT": "帝牙盧卡"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 306
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "ids": [
+        491
+    ],
+    "chains": [
+        {
+            "targets": {
+                "491-darkrai": {
+                    "pokemon": 491,
+                    "form": "darkrai"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

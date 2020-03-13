@@ -1,0 +1,332 @@
+{
+    "id": 383,
+    "name": "Groudon",
+    "experiences-type": "slow",
+    "texts": [
+        "Said to have expanded the lands by evaporating water with raging heat. It battled titanically with Kyogre.",
+        "This legendary Pokémon is said to represent the land. It went to sleep after dueling Kyogre."
+    ],
+    "forms": {
+        "groudon": {
+            "id": "groudon",
+            "name": "Groudon",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "drought"
+            ],
+            "weight": 950,
+            "height": 3.5,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 180,
+                "defense": 160,
+                "special-attack": 150,
+                "special-defense": 90,
+                "speed": 90
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-shot",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 5,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "lava-plume",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "precipice-blades",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 85
+                },
+                {
+                    "level": 50,
+                    "name": "bulk-up",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 65,
+                    "name": "fissure",
+                    "type": "ground",
+                    "category": "physical"
+                },
+                {
+                    "level": 75,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                },
+                {
+                    "level": 80,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "eruption",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ground"
+            ],
+            "color": "red"
+        },
+        "primal-groudon": {
+            "id": "primal-groudon",
+            "name": "Primal Groudon",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "desolate-land"
+            ],
+            "weight": 999.7,
+            "height": 5,
+            "base-stats": {
+                "health-points": 100,
+                "attack": 180,
+                "defense": 160,
+                "special-attack": 150,
+                "special-defense": 90,
+                "speed": 90
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-shot",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 5,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "earth-power",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "lava-plume",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "rest",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "earthquake",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "precipice-blades",
+                    "type": "ground",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 85
+                },
+                {
+                    "level": 50,
+                    "name": "bulk-up",
+                    "type": "fighting",
+                    "category": "status"
+                },
+                {
+                    "level": 60,
+                    "name": "solar-beam",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 65,
+                    "name": "fissure",
+                    "type": "ground",
+                    "category": "physical"
+                },
+                {
+                    "level": 75,
+                    "name": "fire-blast",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 85
+                },
+                {
+                    "level": 80,
+                    "name": "hammer-arm",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 100,
+                    "accuracy": 90
+                },
+                {
+                    "level": 90,
+                    "name": "eruption",
+                    "type": "fire",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "ground",
+                "fire"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 199,
+    "changes": [
+        {
+            "targets": {
+                "383-groudon": {
+                    "pokemon": 383,
+                    "form": "groudon"
+                },
+                "383-primal-groudon": {
+                    "pokemon": 383,
+                    "form": "primal-groudon"
+                }
+            },
+            "changes": {
+                "383-groudon <> 383-primal-groudon": {
+                    "targets": [
+                        "383-groudon",
+                        "383-primal-groudon"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "red-orb"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "continent",
+    "names": {
+        "de": "Groudon",
+        "en": "Groudon",
+        "es": "Groudon",
+        "fr": "Groudon",
+        "it": "Groudon",
+        "jp": "グラードン",
+        "kr": "그란돈",
+        "zh": "固拉多",
+        "zh-CHS": "固拉多",
+        "zh-CHT": "固拉多"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 3,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 302
+    }
+}

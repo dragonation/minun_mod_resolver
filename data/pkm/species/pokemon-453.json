@@ -1,0 +1,179 @@
+{
+    "id": 453,
+    "name": "Croagunk",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It makes frightening noises with its poison-filled cheek sacs. When opponents flinch, Croagunk hits them with a poison jab.",
+        "Once diluted, its poison becomes medicinal. This Pokémon came into popularity after a pharmaceutical company chose it as a mascot."
+    ],
+    "forms": {
+        "croagunk": {
+            "id": "croagunk",
+            "name": "Croagunk",
+            "shape": "bipedal-tailless",
+            "abilities": [
+                "anticipation",
+                "dry-skin"
+            ],
+            "weight": 23,
+            "height": 0.7,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 61,
+                "defense": 40,
+                "special-attack": 61,
+                "special-defense": 40,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "poison-touch"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "poison-sting",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "mud-slap",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "astonish",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 30,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "flatter",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "revenge",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "venoshock",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "sucker-punch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 32,
+                    "name": "poison-jab",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 40,
+                    "name": "nasty-plot",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 44,
+                    "name": "sludge-bomb",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "belch",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "poison",
+                "fighting"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 229,
+    "classification": "toxic-mouth",
+    "names": {
+        "de": "Glibunkel",
+        "en": "Croagunk",
+        "es": "Croagunk",
+        "fr": "Cradopaud",
+        "it": "Croagunk",
+        "jp": "グレッグル",
+        "kr": "삐딱구리",
+        "zh": "不良蛙",
+        "zh-CHS": "不良蛙",
+        "zh-CHT": "不良蛙"
+    },
+    "species": [
+        "creature"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "black-sludge"
+    },
+    "capture-rate": 140,
+    "hatching-cycles": 11,
+    "initial-happiness": 100,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 60
+    }
+}

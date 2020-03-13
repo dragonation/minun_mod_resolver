@@ -1,0 +1,938 @@
+{
+    "id": 201,
+    "name": "Unown",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "Its flat, thin body is always stuck on walls. Its shape appears to have some meaning.",
+        "Shaped like ancient writing, it is a huge mystery whether language or Unown came first."
+    ],
+    "forms": {
+        "letter-a": {
+            "id": "letter-a",
+            "name": "Letter A Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-b": {
+            "id": "letter-b",
+            "name": "Letter B Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-c": {
+            "id": "letter-c",
+            "name": "Letter C Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-d": {
+            "id": "letter-d",
+            "name": "Letter D Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-e": {
+            "id": "letter-e",
+            "name": "Letter E Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-f": {
+            "id": "letter-f",
+            "name": "Letter F Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-g": {
+            "id": "letter-g",
+            "name": "Letter G Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-h": {
+            "id": "letter-h",
+            "name": "Letter H Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-i": {
+            "id": "letter-i",
+            "name": "Letter I Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-j": {
+            "id": "letter-j",
+            "name": "Letter J Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-k": {
+            "id": "letter-k",
+            "name": "Letter K Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-l": {
+            "id": "letter-l",
+            "name": "Letter L Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-m": {
+            "id": "letter-m",
+            "name": "Letter M Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-n": {
+            "id": "letter-n",
+            "name": "Letter N Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-o": {
+            "id": "letter-o",
+            "name": "Letter O Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-p": {
+            "id": "letter-p",
+            "name": "Letter P Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-q": {
+            "id": "letter-q",
+            "name": "Letter Q Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-r": {
+            "id": "letter-r",
+            "name": "Letter R Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-s": {
+            "id": "letter-s",
+            "name": "Letter S Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-t": {
+            "id": "letter-t",
+            "name": "Letter T Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-u": {
+            "id": "letter-u",
+            "name": "Letter U Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-v": {
+            "id": "letter-v",
+            "name": "Letter V Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-w": {
+            "id": "letter-w",
+            "name": "Letter W Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-x": {
+            "id": "letter-x",
+            "name": "Letter X Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-y": {
+            "id": "letter-y",
+            "name": "Letter Y Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "letter-z": {
+            "id": "letter-z",
+            "name": "Letter Z Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "question-mark": {
+            "id": "question-mark",
+            "name": "Question Mark Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        },
+        "exclamation-mark": {
+            "id": "exclamation-mark",
+            "name": "Exclamation Mark Unown",
+            "shape": "head",
+            "abilities": [
+                "levitate"
+            ],
+            "weight": 5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 48,
+                "attack": 72,
+                "defense": 48,
+                "special-attack": 72,
+                "special-defense": 48,
+                "speed": 48
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "hidden-power",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "black"
+        }
+    },
+    "evolution": 98,
+    "classification": "symbol",
+    "names": {
+        "de": "Icognito",
+        "en": "Unown",
+        "es": "Unown",
+        "fr": "Zarbi",
+        "it": "Unown",
+        "jp": "アンノーン",
+        "kr": "안농",
+        "zh": "未知图腾",
+        "zh-CHS": "未知图腾",
+        "zh-CHT": "未知圖騰"
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 225,
+    "hatching-cycles": 41,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 1,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 118
+    }
+}

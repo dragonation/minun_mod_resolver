@@ -1,0 +1,57 @@
+{
+    "ids": [
+        363,
+        364,
+        365
+    ],
+    "chains": [
+        {
+            "targets": {
+                "363-spheal": {
+                    "pokemon": 363,
+                    "form": "spheal"
+                },
+                "364-sealeo": {
+                    "pokemon": 364,
+                    "form": "sealeo"
+                },
+                "365-walrein": {
+                    "pokemon": 365,
+                    "form": "walrein"
+                }
+            },
+            "changes": {
+                "363-spheal > 364-sealeo": {
+                    "targets": [
+                        "363-spheal",
+                        "364-sealeo"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                },
+                "364-sealeo > 365-walrein": {
+                    "targets": [
+                        "364-sealeo",
+                        "365-walrein"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                44
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

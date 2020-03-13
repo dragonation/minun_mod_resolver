@@ -1,0 +1,57 @@
+{
+    "ids": [
+        246,
+        247,
+        248
+    ],
+    "chains": [
+        {
+            "targets": {
+                "246-larvitar": {
+                    "pokemon": 246,
+                    "form": "larvitar"
+                },
+                "247-pupitar": {
+                    "pokemon": 247,
+                    "form": "pupitar"
+                },
+                "248-tyranitar": {
+                    "pokemon": 248,
+                    "form": "tyranitar"
+                }
+            },
+            "changes": {
+                "246-larvitar > 247-pupitar": {
+                    "targets": [
+                        "246-larvitar",
+                        "247-pupitar"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                },
+                "247-pupitar > 248-tyranitar": {
+                    "targets": [
+                        "247-pupitar",
+                        "248-tyranitar"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                55
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

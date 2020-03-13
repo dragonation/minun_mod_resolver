@@ -1,0 +1,196 @@
+{
+    "id": 863,
+    "name": "Perrserker",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "What appears to be an iron helmet is actually hardened hair. This Pokémon lives for the thrill of battle.",
+        "After many battles, it evolved dangerous claws that come together to form daggers when extended."
+    ],
+    "forms": {
+        "perrserker": {
+            "id": "perrserker",
+            "name": "Perrserker",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "battle-armor",
+                "tough-claws"
+            ],
+            "weight": 28,
+            "height": 0.8,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 110,
+                "defense": 100,
+                "special-attack": 50,
+                "special-defense": 60,
+                "speed": 50
+            },
+            "hidden-abilities": [
+                "steely-spirit"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "metal-burst",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "fake-out",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hone-claws",
+                    "type": "dark",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "pay-day",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "metal-claw",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 95
+                },
+                {
+                    "level": 20,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 31,
+                    "name": "fury-swipes",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 18,
+                    "accuracy": 80
+                },
+                {
+                    "level": 36,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 42,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 54,
+                    "name": "thrash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "steel"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 22,
+    "classification": "viking",
+    "names": {
+        "de": "Mauzinger",
+        "en": "Perrserker",
+        "es": "Perrserker",
+        "fr": "Berserkatt",
+        "it": "Perrserker",
+        "jp": "ニャイキング",
+        "kr": "나이킹",
+        "zh": "喵头目",
+        "zh-CHS": "喵头目",
+        "zh-CHT": "喵頭目"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 90,
+    "hatching-cycles": 20,
+    "initial-happiness": 50,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 154
+    }
+}

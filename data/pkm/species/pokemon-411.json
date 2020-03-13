@@ -1,0 +1,181 @@
+{
+    "id": 411,
+    "name": "Bastiodon",
+    "experiences-type": "erratic",
+    "texts": [
+        "The bones of its face are huge and hard, so they were mistaken for its spine until after this Pokémon was successfully restored.",
+        "This Pokémon is from roughly 100 million years ago. Its terrifyingly tough face is harder than steel."
+    ],
+    "forms": {
+        "bastiodon": {
+            "id": "bastiodon",
+            "name": "Bastiodon",
+            "shape": "quadruped",
+            "abilities": [
+                "sturdy"
+            ],
+            "weight": 149.5,
+            "height": 1.3,
+            "base-stats": {
+                "health-points": 60,
+                "attack": 52,
+                "defense": 168,
+                "special-attack": 47,
+                "special-defense": 138,
+                "speed": 30
+            },
+            "hidden-abilities": [
+                "soundproof"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "block",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": null,
+                    "name": "block",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 15,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 19,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "metal-burst",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 51,
+                    "name": "iron-head",
+                    "type": "steel",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 58,
+                    "name": "heavy-slam",
+                    "type": "steel",
+                    "category": "physical",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "steel"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 211,
+    "classification": "shield",
+    "names": {
+        "de": "Bollterus",
+        "en": "Bastiodon",
+        "es": "Bastiodon",
+        "fr": "Bastiodon",
+        "it": "Bastiodon",
+        "jp": "トリデプス",
+        "kr": "바리톱스",
+        "zh": "护城龙",
+        "zh-CHS": "护城龙",
+        "zh-CHT": "護城龍"
+    },
+    "species": [
+        "monster"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 2,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 173
+    }
+}

@@ -1,0 +1,101 @@
+{
+    "ids": [
+        74,
+        75,
+        76
+    ],
+    "chains": [
+        {
+            "targets": {
+                "74-geodude": {
+                    "pokemon": 74,
+                    "form": "geodude"
+                },
+                "75-graveler": {
+                    "pokemon": 75,
+                    "form": "graveler"
+                },
+                "76-golem": {
+                    "pokemon": 76,
+                    "form": "golem"
+                }
+            },
+            "changes": {
+                "74-geodude > 75-graveler": {
+                    "targets": [
+                        "74-geodude",
+                        "75-graveler"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                },
+                "75-graveler > 76-golem": {
+                    "targets": [
+                        "75-graveler",
+                        "76-golem"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "74-alolan-geodude": {
+                    "pokemon": 74,
+                    "form": "alolan-geodude"
+                },
+                "75-alolan-graveler": {
+                    "pokemon": 75,
+                    "form": "alolan-graveler"
+                },
+                "76-alolan-golem": {
+                    "pokemon": 76,
+                    "form": "alolan-golem"
+                }
+            },
+            "changes": {
+                "74-alolan-geodude > 75-alolan-graveler": {
+                    "targets": [
+                        "74-alolan-geodude",
+                        "75-alolan-graveler"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                25
+                            ]
+                        }
+                    ]
+                },
+                "75-alolan-graveler > 76-alolan-golem": {
+                    "targets": [
+                        "75-alolan-graveler",
+                        "76-alolan-golem"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,497 @@
+{
+    "id": 181,
+    "name": "Ampharos",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "The light from its tail can be seen from space. This is why you can always tell exactly where it is, which is why it usually keeps the light off.",
+        "Its tail shines bright and strong. It has been prized since long ago as a beacon for sailors."
+    ],
+    "forms": {
+        "ampharos": {
+            "id": "ampharos",
+            "name": "Ampharos",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "static"
+            ],
+            "weight": 61.5,
+            "height": 1.4,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 75,
+                "defense": 85,
+                "special-attack": 115,
+                "special-defense": 90,
+                "speed": 55
+            },
+            "hidden-abilities": [
+                "plus"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                },
+                {
+                    "level": 1,
+                    "name": "magnetic-flux",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "ion-deluge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fire-punch",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 8,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "cotton-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "electro-ball",
+                    "type": "electric",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 51,
+                    "name": "signal-beam",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 62,
+                    "name": "thunder",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 65,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "yellow"
+        },
+        "mega-ampharos": {
+            "id": "mega-ampharos",
+            "name": "Mega Ampharos",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "mold-breaker"
+            ],
+            "weight": 61.5,
+            "height": 1.4,
+            "base-stats": {
+                "health-points": 90,
+                "attack": 95,
+                "defense": 105,
+                "special-attack": 165,
+                "special-defense": 110,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "plus"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "zap-cannon",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 50
+                },
+                {
+                    "level": 1,
+                    "name": "magnetic-flux",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "ion-deluge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "fire-punch",
+                    "type": "fire",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 1,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": null,
+                    "name": "thunder-punch",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 8,
+                    "name": "thunder-shock",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "cotton-spore",
+                    "type": "grass",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 25,
+                    "name": "electro-ball",
+                    "type": "electric",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 29,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "power-gem",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "cotton-guard",
+                    "type": "grass",
+                    "category": "status"
+                },
+                {
+                    "level": 51,
+                    "name": "signal-beam",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 100
+                },
+                {
+                    "level": 57,
+                    "name": "light-screen",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 62,
+                    "name": "thunder",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                },
+                {
+                    "level": 65,
+                    "name": "dragon-pulse",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "electric",
+                "dragon"
+            ],
+            "color": "yellow"
+        }
+    },
+    "evolution": 88,
+    "changes": [
+        {
+            "targets": {
+                "181-ampharos": {
+                    "pokemon": 181,
+                    "form": "ampharos"
+                },
+                "181-mega-ampharos": {
+                    "pokemon": 181,
+                    "form": "mega-ampharos"
+                }
+            },
+            "changes": {
+                "181-ampharos <> 181-mega-ampharos": {
+                    "targets": [
+                        "181-ampharos",
+                        "181-mega-ampharos"
+                    ],
+                    "bidirectional": true,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "ampharosite"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "classification": "light",
+    "names": {
+        "de": "Ampharos",
+        "en": "Ampharos",
+        "es": "Ampharos",
+        "fr": "Pharamp",
+        "it": "Ampharos",
+        "jp": "デンリュウ",
+        "kr": "전룡",
+        "zh": "电龙",
+        "zh-CHS": "电龙",
+        "zh-CHT": "電龍"
+    },
+    "species": [
+        "monster",
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 230
+    }
+}

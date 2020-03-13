@@ -1,0 +1,57 @@
+{
+    "ids": [
+        252,
+        253,
+        254
+    ],
+    "chains": [
+        {
+            "targets": {
+                "252-treecko": {
+                    "pokemon": 252,
+                    "form": "treecko"
+                },
+                "253-grovyle": {
+                    "pokemon": 253,
+                    "form": "grovyle"
+                },
+                "254-sceptile": {
+                    "pokemon": 254,
+                    "form": "sceptile"
+                }
+            },
+            "changes": {
+                "252-treecko > 253-grovyle": {
+                    "targets": [
+                        "252-treecko",
+                        "253-grovyle"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                16
+                            ]
+                        }
+                    ]
+                },
+                "253-grovyle > 254-sceptile": {
+                    "targets": [
+                        "253-grovyle",
+                        "254-sceptile"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

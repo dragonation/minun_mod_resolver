@@ -1,0 +1,37 @@
+{
+    "ids": [
+        749,
+        750
+    ],
+    "chains": [
+        {
+            "targets": {
+                "749-mudbray": {
+                    "pokemon": 749,
+                    "form": "mudbray"
+                },
+                "750-mudsdale": {
+                    "pokemon": 750,
+                    "form": "mudsdale"
+                }
+            },
+            "changes": {
+                "749-mudbray > 750-mudsdale": {
+                    "targets": [
+                        "749-mudbray",
+                        "750-mudsdale"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

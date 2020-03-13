@@ -1,0 +1,16 @@
+{
+    "ids": [
+        649
+    ],
+    "chains": [
+        {
+            "targets": {
+                "649-genesect": {
+                    "pokemon": 649,
+                    "form": "genesect"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

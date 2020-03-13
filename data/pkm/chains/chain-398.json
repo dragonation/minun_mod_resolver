@@ -1,0 +1,16 @@
+{
+    "ids": [
+        780
+    ],
+    "chains": [
+        {
+            "targets": {
+                "780-drampa": {
+                    "pokemon": 780,
+                    "form": "drampa"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

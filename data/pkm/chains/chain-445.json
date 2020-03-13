@@ -1,0 +1,16 @@
+{
+    "ids": [
+        871
+    ],
+    "chains": [
+        {
+            "targets": {
+                "871-pincurchin": {
+                    "pokemon": 871,
+                    "form": "pincurchin"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

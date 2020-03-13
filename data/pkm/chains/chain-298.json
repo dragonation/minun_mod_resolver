@@ -1,0 +1,57 @@
+{
+    "ids": [
+        602,
+        603,
+        604
+    ],
+    "chains": [
+        {
+            "targets": {
+                "602-tynamo": {
+                    "pokemon": 602,
+                    "form": "tynamo"
+                },
+                "603-eelektrik": {
+                    "pokemon": 603,
+                    "form": "eelektrik"
+                },
+                "604-eelektross": {
+                    "pokemon": 604,
+                    "form": "eelektross"
+                }
+            },
+            "changes": {
+                "602-tynamo > 603-eelektrik": {
+                    "targets": [
+                        "602-tynamo",
+                        "603-eelektrik"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                39
+                            ]
+                        }
+                    ]
+                },
+                "603-eelektrik > 604-eelektross": {
+                    "targets": [
+                        "603-eelektrik",
+                        "604-eelektross"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "thunder-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

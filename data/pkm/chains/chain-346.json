@@ -1,0 +1,37 @@
+{
+    "ids": [
+        690,
+        691
+    ],
+    "chains": [
+        {
+            "targets": {
+                "690-skrelp": {
+                    "pokemon": 690,
+                    "form": "skrelp"
+                },
+                "691-dragalge": {
+                    "pokemon": 691,
+                    "form": "dragalge"
+                }
+            },
+            "changes": {
+                "690-skrelp > 691-dragalge": {
+                    "targets": [
+                        "690-skrelp",
+                        "691-dragalge"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                48
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

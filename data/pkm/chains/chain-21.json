@@ -1,0 +1,66 @@
+{
+    "ids": [
+        50,
+        51
+    ],
+    "chains": [
+        {
+            "targets": {
+                "50-diglett": {
+                    "pokemon": 50,
+                    "form": "diglett"
+                },
+                "51-dugtrio": {
+                    "pokemon": 51,
+                    "form": "dugtrio"
+                }
+            },
+            "changes": {
+                "50-diglett > 51-dugtrio": {
+                    "targets": [
+                        "50-diglett",
+                        "51-dugtrio"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                26
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "50-alolan-diglett": {
+                    "pokemon": 50,
+                    "form": "alolan-diglett"
+                },
+                "51-alolan-dugtrio": {
+                    "pokemon": 51,
+                    "form": "alolan-dugtrio"
+                }
+            },
+            "changes": {
+                "50-alolan-diglett > 51-alolan-dugtrio": {
+                    "targets": [
+                        "50-alolan-diglett",
+                        "51-alolan-dugtrio"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                26
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

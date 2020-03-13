@@ -1,0 +1,16 @@
+{
+    "ids": [
+        302
+    ],
+    "chains": [
+        {
+            "targets": {
+                "302-sableye": {
+                    "pokemon": 302,
+                    "form": "sableye"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

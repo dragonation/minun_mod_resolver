@@ -1,0 +1,57 @@
+{
+    "ids": [
+        69,
+        70,
+        71
+    ],
+    "chains": [
+        {
+            "targets": {
+                "69-bellsprout": {
+                    "pokemon": 69,
+                    "form": "bellsprout"
+                },
+                "70-weepinbell": {
+                    "pokemon": 70,
+                    "form": "weepinbell"
+                },
+                "71-victreebel": {
+                    "pokemon": 71,
+                    "form": "victreebel"
+                }
+            },
+            "changes": {
+                "69-bellsprout > 70-weepinbell": {
+                    "targets": [
+                        "69-bellsprout",
+                        "70-weepinbell"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                21
+                            ]
+                        }
+                    ]
+                },
+                "70-weepinbell > 71-victreebel": {
+                    "targets": [
+                        "70-weepinbell",
+                        "71-victreebel"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "leaf-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

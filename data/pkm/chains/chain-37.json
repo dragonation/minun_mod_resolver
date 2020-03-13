@@ -1,0 +1,37 @@
+{
+    "ids": [
+        86,
+        87
+    ],
+    "chains": [
+        {
+            "targets": {
+                "86-seel": {
+                    "pokemon": 86,
+                    "form": "seel"
+                },
+                "87-dewgong": {
+                    "pokemon": 87,
+                    "form": "dewgong"
+                }
+            },
+            "changes": {
+                "86-seel > 87-dewgong": {
+                    "targets": [
+                        "86-seel",
+                        "87-dewgong"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

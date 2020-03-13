@@ -1,0 +1,16 @@
+{
+    "ids": [
+        640
+    ],
+    "chains": [
+        {
+            "targets": {
+                "640-virizion": {
+                    "pokemon": 640,
+                    "form": "virizion"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "ids": [
+        155,
+        156,
+        157
+    ],
+    "chains": [
+        {
+            "targets": {
+                "155-cyndaquil": {
+                    "pokemon": 155,
+                    "form": "cyndaquil"
+                },
+                "156-quilava": {
+                    "pokemon": 156,
+                    "form": "quilava"
+                },
+                "157-typhlosion": {
+                    "pokemon": 157,
+                    "form": "typhlosion"
+                }
+            },
+            "changes": {
+                "155-cyndaquil > 156-quilava": {
+                    "targets": [
+                        "155-cyndaquil",
+                        "156-quilava"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                14
+                            ]
+                        }
+                    ]
+                },
+                "156-quilava > 157-typhlosion": {
+                    "targets": [
+                        "156-quilava",
+                        "157-typhlosion"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                36
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

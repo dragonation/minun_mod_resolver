@@ -1,0 +1,216 @@
+{
+    "id": 784,
+    "name": "Kommo-o",
+    "experiences-type": "slow",
+    "texts": [
+        "It clatters its tail scales to unnerve opponents. This Pokémon will battle only those who stand steadfast in the face of this display.",
+        "Certain ruins have paintings of ancient warriors wearing armor made of Kommo-o scales."
+    ],
+    "forms": {
+        "kommo-o": {
+            "id": "kommo-o",
+            "name": "Kommo-o",
+            "shape": "bipedal-tail",
+            "abilities": [
+                "bulletproof",
+                "soundproof"
+            ],
+            "weight": 78.2,
+            "height": 1.6,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 110,
+                "defense": 125,
+                "special-attack": 100,
+                "special-defense": 105,
+                "speed": 85
+            },
+            "hidden-abilities": [
+                "overcoat"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "clanging-scales",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "belly-drum",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "autotomize",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "protect",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "dragon-tail",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 90
+                },
+                {
+                    "level": null,
+                    "name": "clanging-scales",
+                    "type": "dragon",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "headbutt",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "work-up",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 28,
+                    "name": "iron-defense",
+                    "type": "steel",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "dragon-claw",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "noble-roar",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "dragon-dance",
+                    "type": "dragon",
+                    "category": "status"
+                },
+                {
+                    "level": 52,
+                    "name": "outrage",
+                    "type": "dragon",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 60,
+                    "name": "close-combat",
+                    "type": "fighting",
+                    "category": "physical",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 68,
+                    "name": "clangorous-soul",
+                    "type": "dragon",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 76,
+                    "name": "boomburst",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 140,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "dragon",
+                "fighting"
+            ],
+            "color": "gray"
+        }
+    },
+    "evolution": 400,
+    "classification": "scaly",
+    "names": {
+        "de": "Grandiras",
+        "en": "Kommo-o",
+        "es": "Kommo-o",
+        "fr": "Ékaïser",
+        "it": "Kommo-o",
+        "jp": "ジャラランガ",
+        "kr": "짜랑고우거",
+        "zh": "杖尾鳞甲龙",
+        "zh-CHS": "杖尾鳞甲龙",
+        "zh-CHT": ""
+    },
+    "species": [
+        "dragon"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "common": "razor-claw"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 41,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 3,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 270
+    }
+}

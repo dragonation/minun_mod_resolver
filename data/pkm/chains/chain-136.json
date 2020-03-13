@@ -1,0 +1,57 @@
+{
+    "ids": [
+        270,
+        271,
+        272
+    ],
+    "chains": [
+        {
+            "targets": {
+                "270-lotad": {
+                    "pokemon": 270,
+                    "form": "lotad"
+                },
+                "271-lombre": {
+                    "pokemon": 271,
+                    "form": "lombre"
+                },
+                "272-ludicolo": {
+                    "pokemon": 272,
+                    "form": "ludicolo"
+                }
+            },
+            "changes": {
+                "270-lotad > 271-lombre": {
+                    "targets": [
+                        "270-lotad",
+                        "271-lombre"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                14
+                            ]
+                        }
+                    ]
+                },
+                "271-lombre > 272-ludicolo": {
+                    "targets": [
+                        "271-lombre",
+                        "272-ludicolo"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "water-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

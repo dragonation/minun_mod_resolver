@@ -1,0 +1,37 @@
+{
+    "ids": [
+        216,
+        217
+    ],
+    "chains": [
+        {
+            "targets": {
+                "216-teddiursa": {
+                    "pokemon": 216,
+                    "form": "teddiursa"
+                },
+                "217-ursaring": {
+                    "pokemon": 217,
+                    "form": "ursaring"
+                }
+            },
+            "changes": {
+                "216-teddiursa > 217-ursaring": {
+                    "targets": [
+                        "216-teddiursa",
+                        "217-ursaring"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,168 @@
+{
+    "id": 170,
+    "name": "Chinchou",
+    "experiences-type": "slow",
+    "texts": [
+        "Its antennae, which evolved from a fin, have both positive and negative charges flowing through them.",
+        "On the dark ocean floor, its only means of communication is its constantly flashing lights."
+    ],
+    "forms": {
+        "chinchou": {
+            "id": "chinchou",
+            "name": "Chinchou",
+            "shape": "fins",
+            "abilities": [
+                "volt-absorb",
+                "illuminate"
+            ],
+            "weight": 12,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 38,
+                "defense": 38,
+                "special-attack": 56,
+                "special-defense": 56,
+                "speed": 67
+            },
+            "hidden-abilities": [
+                "water-absorb"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 4,
+                    "name": "electro-ball",
+                    "type": "electric",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "thunder-wave",
+                    "type": "electric",
+                    "category": "status",
+                    "accuracy": 90
+                },
+                {
+                    "level": 12,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 24,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 28,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 32,
+                    "name": "aqua-ring",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "flail",
+                    "type": "normal",
+                    "category": "physical",
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "take-down",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 44,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water",
+                "electric"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 85,
+    "classification": "angler",
+    "names": {
+        "de": "Lampi",
+        "en": "Chinchou",
+        "es": "Chinchou",
+        "fr": "Loupio",
+        "it": "Chinchou",
+        "jp": "チョンチー",
+        "kr": "초라기",
+        "zh": "灯笼鱼",
+        "zh-CHS": "灯笼鱼",
+        "zh-CHT": "燈籠魚"
+    },
+    "species": [
+        "fish"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "deep-sea-scale"
+    },
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 66
+    }
+}

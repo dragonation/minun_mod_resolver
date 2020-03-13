@@ -1,0 +1,187 @@
+{
+    "id": 402,
+    "name": "Kricketune",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "It crosses its knifelike arms in front of its chest when it cries. It can compose melodies ad lib.",
+        "It signals its emotions with its melodies. Scientists are studying these melodic patterns."
+    ],
+    "forms": {
+        "kricketune": {
+            "id": "kricketune",
+            "name": "Kricketune",
+            "shape": "more-wings",
+            "abilities": [
+                "swarm"
+            ],
+            "weight": 25.5,
+            "height": 1,
+            "base-stats": {
+                "health-points": 77,
+                "attack": 85,
+                "defense": 51,
+                "special-attack": 55,
+                "special-defense": 51,
+                "speed": 65
+            },
+            "hidden-abilities": [
+                "technician"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 1,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "bide",
+                    "type": "normal",
+                    "category": "physical"
+                },
+                {
+                    "level": null,
+                    "name": "fury-cutter",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 95
+                },
+                {
+                    "level": 14,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 18,
+                    "name": "sing",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 22,
+                    "name": "focus-energy",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 26,
+                    "name": "slash",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "x-scissor",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 36,
+                    "name": "fell-stinger",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "taunt",
+                    "type": "dark",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 42,
+                    "name": "night-slash",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 70,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "sticky-web",
+                    "type": "bug",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "bug-buzz",
+                    "type": "bug",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "perish-song",
+                    "type": "normal",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "bug"
+            ],
+            "color": "red"
+        }
+    },
+    "evolution": 208,
+    "classification": "cricket",
+    "names": {
+        "de": "Zirpeise",
+        "en": "Kricketune",
+        "es": "Kricketune",
+        "fr": "Mélokrik",
+        "it": "Kricketune",
+        "jp": "コロトック",
+        "kr": "귀뚤톡크",
+        "zh": "音箱蟀",
+        "zh-CHS": "音箱蟀",
+        "zh-CHT": "音箱蟀"
+    },
+    "species": [
+        "bug"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "metronome"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 2,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 134
+    }
+}

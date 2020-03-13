@@ -1,0 +1,166 @@
+{
+    "id": 403,
+    "name": "Shinx",
+    "experiences-type": "medium-slow",
+    "texts": [
+        "The extension and contraction of its muscles generates electricity. It glows when in trouble.",
+        "All of its fur dazzles if danger is sensed. It flees while the foe is momentarily blinded."
+    ],
+    "forms": {
+        "shinx": {
+            "id": "shinx",
+            "name": "Shinx",
+            "shape": "quadruped",
+            "abilities": [
+                "rivalry",
+                "intimidate"
+            ],
+            "weight": 9.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 45,
+                "attack": 65,
+                "defense": 34,
+                "special-attack": 40,
+                "special-defense": 34,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "guts"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "tackle",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 9,
+                    "name": "charge",
+                    "type": "electric",
+                    "category": "status"
+                },
+                {
+                    "level": 11,
+                    "name": "baby-doll-eyes",
+                    "type": "fairy",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "spark",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 17,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "roar",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "swagger",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 29,
+                    "name": "thunder-fang",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 65,
+                    "accuracy": 95
+                },
+                {
+                    "level": 33,
+                    "name": "crunch",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "scary-face",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "discharge",
+                    "type": "electric",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "wild-charge",
+                    "type": "electric",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "electric"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 209,
+    "classification": "flash",
+    "names": {
+        "de": "Sheinux",
+        "en": "Shinx",
+        "es": "Shinx",
+        "fr": "Lixy",
+        "it": "Shinx",
+        "jp": "コリンク",
+        "kr": "꼬링크",
+        "zh": "小猫怪",
+        "zh-CHS": "小猫怪",
+        "zh-CHT": "小貓怪"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 235,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 1,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 53
+    }
+}

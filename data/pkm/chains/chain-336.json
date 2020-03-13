@@ -1,0 +1,57 @@
+{
+    "ids": [
+        669,
+        670,
+        671
+    ],
+    "chains": [
+        {
+            "targets": {
+                "669-red-flower": {
+                    "pokemon": 669,
+                    "form": "red-flower"
+                },
+                "670-floette": {
+                    "pokemon": 670,
+                    "form": "floette"
+                },
+                "671-red-flower": {
+                    "pokemon": 671,
+                    "form": "red-flower"
+                }
+            },
+            "changes": {
+                "669-red-flower > 670-floette": {
+                    "targets": [
+                        "669-red-flower",
+                        "670-floette"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                19
+                            ]
+                        }
+                    ]
+                },
+                "670-floette > 671-red-flower": {
+                    "targets": [
+                        "670-floette",
+                        "671-red-flower"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "shiny-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

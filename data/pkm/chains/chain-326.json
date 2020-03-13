@@ -1,0 +1,16 @@
+{
+    "ids": [
+        647
+    ],
+    "chains": [
+        {
+            "targets": {
+                "647-ordinary-form": {
+                    "pokemon": 647,
+                    "form": "ordinary-form"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

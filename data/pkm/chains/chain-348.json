@@ -1,0 +1,37 @@
+{
+    "ids": [
+        694,
+        695
+    ],
+    "chains": [
+        {
+            "targets": {
+                "694-helioptile": {
+                    "pokemon": 694,
+                    "form": "helioptile"
+                },
+                "695-heliolisk": {
+                    "pokemon": 695,
+                    "form": "heliolisk"
+                }
+            },
+            "changes": {
+                "694-helioptile > 695-heliolisk": {
+                    "targets": [
+                        "694-helioptile",
+                        "695-heliolisk"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "sun-stone"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

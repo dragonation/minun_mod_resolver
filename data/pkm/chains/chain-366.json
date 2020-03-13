@@ -1,0 +1,57 @@
+{
+    "ids": [
+        722,
+        723,
+        724
+    ],
+    "chains": [
+        {
+            "targets": {
+                "722-rowlet": {
+                    "pokemon": 722,
+                    "form": "rowlet"
+                },
+                "723-dartrix": {
+                    "pokemon": 723,
+                    "form": "dartrix"
+                },
+                "724-decidueye": {
+                    "pokemon": 724,
+                    "form": "decidueye"
+                }
+            },
+            "changes": {
+                "722-rowlet > 723-dartrix": {
+                    "targets": [
+                        "722-rowlet",
+                        "723-dartrix"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                17
+                            ]
+                        }
+                    ]
+                },
+                "723-dartrix > 724-decidueye": {
+                    "targets": [
+                        "723-dartrix",
+                        "724-decidueye"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                34
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

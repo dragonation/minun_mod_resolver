@@ -1,0 +1,161 @@
+{
+    "id": 747,
+    "name": "Mareanie",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "The first symptom of its sting is numbness. The next is an itching sensation so intense that it's impossible to resist the urge to claw at your skin.",
+        "Unlike their Alolan counterparts, the Mareanie of the Galar region have not yet figured out that the branches of Corsola are delicious."
+    ],
+    "forms": {
+        "mareanie": {
+            "id": "mareanie",
+            "name": "Mareanie",
+            "shape": "head-base",
+            "abilities": [
+                "merciless",
+                "limber"
+            ],
+            "weight": 8,
+            "height": 0.4,
+            "base-stats": {
+                "health-points": 50,
+                "attack": 53,
+                "defense": 62,
+                "special-attack": 43,
+                "special-defense": 52,
+                "speed": 45
+            },
+            "hidden-abilities": [
+                "regenerator"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "poison-sting",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 5,
+                    "name": "wide-guard",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 10,
+                    "name": "bite",
+                    "type": "dark",
+                    "category": "physical",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 15,
+                    "name": "venoshock",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 20,
+                    "name": "recover",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 25,
+                    "name": "pin-missile",
+                    "type": "bug",
+                    "category": "physical",
+                    "power": 25,
+                    "accuracy": 95
+                },
+                {
+                    "level": 30,
+                    "name": "toxic-spikes",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 35,
+                    "name": "liquidation",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 85,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "venom-drench",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 45,
+                    "name": "poison-jab",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "toxic",
+                    "type": "poison",
+                    "category": "status",
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "poison",
+                "water"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 377,
+    "classification": "brutal-star",
+    "names": {
+        "de": "Garstella",
+        "en": "Mareanie",
+        "es": "Mareanie",
+        "fr": "Vorastérie",
+        "it": "Mareanie",
+        "jp": "ヒドイデ",
+        "kr": "시마사리",
+        "zh": "好坏星",
+        "zh-CHS": "好坏星",
+        "zh-CHT": ""
+    },
+    "species": [
+        "amphibians"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "poison-barb"
+    },
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 61
+    }
+}

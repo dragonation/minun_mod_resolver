@@ -1,0 +1,16 @@
+{
+    "ids": [
+        798
+    ],
+    "chains": [
+        {
+            "targets": {
+                "798-kartana": {
+                    "pokemon": 798,
+                    "form": "kartana"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "ids": [
+        374,
+        375,
+        376
+    ],
+    "chains": [
+        {
+            "targets": {
+                "374-beldum": {
+                    "pokemon": 374,
+                    "form": "beldum"
+                },
+                "375-metang": {
+                    "pokemon": 375,
+                    "form": "metang"
+                },
+                "376-metagross": {
+                    "pokemon": 376,
+                    "form": "metagross"
+                }
+            },
+            "changes": {
+                "374-beldum > 375-metang": {
+                    "targets": [
+                        "374-beldum",
+                        "375-metang"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                20
+                            ]
+                        }
+                    ]
+                },
+                "375-metang > 376-metagross": {
+                    "targets": [
+                        "375-metang",
+                        "376-metagross"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                45
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

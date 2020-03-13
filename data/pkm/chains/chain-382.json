@@ -1,0 +1,37 @@
+{
+    "ids": [
+        757,
+        758
+    ],
+    "chains": [
+        {
+            "targets": {
+                "757-salandit": {
+                    "pokemon": 757,
+                    "form": "salandit"
+                },
+                "758-salazzle": {
+                    "pokemon": 758,
+                    "form": "salazzle"
+                }
+            },
+            "changes": {
+                "757-salandit > 758-salazzle": {
+                    "targets": [
+                        "757-salandit",
+                        "758-salazzle"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                33
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

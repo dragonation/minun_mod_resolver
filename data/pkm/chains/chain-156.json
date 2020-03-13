@@ -1,0 +1,16 @@
+{
+    "ids": [
+        313
+    ],
+    "chains": [
+        {
+            "targets": {
+                "313-volbeat": {
+                    "pokemon": 313,
+                    "form": "volbeat"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

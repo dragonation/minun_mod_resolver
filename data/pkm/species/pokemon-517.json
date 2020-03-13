@@ -1,0 +1,175 @@
+{
+    "id": 517,
+    "name": "Munna",
+    "experiences-type": "fast",
+    "texts": [
+        "Late at night, it appears beside people's pillows. As it feeds on dreams, the patterns on its body give off a faint glow.",
+        "It eats dreams and releases mist. The mist is pink when it's eating a good dream, and black when it's eating a nightmare."
+    ],
+    "forms": {
+        "munna": {
+            "id": "munna",
+            "name": "Munna",
+            "shape": "quadruped",
+            "abilities": [
+                "forewarn",
+                "synchronize"
+            ],
+            "weight": 23.3,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 76,
+                "attack": 25,
+                "defense": 45,
+                "special-attack": 67,
+                "special-defense": 55,
+                "speed": 24
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "stored-power",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "defense-curl",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 4,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": 8,
+                    "name": "psybeam",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 12,
+                    "name": "imprison",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "moonlight",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "magic-coat",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 24,
+                    "name": "zen-headbutt",
+                    "type": "psychic",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 90
+                },
+                {
+                    "level": 28,
+                    "name": "calm-mind",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "yawn",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 36,
+                    "name": "psychic",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 40,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 44,
+                    "name": "dream-eater",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 48,
+                    "name": "future-sight",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 120,
+                    "accuracy": 100
+                },
+                {
+                    "level": 52,
+                    "name": "wonder-room",
+                    "type": "psychic",
+                    "category": "status"
+                }
+            ],
+            "types": [
+                "psychic"
+            ],
+            "color": "pink"
+        }
+    },
+    "evolution": 257,
+    "classification": "dream-eater",
+    "names": {
+        "de": "Somniam",
+        "en": "Munna",
+        "es": "Munna",
+        "fr": "Munna",
+        "it": "Munna",
+        "jp": "ムンナ",
+        "kr": "몽나",
+        "zh": "食梦梦",
+        "zh-CHS": "食梦梦",
+        "zh-CHT": "食夢夢"
+    },
+    "species": [
+        "field"
+    ],
+    "gender": "4/4",
+    "holdings": {},
+    "capture-rate": 190,
+    "hatching-cycles": 11,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 1,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 58
+    }
+}

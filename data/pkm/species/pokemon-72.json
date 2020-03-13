@@ -1,0 +1,202 @@
+{
+    "id": 72,
+    "name": "Tentacool",
+    "experiences-type": "slow",
+    "texts": [
+        "It drifts through the sea searching for prey. Its poisonous tentacles break off sometimes, but after a while, they grow back.",
+        "Its body is 99% water. The remaining 1% contains the organ that makes its poison."
+    ],
+    "forms": {
+        "tentacool": {
+            "id": "tentacool",
+            "name": "Tentacool",
+            "shape": "tentacles",
+            "abilities": [
+                "clear-body",
+                "liquid-ooze"
+            ],
+            "weight": 45.5,
+            "height": 0.9,
+            "base-stats": {
+                "health-points": 40,
+                "attack": 40,
+                "defense": 35,
+                "special-attack": 50,
+                "special-defense": 100,
+                "speed": 70
+            },
+            "hidden-abilities": [
+                "rain-dish"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "poison-sting",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "supersonic",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 55
+                },
+                {
+                    "level": 7,
+                    "name": "constrict",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 10,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "acid",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 13,
+                    "name": "toxic-spikes",
+                    "type": "poison",
+                    "category": "status"
+                },
+                {
+                    "level": 16,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 19,
+                    "name": "wrap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 90
+                },
+                {
+                    "level": 22,
+                    "name": "acid-spray",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 25,
+                    "name": "bubble-beam",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 28,
+                    "name": "barrier",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "poison-jab",
+                    "type": "poison",
+                    "category": "physical",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 34,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 37,
+                    "name": "screech",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 40,
+                    "name": "hex",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "sludge-wave",
+                    "type": "poison",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 46,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                },
+                {
+                    "level": 49,
+                    "name": "wring-out",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "water",
+                "poison"
+            ],
+            "color": "blue"
+        }
+    },
+    "evolution": 30,
+    "classification": "jellyfish",
+    "names": {
+        "de": "Tentacha",
+        "en": "Tentacool",
+        "es": "Tentacool",
+        "fr": "Tentacool",
+        "it": "Tentacool",
+        "jp": "メノクラゲ",
+        "kr": "왕눈해",
+        "zh": "玛瑙水母",
+        "zh-CHS": "玛瑙水母",
+        "zh-CHT": "瑪瑙水母"
+    },
+    "species": [
+        "aquatic"
+    ],
+    "gender": "4/4",
+    "holdings": {
+        "rare": "poison-barb"
+    },
+    "capture-rate": 190,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 1,
+        "speed": 0,
+        "experience": 67
+    }
+}

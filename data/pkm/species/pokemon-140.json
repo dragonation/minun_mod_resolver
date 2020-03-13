@@ -1,0 +1,160 @@
+{
+    "id": 140,
+    "name": "Kabuto",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "This Pokémon thrived 300 million years ago. It's said that living specimens can still be seen in a certain region—a rare sight.",
+        "This Pokémon became extinct everywhere, except in a few areas. It protects itself with its hard shell."
+    ],
+    "forms": {
+        "kabuto": {
+            "id": "kabuto",
+            "name": "Kabuto",
+            "shape": "insectoid",
+            "abilities": [
+                "swift-swim",
+                "battle-armor"
+            ],
+            "weight": 11.5,
+            "height": 0.5,
+            "base-stats": {
+                "health-points": 30,
+                "attack": 80,
+                "defense": 90,
+                "special-attack": 55,
+                "special-defense": 45,
+                "speed": 55
+            },
+            "hidden-abilities": [
+                "weak-armor"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "scratch",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "harden",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 6,
+                    "name": "absorb",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 20,
+                    "accuracy": 100
+                },
+                {
+                    "level": 11,
+                    "name": "leer",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 16,
+                    "name": "mud-shot",
+                    "type": "ground",
+                    "category": "special",
+                    "power": 55,
+                    "accuracy": 95
+                },
+                {
+                    "level": 21,
+                    "name": "sand-attack",
+                    "type": "ground",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "endure",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 31,
+                    "name": "aqua-jet",
+                    "type": "water",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "mega-drain",
+                    "type": "grass",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 41,
+                    "name": "metal-sound",
+                    "type": "steel",
+                    "category": "status",
+                    "accuracy": 85
+                },
+                {
+                    "level": 46,
+                    "name": "ancient-power",
+                    "type": "rock",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 50,
+                    "name": "wring-out",
+                    "type": "normal",
+                    "category": "special",
+                    "accuracy": 100
+                }
+            ],
+            "types": [
+                "rock",
+                "water"
+            ],
+            "color": "brown"
+        }
+    },
+    "evolution": 69,
+    "classification": "shellfish",
+    "names": {
+        "de": "Kabuto",
+        "en": "Kabuto",
+        "es": "Kabuto",
+        "fr": "Kabuto",
+        "it": "Kabuto",
+        "jp": "カブト",
+        "kr": "투구",
+        "zh": "化石盔",
+        "zh-CHS": "化石盔",
+        "zh-CHT": "化石盔"
+    },
+    "species": [
+        "amphibians",
+        "aquatic"
+    ],
+    "gender": "7/1",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 31,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 1,
+        "special-attack": 0,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 71
+    }
+}

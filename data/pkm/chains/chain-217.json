@@ -1,0 +1,66 @@
+{
+    "ids": [
+        422,
+        423
+    ],
+    "chains": [
+        {
+            "targets": {
+                "422-shellos": {
+                    "pokemon": 422,
+                    "form": "shellos"
+                },
+                "423-gastrodon": {
+                    "pokemon": 423,
+                    "form": "gastrodon"
+                }
+            },
+            "changes": {
+                "422-shellos > 423-gastrodon": {
+                    "targets": [
+                        "422-shellos",
+                        "423-gastrodon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "targets": {
+                "422-shellos": {
+                    "pokemon": 422,
+                    "form": "shellos"
+                },
+                "423-gastrodon": {
+                    "pokemon": 423,
+                    "form": "gastrodon"
+                }
+            },
+            "changes": {
+                "422-shellos > 423-gastrodon": {
+                    "targets": [
+                        "422-shellos",
+                        "423-gastrodon"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

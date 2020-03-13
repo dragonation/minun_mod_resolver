@@ -1,0 +1,37 @@
+{
+    "ids": [
+        459,
+        460
+    ],
+    "chains": [
+        {
+            "targets": {
+                "459-snover": {
+                    "pokemon": 459,
+                    "form": "snover"
+                },
+                "460-abomasnow": {
+                    "pokemon": 460,
+                    "form": "abomasnow"
+                }
+            },
+            "changes": {
+                "459-snover > 460-abomasnow": {
+                    "targets": [
+                        "459-snover",
+                        "460-abomasnow"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                40
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

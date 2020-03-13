@@ -1,0 +1,37 @@
+{
+    "ids": [
+        161,
+        162
+    ],
+    "chains": [
+        {
+            "targets": {
+                "161-sentret": {
+                    "pokemon": 161,
+                    "form": "sentret"
+                },
+                "162-furret": {
+                    "pokemon": 162,
+                    "form": "furret"
+                }
+            },
+            "changes": {
+                "161-sentret > 162-furret": {
+                    "targets": [
+                        "161-sentret",
+                        "162-furret"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                15
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

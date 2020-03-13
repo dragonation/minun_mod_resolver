@@ -1,0 +1,37 @@
+{
+    "ids": [
+        747,
+        748
+    ],
+    "chains": [
+        {
+            "targets": {
+                "747-mareanie": {
+                    "pokemon": 747,
+                    "form": "mareanie"
+                },
+                "748-toxapex": {
+                    "pokemon": 748,
+                    "form": "toxapex"
+                }
+            },
+            "changes": {
+                "747-mareanie > 748-toxapex": {
+                    "targets": [
+                        "747-mareanie",
+                        "748-toxapex"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                38
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "ids": [
+        848,
+        849
+    ],
+    "chains": [
+        {
+            "targets": {
+                "848-toxel": {
+                    "pokemon": 848,
+                    "form": "toxel"
+                },
+                "849-amped-form": {
+                    "pokemon": 849,
+                    "form": "amped-form"
+                },
+                "849-low-key-form": {
+                    "pokemon": 849,
+                    "form": "low-key-form"
+                }
+            },
+            "changes": {
+                "848-toxel > 849-amped-form": {
+                    "targets": [
+                        "848-toxel",
+                        "849-amped-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ],
+                            "natures": [
+                                "hardy",
+                                "brave",
+                                "adamant",
+                                "naughty",
+                                "docile",
+                                "impish",
+                                "lax",
+                                "hasty",
+                                "jolly",
+                                "naive",
+                                "rash",
+                                "sassy",
+                                "quirky"
+                            ]
+                        }
+                    ]
+                },
+                "848-toxel > 849-low-key-form": {
+                    "targets": [
+                        "848-toxel",
+                        "849-low-key-form"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                30
+                            ],
+                            "natures": [
+                                "lonely",
+                                "bold",
+                                "relaxed",
+                                "timid",
+                                "serious",
+                                "modestmild",
+                                "quiet",
+                                "bashful",
+                                "calm",
+                                "gentle",
+                                "careful"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

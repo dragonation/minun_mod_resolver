@@ -1,0 +1,194 @@
+{
+    "id": 788,
+    "name": "Tapu Fini",
+    "experiences-type": "slow",
+    "texts": [
+        "This guardian deity of Poni Island manipulates water. Because it lives deep within a thick fog, it came to be both feared and revered.",
+        "Although it's called a guardian deity, terrible calamities sometimes befall those who recklessly approach Tapu Fini."
+    ],
+    "forms": {
+        "tapu-fini": {
+            "id": "tapu-fini",
+            "name": "Tapu Fini",
+            "shape": "head-arms",
+            "abilities": [
+                "misty-surge"
+            ],
+            "weight": 21.2,
+            "height": 1.3,
+            "base-stats": {
+                "health-points": 70,
+                "attack": 75,
+                "defense": 115,
+                "special-attack": 95,
+                "special-defense": 130,
+                "speed": 85
+            },
+            "hidden-abilities": [
+                "telepathy"
+            ],
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "misty-terrain",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "heal-pulse",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "mean-look",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "haze",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "mist",
+                    "type": "ice",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "withdraw",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "water-gun",
+                    "type": "water",
+                    "category": "special",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 8,
+                    "name": "water-pulse",
+                    "type": "water",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 100
+                },
+                {
+                    "level": 14,
+                    "name": "whirlpool",
+                    "type": "water",
+                    "category": "special",
+                    "power": 35,
+                    "accuracy": 85
+                },
+                {
+                    "level": 20,
+                    "name": "soak",
+                    "type": "water",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 26,
+                    "name": "refresh",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 32,
+                    "name": "brine",
+                    "type": "water",
+                    "category": "special",
+                    "power": 65,
+                    "accuracy": 100
+                },
+                {
+                    "level": 38,
+                    "name": "defog",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 43,
+                    "name": "nature's-madness",
+                    "type": "fairy",
+                    "category": "special",
+                    "accuracy": 90
+                },
+                {
+                    "level": 48,
+                    "name": "muddy-water",
+                    "type": "water",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 85
+                },
+                {
+                    "level": 53,
+                    "name": "aqua-ring",
+                    "type": "water",
+                    "category": "status"
+                },
+                {
+                    "level": 58,
+                    "name": "hydro-pump",
+                    "type": "water",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 80
+                }
+            ],
+            "types": [
+                "water",
+                "fairy"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 404,
+    "classification": "land-spirit",
+    "names": {
+        "de": "Kapu-Kime",
+        "en": "Tapu Fini",
+        "es": "Tapu Fini",
+        "fr": "Tokopisco",
+        "it": "Tapu Fini",
+        "jp": "カプ・レヒレ",
+        "kr": "카푸느지느",
+        "zh": "卡璞·鳍鳍",
+        "zh-CHS": "卡璞·鳍鳍",
+        "zh-CHT": ""
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 3,
+    "hatching-cycles": 16,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 0,
+        "special-defense": 3,
+        "speed": 0,
+        "experience": 114
+    }
+}

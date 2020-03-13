@@ -1,0 +1,198 @@
+{
+    "id": 792,
+    "name": "Lunala",
+    "experiences-type": "slow",
+    "texts": [
+        "Known as the Beast That Calls the Moon, this Pokémon lives by taking in any and all light and converting it into its own energy.",
+        "It steals the light from its surroundings and then becomes the full moon, showering its own light across the night sky."
+    ],
+    "forms": {
+        "lunala": {
+            "id": "lunala",
+            "name": "Lunala",
+            "shape": "two-wings",
+            "abilities": [
+                "shadow-shield"
+            ],
+            "weight": 120,
+            "height": 4,
+            "base-stats": {
+                "health-points": 137,
+                "attack": 113,
+                "defense": 89,
+                "special-attack": 137,
+                "special-defense": 107,
+                "speed": 97
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "moongeist-beam",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "cosmic-power",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "teleport",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 1,
+                    "name": "confusion",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 50,
+                    "accuracy": 100
+                },
+                {
+                    "level": 1,
+                    "name": "hypnosis",
+                    "type": "psychic",
+                    "category": "status",
+                    "accuracy": 60
+                },
+                {
+                    "level": null,
+                    "name": "moongeist-beam",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 7,
+                    "name": "night-shade",
+                    "type": "ghost",
+                    "category": "special",
+                    "accuracy": 100
+                },
+                {
+                    "level": 14,
+                    "name": "confuse-ray",
+                    "type": "ghost",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 21,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 28,
+                    "name": "shadow-ball",
+                    "type": "ghost",
+                    "category": "special",
+                    "power": 80,
+                    "accuracy": 100
+                },
+                {
+                    "level": 35,
+                    "name": "moonlight",
+                    "type": "fairy",
+                    "category": "status"
+                },
+                {
+                    "level": 42,
+                    "name": "night-daze",
+                    "type": "dark",
+                    "category": "special",
+                    "power": 85,
+                    "accuracy": 95
+                },
+                {
+                    "level": 49,
+                    "name": "magic-coat",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 56,
+                    "name": "moonblast",
+                    "type": "fairy",
+                    "category": "special",
+                    "power": 95,
+                    "accuracy": 100
+                },
+                {
+                    "level": 63,
+                    "name": "phantom-force",
+                    "type": "ghost",
+                    "category": "physical",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 70,
+                    "name": "dream-eater",
+                    "type": "psychic",
+                    "category": "special",
+                    "power": 100,
+                    "accuracy": 100
+                },
+                {
+                    "level": 77,
+                    "name": "wide-guard",
+                    "type": "rock",
+                    "category": "status"
+                },
+                {
+                    "level": 84,
+                    "name": "hyper-beam",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 150,
+                    "accuracy": 90
+                }
+            ],
+            "types": [
+                "psychic",
+                "ghost"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 405,
+    "classification": "moone",
+    "names": {
+        "de": "Lunala",
+        "en": "Lunala",
+        "es": "Lunala",
+        "fr": "Lunala",
+        "it": "Lunala",
+        "jp": "ルナアーラ",
+        "kr": "루나아라",
+        "zh": "露奈雅拉",
+        "zh-CHS": "露奈雅拉",
+        "zh-CHT": ""
+    },
+    "species": [
+        "unique"
+    ],
+    "gender": "-",
+    "holdings": {},
+    "capture-rate": 45,
+    "hatching-cycles": 121,
+    "initial-happiness": 0,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 3,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 136
+    }
+}

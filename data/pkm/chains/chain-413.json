@@ -1,0 +1,62 @@
+{
+    "ids": [
+        800
+    ],
+    "chains": [
+        {
+            "targets": {
+                "800-necrozma": {
+                    "pokemon": 800,
+                    "form": "necrozma"
+                }
+            },
+            "changes": {
+                "800-necrozma > undefined": {
+                    "targets": [
+                        "800-necrozma",
+                        null
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "n-solarizer"
+                            ]
+                        },
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "n-lunarizer"
+                            ]
+                        },
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "n-solarizer"
+                            ]
+                        },
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "ultra-burst"
+                            ]
+                        },
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "ultra-burst"
+                            ]
+                        },
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "n-lunarizer"
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

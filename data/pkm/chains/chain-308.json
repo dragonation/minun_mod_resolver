@@ -1,0 +1,37 @@
+{
+    "ids": [
+        622,
+        623
+    ],
+    "chains": [
+        {
+            "targets": {
+                "622-golett": {
+                    "pokemon": 622,
+                    "form": "golett"
+                },
+                "623-golurk": {
+                    "pokemon": 623,
+                    "form": "golurk"
+                }
+            },
+            "changes": {
+                "622-golett > 623-golurk": {
+                    "targets": [
+                        "622-golett",
+                        "623-golurk"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                43
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

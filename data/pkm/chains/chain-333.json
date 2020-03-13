@@ -1,0 +1,57 @@
+{
+    "ids": [
+        661,
+        662,
+        663
+    ],
+    "chains": [
+        {
+            "targets": {
+                "661-fletchling": {
+                    "pokemon": 661,
+                    "form": "fletchling"
+                },
+                "662-fletchinder": {
+                    "pokemon": 662,
+                    "form": "fletchinder"
+                },
+                "663-talonflame": {
+                    "pokemon": 663,
+                    "form": "talonflame"
+                }
+            },
+            "changes": {
+                "661-fletchling > 662-fletchinder": {
+                    "targets": [
+                        "661-fletchling",
+                        "662-fletchinder"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                17
+                            ]
+                        }
+                    ]
+                },
+                "662-fletchinder > 663-talonflame": {
+                    "targets": [
+                        "662-fletchinder",
+                        "663-talonflame"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                35
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

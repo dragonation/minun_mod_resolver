@@ -1,0 +1,16 @@
+{
+    "ids": [
+        128
+    ],
+    "chains": [
+        {
+            "targets": {
+                "128-tauros": {
+                    "pokemon": 128,
+                    "form": "tauros"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

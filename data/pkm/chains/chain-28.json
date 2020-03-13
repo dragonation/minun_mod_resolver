@@ -1,0 +1,55 @@
+{
+    "ids": [
+        66,
+        67,
+        68
+    ],
+    "chains": [
+        {
+            "targets": {
+                "66-machop": {
+                    "pokemon": 66,
+                    "form": "machop"
+                },
+                "67-machoke": {
+                    "pokemon": 67,
+                    "form": "machoke"
+                },
+                "68-machamp": {
+                    "pokemon": 68,
+                    "form": "machamp"
+                }
+            },
+            "changes": {
+                "66-machop > 67-machoke": {
+                    "targets": [
+                        "66-machop",
+                        "67-machoke"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                28
+                            ]
+                        }
+                    ]
+                },
+                "67-machoke > 68-machamp": {
+                    "targets": [
+                        "67-machoke",
+                        "68-machamp"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "trade",
+                            "parameters": []
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

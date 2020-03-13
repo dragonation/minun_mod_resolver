@@ -1,0 +1,16 @@
+{
+    "ids": [
+        876
+    ],
+    "chains": [
+        {
+            "targets": {
+                "876-male-indeedee": {
+                    "pokemon": 876,
+                    "form": "male-indeedee"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

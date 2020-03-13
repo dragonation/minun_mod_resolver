@@ -1,0 +1,16 @@
+{
+    "ids": [
+        480
+    ],
+    "chains": [
+        {
+            "targets": {
+                "480-uxie": {
+                    "pokemon": 480,
+                    "form": "uxie"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

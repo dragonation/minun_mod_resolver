@@ -1,0 +1,16 @@
+{
+    "ids": [
+        794
+    ],
+    "chains": [
+        {
+            "targets": {
+                "794-buzzwole": {
+                    "pokemon": 794,
+                    "form": "buzzwole"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}

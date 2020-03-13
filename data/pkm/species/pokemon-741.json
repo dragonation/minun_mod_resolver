@@ -1,0 +1,680 @@
+{
+    "id": 741,
+    "name": "Oricorio",
+    "experiences-type": "medium-fast",
+    "texts": [
+        "It wins the hearts of its enemies with its passionate dancing and then uses the opening it creates to burn them up with blazing flames.",
+        "This Oricorio has drunk red nectar. If its Trainer gives the wrong order, this passionate Pokémon becomes fiercely angry."
+    ],
+    "forms": {
+        "baile-style": {
+            "id": "baile-style",
+            "name": "Baile Style",
+            "shape": "two-wings",
+            "abilities": [
+                "dancer"
+            ],
+            "weight": 3.4,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 70,
+                "defense": 70,
+                "special-attack": 98,
+                "special-defense": 70,
+                "speed": 93
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 13,
+                    "name": "air-cutter",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 16,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "feather-dance",
+                    "type": "flying",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "double-slap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 26,
+                    "name": "teeter-dance",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "roost",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 40,
+                    "name": "revelation-dance",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "mirror-move",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "fire",
+                "flying"
+            ],
+            "color": "red"
+        },
+        "pom-pom-style": {
+            "id": "pom-pom-style",
+            "name": "Pom-Pom Style",
+            "shape": "two-wings",
+            "abilities": [
+                "dancer"
+            ],
+            "weight": 3.4,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 70,
+                "defense": 70,
+                "special-attack": 98,
+                "special-defense": 70,
+                "speed": 93
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 13,
+                    "name": "air-cutter",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 16,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "feather-dance",
+                    "type": "flying",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "double-slap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 26,
+                    "name": "teeter-dance",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "roost",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 40,
+                    "name": "revelation-dance",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "mirror-move",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "electric",
+                "flying"
+            ],
+            "color": "yellow"
+        },
+        "pa-u-style": {
+            "id": "pa-u-style",
+            "name": "Pa'u Style",
+            "shape": "two-wings",
+            "abilities": [
+                "dancer"
+            ],
+            "weight": 3.4,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 70,
+                "defense": 70,
+                "special-attack": 98,
+                "special-defense": 70,
+                "speed": 93
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 13,
+                    "name": "air-cutter",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 16,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "feather-dance",
+                    "type": "flying",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "double-slap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 26,
+                    "name": "teeter-dance",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "roost",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 40,
+                    "name": "revelation-dance",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "mirror-move",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "psychic",
+                "flying"
+            ],
+            "color": "pink"
+        },
+        "sensu-style": {
+            "id": "sensu-style",
+            "name": "Sensu Style",
+            "shape": "two-wings",
+            "abilities": [
+                "dancer"
+            ],
+            "weight": 3.4,
+            "height": 0.6,
+            "base-stats": {
+                "health-points": 75,
+                "attack": 70,
+                "defense": 70,
+                "special-attack": 98,
+                "special-defense": 70,
+                "speed": 93
+            },
+            "skills": [
+                {
+                    "level": 1,
+                    "name": "pound",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 40,
+                    "accuracy": 100
+                },
+                {
+                    "level": 4,
+                    "name": "growl",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 6,
+                    "name": "peck",
+                    "type": "flying",
+                    "category": "physical",
+                    "power": 35,
+                    "accuracy": 100
+                },
+                {
+                    "level": 10,
+                    "name": "helping-hand",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 13,
+                    "name": "air-cutter",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 60,
+                    "accuracy": 95
+                },
+                {
+                    "level": 16,
+                    "name": "baton-pass",
+                    "type": "normal",
+                    "category": "status"
+                },
+                {
+                    "level": 20,
+                    "name": "feather-dance",
+                    "type": "flying",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 23,
+                    "name": "double-slap",
+                    "type": "normal",
+                    "category": "physical",
+                    "power": 15,
+                    "accuracy": 85
+                },
+                {
+                    "level": 26,
+                    "name": "teeter-dance",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 30,
+                    "name": "roost",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 33,
+                    "name": "captivate",
+                    "type": "normal",
+                    "category": "status",
+                    "accuracy": 100
+                },
+                {
+                    "level": 36,
+                    "name": "air-slash",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 75,
+                    "accuracy": 95
+                },
+                {
+                    "level": 40,
+                    "name": "revelation-dance",
+                    "type": "normal",
+                    "category": "special",
+                    "power": 90,
+                    "accuracy": 100
+                },
+                {
+                    "level": 43,
+                    "name": "mirror-move",
+                    "type": "flying",
+                    "category": "status"
+                },
+                {
+                    "level": 46,
+                    "name": "agility",
+                    "type": "psychic",
+                    "category": "status"
+                },
+                {
+                    "level": 50,
+                    "name": "hurricane",
+                    "type": "flying",
+                    "category": "special",
+                    "power": 110,
+                    "accuracy": 70
+                }
+            ],
+            "types": [
+                "ghost",
+                "flying"
+            ],
+            "color": "purple"
+        }
+    },
+    "evolution": 373,
+    "changes": [
+        {
+            "targets": {
+                "741-baile-style": {
+                    "pokemon": 741,
+                    "form": "baile-style"
+                },
+                "741-pom-pom-style": {
+                    "pokemon": 741,
+                    "form": "pom-pom-style"
+                },
+                "741-pa-u-style": {
+                    "pokemon": 741,
+                    "form": "pa-u-style"
+                },
+                "741-sensu-style": {
+                    "pokemon": 741,
+                    "form": "sensu-style"
+                }
+            },
+            "changes": {
+                "@741-baile-style": {
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "red-nectar"
+                            ]
+                        }
+                    ],
+                    "targets": [
+                        "741-baile-style"
+                    ],
+                    "bidirectional": false
+                },
+                "@741-pom-pom-style": {
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "yellow-nectar"
+                            ]
+                        }
+                    ],
+                    "targets": [
+                        "741-pom-pom-style"
+                    ],
+                    "bidirectional": false
+                },
+                "@741-pa-u-style": {
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "pink-nectar"
+                            ]
+                        }
+                    ],
+                    "targets": [
+                        "741-pa-u-style"
+                    ],
+                    "bidirectional": false
+                },
+                "@741-sensu-style": {
+                    "methods": [
+                        {
+                            "method": "use-item",
+                            "parameters": [
+                                "purple-nectar"
+                            ]
+                        }
+                    ],
+                    "targets": [
+                        "741-sensu-style"
+                    ],
+                    "bidirectional": false
+                }
+            }
+        }
+    ],
+    "classification": "dancing",
+    "names": {
+        "de": "Choreogel",
+        "en": "Oricorio",
+        "es": "Oricorio",
+        "fr": "Plumeline",
+        "it": "Oricorio",
+        "jp": "オドリドリ",
+        "kr": "춤추새",
+        "zh": "花舞鸟",
+        "zh-CHS": "花舞鸟",
+        "zh-CHT": ""
+    },
+    "species": [
+        "flying"
+    ],
+    "gender": "2/6",
+    "holdings": {
+        "rare": "honey"
+    },
+    "capture-rate": 45,
+    "hatching-cycles": 21,
+    "initial-happiness": 70,
+    "battle-gain-factors": {
+        "health-points": 0,
+        "attack": 0,
+        "defense": 0,
+        "special-attack": 2,
+        "special-defense": 0,
+        "speed": 0,
+        "experience": 167
+    }
+}

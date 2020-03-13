@@ -1,0 +1,57 @@
+{
+    "ids": [
+        577,
+        578,
+        579
+    ],
+    "chains": [
+        {
+            "targets": {
+                "577-solosis": {
+                    "pokemon": 577,
+                    "form": "solosis"
+                },
+                "578-duosion": {
+                    "pokemon": 578,
+                    "form": "duosion"
+                },
+                "579-reuniclus": {
+                    "pokemon": 579,
+                    "form": "reuniclus"
+                }
+            },
+            "changes": {
+                "577-solosis > 578-duosion": {
+                    "targets": [
+                        "577-solosis",
+                        "578-duosion"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                32
+                            ]
+                        }
+                    ]
+                },
+                "578-duosion > 579-reuniclus": {
+                    "targets": [
+                        "578-duosion",
+                        "579-reuniclus"
+                    ],
+                    "bidirectional": false,
+                    "methods": [
+                        {
+                            "method": "level-up",
+                            "parameters": [
+                                41
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

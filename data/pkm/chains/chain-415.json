@@ -1,0 +1,16 @@
+{
+    "ids": [
+        802
+    ],
+    "chains": [
+        {
+            "targets": {
+                "802-marshadow": {
+                    "pokemon": 802,
+                    "form": "marshadow"
+                }
+            },
+            "changes": {}
+        }
+    ]
+}
