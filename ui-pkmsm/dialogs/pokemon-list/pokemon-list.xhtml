@@ -1,0 +1,8 @@
+<ui-collection-view style:--cell-width="64px" style:--cell-height="64px"
+                    prop:sections="${groups}" prop:cells-getter="{section.models}">
+    <tmpl:slot name="cell">
+        <ui-button class="model" @action="openModel(cell)">
+            <pkmsm-snapshot model="${cell.id}"/>
+        </ui-button>
+    </tmpl:slot>
+</ui-collection-view>

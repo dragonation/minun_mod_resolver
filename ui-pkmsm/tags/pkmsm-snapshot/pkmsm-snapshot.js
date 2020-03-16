@@ -1,3 +1,3 @@
 module.exports = {
-    "attributes": [ "model" ]
+    "attributes": [ "model", "prefix" ]
 };

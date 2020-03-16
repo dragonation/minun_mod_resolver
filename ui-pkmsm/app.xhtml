@@ -3,8 +3,11 @@
     <div id="nav-bar">
         <img src="/~pkmsm/res/logo.png" style:width="123px" style:height="22px" style:margin="9px 8px"/>
         <div style:flex-grow="1" style:flex-shrink="1" style:width="1px"></div>
-        <ui-button @action="batchSnapshots()" style:width="40px" style:height="40px">
-            <img src="/res/actions/batch.svg" style:width="24px" style:height="24px" style:margin="8px 8px"/>
+        <ui-button @action="openPokeDEX()" style:width="40px" style:height="40px" title="Open PokeDEX">
+            <img src="/res/actions/pokedex.svg" style:width="24px" style:height="24px" style:margin="8px 8px"/>
+        </ui-button>
+        <ui-button @action="batchSnapshots()" style:width="40px" style:height="40px" title="Batch snapshots">
+            <img src="/res/actions/batch-camera.svg" style:width="24px" style:height="24px" style:margin="8px 8px"/>
         </ui-button>
         <ui-input-field id="search-field" placeholder="Press “S” to quick search" 
                         icon="/res/actions/search.svg" autoselect="yes"

@@ -88,6 +88,10 @@
             border: solid 1dpx rgba(0, 0, 0, 0.1);
             border-radius: 50px;
             overflow: hidden;
+            background-image: url('/~pkmsm/res/snapshot-background.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
         }
 
         .title {

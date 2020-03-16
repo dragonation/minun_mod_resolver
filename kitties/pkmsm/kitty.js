@@ -129,6 +129,25 @@ let saveU8Buffer = (array, path, dict) => {
     }
 };
 
+const matchForms = function (features, pokemon) {
+
+    let maught = undefined;
+    for (let id in pokemon.forms) {
+        for (let feature of features) {
+            if (id.indexOf(feature) !== -1) {
+                maught = id;
+            }
+        }
+    }
+
+    if (!maught) {
+        maught = pokemon.candidate;
+    }
+
+    return maught;
+
+};
+
 
 @heard.rpc("pkmsm.searchPokemons").then(function (request) {
 
@@ -218,6 +237,7 @@ let saveU8Buffer = (array, path, dict) => {
                                 "id": `pokemon-${("00" + pokemon.id).slice(-3)}-${looper}`,
                                 "file": model.file,
                                 "score": score,
+                                "form": matchForms(model.features, Index.list[parseInt(pokemon.id) - 1]),
                                 "pokemon": Index.list[parseInt(pokemon.id) - 1],
                                 "features": model.features,
                             });
@@ -247,6 +267,7 @@ let saveU8Buffer = (array, path, dict) => {
                     models.push({
                         "id": `pokemon-${("00" + pokemon.id).slice(-3)}-${looper}`,
                         "file": model.file,
+                        "form": matchForms(model.features, Index.list[parseInt(pokemon.id) - 1]),
                         "pokemon": Index.list[parseInt(pokemon.id) - 1],
                         "model": looper,
                         "features": model.features,

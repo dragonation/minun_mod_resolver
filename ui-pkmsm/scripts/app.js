@@ -1690,7 +1690,7 @@ App.prototype.openModel = function (id, from, options) {
         // we need adjust the model to make it render in the window correctly
         let scale = 1;
         let translation = [0, 0, 0];
-        if (true || options && options.icon) {
+        if (options && options.icon) {
             let adjust = adjustSceneForIcon(id, mins, maxes);
             scale = adjust.scale;
             translation = adjust.translation;
@@ -2661,6 +2661,22 @@ App.prototype.batchSnapshots = function () {
 
 };
 
+App.prototype.openPokeDEX = function () {
+
+    if (!this.pokemonList) {
+        this.pokemonList = this.createDialog("/~pkmsm/dialogs/pokemon-list/pokemon-list", {
+            "caption": "Pokemon List",
+            "left": 50, "top": 100,
+            "width": $.dom.getDevicePixels(640), 
+            "height": $.dom.getDevicePixels(400),
+            "justHideWhenClose": true
+        });
+    }
+
+    this.pokemonList.dom.showDialog();
+
+};
+
 App.prototype.captureSnapshot = function (id, size, callback) {
 
     let frame = this.openModel(id, undefined, {
@@ -2771,6 +2787,11 @@ App.functors = {
     "batchSnapshots": function () {
 
         this.batchSnapshots();
+
+    },
+    "openPokeDEX": function () {
+
+        this.openPokeDEX();
 
     }
 };

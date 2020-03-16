@@ -1,0 +1,37 @@
+.model {
+
+    width: 64px;
+    height: 64px;
+
+
+    &.pressing {
+
+        filter: none;
+
+        pkmsm-snapshot {
+            transition: filter 0.3s;
+            filter: brightness(0.8);
+        }
+
+    }
+
+    pkmsm-snapshot {
+        width: 64px;
+        height: 64px;
+        transition: transform 0.3s;
+        pointer-events: none;
+        border-radius: 10px;
+        border: solid 1dpx transparent;
+        background-color: $alpha($white(1), 0.1);
+    }
+
+    &:hover pkmsm-snapshot {
+        transform: scale(1.7);
+        backdrop-filter: blur(4px);
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 4px $alpha($white(0), 0.3);
+        border-color: $alpha($white(0), 0.4);
+    }
+
+}
