@@ -40,8 +40,8 @@ const getStencilOperation = function (value) {
         case "increment": { return THREE.IncrementStencilOp; }
         case "decrement": { return THREE.DecrementStencilOp; }
         case "invert": { return THREE.InvertStencilOp; }
-        case "incrementWrap": { return THREE.IncrementWrapStencilOp; }
-        case "decrementWrap": { return THREE.DecrementWrapStencilOp; }
+        case "increment-wrap": { return THREE.IncrementWrapStencilOp; }
+        case "decrement-wrap": { return THREE.DecrementWrapStencilOp; }
         default: { break; }
     }
 };
