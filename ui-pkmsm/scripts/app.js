@@ -1572,6 +1572,10 @@ const App = function App(dom, filler) {
 
 App.prototype.onKeyPressed = function (event) {
     switch (event.keyCode) {
+        case 112: { // p
+            this.openPokemonList();
+            break;
+        }
         case 115: { // s
             this.filler.query("#search-field").select();
             break;
@@ -2661,7 +2665,7 @@ App.prototype.batchSnapshots = function () {
 
 };
 
-App.prototype.openPokeDEX = function () {
+App.prototype.openPokemonList = function () {
 
     if (!this.pokemonList) {
         this.pokemonList = this.createDialog("/~pkmsm/dialogs/pokemon-list/pokemon-list", {
@@ -2789,9 +2793,9 @@ App.functors = {
         this.batchSnapshots();
 
     },
-    "openPokeDEX": function () {
+    "openPokemonList": function () {
 
-        this.openPokeDEX();
+        this.openPokemonList();
 
     }
 };

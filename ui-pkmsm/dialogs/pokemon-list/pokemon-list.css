@@ -1,6 +1,18 @@
+#options {
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 #list {
 
+    border-top: solid 1dpx $alpha($white(0), 0.15);
+    height: calc(100% - 40px);
+
     ui-collection-view-section-header {
+        
         border-top-color: $alpha($white(0), 0.15);
         border-bottom-color: $alpha($white(0), 0.15);
         color: $alpha($white(0), 0.3);
@@ -8,6 +20,14 @@
         text-transform: uppercase;
         display: flex;
         align-items: center;
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            opacity: 0.5;
+        }
+
     }
 
     .group-name {

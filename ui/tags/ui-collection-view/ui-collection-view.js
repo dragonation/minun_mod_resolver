@@ -537,7 +537,7 @@ module.exports = {
                 }
                 Object.keys(this.cellCaches[key]).forEach((key2) => {
                     if (key2 === "header") { return; }
-                    if (this.cellCaches[key][key2].cellContainer && (!usedCells[key][key2])) {
+                    if (this.cellCaches[key][key2].cellContainer && ((!usedCells[key]) || (!usedCells[key][key2]))) {
                         this.cellCaches[key][key2].cellContainer.addClass("not-used").css({
                             "left": (-sizes.cellWidth) + "px",
                             "top": (-sizes.cellHeight) + "px"

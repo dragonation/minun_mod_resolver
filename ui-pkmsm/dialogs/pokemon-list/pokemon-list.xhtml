@@ -1,6 +1,22 @@
+<div id="options">
+    <div style:margin-right="10px" style:color="#bbb">Group Type: </div>
+    <ui-picker-field value="${groupType}" style:width="150px" style:margin-right="10px" @change="updateGroupType(parameter)">
+        <ui-picker-field-item value="no">Pokemon No.</ui-picker-field-item>
+        <ui-picker-field-item value="shape">Shape</ui-picker-field-item>
+        <ui-picker-field-item value="type">Type</ui-picker-field-item>
+        <ui-picker-field-item value="classification">Classification</ui-picker-field-item>
+        <ui-picker-field-item value="base-summary">Base Summary</ui-picker-field-item>
+        <ui-picker-field-item value="color">Color</ui-picker-field-item>
+        <ui-picker-field-item value="weight">Weight</ui-picker-field-item>
+        <ui-picker-field-item value="height">Height</ui-picker-field-item>
+        <ui-picker-field-item value="species">Species</ui-picker-field-item>
+        <ui-picker-field-item value="evolution">Evolution</ui-picker-field-item>
+    </ui-picker-field>
+</div>
 <ui-collection-view id="list" style:--cell-width="64px" style:--cell-height="64px"
                     prop:sections="${groups}" prop:cells-getter="{section.models}">
     <tmpl:slot name="section-header">
+        <tmpl:if test="section.icon"><img src="${section.icon}" class="icon"/></tmpl:if>
         <span class="group-name">${section.label}</span><span class="cell-count">${section.models.length}</span>
     </tmpl:slot>
     <tmpl:slot name="cell">
