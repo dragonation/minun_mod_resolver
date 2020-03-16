@@ -1061,12 +1061,13 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
                 "        discard;",
                 "    }");
             }
+            // premultiplied alpha
+            codes.push("    color.rgb *= color.a;");
         } else {
             codes.push("    color.a = 1.0;");
         }
 
         codes.push("    if (renderingDepth == 0.0) {");
-        codes.push("        color.rgb *= color.a;");
         codes.push("        gl_FragColor = color;");
         codes.push("    } else {");
         codes.push("        if ((!depthRendering) || ((depthAlpha >= 0.0) && (depthAlpha < renderingDepth))) {");
@@ -1076,7 +1077,9 @@ Shader.prototype.describe = function (glsl, material, lightingLUTs, outline) {
         codes.push("        float r = floor(depth * 127.0) / 127.0;");
         codes.push("        float g = floor((depth - r) * 127.0 * 255.0) / 255.0;");
         codes.push("        float b = floor((((depth - r) * 127.0) - g) * 255.0 * 255.0) / 255.0;");
-        codes.push("        float n = -dot(fragBlendedNormal, cameraDirection);");
+        codes.push("        vec3 normalizedFragBlendedNormal = normalize(fragBlendedNormal);");
+        codes.push("        vec3 normalizedCameraDirection = normalize(cameraDirection);")
+        codes.push("        float n = -dot(normalizedFragBlendedNormal, normalizedCameraDirection);");
         codes.push("        gl_FragColor = vec4(clamp(r, 0.0, 1.0) * 0.5 + 0.5, g, b, n * 0.5 + 0.5);");
         codes.push("    }");
         codes.push("");

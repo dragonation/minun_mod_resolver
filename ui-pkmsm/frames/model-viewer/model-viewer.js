@@ -32,16 +32,24 @@ const Frame = function Frame(dom, filler) {
 
     let m3dScene = this.filler.query("m3d-scene");
 
+    let backgroundRGBA = { "r": 1, "g": 1, "b": 1, "a": 1 };
     let backgroundColor = $.local["pkmsm.model-viewer.background-color"];
     if (backgroundColor) {
         let r = ("0" + backgroundColor.r.toString(16)).slice(-2);
         let g = ("0" + backgroundColor.g.toString(16)).slice(-2);
         let b = ("0" + backgroundColor.b.toString(16)).slice(-2);
         let a = ("0" + backgroundColor.a.toString(16)).slice(-2);
+        backgroundRGBA = { 
+            "r": backgroundColor.r / 255, 
+            "g": backgroundColor.g / 255, 
+            "b": backgroundColor.b / 255, 
+            "a": backgroundColor.a / 255 
+        };
         backgroundColor = `#${r}${g}${b}${a}`;
     } else {
         backgroundColor = "#ffffffff";
     }
+
 
     this.filler.fill({
         "backgroundColor": backgroundColor
@@ -67,7 +75,7 @@ const Frame = function Frame(dom, filler) {
             let layerTargets = [];
 
             let looper = 0;
-            while (looper < LAYERS + 1) {
+            while (looper < LAYERS + 2) {
                 let layerTarget = new THREE.WebGLRenderTarget(size.width * 2, size.height * 2);
                 layerTarget.texture.format = THREE.RGBAFormat;
                 layerTarget.texture.minFilter = THREE.LinearFilter;
@@ -95,7 +103,8 @@ const Frame = function Frame(dom, filler) {
                     "layer2": { "value": layerTargets[1].texture },
                     "layer3": { "value": layerTargets[2].texture },
                     "layer4": { "value": layerTargets[3].texture },
-                    "noAlpha": { "value": true },
+                    "layer5": { "value": layerTargets[4].texture },
+                    "backgroundColor": { "value": new THREE.Vector4(0, 0, 0, 1.0) },
                     "noOutline": { "value": false }
                 }
             });
@@ -103,7 +112,13 @@ const Frame = function Frame(dom, filler) {
             let finalMesh = new THREE.Mesh(finalPlane, finalMaterial);
             finalScene.add(finalMesh);
 
+            let frame = this;
+
             m3dScene[0].m3dCustomRender = function (renderer, scene, camera) {
+
+                if (!renderer.modelBackgroundColor) {
+                    renderer.modelBackgroundColor = backgroundRGBA;
+                }
 
                 if (!renderer.drawPokemonOutlineLoaded) {
                     renderer.drawPokemonOutlineLoaded = true;
@@ -115,24 +130,32 @@ const Frame = function Frame(dom, filler) {
                 }
 
                 let looper = 0;
-                while (looper < LAYERS + 1) {
+                while (looper < LAYERS + 2) {
                     switch (looper) {
                         case 0: { 
+                            renderer.setClearColor(0x000000);
+                            renderer.setClearAlpha(0);
                             renderer.renderingSemidepth2 = false;
                             renderer.renderingLayer = 0.5; 
                             break; 
                         }
                         case 1: { 
+                            renderer.setClearColor(0x000000);
+                            renderer.setClearAlpha(0);
                             renderer.renderingSemidepth2 = true;
                             renderer.renderingLayer = 0.5; 
                             break; 
                         }
                         case 2: { 
+                            renderer.setClearColor(0x000000);
+                            renderer.setClearAlpha(0);
                             renderer.renderingSemidepth2 = false;
                             renderer.renderingLayer = 1; 
                             break; 
                         }
                         default: { 
+                            renderer.setClearColor(looper === LAYERS ? 0xffffff : 0x000000);
+                            renderer.setClearAlpha(1);
                             renderer.renderingLayer = 0;
                             renderer.renderingSemidepth2 = false;
                             break; 
@@ -150,8 +173,12 @@ const Frame = function Frame(dom, filler) {
                 finalMaterial.uniforms.cameraFar.value = finalCamera.far;
                 finalMaterial.uniforms.ux.value = 1 / parseInt(size.width) / 2;
                 finalMaterial.uniforms.uy.value = 1 / parseInt(size.height) / 2;
-                finalMaterial.uniforms.noAlpha.value = (renderer.getClearAlpha() === 1);
                 finalMaterial.uniforms.noOutline.value = renderer.drawPokemonOutline === false;
+                finalMaterial.uniforms.backgroundColor.value.set(
+                    renderer.modelBackgroundColor.r,
+                    renderer.modelBackgroundColor.g,
+                    renderer.modelBackgroundColor.b,
+                    renderer.modelBackgroundColor.a);
 
                 renderer.setRenderTarget(null);
                 renderer.clear();

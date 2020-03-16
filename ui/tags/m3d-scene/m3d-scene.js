@@ -13,7 +13,7 @@ const prepareScene = function (dom) {
     // let camera = options.camera;
     // if (!camera) {
     // TODO: make camera configurable
-    let camera = new THREE.PerspectiveCamera(50, width / height, 1, 3000);
+    let camera = new THREE.PerspectiveCamera(50, width / height, 10, 2000);
     camera.position.set(50, 50, 100);
     // }
 
@@ -24,7 +24,6 @@ const prepareScene = function (dom) {
         "antialias": $(dom).attr("antialias") !== "no",
         "alpha": true,
         "depth": true, "stencil": true,
-        "premultipliedAlpha": true,
         "preserveDrawingBuffer": true,
     });
 
@@ -335,6 +334,7 @@ const syncSceneSize = function (dom) {
     height = Math.round(parseFloat(height));
     if (height <= 0) { height = 1; }
 
+    // TODO: fov
     dom.m3dCamera.aspect = width / height;
     dom.m3dCamera.updateProjectionMatrix();
 

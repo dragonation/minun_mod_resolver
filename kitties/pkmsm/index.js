@@ -460,14 +460,14 @@ Index.isValidModel = function (pokemon, model) {
 
     switch (pokemon) {
         case 25: { return model < 2; }
-        case 493: { return model === 0; }
-        case 649: { return model === 0; }
+        // case 493: { return model === 0; }
+        // case 649: { return model === 0; }
         case 658: { return model !== 1; }
         case 710: { return model === 0; }
         case 711: { return model === 0; }
         case 718: { return (model === 0) || (model === 1) || (model >= 4); }
-        case 773: { return model === 0; }
-        case 774: { return (model === 0) || (model >= 7); }
+        // case 773: { return model === 0; }
+        // case 774: { return (model === 0) || (model >= 7); }
         default: { 
             if (Index.features[pokemon] && 
                 Index.features[pokemon][model] && 

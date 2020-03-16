@@ -237,6 +237,12 @@ registerResolver(app.BackgroundColorField, function (value, target, decorator) {
                 let renderer = modelFrame.filler.query("m3d-scene")[0].m3dRenderer;
 
                 renderer.setClearColor(new THREE.Color(r / 255, g / 255, b / 255), a / 255);
+                renderer.modelBackgroundColor = { 
+                    "r": r / 255, 
+                    "g": g / 255, 
+                    "b": b / 255, 
+                    "a": a / 255 
+                };
 
                 $.local["pkmsm.model-viewer.background-color"] = { r, g, b, a };
 

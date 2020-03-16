@@ -34,6 +34,8 @@ const adjustSceneForIcon = function (id, mins, maxes) {
         (-(mins[2] + maxes[2]) * 0.3)
     ];
 
+    scale *= 0.9;
+
     {
 
         if (pokemon === "001") {
@@ -54,6 +56,7 @@ const adjustSceneForIcon = function (id, mins, maxes) {
         } else if ((pokemon === "006") && (model === "1")) {
             scale *= 1.2;
             translation[1] += -240 * scale;
+            translation[0] += 100 * scale;
         } else if ((pokemon === "006") && (model === "2")) {
             scale *= 1.1;
             translation[1] += -240 * scale;
@@ -646,6 +649,7 @@ const adjustSceneForIcon = function (id, mins, maxes) {
             scale *= 0.9;
         } else if (pokemon === "321") {
             scale *= 1.3;
+            translation[1] += 1300 * scale;
         } else if (pokemon === "324") {
             scale *= 1.3;
         } else if (pokemon === "325") {
@@ -928,6 +932,8 @@ const adjustSceneForIcon = function (id, mins, maxes) {
             scale *= 1.2;
         } else if (pokemon === "476") {
             scale *= 1.2;
+        } else if (pokemon === "477") {
+            translation[1] += -300 * scale;
         } else if (pokemon === "478") {
             scale *= 1.3;
             translation[1] -= 50 * scale;
@@ -1127,6 +1133,7 @@ const adjustSceneForIcon = function (id, mins, maxes) {
             scale *= 0.9;
         } else if (pokemon === "595") {
             scale *= 0.7;
+            translation[1] += -5 * scale;
         } else if (pokemon === "596") {
             scale *= 1.2;
         } else if (pokemon === "597") {
@@ -1144,6 +1151,7 @@ const adjustSceneForIcon = function (id, mins, maxes) {
             scale *= 1.7;
         } else if (pokemon === "606") {
             scale *= 1.2;
+            translation[1] -= 50 * scale;
         } else if (pokemon === "607") {
             scale *= 0.6;
         } else if (pokemon === "608") {
@@ -1186,18 +1194,21 @@ const adjustSceneForIcon = function (id, mins, maxes) {
         } else if (pokemon === "641") {
             if (model === "0") {
                 scale *= 1.3;
+                translation[1] -= 50 * scale;
             } else {
                 scale *= 1.1;
             }
         } else if (pokemon === "642") {
             if (model === "0") {
                 scale *= 1.3;
+                translation[1] -= 50 * scale;
             } else {
                 scale *= 1.1;
             }
         } else if (pokemon === "645") {
             if (model === "0") {
                 scale *= 1.3;
+                translation[1] -= 50 * scale;
             } else {
                 scale *= 1.1;
             }
@@ -1233,6 +1244,7 @@ const adjustSceneForIcon = function (id, mins, maxes) {
             scale *= 0.8;
         } else if (pokemon === "666") {
             scale *= 1.2;
+            translation[1] -= 40 * scale;
         } else if (pokemon === "667") {
             scale *= 0.8;
         } else if (pokemon === "668") {
@@ -1412,8 +1424,8 @@ const adjustSceneForIcon = function (id, mins, maxes) {
         } else if (pokemon === "788") {
             scale *= 1.3;
         } else if (pokemon === "790") {
-            scale *= 0.5;
-            translation[1] += 40 * scale;
+            scale *= 0.6;
+            translation[1] += 11 * scale;
         } else if (pokemon === "793") {
             scale *= 1.2;
         } else if (pokemon === "794") {
@@ -2320,7 +2332,7 @@ App.prototype.inspectModel = function (id, from) {
     let background = { "r": 255, "g": 255, "b": 255, "a": 255 };
     let scene = modelFrame.frame.filler.query("m3d-scene")[0];
     if (scene) {
-        let clearColor = scene.m3dRenderer.getClearColor();
+        let clearColor = scene.m3dRenderer.modelBackgroundColor;
         background.r = clearColor.r * 255;
         background.g = clearColor.g * 255;
         background.b = clearColor.b * 255;
