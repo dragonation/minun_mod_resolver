@@ -1,6 +1,13 @@
 img {
+    
     width: var(--icon-size, 12px);
     height: var(--icon-size, 12px);
+    display: none;
+
+    :host(.icon) & {
+        display: inline-block;
+    }
+
 }
 
 span {
