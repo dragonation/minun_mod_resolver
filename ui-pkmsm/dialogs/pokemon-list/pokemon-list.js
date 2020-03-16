@@ -37,7 +37,7 @@ Dialog.prototype.updateList = function (groupType) {
     console.log(this.rawList);
 
     switch (groupType) {
-        case "shape": 
+        case "shape": {}
         case "type": 
         case "classification":
         case "speed":
@@ -76,7 +76,7 @@ Dialog.functors = {
     "openModel": function (model) {
 
         $.app(this.dom).smartOpen(model.id);
-        
+
         this.dom.hideDialog();
 
     }

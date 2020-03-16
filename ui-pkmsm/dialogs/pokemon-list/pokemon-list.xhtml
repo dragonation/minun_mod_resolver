@@ -1,8 +1,21 @@
-<ui-collection-view style:--cell-width="64px" style:--cell-height="64px"
+<ui-collection-view id="list" style:--cell-width="64px" style:--cell-height="64px"
                     prop:sections="${groups}" prop:cells-getter="{section.models}">
+    <tmpl:slot name="section-header">
+        <span class="group-name">${section.label}</span><span class="cell-count">${section.models.length}</span>
+    </tmpl:slot>
     <tmpl:slot name="cell">
         <ui-button class="model" @action="openModel(cell)">
-            <pkmsm-snapshot model="${cell.id}"/>
+            <div id="glass">
+                <pkmsm-snapshot id="snapshot" model="${cell.id}"/>
+                <div id="model-name">No.${slice('00' + cell.pokemon.id, -3)} ${cell.pokemon.name}</div>
+                <div id="model-features">${cell.features.length > 0 ? join(cell.features, ', ') : 'normal'}</div>
+                <div id="model-types">
+                    <tmpl:map list="cell.pokemon.forms[cell.form].types">
+                        <pkm-type code="${item}" class="icon"/>
+                    </tmpl:map>
+                </div>
+                <div id="model-summary" class="${cell.pokemon.forms[cell.form].color}" style:width="${cell.pokemon.forms[cell.form]['base-summary'] / 10}%"></div>
+            </div>
         </ui-button>
     </tmpl:slot>
 </ui-collection-view>

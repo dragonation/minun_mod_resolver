@@ -1,4 +1,10 @@
+img {
+    width: var(--icon-size, 12px);
+    height: var(--icon-size, 12px);
+}
+
 span {
+
     background-color: #bbb;
     border: solid 1dpx rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -15,6 +21,11 @@ span {
     text-align: center;
     position: relative;
     font-weight: bold;
+
+    :host(.icon) & {
+        display: none;
+    }
+
 }
 
 span.none {

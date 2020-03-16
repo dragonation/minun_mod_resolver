@@ -1,37 +1,167 @@
-.model {
+#list {
 
-    width: 64px;
-    height: 64px;
+    ui-collection-view-section-header {
+        border-top-color: $alpha($white(0), 0.15);
+        border-bottom-color: $alpha($white(0), 0.15);
+        color: $alpha($white(0), 0.3);
+        font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+    }
 
+    .group-name {
 
-    &.pressing {
+        margin-right: 8px;
 
-        filter: none;
-
-        pkmsm-snapshot {
-            transition: filter 0.3s;
-            filter: brightness(0.8);
+        &.empty {
+            color: $alpha($white(0), 0.1);
         }
 
     }
 
-    pkmsm-snapshot {
-        width: 64px;
-        height: 64px;
-        transition: transform 0.3s;
-        pointer-events: none;
-        border-radius: 10px;
-        border: solid 1dpx transparent;
-        background-color: $alpha($white(1), 0.1);
+    .cell-count {
+        font-size: 10px;
+        padding: 2px 6px;
+        line-height: 1;
+        background-color: $alpha($white(0), 0.16);
+        color: #fff;
+        border-radius: 40px;
     }
 
-    &:hover pkmsm-snapshot {
-        transform: scale(1.7);
-        backdrop-filter: blur(4px);
-        position: relative;
-        z-index: 1;
-        box-shadow: 0 0 4px $alpha($white(0), 0.3);
-        border-color: $alpha($white(0), 0.4);
+    .model {
+
+        width: 64px;
+        height: 64px;
+
+        &.pressing {
+
+            filter: none;
+
+            pkmsm-snapshot {
+                transition: filter 0.3s;
+                filter: brightness(0.8);
+            }
+
+        }
+
+        #glass {
+            width: 64px;
+            height: 64px;
+            transition: transform 0.3s;
+            pointer-events: none;
+            border-radius: 10px;
+            background-color: $alpha($white(1), 0.1);
+        }
+
+        &:hover {
+
+            #glass {
+                transform: scale(1.7);
+                backdrop-filter: blur(4px);
+                position: relative;
+                z-index: 999;
+                box-shadow: 0 0 4px $alpha($white(0), 0.3),
+                            0 0 1dpx $alpha($white(0), 0.5);
+            }
+
+            #model-name {
+                color: $white(0.3);
+                text-shadow: 0 0 1px $white(1), 0 0 1px $white(1), 0 0 1px $white(1);
+            }
+
+            #model-features {
+                color: $white(0.8);
+                text-shadow: 0 0 1px $white(1), 0 0 1px $white(1), 0 0 1px $white(1);
+            }
+
+            #model-types {
+                opacity: 1;
+                pkm-type {
+                    box-shadow: 0 0 1px $white(1), 0 0 1px $white(1), 0 0 1px $white(1);
+                }
+            }
+
+            #model-summary {
+                opacity: 1;
+                box-shadow: 0 0 1px $white(1), 0 0 1px $white(1), 0 0 1px $white(1);
+            }
+
+        }
+
+        #snapshot {
+            width: 64px;
+            height: 64px;
+        }
+
+        #model-name {
+            position: absolute;
+            left: 5px;
+            bottom: 2px;
+            right: 5px;
+            text-align: center;
+            line-height: 7px;
+            font-size: 5px;
+            transition: color 0.3s;
+            color: transparent;
+        }
+
+        #model-features {
+
+            position: absolute;
+            left: 7px;
+            top: 5px;
+            color: transparent;
+            font-size: 6px;
+            line-height: 8px;
+            transition: color 0.3s;
+
+        }
+
+        #model-types {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            height: 7px;
+            --icon-size: 8px;
+            display: flex;
+            opacity: 0;
+            transition: opacity 0.3s;
+
+            pkm-type {
+                background-color: $white(1);
+                border-radius: 8px;
+                width: 8px;
+                height: 8px;
+                margin-left: 2px;
+            }
+
+        }
+
+        #model-summary {
+
+            position: absolute;
+            left: 7px; 
+            top: 14px;
+            border-radius: 3px;
+            height: 1px;
+            background-color: $alpha($white(0), 0.2);
+            opacity: 0;
+            transform: opacity 0.3s;
+
+            &.white { background-color: #e8e8e8b5; }
+            &.black { background-color: #00000059; }
+            &.red { background-color: #ff00003b; }
+            &.green { background-color: #008e0457; }
+            &.blue { background-color: #00a1ff57; }
+            &.yellow { background-color: #f1e381ad; }
+            &.purple { background-color: #ffb8f6ad; }
+            &.pink { background-color: #ffd4d4ad; }
+            &.brown { background-color: #f5944180; }
+            &.gray { background-color: #b5b5b56e; }
+
+        }
+
     }
 
 }
