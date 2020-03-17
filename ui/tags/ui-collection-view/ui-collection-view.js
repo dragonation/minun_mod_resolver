@@ -301,8 +301,17 @@ module.exports = {
             }
             sizes.clientWidth = this.clientWidth;
             sizes.clientHeight = this.clientHeight;
-            let sizeChanged = sizes.clientWidth !== this.lastClientWidth;
+            let sizeChanged = (sizes.clientWidth !== this.lastClientWidth) || (sizes.clientHeight !== this.lastClientHeight);
             this.lastClientWidth = sizes.clientWidth;
+            this.lastClientHeight = sizes.clientHeight;
+
+            let scrollTop = scrollView[0].scrollTop;
+
+            let step = Math.floor(scrollTop / (coast / 3));
+            if ((!dataReloaded) && (!sizeChanged) && (this.lastStep === step)) {
+                return;
+            }
+            this.lastStep = step;
 
             let usedCells = Object.create(null);
 
@@ -317,8 +326,6 @@ module.exports = {
             let firstVisibleSectionHeader = null;
 
             let sectionPositions = {};
-
-            let scrollTop = scrollView[0].scrollTop;
 
             this.sections.forEach((section, sectionIndex) => {
 
@@ -528,7 +535,7 @@ module.exports = {
                 if ((key === "cells") || (key === "sectionHeaders")) {
                     return;
                 }
-                if (this.cellCaches[key].header && (!usedCells[key].header)) {
+                if (this.cellCaches[key].header && ((!usedCells[key]) || (!usedCells[key].header))) {
                     this.cellCaches[key].header.container.addClass("not-used").css({
                         "top": (-sizes.sectionHeaderSize) + "px"
                     });

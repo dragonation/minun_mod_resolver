@@ -1,5 +1,5 @@
-img {
-    
+img.icon {
+
     width: var(--icon-size, 12px);
     height: var(--icon-size, 12px);
     display: none;
@@ -10,14 +10,21 @@ img {
 
 }
 
+img.logo {
+    width: calc(16px - 2dpx);
+    height: calc(16px - 2dpx);
+    background-color: $white(1);
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
 span {
 
     background-color: #bbb;
     border: solid 1dpx rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    font-size: 10px;
-    padding: 0 4px;
-    line-height: 16px;
+    font-size: 8px;
+    line-height: calc(16px - 2dpx);
     text-transform: uppercase;
     vertical-align: middle;
     display: inline-block;
@@ -28,9 +35,16 @@ span {
     text-align: center;
     position: relative;
     font-weight: bold;
+    height: 16px;
+    display: inline-flex;
 
     :host(.icon) & {
         display: none;
+    }
+
+    div {
+        flex-grow: 1;
+        padding: 0 4px;
     }
 
 }
