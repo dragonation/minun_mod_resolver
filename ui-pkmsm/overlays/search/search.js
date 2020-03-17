@@ -71,8 +71,8 @@ Overlay.prototype.searchModelsWithKeyword = function (keyword, version) {
                 "pokemon": {
                     "id": model.pokemon.id,
                     "name": model.pokemon.name,
-                    "color": model.pokemon.forms[model.pokemon.candidate].color,
-                    "types": model.pokemon.forms[model.pokemon.candidate].types,
+                    "color": model.pokemon.forms[model.form].color,
+                    "types": model.pokemon.forms[model.form].types,
                 },
 
                 "type": "model",

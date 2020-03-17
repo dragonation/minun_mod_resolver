@@ -75,6 +75,10 @@
             pointer-events: none;
             border-radius: 4px;
             background-color: $alpha($white(1), 0.3);
+            background-image: url('/~pkmsm/res/snapshot-background.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
         }
 
         &:hover {
@@ -169,7 +173,7 @@
             height: 2px;
             background-color: $alpha($white(0), 0.2);
             opacity: 0;
-            transform: opacity 0.3s;
+            transition: opacity 0.3s;
 
             &.white { background-color: #e8e8e8b5; }
             &.black { background-color: #00000059; }

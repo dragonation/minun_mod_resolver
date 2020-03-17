@@ -376,7 +376,14 @@ Index.features = {
     "479": { "1": ["heat"], "2": ["wash"], "3": ["frost"], "4": ["fan"], "5": ["mow"] },
     "487": { "0": ["altered"], "1": ["origin"] },
     "492": { "0": ["land"], "1": ["sky"] },
-    "493": { }, // TODO: check
+    "493": { 
+        "0": ["normal"], "1": ["fighting"], "2": ["flying"], 
+        "3": ["poison"], "4": ["ground"], "5": ["rock"], 
+        "6": ["bug"], "7": ["ghost"], "8": ["steel"], 
+        "9": ["fire"], "10": ["water"], "11": ["grass"], 
+        "12": ["electric"], "13": ["psychic"], "14": ["ice"], 
+        "15": ["dragon"], "16": ["dark"], "17": ["fairy"]
+    }, 
     "521": { "0": ["male"], "1": ["female"] },
     "531": { "1": ["mega"] },
     "550": { "0": ["red-stripped"], "1": ["blue-stripped"] },
@@ -391,7 +398,7 @@ Index.features = {
     "646": { "1": ["white"], "2": ["black"] },
     "647": { "0": ["ordinary"], "1": ["resolute"] },
     "648": { "1": ["aria"], "0": ["pirouette"] },
-    "649": { },
+    "649": { "0": ["normal"], "1": ["douse"], "2": ["shock"], "3": ["burn"], "4": ["chill"] },
     "658": { "1": ["battle-bond"], "2": ["ash"] },
     "666": {
         "0": ["icy-snow"], "1": ["polar"], "2": ["tunda"],
@@ -428,7 +435,14 @@ Index.features = {
     "752": { "1": ["tatem"] },
     "754": { "1": ["tatem"] },
     "758": { "1": ["tatem"] },
-    "773": { }, // TODO: check
+    "773": { 
+        "0": ["normal"], "1": ["fighting"], "2": ["flying"], 
+        "3": ["poison"], "4": ["ground"], "5": ["rock"], 
+        "6": ["bug"], "7": ["ghost"], "8": ["steel"], 
+        "9": ["fire"], "10": ["water"], "11": ["grass"], 
+        "12": ["electric"], "13": ["psychic"], "14": ["ice"], 
+        "15": ["dragon"], "16": ["dark"], "17": ["fairy"]
+    }, 
     "774": {
         "0": ["red meteor"],
         "1": ["orange meteor"],
@@ -460,8 +474,6 @@ Index.isValidModel = function (pokemon, model) {
 
     switch (pokemon) {
         case 25: { return model < 2; }
-        // case 493: { return model === 0; }
-        // case 649: { return model === 0; }
         case 658: { return model !== 1; }
         case 710: { return model === 0; }
         case 711: { return model === 0; }
