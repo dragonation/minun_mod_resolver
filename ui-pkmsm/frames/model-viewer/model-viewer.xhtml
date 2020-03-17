@@ -2,6 +2,13 @@
 <ui-diagram-action @action="saveWebMVideo(0)">Capture video</ui-diagram-action>
 <ui-diagram-action @action="saveWebMVideo(2)">Capture video (end with pose)</ui-diagram-action>
 <ui-diagram-action>-</ui-diagram-action>
+<tmpl:if test="slice(id, -6) != '-shiny'">
+    <ui-diagram-action @action="showShinyModel()">Show shiny model</ui-diagram-action>
+</tmpl:if>
+<tmpl:if test="slice(id, -6) == '-shiny'">
+    <ui-diagram-action @action="showNormalModel()">Show normal model</ui-diagram-action>
+</tmpl:if>
+<ui-diagram-action>-</ui-diagram-action>
 <ui-diagram-action @action="listAnimations()">List animations</ui-diagram-action>
 <ui-diagram-action @action="listResources()">List resources</ui-diagram-action>
 <ui-diagram-action>-</ui-diagram-action>

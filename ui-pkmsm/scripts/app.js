@@ -1657,6 +1657,8 @@ App.prototype.openModel = function (id, from, options) {
     };
     let position = this.getNextFrameTopLeft(from, size);
 
+    let shiny = id.split("-").slice(-1)[0] === "shiny";
+
     let filename = id.split("#")[0].split("/").slice(-1)[0];
     let frame = $("<ui-diagram-frame>").attr({
         "caption": `Model “${filename}”`,
@@ -2590,7 +2592,7 @@ App.prototype.smartOpen = function (id, from) {
         case "vert": { this.openShader(id, from); break; }
         case "frag": { this.openShader(id, from); break; }
         default: { 
-            if (/^pokemon-([0-9]+)-([0-9]+)$/.test(id)) {
+            if (/^pokemon\-([0-9]+)\-([0-9]+)((\-shiny)?)$/.test(id)) {
                 this.openModel(id, from);
             } else {
                 console.log(`Unknown target[${id}]`);
@@ -2605,7 +2607,11 @@ App.prototype.loadModel = function (id, callback) {
 
     $.ajax(`/~pkmsm/model/${id}`, {
         "success": (result) => {
-            $.ajax(`/~pkmsm/model/res/${result.id}/normal-model.xml`, {
+            let url = `/~pkmsm/model/res/${result.id}/normal-model.xml`;
+            if (id.split("-").slice(-1)[0] === "shiny") {
+                url = `/~pkmsm/model/res/${result.id}/shiny-model.xml`;
+            }
+            $.ajax(url, {
                 "dataType": "text",
                 "success": (html) => {
                     $.ajax(`/~pkmsm/model/res/${result.id}/shadow/model.xml`, {

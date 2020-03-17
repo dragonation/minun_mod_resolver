@@ -63,16 +63,18 @@ const zlib = require("zlib");
     this.break();
 
     let path = request.path.slice("/~pkmsm/model/".length).split("/");
-    if (!/^pokemon-([0-9]+)-([0-9]+)$/.test(path[0])) {
+    if (!/^pokemon\-([0-9]+)\-([0-9]+)((\-shiny)?)$/.test(path[0])) {
         throw new Error("Invalid pokemon model");
     }
 
     let pokemon = parseInt(path[0].split("-")[1]);
     let model = parseInt(path[0].split("-")[2]);
+    let shiny = path[0].split("-")[3] === "shiny" ? true : false;
 
     return @mew.rpc("pkmsm.loadModel", {
         "pokemon": pokemon,
         "model": model,
+        "shiny": shiny
     }, {
         "timeout": 20000
     }).then(function (model) {
@@ -87,26 +89,15 @@ const zlib = require("zlib");
     this.break();
 
     let originPath = request.path.slice("/~pkmsm/model/res/".length);
+    if (originPath.split("/")[0].split("-").slice(-1)[0] === "shiny") {
+        originPath = originPath.split("/")[0].split("-").slice(0, -1).join("-") + "/" + originPath.split("/").slice(1).join("/");
+    }
 
     let path = @path(@mewchan().libraryPath, "pkmsm/models", originPath);
 
     let mime = @.fs.mime(path);
 
     return @.async(function () {
-
-        if (!@.fs.exists.file(path)) {
-            if ((originPath.split("/")[1] === "shadow") && 
-                (originPath.split("/")[2] === "textures")) {
-                // TODO: make it supports shiny shadow
-                path = @path(@mewchan().libraryPath, "pkmsm/models", 
-                    originPath.split("/")[0], "normal-" + originPath.split("/").slice(2).join("/"));
-                if (!@.fs.exists.file(path)) {
-                    throw @.error.http(404);
-                }
-            } else {
-                throw @.error.http(404);
-            }
-        }
 
         @.fs.readFile(path).then(function (content) {
 
@@ -125,7 +116,8 @@ const zlib = require("zlib");
 
     this.break();
 
-    let path = @path(@mewchan().libraryPath, "pkmsm/models", request.path.slice("/~pkmsm/model/data/mesh/".length));
+    let path = request.path.slice("/~pkmsm/model/data/mesh/".length);
+    path = @path(@mewchan().libraryPath, "pkmsm/models", path);
 
     let data = {};
 

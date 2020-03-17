@@ -6,6 +6,7 @@ const LAYERS = 3;
 const Frame = function Frame(dom, filler) {
 
     this.dom = dom;
+    this.filler = filler;
 
     this.resizeObserver = new ResizeObserver((entries) => {
 
@@ -24,9 +25,6 @@ const Frame = function Frame(dom, filler) {
 
     });
     this.resizeObserver.observe(this.dom);
-
-
-    this.filler = filler;
 
     this.animationListeners = [];
 
@@ -735,6 +733,13 @@ Frame.functors = {
             }
         }
     },
+
+    "showShinyModel": function () {
+        $.app(this.dom).smartOpen(this.filler.parameters.id + "-shiny", this);
+    },
+    "showNormalModel": function () {
+        $.app(this.dom).smartOpen(this.filler.parameters.id.split("-").slice(0, -1).join("-"), this);
+    }
 
 };
 
