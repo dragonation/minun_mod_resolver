@@ -187,24 +187,20 @@ Dialog.prototype.updateList = function (groupType) {
                 }
                 evolutions[info.pokemon.evolution].push(info);
             }
-            let all = [];
             let keys = Object.keys(evolutions).sort((a, b) => a - b);
             for (let key of keys) {
+                evolutions[key].sort((a, b) => {
+                    return a.chains.indexOf(a.pokemon.id) - b.chains.indexOf(b.pokemon.id);
+                });
+                let names = {};
                 for (let info of evolutions[key]) {
-                    all.push(info);
+                    names[info.pokemon.id] = info.pokemon.name;
                 }
+                groups.push({
+                    "label": evolutions[key][0].chains.map(id => names[id]).join(", "),
+                    "models": evolutions[key]
+                });
             }
-            all.forEach((info, index) => {
-                let form = info.pokemon.forms[info.form];
-                if ((groups.length === 0) || 
-                    (groups[groups.length - 1].models.length >= 100)) {
-                    groups.push({
-                        "label": `${index + 1} - ${index + 100}`,
-                        "models": []
-                    });
-                }
-                groups[groups.length - 1].models.push(info);
-            });
             break;
         }
         case "no": 

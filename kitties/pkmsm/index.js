@@ -492,4 +492,31 @@ Index.isValidModel = function (pokemon, model) {
 
 };
 
+Index.chains = Object.create(null);
+
+for (let looper = 1; looper <= 460; ++looper) {
+    let chain = require(@path(entryPath, `data/pkm/chains/chain-${looper}.json`));
+    let ids = chain.ids.slice(0);
+    for (let info of chain.chains) {
+        for (let change in info.changes) {
+            let targets = info.changes[change].targets.slice(0);
+            if (change.indexOf("<") !== -1) {
+                targets = targets.reverse();
+            }
+            if (info.changes[change].methods &&
+                info.changes[change].methods[0] &&
+                (info.changes[change].methods[0].method === "breed")) {
+                targets = targets.reverse();
+            }
+            let index0 = ids.indexOf(info.targets[targets[0]].pokemon);
+            let index1 = ids.indexOf(info.targets[targets[1]].pokemon);
+            if ((index0 !== -1) && (index1 !== -1) && (index0 > index1)) {
+                ids.splice(index0, 1);
+                ids.splice(index1, 0, info.targets[targets[0]].pokemon);
+            }
+        }
+    }
+    Index.chains[looper] = ids;
+}
+
 module.exports.Index = Index;

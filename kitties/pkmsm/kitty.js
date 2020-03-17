@@ -267,6 +267,7 @@ const matchForms = function (features, pokemon) {
                     models.push({
                         "id": `pokemon-${("00" + pokemon.id).slice(-3)}-${looper}`,
                         "file": model.file,
+                        "chains": Index.chains[Index.list[parseInt(pokemon.id) - 1].evolution],
                         "form": matchForms(model.features, Index.list[parseInt(pokemon.id) - 1]),
                         "pokemon": Index.list[parseInt(pokemon.id) - 1],
                         "model": looper,

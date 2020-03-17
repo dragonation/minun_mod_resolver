@@ -22,7 +22,14 @@
                         "489-phione"
                     ],
                     "bidirectional": false,
-                    "methods": []
+                    "methods": [
+                        {
+                            "method": "breed",
+                            "parameters": [ 
+                                "ditto" 
+                            ]
+                        }
+                    ]
                 }
             }
         }
