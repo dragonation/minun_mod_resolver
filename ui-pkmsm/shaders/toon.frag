@@ -26,6 +26,10 @@ vec2 readDepth(sampler2D depth, vec2 uv) {
     if (values.r >= 0.5) {
         depthValue = 127.0 * 2.0 * (values.r - 0.5) + values.g + values.b * 0.00392157;
     }
+    // keep depth value meaningful
+    if (depthValue <= 2.0) {
+        depthValue = 2.0;
+    }
 
     return vec2(depthValue * 0.00392157, values.a);
 
