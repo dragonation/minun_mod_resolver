@@ -95,6 +95,7 @@
     :host(.active) & {
         color: #0d8ef1;
         background-color: $alpha($white(1), 0.85);
+        /*background-color: $white(0.95);*/
     }
 
 }
@@ -140,6 +141,7 @@
     background-color: $white(1);
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+    position: relative;
 }
 
 #ui-window-resizer {

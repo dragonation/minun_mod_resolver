@@ -98,15 +98,10 @@ Window.functors = {
         this.selecteds = [file + filename];
 
         let item = this.files[path].filter((file) => file.filename === filename)[0];
-        // TODO: fix the bug from collection view for dblclick target changes
         if (item && (item.type === "dir")) {
-            $.delay(300, () => {
-                this.navigateFiles(file + filename);
-            });
+            this.navigateFiles(file + filename);
         } else {
-            $.delay(300, () => {
-                this.updateView();
-            });
+            this.updateView();
         }
 
     },
