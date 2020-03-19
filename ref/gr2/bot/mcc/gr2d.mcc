@@ -1,0 +1,45 @@
+module.exports = {
+
+    "@default": {
+
+        "name": "granny2_server",
+
+        "target-ld": "executable",
+        "srcs": [
+            "src/gr2_server.cc",
+            "src/base64.c",
+            "src/http_server.c",
+            "src/http_socket.c",
+            "src/http_uifs.c",
+            "src/http_utils.c",
+            "src/http_vfs.c"
+        ],
+
+        "dists": {
+            "granny2_server.exe": "${getCOutputFiles('executable')}",
+            "granny2.dll": "ref/granny2.dll"
+        },
+
+        "!brushes": {
+            "windows:${getPlatform() == 'windows'}": {
+                "libraries": [
+                    "Kernel32",
+                    "Ws2_32"
+                ],
+                "macros-cc": {
+                    "WIN32_LEAN_AND_MEAN": "1"
+                },
+                "switches-cc": [
+                    "-m32",
+                    "/EHsc"
+                ],
+                "switches-ld": [
+                    "-m32",
+                    "/LTCG"
+                ]
+            }
+        }
+
+    }
+
+};

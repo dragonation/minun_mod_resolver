@@ -24,6 +24,14 @@ int main(int argc, char **argv) {
 		return 1;
 	}
 
+	if (argc != 8) {
+		fprintf(stdout, "Usage: Decompress granny2 oodle data\n");
+		fprintf(stdout, "Command: granny2 ${format} ${stop_0} ${stop_1} \\\n"
+			            "                 ${decompressed_size} ${compressed_size} \\\n"
+			            "                 ${input_data_path} ${output_data_path}\n");
+		return 1;
+	}
+
 	int format = atoi(argv[1]);
 	int stop_0 = atoi(argv[2]);
 	int stop_1 = atoi(argv[3]);
