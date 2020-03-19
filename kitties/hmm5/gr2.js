@@ -2,6 +2,59 @@ const { Reader } = require("./reader.js");
 
 const entryPath = @mewchan().entryPath;
 
+const { gr2ServerPort } = @options();
+if (gr2ServerPort) {
+    
+    let command = @path(entryPath, "data/gr2/granny2_server.exe");
+    let switches = [ gr2ServerPort + "" ];
+
+    if (@.process.os !== "windows") {
+        switches.unshift(command);
+        command = "wine";
+    }
+
+    let start = () => {
+
+        let pidPath = @path(@mewchan().libraryPath, "gr2/server.pid");
+        if (@.fs.exists(pidPath)) {
+            let pid = parseInt(@.fs.readFile.sync(pidPath, "utf8"));
+            let task = @.task.info(pid)[pid]; 
+            if (task && (task.command.indexOf("granny2_server.exe") !== -1)) {
+                @debug(`Kill old granny2 server with pid[${pid}]`);
+                process.kill(pid);
+            }
+        }
+
+        @debug(`Starting granny2 server[${gr2ServerPort}]`);
+
+        let spawned = @.task.execute(command, switches, {
+            "silent": true,
+            "blackhole": true,
+        }, (error) => {
+
+            if (error) {
+                @error(error);
+            }
+
+            @.delay(1000, () => {
+                start();
+            });
+
+        });
+
+        let pid = spawned.pid;
+
+        @info(`Granny2 server[${gr2ServerPort}] started, pid[${pid}]`);
+
+        @.fs.makeDirs(@.fs.dirname(pidPath));
+        @.fs.writeFile.sync(pidPath, pid + "");
+
+    };
+
+    start();
+
+}
+
 const getFieldType = function (typeID) {
 
     switch (typeID) {
@@ -75,48 +128,97 @@ const getElementSize = function (definition) {
 
 };
 
+let client = @.net.httpClient();
+
 const decompress = function (compression, compressedData, stop0, stop1, decompressedSize) {
 
     if (compression === 0) {
         return compressedData.slice(0);
     }
 
-    let granny2Path = @path(entryPath, "data/gr2/granny2.exe");
+    let data = Buffer.from(JSON.stringify({
+        "format": compression,
+        "stop0": stop0,
+        "stop1": stop1,
+        "decompressedSize": decompressedSize,
+        "compressedSize": compressedData.length,
+        "compressedData": compressedData.toString("base64")
+    }), "utf8");
 
-    let inputFile = @.fs.tempFile();
-    @.fs.writeFile.sync(inputFile, compressedData);
+    if (gr2ServerPort) {
+        // wine is slow starting, so create a server will be much more suitable
+        return @.async(function () {
 
-    let outputFile = @.fs.tempFile();
+            client.request(`http://localhost:${gr2ServerPort}/api/decompress`, {
+                "method": "POST",
+                "headers": {
+                    "Content-Length": data.length,
+                    "Content-Type": "application/json"
+                },
+                "data": data,
+                "onSuccess": (result) => {
+                    result = JSON.parse(result.toString("utf8"));
+                    if (!result.succeeded) {
+                        // TODO: report error
+                        @error("Decompress failed");
+                        return;
+                    }
+                    let decompressedData = Buffer.from(result.decompressedData, "base64");
+                    this.next(decompressedData);
+                },
+                "onError": (error) => {
+                    this.reject(error);
+                }
+            });
 
-    let switches = [
-        compression + "",
-        stop0 + "",
-        stop1 + "",
-        decompressedSize + "",
-        compressedData.length + "",
-        inputFile,
-        outputFile
-    ];
-
-    if (@.process.os !== "windows") {
-        switches.unshift(granny2Path);
-        granny2Path = "wine";
+        });
     }
 
-    try {
+    return @.async(function () {
 
-        let spawned = @.task.execute.sync(granny2Path, switches, true);
+        let granny2Path = @path(entryPath, "data/gr2/granny2.exe");
 
-        let buffer = @.fs.readFile.sync(outputFile);
+        let inputFile = @.fs.tempFile();
+        @.fs.writeFile.sync(inputFile, compressedData);
 
-        return buffer;
+        let outputFile = @.fs.tempFile();
 
-    } catch (error) {
-        @error(error);
-    } finally {
-        @.fs.deleteFile(inputFile).finished(() => {});
-        @.fs.deleteFile(outputFile).finished(() => {});
-    }
+        let windowsInputFile = inputFile;
+        let windowsOutputFile = outputFile;
+        if (@.process.os !== "windows") {
+            windowsInputFile = "Z:" + inputFile.replace(/\//g, "\\");
+            windowsOutputFile = "Z:" + outputFile.replace(/\//g, "\\");
+        }
+
+        let switches = [
+            compression + "",
+            stop0 + "",
+            stop1 + "",
+            decompressedSize + "",
+            compressedData.length + "",
+            windowsInputFile,
+            windowsOutputFile 
+        ];
+
+        if (@.process.os !== "windows") {
+            switches.unshift(granny2Path);
+            granny2Path = "wine";
+        }
+
+        let buffer = undefined;
+        try {
+            let spawned = @.task.execute.sync(granny2Path, switches, true);
+            buffer = @.fs.readFile.sync(outputFile);
+        } catch (error) {
+            this.reject(error); return;
+        } finally {
+            @.fs.deleteFile(inputFile).finished(() => {});
+            @.fs.deleteFile(outputFile).finished(() => {});
+        }
+
+        this.next(buffer);
+
+    });
 
 };
 
@@ -596,7 +698,14 @@ const GR2 = function GR2(content) {
     this.caches = Object.create(null);
 
     this.sections = [];
+
+    let sectionIndices = [];
     for (let looper = 0; looper < this.header.sectionCount; ++looper) {
+        sectionIndices.push(looper);
+    }
+
+    let that = this;
+    this.ready = @.async.all(sectionIndices, -1, function (looper) {
 
         let header = readSectionHeader(reader);
 
@@ -625,24 +734,90 @@ const GR2 = function GR2(content) {
             }
         }
 
-        this.sections.push({
-            "header": header,
-            "data": output,
-            "relocations": relocations
-        });
+        if (output) {
+            output.then(function (output) {
+                that.sections[looper] = {
+                    "header": header,
+                    "data": output,
+                    "relocations": relocations
+                };
+                this.next();
+            }).pipe(this);
+        } else {
+            that.sections[looper] = {
+                "header": header,
+                "relocations": relocations
+            };
+            this.next();
+        }
 
-    }
+    }).then(function () {
 
-    let rootDefinition = readDefinition(this.sections, this.header.rootType.section, this.header.rootType.offset, this.caches);
+        let rootDefinition = readDefinition(that.sections, 
+                                            that.header.rootType.section, 
+                                            that.header.rootType.offset, 
+                                            that.caches);
 
-    this.root = readStructure(
-        this.sections,
-        this.header.rootData.section,
-        this.header.rootData.offset,
-        this.caches,
-        rootDefinition,
-        true
-    );
+        that.root = readStructure(
+            that.sections,
+            that.header.rootData.section,
+            that.header.rootData.offset,
+            that.caches,
+            rootDefinition,
+            true
+        );
+
+        this.next();
+
+    });
+
+    // for (let looper = 0; looper < this.header.sectionCount; ++looper) {
+
+    //     let header = readSectionHeader(reader);
+
+    //     let input = undefined;
+    //     if (header.compressedSize > 0) {
+    //         input = content.slice(header.offsetInFile,
+    //                               header.offsetInFile + header.compressedSize);
+    //     }
+
+    //     let output = undefined;
+    //     if (input) {
+    //         output = decompress(header.compression, input,
+    //             header.first16Bit, header.first8Bit,
+    //             header.uncompressedSize);
+    //     }
+
+    //     let relocations = Object.create(null);
+    //     if (header.relocationsCount > 0) {
+    //         let relocationsReader = reader.snapshot(header.relocationsOffset);
+    //         for (let looper2 = 0; looper2 < header.relocationsCount; ++looper2) {
+    //             let offsetInSection = relocationsReader.readUInt32();
+    //             relocations[offsetInSection] = {
+    //                 "section": relocationsReader.readUInt32(),
+    //                 "offset": relocationsReader.readUInt32(),
+    //             };
+    //         }
+    //     }
+
+    //     this.sections.push({
+    //         "header": header,
+    //         "data": output,
+    //         "relocations": relocations
+    //     });
+
+    // }
+
+    // let rootDefinition = readDefinition(this.sections, this.header.rootType.section, this.header.rootType.offset, this.caches);
+
+    // this.root = readStructure(
+    //     this.sections,
+    //     this.header.rootData.section,
+    //     this.header.rootData.offset,
+    //     this.caches,
+    //     rootDefinition,
+    //     true
+    // );
 
 };
 

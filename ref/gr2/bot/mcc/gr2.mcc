@@ -9,10 +9,11 @@ module.exports = {
             "./dev/include"
         ],
         "srcs": [
-            "src/main.cc"
+            "src/gr2.cc"
         ],
         "dists": {
-            "node/granny2.exe": "${getCOutputFiles('executable')}"
+            "granny2.exe": "${getCOutputFiles('executable')}",
+            "granny2.dll": "ref/granny2.dll"
         },
 
         "!brushes": {

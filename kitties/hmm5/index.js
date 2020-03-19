@@ -477,7 +477,7 @@ hmm5.finished((error) => {
 
 		let file = pak.uids[request.uid];
 
-		this.next(pak.loadSkeleton(file));
+		pak.loadSkeleton(file).pipe(this);
 
 	});
 
@@ -489,7 +489,7 @@ hmm5.finished((error) => {
 
 		let file = pak.uids[request.uid];
 
-		this.next(pak.loadAnimation(file));
+		pak.loadAnimation(file).pipe(this);
 
 	});
 

@@ -866,29 +866,33 @@ PAK.prototype.loadSkeleton = function (path) {
 
     let gr2 = new GR2(content);
 
-    let source = gr2.root.Skeletons[0];
-    if (gr2.root.Skeletons.length > 1) {
-        @warn("Multiple skeletons found");
-    }
+    return gr2.ready.then(function () {
 
-    let result = {
-        "root": source.Name,
-        "bones": source.Bones.map((bone) => {
-            return {
-                "name": bone.Name,
-                "parent": bone.ParentIndex,
-                "translations": bone.Transform.Translations,
-                "quaternion": bone.Transform.Quaternion,
-                "scales": [
-                    bone.Transform.Scales[0][0],
-                    bone.Transform.Scales[1][1],
-                    bone.Transform.Scales[2][2]
-                ]
-            };
-        })
-    };
+        let source = gr2.root.Skeletons[0];
+        if (gr2.root.Skeletons.length > 1) {
+            @warn("Multiple skeletons found");
+        }
 
-    return result;
+        let result = {
+            "root": source.Name,
+            "bones": source.Bones.map((bone) => {
+                return {
+                    "name": bone.Name,
+                    "parent": bone.ParentIndex,
+                    "translations": bone.Transform.Translations,
+                    "quaternion": bone.Transform.Quaternion,
+                    "scales": [
+                        bone.Transform.Scales[0][0],
+                        bone.Transform.Scales[1][1],
+                        bone.Transform.Scales[2][2]
+                    ]
+                };
+            })
+        };
+
+        this.next(result);
+
+    });
 
 };
 
@@ -898,85 +902,89 @@ PAK.prototype.loadAnimation = function (path) {
 
     let gr2 = new GR2(content);
 
-    if (gr2.root.Animations.length > 1) {
-        @warn("Multiple animation found");
-    }
+    return gr2.ready.then(function () {
 
-    let source = gr2.root.Animations[0];
+        if (gr2.root.Animations.length > 1) {
+            @warn("Multiple animation found");
+        }
 
-    let result = {
-        "duration": source.Duration,
-        "oversampling": source.OverSampling,
-        "fps": (1 / source.TimeStep),
-        "tracks": source.TrackGroups.map((group) => {
+        let source = gr2.root.Animations[0];
 
-            let result = {
-                "name": group.Name,
-                "texts": {},
-                "vectors": {},
-                "transforms": {}
-            };
+        let result = {
+            "duration": source.Duration,
+            "oversampling": source.OverSampling,
+            "fps": (1 / source.TimeStep),
+            "tracks": source.TrackGroups.map((group) => {
 
-            for (let text of group.TextTracks) {
-                let track = text.Entries.map((entry) => {
-                    return {
-                        "timestamp": entry.TimeStamp,
-                        "text": entry.Text
-                    };
-                });
-                result.texts[text.Name] = track;
-            }
-
-            for (let vector of group.VectorTracks) {
-                let track = {
-                    "dimension": vector.Dimension,
-                    "values": {
-                        "data": vector.ValueCurve.Controls.map((value) => value.Real32),
-                        "degree": vector.ValueCurve.degree,
-                        "times": vector.ValueCurve.Knots.map((value) => value.Real32),
-                    }
+                let result = {
+                    "name": group.Name,
+                    "texts": {},
+                    "vectors": {},
+                    "transforms": {}
                 };
-                result.vectors[vector.Name] = track;
-            }
 
-            for (let transform of group.TransformTracks) {
-                let track = {};
-                if (transform.PositionCurve.Controls) {
-                    track.translations = {
-                        "data": transform.PositionCurve.Controls.map((value) => value.Real32),
-                        "degree": transform.PositionCurve.Degree,
-                        "times": transform.PositionCurve.Knots.map((value) => value.Real32),
+                for (let text of group.TextTracks) {
+                    let track = text.Entries.map((entry) => {
+                        return {
+                            "timestamp": entry.TimeStamp,
+                            "text": entry.Text
+                        };
+                    });
+                    result.texts[text.Name] = track;
+                }
+
+                for (let vector of group.VectorTracks) {
+                    let track = {
+                        "dimension": vector.Dimension,
+                        "values": {
+                            "data": vector.ValueCurve.Controls.map((value) => value.Real32),
+                            "degree": vector.ValueCurve.degree,
+                            "times": vector.ValueCurve.Knots.map((value) => value.Real32),
+                        }
                     };
+                    result.vectors[vector.Name] = track;
                 }
-                if (transform.OrientationCurve.Controls) {
-                    track.orientations = {
-                        "data": transform.OrientationCurve.Controls.map((value) => value.Real32),
-                        "degree": transform.OrientationCurve.Degree,
-                        "times": transform.OrientationCurve.Knots.map((value) => value.Real32),
-                    }
-                }
-                if (transform.ScaleShearCurve.Controls) {
-                    let data = [];
-                    let dataMatrices = transform.ScaleShearCurve.Controls.map((value) => value.Real32);
-                    for (let looper = 0; looper < dataMatrices.length; looper += 9) {
-                        data.push(dataMatrices[looper],
-                                  dataMatrices[looper + 4],
-                                  dataMatrices[looper + 8]);
-                    }
-                    track.scales = {
-                        "data": data,
-                        "degree": transform.ScaleShearCurve.Degree,
-                        "times": transform.ScaleShearCurve.Knots.map((value) => value.Real32),
-                    }
-                }
-                result.transforms[transform.Name] = track;
-            }
 
-            return result;
-        })
-    };
+                for (let transform of group.TransformTracks) {
+                    let track = {};
+                    if (transform.PositionCurve.Controls) {
+                        track.translations = {
+                            "data": transform.PositionCurve.Controls.map((value) => value.Real32),
+                            "degree": transform.PositionCurve.Degree,
+                            "times": transform.PositionCurve.Knots.map((value) => value.Real32),
+                        };
+                    }
+                    if (transform.OrientationCurve.Controls) {
+                        track.orientations = {
+                            "data": transform.OrientationCurve.Controls.map((value) => value.Real32),
+                            "degree": transform.OrientationCurve.Degree,
+                            "times": transform.OrientationCurve.Knots.map((value) => value.Real32),
+                        }
+                    }
+                    if (transform.ScaleShearCurve.Controls) {
+                        let data = [];
+                        let dataMatrices = transform.ScaleShearCurve.Controls.map((value) => value.Real32);
+                        for (let looper = 0; looper < dataMatrices.length; looper += 9) {
+                            data.push(dataMatrices[looper],
+                                      dataMatrices[looper + 4],
+                                      dataMatrices[looper + 8]);
+                        }
+                        track.scales = {
+                            "data": data,
+                            "degree": transform.ScaleShearCurve.Degree,
+                            "times": transform.ScaleShearCurve.Knots.map((value) => value.Real32),
+                        }
+                    }
+                    result.transforms[transform.Name] = track;
+                }
 
-    return result;
+                return result;
+            })
+        };
+
+        this.next(result);
+
+    });
 
 };
 

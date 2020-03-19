@@ -1,0 +1,26 @@
+{
+    "brainOptions": {
+        "shrinkingCodes": false,
+        "ui": "ui",
+        "apps": {
+            "hmm5": "ui-hmm5"
+        },
+        "pages": [ "index.html" ]
+    },
+    "playgrounds": {
+        "http": { "port": 12345 }
+    },
+    "kitties": {
+        "hmm5": {
+            "gr2ServerPort": 12346,
+            "paths": [ "/path/to/hmm5" ]
+        }
+    },
+    "resources": {
+        "ui-hmm5": {
+            "playground": "http",
+            "innerPath": "ui-hmm5",
+            "outerPath": "/~hmm5"
+        }
+    }
+}
