@@ -1,0 +1,18 @@
+module.exports = {
+
+	"@default": {
+		"name": "granny2",
+		"deps": {
+			"gr2.mcc@default": {},
+			"gr2d.mcc@default": {}
+		},
+		"pipeline": [],
+		"dists": {
+			"granny2.exe": "${getDistPath('gr2.mcc@default')}/granny2.exe",
+			"granny2_server.exe": "${getDistPath('gr2d.mcc@default')}/granny2_server.exe",
+            "granny2.dll": "ref/granny2.dll",
+            "ui": "ui"
+		}
+	}
+
+};

@@ -2,17 +2,21 @@ module.exports = {
 
     "@default": {
 
-        "name": "granny2",
+        "name": "granny2_server",
 
         "target-ld": "executable",
-        "include-dirs": [
-            "./dev/include"
-        ],
         "srcs": [
-            "src/gr2.cc"
+            "src/gr2_server.cc",
+            "src/base64.c",
+            "src/http_server.c",
+            "src/http_socket.c",
+            "src/http_uifs.c",
+            "src/http_utils.c",
+            "src/http_vfs.c"
         ],
+
         "dists": {
-            "granny2.exe": "${getCOutputFiles('executable')}",
+            "granny2_server.exe": "${getCOutputFiles('executable')}",
             "granny2.dll": "ref/granny2.dll"
         },
 
@@ -20,6 +24,7 @@ module.exports = {
             "windows:${getPlatform() == 'windows'}": {
                 "libraries": [
                     "Kernel32",
+                    "Ws2_32"
                 ],
                 "macros-cc": {
                     "WIN32_LEAN_AND_MEAN": "1"
