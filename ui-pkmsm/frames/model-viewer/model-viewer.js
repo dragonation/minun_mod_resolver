@@ -464,7 +464,7 @@ Frame.prototype.savePNGSnapshot = function () {
 
 };
 
-Frame.prototype.saveSTLFile = function () {
+Frame.prototype.saveSTLFile = function (tessellation) {
 
     let model = this.filler.query("m3d-object#pokemon-model").children().filter("m3d-object").filter((index, element) => {
         return $(element).attr("base").split("/").slice(-1)[0] !== "shadow";
@@ -584,97 +584,100 @@ Frame.prototype.saveSTLFile = function () {
 
     }
 
-    let newPoints = {};
+    if (tessellation) {
 
-    for (let mesh of meshes) {
-        let newTriangles = [];
-        for (let triangle of mesh.triangles) {
-            let mid = (a, b) => {
-                return [(a[0] + b[0]) * 0.5, (a[1] + b[1]) * 0.5, (a[2] + b[2]) * 0.5];
-            };
-            let midVertex = (a, b) => {
+        let newPoints = {};
 
-                let v = [a.position[0] - b.position[0], 
-                         a.position[1] - b.position[1], 
-                         a.position[2] - b.position[2]];
-                let l = Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
-
-                let calc = (p, n, factor) => {
-                    let nv = new THREE.Vector3(n[0], n[1], n[2]);
-                    let t = new THREE.Vector3(v[0], v[1], v[2]);
-                    t.cross(nv);
-                    t.cross(nv);
-                    t.normalize();
-                    return [p[0] + t.x * factor, p[1] + t.y * factor, p[2] + t.z * factor];
+        for (let mesh of meshes) {
+            let newTriangles = [];
+            for (let triangle of mesh.triangles) {
+                let mid = (a, b) => {
+                    return [(a[0] + b[0]) * 0.5, (a[1] + b[1]) * 0.5, (a[2] + b[2]) * 0.5];
                 };
+                let midVertex = (a, b) => {
 
-                let c = 0.3;
-                let c1 = calc(a.position, a.normal, l * c);
-                let c2 = calc(b.position, b.normal, l * c * (-1));
+                    let v = [a.position[0] - b.position[0], 
+                             a.position[1] - b.position[1], 
+                             a.position[2] - b.position[2]];
+                    let l = Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
 
-                let bezier = (t, p0, p1, p2, p3) => {
-                    return (p0 * (1 - t) * (1 - t) * (1 - t) + 
-                            3 * p1 * t * (1 - t) * (1 - t) + 
-                            3 * p2 * t * t * (1 - t) + 
-                            p3 * t * t * t);
-                };
-                let position = [
-                    bezier(0.5, a.position[0], c1[0], c2[0], b.position[0]),
-                    bezier(0.5, a.position[1], c1[1], c2[1], b.position[1]),
-                    bezier(0.5, a.position[2], c1[2], c2[2], b.position[2])
-                ];
-
-                let id = [a.position, b.position].sort((a, b) => {
-                    let diff = [a[0] - b[0], a[1] - b[1], a[2] - b[2]].filter((x) => x !== 0);
-                    return diff[0] ? diff[0] : 0;
-                }).map(x => x.join(",")).join("-");
-                if (!newPoints[id]) {
-                    newPoints[id] = {
-                        "mids": []
+                    let calc = (p, n, factor) => {
+                        let nv = new THREE.Vector3(n[0], n[1], n[2]);
+                        let t = new THREE.Vector3(v[0], v[1], v[2]);
+                        t.cross(nv);
+                        t.cross(nv);
+                        t.normalize();
+                        return [p[0] + t.x * factor, p[1] + t.y * factor, p[2] + t.z * factor];
                     };
-                }
-                newPoints[id].mids.push(position);
 
-                return { 
-                    "id": id,
-                    "position": position,
-                    "normal": mid(a.normal, b.normal)
+                    let c = 0.3;
+                    let c1 = calc(a.position, a.normal, l * c);
+                    let c2 = calc(b.position, b.normal, l * c * (-1));
+
+                    let bezier = (t, p0, p1, p2, p3) => {
+                        return (p0 * (1 - t) * (1 - t) * (1 - t) + 
+                                3 * p1 * t * (1 - t) * (1 - t) + 
+                                3 * p2 * t * t * (1 - t) + 
+                                p3 * t * t * t);
+                    };
+                    let position = [
+                        bezier(0.5, a.position[0], c1[0], c2[0], b.position[0]),
+                        bezier(0.5, a.position[1], c1[1], c2[1], b.position[1]),
+                        bezier(0.5, a.position[2], c1[2], c2[2], b.position[2])
+                    ];
+
+                    let id = [a.position, b.position].sort((a, b) => {
+                        let diff = [a[0] - b[0], a[1] - b[1], a[2] - b[2]].filter((x) => x !== 0);
+                        return diff[0] ? diff[0] : 0;
+                    }).map(x => x.join(",")).join("-");
+                    if (!newPoints[id]) {
+                        newPoints[id] = {
+                            "mids": []
+                        };
+                    }
+                    newPoints[id].mids.push(position);
+
+                    return { 
+                        "id": id,
+                        "position": position,
+                        "normal": mid(a.normal, b.normal)
+                    };
+
                 };
-
-            };
-            let m1 = midVertex(triangle[0], triangle[1]);
-            let m2 = midVertex(triangle[1], triangle[2]);
-            let m3 = midVertex(triangle[2], triangle[0]);
-            newTriangles.push([triangle[0], m1, m3]);
-            newTriangles.push([m1, triangle[1], m2]);
-            newTriangles.push([m3, m2, triangle[2]]);
-            newTriangles.push([m1, m2, m3]);
+                let m1 = midVertex(triangle[0], triangle[1]);
+                let m2 = midVertex(triangle[1], triangle[2]);
+                let m3 = midVertex(triangle[2], triangle[0]);
+                newTriangles.push([triangle[0], m1, m3]);
+                newTriangles.push([m1, triangle[1], m2]);
+                newTriangles.push([m3, m2, triangle[2]]);
+                newTriangles.push([m1, m2, m3]);
+            }
+            mesh.triangles = newTriangles;
         }
-        mesh.triangles = newTriangles;
-    }
 
-    for (let id in newPoints) {
-        let sum = [0, 0, 0];
-        let mids = newPoints[id].mids;
-        for (let mid of mids) {
-            sum[0] += mid[0];
-            sum[1] += mid[1];
-            sum[2] += mid[2];
+        for (let id in newPoints) {
+            let sum = [0, 0, 0];
+            let mids = newPoints[id].mids;
+            for (let mid of mids) {
+                sum[0] += mid[0];
+                sum[1] += mid[1];
+                sum[2] += mid[2];
+            }
+            newPoints[id].average = [sum[0] / mids.length, sum[1] / mids.length, sum[2] / mids.length];
         }
-        newPoints[id].average = [sum[0] / mids.length, sum[1] / mids.length, sum[2] / mids.length];
-    }
 
-    for (let mesh of meshes) {
-        for (let triangle of mesh.triangles) {
-            for (let looper = 0; looper < 3; ++looper) {
-                let id = triangle[looper].id;
-                if (id && newPoints[id]) {
-                    triangle[looper].position = newPoints[id].average;
+        for (let mesh of meshes) {
+            for (let triangle of mesh.triangles) {
+                for (let looper = 0; looper < 3; ++looper) {
+                    let id = triangle[looper].id;
+                    if (id && newPoints[id]) {
+                        triangle[looper].position = newPoints[id].average;
+                    }
                 }
             }
         }
+
     }
-    // TODO: more works for 3d-print
 
     let name = $(model).attr("name").replace(/[^0-9a-z_]/ig, "_");
 
@@ -982,8 +985,8 @@ Frame.functors = {
         this.saveAPNGFile();
     },
 
-    "saveSTLFile": function () {
-        this.saveSTLFile();
+    "saveSTLFile": function (tessellation) {
+        this.saveSTLFile(tessellation);
     },
 
     "listResources": function () {

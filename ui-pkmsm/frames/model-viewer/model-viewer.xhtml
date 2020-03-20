@@ -13,8 +13,10 @@
 <ui-diagram-action @action="listResources()">List resources</ui-diagram-action>
 <ui-diagram-action>-</ui-diagram-action>
 <ui-diagram-action @action="saveAPNGFile()">Save APNG image</ui-diagram-action>
-<ui-diagram-action @action="saveM3DFile()">Download M3D model</ui-diagram-action>
-<ui-diagram-action @action="saveSTLFile()">Download STL model</ui-diagram-action>
+<ui-diagram-action @action="saveM3DFile()">Save M3D model</ui-diagram-action>
+<ui-diagram-action>-</ui-diagram-action>
+<ui-diagram-action @action="saveSTLFile(false)">Save STL model</ui-diagram-action>
+<ui-diagram-action @action="saveSTLFile(true)">Save STL model (tessellation)</ui-diagram-action>
 <ui-diagram-action>-</ui-diagram-action>
 <ui-diagram-action @action="showAnimationController()">Show animation controller</ui-diagram-action>
 <ui-diagram-action @action="inspectModel()">Inspect model</ui-diagram-action>
