@@ -464,6 +464,278 @@ Frame.prototype.savePNGSnapshot = function () {
 
 };
 
+Frame.prototype.saveSTLFile = function () {
+
+    let model = this.filler.query("m3d-object#pokemon-model").children().filter("m3d-object").filter((index, element) => {
+        return $(element).attr("base").split("/").slice(-1)[0] !== "shadow";
+    })[0];
+
+    let meshes = [];
+
+    let threeModel = model.m3dObject;
+    for (let mesh of threeModel.children.filter((child) => child.isMesh)) {
+
+        let skeleton = mesh.skeleton;
+        let bones = mesh.m3dExtra ? mesh.m3dExtra.bones : undefined;
+
+        // TODO: ignore more materials
+        if (mesh.material.visible) {
+
+            let triangles = [];
+
+            let matrixWorld = mesh.matrixWorld;
+
+            let indices = mesh.geometry.index;
+            let positions = mesh.geometry.attributes.position;
+            let normals = mesh.geometry.attributes.normal;
+            let skinIndices = mesh.geometry.attributes.skinIndex;
+            let skinWeights = mesh.geometry.attributes.skinWeight;
+
+            const getData = (source, looper, itemSize) => {
+                if (!source) { return null; }
+                if ((itemSize === 3) || (source.itemSize < 4)) {
+                    return [source.array[indices.array[looper] * source.itemSize],
+                            source.array[indices.array[looper] * source.itemSize + 1],
+                            source.array[indices.array[looper] * source.itemSize + 2]];
+                } else {
+                    return [source.array[indices.array[looper] * source.itemSize],
+                            source.array[indices.array[looper] * source.itemSize + 1],
+                            source.array[indices.array[looper] * source.itemSize + 2],
+                            source.array[indices.array[looper] * source.itemSize + 3]];
+                }
+            };
+
+            const getPoint = (looper) => {
+                let position = getData(positions, looper, 3);
+                let normal = getData(normals, looper, 3);
+                let skinIndex = getData(skinIndices, looper, 4);
+                let skinWeight = getData(skinWeights, looper, 4);
+                const merge = (matrixWorld, data, extra) => {
+                    let vector = new THREE.Vector4(data[0], data[1], data[2], extra);
+                    vector.applyMatrix4(matrixWorld);
+                    return [vector.x, vector.y, vector.z];
+                };
+                if (skeleton && bones && skinIndex && skinWeights) {
+                    let matrix = new THREE.Matrix4();
+                    matrix.fromArray(skeleton.boneMatrices, bones[skinIndex[0]] * 16);
+                    let position1 = merge(matrix, position, 1);
+                    let normal1 = merge(matrix, normal, 0);
+                    matrix.fromArray(skeleton.boneMatrices, bones[skinIndex[1]] * 16);
+                    let position2 = merge(matrix, position, 1);
+                    let normal2 = merge(matrix, normal, 0);
+                    matrix.fromArray(skeleton.boneMatrices, bones[skinIndex[2]] * 16);
+                    let position3 = merge(matrix, position, 1);
+                    let normal3 = merge(matrix, normal, 0);
+                    matrix.fromArray(skeleton.boneMatrices, bones[skinIndex[3]] * 16);
+                    let position4 = merge(matrix, position, 1);
+                    let normal4 = merge(matrix, normal, 0);
+                    let positions = [position1, position2, position3, position4];
+                    let normals = [normal1, normal2, normal3, normal4];
+                    let newPosition = [0, 0, 0];
+                    let newNormal = [0, 0, 0];
+                    for (let looper = 0; looper < 4; ++looper) {
+                        if (skinWeight[looper] && isFinite(skinWeight[looper])) {
+                            newPosition[0] += positions[looper][0] * skinWeight[looper] / 255;
+                            newPosition[1] += positions[looper][1] * skinWeight[looper] / 255;
+                            newPosition[2] += positions[looper][2] * skinWeight[looper] / 255;
+                            let newPartialNormal = [
+                                normals[looper][0] * skinWeight[looper],
+                                normals[looper][1] * skinWeight[looper],
+                                normals[looper][2] * skinWeight[looper]
+                            ];
+                            let newPartialNormalLength = Math.sqrt(
+                                newPartialNormal[0] * newPartialNormal[0] +
+                                newPartialNormal[1] * newPartialNormal[1] +
+                                newPartialNormal[2] * newPartialNormal[2]);
+                            newNormal[0] += newPartialNormal[0] / newPartialNormalLength * skinWeight[looper] / 255;
+                            newNormal[1] += newPartialNormal[1] / newPartialNormalLength * skinWeight[looper] / 255;
+                            newNormal[2] += newPartialNormal[2] / newPartialNormalLength * skinWeight[looper] / 255;
+                        }
+                    }
+                    normal = newNormal;
+                    position = newPosition;
+                } else {
+                    position = merge(matrixWorld, position);
+                    normal = merge(matrixWorld, normal);
+                }
+                let normalLength = Math.sqrt(normal[0] * normal[0] + normal[1] * normal[1] + normal[2] * normal[2]);
+                normal[0] /= normalLength;
+                normal[1] /= normalLength;
+                normal[2] /= normalLength;
+                return { position, normal };
+            };
+
+            for (let looper = 0; looper < indices.count; looper += 3) {
+                triangles.push([getPoint(looper), getPoint(looper + 1), getPoint(looper + 2)]);
+            }
+
+            meshes.push({
+                "name": mesh.name,
+                "material": mesh.material.name,
+                "side": ({
+                    [THREE.DoubleSide]: "both-sides",
+                    [THREE.FrontSide]: "front-face",
+                    [THREE.BackSide]: "back-face"
+                })[mesh.material.side],
+                "triangles": triangles
+            });
+
+        }
+
+    }
+
+    let newPoints = {};
+
+    for (let mesh of meshes) {
+        let newTriangles = [];
+        for (let triangle of mesh.triangles) {
+            let mid = (a, b) => {
+                return [(a[0] + b[0]) * 0.5, (a[1] + b[1]) * 0.5, (a[2] + b[2]) * 0.5];
+            };
+            let midVertex = (a, b) => {
+
+                let v = [a.position[0] - b.position[0], 
+                         a.position[1] - b.position[1], 
+                         a.position[2] - b.position[2]];
+                let l = Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
+
+                let calc = (p, n, factor) => {
+                    let nv = new THREE.Vector3(n[0], n[1], n[2]);
+                    let t = new THREE.Vector3(v[0], v[1], v[2]);
+                    t.cross(nv);
+                    t.cross(nv);
+                    t.normalize();
+                    return [p[0] + t.x * factor, p[1] + t.y * factor, p[2] + t.z * factor];
+                };
+
+                let c = 0.3;
+                let c1 = calc(a.position, a.normal, l * c);
+                let c2 = calc(b.position, b.normal, l * c * (-1));
+
+                let bezier = (t, p0, p1, p2, p3) => {
+                    return (p0 * (1 - t) * (1 - t) * (1 - t) + 
+                            3 * p1 * t * (1 - t) * (1 - t) + 
+                            3 * p2 * t * t * (1 - t) + 
+                            p3 * t * t * t);
+                };
+                let position = [
+                    bezier(0.5, a.position[0], c1[0], c2[0], b.position[0]),
+                    bezier(0.5, a.position[1], c1[1], c2[1], b.position[1]),
+                    bezier(0.5, a.position[2], c1[2], c2[2], b.position[2])
+                ];
+
+                let id = [a.position, b.position].sort((a, b) => {
+                    let diff = [a[0] - b[0], a[1] - b[1], a[2] - b[2]].filter((x) => x !== 0);
+                    return diff[0] ? diff[0] : 0;
+                }).map(x => x.join(",")).join("-");
+                if (!newPoints[id]) {
+                    newPoints[id] = {
+                        "mids": []
+                    };
+                }
+                newPoints[id].mids.push(position);
+
+                return { 
+                    "id": id,
+                    "position": position,
+                    "normal": mid(a.normal, b.normal)
+                };
+
+            };
+            let m1 = midVertex(triangle[0], triangle[1]);
+            let m2 = midVertex(triangle[1], triangle[2]);
+            let m3 = midVertex(triangle[2], triangle[0]);
+            newTriangles.push([triangle[0], m1, m3]);
+            newTriangles.push([m1, triangle[1], m2]);
+            newTriangles.push([m3, m2, triangle[2]]);
+            newTriangles.push([m1, m2, m3]);
+        }
+        mesh.triangles = newTriangles;
+    }
+
+    for (let id in newPoints) {
+        let sum = [0, 0, 0];
+        let mids = newPoints[id].mids;
+        for (let mid of mids) {
+            sum[0] += mid[0];
+            sum[1] += mid[1];
+            sum[2] += mid[2];
+        }
+        newPoints[id].average = [sum[0] / mids.length, sum[1] / mids.length, sum[2] / mids.length];
+    }
+
+    for (let mesh of meshes) {
+        for (let triangle of mesh.triangles) {
+            for (let looper = 0; looper < 3; ++looper) {
+                let id = triangle[looper].id;
+                if (id && newPoints[id]) {
+                    triangle[looper].position = newPoints[id].average;
+                }
+            }
+        }
+    }
+    // TODO: more works for 3d-print
+
+    let name = $(model).attr("name").replace(/[^0-9a-z_]/ig, "_");
+
+    let lines = [];
+
+    lines.push(`solid ${name}`);
+    for (let mesh of meshes) {
+        for (let triangle of mesh.triangles) {
+            let v1 = new THREE.Vector3(
+                triangle[0].position[0] - triangle[1].position[0],
+                triangle[0].position[1] - triangle[1].position[1],
+                triangle[0].position[2] - triangle[1].position[2],
+            );
+            let v2 = new THREE.Vector3(
+                triangle[0].position[0] - triangle[2].position[0],
+                triangle[0].position[1] - triangle[2].position[1],
+                triangle[0].position[2] - triangle[2].position[2],
+            );
+            v1.cross(v2);
+            if ((mesh.side === "front-face") || (mesh.side === "both-sides")) {
+                lines.push(`    facet normal ${v1.x.toFixed(5)} ${v1.y.toFixed(5)} ${v1.z.toFixed(5)}`);
+                lines.push(`        outer loop`);
+                for (let looper = 0; looper < 3; ++looper) {
+                    lines.push(`             vertex ${triangle[looper].position.map((x) => x.toFixed(5)).join(" ")}`);
+                }
+                lines.push(`        endloop`);
+                lines.push(`    endfacet`);
+            }
+            if ((mesh.side === "back-face") || (mesh.side === "both-sides")) {
+                lines.push(`    facet normal ${(-v1.x).toFixed(5)} ${(-v1.y).toFixed(5)} ${(-v1.z).toFixed(5)}`);
+                lines.push(`        outer loop`);
+                for (let looper = 2; looper >= 0; --looper) {
+                    lines.push(`             vertex ${triangle[looper].position.map((x) => x.toFixed(5)).join(" ")}`);
+                }
+                lines.push(`        endloop`);
+                lines.push(`    endfacet`);
+            }
+            
+        }
+    }
+
+    lines.push(`endsolid ${name}`);
+
+    let code = lines.join("\n");
+
+    let a = $("<a>").attr({
+        "href": `data:application/octet-stream;base64,${btoa(code)}`,
+        "download": `${name}.stl`,
+    }).css({
+        "display": "none"
+    });
+
+    $("body").append(a);
+
+    a[0].click();
+
+    a.detach();
+
+
+};
+
 Frame.prototype.saveAPNGFile = function () {
 
     let toast = this.toastMessage("Recording...", Infinity);
@@ -708,6 +980,10 @@ Frame.functors = {
     },
     "saveAPNGFile": function () {
         this.saveAPNGFile();
+    },
+
+    "saveSTLFile": function () {
+        this.saveSTLFile();
     },
 
     "listResources": function () {
