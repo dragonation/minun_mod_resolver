@@ -472,6 +472,8 @@ Frame.prototype.saveSTLFile = function (tessellation) {
 
     let meshes = [];
 
+    let maxes = [-Infinity, -Infinity, -Infinity];
+    let mins = [Infinity, Infinity, Infinity];
     let threeModel = model.m3dObject;
     for (let mesh of threeModel.children.filter((child) => child.isMesh)) {
 
@@ -480,6 +482,53 @@ Frame.prototype.saveSTLFile = function (tessellation) {
 
         // TODO: ignore more materials
         if (mesh.material.visible) {
+
+            let normalUVs = undefined;
+            let normalTexture = undefined;
+            switch (mesh.material.m3dExtra.bumpNormalTexture) {
+                case 0: { 
+                    normalTexture = mesh.material.uniforms.map.value; 
+                    normalUVs = mesh.geometry.attributes.uv;
+                    break; 
+                }
+                case 1: { 
+                    normalTexture = mesh.material.uniforms.map2.value; 
+                    normalUVs = mesh.geometry.attributes.uv;
+                    break; 
+                }
+                case 2: { 
+                    normalTexture = mesh.material.uniforms.map3.value; 
+                    normalUVs = mesh.geometry.attributes.uv;
+                    break; 
+                }
+            }
+            if (normalTexture) {
+                let canvas = $("<canvas>").attr({
+                    "width": normalTexture.image.naturalWidth,
+                    "height": normalTexture.image.naturalHeight
+                })[0];
+                let context = canvas.getContext("2d");
+                context.globalCompositeOperation = "copy";
+                context.drawImage(normalTexture.image, 0, 0, normalTexture.image.naturalWidth, normalTexture.image.naturalHeight);
+                normalTexture = {
+                    "data": context.getImageData(0, 0, normalTexture.image.naturalWidth, normalTexture.image.naturalHeight).data,
+                    "flipY": normalTexture.flipY,
+                    "wrapS": ({
+                        [THREE.ClampToEdgeWrapping]: "clamp",
+                        [THREE.RepeatWrapping]: "repeat",
+                        [THREE.MirroredRepeatWrapping]: "mirror",
+                    })[normalTexture.wrapS],
+                    "wrapT": ({
+                        [THREE.ClampToEdgeWrapping]: "clamp",
+                        [THREE.RepeatWrapping]: "repeat",
+                        [THREE.MirroredRepeatWrapping]: "mirror",
+                    })[normalTexture.wrapT],
+                    "offset": [normalTexture.offset.x, normalTexture.offset.y],
+                    "repeat": [normalTexture.repeat.x, normalTexture.repeat.y],
+                    "width": normalTexture.image.naturalWidth,
+                    "height": normalTexture.image.naturalHeight
+                };
+            }
 
             let triangles = [];
 
@@ -508,6 +557,68 @@ Frame.prototype.saveSTLFile = function (tessellation) {
             const getPoint = (looper) => {
                 let position = getData(positions, looper, 3);
                 let normal = getData(normals, looper, 3);
+                let normalUV = undefined;
+                if (normalUVs && normalTexture) {
+                    let uv = [normalUVs.array[indices.array[looper] * normalUVs.itemSize],
+                              normalUVs.array[indices.array[looper] * normalUVs.itemSize + 1]];
+                    uv[0] = (uv[0] + normalTexture.offset[0]) * normalTexture.repeat[0];
+                    uv[1] = (uv[1] + normalTexture.offset[1]) * normalTexture.repeat[1];
+                    switch (normalTexture.wrapS) {
+                        case "mirror": {
+                            while (uv[0] < 0) { uv[0] += 2; }
+                            uv[0] = uv[0] % 2; 
+                            if (uv[0] > 1) { uv[0] = 2 - uv[0]; }
+                            break;
+                        }
+                        case "repeat": {
+                            while (uv[0] < 0) { uv[0] += 1; }
+                            uv[0] = uv[0] % 1; break;
+                        }
+                        case "clamp": 
+                        default: { uv[0] = Math.max(0, Math.min(uv[0], 1)); break; }
+                    }
+                    switch (normalTexture.wrapT) {
+                        case "mirror": {
+                            while (uv[1] < 0) { uv[1] += 2; }
+                            uv[1] = uv[1] % 2; 
+                            if (uv[1] > 1) { uv[1] = 2 - uv[1]; }
+                            break;
+                        }
+                        case "repeat": {
+                            while (uv[1] < 0) { uv[1] += 1; }
+                            uv[1] = uv[1] % 1; break;
+                        }
+                        case "clamp": 
+                        default: { uv[1] = Math.max(0, Math.min(uv[1], 1)); break; }
+                    }
+                    uv[0] = uv[0] * (normalTexture.width - 1);
+                    if (normalTexture.flipY) {
+                        uv[1] = 1 - uv[1];
+                    }
+                    uv[1] = uv[1] * (normalTexture.height - 1);
+                    normalUV = uv;
+                    let uvNormal = [
+                        normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4],
+                        normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4 + 1],
+                        normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4 + 2],
+                    ];
+                    let old = normal;
+                    let oldLength = Math.sqrt(old[0] * old[0] + old[1] * old[1] + old[2] * old[2]);
+                    if (uvNormal[0] + uvNormal[1] + uvNormal[2] > 0) {
+                        uvNormal[0] = (uvNormal[0] - 127) / 128;
+                        uvNormal[1] = (uvNormal[1] - 127) / 128;
+                        uvNormal[2] = (uvNormal[2] - 127) / 128;
+                        if (uvNormal[0] * uvNormal[0] + uvNormal[1] * uvNormal[1] + uvNormal[2] * uvNormal[2] > 0.2) {
+                            let length = Math.sqrt(uvNormal[0] * uvNormal[0] + uvNormal[1] * uvNormal[1] + uvNormal[2] * uvNormal[2]);
+                            uvNormal[0] /= length;
+                            uvNormal[1] /= length;
+                            uvNormal[2] /= length;
+                            if (uvNormal[0] * old[0] + uvNormal[1] * old[1] + uvNormal[2] * old[2] < oldLength * 0.4) {
+                                normal = uvNormal;
+                            }
+                        }
+                    }
+                }
                 let skinIndex = getData(skinIndices, looper, 4);
                 let skinWeight = getData(skinWeights, looper, 4);
                 const merge = (matrixWorld, data, extra) => {
@@ -562,6 +673,12 @@ Frame.prototype.saveSTLFile = function (tessellation) {
                 normal[0] /= normalLength;
                 normal[1] /= normalLength;
                 normal[2] /= normalLength;
+                if (position[0] < mins[0]) { mins[0] = position[0]; }
+                if (position[1] < mins[1]) { mins[1] = position[1]; }
+                if (position[2] < mins[2]) { mins[2] = position[2]; }
+                if (position[0] > maxes[0]) { maxes[0] = position[0]; }
+                if (position[1] > maxes[1]) { maxes[1] = position[1]; }
+                if (position[2] > maxes[2]) { maxes[2] = position[2]; }
                 return { position, normal };
             };
 
@@ -585,6 +702,8 @@ Frame.prototype.saveSTLFile = function (tessellation) {
     }
 
     if (tessellation) {
+
+        let max = Math.max(maxes[0] - mins[0], maxes[1] - mins[1], maxes[2] - mins[2]);
 
         let newPoints = {};
 
@@ -610,9 +729,32 @@ Frame.prototype.saveSTLFile = function (tessellation) {
                         return [p[0] + t.x * factor, p[1] + t.y * factor, p[2] + t.z * factor];
                     };
 
-                    let c = 0.3;
-                    let c1 = calc(a.position, a.normal, l * c);
-                    let c2 = calc(b.position, b.normal, l * c * (-1));
+                    let c = 0.33;
+                    if ((l > max / 10) || (l < max / 50)) {
+                        c = 0.01;
+                    }
+                    let edge = 0.6;
+                    let n = a.normal.slice(0);
+                    let nl = Math.sqrt(n[0] * n[0] + n[1] * n[1] + n[2] * n[2]);
+                    if (n[0] * v[0] + n[1] * v[1] + n[2] * v[2] > edge * l * nl) {
+                        let nv = new THREE.Vector3(n[0], n[1], n[2]);
+                        let t = new THREE.Vector3(v[0], v[1], v[2]);
+                        nv.cross(t);
+                        nv.cross(t);
+                        n = [nv.x, nv.y, nv.z];
+                    }
+                    let c1 = calc(a.position, n, l * c);
+
+                    n = b.normal.slice(0);
+                    nl = Math.sqrt(n[0] * n[0] + n[1] * n[1] + n[2] * n[2]);
+                    if (n[0] * v[0] + n[1] * v[1] + n[2] * v[2] < -edge * l * nl) {
+                        let nv = new THREE.Vector3(n[0], n[1], n[2]);
+                        let t = new THREE.Vector3(v[0], v[1], v[2]);
+                        nv.cross(t);
+                        nv.cross(t);
+                        n = [nv.x, nv.y, nv.z];
+                    }
+                    let c2 = calc(b.position, n, l * c * (-1));
 
                     let bezier = (t, p0, p1, p2, p3) => {
                         return (p0 * (1 - t) * (1 - t) * (1 - t) + 
@@ -698,19 +840,19 @@ Frame.prototype.saveSTLFile = function (tessellation) {
             );
             v1.cross(v2);
             if ((mesh.side === "front-face") || (mesh.side === "both-sides")) {
-                lines.push(`    facet normal ${v1.x.toFixed(5)} ${v1.y.toFixed(5)} ${v1.z.toFixed(5)}`);
+                lines.push(`    facet normal ${v1.x} ${v1.y} ${v1.z}`);
                 lines.push(`        outer loop`);
                 for (let looper = 0; looper < 3; ++looper) {
-                    lines.push(`             vertex ${triangle[looper].position.map((x) => x.toFixed(5)).join(" ")}`);
+                    lines.push(`             vertex ${triangle[looper].position.join(" ")}`);
                 }
                 lines.push(`        endloop`);
                 lines.push(`    endfacet`);
             }
             if ((mesh.side === "back-face") || (mesh.side === "both-sides")) {
-                lines.push(`    facet normal ${(-v1.x).toFixed(5)} ${(-v1.y).toFixed(5)} ${(-v1.z).toFixed(5)}`);
+                lines.push(`    facet normal ${-v1.x} ${-v1.y} ${-v1.z}`);
                 lines.push(`        outer loop`);
                 for (let looper = 2; looper >= 0; --looper) {
-                    lines.push(`             vertex ${triangle[looper].position.map((x) => x.toFixed(5)).join(" ")}`);
+                    lines.push(`             vertex ${triangle[looper].position.join(" ")}`);
                 }
                 lines.push(`        endloop`);
                 lines.push(`    endfacet`);
@@ -735,7 +877,6 @@ Frame.prototype.saveSTLFile = function (tessellation) {
     a[0].click();
 
     a.detach();
-
 
 };
 
