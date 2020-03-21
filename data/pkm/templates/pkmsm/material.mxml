@@ -18,6 +18,7 @@
               blending="custom" blending-color="${join(material.blending.color, ',')}" blending-destination="${material.blending.destination.color},${material.blending.destination.alpha}" blending-equation="${material.blending.equation.color},${material.blending.equation.alpha}" blending-source="${material.blending.source.color},${material.blending.source.alpha}"
               extra="${json({
                   'isGeometryShader': isGeometryShader,
+                  'bumpNormalTexture': material.bumpTexture,
                   'constantsIndices': material.constants.indices,
                   'outlineStencil': material.outlines.stencil,
                   'outlineDepthWrite': material.outlines.depth,

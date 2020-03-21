@@ -1170,6 +1170,8 @@ Model.prototype.toJSON = function (pcs, options) {
 
                 "name": material.name,
 
+                "bumpTexture": material.bumpTexture,
+
                 "polygonOffset": material.polygonOffset ? material.polygonOffset : 0,
 
                 // rendering orders
