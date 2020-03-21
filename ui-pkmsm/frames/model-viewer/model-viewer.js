@@ -682,18 +682,21 @@ Frame.prototype.saveSTLFile = function (tessellation) {
                 return { position, normal };
             };
 
+            let side = ({
+                [THREE.DoubleSide]: "both-sides",
+                [THREE.FrontSide]: "front-face",
+                [THREE.BackSide]: "back-face"
+            })[mesh.material.side];
+
             for (let looper = 0; looper < indices.count; looper += 3) {
-                triangles.push([getPoint(looper), getPoint(looper + 1), getPoint(looper + 2)]);
+                let points = [getPoint(looper), getPoint(looper + 1), getPoint(looper + 2)];
+                triangles.push(points);
             }
 
             meshes.push({
                 "name": mesh.name,
                 "material": mesh.material.name,
-                "side": ({
-                    [THREE.DoubleSide]: "both-sides",
-                    [THREE.FrontSide]: "front-face",
-                    [THREE.BackSide]: "back-face"
-                })[mesh.material.side],
+                "side": side,
                 "triangles": triangles
             });
 
@@ -701,9 +704,60 @@ Frame.prototype.saveSTLFile = function (tessellation) {
 
     }
 
-    if (tessellation) {
+    let max = Math.max(maxes[0] - mins[0], maxes[1] - mins[1], maxes[2] - mins[2]);
 
-        let max = Math.max(maxes[0] - mins[0], maxes[1] - mins[1], maxes[2] - mins[2]);
+    let newMeshes = [];
+    for (let mesh of meshes) {
+        if (mesh.side === "both-sides") {
+            let offset = max / 1600;
+            let triangles = [];
+            for (triangle of mesh.triangles) {
+                let v = new THREE.Vector3(
+                    triangle[0].position[0] - triangle[1].position[0],
+                    triangle[0].position[1] - triangle[1].position[1],
+                    triangle[0].position[2] - triangle[1].position[2]);
+                v.cross(new THREE.Vector3(
+                    triangle[0].position[0] - triangle[2].position[0],
+                    triangle[0].position[1] - triangle[2].position[1],
+                    triangle[0].position[2] - triangle[2].position[2]));
+                v.normalize();
+                let n = [v.x, v.y, v.z];
+                let convert = (point, direction) => {
+                    let normal = point.normal.slice(0);
+                    normal[0] *= direction;  
+                    normal[1] *= direction;  
+                    normal[2] *= direction;  
+                    return {
+                        "position": [
+                            point.position[0] + n[0] * offset * direction,
+                            point.position[1] + n[1] * offset * direction,
+                            point.position[2] + n[2] * offset * direction,
+                        ],
+                        "normal": normal
+                    };
+                };
+                let t1 = [convert(triangle[0], 1), convert(triangle[1], 1), convert(triangle[2], 1)];
+                let t2 = [convert(triangle[0], -1), convert(triangle[1], -1), convert(triangle[2], -1)];
+                triangles.push(t1);
+                triangles.push(t2);
+                triangles.push([t1[0], t1[1], t2[0]]);
+                triangles.push([t2[0], t1[1], t2[1]]);
+                triangles.push([t1[1], t1[2], t2[1]]);
+                triangles.push([t2[1], t1[2], t2[2]]);
+                triangles.push([t1[2], t1[0], t2[2]]);
+                triangles.push([t2[2], t1[0], t2[0]]);
+            }
+            newMeshes.push(Object.assign({}, mesh, {
+                "side": "front-face",
+                "triangles": triangles
+            }));
+        } else {
+            newMeshes.push(mesh);
+        }
+    }
+    meshes = newMeshes;
+
+    if (tessellation) {
 
         let newPoints = {};
 
@@ -730,7 +784,7 @@ Frame.prototype.saveSTLFile = function (tessellation) {
                     };
 
                     let c = 0.33;
-                    if ((l > max / 10) || (l < max / 50)) {
+                    if ((l > max / 16) || (l < max / 1000)) {
                         c = 0.01;
                     }
                     let edge = 0.6;
