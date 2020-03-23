@@ -156,7 +156,7 @@ const syncMaterials = function (dom, value) {
         if (!dom.m3dMaterials[material]) {
             dom.m3dMaterials[material] = {
                 "updater": () => {
-                    if ($(dom).attr("materials").trim().split(",").map((id) => id.trim()).filter((id) => id === material).length === 0) {
+                    if ($(dom).attr("materials").trim().split(";").map((id) => id.trim()).filter((id) => id === material).length === 0) {
                         dom.m3dMaterials[material].scene.m3dUninstallMaterialListener(material, dom.m3dMaterials[material].updater);
                         delete dom.m3dMaterials[material].scene;
                         return;
@@ -173,9 +173,21 @@ const syncMaterials = function (dom, value) {
                         parent = parent.parentNode;
                     }
                     if (m3dMaterial) {
-                        dom.m3dMesh.material = m3dMaterial.m3dGetMaterial();
-                        // TODO: remove last material for dispose
-                        // TODO: make material array
+                        let m3dMaterials = dom.m3dMesh.material;
+                        if (!m3dMaterials) { m3dMaterials = []; }
+                        if (!(m3dMaterials instanceof Array)) {
+                            m3dMaterials = [m3dMaterials];
+                        }
+                        let looper = m3dMaterials.length; 
+                        while (looper > 0) { 
+                            --looper;
+                            let test = m3dMaterials[looper];
+                            if ((!test.m3dFromTagObject) || (test.m3dFromTagObject.id === material)) {
+                                m3dMaterials.splice(looper, 1);
+                            }
+                        }
+                        m3dMaterials.push(m3dMaterial.m3dGetMaterial());
+                        dom.m3dMesh.material = m3dMaterials[0];
                     }
                 }
             };
