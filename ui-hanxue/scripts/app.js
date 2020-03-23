@@ -5,7 +5,7 @@ const App = function App(dom, filler) {
 
 };
 
-App.prototype.title = "3D Printer";
+App.prototype.title = "Hanxue - 3D Printer Helper";
 
 App.functors = {
     "loadModel": function () {
