@@ -70,6 +70,9 @@ const prepareMaterial = function (dom) {
         syncVertexShader(dom, $(dom).attr("vertex-shader"));
         syncFragmentShader(dom, $(dom).attr("fragment-shader"));
         syncPolygonOffset(dom, $(dom).attr("polygon-offset"));
+        syncShininess(dom, $(dom).attr("shininess"));
+        syncSpecular(dom, $(dom).attr("specular"));
+        syncEmissive(dom, $(dom).attr("emissive"));
         syncUniforms(dom);
         dom.m3dMaterial.m3dExtra = dom.m3dExtra;
         trigMaterialUpdate(dom);
@@ -119,6 +122,30 @@ const syncColor = function (dom, value) {
     }
 
     dom.m3dMaterial.color.set(value);
+
+};
+
+const syncSpecular = function (dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
+    if (!value) {
+        return;
+    }
+
+    dom.m3dMaterial.specular.set(value);
+
+};
+
+const syncEmissive= function (dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
+    if (!value) {
+        return;
+    }
+
+    dom.m3dMaterial.emissive.set(value);
 
 };
 
@@ -499,6 +526,18 @@ const syncAlphaPremultiplied = function (dom, value) {
 
 };
 
+const syncShininess = function (dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
+    if (!value) {
+        return;
+    }
+    
+    dom.m3dMaterial.shininess = parseFloat(value);
+
+};
+
 const syncID = function (dom, value) {
 
     if (!dom.m3dMaterial) { return; }
@@ -765,6 +804,8 @@ const syncTextures = function (dom, value) {
         dom.m3dTextures = Object.create(null);
     }
 
+    if (!value) { return; }
+
     let textures = value.trim().split(";").map((id) => id.trim()).filter((id) => id);
     textures.forEach((texture) => {
 
@@ -946,7 +987,8 @@ module.exports = {
         "stencil-write-mask", 
         "blending", "blending-destination", "blending-equation", "blending-source",
         "polygon-offset",
-        "extra"
+        "extra",
+        "shininess", "specular", "emissive"
     ],
     "listeners": {
         "onconnected": function () {
@@ -988,6 +1030,9 @@ module.exports = {
                 case "blending-equation": { syncBlendingEquation(this, value); break; }
                 case "polygon-offset": { syncPolygonOffset(this, value); break; }
                 case "extra": { syncExtra(this, value); break; }
+                case "shininess": { syncShininess(this, value); break; }
+                case "specular": { syncSpecular(this, value); break; }
+                case "emissive": { syncEmissive(this, value); break; }
                 default: { break; };
             }
         },
