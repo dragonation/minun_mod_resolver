@@ -1,0 +1,9 @@
+<ui-dock-icon title="3D Printer" icon="/~3dprnt/res/icon.png"/>
+<ui-workbench>
+    <div id="nav-bar">
+        <img src="/~3dprnt/res/logo.png" style:width="123px" style:height="22px" style:margin="9px 8px"/>
+        <div style:flex-grow="1" style:flex-shrink="1" style:width="1px"></div>
+        <ui-button @action="loadModel()">Load model</ui-button>
+    </div>
+    <ui-diagram id="diagram"></ui-diagram>
+</ui-workbench>
