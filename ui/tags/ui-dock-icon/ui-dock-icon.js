@@ -3,7 +3,7 @@ const prepareDockIcon = function (dom) {
     if (!dom.uiIcon) {
         dom.uiIcon = $("<ui-button>").addClass("dock-icon").append($("<ui-icon>").attr(dom.filler.parameters.attributes));
         dom.uiIcon.dockIcon = dom;
-        dom.uiIcon.on("click", (event) => {
+        dom.uiIcon.on("action", (event) => {
 
             let that = $(dom);
 
