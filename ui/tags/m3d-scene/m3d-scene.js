@@ -10,12 +10,7 @@ const prepareScene = function (dom) {
     height = Math.round(parseFloat(height));
     if (height <= 0) { height = 1; }
 
-    // let camera = options.camera;
-    // if (!camera) {
-    // TODO: make camera configurable
-    let camera = new THREE.PerspectiveCamera(50, width / height, 10, 2000);
-    camera.position.set(50, 50, 100);
-    // }
+    syncCamera(dom, $(dom).attr("camera"));
 
     let clock = new THREE.Clock();
 
@@ -57,7 +52,6 @@ const prepareScene = function (dom) {
     dom.m3dClock = clock;
     dom.m3dRenderer = renderer;
     dom.m3dScene = scene;
-    dom.m3dCamera = camera;
 
     syncAutosort(dom, $(dom).attr("autosort"));
 
@@ -163,6 +157,82 @@ const stopSceneRendering = function (dom) {
 
 };
 
+const syncCamera = function (dom, value) {
+
+    let changed = false;
+    let camera = dom.m3dCamera;
+    let { width, height } = $(dom).css(["width", "height"]);
+    width = parseInt(width);
+    if ((width <= 0) || (!isFinite(width))) { width = 1; }
+    height = parseInt(height);
+    if ((height <= 0) || (!isFinite(height))) { height = 1; }
+    switch (value) {
+        case "orthographic": {
+            if ((!camera) || (!camera.isOrthographicCamera)) {
+                changed = true;
+                camera = new THREE.OrthographicCamera(-width / 2, width / 2, -height / 2, height / 2, 10, 2000);
+            }
+            break;
+        }
+        case "perspective": 
+        default: {
+            if ((!camera) || (!camera.isPerspectiveCamera)) {
+                changed = true;
+                camera = new THREE.PerspectiveCamera(50, width / height, 10, 2000);
+            }
+            break;
+        }
+    }
+
+    if (changed) {
+
+        dom.m3dCamera = camera;
+
+        syncCameraPosition(dom, $(dom).attr("camera-position"));
+        syncCameraDirection(dom, $(dom).attr("camera-direction"));
+
+        if (dom.m3dControls) {
+            dom.m3dControls.object = camera;
+        }
+
+    }
+
+};
+
+const syncCameraPosition = function (dom, value) {
+
+    if (!dom.m3dCamera) {
+        return;
+    }
+
+    if (!value) {
+        value = "50, 50, 100";
+    }
+
+    value = value.trim().split(/[\s,]+/).map(value => parseFloat(value));
+
+    dom.m3dCamera.position.set(value[0], value[1], value[2]);
+
+};
+
+const syncCameraDirection = function (dom, value) {
+
+    if (!dom.m3dCamera) {
+        return;
+    }
+
+    if (!value) {
+        return;
+    }
+    
+    value = value.trim().split(/[\s,]+/).map(value => parseFloat(value));
+
+    dom.m3dCamera.lookAt(dom.m3dCamera.position.x + value[0], 
+                         dom.m3dCamera.position.y + value[1], 
+                         dom.m3dCamera.position.z + value[2]);
+
+};
+
 const syncControls = function (dom, value) {
 
     if (!dom.m3dRenderer) { return; }
@@ -182,6 +252,7 @@ const syncControls = function (dom, value) {
             orbitControls.update();
             orbitControls.m3dValue = value;
             dom.m3dControls = orbitControls;
+            syncOrbitTarget(dom, $(dom).attr("orbit-target"));
         }
     } else {
         if (dom.m3dControls) {
@@ -189,6 +260,22 @@ const syncControls = function (dom, value) {
             delete dom.m3dOrbitControls;
         }
     }
+
+};
+
+const syncOrbitTarget = function (dom, value) {
+
+    if ((!dom.m3dControls) || (dom.m3dControls.m3dValue !== "orbit")) {
+        return;
+    }
+
+    if (!value) {
+        return;
+    }
+
+    let values = value.trim().split(/[\s,]+/).map((x) => parseFloat(x));
+
+    dom.m3dControls.target.set(values[0], values[1], values[2]);
 
 };
 
@@ -238,7 +325,7 @@ const syncAutolights = function (dom, value) {
 
     if (value === "yes") {
         if (!dom.m3dAutolights) {
-            let ambientLight = new THREE.AmbientLight(0xffffff, 1.0);
+            let ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
             ambientLight.position.set(0, 0, 0);
             dom.m3dScene.add(ambientLight);
             let directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
@@ -330,12 +417,19 @@ const syncSceneSize = function (dom) {
 
     let { width, height } = $(dom).css(["width", "height"]);
     width = Math.round(parseFloat(width));
-    if (width <= 0) { width = 1; }
+    if ((width <= 0) || (!isFinite(width))) { width = 1; }
     height = Math.round(parseFloat(height));
-    if (height <= 0) { height = 1; }
+    if ((height <= 0) || (!isFinite(height))) { height = 1; }
 
     // TODO: fov
-    dom.m3dCamera.aspect = width / height;
+    if (dom.m3dCamera.isPerspectiveCamera) {
+        dom.m3dCamera.aspect = width / height;
+    } else if (dom.m3dCamera.isOrthographicCamera) {
+        dom.m3dCamera.left = - width / 2;
+        dom.m3dCamera.right = width / 2;
+        dom.m3dCamera.top = height / 2;
+        dom.m3dCamera.bottom = - height / 2;
+    }
     dom.m3dCamera.updateProjectionMatrix();
 
     dom.m3dRenderer.setSize(width, height);
@@ -376,8 +470,9 @@ module.exports = {
         "autosort",
         "antialias", "pixel-ratio",
         "controls", "grids", "stats", 
+        "orbit-target",
         "autolights", "autocamera-lights",
-        "camera"
+        "camera", "camera-position", "camera-direction"
     ],
     "listeners": {
         "oncreated": function () {
@@ -412,6 +507,7 @@ module.exports = {
         "onupdated": function (name, value) {
             switch (name) {
                 case "controls": { syncControls(this, value); break; };
+                case "orbit-target": { syncOrbitTarget(this, value); break; };
                 case "grids": { syncGrids(this, value); break; };
                 case "stats": { syncStats(this, value); break; };
                 case "lights": { syncAutolights(this, value); break; };
@@ -421,6 +517,9 @@ module.exports = {
                 case "autocamera-lights": { syncAutocameraLights(this, value); break; };
                 case "antialias": { syncAntialias(this, value); break; };
                 case "pixel-ratio": { syncPixelRatio(this, value); break; };
+                case "camera": { syncCamera(this, value); break; };
+                case "camera-direction": { syncCameraDirection(this, value); break; };
+                case "camera-position": { syncCameraPosition(this, value); break; };
                 default: { break; };
             }
         },
