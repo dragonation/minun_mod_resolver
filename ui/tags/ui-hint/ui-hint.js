@@ -27,9 +27,10 @@ document.addEventListener("mousemove", function (event) {
     let type = undefined;
     let title = undefined;
 
+    let eventPath = event.composedPath();
     let looper = 0;
-    while (looper < event.path.length) {
-        let dom = event.path[looper];
+    while (looper < eventPath.length) {
+        let dom = eventPath[looper];
         if (dom instanceof Element) {
             let content = dom.getAttribute("title");
             if (content) {
