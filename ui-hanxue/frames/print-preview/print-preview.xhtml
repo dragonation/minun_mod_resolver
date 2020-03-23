@@ -1,2 +1,42 @@
 <ui-diagram-action @action="sliceModels()">Slice models</ui-diagram-action>
-<m3d-scene grids="yes" controls="orbit" autolights="yes" autocamera-lights="yes" clear-color="#666666ff" antialias="yes"></m3d-scene>
+<m3d-scene controls="orbit" orbit-target="${device.width / 2}, ${device.height / 2}, ${device.depth / 2}" autolights="yes" clear-color="#ccccccff" antialias="yes" camera-position="${camera.position}" camera-direction="${camera.direction}">
+    <m3d-object id="hints">
+        <m3d-material id="grid" preset="shader" 
+                      transparent="yes"
+                      vertex-shader="/~hanxue/shaders/grid.vert" fragment-shader="/~hanxue/shaders/grid.frag"
+                      side="both-sides">
+            <m3d-uniform name="width" type="float">${device.width}</m3d-uniform>                        
+            <m3d-uniform name="height" type="float">${device.depth}</m3d-uniform>
+            <m3d-uniform name="grid" type="float">10</m3d-uniform>                        
+            <m3d-uniform name="outline" type="float">0.5</m3d-uniform>                        
+            <m3d-uniform name="color" type="vec4">0.5, 0.5, 0.5, 1.0</m3d-uniform>                        
+        </m3d-material>
+        <m3d-mesh materials="grid" frustum-culled="no" prop:indices="${hints.grids.indices}" prop:vertices="${hints.grids.vertices}"/>
+    </m3d-object>
+    <m3d-object id="model"
+                model-scale="${model.scale}"
+                model-translation="${model.translation}"
+                translation="${model.placement.translation}"
+                model-rotation="${model.rotation}"
+                frustum-culled="no">
+        <m3d-material id="print" preset="phong" color="#004488" specular="#222222" emissive="#000000" shininess="40"/>
+        <m3d-material id="shadow" preset="shader" 
+                      vertex-shader="/~hanxue/shaders/shadow.vert"
+                      fragment-shader="/~hanxue/shaders/shadow.frag"
+                      blending="custom" blending-destination="one-minus-source-alpha,one" blending-equation="add,add" blending-source="source-alpha,one"
+                      stencil-test="yes" stencil-test-function="not-equal-to" stencil-test-reference="254" stencil-test-mask="255" stencil-write-mask="255"
+                      stencil-failed="keep" stencil-z-failed="keep" stencil-z-passed="replace">
+            <m3d-uniform name="height" type="float">${device.depth}</m3d-uniform>
+        </m3d-material>
+        <m3d-mesh materials="print"
+                  frustum-culled="no"
+                  prop:indices="${model.indices}"
+                  prop:normals="${model.normals}"
+                  prop:vertices="${model.vertices}"/>
+        <m3d-mesh materials="shadow"
+                  frustum-culled="no"
+                  prop:indices="${model.indices}"
+                  prop:normals="${model.normals}"
+                  prop:vertices="${model.vertices}"/>
+    </m3d-object>
+</m3d-scene>
