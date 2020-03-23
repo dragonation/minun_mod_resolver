@@ -485,52 +485,52 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
         // TODO: ignore more materials
         if (mesh.material.visible) {
 
-            // let normalUVs = undefined;
-            // let normalTexture = undefined;
-            // switch (mesh.material.m3dExtra.bumpNormalTexture) {
-            //     case 0: { 
-            //         normalTexture = mesh.material.uniforms.map.value; 
-            //         normalUVs = mesh.geometry.attributes.uv;
-            //         break; 
-            //     }
-            //     case 1: { 
-            //         normalTexture = mesh.material.uniforms.map2.value; 
-            //         normalUVs = mesh.geometry.attributes.uv;
-            //         break; 
-            //     }
-            //     case 2: { 
-            //         normalTexture = mesh.material.uniforms.map3.value; 
-            //         normalUVs = mesh.geometry.attributes.uv;
-            //         break; 
-            //     }
-            // }
-            // if (normalTexture) {
-            //     let canvas = $("<canvas>").attr({
-            //         "width": normalTexture.image.naturalWidth,
-            //         "height": normalTexture.image.naturalHeight
-            //     })[0];
-            //     let context = canvas.getContext("2d");
-            //     context.globalCompositeOperation = "copy";
-            //     context.drawImage(normalTexture.image, 0, 0, normalTexture.image.naturalWidth, normalTexture.image.naturalHeight);
-            //     normalTexture = {
-            //         "data": context.getImageData(0, 0, normalTexture.image.naturalWidth, normalTexture.image.naturalHeight).data,
-            //         "flipY": normalTexture.flipY,
-            //         "wrapS": ({
-            //             [THREE.ClampToEdgeWrapping]: "clamp",
-            //             [THREE.RepeatWrapping]: "repeat",
-            //             [THREE.MirroredRepeatWrapping]: "mirror",
-            //         })[normalTexture.wrapS],
-            //         "wrapT": ({
-            //             [THREE.ClampToEdgeWrapping]: "clamp",
-            //             [THREE.RepeatWrapping]: "repeat",
-            //             [THREE.MirroredRepeatWrapping]: "mirror",
-            //         })[normalTexture.wrapT],
-            //         "offset": [normalTexture.offset.x, normalTexture.offset.y],
-            //         "repeat": [normalTexture.repeat.x, normalTexture.repeat.y],
-            //         "width": normalTexture.image.naturalWidth,
-            //         "height": normalTexture.image.naturalHeight
-            //     };
-            // }
+            let normalUVs = undefined;
+            let normalTexture = undefined;
+            switch (mesh.material.m3dExtra.bumpNormalTexture) {
+                case 0: { 
+                    normalTexture = mesh.material.uniforms.map.value; 
+                    normalUVs = mesh.geometry.attributes.uv;
+                    break; 
+                }
+                case 1: { 
+                    normalTexture = mesh.material.uniforms.map2.value; 
+                    normalUVs = mesh.geometry.attributes.uv;
+                    break; 
+                }
+                case 2: { 
+                    normalTexture = mesh.material.uniforms.map3.value; 
+                    normalUVs = mesh.geometry.attributes.uv;
+                    break; 
+                }
+            }
+            if (normalTexture) {
+                let canvas = $("<canvas>").attr({
+                    "width": normalTexture.image.naturalWidth,
+                    "height": normalTexture.image.naturalHeight
+                })[0];
+                let context = canvas.getContext("2d");
+                context.globalCompositeOperation = "copy";
+                context.drawImage(normalTexture.image, 0, 0, normalTexture.image.naturalWidth, normalTexture.image.naturalHeight);
+                normalTexture = {
+                    "data": context.getImageData(0, 0, normalTexture.image.naturalWidth, normalTexture.image.naturalHeight).data,
+                    "flipY": normalTexture.flipY,
+                    "wrapS": ({
+                        [THREE.ClampToEdgeWrapping]: "clamp",
+                        [THREE.RepeatWrapping]: "repeat",
+                        [THREE.MirroredRepeatWrapping]: "mirror",
+                    })[normalTexture.wrapS],
+                    "wrapT": ({
+                        [THREE.ClampToEdgeWrapping]: "clamp",
+                        [THREE.RepeatWrapping]: "repeat",
+                        [THREE.MirroredRepeatWrapping]: "mirror",
+                    })[normalTexture.wrapT],
+                    "offset": [normalTexture.offset.x, normalTexture.offset.y],
+                    "repeat": [normalTexture.repeat.x, normalTexture.repeat.y],
+                    "width": normalTexture.image.naturalWidth,
+                    "height": normalTexture.image.naturalHeight
+                };
+            }
 
             let triangles = [];
 
@@ -559,68 +559,68 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
             const getPoint = (looper) => {
                 let position = getData(positions, looper, 3);
                 let normal = getData(normals, looper, 3);
-                // let normalUV = undefined;
-                // if (normalUVs && normalTexture) {
-                //     let uv = [normalUVs.array[indices.array[looper] * normalUVs.itemSize],
-                //               normalUVs.array[indices.array[looper] * normalUVs.itemSize + 1]];
-                //     uv[0] = (uv[0] + normalTexture.offset[0]) * normalTexture.repeat[0];
-                //     uv[1] = (uv[1] + normalTexture.offset[1]) * normalTexture.repeat[1];
-                //     switch (normalTexture.wrapS) {
-                //         case "mirror": {
-                //             while (uv[0] < 0) { uv[0] += 2; }
-                //             uv[0] = uv[0] % 2; 
-                //             if (uv[0] > 1) { uv[0] = 2 - uv[0]; }
-                //             break;
-                //         }
-                //         case "repeat": {
-                //             while (uv[0] < 0) { uv[0] += 1; }
-                //             uv[0] = uv[0] % 1; break;
-                //         }
-                //         case "clamp": 
-                //         default: { uv[0] = Math.max(0, Math.min(uv[0], 1)); break; }
-                //     }
-                //     switch (normalTexture.wrapT) {
-                //         case "mirror": {
-                //             while (uv[1] < 0) { uv[1] += 2; }
-                //             uv[1] = uv[1] % 2; 
-                //             if (uv[1] > 1) { uv[1] = 2 - uv[1]; }
-                //             break;
-                //         }
-                //         case "repeat": {
-                //             while (uv[1] < 0) { uv[1] += 1; }
-                //             uv[1] = uv[1] % 1; break;
-                //         }
-                //         case "clamp": 
-                //         default: { uv[1] = Math.max(0, Math.min(uv[1], 1)); break; }
-                //     }
-                //     uv[0] = uv[0] * (normalTexture.width - 1);
-                //     if (normalTexture.flipY) {
-                //         uv[1] = 1 - uv[1];
-                //     }
-                //     uv[1] = uv[1] * (normalTexture.height - 1);
-                //     normalUV = uv;
-                //     let uvNormal = [
-                //         normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4],
-                //         normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4 + 1],
-                //         normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4 + 2],
-                //     ];
-                //     let old = normal;
-                //     let oldLength = Math.sqrt(old[0] * old[0] + old[1] * old[1] + old[2] * old[2]);
-                //     if (uvNormal[0] + uvNormal[1] + uvNormal[2] > 0) {
-                //         uvNormal[0] = (uvNormal[0] - 127) / 128;
-                //         uvNormal[1] = (uvNormal[1] - 127) / 128;
-                //         uvNormal[2] = (uvNormal[2] - 127) / 128;
-                //         if (uvNormal[0] * uvNormal[0] + uvNormal[1] * uvNormal[1] + uvNormal[2] * uvNormal[2] > 0.2) {
-                //             let length = Math.sqrt(uvNormal[0] * uvNormal[0] + uvNormal[1] * uvNormal[1] + uvNormal[2] * uvNormal[2]);
-                //             uvNormal[0] /= length;
-                //             uvNormal[1] /= length;
-                //             uvNormal[2] /= length;
-                //             if (uvNormal[0] * old[0] + uvNormal[1] * old[1] + uvNormal[2] * old[2] < oldLength * 0.4) {
-                //                 normal = uvNormal;
-                //             }
-                //         }
-                //     }
-                // }
+                let normalUV = undefined;
+                if (normalUVs && normalTexture) {
+                    let uv = [normalUVs.array[indices.array[looper] * normalUVs.itemSize],
+                              normalUVs.array[indices.array[looper] * normalUVs.itemSize + 1]];
+                    uv[0] = (uv[0] + normalTexture.offset[0]) * normalTexture.repeat[0];
+                    uv[1] = (uv[1] + normalTexture.offset[1]) * normalTexture.repeat[1];
+                    switch (normalTexture.wrapS) {
+                        case "mirror": {
+                            while (uv[0] < 0) { uv[0] += 2; }
+                            uv[0] = uv[0] % 2; 
+                            if (uv[0] > 1) { uv[0] = 2 - uv[0]; }
+                            break;
+                        }
+                        case "repeat": {
+                            while (uv[0] < 0) { uv[0] += 1; }
+                            uv[0] = uv[0] % 1; break;
+                        }
+                        case "clamp": 
+                        default: { uv[0] = Math.max(0, Math.min(uv[0], 1)); break; }
+                    }
+                    switch (normalTexture.wrapT) {
+                        case "mirror": {
+                            while (uv[1] < 0) { uv[1] += 2; }
+                            uv[1] = uv[1] % 2; 
+                            if (uv[1] > 1) { uv[1] = 2 - uv[1]; }
+                            break;
+                        }
+                        case "repeat": {
+                            while (uv[1] < 0) { uv[1] += 1; }
+                            uv[1] = uv[1] % 1; break;
+                        }
+                        case "clamp": 
+                        default: { uv[1] = Math.max(0, Math.min(uv[1], 1)); break; }
+                    }
+                    uv[0] = uv[0] * (normalTexture.width - 1);
+                    if (normalTexture.flipY) {
+                        uv[1] = 1 - uv[1];
+                    }
+                    uv[1] = uv[1] * (normalTexture.height - 1);
+                    normalUV = uv;
+                    let uvNormal = [
+                        normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4],
+                        normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4 + 1],
+                        normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4 + 2],
+                    ];
+                    let old = normal;
+                    let oldLength = Math.sqrt(old[0] * old[0] + old[1] * old[1] + old[2] * old[2]);
+                    if (uvNormal[0] + uvNormal[1] + uvNormal[2] > 0) {
+                        uvNormal[0] = (uvNormal[0] - 127) / 128;
+                        uvNormal[1] = (uvNormal[1] - 127) / 128;
+                        uvNormal[2] = (uvNormal[2] - 127) / 128;
+                        if (uvNormal[0] * uvNormal[0] + uvNormal[1] * uvNormal[1] + uvNormal[2] * uvNormal[2] > 0.2) {
+                            let length = Math.sqrt(uvNormal[0] * uvNormal[0] + uvNormal[1] * uvNormal[1] + uvNormal[2] * uvNormal[2]);
+                            uvNormal[0] /= length;
+                            uvNormal[1] /= length;
+                            uvNormal[2] /= length;
+                            if (uvNormal[0] * old[0] + uvNormal[1] * old[1] + uvNormal[2] * old[2] < oldLength * 0.4) {
+                                normal = uvNormal;
+                            }
+                        }
+                    }
+                }
                 let skinIndex = getData(skinIndices, looper, 4);
                 let skinWeight = getData(skinWeights, looper, 4);
                 const merge = (matrixWorld, data, extra) => {
@@ -766,6 +766,16 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
                     let mid = (a, b) => {
                         return [(a[0] + b[0]) * 0.5, (a[1] + b[1]) * 0.5, (a[2] + b[2]) * 0.5];
                     };
+                    let side = (a, b) => {
+                        let v = [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
+                        return Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
+                    };
+                    let sideA = side(triangle[0].position, triangle[1].position);
+                    let sideB = side(triangle[1].position, triangle[2].position);
+                    let sideC = side(triangle[2].position, triangle[0].position);
+                    let sideRatio = Math.min(sideA, sideB, sideC) / Math.max(sideA, sideB, sideC);
+                    let areaP = (sideA + sideB + sideC) / 2;
+                    let area = Math.sqrt(areaP * (areaP - sideA) * (areaP - sideB) * (areaP - sideC));
                     let midVertex = (a, b) => {
 
                         let v = [a.position[0] - b.position[0], 
@@ -782,14 +792,16 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
                             return [p[0] + t.x * factor, p[1] + t.y * factor, p[2] + t.z * factor];
                         };
 
-                        let c = 0.3;
-                        if ((l > max / 16) || (l < max / 1000)) {
-                            c = 0.01;
+                        let c = 0.34;
+                        let plain = (area > max * max / 512);
+                        if ((!plain) && (sideRatio < 0.3)) {
+                            plain = l * 2 > Math.max(sideA, sideB, sideC);
                         }
+
                         let edge = 0.6;
                         let n = a.normal.slice(0);
                         let nl = Math.sqrt(n[0] * n[0] + n[1] * n[1] + n[2] * n[2]);
-                        if (n[0] * v[0] + n[1] * v[1] + n[2] * v[2] > edge * l * nl) {
+                        if (plain || (n[0] * v[0] + n[1] * v[1] + n[2] * v[2] > edge * l * nl)) {
                             let nv = new THREE.Vector3(n[0], n[1], n[2]);
                             let t = new THREE.Vector3(v[0], v[1], v[2]);
                             nv.cross(t);
@@ -800,7 +812,7 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
 
                         n = b.normal.slice(0);
                         nl = Math.sqrt(n[0] * n[0] + n[1] * n[1] + n[2] * n[2]);
-                        if (n[0] * v[0] + n[1] * v[1] + n[2] * v[2] < -edge * l * nl) {
+                        if (plain || (n[0] * v[0] + n[1] * v[1] + n[2] * v[2] < -edge * l * nl)) {
                             let nv = new THREE.Vector3(n[0], n[1], n[2]);
                             let t = new THREE.Vector3(v[0], v[1], v[2]);
                             nv.cross(t);
