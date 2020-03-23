@@ -734,7 +734,7 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
                     };
                 };
                 let t1 = [convert(triangle[0], 1), convert(triangle[1], 1), convert(triangle[2], 1)];
-                let t2 = [convert(triangle[0], -1), convert(triangle[1], -1), convert(triangle[2], -1)];
+                let t2 = [convert(triangle[2], -1), convert(triangle[1], -1), convert(triangle[0], -1)];
                 triangles.push(t1);
                 triangles.push(t2);
                 triangles.push([t2[0], t1[1], t1[0]]);
