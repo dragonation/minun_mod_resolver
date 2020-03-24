@@ -190,6 +190,8 @@ const syncCamera = function (dom, value) {
 
         syncCameraPosition(dom, $(dom).attr("camera-position"));
         syncCameraDirection(dom, $(dom).attr("camera-direction"));
+        syncCameraNear(dom, $(dom).attr("camera-near"));
+        syncCameraFar(dom, $(dom).attr("camera-far"));
 
         if (dom.m3dControls) {
             dom.m3dControls.object = camera;
@@ -230,6 +232,40 @@ const syncCameraDirection = function (dom, value) {
     dom.m3dCamera.lookAt(dom.m3dCamera.position.x + value[0], 
                          dom.m3dCamera.position.y + value[1], 
                          dom.m3dCamera.position.z + value[2]);
+
+};
+
+const syncCameraNear = function (dom, value) {
+
+    if (!dom.m3dCamera) {
+        return;
+    }
+
+    if (!value) {
+        return;
+    }
+    
+    value = parseFloat(value.trim());
+    if (isFinite(value)) {
+        dom.m3dCamera.near = value;
+    }
+
+};
+
+const syncCameraFar = function (dom, value) {
+
+    if (!dom.m3dCamera) {
+        return;
+    }
+
+    if (!value) {
+        return;
+    }
+    
+    value = parseFloat(value.trim());
+    if (isFinite(value)) {
+        dom.m3dCamera.far = value;
+    }
 
 };
 
@@ -415,7 +451,17 @@ const syncSceneSize = function (dom) {
 
     if (!dom.m3dRenderer) { return; }
 
-    let { width, height } = $(dom).css(["width", "height"]);
+    let width = $(dom).attr("width");
+    let height = $(dom).attr("height");
+    if (width) { width = parseInt(width); }
+    if (height) { height = parseInt(height); }
+    let css = $(dom).css(["width", "height"]);
+    if ((!width) || (!isFinite(width))) {
+        width = css.width;
+    }
+    if ((!height) || (!isFinite(height))) {
+        height = css.height;
+    }
     width = Math.round(parseFloat(width));
     if ((width <= 0) || (!isFinite(width))) { width = 1; }
     height = Math.round(parseFloat(height));
@@ -427,12 +473,17 @@ const syncSceneSize = function (dom) {
     } else if (dom.m3dCamera.isOrthographicCamera) {
         dom.m3dCamera.left = - width / 2;
         dom.m3dCamera.right = width / 2;
-        dom.m3dCamera.top = height / 2;
         dom.m3dCamera.bottom = - height / 2;
+        dom.m3dCamera.top = height / 2;
     }
     dom.m3dCamera.updateProjectionMatrix();
 
     dom.m3dRenderer.setSize(width, height);
+
+    $(dom.m3dRenderer.domElement).css({
+        "width": css.width,
+        "height": css.height
+    });
 
 };
 
@@ -466,13 +517,15 @@ const syncChildren = function (dom) {
 
 module.exports = {
     "attributes": [
+        "width", "height",
         "autoclear", "clear-color",
         "autosort",
         "antialias", "pixel-ratio",
         "controls", "grids", "stats", 
         "orbit-target",
         "autolights", "autocamera-lights",
-        "camera", "camera-position", "camera-direction"
+        "camera", "camera-position", "camera-direction", 
+        "camera-near", "camera-far"
     ],
     "listeners": {
         "oncreated": function () {
@@ -506,6 +559,7 @@ module.exports = {
         },
         "onupdated": function (name, value) {
             switch (name) {
+                case "width": case "height": { syncSceneSize(this); break; };
                 case "controls": { syncControls(this, value); break; };
                 case "orbit-target": { syncOrbitTarget(this, value); break; };
                 case "grids": { syncGrids(this, value); break; };
@@ -520,6 +574,8 @@ module.exports = {
                 case "camera": { syncCamera(this, value); break; };
                 case "camera-direction": { syncCameraDirection(this, value); break; };
                 case "camera-position": { syncCameraPosition(this, value); break; };
+                case "camera-near": { syncCameraNear(this, value); break; };
+                case "camera-far": { syncCameraFar(this, value); break; };
                 default: { break; };
             }
         },
