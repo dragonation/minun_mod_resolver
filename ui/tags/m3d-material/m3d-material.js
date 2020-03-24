@@ -7,12 +7,12 @@ mapKeys["color"] = "map";
 const defaultVertexShader = $.res.load("/tags/m3d-material/default-shader.vert");
 const defaultFragmentShader = $.res.load("/tags/m3d-material/default-shader.frag");
 
-const prepareMaterial = function (dom) {
+const prepareMaterial = function (dom, force) {
 
     let newMaterial = false;
     switch ($(dom).attr("preset")) {
         case "phong": {
-            if ((!dom.m3dMaterial) || (!dom.m3dMaterial.isMeshPhongMaterial)) {
+            if ((!dom.m3dMaterial) || (!dom.m3dMaterial.isMeshPhongMaterial) || force) {
                 if (dom.m3dMaterial) { dom.m3dMaterial.dispose(); }
                 dom.m3dMaterial = new THREE.MeshPhongMaterial({});
                 newMaterial = true;
@@ -20,7 +20,7 @@ const prepareMaterial = function (dom) {
             break;
         };
         case "shader": {
-            if ((!dom.m3dMaterial) || (!dom.m3dMaterial.isShaderMaterial)) {
+            if ((!dom.m3dMaterial) || (!dom.m3dMaterial.isShaderMaterial) || force) {
                 if (dom.m3dMaterial) { dom.m3dMaterial.dispose(); }
 
                 let parameter = {};
@@ -73,7 +73,7 @@ const prepareMaterial = function (dom) {
         syncShininess(dom, $(dom).attr("shininess"));
         syncSpecular(dom, $(dom).attr("specular"));
         syncEmissive(dom, $(dom).attr("emissive"));
-        syncUniforms(dom);
+        syncUniforms(dom, true);
         dom.m3dMaterial.m3dExtra = dom.m3dExtra;
         trigMaterialUpdate(dom);
     }
@@ -137,7 +137,7 @@ const syncSpecular = function (dom, value) {
 
 };
 
-const syncEmissive= function (dom, value) {
+const syncEmissive = function (dom, value) {
 
     if (!dom.m3dMaterial) { return; }
 
@@ -579,9 +579,6 @@ const syncVertexShader = function (dom, value) {
         while (base && base.localName && 
                ((base.localName.toLowerCase() !== "m3d-object") || 
                 (!$(base).attr("base")))) {
-            if (base.localName.toLowerCase() === "m3d-object") {
-                console.log($(base).attr("base"));
-            }
             base = base.parentNode;
         }
         if (base) {
@@ -887,7 +884,7 @@ const syncTextures = function (dom, value) {
 
 };
 
-const syncUniforms = function (dom) {
+const syncUniforms = function (dom, reloading) {
 
     if (!dom.m3dMaterial) { return; }
 
@@ -911,7 +908,9 @@ const syncUniforms = function (dom) {
         });
         return;
     }
-    
+
+    let namesChanged = false;
+
     let oldNames = Object.create(null);
     for (let key in dom.m3dMaterial.uniforms) {
         if (!dom.m3dMaterial.uniforms[key].value.isTexture) {
@@ -921,12 +920,19 @@ const syncUniforms = function (dom) {
 
     for (let uniform of uniforms) {
         let name = $(uniform).attr("name");
+        if (!oldNames[name]) {
+            namesChanged = true;
+        }
         delete oldNames[name];
         dom.m3dMaterial.uniforms[name] = uniform.m3dGetUniform();
     }
 
     for (let oldName in oldNames) {
         delete dom.m3dMaterial.uniforms[oldName];
+    }
+
+    if (namesChanged && (!reloading)) {
+        prepareMaterial(dom, true);
     }
 
 };
@@ -995,8 +1001,9 @@ module.exports = {
             this.observer = new MutationObserver(() => {
                 syncUniforms(this);
             });
-            this.observer.observe(this, { "characterData": true, "subtree": true });
+            this.observer.observe(this, { "characterData": true, "subtree": true, "childList": true });
             syncTextures(this, $(this).attr("textures"));
+            syncUniforms(this);
             trigMaterialUpdate(this);
         },
         "onupdated": function (name, value) {
