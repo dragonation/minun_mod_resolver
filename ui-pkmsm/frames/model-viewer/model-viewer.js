@@ -737,12 +737,12 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
                 let t2 = [convert(triangle[2], -1), convert(triangle[1], -1), convert(triangle[0], -1)];
                 triangles.push(t1);
                 triangles.push(t2);
-                triangles.push([t2[0], t1[1], t1[0]]);
-                triangles.push([t2[1], t1[1], t2[0]]);
-                triangles.push([t2[1], t1[2], t1[1]]);
-                triangles.push([t2[2], t1[2], t2[1]]);
+                triangles.push([t2[0], t1[2], t1[1]]);
+                triangles.push([t2[0], t1[1], t2[1]]);
+                triangles.push([t2[1], t1[1], t1[0]]);
+                triangles.push([t2[1], t1[0], t2[2]]);
                 triangles.push([t2[2], t1[0], t1[2]]);
-                triangles.push([t2[0], t1[0], t2[2]]);
+                triangles.push([t2[2], t1[2], t2[0]]);
             }
             newMeshes.push(Object.assign({}, mesh, {
                 "side": "front-face",
