@@ -23,9 +23,14 @@ const Frame = function Frame(dom, filler) {
 Frame.functors = {
     "sliceModels": function () {
 
+        let resolution = {
+            "width": 1920,
+            "height": 1080
+        };
+
         let size = {
-            "width": $.dom.getDevicePixels(240),
-            "height": $.dom.getDevicePixels(240)
+            "width": $.dom.getDesignPixels(resolution.width / 2),
+            "height": $.dom.getDesignPixels(resolution.height / 2)
         };
         let position = $.app(this.dom).getNextFrameTopLeft(this, size);
 
@@ -43,19 +48,22 @@ Frame.functors = {
 
         frame[0].loadUI("/~hanxue/frames/slice-viewer/slice-viewer");
 
+        let scale = resolution.width / this.filler.parameters.device.width;
+
         frame[0].frame.filler.fill({
             "model": {
                 "translation": this.filler.parameters.model.translation,
-                "scale": this.filler.parameters.model.scale,
+                "scale": this.filler.parameters.model.scale * scale,
                 "rotation": this.filler.parameters.model.rotation,
                 "vertices": this.filler.parameters.model.vertices,
                 "normals": this.filler.parameters.model.normals,
                 "indices": this.filler.parameters.model.indices,
                 "placement": {
-                    "translation": this.filler.parameters.model.placement.translation
+                    "translation": this.filler.parameters.model.placement.translation.map((x) => x * scale)
                 }
             },
             "device": {
+                "resolution": resolution,
                 "width": this.filler.parameters.device.width,
                 "height": this.filler.parameters.device.height,
                 "depth": this.filler.parameters.device.depth,
