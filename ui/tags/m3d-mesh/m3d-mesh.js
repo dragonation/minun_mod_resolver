@@ -285,7 +285,10 @@ const syncRenderingOrder = function (dom, value) {
 
     if (!dom.m3dMesh) { return; }
 
-    dom.m3dMesh.renderOrder = parseInt(value);
+    let renderOrder = parseInt(value);
+    if (isFinite(renderOrder)) {
+        dom.m3dMesh.renderOrder = renderOrder;
+    }
 
 };
 
