@@ -16,6 +16,8 @@ module.exports = {
             });
             this.observer.observe(this, { "characterData": true });
 
+            this.m3dRefreshUniform();
+
         },
         "onupdated": function () {
 
@@ -27,6 +29,7 @@ module.exports = {
         "ondisconnected": function () {
 
             this.observer.disconnect();
+
             delete this.observer;
 
         }
@@ -150,10 +153,10 @@ module.exports = {
                     break; 
                 }
                 default: { 
-                    if ((typeof value === "number") && (typeof this.m3dUniform.value === "number")) {
+                    if (this.m3dUniform && (typeof value === "number") && (typeof this.m3dUniform.value === "number")) {
                         this.m3dUniform.value = value;
                         this.m3dUniform.origin = value;
-                    } else if (Array.isArray(value) && 
+                    } else if (this.m3dUniform && Array.isArray(value) && 
                                Array.isArray(this.m3dUniform.value) && 
                                (this.m3dUniform.value.length === value.length)) {
                         for (let looper = 0; looper < value.length; ++looper) {
