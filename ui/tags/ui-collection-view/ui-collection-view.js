@@ -96,13 +96,13 @@ module.exports = {
                         "top": top,
                         "width": width,
                         "height": height,
-                    }, $.dom.getDesignPixels(info.sectionHeaderSize) + extraPadding);
+                    }, info.sectionHeaderSize + extraPadding);
                 }
             });
         },
         "doForEachViewRegion": function (action) {
 
-            const coast = $.dom.getDevicePixels(200);
+            const coast = 200;
 
             let scrollView = this.filler.query("ui-scroll-view");
             let placeholder = this.filler.query("#placeholder");
@@ -272,7 +272,7 @@ module.exports = {
             let dataReloaded = this.dataReloaded;
             this.dataReloaded = false;
 
-            const coast = $.dom.getDevicePixels(200);
+            const coast = 200;
 
             let scrollView = this.filler.query("ui-scroll-view");
             let placeholder = this.filler.query("#placeholder");

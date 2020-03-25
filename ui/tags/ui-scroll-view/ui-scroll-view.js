@@ -1,5 +1,5 @@
-let minIndicatorLength = $.dom.getDevicePixels(24);
-let barSize = $.dom.getDevicePixels(8);
+let minIndicatorLength = 24;
+let barSize = 8;
 
 const indicatorHidingDelay = 2000;
 
@@ -63,7 +63,7 @@ module.exports = {
             if (!edgeOffset) {
                 edgeOffset = 0;
             } else {
-                edgeOffset = $.dom.getDevicePixels(edgeOffset);
+                edgeOffset = edgeOffset;
             }
 
             let scrollTop = this.scrollTop;
@@ -139,7 +139,7 @@ module.exports = {
             if (!edgeOffset) {
                 edgeOffset = 0;
             } else {
-                edgeOffset = $.dom.getDevicePixels(edgeOffset);
+                edgeOffset = edgeOffset;
             }
 
             let domRect = dom.getClientRects()[0];
@@ -230,7 +230,7 @@ module.exports = {
                 this.contents[0].lastClientWidth = clientWidth;
                 this.contents[0].lastScrollWidth = scrollWidth;
 
-                let barWidth = clientWidth - 2;
+                let barWidth = clientWidth - $.dom.getDesignPixels(2);
                 if (this.getAttribute("scroll-y") === "yes") {
                     barWidth -= barSize;
                 }
@@ -248,7 +248,7 @@ module.exports = {
 
                 this.indicatorX.css({
                     "width": indicatorWidth + "px",
-                    "left": (1 + indicatorLeft) + "px"
+                    "left": ($.dom.getDesignPixels(1) + indicatorLeft) + "px"
                 });
 
                 if (clientWidth < scrollWidth) {
@@ -271,7 +271,7 @@ module.exports = {
                 this.contents[0].lastClientHeight = clientHeight;
                 this.contents[0].lastScrollHeight = scrollHeight;
 
-                let barHeight = clientHeight - 2;
+                let barHeight = clientHeight - $.dom.getDesignPixels(2);
                 if (this.getAttribute("scroll-x") === "yes") {
                     barHeight -= barSize;
                 }
@@ -289,7 +289,7 @@ module.exports = {
 
                 this.indicatorY.css({
                     "height": indicatorHeight + "px",
-                    "top": (1 + indicatorTop) + "px"
+                    "top": ($.dom.getDesignPixels(1) + indicatorTop) + "px"
                 });
 
                 if(clientHeight < scrollHeight) {
@@ -385,7 +385,7 @@ module.exports = {
                 if (direction === "y") {
 
                     let clientHeight = this.contents[0].clientHeight;
-                    let barHeight = clientHeight - 2;
+                    let barHeight = clientHeight - $.dom.getDesignPixels(2);
                     if (this.getAttribute("scroll-x") === "yes") {
                         barHeight -= barSize;
                     }
@@ -396,7 +396,7 @@ module.exports = {
                         indicatorHeight = minIndicatorLength;
                     }
 
-                    let translation = $.dom.getDevicePixels(event.pageY - this.indicatorY.draggingY);
+                    let translation = event.pageY - this.indicatorY.draggingY;
 
                     let scrollOffset = (scrollHeight - clientHeight) * translation / (barHeight - indicatorHeight);
 
@@ -413,7 +413,7 @@ module.exports = {
                 } else {
 
                     let clientWidth = this.contents[0].clientWidth;
-                    let barWidth = clientWidth - 2;
+                    let barWidth = clientWidth - $.dom.getDesignPixels(2);
                     if (this.getAttribute("scroll-y") === "yes") {
                         barWidth -= barSize;
                     }
@@ -424,7 +424,7 @@ module.exports = {
                         indicatorWidth = minIndicatorLength;
                     }
 
-                    let translation = $.dom.getDevicePixels(event.pageX - this.indicatorX.draggingX);
+                    let translation = event.pageX - this.indicatorX.draggingX;
 
                     let scrollOffset = (scrollWidth - clientWidth) * translation / (barWidth - indicatorWidth);
 

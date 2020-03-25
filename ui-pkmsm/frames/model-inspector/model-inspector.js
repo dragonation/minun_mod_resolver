@@ -176,13 +176,13 @@ registerResolver(app.ToggleField, function (value, target, decorator) {
         case "decorate": {
             if (!decorator.checkDOM) {
                 decorator.checkDOM = $("<img>").css({
-                    "width": `${$.dom.getDevicePixels(16)}px`,
-                    "height": `${$.dom.getDevicePixels(16)}px`,
+                    "width": `16px`,
+                    "height": `16px`,
                     "display": "inline-block",
-                    "margin-left": `${$.dom.getDevicePixels(-3)}px`,
-                    "margin-top": `${$.dom.getDevicePixels(1)}px`,
-                    "margin-right": `${$.dom.getDevicePixels(1)}px`,
-                    "margin-bottom": `${$.dom.getDevicePixels(1)}px`
+                    "margin-left": `-3px`,
+                    "margin-top": `1px`,
+                    "margin-right": `1px`,
+                    "margin-bottom": `1px`
                 });
             }
             decorator.checkDOM.attr({
@@ -257,24 +257,24 @@ registerResolver(app.BackgroundColorField, function (value, target, decorator) {
         case "decorate": {
             if (!decorator.colorDOM) {
                 decorator.colorDOM = $("<div>").css({
-                    "border": `solid ${$.dom.getDevicePixels(1.5)}px #888`,
+                    "border": `solid 1.5px #888`,
                     "background-image": "url('/res/transparent-background.svg')",
                     "background-size": "stretch",
                     "background-repeat": "no-repeat",
                     "background-position": "center",
-                    "width": `${$.dom.getDevicePixels(10)}px`,
-                    "height": `${$.dom.getDevicePixels(10)}px`,
-                    "border-radius": `${$.dom.getDevicePixels(3)}px`,
+                    "width": `10px`,
+                    "height": `10px`,
+                    "border-radius": `3px`,
                     "display": "inline-block",
                     "position": "relative",
-                    "margin-top": `${$.dom.getDevicePixels(4)}px`,
-                    "margin-right": `${$.dom.getDevicePixels(4)}px`,
-                    "margin-bottom": `${$.dom.getDevicePixels(4)}px`
+                    "margin-top": `4px`,
+                    "margin-right": `4px`,
+                    "margin-bottom": `4px`
                 });
                 decorator.colorDOM.wellDOM = $("<div>").css({
                     "width": "100%",
                     "height": "100%",
-                    "border-radius": `${$.dom.getDevicePixels(1.5)}px`
+                    "border-radius": `1.5px`
                 });
                 decorator.colorDOM.append(decorator.colorDOM.wellDOM);
             }

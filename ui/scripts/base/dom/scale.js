@@ -40,10 +40,8 @@ document.documentElement.style.setProperty("--ui-scale", scale);
 document.documentElement.classList.add("ui-scaled");
 
 const convert = (css) => {
-    return css.replace(/([0-9\.]+)(px|pt|pc|vh|vw)/g, (value) => {
-        return $.dom.getDevicePixels(parseFloat(value.slice(0, -2))) + value.slice(-2);
-    }).replace(/([0-9\.]+)(vmin|vmax)/g, (value) => {
-        return $.dom.getDevicePixels(parseFloat(value.slice(0, -4))) + value.slice(-4);
+    return css.replace(/([0-9\.]+)(px|pt|pc)/g, (value) => {
+        return $.dom.getDesignPixels(parseFloat(value.slice(0, -2))) + value.slice(-2);
     });
 };
 
@@ -58,7 +56,7 @@ Array.prototype.slice.call(document.querySelectorAll("link[rel='stylesheet']"), 
                 let looper = 0;
                 while (looper < rule.style.length) {
                     let name = rule.style[looper];
-                    if ((name.indexOf("border") === -1) || (name.indexOf("radius") !== -1)) {
+                    if ((name.indexOf("border") !== -1) && (name.indexOf("radius") === -1)) {
                         let from = rule.style.getPropertyValue(name);
                         let to = convert(from);
                         if (from !== to) {
@@ -72,5 +70,5 @@ Array.prototype.slice.call(document.querySelectorAll("link[rel='stylesheet']"), 
             $.delay(10, check);
         }
     };
-    check() ;
+    check();
 });

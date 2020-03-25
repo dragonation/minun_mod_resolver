@@ -121,8 +121,8 @@ module.exports = {
             }
 
             let offsets = {
-                "x": parseFloat($(this).css("left")) - $.dom.getDevicePixels(event.pageX),
-                "y": parseFloat($(this).css("top")) - $.dom.getDevicePixels(event.pageY)
+                "x": parseFloat($(this).css("left")) - event.pageX,
+                "y": parseFloat($(this).css("top")) - event.pageY
             };
 
             const onmousemove = (event) => {
@@ -134,8 +134,8 @@ module.exports = {
                 }
 
                 $(this).css({
-                    "left": Math.round(offsets.x + $.dom.getDevicePixels(event.pageX)),
-                    "top": Math.round(offsets.y + $.dom.getDevicePixels(event.pageY))
+                    "left": Math.round(offsets.x + event.pageX),
+                    "top": Math.round(offsets.y + event.pageY)
                 });
 
             };
@@ -158,8 +158,8 @@ module.exports = {
             }
 
             let offsets = {
-                "x": parseFloat($(this).css("width")) - $.dom.getDevicePixels(event.pageX),
-                "y": parseFloat($(this).css("height")) - $.dom.getDevicePixels(event.pageY)
+                "x": parseFloat($(this).css("width")) - event.pageX,
+                "y": parseFloat($(this).css("height")) - event.pageY
             };
 
             const onmousemove = (event) => {
@@ -171,8 +171,8 @@ module.exports = {
                 }
 
                 $(this).css({
-                    "width": Math.round(offsets.x + $.dom.getDevicePixels(event.pageX)),
-                    "height": Math.round(offsets.y + $.dom.getDevicePixels(event.pageY))
+                    "width": Math.round(offsets.x + event.pageX),
+                    "height": Math.round(offsets.y + event.pageY)
                 });
 
             };

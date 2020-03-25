@@ -258,7 +258,7 @@ Dialog.functors = {
             let alphaBar = this.filler.query("#alpha-bar")[0];
             let { left, width, height } = alphaBar.getClientRects()[0];
 
-            let alpha = ($.dom.getDevicePixels(event.pageX) - left - height / 2) / (width - height) * 255;
+            let alpha = (event.pageX - left - height / 2) / (width - height) * 255;
             if (alpha < 0) { alpha = 0; }
             if (alpha > 255) { alpha = 255; }
 
@@ -295,7 +295,7 @@ Dialog.functors = {
             let hueBar = this.filler.query("#hue-bar")[0];
             let { left, width, height } = hueBar.getClientRects()[0];
 
-            let hue = ($.dom.getDevicePixels(event.pageX) - left - height / 2) / (width - height) * 360;
+            let hue = (event.pageX - left - height / 2) / (width - height) * 360;
             if (hue < 0) { hue = 0; }
             if (hue > 359) { hue = 359; }
 
@@ -344,8 +344,8 @@ Dialog.functors = {
             let hsvMap = this.filler.query("#hsv-map")[0];
             let { left, top, width, height } = hsvMap.getClientRects()[0];
 
-            let s = ($.dom.getDevicePixels(event.pageX) - left) / width * 100;
-            let v = ($.dom.getDevicePixels(event.pageY) - top) / height * 100;
+            let s = (event.pageX - left) / width * 100;
+            let v = (event.pageY - top) / height * 100;
             v = 100 - v;
             if (s < 0) { s = 0; }
             if (s >= 100) { s = 100; }

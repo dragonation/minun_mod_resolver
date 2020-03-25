@@ -1,15 +1,17 @@
 html.ui-scaled {
     --ui-scale: 1;
-    zoom: calc(1 / var(--ui-scale));
+    /*zoom: calc(1 / var(--ui-scale));*/
 }
 
 body.ui-scaled {
-    font-size: calc(16px * var(--ui-scale));
+    font-size: 16px;
+    /*font-size: calc(16px * var(--ui-scale));*/
 }
 
 body.ui-scaled input,
 body.ui-scaled select {
-    font-size: calc(16px * var(--ui-scale));
+    font-size: 16px;
+    /*font-size: calc(16px * var(--ui-scale));*/
 }
 
 body.ui-scaled h1,
@@ -18,7 +20,8 @@ body.ui-scaled h3,
 body.ui-scaled h4,
 body.ui-scaled h5,
 body.ui-scaled h6 {
-    font-size: calc(24px * var(--ui-scale));
+    font-size: 24px;
+    /*font-size: calc(24px * var(--ui-scale));*/
 }
 
 body {

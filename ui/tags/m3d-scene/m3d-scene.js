@@ -36,10 +36,10 @@ const prepareScene = function (dom) {
         if (isFinite(pixelRatio) && (pixelRatio > 0)) {
             renderer.setPixelRatio(pixelRatio);
         } else {
-            renderer.setPixelRatio(1);
+            renderer.setPixelRatio($.dom.getDevicePixels(1));
         }
     } else {
-        renderer.setPixelRatio(1);
+        renderer.setPixelRatio($.dom.getDevicePixels(1));
     }
     renderer.setSize(width, height);
     renderer.gammaInput = true;

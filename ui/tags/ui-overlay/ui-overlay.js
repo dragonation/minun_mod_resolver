@@ -128,8 +128,8 @@ module.exports = {
             }
 
             let offsets = {
-                "x": parseFloat($(this).css("width")) - $.dom.getDevicePixels(event.pageX),
-                "y": parseFloat($(this).css("height")) - $.dom.getDevicePixels(event.pageY)
+                "x": parseFloat($(this).css("width")) - event.pageX,
+                "y": parseFloat($(this).css("height")) - event.pageY
             };
 
             const onmousemove = (event) => {
@@ -141,8 +141,8 @@ module.exports = {
                 }
 
                 $(this).css({
-                    "width": Math.round(offsets.x + $.dom.getDevicePixels(event.pageX)),
-                    "height": Math.round(offsets.y + $.dom.getDevicePixels(event.pageY))
+                    "width": Math.round(offsets.x + event.pageX),
+                    "height": Math.round(offsets.y + event.pageY)
                 });
 
             };

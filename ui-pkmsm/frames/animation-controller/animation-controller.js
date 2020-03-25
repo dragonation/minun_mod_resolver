@@ -122,9 +122,9 @@ Frame.functors = {
         return getClipUsage(name);
     },
     "showCursor": function (event) {
-        let x = $.dom.getDevicePixels(event.pageX) - this.filler.query("ui-ruler")[0].getClientRects()[0].left;
+        let x = event.pageX - this.filler.query("ui-ruler")[0].getClientRects()[0].left;
         let cursorVisible = x > 0;
-        let cursor = Math.round($.dom.getDesignPixels(x) / unitSize) / 24;
+        let cursor = Math.round(x / unitSize) / 24;
         this.filler.fill({
             "cursorVisible": cursorVisible,
             "cursor": cursor
@@ -148,9 +148,9 @@ Frame.functors = {
                 return;
             }
 
-            let x = $.dom.getDevicePixels(event.pageX) - this.filler.query("ui-ruler")[0].getClientRects()[0].left;
+            let x = event.pageX - this.filler.query("ui-ruler")[0].getClientRects()[0].left;
 
-            let time = $.dom.getDesignPixels(x) / unitSize / 24;
+            let time = x / unitSize / 24;
 
             let modelID = $(this.dom).attr("wire-id").split("/")[0];
             

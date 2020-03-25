@@ -1,4 +1,4 @@
-const edgePadding = $.dom.getDevicePixels(5);
+const edgePadding = 5;
 
 module.exports = {
 
@@ -33,8 +33,8 @@ module.exports = {
                         return;
                     }
 
-                    let x = $.dom.getDevicePixels(event.pageX);
-                    let y = $.dom.getDevicePixels(event.pageY);
+                    let x = event.pageX;
+                    let y = event.pageY;
                     if ((x >= rect.left - edgePadding) && (x < rect.right + edgePadding) &&
                         (y >= rect.top - edgePadding) && (y < rect.bottom + edgePadding)) {
                         if (!$(this).hasClass("pressing")) {
@@ -54,8 +54,8 @@ module.exports = {
                         return;
                     }
 
-                    let x = $.dom.getDevicePixels(event.pageX);
-                    let y = $.dom.getDevicePixels(event.pageY);
+                    let x = event.pageX;
+                    let y = event.pageY;
                     if ((x >= rect.left - edgePadding) && (x < rect.right + edgePadding) &&
                         (y >= rect.top - edgePadding) && (y < rect.bottom + edgePadding)) {
                         $(this).trigger("action", {});

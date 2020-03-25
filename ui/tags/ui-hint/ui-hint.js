@@ -63,8 +63,8 @@ document.addEventListener("mousemove", function (event) {
             "type": type,
             "title": title,
             "location": {
-                "x": $.dom.getDevicePixels(event.pageX),
-                "y": $.dom.getDevicePixels(event.pageY)
+                "x": event.pageX,
+                "y": event.pageY
             }
         };
     } else {
@@ -90,18 +90,18 @@ let titleTimer = $.timer(100, () => {
 
     let left = "auto";
     let right = "auto";
-    if (lastTitle.location.x < $.dom.getDevicePixels(document.body.clientWidth) / 2) {
-        left = `${lastTitle.location.x - $.dom.getDevicePixels(10)}px`;
+    if (lastTitle.location.x < document.body.clientWidth / 2) {
+        left = `${lastTitle.location.x - 10}px`;
     } else {
-        right = `${$.dom.getDevicePixels(document.body.clientWidth) - lastTitle.location.x - $.dom.getDevicePixels(10)}px`;
+        right = `${document.body.clientWidth - lastTitle.location.x - 10}px`;
     }
 
     let top = "auto";
     let bottom = "auto";
-    if (lastTitle.location.y < $.dom.getDevicePixels(document.body.clientHeight) / 2) {
-        top = `${lastTitle.location.y + $.dom.getDevicePixels(20)}px`;
+    if (lastTitle.location.y < document.body.clientHeight / 2) {
+        top = `${lastTitle.location.y + 20}px`;
     } else {
-        bottom = `${$.dom.getDevicePixels(document.body.clientHeight) - lastTitle.location.y + $.dom.getDevicePixels(10)}px`;
+        bottom = `${document.body.clientHeight - lastTitle.location.y + 10}px`;
     }
 
     topHint.attr({

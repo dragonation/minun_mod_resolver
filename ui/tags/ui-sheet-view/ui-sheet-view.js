@@ -105,7 +105,7 @@ module.exports = {
             let dataReloaded = this.dataReloaded;
             this.dataReloaded = false;
 
-            const coast = $.dom.getDevicePixels(200);
+            const coast = 200;
 
             let scrollView = this.filler.query("#sheet-body");
             let placeholder = this.filler.query("#placeholder");
@@ -226,7 +226,7 @@ module.exports = {
                         if (!isFinite(width)) {
                             width = sizes.columnWidth;
                         } else {
-                            width = $.dom.getDevicePixels(width);
+                            width = width;
                         }
                     } else {
                         width = sizes.columnWidth;
@@ -504,9 +504,9 @@ module.exports = {
                 "height": `${height - sizes.extraPaddingBottom}px`
             });
 
-            this.filler.query("#sheet-head-fixed-right-shadow").css("margin-left", `${fixedRightLeft - width - $.dom.getDevicePixels(4) + 1}px`);
+            this.filler.query("#sheet-head-fixed-right-shadow").css("margin-left", `${fixedRightLeft - width - 4 + 1}px`);
             this.filler.query("#sheet-body-fixed-right-shadow").css({
-                "margin-left": `${fixedRightLeft - width - $.dom.getDevicePixels(4) + 1}px`,
+                "margin-left": `${fixedRightLeft - width - 4 + 1}px`,
                 "height": `${height - sizes.extraPaddingBottom}px`
             });
 

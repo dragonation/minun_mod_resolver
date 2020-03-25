@@ -14,7 +14,7 @@ module.exports = {
                 this.m3dRefreshUniform();
 
             });
-            this.observer.observe(this, { "characterData": true });
+            this.observer.observe(this, { "characterData": true, "subtree": true });
 
             this.m3dRefreshUniform();
 

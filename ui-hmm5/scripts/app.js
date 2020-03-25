@@ -632,7 +632,7 @@ App.prototype.loadModel = function (id, callback) {
 
 App.prototype.getNextFrameTopLeft = function (from, size) {
 
-    let coast = $.dom.getDevicePixels(30);
+    let coast = 30;
 
     let diagram = this.filler.query("#diagram");
 
@@ -648,7 +648,7 @@ App.prototype.getNextFrameTopLeft = function (from, size) {
     if (children.length === 0) {
         return {
             "left": mins[0] + coast,
-            "top": mins[1] + coast + $.dom.getDevicePixels(40)
+            "top": mins[1] + coast + 40
         };
     }
 
@@ -677,7 +677,7 @@ App.prototype.getNextFrameTopLeft = function (from, size) {
     let frame = topmost.css(["left", "top", "width", "height"]);
 
     let suggested = {
-        "left": parseFloat(frame.left) + parseFloat(frame.width) + $.dom.getDevicePixels(40),
+        "left": parseFloat(frame.left) + parseFloat(frame.width) + 40,
         "top": parseFloat(frame.top),
     };
 
@@ -688,8 +688,8 @@ App.prototype.getNextFrameTopLeft = function (from, size) {
 App.prototype.openInlineObject = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(300)
+        "width": 240,
+        "height": 300
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -730,8 +730,8 @@ App.prototype.openInlineObject = function (id, from) {
 App.prototype.openText = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(100)
+        "width": 240,
+        "height": 100
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -803,8 +803,8 @@ App.prototype.openGUID = function (guid, from) {
 App.prototype.openGeometryGUID = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(240)
+        "width": 240,
+        "height": 240
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -861,8 +861,8 @@ App.prototype.openGeometryGUID = function (id, from) {
 App.prototype.openSkeletonGUID = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(240)
+        "width": 240,
+        "height": 240
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -922,8 +922,8 @@ App.prototype.openPropertyList = function (id, from) {
     let name = id.split("#").slice(-1)[0].split("/").slice(-1)[0].split("(").slice(-1)[0].split(")")[0];
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(300)
+        "width": 240,
+        "height": 300
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -966,8 +966,8 @@ App.prototype.openXDB = function (id, from) {
     let name = id.split("/").slice(-1)[0];
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(300)
+        "width": 240,
+        "height": 300
     };
 
     let position = this.getNextFrameTopLeft(from, size);
@@ -1007,8 +1007,8 @@ App.prototype.openXDB = function (id, from) {
 App.prototype.openDDS = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(240)
+        "width": 240,
+        "height": 240
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -1039,8 +1039,8 @@ App.prototype.openDDS = function (id, from) {
 App.prototype.openCharacterView = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(240)
+        "width": 240,
+        "height": 240
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -1106,8 +1106,8 @@ App.prototype.openCharacterView = function (id, from) {
 App.prototype.openModel = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(240)
+        "width": 240,
+        "height": 240
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -1234,11 +1234,11 @@ App.functors = {
     },
     "updateSearchResult": function () {
 
-        let width = $.dom.getDevicePixels(340);
-        let height = $.dom.getDevicePixels(400);
+        let width = 340;
+        let height = 400;
 
-        let left = parseInt($("body").css("width")) - $.dom.getDevicePixels(60) - width - $.dom.getDevicePixels(6);
-        let top = $.dom.getDevicePixels(40 + 6);
+        let left = parseInt($("body").css("width")) - 60 - width - 6;
+        let top = 40 + 6;
 
         if (!this.searchOverlay) {
             this.searchOverlay = this.createOverlay("~hmm5/overlays/search/search", {

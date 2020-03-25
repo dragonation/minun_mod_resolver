@@ -7,14 +7,14 @@ const prepareMesh = function (dom) {
         let geometry = new THREE.BufferGeometry();
         geometry.m3dFromTagObject = dom;
 
+        if (dom.m3dIndices) {
+            geometry.setIndex(dom.m3dIndices);
+        }
+
         if (dom.m3dVertices) {
             let vertexUnitSize = parseInt($(dom).attr("vertex-unit-size"));
             if ((!vertexUnitSize) || (!isFinite(vertexUnitSize))) { vertexUnitSize = 3; }
             geometry.setAttribute("position", new THREE.Float32BufferAttribute(dom.m3dVertices, vertexUnitSize));
-        }
-
-        if (dom.m3dIndices) {
-            geometry.setIndex(dom.m3dIndices);
         }
 
         if (dom.m3dNormals) {

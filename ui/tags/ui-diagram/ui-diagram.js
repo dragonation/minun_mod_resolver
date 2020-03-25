@@ -724,7 +724,7 @@ module.exports = {
             if (!isFinite(mins[1])) { mins[1] = 0; }
             if (!isFinite(maxes[0])) { maxes[0] = 0; }
             if (!isFinite(maxes[1])) { maxes[1] = 0; }
-            let coach = $.dom.getDevicePixels(200);
+            let coach = 200;
             mins[0] -= coach; maxes[0] += coach;
             mins[1] -= coach; maxes[1] += coach;
 
@@ -742,7 +742,7 @@ module.exports = {
                 maxes[1] = mins[1] + height;
             }
 
-            let gridSize = $.dom.getDevicePixels(40);
+            let gridSize = 40;
             mins[0] = Math.floor(mins[0] / gridSize) * gridSize;
             mins[1] = Math.floor(mins[1] / gridSize) * gridSize;
             maxes[0] = Math.ceil(maxes[0] / gridSize) * gridSize;
@@ -966,7 +966,7 @@ module.exports = {
                 "y": -this.viewportTop
             };
 
-            let arrowSize = $.dom.getDevicePixels(4);
+            let arrowSize = 4;
 
             let candidates = [];
 
@@ -1073,7 +1073,7 @@ module.exports = {
                     (!fromIDs[arrow.lastFrames.from.id]) ||
                     (!toIDs[arrow.lastFrames.to.id])) {
 
-                    let radius = $.dom.getDevicePixels(30);
+                    let radius = 30;
 
                     let hit = hasInset(candidate.from.frame, candidate.to.frame, radius);
                     let spaces = hasSpaces(candidate.from.frame, candidate.to.frame, hit, radius);
@@ -1283,7 +1283,7 @@ module.exports = {
             let scrollView = this.filler.query("ui-scroll-view")[0];
 
             let from = {
-                "ratio": this.birdViewRatio,
+                "ratio": $.dom.getDesignPixels(this.birdViewRatio),
                 "left": scrollView.scrollLeft,
                 "top": scrollView.scrollTop,
                 "x": event.pageX,
@@ -1298,8 +1298,8 @@ module.exports = {
                 }
 
                 let offsets = {
-                    "x": from.left + $.dom.getDevicePixels(event.pageX - from.x) / from.ratio,
-                    "y": from.top + $.dom.getDevicePixels(event.pageY - from.y) / from.ratio
+                    "x": from.left + (event.pageX - from.x) / from.ratio,
+                    "y": from.top + (event.pageY - from.y) / from.ratio
                 };
                 if (offsets.x + parseFloat($(scrollView).css("width")) >= scrollView.scrollWidth) {
                     offsets.x = scrollView.scrollWidth - parseFloat($(scrollView).css("width"));

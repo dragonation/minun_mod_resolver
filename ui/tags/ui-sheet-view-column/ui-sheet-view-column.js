@@ -39,9 +39,9 @@ module.exports = {
 
                 let transform = event.pageX - initial;
 
-                let newWidth = Math.max($.dom.getDevicePixels(10), width + $.dom.getDevicePixels(transform));
+                let newWidth = Math.max(10, width + transform);
 
-                $(this).css("--column-width", `${$.dom.getDesignPixels(newWidth)}px`);
+                $(this).css("--column-width", `${newWidth}px`);
 
                 let sheetView = $(this).parent()[0];
                 if (sheetView && (sheetView.localName.toLowerCase() === "ui-sheet-view")) {

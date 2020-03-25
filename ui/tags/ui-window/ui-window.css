@@ -9,7 +9,6 @@
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     z-index: 1;
-    /*backdrop-filter: blur(calc(3px * var(--ui-scale)));*/
     background-color: $white(1);
     font-family: 'Mew Sans', sans-serif;
     font-size: 13px;

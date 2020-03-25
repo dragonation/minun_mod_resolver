@@ -5,7 +5,7 @@ const Dialog = function Dialog(dom, filler) {
 
     let size = $.local["pkmsm.model-viewer.size"];
     if (!size) {
-        size = [$.getDevicePixels(240), $.dom.getDevicePixels(240)];
+        size = [240, 240];
     }
 
     let range = $.local["pkmsm.batch-captures.range"];

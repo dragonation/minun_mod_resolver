@@ -73,6 +73,8 @@ const prepareMaterial = function (dom, force) {
         syncShininess(dom, $(dom).attr("shininess"));
         syncSpecular(dom, $(dom).attr("specular"));
         syncEmissive(dom, $(dom).attr("emissive"));
+        syncWireframe(dom, $(dom).attr("wireframe"));
+        syncWireframeLineWidth(dom, $(dom).attr("wireframe-line-width"));
         syncUniforms(dom, true);
         dom.m3dMaterial.m3dExtra = dom.m3dExtra;
         trigMaterialUpdate(dom);
@@ -146,6 +148,31 @@ const syncEmissive = function (dom, value) {
     }
 
     dom.m3dMaterial.emissive.set(value);
+
+};
+
+const syncWireframe = function(dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
+    dom.m3dMaterial.wireframe = (value === "yes");
+
+};
+
+const syncWireframeLineWidth = function(dom, value) {
+
+    if (!dom.m3dMaterial) { return; }
+
+    if (!value) {
+        value = "1";
+    }
+    value = parseFloat(value);
+    if (!isFinite(value)) {
+        value = 1;
+    }
+
+    dom.m3dMaterial.wireframeLinewidth = value;
+    dom.m3dMaterial.linewidth = value;
 
 };
 
@@ -451,11 +478,11 @@ const syncStencilFailed = function (dom, value) {
         case "keep": { dom.m3dMaterial.stencilFail = THREE.KeepStencilOp; break; }
         case "zero": { dom.m3dMaterial.stencilFail = THREE.ZeroStencilOp; break; }
         case "replace": { dom.m3dMaterial.stencilFail = THREE.ReplaceStencilOp; break; }
-        case "increment": { dom.m3dMaterial.stenPerspectiveCameracilFail = THREE.IncrementStencilOp; break; }
+        case "increment": { dom.m3dMaterial.stencilFail = THREE.IncrementStencilOp; break; }
         case "decrement": { dom.m3dMaterial.stencilFail = THREE.DecrementStencilOp; break; }
         case "invert": { dom.m3dMaterial.stencilFail = THREE.InvertStencilOp; break; }
-        case "incrementWrap": { dom.m3dMaterial.stencilFail = THREE.IncrementWrapStencilOp; break; }
-        case "decrementWrap": { dom.m3dMaterial.stencilFail = THREE.DecrementWrapStencilOp; break; }
+        case "increment-wrap": { dom.m3dMaterial.stencilFail = THREE.IncrementWrapStencilOp; break; }
+        case "decrement-wrap": { dom.m3dMaterial.stencilFail = THREE.DecrementWrapStencilOp; break; }
     }
 
 };
@@ -475,8 +502,8 @@ const syncStencilZFailed = function (dom, value) {
         case "increment": { dom.m3dMaterial.stencilZFail = THREE.IncrementStencilOp; break; }
         case "decrement": { dom.m3dMaterial.stencilZFail = THREE.DecrementStencilOp; break; }
         case "invert": { dom.m3dMaterial.stencilZFail = THREE.InvertStencilOp; break; }
-        case "incrementWrap": { dom.m3dMaterial.stencilZFail = THREE.IncrementWrapStencilOp; break; }
-        case "decrementWrap": { dom.m3dMaterial.stencilZFail = THREE.DecrementWrapStencilOp; break; }
+        case "increment-wrap": { dom.m3dMaterial.stencilZFail = THREE.IncrementWrapStencilOp; break; }
+        case "decrement-wrap": { dom.m3dMaterial.stencilZFail = THREE.DecrementWrapStencilOp; break; }
     }
 
 };
@@ -496,8 +523,8 @@ const syncStencilZPassed = function (dom, value) {
         case "increment": { dom.m3dMaterial.stencilZPass = THREE.IncrementStencilOp; break; }
         case "decrement": { dom.m3dMaterial.stencilZPass = THREE.DecrementStencilOp; break; }
         case "invert": { dom.m3dMaterial.stencilZPass = THREE.InvertStencilOp; break; }
-        case "incrementWrap": { dom.m3dMaterial.stencilZPass = THREE.IncrementWrapStencilOp; break; }
-        case "decrementWrap": { dom.m3dMaterial.stencilZPass = THREE.DecrementWrapStencilOp; break; }
+        case "increment-wrap": { dom.m3dMaterial.stencilZPass = THREE.IncrementWrapStencilOp; break; }
+        case "decrement-wrap": { dom.m3dMaterial.stencilZPass = THREE.DecrementWrapStencilOp; break; }
     }
 
 };
@@ -994,7 +1021,8 @@ module.exports = {
         "blending", "blending-destination", "blending-equation", "blending-source",
         "polygon-offset",
         "extra",
-        "shininess", "specular", "emissive"
+        "shininess", "specular", "emissive",
+        "wireframe", "wireframe-line-width"
     ],
     "listeners": {
         "onconnected": function () {
@@ -1040,6 +1068,8 @@ module.exports = {
                 case "shininess": { syncShininess(this, value); break; }
                 case "specular": { syncSpecular(this, value); break; }
                 case "emissive": { syncEmissive(this, value); break; }
+                case "wireframe": { syncWireframe(this, value); break; }
+                case "wireframe-line-width": { syncWireframeLineWidth(this, value); break; }
                 default: { break; };
             }
         },

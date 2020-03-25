@@ -39,7 +39,7 @@
     border-radius: 6px;
     background-color: $alpha($white(1), 0.7);
     overflow: hidden;
-    backdrop-filter: blur(calc(3px * var(--ui-scale)));
+    backdrop-filter: blur(3px);
     box-sizing: content-box;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), inset 0 2px 2px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(255, 255, 255, 0.1);
 }

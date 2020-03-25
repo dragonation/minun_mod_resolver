@@ -84,7 +84,7 @@ module.exports = {
             if (!arrowSize) {
                 arrowSize = 0;
             }
-            arrowSize += $.dom.getDevicePixels(2);
+            arrowSize += 2;
 
             if (this.frame && (typeof this.frame.getMagneticPoints === "function")) {
                 return this.frame.getMagneticPoints(direction, offset, type, target);
@@ -133,7 +133,7 @@ module.exports = {
 
             let rect = target.getClientRects()[0];
 
-            const titleBarSize = $.dom.getDevicePixels(20);
+            const titleBarSize = 20;
 
             let points = [];
             if (direction === "from") {
@@ -268,8 +268,8 @@ module.exports = {
             }
 
             let offsets = {
-                "x": parseFloat($(this).css("left")) - $.dom.getDevicePixels(event.pageX),
-                "y": parseFloat($(this).css("top")) - $.dom.getDevicePixels(event.pageY)
+                "x": parseFloat($(this).css("left")) - event.pageX,
+                "y": parseFloat($(this).css("top")) - event.pageY
             };
 
             $(this).addClass("acting");
@@ -288,8 +288,8 @@ module.exports = {
                 }
 
                 $(this).css({
-                    "left": Math.round(offsets.x + $.dom.getDevicePixels(event.pageX)),
-                    "top": Math.round(offsets.y + $.dom.getDevicePixels(event.pageY))
+                    "left": Math.round(offsets.x + event.pageX),
+                    "top": Math.round(offsets.y + event.pageY)
                 });
 
                 let parent = $(this).parent()[0];
@@ -323,8 +323,8 @@ module.exports = {
 
             $(this).addClass("acting");
             let offsets = {
-                "x": parseFloat($(this).css("width")) - $.dom.getDevicePixels(event.pageX),
-                "y": parseFloat($(this).css("height")) - $.dom.getDevicePixels(event.pageY)
+                "x": parseFloat($(this).css("width")) - event.pageX,
+                "y": parseFloat($(this).css("height")) - event.pageY
             };
 
             const onmousemove = (event) => {
@@ -341,8 +341,8 @@ module.exports = {
                 }
 
                 $(this).css({
-                    "width": Math.round(offsets.x + $.dom.getDevicePixels(event.pageX)),
-                    "height": Math.round(offsets.y + $.dom.getDevicePixels(event.pageY))
+                    "width": Math.round(offsets.x + event.pageX),
+                    "height": Math.round(offsets.y + event.pageY)
                 });
 
                 let parent = $(this).parent()[0];

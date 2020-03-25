@@ -8,12 +8,10 @@ const maxWidth = 200;
 
 const showActionList = function (actions, from, direction, callback) {
 
-    let minLeft = $.dom.getDevicePixels(minDistanceToScreenEdge);
-    let minTop = $.dom.getDevicePixels(minDistanceToScreenEdge);
-    let maxRight = (parseFloat($("body").css("width")) - 
-                    $.dom.getDevicePixels(minDistanceToScreenEdge));
-    let maxBottom = (parseFloat($("body").css("height")) - 
-                     $.dom.getDevicePixels(minDistanceToScreenEdge));
+    let minLeft = minDistanceToScreenEdge;
+    let minTop = minDistanceToScreenEdge;
+    let maxRight = (parseFloat($("body").css("width")) - minDistanceToScreenEdge);
+    let maxBottom = (parseFloat($("body").css("height")) - minDistanceToScreenEdge);
 
     let rect = from.getClientRects()[0];
 
@@ -36,20 +34,20 @@ const showActionList = function (actions, from, direction, callback) {
     }
     actions = finalActions;
 
-    let totalHeight = ($.dom.getDevicePixels(lineHeight) * Math.max(1, actions.length - separatorCount) + 
-                       $.dom.getDevicePixels(separatorHeight) * separatorCount +
-                       $.dom.getDevicePixels(extraPadding) * 2 + 2);
-    let totalWidth = $.dom.getDevicePixels(maxWidth);
+    let totalHeight = (lineHeight * Math.max(1, actions.length - separatorCount) + 
+                       separatorHeight * separatorCount +
+                       extraPadding * 2 + 2);
+    let totalWidth = maxWidth;
 
     if (!direction) {
         direction = "down";
     }
     if ((direction === "down") && 
-        (rect.bottom + totalHeight + $.dom.getDevicePixels(extraMargin) > maxBottom)) {
+        (rect.bottom + totalHeight + extraMargin > maxBottom)) {
         direction = "up";
     }
     if ((direction === "up") && 
-        (rect.top - totalHeight - $.dom.getDevicePixels(extraMargin) < minTop)) {
+        (rect.top - totalHeight - extraMargin < minTop)) {
         direction = "right";
     }
     if ((direction === "right") && 
@@ -64,7 +62,7 @@ const showActionList = function (actions, from, direction, callback) {
     let arrowY = rect.height / 2;
     switch (direction) {
         case "left": {
-            let numberRight = rect.left - $.dom.getDevicePixels(extraMargin);
+            let numberRight = rect.left - extraMargin;
             right = `${parseFloat($("body").css("width")) - numberRight}px`;
             let numberTop = (rect.top + rect.height / 2) - totalHeight / 2;
             let numberBottom = numberTop + totalHeight;
@@ -82,7 +80,7 @@ const showActionList = function (actions, from, direction, callback) {
             break;
         }
         case "right": {
-            let numberLeft = rect.right + $.dom.getDevicePixels(extraMargin);
+            let numberLeft = rect.right + extraMargin;
             left = `${numberLeft}px`;
             let numberTop = (rect.top + rect.height / 2) - totalHeight / 2;
             let numberBottom = numberTop + totalHeight;
@@ -100,7 +98,7 @@ const showActionList = function (actions, from, direction, callback) {
             break;
         }
         case "up": {
-            let numberBottom = rect.top - $.dom.getDevicePixels(extraMargin);
+            let numberBottom = rect.top - extraMargin;
             bottom = `${parseFloat($("body").css("height")) - numberBottom}px`;
             let top = numberBottom - totalHeight;
             if (top < minTop) {
@@ -109,16 +107,16 @@ const showActionList = function (actions, from, direction, callback) {
                 height = `${totalHeight}px`;
             }
             if ((rect.left + rect.right) / 2 >= (maxRight + minLeft) / 2) {
-                right = `${parseFloat($("body").css("width")) - rect.right - $.dom.getDevicePixels(extraIndent)}px`;
-                arrowX = totalWidth - arrowX - $.dom.getDevicePixels(extraIndent);
+                right = `${parseFloat($("body").css("width")) - rect.right - extraIndent}px`;
+                arrowX = totalWidth - arrowX - extraIndent;
             } else {
-                left = `${rect.left - $.dom.getDevicePixels(extraIndent)}px`;
-                arrowX += $.dom.getDevicePixels(extraIndent);
+                left = `${rect.left - extraIndent}px`;
+                arrowX += extraIndent;
             }
             break;
         }
         case "down": {
-            let numberTop = rect.bottom + $.dom.getDevicePixels(extraMargin);
+            let numberTop = rect.bottom + extraMargin;
             top = `${numberTop}px`;
             let bottom = numberTop + totalHeight;
             if (bottom > maxBottom) {
@@ -127,11 +125,11 @@ const showActionList = function (actions, from, direction, callback) {
                 height = `${totalHeight}px`;
             }
             if ((rect.left + rect.right) / 2 >= (maxRight + minLeft) / 2) {
-                right = `${parseFloat($("body").css("width")) - rect.right - $.dom.getDevicePixels(extraIndent)}px`;
-                arrowX = totalWidth - arrowX - $.dom.getDevicePixels(extraIndent);
+                right = `${parseFloat($("body").css("width")) - rect.right - extraIndent}px`;
+                arrowX = totalWidth - arrowX - extraIndent;
             } else {
-                left = `${rect.left - $.dom.getDevicePixels(extraIndent)}px`;
-                arrowX += $.dom.getDevicePixels(extraIndent);
+                left = `${rect.left - extraIndent}px`;
+                arrowX += extraIndent;
             }
             break;
         }
@@ -150,7 +148,7 @@ const showActionList = function (actions, from, direction, callback) {
         "width": width, "height": height,
         "--arrow-x": `${arrowX}px`,
         "--arrow-y": `${arrowY}px`,
-        "--menu-edge-padding": `${$.dom.getDevicePixels(extraPadding)}px`,
+        "--menu-edge-padding": `${extraPadding}px`,
     }).addClass(`hidden direction-${direction}`).on("action", (event, { action }) => {
         $("ui-workshop")[0].removeGlass(list[0]);
     });

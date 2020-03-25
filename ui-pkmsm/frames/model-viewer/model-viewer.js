@@ -12,8 +12,8 @@ const Frame = function Frame(dom, filler) {
 
         let { width, height } = $(dom).css([ "width", "height" ]);
 
-        width = parseInt(width);
-        height = parseInt(height);
+        width = Math.floor($.dom.getDevicePixels(parseFloat(width)));
+        height = Math.floor($.dom.getDevicePixels(parseFloat(height)));
 
         this.toastMessage(`${width} × ${height}`);
 
@@ -67,10 +67,10 @@ const Frame = function Frame(dom, filler) {
 
             let size = m3dScene.css(["width", "height"]);
 
-            size.width = parseInt(size.width);
-            size.height = parseInt(size.height);
-            if (size.width === 0) { size.width = 128; }
-            if (size.height === 0) { size.height = 128; }
+            size.width = Math.floor($.dom.getDevicePixels(parseFloat(size.width)));
+            size.height = Math.floor($.dom.getDevicePixels(parseFloat(size.height)));
+            if (size.width === 0) { size.width = 1; }
+            if (size.height === 0) { size.height = 1; }
 
             let layerTargets = [];
 
@@ -169,10 +169,13 @@ const Frame = function Frame(dom, filler) {
 
                 let size = m3dScene.css(["width", "height"]);
 
+                size.width = Math.floor($.dom.getDevicePixels(parseFloat(size.width)));
+                size.height = Math.floor($.dom.getDevicePixels(parseFloat(size.height)));
+
                 finalMaterial.uniforms.cameraNear.value = finalCamera.near;
                 finalMaterial.uniforms.cameraFar.value = finalCamera.far;
-                finalMaterial.uniforms.ux.value = 1 / parseInt(size.width) / 2;
-                finalMaterial.uniforms.uy.value = 1 / parseInt(size.height) / 2;
+                finalMaterial.uniforms.ux.value = 1 / size.width / 2;
+                finalMaterial.uniforms.uy.value = 1 / size.height / 2;
                 finalMaterial.uniforms.noOutline.value = renderer.drawPokemonOutline === false;
                 finalMaterial.uniforms.backgroundColor.value.set(
                     renderer.modelBackgroundColor.r,
@@ -1291,7 +1294,8 @@ Frame.functors = {
     "resizeRenderingTarget": function (event) {
         if (this.layerTargets) {
             for (let layer of this.layerTargets) {
-                layer.setSize(event.width * 2, event.height * 2);
+                layer.setSize($.dom.getDevicePixels(event.width * 2), 
+                              $.dom.getDevicePixels(event.height * 2));
             }
         }
     },

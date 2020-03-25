@@ -1589,7 +1589,7 @@ App.prototype.onKeyPressed = function (event) {
 
 App.prototype.getNextFrameTopLeft = function (from, size) {
 
-    let coast = $.dom.getDevicePixels(30);
+    let coast = 30;
 
     let diagram = this.filler.query("#diagram");
 
@@ -1605,7 +1605,7 @@ App.prototype.getNextFrameTopLeft = function (from, size) {
     if (children.length === 0) {
         return {
             "left": mins[0] + coast,
-            "top": mins[1] + coast + $.dom.getDevicePixels(40)
+            "top": mins[1] + coast + 40
         };
     }
 
@@ -1634,7 +1634,7 @@ App.prototype.getNextFrameTopLeft = function (from, size) {
     let frame = topmost.css(["left", "top", "width", "height"]);
 
     let suggested = {
-        "left": parseFloat(frame.left) + parseFloat(frame.width) + $.dom.getDevicePixels(40),
+        "left": parseFloat(frame.left) + parseFloat(frame.width) + 40,
         "top": parseFloat(frame.top),
     };
 
@@ -1652,8 +1652,8 @@ App.prototype.openModel = function (id, from, options) {
     }
 
     let size = {
-        "width": $.dom.getDevicePixels(sceneSize[0]),
-        "height": $.dom.getDevicePixels(sceneSize[1])
+        "width": sceneSize[0],
+        "height": sceneSize[1]
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2008,8 +2008,8 @@ App.prototype.openAnimationController = function (id, from) {
         viewer = viewer.frame;
     }
     let size = {
-        "width": $.dom.getDevicePixels(480),
-        "height": $.dom.getDevicePixels(160)
+        "width": 480,
+        "height": 160
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2095,8 +2095,8 @@ App.prototype.openAnimationList = function (id, from) {
     }
 
     let size = {
-        "width": $.dom.getDevicePixels(200),
-        "height": $.dom.getDevicePixels(340)
+        "width": 200,
+        "height": 340
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2129,8 +2129,8 @@ App.prototype.openAnimationList = function (id, from) {
 App.prototype.openResourceList = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(200),
-        "height": $.dom.getDevicePixels(340)
+        "width": 200,
+        "height": 340
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2199,8 +2199,8 @@ App.prototype.openResourceList = function (id, from) {
 App.prototype.openImage = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(240)
+        "width": 240,
+        "height": 240
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2231,8 +2231,8 @@ App.prototype.openImage = function (id, from) {
 App.prototype.openLUT = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(80)
+        "width": 240,
+        "height": 80
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2263,8 +2263,8 @@ App.prototype.openLUT = function (id, from) {
 App.prototype.openShader = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(240)
+        "width": 240,
+        "height": 240
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2302,8 +2302,8 @@ App.prototype.openShader = function (id, from) {
 App.prototype.inspectModel = function (id, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(180)
+        "width": 240,
+        "height": 180
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2402,8 +2402,8 @@ App.prototype.inspectModel = function (id, from) {
 App.prototype.inspectMesh = function (id, query, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(200)
+        "width": 240,
+        "height": 200
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2454,8 +2454,8 @@ App.prototype.inspectMesh = function (id, query, from) {
 App.prototype.inspectMaterial = function (id, query, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(360)
+        "width": 240,
+        "height": 360
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2528,8 +2528,8 @@ App.prototype.inspectMaterial = function (id, query, from) {
 App.prototype.inspectTexture = function (id, query, from) {
 
     let size = {
-        "width": $.dom.getDevicePixels(240),
-        "height": $.dom.getDevicePixels(200)
+        "width": 240,
+        "height": 200
     };
     let position = this.getNextFrameTopLeft(from, size);
 
@@ -2644,8 +2644,8 @@ App.prototype.pickColor = function (color, callback) {
         this.colorPicker = this.createDialog("/dialogs/color-picker/color-picker", {
             "caption": "Color Picker",
             "left": 50, "top": 100,
-            "width": $.dom.getDevicePixels(240), 
-            "height": $.dom.getDevicePixels(340),
+            "width": 240, 
+            "height": 340,
             "justHideWhenClose": true
         });
     }
@@ -2663,8 +2663,8 @@ App.prototype.batchSnapshots = function () {
     let batchSnapshots = this.createDialog("/~pkmsm/dialogs/batch-snapshots/batch-snapshots", {
         "caption": "Batch Snapshots",
         "left": 50, "top": 100,
-        "width": $.dom.getDevicePixels(360), 
-        "height": $.dom.getDevicePixels(220)
+        "width": 360, 
+        "height": 220
     });
 
     batchSnapshots.dom.showDialog();
@@ -2677,8 +2677,8 @@ App.prototype.openPokemonList = function () {
         this.pokemonList = this.createDialog("/~pkmsm/dialogs/pokemon-list/pokemon-list", {
             "caption": "Pokemon List",
             "left": 50, "top": 100,
-            "width": $.dom.getDevicePixels(640), 
-            "height": $.dom.getDevicePixels(400),
+            "width": 640, 
+            "height": 400,
             "justHideWhenClose": true
         });
     }
@@ -2705,7 +2705,7 @@ App.prototype.captureSnapshot = function (id, size, callback) {
         }
     });
 
-    let coast = $.dom.getDevicePixels(30);
+    let coast = 30;
 
     let diagram = this.filler.query("#diagram");
 
@@ -2718,7 +2718,7 @@ App.prototype.captureSnapshot = function (id, size, callback) {
 
     $(frame).css({
         "left": `${mins[0] + coast}px`,
-        "top": `${mins[1] + coast + $.dom.getDevicePixels(40)}px`,
+        "top": `${mins[1] + coast + 40}px`,
         "width": `${size.width}px`,
         "height": `${size.height}px`,
         "min-width": `${size.width}px`,
@@ -2764,11 +2764,11 @@ App.functors = {
     },
     "updateSearchResult": function () {
 
-        let width = $.dom.getDevicePixels(340);
-        let height = $.dom.getDevicePixels(400);
+        let width = 340;
+        let height = 400;
 
-        let left = parseInt($("body").css("width")) - $.dom.getDevicePixels(60) - width - $.dom.getDevicePixels(6);
-        let top = $.dom.getDevicePixels(40 + 6);
+        let left = parseInt($("body").css("width")) - 60 - width - 6;
+        let top = 40 + 6;
 
         if (!this.searchOverlay) {
             this.searchOverlay = this.createOverlay("~pkmsm/overlays/search/search", {

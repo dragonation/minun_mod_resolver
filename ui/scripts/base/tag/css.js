@@ -459,12 +459,8 @@ var evaluateProperty = function (property, parameters, options, mixins) {
             result.push(part.map((part) => {
                 return evaluateProperty(part, parameters, options, mixins);
             }));
-        } else if (/^(-?)([0-9\.]+)(px|pt|pc|vw|vh)$/.test(part)) {
-            result.push($.dom.getDevicePixels(parseFloat(part.slice(0, -2))) + part.slice(-2));
-        } else if (/^(-?)([0-9\.]+)(vmin|vmax)$/.test(part)) {
-            result.push($.dom.getDevicePixels(parseFloat(part.slice(0, -4))) + part.slice(-4));
         } else if (/^(-?)([0-9]+)dpx$/.test(part)) {
-            result.push(part.slice(0, -3) + "px");
+            result.push($.dom.getDesignPixels(parseFloat(part.slice(0, -3))) + "px");
         } else if ("$" === part) {
             if (property[looper + 2] instanceof Array) {
 

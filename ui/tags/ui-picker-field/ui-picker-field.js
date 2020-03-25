@@ -34,17 +34,16 @@ const showPickerFieldMenu = function () {
                              "padding-top", "padding-bottom",
                              "margin-top", "margin-left"]);
 
-    let totalHeight = parseFloat(sizes.height) * Math.max(1, items.length) + $.dom.getDevicePixels(extraPadding) * 2 + parseFloat(sizes["border-top-width"]) + parseFloat(sizes["border-bottom-width"]);
+    let totalHeight = parseFloat(sizes.height) * Math.max(1, items.length) + extraPadding * 2 + parseFloat(sizes["border-top-width"]) + parseFloat(sizes["border-bottom-width"]);
 
-    let top = rect.top - $.dom.getDevicePixels(extraPadding);
+    let top = rect.top - extraPadding;
     if (index !== -1) {
         top -= parseFloat(sizes.height) * index;
     }
 
-    let displayTop = Math.max(top, $.dom.getDevicePixels(minDistanceToScreenEdge) - parseFloat(sizes["border-top-width"]));
+    let displayTop = Math.max(top, minDistanceToScreenEdge - parseFloat(sizes["border-top-width"]));
     let displayBottom = Math.min(displayTop + totalHeight, 
-                                 (parseFloat($("body").css("height")) - 
-                                  $.dom.getDevicePixels(minDistanceToScreenEdge)) + 
+                                 (parseFloat($("body").css("height")) - minDistanceToScreenEdge) +
                                   parseFloat(sizes["border-top-width"]) + 
                                   parseFloat(sizes["border-bottom-width"]));
 
@@ -53,7 +52,7 @@ const showPickerFieldMenu = function () {
     let scrollPaddingBottom = 0;
 
     if (displayBottom - displayTop < totalHeight) {
-        let newTop = Math.max($.dom.getDevicePixels(minDistanceToScreenEdge) - parseFloat(sizes["border-top-width"]), 
+        let newTop = Math.max(minDistanceToScreenEdge - parseFloat(sizes["border-top-width"]), 
                               displayBottom - totalHeight);
         scrollOffset -= displayTop - newTop;
         if (scrollOffset < 0) {
@@ -64,8 +63,7 @@ const showPickerFieldMenu = function () {
     }
     if (displayBottom - displayTop < totalHeight) {
         let newBottom = Math.min(displayTop + totalHeight, 
-                                 (parseFloat($("body").css("height")) - 
-                                  $.dom.getDevicePixels(minDistanceToScreenEdge)) + 
+                                 (parseFloat($("body").css("height")) - minDistanceToScreenEdge) +
                                   parseFloat(sizes["border-top-width"]) + 
                                   parseFloat(sizes["border-bottom-width"]));
         displayBottom = newBottom;
@@ -88,14 +86,14 @@ const showPickerFieldMenu = function () {
     }).css({
         "margin-left": sizes["margin-left"],
         "margin-top": sizes["margin-top"],
-        "left": `${rect.left + $.dom.getDevicePixels(pickerButtonOffset)}px`,
+        "left": `${rect.left + pickerButtonOffset}px`,
         "top": `${displayTop}px`,
         "height": `${displayBottom - displayTop}px`,
-        "width": `${parseFloat(sizes["width"]) - $.dom.getDevicePixels(pickerButtonWidth + pickerButtonOffset)}px`,
+        "width": `${parseFloat(sizes["width"]) - (pickerButtonWidth + pickerButtonOffset)}px`,
         "font-family": sizes["font-family"],
         "font-size": sizes["font-size"],
         "line-height": `${parseFloat(sizes["line-height"]) + parseFloat(sizes["border-top-width"]) + parseFloat(sizes["border-bottom-width"])}px`,
-        "--menu-edge-padding": `${$.dom.getDevicePixels(extraPadding)}px`,
+        "--menu-edge-padding": `${extraPadding}px`,
         "--item-height": sizes["height"],
         "--item-padding-left": sizes["padding-left"],
         "--item-padding-top": sizes["padding-top"],
