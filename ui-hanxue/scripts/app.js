@@ -706,31 +706,31 @@ App.prototype.makeGroupPrintable = function (group) {
                   convert(triangle, triangle.vertices[1], -1), 
                   convert(triangle, triangle.vertices[0], -1)];
         }
-        if (!triangle["both-sides"]) {
-        if (t1 && t2) {
-            record(t1[0], t1[1], t1[2]);
-            record(t2[0], t2[1], t2[2]);
-            if ((!lines[`${triangle.vertexIDs[1]}:${triangle.vertexIDs[2]}:${suffix}`]) || 
-                (!lines[`${triangle.vertexIDs[2]}:${triangle.vertexIDs[1]}:${suffix}`])) {
-                record(t2[0], t1[2], t1[1]); // t2[2], t1[2], t1[1]
-                record(t2[0], t1[1], t2[1]); // t2[2], t1[1], t2[1]
+        // if (!triangle["both-sides"]) {
+            if (t1 && t2) {
+                record(t1[0], t1[1], t1[2]);
+                record(t2[0], t2[1], t2[2]);
+                if ((!lines[`${triangle.vertexIDs[1]}:${triangle.vertexIDs[2]}:${suffix}`]) || 
+                    (!lines[`${triangle.vertexIDs[2]}:${triangle.vertexIDs[1]}:${suffix}`])) {
+                    record(t2[0], t1[2], t1[1]); // t2[2], t1[2], t1[1]
+                    record(t2[0], t1[1], t2[1]); // t2[2], t1[1], t2[1]
+                }
+                if ((!lines[`${triangle.vertexIDs[1]}:${triangle.vertexIDs[0]}:${suffix}`]) || 
+                    (!lines[`${triangle.vertexIDs[0]}:${triangle.vertexIDs[1]}:${suffix}`])) {
+                    record(t2[1], t1[1], t1[0]); // t2[1], t1[1], t1[0]
+                    record(t2[1], t1[0], t2[2]); // t2[1], t1[0], t2[0]
+                }
+                if ((!lines[`${triangle.vertexIDs[2]}:${triangle.vertexIDs[0]}:${suffix}`]) || 
+                    (!lines[`${triangle.vertexIDs[0]}:${triangle.vertexIDs[2]}:${suffix}`])) {
+                    record(t2[2], t1[0], t1[2]); // t2[0], t1[0], t1[2]
+                    record(t2[2], t1[2], t2[0]); // t2[0], t1[2], t2[2]
+                }
+            } else {
+                record(convert(triangle, triangle.vertices[0], triangle.vertexIDs[0], 0), 
+                       convert(triangle, triangle.vertices[1], triangle.vertexIDs[1], 0), 
+                       convert(triangle, triangle.vertices[2], triangle.vertexIDs[2], 0));
             }
-            if ((!lines[`${triangle.vertexIDs[1]}:${triangle.vertexIDs[0]}:${suffix}`]) || 
-                (!lines[`${triangle.vertexIDs[0]}:${triangle.vertexIDs[1]}:${suffix}`])) {
-                record(t2[1], t1[1], t1[0]); // t2[1], t1[1], t1[0]
-                record(t2[1], t1[0], t2[2]); // t2[1], t1[0], t2[0]
-            }
-            if ((!lines[`${triangle.vertexIDs[2]}:${triangle.vertexIDs[0]}:${suffix}`]) || 
-                (!lines[`${triangle.vertexIDs[0]}:${triangle.vertexIDs[2]}:${suffix}`])) {
-                record(t2[2], t1[0], t1[2]); // t2[0], t1[0], t1[2]
-                record(t2[2], t1[2], t2[0]); // t2[0], t1[2], t2[2]
-            }
-        } else {
-            record(convert(triangle, triangle.vertices[0], triangle.vertexIDs[0], 0), 
-                   convert(triangle, triangle.vertices[1], triangle.vertexIDs[1], 0), 
-                   convert(triangle, triangle.vertices[2], triangle.vertexIDs[2], 0));
-        }
-    }
+        // }
     }
 
     for (let id in points) {
