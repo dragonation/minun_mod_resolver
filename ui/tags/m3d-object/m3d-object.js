@@ -148,6 +148,7 @@ const prepareObject = function (dom) {
         THREE.patchObjectAnimation(dom.m3dObject);
 
         syncName(dom, $(dom).attr("name"));
+        syncLayer(dom, $(dom).attr("layer"));
 
         syncRotation(dom, $(dom).attr("rotation"));
         syncTranslation(dom, $(dom).attr("translation"));
@@ -233,6 +234,18 @@ const syncScale = function (dom, value) {
     dom.m3dObject.scale.set(floats[0], floats[1], floats[2]);
 
     dom.m3dObject.matrixWorldNeedsUpdate = true;
+
+};
+
+const syncLayer = function (dom, value) {
+
+    if (!dom.m3dObject) { return; }
+
+    if (!value) { return; }
+
+    let layer = parseInt(value);
+
+    dom.m3dObject.layers.set(layer);
 
 };
 
@@ -400,6 +413,7 @@ module.exports = {
         "name",
         "rotation", "translation", "scale",
         "model-rotation", "model-translation", "model-scale",
+        "layer",
         "visible",
         "frustum-culled",
         "bin"
@@ -414,6 +428,7 @@ module.exports = {
         "onupdated": function (name, value) {
             switch (name) {
                 case "name": { syncName(this, value); break; };
+                case "layer": { syncLayer(this, value); break; };
                 case "rotation": { syncRotation(this, value); break; };
                 case "translation": { syncTranslation(this, value); break; };
                 case "scale": { syncScale(this, value); break; };

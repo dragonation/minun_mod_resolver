@@ -16,7 +16,7 @@ const prepareTexture = function (dom) {
             syncRepeat(dom, $(dom).attr("repeat"));
             syncRotation(dom, $(dom).attr("rotation"));
             syncMinFilter(dom, $(dom).attr("min-filter"));
-            syncMaxFilter(dom, $(dom).attr("max-filter"));
+            syncMagFilter(dom, $(dom).attr("mag-filter"));
             syncMipmap(dom, $(dom).attr("mipmap"));
             trigTextureUpdate(dom);
         }
@@ -140,15 +140,15 @@ const syncMinFilter = function (dom, value) {
 
 };
 
-const syncMaxFilter = function (dom, value) {
+const syncMagFilter = function (dom, value) {
 
     if (!dom.m3dTexture) { return; }
 
     if (!value) { return; }
 
     switch (value) {
-        case "linear": { dom.m3dTexture.maxFilter = THREE.LinearFilter; break; }
-        case "nearest": { dom.m3dTexture.maxFilter = THREE.NearestFilter; break; }
+        case "linear": { dom.m3dTexture.magFilter = THREE.LinearFilter; break; }
+        case "nearest": { dom.m3dTexture.magFilter = THREE.NearestFilter; break; }
     }
 
 };
@@ -220,7 +220,7 @@ module.exports = {
         "id", "src", "flip-y", 
         "wrap-s", "wrap-t", 
         "offset", "repeat", "rotation",
-        "min-filter", "max-filter",
+        "min-filter", "mag-filter",
         "mipmap"
     ],
     "listeners": {
@@ -238,7 +238,7 @@ module.exports = {
                 case "repeat": { syncRepeat(this, value); break; };
                 case "rotation": { syncRotation(this, value); break; };
                 case "min-filter": { syncMinFilter(this, value); break; };
-                case "max-filter": { syncMaxFilter(this, value); break; };
+                case "mag-filter": { syncMagFilter(this, value); break; };
                 case "mipmap": { syncMipmap(this, value); break; };
                 default: { break; };
             }

@@ -44,6 +44,7 @@ const prepareScene = function (dom) {
     renderer.setSize(width, height);
     renderer.gammaInput = true;
     renderer.gammaOutput = true;
+    renderer.m3dFromTagObject = dom;
 
     const scene = new THREE.Scene();
 
@@ -188,8 +189,10 @@ const syncCamera = function (dom, value) {
 
         dom.m3dCamera = camera;
 
+        camera.layers.set(0);
+
         syncCameraPosition(dom, $(dom).attr("camera-position"));
-        syncCameraDirection(dom, $(dom).attr("camera-direction"));
+        syncCameraTarget(dom, $(dom).attr("camera-target"));
         syncCameraNear(dom, $(dom).attr("camera-near"));
         syncCameraFar(dom, $(dom).attr("camera-far"));
 
@@ -217,7 +220,7 @@ const syncCameraPosition = function (dom, value) {
 
 };
 
-const syncCameraDirection = function (dom, value) {
+const syncCameraTarget = function (dom, value) {
 
     if (!dom.m3dCamera) {
         return;
@@ -226,12 +229,10 @@ const syncCameraDirection = function (dom, value) {
     if (!value) {
         return;
     }
-    
+
     value = value.trim().split(/[\s,]+/).map(value => parseFloat(value));
 
-    dom.m3dCamera.lookAt(dom.m3dCamera.position.x + value[0], 
-                         dom.m3dCamera.position.y + value[1], 
-                         dom.m3dCamera.position.z + value[2]);
+    dom.m3dCamera.lookAt(value[0], value[1], value[2]);
 
 };
 
@@ -289,6 +290,8 @@ const syncControls = function (dom, value) {
             orbitControls.m3dValue = value;
             dom.m3dControls = orbitControls;
             syncOrbitTarget(dom, $(dom).attr("orbit-target"));
+            syncCameraPosition(dom, $(dom).attr("camera-position"));
+            syncCameraTarget(dom, $(dom).attr("camera-target"));
         }
     } else {
         if (dom.m3dControls) {
@@ -502,7 +505,7 @@ const syncChildren = function (dom) {
         if (typeof child.m3dGetObject === "function") {
             let m3dObject = child.m3dGetObject();
             if (m3dObject) {
-                m3dObject.m3dFromTagObject = true;
+                m3dObject.m3dFromTagObject = child;
                 dom.m3dScene.add(m3dObject);
                 children.delete(m3dObject);
             }
@@ -524,7 +527,7 @@ module.exports = {
         "controls", "grids", "stats", 
         "orbit-target",
         "autolights", "autocamera-lights",
-        "camera", "camera-position", "camera-direction", 
+        "camera", "camera-position", "camera-target", 
         "camera-near", "camera-far"
     ],
     "listeners": {
@@ -572,7 +575,7 @@ module.exports = {
                 case "antialias": { syncAntialias(this, value); break; };
                 case "pixel-ratio": { syncPixelRatio(this, value); break; };
                 case "camera": { syncCamera(this, value); break; };
-                case "camera-direction": { syncCameraDirection(this, value); break; };
+                case "camera-target": { syncCameraTarget(this, value); break; };
                 case "camera-position": { syncCameraPosition(this, value); break; };
                 case "camera-near": { syncCameraNear(this, value); break; };
                 case "camera-far": { syncCameraFar(this, value); break; };
