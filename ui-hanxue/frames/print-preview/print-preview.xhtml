@@ -1,42 +1,209 @@
 <ui-diagram-action @action="sliceModels()">Slice models</ui-diagram-action>
-<m3d-scene controls="orbit" orbit-target="${device.width / 2}, ${device.height / 2}, ${device.depth / 2}" autolights="yes" clear-color="#ccccccff" antialias="yes" camera-position="${camera.position}" camera-direction="${camera.direction}">
+<m3d-scene controls="orbit" orbit-target="${device.width / 2}, ${(model.bounds.maxes[1] - model.bounds.mins[1]) / 2}, ${device.depth / 2}" autolights="yes" clear-color="#ccccccff" antialias="yes" camera-position="${camera.position}" camera-target="${camera.target}" @mousemove="updateMeshForMouse(event)">
+
+    <!-- slicing rendering -->
+    <m3d-target id="slicing-target" width="${resolution.width}" height="${resolution.height}" depth="yes" stencil="yes"/>
+    <m3d-camera id="slicing-camera" type="orthographic" layers="2"
+                viewport="0, ${device.width}, 0, ${-device.depth}" 
+                near="100" far="8000"
+                position="0, 4000, 0" target="0, 0, 0"/>
+
+    <!-- hints -->
     <m3d-object id="hints">
+
+        <!-- dock grids -->
         <m3d-material id="grid" preset="shader" 
                       transparent="yes"
+                      depth-write="no" depth-test="yes"
                       vertex-shader="/~hanxue/shaders/grid.vert" fragment-shader="/~hanxue/shaders/grid.frag"
                       side="both-sides">
             <m3d-uniform name="width" type="float">${device.width}</m3d-uniform>                        
             <m3d-uniform name="height" type="float">${device.depth}</m3d-uniform>
             <m3d-uniform name="grid" type="float">10</m3d-uniform>                        
             <m3d-uniform name="outline" type="float">0.5</m3d-uniform>                        
-            <m3d-uniform name="color" type="vec4">0.5, 0.5, 0.5, 1.0</m3d-uniform>                        
         </m3d-material>
-        <m3d-mesh materials="grid" frustum-culled="no" prop:indices="${hints.grids.indices}" prop:vertices="${hints.grids.vertices}"/>
+        <m3d-mesh materials="grid" rendering-order="4"
+                  frustum-culled="no" prop:indices="${hints.grids.indices}" prop:vertices="${hints.grids.vertices}"/>
+
+        <!-- dock columns -->
+        <m3d-material id="column" preset="shader" 
+                      transparent="yes" side="both-sides"
+                      depth-write="yes" depth-test="yes"
+                      vertex-shader="/~hanxue/shaders/column.vert" fragment-shader="/~hanxue/shaders/column.frag"
+                      side="both-sides">
+            <m3d-uniform name="width" type="float">${device.width}</m3d-uniform>                        
+            <m3d-uniform name="depth" type="float">${device.depth}</m3d-uniform>                        
+            <m3d-uniform name="height" type="float">${device.height}</m3d-uniform>
+            <m3d-uniform name="outline" type="float">0.5</m3d-uniform>                        
+        </m3d-material>
+        <m3d-object>
+            <m3d-mesh materials="column" rendering-order="4"
+                      frustum-culled="no" prop:indices="${hints.columns.indices}" prop:vertices="${hints.columns.vertices}"/>
+        </m3d-object>
+        <m3d-object translation="${device.width}, 0, 0" rotation="Y 1.5707">
+            <m3d-mesh materials="column" rendering-order="4"
+                      frustum-culled="no" prop:indices="${hints.columns.indices}" prop:vertices="${hints.columns.vertices}"/>
+        </m3d-object>
+        <m3d-object translation="0, 0, ${device.depth}" rotation="Y 1.5707">
+            <m3d-mesh materials="column" rendering-order="4"
+                      frustum-culled="no" prop:indices="${hints.columns.indices}" prop:vertices="${hints.columns.vertices}"/>
+        </m3d-object>
+        <m3d-object translation="${device.width}, 0, ${device.depth}">
+            <m3d-mesh materials="column" rendering-order="4"
+                      frustum-culled="no" prop:indices="${hints.columns.indices}" prop:vertices="${hints.columns.vertices}"/>
+        </m3d-object>
+
+        <!-- slice indicator -->
+        <m3d-object id="slice-indicator" translation="0, ${slicing}, 0">
+            <m3d-material id="layer" preset="shader" transparent="yes"
+                          textures="@map:slicing-target"
+                          depth-write="no" depth-test="yes"
+                          vertex-shader="/~hanxue/shaders/layer.vert" fragment-shader="/~hanxue/shaders/layer.frag"
+                          side="both-sides">
+                <m3d-uniform name="width" type="float">${device.width}</m3d-uniform>                        
+                <m3d-uniform name="height" type="float">${device.depth}</m3d-uniform>
+            </m3d-material>
+            <m3d-mesh materials="layer" rendering-order="5"
+                      frustum-culled="no" 
+                      prop:indices="${hints.grids.indices}" prop:vertices="${hints.grids.vertices}"/>
+        </m3d-object>
+
     </m3d-object>
+
+    <!-- model -->
     <m3d-object id="model"
                 model-scale="${model.scale}"
                 model-translation="${model.translation}"
                 translation="${model.placement.translation}"
                 model-rotation="${model.rotation}"
                 frustum-culled="no">
-        <m3d-material id="print" preset="phong" color="#004488" specular="#222222" emissive="#000000" shininess="40"/>
+
+        <!-- model preview -->
+        <tmpl:map list="model.groups" id-getter="{index}">
+            <m3d-object id="preview">
+                <m3d-material id="print" preset="shader"
+                              vertex-shader="/~hanxue/shaders/preview.vert" fragment-shader="/~hanxue/shaders/preview.frag">
+                    <m3d-uniform name="slicing" type="float">${slicing}</m3d-uniform>                        
+                    <m3d-uniform name="expand" type="float">${expand / model.scale / model.placement.scale}</m3d-uniform>                        
+                    <m3d-uniform name="width" type="float">${device.width}</m3d-uniform>                        
+                    <m3d-uniform name="depth" type="float">${device.depth}</m3d-uniform>
+                    <m3d-uniform name="height" type="float">${device.height}</m3d-uniform>
+                    <m3d-uniform name="selected" type="float">0</m3d-uniform>
+                    <m3d-uniform name="hideAboveSlice" type="float">${hideAboveSlice}</m3d-uniform>
+                </m3d-material>
+                <m3d-mesh materials="print" rendering-order="2" class="mesh"
+                          frustum-culled="no"
+                          prop:indices="${item.indices}"
+                          prop:colors="${item.offsets}"
+                          prop:normals="${item.normals}"
+                          prop:vertices="${item.positions}"/>
+            </m3d-object>
+        </tmpl:map>
+
+        <!-- model x-ray -->
+        <m3d-material id="x-ray" preset="shader" 
+                      depth-test="no" depth-write="no"
+                      blending="custom" blending-destination="zero,zero" blending-equation="max,add" blending-source="one,one"
+                      vertex-shader="/~hanxue/shaders/preview.vert" fragment-shader="/~hanxue/shaders/x-ray.frag">
+            <m3d-uniform name="slicing" type="float">${slicing}</m3d-uniform>                        
+            <m3d-uniform name="expand" type="float">${expand / model.scale / model.placement.scale}</m3d-uniform>                        
+            <m3d-uniform name="hideAboveSlice" type="float">${hideAboveSlice}</m3d-uniform>
+        </m3d-material>
+        <tmpl:map list="model.groups" id-getter="{index}">
+            <m3d-mesh materials="x-ray" rendering-order="3"
+                      frustum-culled="no"
+                      prop:indices="${item.indices}"
+                      prop:colors="${item.offsets}"
+                      prop:normals="${item.normals}"
+                      prop:vertices="${item.positions}"/>
+        </tmpl:map>
+
+        <!-- model shadow -->
         <m3d-material id="shadow" preset="shader" 
+                      side="both-sides"
                       vertex-shader="/~hanxue/shaders/shadow.vert"
                       fragment-shader="/~hanxue/shaders/shadow.frag"
                       blending="custom" blending-destination="one-minus-source-alpha,one" blending-equation="add,add" blending-source="source-alpha,one"
+                      depth-write="no" depth-test="yes"
                       stencil-test="yes" stencil-test-function="not-equal-to" stencil-test-reference="254" stencil-test-mask="255" stencil-write-mask="255"
                       stencil-failed="keep" stencil-z-failed="keep" stencil-z-passed="replace">
-            <m3d-uniform name="height" type="float">${device.depth}</m3d-uniform>
+            <m3d-uniform name="slicing" type="float">${slicing}</m3d-uniform>                        
+            <m3d-uniform name="hideAboveSlice" type="float">${hideAboveSlice}</m3d-uniform>
         </m3d-material>
-        <m3d-mesh materials="print"
-                  frustum-culled="no"
-                  prop:indices="${model.indices}"
-                  prop:normals="${model.normals}"
-                  prop:vertices="${model.vertices}"/>
-        <m3d-mesh materials="shadow"
-                  frustum-culled="no"
-                  prop:indices="${model.indices}"
-                  prop:normals="${model.normals}"
-                  prop:vertices="${model.vertices}"/>
+        <tmpl:map list="model.groups" id-getter="{index}">
+            <m3d-mesh materials="shadow" rendering-order="1"
+                      frustum-culled="no"
+                      prop:indices="${item.indices}"
+                      prop:colors="${item.offsets}"
+                      prop:normals="${item.normals}"
+                      prop:vertices="${item.positions}"/>
+        </tmpl:map>
+
     </m3d-object>
+
+    <!-- model on slicing layer -->
+    <m3d-object id="slicing-model" layer="2"
+                model-scale="${model.scale}"
+                model-translation="${model.translation}"
+                translation="${model.placement.translation}"
+                model-rotation="${model.rotation}"
+                frustum-culled="no">
+        <m3d-material id="up" preset="shader"
+                      side="back-face"
+                      vertex-shader="/~hanxue/shaders/slice.vert" 
+                      fragment-shader="/~hanxue/shaders/slice.frag"
+                      depth-test="no" depth-write="no" depth-test-function="less-than-or-equal-to"
+                      stencil-test="yes" stencil-test-function="always" stencil-test-reference="0" stencil-test-mask="255" stencil-write-mask="255"
+                      stencil-failed="increment-wrap" stencil-z-failed="increment-wrap" stencil-z-passed="increment-wrap"
+                      blending="custom" blending-destination="zero,zero" blending-equation="add,add" blending-source="one,one">
+            <m3d-uniform name="depth">${slicing}</m3d-uniform>
+            <m3d-uniform name="direction">1</m3d-uniform>
+            <m3d-uniform name="expand">${expand / model.scale / model.placement.scale}</m3d-uniform>
+        </m3d-material>
+        <m3d-material id="down" preset="shader"
+                      side="front-face"
+                      vertex-shader="/~hanxue/shaders/slice.vert" 
+                      fragment-shader="/~hanxue/shaders/slice.frag"
+                      depth-test="no" depth-write="no" depth-test-function="less-than-or-equal-to"
+                      stencil-test="yes" stencil-test-function="always" stencil-test-reference="0" stencil-test-mask="255" stencil-write-mask="255"
+                      stencil-failed="decrement-wrap" stencil-z-failed="decrement-wrap" stencil-z-passed="decrement-wrap"
+                      blending="custom" blending-destination="zero,zero" blending-equation="add,add" blending-source="one,one">
+            <m3d-uniform name="depth">${slicing}</m3d-uniform>
+            <m3d-uniform name="direction">-1</m3d-uniform>
+            <m3d-uniform name="expand">${expand / model.scale / model.placement.scale}</m3d-uniform>
+        </m3d-material>
+        <m3d-material id="slice" preset="shader"
+                      side="both-sides"
+                      vertex-shader="/~hanxue/shaders/slice.vert" 
+                      fragment-shader="/~hanxue/shaders/slice.frag"
+                      depth-test="no" depth-write="no" depth-test-function="less-than-or-equal-to"
+                      stencil-test="yes" stencil-test-function="less-than" stencil-test-reference="0" stencil-test-mask="255" stencil-write-mask="255"
+                      stencil-failed="keep" stencil-z-failed="keep" stencil-z-passed="keep"
+                      blending="custom" blending-destination="zero,zero" blending-equation="add,add" blending-source="one,one">
+            <m3d-uniform name="depth">${slicing}</m3d-uniform>
+            <m3d-uniform name="direction">0</m3d-uniform>
+            <m3d-uniform name="expand">${expand / model.scale / model.placement.scale}</m3d-uniform>
+        </m3d-material>
+        <tmpl:map list="model.groups" id-getter="{index}">
+            <m3d-mesh materials="down" rendering-order="2" layer="2"
+                      frustum-culled="no"
+                      prop:indices="${item.indices}"
+                      prop:normals="${item.normals}"
+                      prop:colors="${item.offsets}"
+                      prop:vertices="${item.positions}"/>
+            <m3d-mesh materials="up" rendering-order="1" layer="2"
+                      frustum-culled="no"
+                      prop:indices="${item.indices}"
+                      prop:normals="${item.normals}"
+                      prop:colors="${item.offsets}"
+                      prop:vertices="${item.positions}"/>
+            <m3d-mesh materials="slice" rendering-order="3" layer="2"
+                      frustum-culled="no"
+                      prop:indices="${item.indices}"
+                      prop:normals="${item.normals}"
+                      prop:colors="${item.offsets}"
+                      prop:vertices="${item.positions}"/>
+        </tmpl:map>
+    </m3d-object>
+
 </m3d-scene>
