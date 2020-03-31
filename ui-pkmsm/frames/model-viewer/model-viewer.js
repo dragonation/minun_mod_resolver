@@ -564,16 +564,37 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
         return M3D.autocloseGroup(group);
     });
 
+    let maxSize = Math.max(record.bounds.maxes[0] - record.bounds.mins[0], 
+                           record.bounds.maxes[1] - record.bounds.mins[1],
+                           record.bounds.maxes[2] - record.bounds.mins[2]);
+    let maxArea = maxSize * maxSize / 256;
+
+    if (tessellation) {
+        groups = groups.map((group) => {
+            let triangles = group.triangles;
+            if (group.encloses) {
+                triangles = triangles.concat(group.encloses);
+            }
+            let target = M3D.convertTrianglesForTessell(triangles);
+            let times = tessellation;
+            while (times > 0) {
+                --times;
+                target = M3D.tessellTriangles(target, 1, maxArea);
+            }
+            let result = M3D.convertTrianglesFromTessell(target);
+            return Object.assign({}, group, {
+                "triangles": result,
+                "encloses": []
+            });
+        });
+    }
+
     let patcheds = [];
     for (let group of groups) {
         for (let triangle of M3D.convertTrianglesForTessell(group.triangles.concat(group.encloses))) {
             patcheds.push(triangle);
         }
     }
-
-    let max = Math.max(record.bounds.maxes[0] - record.bounds.mins[0], 
-                       record.bounds.maxes[1] - record.bounds.mins[1], 
-                       record.bounds.maxes[2] - record.bounds.mins[2]);
 
     let name = $(model).attr("name").replace(/[^0-9a-z_]/ig, "_");
 
