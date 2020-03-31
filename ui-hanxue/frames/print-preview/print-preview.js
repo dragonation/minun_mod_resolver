@@ -74,9 +74,9 @@ const Frame = function Frame(dom, filler) {
 
         let scale = this.filler.parameters.model.scale * this.filler.parameters.model.placement.scale;
 
-        let slicing = this.filler.parameters.slicing + 0.1;
+        let slicing = this.filler.parameters.slicing + 0.03;
         let bounds = this.filler.parameters.model.bounds;
-        if (slicing > (bounds.maxes[1] - bounds.mins[1]) * scale) {
+        if (slicing > (bounds.maxes[1] - bounds.mins[1]) * scale + 10) {
             slicing = 0;
         }
 

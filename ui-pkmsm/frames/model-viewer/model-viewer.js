@@ -1,6 +1,8 @@
 const THREE = require("/scripts/three.js");
 const APNGEncoder = require("/scripts/apng.js");
 
+const M3D = require("/scripts/m3d.js");
+
 const LAYERS = 3;
 
 const Frame = function Frame(dom, filler) {
@@ -474,10 +476,8 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
         return $(element).attr("base").split("/").slice(-1)[0] !== "shadow";
     })[0];
 
-    let meshes = [];
+    let triangles = [];
 
-    let maxes = [-Infinity, -Infinity, -Infinity];
-    let mins = [Infinity, Infinity, Infinity];
     let threeModel = model.m3dObject;
     for (let mesh of threeModel.children.filter((child) => child.isMesh)) {
 
@@ -487,60 +487,10 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
         // TODO: ignore more materials
         if (mesh.visible && mesh.material.visible) {
 
-            let normalUVs = undefined;
-            let normalTexture = undefined;
-            switch (mesh.material.m3dExtra.bumpNormalTexture) {
-                case 0: { 
-                    normalTexture = mesh.material.uniforms.map.value; 
-                    normalUVs = mesh.geometry.attributes.uv;
-                    break; 
-                }
-                case 1: { 
-                    normalTexture = mesh.material.uniforms.map2.value; 
-                    normalUVs = mesh.geometry.attributes.uv;
-                    break; 
-                }
-                case 2: { 
-                    normalTexture = mesh.material.uniforms.map3.value; 
-                    normalUVs = mesh.geometry.attributes.uv;
-                    break; 
-                }
-            }
-            if (normalTexture) {
-                let canvas = $("<canvas>").attr({
-                    "width": normalTexture.image.naturalWidth,
-                    "height": normalTexture.image.naturalHeight
-                })[0];
-                let context = canvas.getContext("2d");
-                context.globalCompositeOperation = "copy";
-                context.drawImage(normalTexture.image, 0, 0, normalTexture.image.naturalWidth, normalTexture.image.naturalHeight);
-                normalTexture = {
-                    "data": context.getImageData(0, 0, normalTexture.image.naturalWidth, normalTexture.image.naturalHeight).data,
-                    "flipY": normalTexture.flipY,
-                    "wrapS": ({
-                        [THREE.ClampToEdgeWrapping]: "clamp",
-                        [THREE.RepeatWrapping]: "repeat",
-                        [THREE.MirroredRepeatWrapping]: "mirror",
-                    })[normalTexture.wrapS],
-                    "wrapT": ({
-                        [THREE.ClampToEdgeWrapping]: "clamp",
-                        [THREE.RepeatWrapping]: "repeat",
-                        [THREE.MirroredRepeatWrapping]: "mirror",
-                    })[normalTexture.wrapT],
-                    "offset": [normalTexture.offset.x, normalTexture.offset.y],
-                    "repeat": [normalTexture.repeat.x, normalTexture.repeat.y],
-                    "width": normalTexture.image.naturalWidth,
-                    "height": normalTexture.image.naturalHeight
-                };
-            }
-
-            let triangles = [];
-
             let matrixWorld = mesh.matrixWorld;
 
             let indices = mesh.geometry.index;
             let positions = mesh.geometry.attributes.position;
-            let normals = mesh.geometry.attributes.normal;
             let skinIndices = mesh.geometry.attributes.skinIndex;
             let skinWeights = mesh.geometry.attributes.skinWeight;
 
@@ -560,69 +510,6 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
 
             const getPoint = (looper) => {
                 let position = getData(positions, looper, 3);
-                let normal = getData(normals, looper, 3);
-                let normalUV = undefined;
-                if (normalUVs && normalTexture) {
-                    let uv = [normalUVs.array[indices.array[looper] * normalUVs.itemSize],
-                              normalUVs.array[indices.array[looper] * normalUVs.itemSize + 1]];
-                    uv[0] = (uv[0] + normalTexture.offset[0]) * normalTexture.repeat[0];
-                    uv[1] = (uv[1] + normalTexture.offset[1]) * normalTexture.repeat[1];
-                    switch (normalTexture.wrapS) {
-                        case "mirror": {
-                            while (uv[0] < 0) { uv[0] += 2; }
-                            uv[0] = uv[0] % 2; 
-                            if (uv[0] > 1) { uv[0] = 2 - uv[0]; }
-                            break;
-                        }
-                        case "repeat": {
-                            while (uv[0] < 0) { uv[0] += 1; }
-                            uv[0] = uv[0] % 1; break;
-                        }
-                        case "clamp": 
-                        default: { uv[0] = Math.max(0, Math.min(uv[0], 1)); break; }
-                    }
-                    switch (normalTexture.wrapT) {
-                        case "mirror": {
-                            while (uv[1] < 0) { uv[1] += 2; }
-                            uv[1] = uv[1] % 2; 
-                            if (uv[1] > 1) { uv[1] = 2 - uv[1]; }
-                            break;
-                        }
-                        case "repeat": {
-                            while (uv[1] < 0) { uv[1] += 1; }
-                            uv[1] = uv[1] % 1; break;
-                        }
-                        case "clamp": 
-                        default: { uv[1] = Math.max(0, Math.min(uv[1], 1)); break; }
-                    }
-                    uv[0] = uv[0] * (normalTexture.width - 1);
-                    if (normalTexture.flipY) {
-                        uv[1] = 1 - uv[1];
-                    }
-                    uv[1] = uv[1] * (normalTexture.height - 1);
-                    normalUV = uv;
-                    let uvNormal = [
-                        normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4],
-                        normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4 + 1],
-                        normalTexture.data[(Math.round(uv[1]) * normalTexture.width + Math.round(uv[0])) * 4 + 2],
-                    ];
-                    let old = normal;
-                    let oldLength = Math.sqrt(old[0] * old[0] + old[1] * old[1] + old[2] * old[2]);
-                    if (uvNormal[0] + uvNormal[1] + uvNormal[2] > 0) {
-                        uvNormal[0] = (uvNormal[0] - 127) / 128;
-                        uvNormal[1] = (uvNormal[1] - 127) / 128;
-                        uvNormal[2] = (uvNormal[2] - 127) / 128;
-                        if (uvNormal[0] * uvNormal[0] + uvNormal[1] * uvNormal[1] + uvNormal[2] * uvNormal[2] > 0.2) {
-                            let length = Math.sqrt(uvNormal[0] * uvNormal[0] + uvNormal[1] * uvNormal[1] + uvNormal[2] * uvNormal[2]);
-                            uvNormal[0] /= length;
-                            uvNormal[1] /= length;
-                            uvNormal[2] /= length;
-                            if (uvNormal[0] * old[0] + uvNormal[1] * old[1] + uvNormal[2] * old[2] < oldLength * 0.4) {
-                                normal = uvNormal;
-                            }
-                        }
-                    }
-                }
                 let skinIndex = getData(skinIndices, looper, 4);
                 let skinWeight = getData(skinWeights, looper, 4);
                 const merge = (matrixWorld, data, extra) => {
@@ -634,327 +521,59 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
                     let matrix = new THREE.Matrix4();
                     matrix.fromArray(skeleton.boneMatrices, bones[skinIndex[0]] * 16);
                     let position1 = merge(matrix, position, 1);
-                    let normal1 = merge(matrix, normal, 0);
                     matrix.fromArray(skeleton.boneMatrices, bones[skinIndex[1]] * 16);
                     let position2 = merge(matrix, position, 1);
-                    let normal2 = merge(matrix, normal, 0);
                     matrix.fromArray(skeleton.boneMatrices, bones[skinIndex[2]] * 16);
                     let position3 = merge(matrix, position, 1);
-                    let normal3 = merge(matrix, normal, 0);
                     matrix.fromArray(skeleton.boneMatrices, bones[skinIndex[3]] * 16);
                     let position4 = merge(matrix, position, 1);
-                    let normal4 = merge(matrix, normal, 0);
                     let positions = [position1, position2, position3, position4];
-                    let normals = [normal1, normal2, normal3, normal4];
                     let newPosition = [0, 0, 0];
-                    let newNormal = [0, 0, 0];
                     for (let looper = 0; looper < 4; ++looper) {
                         if (skinWeight[looper] && isFinite(skinWeight[looper])) {
                             newPosition[0] += positions[looper][0] * skinWeight[looper] / 255;
                             newPosition[1] += positions[looper][1] * skinWeight[looper] / 255;
                             newPosition[2] += positions[looper][2] * skinWeight[looper] / 255;
-                            let newNormalLength = Math.sqrt(
-                                normals[looper][0] * normals[looper][0] +
-                                normals[looper][1] * normals[looper][1] +
-                                normals[looper][2] * normals[looper][2]);
-                            newNormal[0] += normals[looper][0] / newNormalLength * skinWeight[looper] / 255;
-                            newNormal[1] += normals[looper][1] / newNormalLength * skinWeight[looper] / 255;
-                            newNormal[2] += normals[looper][2] / newNormalLength * skinWeight[looper] / 255;
                         }
                     }
-                    normal = newNormal;
                     position = newPosition;
                 } else {
                     position = merge(matrixWorld, position);
-                    normal = merge(matrixWorld, normal);
                 }
-                let normalLength = Math.sqrt(normal[0] * normal[0] + normal[1] * normal[1] + normal[2] * normal[2]);
-                normal[0] /= normalLength;
-                normal[1] /= normalLength;
-                normal[2] /= normalLength;
-                if (position[0] < mins[0]) { mins[0] = position[0]; }
-                if (position[1] < mins[1]) { mins[1] = position[1]; }
-                if (position[2] < mins[2]) { mins[2] = position[2]; }
-                if (position[0] > maxes[0]) { maxes[0] = position[0]; }
-                if (position[1] > maxes[1]) { maxes[1] = position[1]; }
-                if (position[2] > maxes[2]) { maxes[2] = position[2]; }
-                return { position, normal };
+                return { "vertex": position };
             };
-
-            let side = ({
-                [THREE.DoubleSide]: "both-sides",
-                [THREE.FrontSide]: "front-face",
-                [THREE.BackSide]: "back-face"
-            })[mesh.material.side];
-
-            let normalRecords = Object.create(null);
 
             for (let looper = 0; looper < indices.count; looper += 3) {
                 let points = [getPoint(looper), getPoint(looper + 1), getPoint(looper + 2)];
-                let normal = ((a, b, c) => {
-                    let v = new THREE.Vector3(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
-                    v.cross(new THREE.Vector3(a[0] - c[0], a[1] - c[1], a[2] - c[2]));
-                    v.normalize();
-                    return [v.x, v.y, v.z];
-                })(points[0].position, points[1].position, points[2].position);
-                for (let point of points) {
-                    let id = point.position.join(",");
-                    if (!normalRecords[id]) {
-                        normalRecords[id] = {
-                            "records": []
-                        };
-                    }
-                    normalRecords[id].records.push(normal);
+                if ((mesh.material.side === THREE.FrontSide) || (mesh.material.side === THREE.DoubleSide)) {
+                    triangles.push(points);
                 }
-                triangles.push(points);
-            }
-            for (let id in normalRecords) {
-                let sums = [0, 0, 0];
-                for (let record of normalRecords[id].records) {
-                    sums[0] += record[0];
-                    sums[1] += record[1];
-                    sums[2] += record[2];
-                }
-                let length = Math.sqrt(sums[0] * sums[0] + sums[1] * sums[1] + sums[2] * sums[2]);
-                sums[0] /= length;
-                sums[1] /= length;
-                sums[2] /= length;
-                normalRecords[id].average = sums;
-            }
-            for (let triangle of triangles) {
-                for (let looper = 0; looper < 3; ++looper) {
-                    let id = triangle[looper].position.join(",");
-                    let average = normalRecords[id].average;
-                    if (average[0] * triangle[looper].normal[0] + 
-                        average[1] * triangle[looper].normal[1] + 
-                        average[2] * triangle[looper].normal[2] < 0.9) {
-                        triangle[looper].normal = average;
-                    }
+                if ((mesh.material.side === THREE.BackSide) || (mesh.material.side === THREE.DoubleSide)) {
+                    triangles.push([points[2], points[1], points[0]]);
                 }
             }
-
-            meshes.push({
-                "name": mesh.name,
-                "material": mesh.material.name,
-                "side": side,
-                "both-sides": side === "both-sides",
-                "triangles": triangles
-            });
 
         }
 
     }
 
-    let max = Math.max(maxes[0] - mins[0], maxes[1] - mins[1], maxes[2] - mins[2]);
+    let record = M3D.abstractModel(M3D.convertTrianglesFromTessell(triangles));
+    record = M3D.reduceBothSides(record);
+    let groups = M3D.groupTriangles(record);
+    groups = groups.map((group) => {
+        return M3D.autocloseGroup(group);
+    });
 
-    // let newMeshes = [];
-    // for (let mesh of meshes) {
-    //     if (mesh.side === "both-sides") {
-    //         let offset = max / 1600;
-    //         let triangles = [];
-    //         for (triangle of mesh.triangles) {
-    //             let v = new THREE.Vector3(
-    //                 triangle[0].position[0] - triangle[1].position[0],
-    //                 triangle[0].position[1] - triangle[1].position[1],
-    //                 triangle[0].position[2] - triangle[1].position[2]);
-    //             v.cross(new THREE.Vector3(
-    //                 triangle[0].position[0] - triangle[2].position[0],
-    //                 triangle[0].position[1] - triangle[2].position[1],
-    //                 triangle[0].position[2] - triangle[2].position[2]));
-    //             v.normalize();
-    //             let n = [v.x, v.y, v.z];
-    //             let convert = (point, direction) => {
-    //                 let normal = point.normal.slice(0);
-    //                 normal[0] *= direction;  
-    //                 normal[1] *= direction;  
-    //                 normal[2] *= direction;  
-    //                 return {
-    //                     "position": [
-    //                         point.position[0] + n[0] * offset * direction,
-    //                         point.position[1] + n[1] * offset * direction,
-    //                         point.position[2] + n[2] * offset * direction,
-    //                     ],
-    //                     "normal": normal
-    //                 };
-    //             };
-    //             let t1 = [convert(triangle[0], 1), convert(triangle[1], 1), convert(triangle[2], 1)];
-    //             let t2 = [convert(triangle[2], -1), convert(triangle[1], -1), convert(triangle[0], -1)];
-    //             triangles.push(t1);
-    //             triangles.push(t2);
-    //             triangles.push([t2[0], t1[2], t1[1]]);
-    //             triangles.push([t2[0], t1[1], t2[1]]);
-    //             triangles.push([t2[1], t1[1], t1[0]]);
-    //             triangles.push([t2[1], t1[0], t2[2]]);
-    //             triangles.push([t2[2], t1[0], t1[2]]);
-    //             triangles.push([t2[2], t1[2], t2[0]]);
-    //         }
-    //         newMeshes.push(Object.assign({}, mesh, {
-    //             "side": "front-face",
-    //             "triangles": triangles
-    //         }));
-    //     } else {
-    //         newMeshes.push(mesh);
-    //     }
-    // }
-    // meshes = newMeshes;
-
-    if (tessellation) {
-
-        let tessel = () => {
-
-            let newPoints = {};
-
-            for (let mesh of meshes) {
-                let newTriangles = [];
-                for (let triangle of mesh.triangles) {
-                    let mid = (a, b) => {
-                        return [(a[0] + b[0]) * 0.5, (a[1] + b[1]) * 0.5, (a[2] + b[2]) * 0.5];
-                    };
-                    let side = (a, b) => {
-                        let v = [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
-                        return Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
-                    };
-                    let sideA = side(triangle[0].position, triangle[1].position);
-                    let sideB = side(triangle[1].position, triangle[2].position);
-                    let sideC = side(triangle[2].position, triangle[0].position);
-                    let sideRatio = Math.min(sideA, sideB, sideC) / Math.max(sideA, sideB, sideC);
-                    let areaP = (sideA + sideB + sideC) / 2;
-                    let area = Math.sqrt(areaP * (areaP - sideA) * (areaP - sideB) * (areaP - sideC));
-                    let midVertex = (a, b) => {
-
-                        let v = [a.position[0] - b.position[0], 
-                                 a.position[1] - b.position[1], 
-                                 a.position[2] - b.position[2]];
-                        let l = Math.sqrt(v[0] * v[0] + v[1] * v[1] + v[2] * v[2]);
-
-                        let calc = (p, n, factor) => {
-                            let nv = new THREE.Vector3(n[0], n[1], n[2]);
-                            let t = new THREE.Vector3(v[0], v[1], v[2]);
-                            t.cross(nv);
-                            t.cross(nv);
-                            t.normalize();
-                            return [p[0] + t.x * factor, p[1] + t.y * factor, p[2] + t.z * factor];
-                        };
-
-                        let c = 0.33;
-                        let plain = (area > max * max / 1024);
-                        if ((!plain) && (sideRatio < 0.3)) {
-                            plain = l * 2 > Math.max(sideA, sideB, sideC);
-                        }
-
-                        let edge = 0.6;
-                        let n = a.normal.slice(0);
-                        let nl = Math.sqrt(n[0] * n[0] + n[1] * n[1] + n[2] * n[2]);
-                        if (plain || (n[0] * v[0] + n[1] * v[1] + n[2] * v[2] > edge * l * nl)) {
-                            let nv = new THREE.Vector3(n[0], n[1], n[2]);
-                            let t = new THREE.Vector3(v[0], v[1], v[2]);
-                            nv.cross(t);
-                            nv.cross(t);
-                            n = [nv.x, nv.y, nv.z];
-                        }
-                        let c1 = calc(a.position, n, l * c);
-
-                        n = b.normal.slice(0);
-                        nl = Math.sqrt(n[0] * n[0] + n[1] * n[1] + n[2] * n[2]);
-                        if (plain || (n[0] * v[0] + n[1] * v[1] + n[2] * v[2] < -edge * l * nl)) {
-                            let nv = new THREE.Vector3(n[0], n[1], n[2]);
-                            let t = new THREE.Vector3(v[0], v[1], v[2]);
-                            nv.cross(t);
-                            nv.cross(t);
-                            n = [nv.x, nv.y, nv.z];
-                        }
-                        let c2 = calc(b.position, n, l * c * (-1));
-
-                        let bezier = (t, p0, p1, p2, p3) => {
-                            return (p0 * (1 - t) * (1 - t) * (1 - t) + 
-                                    3 * p1 * t * (1 - t) * (1 - t) + 
-                                    3 * p2 * t * t * (1 - t) + 
-                                    p3 * t * t * t);
-                        };
-                        let position = [
-                            bezier(0.5, a.position[0], c1[0], c2[0], b.position[0]),
-                            bezier(0.5, a.position[1], c1[1], c2[1], b.position[1]),
-                            bezier(0.5, a.position[2], c1[2], c2[2], b.position[2])
-                        ];
-
-                        let id = [a.position, b.position].sort((a, b) => {
-                            let diff = [a[0] - b[0], a[1] - b[1], a[2] - b[2]].filter((x) => x !== 0);
-                            return diff[0] ? diff[0] : 0;
-                        }).map(x => x.join(",")).join("-");
-                        if (!newPoints[id]) {
-                            newPoints[id] = {
-                                "mids": []
-                            };
-                        }
-
-                        let normal = mid(a.normal, b.normal);
-                        newPoints[id].mids.push({ position, normal });
-
-                        return { 
-                            "id": id,
-                            "position": position,
-                            "normal": normal
-                        };
-
-                    };
-                    let m1 = midVertex(triangle[0], triangle[1]);
-                    let m2 = midVertex(triangle[1], triangle[2]);
-                    let m3 = midVertex(triangle[2], triangle[0]);
-                    newTriangles.push([triangle[0], m1, m3]);
-                    newTriangles.push([m1, triangle[1], m2]);
-                    newTriangles.push([m3, m2, triangle[2]]);
-                    newTriangles.push([m1, m2, m3]);
-                }
-                mesh.triangles = newTriangles;
-            }
-
-            for (let id in newPoints) {
-                let sump = [0, 0, 0];
-                let sumn = [0, 0, 0];
-                let mids = newPoints[id].mids;
-                for (let mid of mids) {
-                    sump[0] += mid.position[0];
-                    sump[1] += mid.position[1];
-                    sump[2] += mid.position[2];
-                    sumn[0] += mid.normal[0];
-                    sumn[1] += mid.normal[1];
-                    sumn[2] += mid.normal[2];
-                }
-                newPoints[id].position = [sump[0] / mids.length, sump[1] / mids.length, sump[2] / mids.length];
-                newPoints[id].normal = [sumn[0] / mids.length, sumn[1] / mids.length, sumn[2] / mids.length];
-                let normalLength = Math.sqrt(
-                    newPoints[id].normal[0] * newPoints[id].normal[0] +
-                    newPoints[id].normal[1] * newPoints[id].normal[1] +
-                    newPoints[id].normal[2] * newPoints[id].normal[2]);
-                newPoints[id].normal[0] /= normalLength;
-                newPoints[id].normal[1] /= normalLength;
-                newPoints[id].normal[2] /= normalLength;
-            }
-
-            for (let mesh of meshes) {
-                for (let triangle of mesh.triangles) {
-                    for (let looper = 0; looper < 3; ++looper) {
-                        let id = triangle[looper].id;
-                        if (id && newPoints[id]) {
-                            triangle[looper].position = newPoints[id].position;
-                            triangle[looper].normal = newPoints[id].normal;
-                        }
-                    }
-                }
-            }
-
-        };
-
-        if (tessellation === true) {
-            tessellation = 1;
+    let patcheds = [];
+    for (let group of groups) {
+        for (let triangle of M3D.convertTrianglesForTessell(group.triangles.concat(group.encloses))) {
+            patcheds.push(triangle);
         }
-
-        while (tessellation) {
-            tessel();
-            --tessellation;
-        }
-
     }
+
+    let max = Math.max(record.bounds.maxes[0] - record.bounds.mins[0], 
+                       record.bounds.maxes[1] - record.bounds.mins[1], 
+                       record.bounds.maxes[2] - record.bounds.mins[2]);
 
     let name = $(model).attr("name").replace(/[^0-9a-z_]/ig, "_");
 
@@ -962,49 +581,30 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
 
     if (!asTextFile) {
 
-        let trianglesCount = 0;
-        for (let mesh of meshes) {
-            trianglesCount += mesh.triangles.length;
-        }
-        let arrayBuffer = new ArrayBuffer(80 + 4 + (4 * 4 * 3 + 2) * trianglesCount);
+        let arrayBuffer = new ArrayBuffer(80 + 4 + (4 * 4 * 3 + 2) * patcheds.length);
         let dataView = new DataView(arrayBuffer);
         Array.prototype.forEach.call(`binsolid ${name}`, (char, index) => {
             dataView.setUint8(index, char.codePointAt(0));
         });
-        dataView.setUint32(80, trianglesCount, true);
+        dataView.setUint32(80, patcheds.length, true);
 
         let index = 84;
-        for (let mesh of meshes) {
-            let factor = 1;
-            if (mesh.side === "back-face") {
-                factor = -1;
+        for (let triangle of patcheds) {
+            let normal = M3D.getTriangleNormal(
+                triangle[0].vertex, triangle[1].vertex, triangle[2].vertex);
+            dataView.setFloat32(index, normal[0], true); index += 4;
+            dataView.setFloat32(index, normal[1], true); index += 4;
+            dataView.setFloat32(index, normal[2], true); index += 4;
+            for (let looper = 0; looper < 3; ++looper) {
+                dataView.setFloat32(index, triangle[looper].vertex[0], true); index += 4;
+                dataView.setFloat32(index, triangle[looper].vertex[1], true); index += 4;
+                dataView.setFloat32(index, triangle[looper].vertex[2], true); index += 4;
             }
-            for (let triangle of mesh.triangles) {
-                let v1 = new THREE.Vector3(
-                    triangle[0].position[0] - triangle[1].position[0],
-                    triangle[0].position[1] - triangle[1].position[1],
-                    triangle[0].position[2] - triangle[1].position[2],
-                );
-                let v2 = new THREE.Vector3(
-                    triangle[0].position[0] - triangle[2].position[0],
-                    triangle[0].position[1] - triangle[2].position[1],
-                    triangle[0].position[2] - triangle[2].position[2],
-                );
-                v1.cross(v2);
-                dataView.setFloat32(index, v1.x * factor, true); index += 4;
-                dataView.setFloat32(index, v1.y * factor, true); index += 4;
-                dataView.setFloat32(index, v1.z * factor, true); index += 4;
-                for (let looper = 0; looper < 3; ++looper) {
-                    dataView.setFloat32(index, triangle[looper].position[0], true); index += 4;
-                    dataView.setFloat32(index, triangle[looper].position[1], true); index += 4;
-                    dataView.setFloat32(index, triangle[looper].position[2], true); index += 4;
-                }
-                let flag = 0;
-                if (mesh["both-sides"]) {
-                    flag = flag | 1;
-                }
-                dataView.setUint16(index, flag, true); index += 2;
+            let flag = 0;
+            if (triangle[3]) {
+                flag = flag | 1;
             }
+            dataView.setUint16(index, flag, true); index += 2;
         }
 
         code = $.base64.encode(arrayBuffer);
@@ -1014,41 +614,17 @@ Frame.prototype.saveSTLFile = function (tessellation, asTextFile) {
         let lines = [];
 
         lines.push(`solid ${name}`);
-        for (let mesh of meshes) {
-            for (let triangle of mesh.triangles) {
-                let v1 = new THREE.Vector3(
-                    triangle[0].position[0] - triangle[1].position[0],
-                    triangle[0].position[1] - triangle[1].position[1],
-                    triangle[0].position[2] - triangle[1].position[2],
-                );
-                let v2 = new THREE.Vector3(
-                    triangle[0].position[0] - triangle[2].position[0],
-                    triangle[0].position[1] - triangle[2].position[1],
-                    triangle[0].position[2] - triangle[2].position[2],
-                );
-                v1.cross(v2);
-                if ((mesh.side === "front-face") || (mesh.side === "both-sides")) {
-                    lines.push(`    facet normal ${v1.x} ${v1.y} ${v1.z}`);
-                    lines.push(`        outer loop`);
-                    for (let looper = 0; looper < 3; ++looper) {
-                        lines.push(`             vertex ${triangle[looper].position.join(" ")}`);
-                    }
-                    lines.push(`        endloop`);
-                    lines.push(`    endfacet`);
-                }
-                if ((mesh.side === "back-face") || (mesh.side === "both-sides")) {
-                    lines.push(`    facet normal ${-v1.x} ${-v1.y} ${-v1.z}`);
-                    lines.push(`        outer loop`);
-                    for (let looper = 2; looper >= 0; --looper) {
-                        lines.push(`             vertex ${triangle[looper].position.join(" ")}`);
-                    }
-                    lines.push(`        endloop`);
-                    lines.push(`    endfacet`);
-                }
-                
+        for (let triangle of patcheds) {
+            let normal = M3D.getTriangleNormal(
+                triangle[0].vertex, triangle[1].vertex, triangle[2].vertex);
+            lines.push(`    facet normal ${normal[0]} ${normal[1]} ${normal[2]}`);
+            lines.push("        outer loop");
+            for (let looper = 0; looper < 3; ++looper) {
+                lines.push(`             vertex ${triangle[looper].vertex.join(" ")}`);
             }
+            lines.push("        endloop");
+            lines.push("    endfacet");
         }
-
         lines.push(`endsolid ${name}`);
 
         code = btoa(lines.join("\n"));
